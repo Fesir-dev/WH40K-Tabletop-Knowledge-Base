@@ -159,3 +159,28 @@ Active milestone:
 
 This next pipeline may close public Core Rules and public Faction Pack supplement/FAQ semantics plus official-vs-mirror overlap. It must not automatically promote full-faction normalization or infer app-only text.
 
+## Official public semantic fingerprint pipeline — COMPLETE
+
+The complete registered public Games Workshop 11E PDF surface is now fingerprinted without vendoring long rules prose:
+
+- **29 / 29** official documents PASS;
+- **1** Core Rules PDF;
+- **28** public Faction Pack PDFs;
+- **1,430** pages;
+- **1,915,296** normalized text characters;
+- **0** extraction failures.
+
+All 28 Faction Pack binary hashes match the previous official-asset audit. The Core Rules binary SHA-256 is `f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833`.
+
+This closes public-official fingerprint evidence, not structured normative normalization. The strict counters remain:
+
+- `current_normalized_factions = 0`;
+- `full_normative_semantic_factions = 0`;
+- app/Codex equivalence = `PENDING`.
+
+Active milestone:
+
+`OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT`
+
+Next compare only semantic units that can be mapped with exact provenance between the public official corpus and the current mirror. Do not infer Codex/app-only text from overlap matches.
+
