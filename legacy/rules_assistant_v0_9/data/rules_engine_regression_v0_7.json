@@ -1,0 +1,18 @@
+{
+  "schema": "w40k11.rules_engine.regression.v0.7",
+  "as_of": "2026-08-15",
+  "interaction_cases": [
+    {"name":"first normal move allowed","query":{"query":"can_make_normal_move","normal_moves_this_phase":0},"expect":"YES"},
+    {"name":"second normal move blocked","query":{"query":"can_make_normal_move","normal_moves_this_phase":1},"expect":"NO"},
+    {"name":"explicit normal-move exception","query":{"query":"can_make_normal_move","normal_moves_this_phase":1,"explicit_exception":true},"expect":"YES"},
+    {"name":"first extra CP allowed","query":{"query":"gain_extra_cp","extra_cp_gained_this_battle_round":0,"amount":1},"expect":"YES"},
+    {"name":"second extra CP blocked","query":{"query":"gain_extra_cp","extra_cp_gained_this_battle_round":1,"amount":1},"expect":"NO"},
+    {"name":"first stratagem use allowed","query":{"query":"can_use_stratagem","same_stratagem_uses_this_phase":0,"target_stratagems_this_phase":0},"expect":"YES"},
+    {"name":"repeat stratagem blocked","query":{"query":"can_use_stratagem","same_stratagem_uses_this_phase":1,"target_stratagems_this_phase":0},"expect":"NO"},
+    {"name":"named repeat permission works","query":{"query":"can_use_stratagem","same_stratagem_uses_this_phase":1,"target_stratagems_this_phase":0,"explicit_named_repeat_permission":true},"expect":"YES"},
+    {"name":"same target second stratagem blocked","query":{"query":"can_use_stratagem","same_stratagem_uses_this_phase":0,"target_stratagems_this_phase":1},"expect":"NO"},
+    {"name":"generic zero CP becomes minus one","query":{"query":"adjust_stratagem_cp_cost","base_cp":2,"generic_zero_cp_rule":true},"expect_adjusted_cp":1},
+    {"name":"named zero CP stays zero","query":{"query":"adjust_stratagem_cp_cost","base_cp":2,"generic_zero_cp_rule":true,"rule_explicitly_names_stratagem":true},"expect_adjusted_cp":0},
+    {"name":"July revival rule overrides stale June core wording","query":{"query":"revived_character_attachment"},"expect":"SEPARATE_UNIT"}
+  ]
+}
