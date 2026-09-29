@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "11e_2026-08-15_adeptus_custodes",
+  "edition": "11e",
+  "faction": "adeptus_custodes",
+  "as_of": "2026-08-15",
+  "status": "HISTORICAL_VERIFIED",
+  "source_state": {
+    "faction_pack_version": "1.1",
+    "faction_pack_legal_from": "2026-07-22",
+    "mfm_version": "1.2",
+    "mfm_official_updated": "2026-07-22",
+    "checked_at": "2026-08-15"
+  },
+  "legacy_files": {
+    "source_manifest": "legacy/rules_assistant_v0_9/factions/adeptus_custodes/source_manifest.json",
+    "points": "legacy/rules_assistant_v0_9/factions/adeptus_custodes/mfm_v1_2_points.json",
+    "detachments": "legacy/rules_assistant_v0_9/factions/adeptus_custodes/mfm_v1_2_detachments.json",
+    "leader_support": "legacy/rules_assistant_v0_9/factions/adeptus_custodes/leader_support_graph_v1_2.json",
+    "transport_profiles": "legacy/rules_assistant_v0_9/data/transport_profiles_v0_9_20260815.json",
+    "faction_composition": "legacy/rules_assistant_v0_9/data/faction_composition_rules_v0_8_20260815.json"
+  },
+  "known_coverage": {
+    "points_units": 31,
+    "detachments": 9,
+    "leader_links": 8,
+    "legacy_local_datasheets": 13
+  },
+  "currentness_note": "Historical checkpoint only. Revalidate against current official sources before using for present-day play."
+}
