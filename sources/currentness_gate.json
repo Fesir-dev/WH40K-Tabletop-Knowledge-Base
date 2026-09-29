@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.2",
+  "schema_version": "3.3",
   "as_of": "2026-09-29",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
@@ -98,10 +98,16 @@
         "checked_at": "2026-09-29",
         "report": "reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json",
         "resolved_runtime_identities": 37,
-        "representative_point_checks": 10,
-        "matched": 9,
-        "known_drifts": 1,
-        "new_drifts": 0
+        "representative_point_checks": 15,
+        "matched": 10,
+        "known_drifts": 6,
+        "new_drifts": 0,
+        "known_point_drifts": 5,
+        "representative_surface_checks": 5,
+        "surface_matched": 4,
+        "known_surface_drifts": 1,
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
       }
     },
     {
