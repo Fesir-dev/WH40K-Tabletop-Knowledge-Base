@@ -8,11 +8,11 @@ Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
 Latest validated official-public fingerprint evidence:
 
-- fingerprint report: `reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json`
-- validated implementation head: `148843a72d27f20459e064da8c9943eab19c5ed2`
-- official fingerprint reproducibility run: `36615907736` — **SUCCESS**
-- normative/app gap projection run: `36615908005` — **SUCCESS**
-- generic repository validation run: `36615907686` — **SUCCESS**
+- merged milestone commit: `1eaa07e137c72ebc5087c3306a3eaa0752356c80`
+- validated PR head: `d265ec44b70a62384ffb1d36af987d0aaa7aa8ee`
+- official fingerprint reproducibility run: `36616297652` — **SUCCESS**
+- normative/app gap projection run: `36616297679` — **SUCCESS**
+- generic repository validation run: `36616297669` — **SUCCESS**
 - official public corpus: **29 / 29 PASS**
 - Core Rules: **1 / 1**, 88 pages
 - public Faction Packs: **28 / 28**, all binary SHAs match prior official-asset evidence
