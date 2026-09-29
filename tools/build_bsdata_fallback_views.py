@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import hashlib, json, re, urllib.parse, urllib.request
+import argparse, hashlib, json, re, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 DATE="2026-09-29"
-BSDATA_COMMIT="951d5900d1b4a952a4ba560a30c43788e622ccfc"
+DEFAULT_BSDATA_COMMIT="951d5900d1b4a952a4ba560a30c43788e622ccfc"
+BSDATA_COMMIT=DEFAULT_BSDATA_COMMIT
 FILES={
     "titanicus_catalogue":{
         "path":"Chaos - Titanicus Traitoris.json",
@@ -91,17 +92,27 @@ def entry_summary(entry):
     return out
 
 def main():
+    global DATE, BSDATA_COMMIT, OUT
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--snapshot-date",default=DATE)
+    ap.add_argument("--mfm-snapshot-date")
+    ap.add_argument("--bsdata-commit",default=DEFAULT_BSDATA_COMMIT)
+    a=ap.parse_args()
+    DATE=a.snapshot_date
+    BSDATA_COMMIT=a.bsdata_commit
+    OUT=ROOT/"rules"/"11e"/"snapshots"/DATE/"bsdata_fallback"
+    mfm_date=a.mfm_snapshot_date or DATE
     OUT.mkdir(parents=True,exist_ok=True)
     loaded={}; provenance=[]
     for key,meta in FILES.items():
         raw,obj,url=fetch(meta["path"])
         loaded[key]=obj["catalogue"]
         provenance.append({
-            "role":key,"path":meta["path"],"github_blob_sha":meta["blob_sha"],
+            "role":key,"path":meta["path"],"github_blob_sha":meta["blob_sha"] if BSDATA_COMMIT==DEFAULT_BSDATA_COMMIT else None,
             "sha256":hashlib.sha256(raw).hexdigest(),"bytes":len(raw),"url":url,
         })
 
-    mfm=json.loads((ROOT/"rules"/"11e"/"snapshots"/DATE/"mfm"/"factions"/"chaos-titan-legions.json").read_text(encoding="utf-8"))
+    mfm=json.loads((ROOT/"rules"/"11e"/"snapshots"/mfm_date/"mfm"/"factions"/"chaos-titan-legions.json").read_text(encoding="utf-8"))
     mfm_points={}
     for u in mfm.get("units",[]):
         pts=[]
