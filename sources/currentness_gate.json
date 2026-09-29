@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.3",
+  "schema_version": "3.4",
   "as_of": "2026-09-29",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
@@ -27,6 +27,17 @@
         "edition_11_sources": 29,
         "verified_pdf_assets": 28,
         "failures": 0
+      },
+      "semantic_fingerprint_audit": {
+        "state": "PASS",
+        "checked_at": "2026-09-29",
+        "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
+        "documents": 29,
+        "core_rules": 1,
+        "faction_packs": 28,
+        "pages": 1430,
+        "failures": 0,
+        "authority_boundary": "Official public PDF hashes/fingerprints verify exact public text projections only; they do not prove full Codex/app faction equivalence."
       }
     },
     {
@@ -163,15 +174,20 @@
       "required_sources": [
         "GW_40K_DOWNLOADS"
       ],
-      "content_state": "PENDING",
-      "repository_dimension": null
+      "content_state": "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED",
+      "repository_dimension": null,
+      "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
+      "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
+      "authority_boundary": "Public official Core Rules text is fingerprinted; structured normative normalization remains pending."
     },
     "faction_rules": {
       "required_sources": [
         "GW_40K_DOWNLOADS"
       ],
-      "content_state": "PENDING",
-      "repository_dimension": "datasheets"
+      "content_state": "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING",
+      "repository_dimension": "datasheets",
+      "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
+      "authority_boundary": "28 public Faction Packs are official supplemental rules/FAQ surfaces, not complete Codex replacements."
     },
     "app_wording": {
       "required_sources": [
@@ -249,6 +265,16 @@
       "repository_dimension": null,
       "report": "reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json",
       "authority_boundary": "Runtime projection check only. Known classified drift is preserved; normative Games Workshop/MFM data remains controlling."
+    },
+    "official_public_semantic_fingerprints": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS"
+      ],
+      "content_state": "PASS",
+      "repository_dimension": null,
+      "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
+      "documents": 29,
+      "authority_boundary": "Evidence/drift scope only; no automatic promotion of normative faction completeness."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."

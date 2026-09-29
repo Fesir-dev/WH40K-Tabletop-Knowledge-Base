@@ -43,6 +43,8 @@ class RepositoryContracts(unittest.TestCase):
         cls.custodes_current_collection = json.loads((ROOT/"collection/adeptus_custodes/current.json").read_text(encoding="utf-8"))
         cls.normative_gap_audit = json.loads((ROOT/"reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json").read_text(encoding="utf-8"))
         cls.public_rules_discovery = json.loads((ROOT/"sources/discoveries/gw_public_rules_surface_2026-09-29.json").read_text(encoding="utf-8"))
+        cls.official_public_fingerprints = json.loads((ROOT/"reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json").read_text(encoding="utf-8"))
+        cls.official_core_snapshot = json.loads((ROOT/"sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -175,11 +177,11 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(mapping["NO_PUBLIC_FACTION_PACK_MAPPING"], 2)
 
         gaps={x["id"]:x for x in audit["gaps"]}
-        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE")
-        self.assertEqual(gaps["PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION"]["state"], "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCES")
+        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING")
+        self.assertEqual(gaps["PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION"]["state"], "FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_EXTRACTION_PENDING")
         self.assertEqual(gaps["GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK"]["state"], "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE")
         self.assertEqual(gaps["NORMATIVE_COVERAGE_ACCOUNTING"]["state"], "INTENTIONAL_ZERO_NOT_MIRROR_DATA_LOSS")
-        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE")
+        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT")
 
         findings={x["id"]:x for x in self.public_rules_discovery["findings"]}
         self.assertEqual(findings["GW_11E_CORE_RULES_PUBLIC"]["state"], "PUBLIC_OFFICIAL_SOURCE_DISCOVERED_NOT_INGESTED")
@@ -189,6 +191,52 @@ class RepositoryContracts(unittest.TestCase):
         self.assertTrue((ROOT/"tools/audit_normative_equivalence_gaps.py").exists())
         self.assertTrue((ROOT/".github/workflows/normative-equivalence-gap-audit.yml").exists())
         self.assertTrue((ROOT/"schemas/normative_equivalence_gap_audit.schema.json").exists())
+
+    def test_official_public_semantic_fingerprint_layer(self):
+        r=self.official_public_fingerprints
+        self.assertEqual(r["status"], "PASS")
+        self.assertEqual(r["authority"], "GAMES_WORKSHOP_OFFICIAL")
+        self.assertEqual(r["summary"]["documents"], 29)
+        self.assertEqual(r["summary"]["core_rules"], 1)
+        self.assertEqual(r["summary"]["faction_packs"], 28)
+        self.assertEqual(r["summary"]["verified"], 29)
+        self.assertEqual(r["summary"]["failures"], 0)
+        self.assertEqual(r["summary"]["pages"], 1430)
+        self.assertEqual(r["summary"]["text_chars"], 1915296)
+        self.assertEqual(r["extraction_contract"]["engine"], "pypdf 5.9.0")
+        self.assertIn("do not vendor long", r["extraction_contract"]["copyright_policy"].lower())
+        self.assertTrue(all("text" not in p for d in r["documents"] for p in d["pages"]))
+
+        core=next(x for x in r["documents"] if x["document_type"]=="CORE_RULES")
+        self.assertEqual(core["binary_sha256"], "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833")
+        self.assertEqual(core["semantic_sha256"], "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7")
+        self.assertEqual(core["page_count"], 88)
+        packs=[x for x in r["documents"] if x["document_type"]=="FACTION_PACK"]
+        self.assertEqual(len(packs), 28)
+        self.assertTrue(all(x["expected_binary_sha256"]==x["binary_sha256"] for x in packs))
+
+        snap=self.official_core_snapshot
+        self.assertEqual(snap["binary_sha256"], core["binary_sha256"])
+        self.assertEqual(snap["semantic_sha256"], core["semantic_sha256"])
+        self.assertEqual(snap["fingerprint_report"], "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json")
+
+        layer=self.current["official_public_semantic_fingerprints"]
+        self.assertEqual(layer["state"], "PASS_FULL_PUBLIC_CORPUS")
+        self.assertFalse(layer["normative_promotion"])
+        self.assertEqual(layer["app_codex_equivalence"], "PENDING")
+        self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
+        self.assertEqual(self.coverage["global"]["full_normative_semantic_factions"], 0)
+        self.assertEqual(self.coverage["global"]["official_public_documents_fingerprinted"], 29)
+
+        profiles=self.gate["scope_profiles"]
+        self.assertEqual(profiles["official_public_semantic_fingerprints"]["content_state"], "PASS")
+        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED")
+        self.assertEqual(profiles["faction_rules"]["content_state"], "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING")
+        self.assertEqual(profiles["app_wording"]["content_state"], "PENDING")
+
+        workflow=(ROOT/".github/workflows/official-public-semantic-fingerprints.yml").read_text(encoding="utf-8")
+        self.assertIn('31 3 * * *', workflow)
+        self.assertIn("Assert committed fingerprint reproducibility", workflow)
 
     def test_mfm_wave_a_snapshot(self):
         self.assertEqual(self.mfm["official_source"]["version"], "1.4")
@@ -344,7 +392,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["known_runtime_drifts"], points["known_drift_count"]+surfaces["known_drift_count"])
         self.assertEqual(nr["new_runtime_drifts"], 0)
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE")
+        self.assertEqual(self.current["next_milestone"], "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT")
         layer=self.current["release_transition_readiness"]
         self.assertEqual(layer["state"], "OPERATIONAL_V1")
         self.assertFalse(layer["policy"]["auto_promote"])

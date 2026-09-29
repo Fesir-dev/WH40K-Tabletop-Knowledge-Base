@@ -40,3 +40,4 @@ Re-ingestion automation contracts:
 - `upstream_reingestion_promotion.schema.json` — reviewed promotion metadata; `auto_promote=false` and `normative_mfm_changed=false` are invariant.
 - `release_transition_manifest.schema.json` — fail-closed future-release transition state, activation evidence and guarded re-ingestion routing contract.
 - `normative_equivalence_gap_audit.schema.json` — authority-aware classification of public-official, mirror, Codex/app and normative-coverage gaps.
+- `official_public_semantic_fingerprint.schema.json` — copyright-safe binary/document/page fingerprint evidence for public official Core Rules and Faction Pack PDFs; no long rules prose stored.

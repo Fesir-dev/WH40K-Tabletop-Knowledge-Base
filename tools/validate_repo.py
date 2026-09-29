@@ -400,8 +400,8 @@ try:
 
     gaps = {x.get("id"): x for x in audit.get("gaps", [])}
     expected_states = {
-        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE",
-        "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCES",
+        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING",
+        "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_EXTRACTION_PENDING",
         "FULL_FACTION_CODEX_APP_SEMANTICS": "BLOCKED_OR_CONDITIONAL_ON_AUTHORIZED_CODEX_APP_EVIDENCE",
         "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PARTIALLY_CLOSABLE_PUBLIC_OVERLAP_ONLY",
         "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK": "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE",
@@ -421,8 +421,10 @@ try:
     if public_rules.get("policy", {}).get("no_full_faction_equivalence_from_faction_packs_alone") is not True:
         errors.append("Public-rules discovery lost faction-pack scope boundary")
 
-    if audit.get("conclusion", {}).get("recommended_next_milestone") != "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE":
+    if audit.get("conclusion", {}).get("recommended_next_milestone") != "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT":
         errors.append("Normative gap audit recommended next milestone drifted")
+    if audit.get("official_public_surface", {}).get("official_public_semantic_fingerprints") != "PASS":
+        errors.append("Normative gap audit must record official public fingerprint evidence as PASS")
 
     for required in [
         ROOT / "tools" / "audit_normative_equivalence_gaps.py",
@@ -434,6 +436,146 @@ try:
             errors.append(f"Missing normative gap audit artifact: {required.relative_to(ROOT)}")
 except Exception as exc:
     errors.append(f"Normative/app equivalence gap audit validation failure: {exc}")
+
+# 3b4. Official public Games Workshop semantic fingerprint evidence.
+try:
+    official_fp = json.loads(
+        (ROOT / "reports" / "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json").read_text(encoding="utf-8")
+    )
+    core_asset = json.loads(
+        (ROOT / "sources" / "snapshots" / "gw_11e_core_rules_asset_2026-09-29.json").read_text(encoding="utf-8")
+    )
+    current_rules = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+    gate = json.loads((ROOT / "sources" / "currentness_gate.json").read_text(encoding="utf-8"))
+    registry_now = json.loads((ROOT / "sources" / "registry.json").read_text(encoding="utf-8"))
+
+    if official_fp.get("status") != "PASS":
+        errors.append("Official public semantic fingerprint corpus must PASS")
+    if official_fp.get("authority") != "GAMES_WORKSHOP_OFFICIAL":
+        errors.append("Official public fingerprint corpus lost Games Workshop authority")
+
+    fp_summary = official_fp.get("summary", {})
+    expected_fp_summary = {
+        "documents": 29,
+        "core_rules": 1,
+        "faction_packs": 28,
+        "verified": 29,
+        "failures": 0,
+        "pages": 1430,
+        "text_chars": 1915296,
+    }
+    for key, value in expected_fp_summary.items():
+        if fp_summary.get(key) != value:
+            errors.append(f"Official public fingerprint summary {key} drifted: {fp_summary.get(key)} != {value}")
+
+    extraction = official_fp.get("extraction_contract", {})
+    if extraction.get("engine") != "pypdf 5.9.0":
+        errors.append("Official public fingerprint extractor version drifted")
+    if extraction.get("normalization_version") != "OFFICIAL_TEXT_NFKC_WS_V1":
+        errors.append("Official public fingerprint normalization version drifted")
+    if "do not vendor long" not in str(extraction.get("copyright_policy", "")).lower():
+        errors.append("Official public fingerprint copyright boundary drifted")
+
+    documents = official_fp.get("documents", [])
+    if len(documents) != 29:
+        errors.append("Official public fingerprint document list must contain 29 documents")
+    core_docs = [x for x in documents if x.get("document_type") == "CORE_RULES"]
+    pack_docs = [x for x in documents if x.get("document_type") == "FACTION_PACK"]
+    if len(core_docs) != 1 or len(pack_docs) != 28:
+        errors.append("Official public fingerprint corpus must contain 1 Core Rules + 28 Faction Packs")
+    if any(x.get("verification") != "PASS" for x in documents):
+        errors.append("Official public fingerprint corpus contains a failed document")
+    if any("text" in page for doc in documents for page in doc.get("pages", [])):
+        errors.append("Official public fingerprint report must not vendor extracted rules prose")
+    if any(x.get("expected_binary_sha256") != x.get("binary_sha256") for x in pack_docs):
+        errors.append("Official Faction Pack binary SHA differs from previously verified asset SHA")
+
+    if core_docs:
+        core = core_docs[0]
+        expected_core_binary = "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+        expected_core_semantic = "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7"
+        if core.get("binary_sha256") != expected_core_binary:
+            errors.append("Official 11E Core Rules binary SHA drifted")
+        if core.get("semantic_sha256") != expected_core_semantic:
+            errors.append("Official 11E Core Rules semantic SHA drifted")
+        if core.get("page_count") != 88:
+            errors.append("Official 11E Core Rules page count drifted")
+        if core_asset.get("binary_sha256") != core.get("binary_sha256"):
+            errors.append("Core Rules asset snapshot binary SHA differs from fingerprint report")
+        if core_asset.get("semantic_sha256") != core.get("semantic_sha256"):
+            errors.append("Core Rules asset snapshot semantic SHA differs from fingerprint report")
+        if core_asset.get("fingerprint_report") != "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json":
+            errors.append("Core Rules asset snapshot fingerprint report pointer drifted")
+
+    fp_layer = current_rules.get("official_public_semantic_fingerprints", {})
+    if fp_layer.get("state") != "PASS_FULL_PUBLIC_CORPUS":
+        errors.append("Current rules must record official public fingerprint corpus as PASS_FULL_PUBLIC_CORPUS")
+    if fp_layer.get("documents") != 29 or fp_layer.get("faction_packs") != 28:
+        errors.append("Current rules official public fingerprint corpus counts drifted")
+    if fp_layer.get("normative_promotion") is not False:
+        errors.append("Official public fingerprints must not directly promote normative faction completeness")
+    if fp_layer.get("app_codex_equivalence") != "PENDING":
+        errors.append("Official public fingerprints must preserve app/Codex equivalence as PENDING")
+    if fp_layer.get("core_rules_binary_sha256") != "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833":
+        errors.append("Current rules Core Rules binary SHA pointer drifted")
+
+    core_current = current_rules.get("source_currentness", {}).get("core_rules_content", {})
+    if core_current.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED":
+        errors.append("Core Rules currentness must distinguish fingerprinted evidence from structured normalization")
+    if core_current.get("normative_structured_normalization") != "PENDING":
+        errors.append("Core Rules structured normative normalization was promoted prematurely")
+
+    supplements = current_rules.get("source_currentness", {}).get("faction_rules_content", {}).get("official_public_supplements", {})
+    if supplements.get("state") != "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED":
+        errors.append("Official public faction supplements fingerprint state drifted")
+    if supplements.get("faction_pack_pdfs") != 28:
+        errors.append("Official public faction supplement count drifted")
+    if supplements.get("scope") != "SUPPLEMENTAL_NOT_FULL_CODEX":
+        errors.append("Faction Pack scope must remain supplemental, not full Codex")
+    if supplements.get("full_codex_equivalence") != "NOT_CLAIMED":
+        errors.append("Faction Pack fingerprints must not claim full Codex equivalence")
+
+    gcov = cov.get("global", {})
+    if gcov.get("official_public_documents_fingerprinted") != 29:
+        errors.append("Coverage official public fingerprint document count drifted")
+    if gcov.get("official_public_pages_fingerprinted") != 1430:
+        errors.append("Coverage official public fingerprint page count drifted")
+    if gcov.get("official_public_text_chars_fingerprinted") != 1915296:
+        errors.append("Coverage official public fingerprint text-char count drifted")
+    if gcov.get("official_public_fingerprint_failures") != 0:
+        errors.append("Coverage official public fingerprint failures must remain zero")
+    if gcov.get("current_normalized_factions") != 0 or gcov.get("full_normative_semantic_factions") != 0:
+        errors.append("Official public fingerprints must not change strict full-normative faction counters")
+
+    profiles = gate.get("scope_profiles", {})
+    if profiles.get("official_public_semantic_fingerprints", {}).get("content_state") != "PASS":
+        errors.append("Currentness gate official public fingerprint profile must PASS")
+    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED":
+        errors.append("Currentness gate Core Rules state drifted")
+    if profiles.get("faction_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING":
+        errors.append("Currentness gate faction-rules public supplement state drifted")
+    if profiles.get("app_wording", {}).get("content_state") != "PENDING":
+        errors.append("App wording gate must remain PENDING")
+
+    registry_rows = {x.get("id"): x for x in registry_now.get("sources", [])}
+    gw_downloads = registry_rows.get("GW_40K_DOWNLOADS", {})
+    if gw_downloads.get("repository_coverage_state") != "PUBLIC_OFFICIAL_SEMANTIC_FINGERPRINTED_PARTIAL":
+        errors.append("GW downloads registry coverage state drifted")
+    fp_obs = gw_downloads.get("observed_revision", {}).get("official_public_semantic_fingerprints", {})
+    if fp_obs.get("documents") != 29 or fp_obs.get("pages") != 1430:
+        errors.append("GW downloads registry fingerprint observation drifted")
+
+    for required in [
+        ROOT / "tools" / "build_official_public_semantic_fingerprints.py",
+        ROOT / "tests" / "test_official_public_semantic_fingerprints.py",
+        ROOT / "schemas" / "official_public_semantic_fingerprint.schema.json",
+        ROOT / ".github" / "workflows" / "official-public-semantic-fingerprints.yml",
+    ]:
+        if not required.exists():
+            errors.append(f"Missing official public fingerprint artifact: {required.relative_to(ROOT)}")
+except Exception as exc:
+    errors.append(f"Official public semantic fingerprint validation failure: {exc}")
 
 # 3c. Competitive analytics / roster recommendation contracts.
 try:
@@ -947,8 +1089,8 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE":
-        errors.append("Current milestone must be OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE")
+    if current_rules.get("next_milestone") != "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT":
+        errors.append("Current milestone must be OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release transition readiness v1 as operational")

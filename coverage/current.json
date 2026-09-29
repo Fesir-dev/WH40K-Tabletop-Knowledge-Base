@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "as_of": "2026-09-29",
   "status": "WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
@@ -30,7 +30,14 @@
     "wave_b_official_pdf_assets_verified": 28,
     "wave_b_official_pdf_asset_failures": 0,
     "wave_b_source_catalog_drift": 0,
-    "full_normative_semantic_factions": 0
+    "full_normative_semantic_factions": 0,
+    "official_public_documents_fingerprinted": 29,
+    "official_public_core_rules_fingerprinted": 1,
+    "official_public_faction_packs_fingerprinted": 28,
+    "official_public_pages_fingerprinted": 1430,
+    "official_public_text_chars_fingerprinted": 1915296,
+    "official_public_fingerprint_failures": 0,
+    "official_public_core_rules_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   },
   "dimensions": [
     "points",
