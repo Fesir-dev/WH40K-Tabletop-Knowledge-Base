@@ -8,10 +8,11 @@ Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
 Latest validated release-transition activation-watch evidence:
 
-- validated implementation head: `cdcb3e2e66635520c8670d60f8e762840e087d8c`
-- activation-watch run: `36609958145` — **SUCCESS**
-- release-readiness run: `36609957868` — **SUCCESS**
-- generic repository validation run: `36609957783` — **SUCCESS**
+- merged milestone commit: `1b01255794c0f83af6e61690887f4a41b1b0952f`
+- validated PR head: `99fb9bc6d5acbc02fbc459b6a2784d6f93a16bb2`
+- activation-watch run: `36610418604` — **SUCCESS**
+- release-readiness run: `36610418400` — **SUCCESS**
+- generic repository validation run: `36610418377` — **SUCCESS**
 - activation-watch checkpoint: `NO_ACTION_REQUIRED`
 - auto-promotion / direct current mutation: **disabled**
 - closure report: `reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CLOSURE_2026-09-29.md`
