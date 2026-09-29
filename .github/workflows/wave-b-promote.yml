@@ -1,0 +1,55 @@
+name: Wave B structural promotion
+
+on:
+  push:
+    paths:
+      - "tools/promote_wave_b_structural.py"
+      - ".github/workflows/wave-b-promote.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Promote reviewed Wave B structural coverage
+        run: python tools/promote_wave_b_structural.py
+      - name: Validate promoted contracts
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          cov=json.loads(Path("coverage/current.json").read_text(encoding="utf-8"))
+          cur=json.loads(Path("rules/11e/current.json").read_text(encoding="utf-8"))
+          assert cov["status"]=="WAVE_B_STRUCTURAL_COMPLETE"
+          assert cov["global"]["wave_b_structural_roster_identities_complete"]==35
+          assert cov["global"]["wave_b_structural_roster_identities_unavailable"]==2
+          assert sum(1 for x in cov["factions"] if x.get("structural_current"))==35
+          assert cov["global"]["current_normalized_factions"]==0
+          assert cur["wave_b_structural"]["roster_identities_complete"]==35
+          assert cur["wave_b_structural"]["semantic_rule_text"]=="PENDING"
+          conflicts=json.loads(Path("sources/snapshots/2026-09-29_wave_b_conflicts.json").read_text(encoding="utf-8"))
+          assert conflicts["conflict_count"]==11
+          print("Wave B structural promotion contracts: PASS")
+          PY
+      - name: Run repository validator
+        run: python tools/validate_repo.py
+      - name: Commit promotion
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add coverage/current.json rules/11e/current.json sources/registry.json sources/snapshots/2026-09-29_wave_b_conflicts.json reports/WAVE_B_STRUCTURAL_CLOSURE_2026-09-29.md
+          if git diff --cached --quiet; then
+            echo "No promotion changes"
+          else
+            git commit -m "Promote Wave B structural coverage"
+            git push
+          fi
