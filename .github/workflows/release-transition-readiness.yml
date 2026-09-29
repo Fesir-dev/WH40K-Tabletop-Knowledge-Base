@@ -52,7 +52,13 @@ jobs:
           python tools/evaluate_release_transition_readiness.py \
             --as-of 2026-09-29 \
             --output .cache/release-transition-checkpoint.json
-          diff -u reports/RELEASE_TRANSITION_READINESS_CURRENT.json .cache/release-transition-checkpoint.json
+          python - <<'PY'
+          import json
+          expected=json.load(open('reports/RELEASE_TRANSITION_READINESS_CURRENT.json',encoding='utf-8'))
+          actual=json.load(open('.cache/release-transition-checkpoint.json',encoding='utf-8'))
+          assert actual==expected, (actual, expected)
+          print('committed release-transition checkpoint: PASS')
+          PY
 
       - name: Verify release date is recheck only
         run: |
