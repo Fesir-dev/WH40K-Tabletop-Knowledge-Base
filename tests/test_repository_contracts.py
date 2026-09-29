@@ -41,6 +41,8 @@ class RepositoryContracts(unittest.TestCase):
         cls.collection_solver = json.loads((ROOT/"reports/COLLECTION_AWARE_ROSTER_SOLVER_CURRENT.json").read_text(encoding="utf-8"))
         cls.custodes_solver_profile = json.loads((ROOT/"collection/adeptus_custodes/solver_profile.json").read_text(encoding="utf-8"))
         cls.custodes_current_collection = json.loads((ROOT/"collection/adeptus_custodes/current.json").read_text(encoding="utf-8"))
+        cls.normative_gap_audit = json.loads((ROOT/"reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json").read_text(encoding="utf-8"))
+        cls.public_rules_discovery = json.loads((ROOT/"sources/discoveries/gw_public_rules_surface_2026-09-29.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -154,6 +156,39 @@ class RepositoryContracts(unittest.TestCase):
         self.assertIn("23 */6 * * *", workflow)
         self.assertNotIn("contents: write", workflow)
         self.assertNotIn("pull-requests: write", workflow)
+
+    def test_normative_app_equivalence_gap_audit(self):
+        audit=self.normative_gap_audit
+        self.assertEqual(audit["status"], "PASS")
+        self.assertEqual(audit["milestone"], "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT")
+        self.assertEqual(audit["coverage_summary"]["current_normalized_factions"], 0)
+        self.assertEqual(audit["coverage_summary"]["full_normative_semantic_factions"], 0)
+        self.assertEqual(audit["coverage_summary"]["secondary_semantic_current_roster_identities"], 35)
+        self.assertFalse(audit["authority_boundary"]["mirror_hash_match_is_normative_equivalence"])
+        self.assertFalse(audit["authority_boundary"]["faction_pack_is_full_codex_replacement"])
+        self.assertFalse(audit["authority_boundary"]["app_wording_inference_allowed"])
+
+        mapping=audit["roster_source_mapping"]["counts"]
+        self.assertEqual(mapping["DIRECT_NAME_MATCH"], 25)
+        self.assertEqual(mapping["NAMING_ALIAS_CANDIDATE"], 3)
+        self.assertEqual(mapping["PARENT_SOURCE_CANDIDATE"], 7)
+        self.assertEqual(mapping["NO_PUBLIC_FACTION_PACK_MAPPING"], 2)
+
+        gaps={x["id"]:x for x in audit["gaps"]}
+        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE")
+        self.assertEqual(gaps["PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION"]["state"], "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCES")
+        self.assertEqual(gaps["GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK"]["state"], "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE")
+        self.assertEqual(gaps["NORMATIVE_COVERAGE_ACCOUNTING"]["state"], "INTENTIONAL_ZERO_NOT_MIRROR_DATA_LOSS")
+        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE")
+
+        findings={x["id"]:x for x in self.public_rules_discovery["findings"]}
+        self.assertEqual(findings["GW_11E_CORE_RULES_PUBLIC"]["state"], "PUBLIC_OFFICIAL_SOURCE_DISCOVERED_NOT_INGESTED")
+        self.assertTrue(findings["GW_11E_CORE_RULES_PUBLIC"]["asset_url"].startswith("https://assets.warhammer-community.com/"))
+        self.assertTrue(self.public_rules_discovery["policy"]["no_full_faction_equivalence_from_faction_packs_alone"])
+
+        self.assertTrue((ROOT/"tools/audit_normative_equivalence_gaps.py").exists())
+        self.assertTrue((ROOT/".github/workflows/normative-equivalence-gap-audit.yml").exists())
+        self.assertTrue((ROOT/"schemas/normative_equivalence_gap_audit.schema.json").exists())
 
     def test_mfm_wave_a_snapshot(self):
         self.assertEqual(self.mfm["official_source"]["version"], "1.4")
