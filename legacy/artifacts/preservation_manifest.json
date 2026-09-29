@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "closed_at": "2026-09-29",
+  "preservation_status": "CLOSED",
+  "legacy_archives_prune_safe": true,
+  "verification_method": "Exact complete base64 equality between Google Drive preservation copy and GitHub blob, plus repository CI SHA-256/size gate.",
+  "artifacts": [
+    {
+      "id": "RULES_ASSISTANT_V0_9_20260815",
+      "original_uploaded_filename": "W40K_11E_RULES_ASSISTANT_v0_9_FULL_FACTION_SEMANTICS_20260815(1).zip",
+      "repository_path": "legacy/artifacts/original/W40K_11E_RULES_ASSISTANT_v0_9_FULL_FACTION_SEMANTICS_20260815.zip",
+      "size_bytes": 883437,
+      "sha256": "98bbc892879e9211fadaff158efbd98321b704e0c56e6dd84df2ef69e9b00947",
+      "zip_entries": 364,
+      "files": 350,
+      "directories": 14,
+      "uncompressed_file_bytes": 3325692,
+      "file_types": {
+        "csv": 6,
+        "db": 2,
+        "json": 187,
+        "jsonl": 2,
+        "md": 119,
+        "py": 33,
+        "txt": 1
+      },
+      "google_drive_backup": {
+        "path": "/Google Drive/WH40K-Tabletop-Knowledge-Base-Archive/W40K_11E_RULES_ASSISTANT_v0_9_FULL_FACTION_SEMANTICS_20260815.zip",
+        "url": "https://drive.google.com/file/d/1taeMxOTv1Sqj3bCMdlblzQ3gsC6nhQv5/view?usp=drivesdk",
+        "size_bytes": 883437
+      }
+    },
+    {
+      "id": "CUSTODES_COLLECTION_V0_5_20260711",
+      "original_uploaded_filename": "W40K_COLLECTION_INVENTORY_v0_5_ADEPTUS_CUSTODES_PROVISIONAL(2).zip",
+      "repository_path": "legacy/artifacts/original/W40K_COLLECTION_INVENTORY_v0_5_ADEPTUS_CUSTODES_PROVISIONAL.zip",
+      "size_bytes": 32347,
+      "sha256": "6aee2f7bf491f4fe6f254aeecf79dffe84a5579e24a3022aafcea422b9e97f20",
+      "zip_entries": 4,
+      "files": 4,
+      "directories": 0,
+      "uncompressed_file_bytes": 250473,
+      "file_types": {
+        "json": 3,
+        "md": 1
+      },
+      "google_drive_backup": {
+        "path": "/Google Drive/WH40K-Tabletop-Knowledge-Base-Archive/W40K_COLLECTION_INVENTORY_v0_5_ADEPTUS_CUSTODES_PROVISIONAL.zip",
+        "url": "https://drive.google.com/file/d/13L9lAO0yb0gncB3faZDbgf8ignlTVqHK/view?usp=drivesdk",
+        "size_bytes": 32347
+      }
+    }
+  ],
+  "conclusion": "All information contained in the two bootstrap ZIP archives is preserved because the exact original archives themselves are now versioned in GitHub and independently backed up in Google Drive."
+}
