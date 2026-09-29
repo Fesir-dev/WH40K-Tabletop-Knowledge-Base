@@ -29,6 +29,11 @@ STAGE_DEFS = {
         "automation": "AUTOMATED_CANDIDATE",
         "description": "Verify candidate semantic fingerprints against the live Wahapedia export.",
     },
+    "OFFICIAL_ASSET_AUDIT": {
+        "source": "GW_40K_DOWNLOADS",
+        "automation": "AUTOMATED_CANDIDATE",
+        "description": "When the mirror source catalog changes, verify its referenced official Games Workshop PDF assets before promotion.",
+    },
     "BSDATA_FALLBACK_REBUILD": {
         "source": "BSDATA_WH40K_11E",
         "automation": "AUTOMATED_CANDIDATE",
@@ -68,7 +73,9 @@ def build_plan(watch: dict, candidate_snapshot_date: str) -> dict:
     bs = github.get("BSDATA_WH40K_11E", {})
     mfm = github.get("BSDATA_MFM_11E", {})
     waha = watch.get("wahapedia", {})
-    waha_changed = bool(waha.get("changed_files") or watch.get("change_summary", {}).get("wahapedia_last_update_changed"))
+    waha_changed_files = {x.get("file") for x in waha.get("changed_files", []) if x.get("file")}
+    waha_changed = bool(waha_changed_files or watch.get("change_summary", {}).get("wahapedia_last_update_changed"))
+    source_catalog_changed = "Source.csv" in waha_changed_files
     bs_changed = bool(bs.get("changed"))
     mfm_changed = bool(mfm.get("changed"))
 
@@ -83,6 +90,8 @@ def build_plan(watch: dict, candidate_snapshot_date: str) -> dict:
     stage_ids = []
     if waha_changed:
         stage_ids.extend(["WAHAPEDIA_INGEST", "WAVE_B_RECONCILE", "WAVE_B_ROSTER_VIEWS", "WAHAPEDIA_SEMANTIC_AUDIT"])
+        if source_catalog_changed:
+            stage_ids.append("OFFICIAL_ASSET_AUDIT")
     elif bs_changed:
         stage_ids.append("WAVE_B_RECONCILE")
     if bs_changed:
