@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/official_public_semantic_fingerprint.schema.json",
+  "title": "Official public rules semantic fingerprint corpus",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "as_of",
+    "authority",
+    "extraction_contract",
+    "documents",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "as_of": {
+      "type": "string"
+    },
+    "authority": {
+      "const": "GAMES_WORKSHOP_OFFICIAL"
+    },
+    "extraction_contract": {
+      "type": "object",
+      "required": [
+        "engine",
+        "normalization_version",
+        "copyright_policy"
+      ],
+      "properties": {
+        "engine": {
+          "type": "string"
+        },
+        "normalization_version": {
+          "type": "string"
+        },
+        "copyright_policy": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "document_id",
+          "title",
+          "document_type",
+          "url",
+          "binary_sha256",
+          "page_count",
+          "text_char_count",
+          "semantic_sha256",
+          "pages",
+          "verification"
+        ],
+        "properties": {
+          "document_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "document_type": {
+            "enum": [
+              "CORE_RULES",
+              "FACTION_PACK"
+            ]
+          },
+          "url": {
+            "type": "string"
+          },
+          "expected_binary_sha256": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "binary_sha256": {
+            "type": "string"
+          },
+          "page_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "text_char_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "semantic_sha256": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "page",
+                "text_char_count",
+                "semantic_sha256",
+                "semantic_classes"
+              ],
+              "properties": {
+                "page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "text_char_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "semantic_sha256": {
+                  "type": "string"
+                },
+                "semantic_classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "verification": {
+            "enum": [
+              "PASS",
+              "FAIL"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "documents",
+        "core_rules",
+        "faction_packs",
+        "verified",
+        "failures",
+        "pages",
+        "text_chars"
+      ],
+      "properties": {
+        "documents": {
+          "type": "integer"
+        },
+        "core_rules": {
+          "type": "integer"
+        },
+        "faction_packs": {
+          "type": "integer"
+        },
+        "verified": {
+          "type": "integer"
+        },
+        "failures": {
+          "type": "integer"
+        },
+        "pages": {
+          "type": "integer"
+        },
+        "text_chars": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
