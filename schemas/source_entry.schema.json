@@ -32,7 +32,8 @@
         "event_overlay",
         "community_intelligence",
         "personal_observation",
-        "legacy_project"
+        "legacy_project",
+        "analytical_model"
       ]
     },
     "source_role": {
@@ -47,7 +48,13 @@
         "event_overlay",
         "community_intelligence",
         "historical_baseline",
-        "personal_collection"
+        "personal_collection",
+        "tournament_raw",
+        "meta_aggregator",
+        "list_meta",
+        "mathhammer",
+        "expert_analysis",
+        "architecture_reference"
       ]
     },
     "edition": {
@@ -110,6 +117,27 @@
       "items": {
         "type": "string"
       }
+    },
+    "analytics_class": {
+      "type": "string"
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "independence_groups": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "observed_refresh_cadence": {
+      "type": "string"
+    },
+    "observed_data_through": {
+      "type": "string"
     }
   },
   "additionalProperties": true
