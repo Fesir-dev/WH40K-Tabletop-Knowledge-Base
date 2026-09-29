@@ -73,7 +73,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Add collection-aware roster legality/physical-feasibility solver v1 for Adeptus Custodes, with shared-body allocation, build/conversion states, component limits and fail-closed unknowns.
 - [x] Build release-transition ingestion readiness v1 for pending Space Marines and Adeptus Custodes releases with fail-closed date/evidence gates and no direct promotion.
 - [x] Add read-only six-hour release activation watch with fail-closed action states and guarded-candidate readiness only after official currentness plus upstream projection drift.
-- [ ] Audit the remaining normative/app equivalence gaps that keep `current_normalized_factions = 0`, without weakening GW authority.
+- [x] Audit the remaining normative/app equivalence gaps that keep `current_normalized_factions = 0`, including public Core Rules discovery, supplemental faction-pack scope, app blockers and source-to-roster provenance.
+- [ ] Build copyright-safe official public rules semantic fingerprints for 11E Core Rules plus public Faction Pack supplement/FAQ overlap, without claiming full Codex/app equivalence.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary
