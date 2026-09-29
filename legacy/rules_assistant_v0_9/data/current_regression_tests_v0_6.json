@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "runtime": "CURRENT_USER_FACTIONS_20260815",
+  "tests": [
+    {"id":"CUSTODES_ALEYA","type":"unit_cost","faction":"adeptus_custodes","unit":"Aleya","models":1,"copy":1,"expected":55},
+    {"id":"CUSTODES_VENATARI_3RD","type":"unit_cost","faction":"adeptus_custodes","unit":"Venatari Custodians","models":3,"copy":3,"expected":160},
+    {"id":"ADMECH_DUNERIDER_4TH","type":"unit_cost","faction":"adeptus_mechanicus","unit":"Skorpius Dunerider","models":1,"copy":4,"expected":85},
+    {"id":"DAEMON_LOC_3RD","type":"unit_cost","faction":"chaos_daemons","unit":"Lord of Change","models":1,"copy":3,"expected":340},
+    {"id":"CSM_CHOSEN_3RD_10","type":"unit_cost","faction":"chaos_space_marines","unit":"Chosen","models":10,"copy":3,"expected":280},
+    {"id":"GSC_REDUCTUS_3RD","type":"unit_cost","faction":"genestealer_cults","unit":"Reductus Saboteur","models":1,"copy":3,"expected":80},
+    {"id":"IK_CASTELLAN_2ND","type":"unit_cost","faction":"imperial_knights","unit":"Knight Castellan","models":1,"copy":2,"expected":450},
+    {"id":"TS_SEKHETAR_3RD","type":"unit_cost","faction":"thousand_sons","unit":"Sekhetar Robots","models":4,"copy":3,"expected":190},
+    {"id":"WE_EXALTED_3RD","type":"unit_cost","faction":"world_eaters","unit":"Exalted Eightbound","models":6,"copy":3,"expected":280},
+    {"id":"CUSTODES_MORITOI","type":"detachment","faction":"adeptus_custodes","detachment":"Might of the Moritoi","expected_dp":1,"expected_disposition":"Take and Hold"},
+    {"id":"ADMECH_HALOSC","type":"detachment","faction":"adeptus_mechanicus","detachment":"Haloscreed Battle Clade","expected_dp":3,"expected_disposition":"Priority Assets"},
+    {"id":"GSC_XENOCULT","type":"detachment","faction":"genestealer_cults","detachment":"Xenocult Masses","expected_dp":1,"expected_disposition":"Reconnaissance"},
+    {"id":"IK_FREEBLADE","type":"detachment","faction":"imperial_knights","detachment":"Freeblade Company","expected_dp":3,"expected_disposition":"Priority Assets"},
+    {"id":"TS_HEXWARP","type":"detachment","faction":"thousand_sons","detachment":"Hexwarp Thrallband","expected_dp":3,"expected_disposition":"Take and Hold"},
+    {"id":"WE_BUTCHERS","type":"detachment","faction":"world_eaters","detachment":"Butchers of Khorne","expected_dp":1,"expected_disposition":"Take and Hold"},
+    {"id":"WE_BLESSING_RULE","type":"rule_update","faction":"world_eaters","contains":"Unbridled Bloodlust"},
+    {"id":"CUSTODES_FRAME_RULE","type":"rule_update","faction":"adeptus_custodes","contains":"FRAME"},
+    {"id":"TS_CABAL_RULE","type":"rule_update","faction":"thousand_sons","contains":"Cabal"}
+  ]
+}
