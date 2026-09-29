@@ -1,0 +1,78 @@
+{
+  "schema": "w40k11.core_roster_rules.v0.7",
+  "edition": "Warhammer 40,000 11th edition",
+  "as_of": "2026-08-15",
+  "sources": {
+    "checked_at": "2026-08-15",
+    "official_downloads": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+    "official_army_building_article": "https://www.warhammer-community.com/en-gb/articles/95fucn12/building-an-army-in-the-new-edition-of-warhammer-40000/",
+    "official_july_update_article": "https://www.warhammer-community.com/en-gb/articles/rgqanids/warhammer-40000-july-update-what-you-need-to-know/",
+    "official_core_pdf": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+    "secondary_current_core": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/",
+    "authority": "Official Games Workshop sources override all secondary sources. Wahapedia is a structured current cross-check/navigation layer."
+  },
+  "battle_sizes": {
+    "incursion": {
+      "points_limit": 1000,
+      "detachment_points_limit": 2,
+      "enhancement_limit": 2,
+      "unit_limit": 2,
+      "special_detachment_exception": {
+        "allow_one_detachment_costing_3_dp_as_only_detachment": true
+      }
+    },
+    "strike_force": {
+      "points_limit": 2000,
+      "detachment_points_limit": 3,
+      "enhancement_limit": 4,
+      "unit_limit": 3
+    }
+  },
+  "unit_selection": {
+    "battleline_unit_limit_multiplier": 2,
+    "dedicated_transport_unit_limit_multiplier": 2,
+    "epic_hero_unit_limit": 1,
+    "same_detachment_max_copies": 1,
+    "all_units_must_be_available_to_selected_army_faction": true,
+    "faction_specific_restrictions_must_also_be_obeyed": true
+  },
+  "warlord": {
+    "required": true,
+    "must_be_character": true,
+    "must_share_army_faction": true,
+    "must_be_warlord_rule_priority": true,
+    "cannot_be_warlord_overrides_must_be_warlord": true
+  },
+  "attachments": {
+    "leader_may_be_unattached": true,
+    "support_must_be_attached": true,
+    "max_leaders_per_bodyguard": 1,
+    "max_support_per_bodyguard": 1,
+    "attachments_selected_during_roster_building": true
+  },
+  "enhancements": {
+    "default_target_requires_character": true,
+    "epic_hero_cannot_receive": true,
+    "max_enhancements_per_unit": 1,
+    "duplicate_non_upgrade_max": 1,
+    "upgrade_max_same_enhancement": 3,
+    "second_and_third_upgrade_copies_do_not_count_toward_enhancement_limit": true,
+    "each_upgrade_copy_pays_points": true
+  },
+  "deployment_formations": {
+    "dedicated_transport_must_start_with_friendly_unit_embarked": true,
+    "empty_dedicated_transport_destroyed_at_end_of_declare_battle_formations": true
+  },
+  "interaction_caps": {
+    "normal_moves_per_unit_per_phase": 1,
+    "extra_cp_gained_per_battle_round": 1,
+    "same_stratagem_uses_per_phase": 1,
+    "same_unit_stratagem_targets_per_phase": 1,
+    "exceptions_require_explicit_rule_permission": true
+  },
+  "certification": {
+    "core_roster_constraints": "CURRENT_NORMALIZED",
+    "faction_specific_detachment_composition": "PARTIAL_NOT_GLOBALLY_NORMALIZED",
+    "transport_capacity_and_embark_eligibility": "NOT_GLOBALLY_NORMALIZED"
+  }
+}
