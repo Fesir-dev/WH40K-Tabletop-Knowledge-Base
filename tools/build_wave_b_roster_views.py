@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import json, re, unicodedata
+import argparse, json, re, unicodedata
 from collections import defaultdict
 from pathlib import Path
 
@@ -46,6 +46,15 @@ def choose_ds(candidates, mfm_unit):
     return sorted(candidates,key=score,reverse=True)[0]
 
 def main():
+    global DATE, WROOT, MROOT, OUT
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--snapshot-date",default=DATE)
+    ap.add_argument("--mfm-snapshot-date")
+    a=ap.parse_args()
+    DATE=a.snapshot_date
+    WROOT=ROOT/"rules"/"11e"/"snapshots"/DATE/"wahapedia"
+    MROOT=ROOT/"rules"/"11e"/"snapshots"/(a.mfm_snapshot_date or DATE)/"mfm"
+    OUT=WROOT/"roster_views"
     catalog=json.loads((ROOT/"factions"/"catalog.json").read_text(encoding="utf-8"))
     manifest=json.loads((WROOT/"manifest.json").read_text(encoding="utf-8"))
     w_entries={x.get("repository_slug"):x for x in manifest["factions"] if x.get("repository_slug")}
