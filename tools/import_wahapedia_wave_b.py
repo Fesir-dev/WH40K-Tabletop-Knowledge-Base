@@ -50,6 +50,7 @@ ALIASES = {
     "Adepta Sororitas": "adepta_sororitas",
     "Adeptus Custodes": "adeptus_custodes",
     "Adeptus Mechanicus": "adeptus_mechanicus",
+    "Adeptus Titanicus": "adeptus_titanicus",
     "Imperial Agents": "agents_of_the_imperium",
     "Agents of the Imperium": "agents_of_the_imperium",
     "Astra Militarum": "astra_militarum",
@@ -187,6 +188,8 @@ def main() -> int:
     strats_by_faction = rows_by(tables["Stratagems.csv"], "faction_id")
     enh_by_faction = rows_by(tables["Enhancements.csv"], "faction_id")
     detabs_by_faction = rows_by(tables["Detachment_abilities.csv"], "faction_id")
+    army_abilities_by_faction = rows_by(tables["Abilities.csv"], "faction_id")
+    leaders_by_leader = rows_by(tables["Datasheets_leader.csv"], "leader_id")
     det_by_faction = rows_by(tables["Detachments.csv"], "faction_id") if tables["Detachments.csv"] and "faction_id" in tables["Detachments.csv"][0] else {}
 
     snap_dir = root / "rules" / "11e" / "snapshots" / args.snapshot_date / "wahapedia"
@@ -212,7 +215,7 @@ def main() -> int:
             source = source_by_id.get(source_id, {})
             is_legends = "(Warhammer Legends)" in source.get("name", "")
             models = [
-                clean_row(x, keep=("line","name","m","t","sv","w","ld","oc","inv_sv","inv_sv_descr"))
+                clean_row(x, keep=("line","name","m","t","sv","w","ld","oc","inv_sv","inv_sv_descr","base_size","base_size_descr"))
                 for x in related.get("Datasheets_models.csv", {}).get(dsid, [])
             ]
             weapons = [
@@ -236,9 +239,12 @@ def main() -> int:
                 for x in related.get("Datasheets_unit_composition.csv", {}).get(dsid, [])
             ]
             leaders = [
-                clean_row(x, keep=tuple(x.keys()))
-                for x in related.get("Datasheets_leader.csv", {}).get(dsid, [])
+                clean_row(x, keep=("leader_id","attached_id"))
+                for x in leaders_by_leader.get(dsid, [])
             ]
+            stratagem_ids = [x.get("stratagem_id") for x in related.get("Datasheets_stratagems.csv", {}).get(dsid, []) if x.get("stratagem_id")]
+            enhancement_ids = [x.get("enhancement_id") for x in related.get("Datasheets_enhancements.csv", {}).get(dsid, []) if x.get("enhancement_id")]
+            detachment_ability_ids = [x.get("detachment_ability_id") for x in related.get("Datasheets_detachment_abilities.csv", {}).get(dsid, []) if x.get("detachment_ability_id")]
             costs = [
                 clean_row(x, keep=("line","description","cost"))
                 for x in related.get("Datasheets_models_cost.csv", {}).get(dsid, [])
@@ -247,6 +253,8 @@ def main() -> int:
                 "id": dsid,
                 "name": ds.get("name"),
                 "role": ds.get("role"),
+                "virtual": ds.get("virtual") or None,
+                "is_support": ds.get("is_support") or None,
                 "source_id": source_id or None,
                 "source_name": source.get("name") or None,
                 "source_version": source.get("version") or None,
@@ -264,6 +272,9 @@ def main() -> int:
                 "options": options,
                 "unit_composition": composition,
                 "leader_links": leaders,
+                "stratagem_ids": stratagem_ids,
+                "enhancement_ids": enhancement_ids,
+                "detachment_ability_ids": detachment_ability_ids,
             })
             totals["models"] += len(models)
             totals["weapons"] += len(weapons)
@@ -272,8 +283,12 @@ def main() -> int:
             totals["options"] += len(options)
             totals["composition_rows"] += len(composition)
             totals["leader_rows"] += len(leaders)
+        army_abilities = [
+            clean_row(x, prose_hash_fields=("description","legend"), keep=("id","name"))
+            for x in army_abilities_by_faction.get(fid, [])
+        ]
         stratagems = [
-            clean_row(x, prose_hash_fields=("description","legend"), keep=("id","name","type","cp_cost","turn","phase","detachment"))
+            clean_row(x, prose_hash_fields=("description","legend"), keep=("id","name","type","cp_cost","turn","phase","detachment","detachment_id"))
             for x in strats_by_faction.get(fid, [])
         ]
         enhancements = [
@@ -303,6 +318,7 @@ def main() -> int:
                 "rule_text_policy": "Names/metadata/structured characteristics are stored; long prose is represented by SHA-256 fingerprints and fetched from the source on demand.",
             },
             "sources": [source_by_id[sid] for sid in sorted(source_ids) if sid in source_by_id],
+            "army_abilities": army_abilities,
             "datasheets": ds_out,
             "detachments": detachments,
             "detachment_abilities": detachment_abilities,
@@ -315,11 +331,12 @@ def main() -> int:
         faction_index.append({
             "faction_id": fid, "name": faction_name, "repository_slug": repo_slug,
             "file": str(out_path.relative_to(root)).replace("\\","/"),
-            "datasheets": len(ds_out), "detachments": len(detachments),
+            "datasheets": len(ds_out), "army_abilities": len(army_abilities), "detachments": len(detachments),
             "detachment_abilities": len(detachment_abilities),
             "enhancements": len(enhancements), "stratagems": len(stratagems),
         })
         totals["datasheets"] += len(ds_out)
+        totals["army_abilities"] += len(army_abilities)
         totals["detachments"] += len(detachments)
         totals["detachment_abilities"] += len(detachment_abilities)
         totals["enhancements"] += len(enhancements)
