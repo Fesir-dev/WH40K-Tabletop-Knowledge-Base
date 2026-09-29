@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "status": "HOLD_OR_STABLE",
+  "as_of": "2026-09-29",
+  "release_state_source": "sources/release_state.json",
+  "transitions": [
+    {
+      "transition_id": "ORKS_CODEX_2026",
+      "factions": [
+        "orks"
+      ],
+      "current_legal_state": "CURRENT_LEGAL",
+      "upcoming_state": null,
+      "scheduled_release_date": null,
+      "candidate_authorization": true,
+      "state": "CURRENT_STABLE_NO_PENDING_TRANSITION",
+      "auto_promote": false,
+      "rule": "A date can trigger an official recheck but cannot itself authorize promotion."
+    },
+    {
+      "transition_id": "SPACE_MARINES_CODEX_2026",
+      "factions": [
+        "black_templars",
+        "blood_angels",
+        "dark_angels",
+        "deathwatch",
+        "imperial_fists",
+        "iron_hands",
+        "raven_guard",
+        "salamanders",
+        "space_marines",
+        "space_wolves",
+        "ultramarines",
+        "white_scars"
+      ],
+      "current_legal_state": "CURRENT_LEGAL",
+      "upcoming_state": "RELEASE_PENDING",
+      "scheduled_release_date": "2026-10-03",
+      "candidate_authorization": false,
+      "state": "HOLD_CURRENT_PRE_RELEASE",
+      "auto_promote": false,
+      "rule": "A date can trigger an official recheck but cannot itself authorize promotion."
+    },
+    {
+      "transition_id": "ADEPTUS_CUSTODES_CODEX_2026",
+      "factions": [
+        "adeptus_custodes"
+      ],
+      "current_legal_state": "CURRENT_LEGAL",
+      "upcoming_state": "UPCOMING_PREVIEW_PARTIAL",
+      "scheduled_release_date": null,
+      "candidate_authorization": false,
+      "state": "HOLD_CURRENT_RELEASE_DATE_UNKNOWN",
+      "auto_promote": false,
+      "rule": "A date can trigger an official recheck but cannot itself authorize promotion."
+    }
+  ],
+  "blocked_factions": [
+    "adeptus_custodes",
+    "black_templars",
+    "blood_angels",
+    "dark_angels",
+    "deathwatch",
+    "imperial_fists",
+    "iron_hands",
+    "raven_guard",
+    "salamanders",
+    "space_marines",
+    "space_wolves",
+    "ultramarines",
+    "white_scars"
+  ],
+  "official_rechecks_due": 0,
+  "authorized_pending_transitions": 0,
+  "auto_promote": false,
+  "authority_rule": "Release dates and previews are recheck signals only. Games Workshop evidence must explicitly authorize promotion.",
+  "promotion_route": "GUARDED_REINGESTION_CANDIDATE_TO_REVIEWED_PROMOTION"
+}
