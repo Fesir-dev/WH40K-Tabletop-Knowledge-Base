@@ -70,7 +70,7 @@ legacy/                  Metadata for superseded project baselines
 - [x] Add automated upstream revision/hash change watcher for BSData, MFM extraction and all 20 Wahapedia CSV snapshot files; changes stop the baseline and require re-ingestion/reconciliation.
 - [x] Add drift-aware New Recruit runtime validation for all 37 roster identities, five-source mismatch lineage, representative point archetypes and selected structural runtime surfaces.
 - [ ] Build automated re-ingestion/reconciliation/promotion after a detected upstream change.
-- [ ] Add collection-aware roster legality/physical-feasibility solver.
+- [x] Add collection-aware roster legality/physical-feasibility solver v1 for Adeptus Custodes, with shared-body allocation, build/conversion states, component limits and fail-closed unknowns.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary
