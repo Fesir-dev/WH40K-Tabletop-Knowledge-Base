@@ -1,0 +1,38 @@
+name: Official 11E source asset audit
+
+on:
+  push:
+    paths:
+      - "tools/audit_official_11e_assets.py"
+      - ".github/workflows/official-assets-audit.yml"
+      - "rules/11e/snapshots/2026-09-29/wahapedia/source_catalog.json"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify live Source.csv and official GW assets
+        run: python tools/audit_official_11e_assets.py
+      - name: Commit official asset audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sources/snapshots/gw_11e_official_assets_2026-09-29.json
+          if git diff --cached --quiet; then
+            echo "No official asset report changes"
+          else
+            git commit -m "Refresh official 11E source asset audit"
+            git push
+          fi
