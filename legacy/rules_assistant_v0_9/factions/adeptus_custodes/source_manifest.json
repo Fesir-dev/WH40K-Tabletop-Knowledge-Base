@@ -1,0 +1,27 @@
+{
+  "faction": {"slug":"adeptus_custodes","name_en":"Adeptus Custodes","name_ru":"Адептус Кустодес"},
+  "source": {
+    "title":"Adeptus Custodes - Faction Pack",
+    "version":"1.1",
+    "legal_for_matched_play_from":"2026-07-22",
+    "pdf_pages":35,
+    "sha256_of_verified_external_pdf":"2bd44272dd4abb2c4e44b77ecb3bac55cb21d14f3be9312ee4ca2591b8112427",
+    "official_download_page":"https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+    "mfm_interactive_version":"1.2",
+    "mfm_updated":"2026-07-22",
+    "checked_at":"2026-08-15",
+    "wahapedia_11e_crosscheck":"https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/"
+  },
+  "live_overrides_required": {
+    "munitorum_field_manual":"Reconciled locally to current MFM 1.2 (official update 2026-07-22) for this user faction.",
+    "universal_rules_updates":"Version 1.0, legal from 2026-07-22, active global override.",
+    "faction_pack":"v1.1, legal from 2026-07-22, current local semantic delta stored in rules_updates_v1_1_20260722.json.",
+    "app":"Official app wording has priority; current post-July follow-up checked through 2026-08-15.",
+    "secondary":"Wahapedia/40k.app are structured cross-checks only and never override official sources."
+  },
+  "duplicate_notes":[{"filename":"eng_11-06_warhammer40000_faction_pack_adeptus_custodes-dntocqoxie-fpdm060c9y (1).pdf","sha256":"e0865cb1f28d3b0623effda2fd2b38b9ba3811d9d79aa5841bb9f0843f2db3ce","identical_to_primary":true}],
+  "current_external_state":{"checked_at":"2026-08-15","faction_pack_version":"1.1","faction_pack_updated":"2026-07","mfm_version":"1.2","mfm_official_updated":"2026-07-22","universal_rules_updates":"1.0 (legal from 2026-07-22)","secondary_crosscheck":"Wahapedia wh40k11ed","status":"current_reconciled_for_local_runtime","reconciled_at":"2026-08-15"},
+  "historical_source_v1_0":{"filename":"eng_11-06_warhammer40000_faction_pack_adeptus_custodes-dntocqoxie-fpdm060c9y.pdf","title":"ADEPTUS CUSTODES — FACTION PACK","version":"1.0","legal_for_matched_play_from":"2026-06-20","pdf_pages":35,"sha256":"e0865cb1f28d3b0623effda2fd2b38b9ba3811d9d79aa5841bb9f0843f2db3ce","coverage_type":"supplement"},
+  "current_source":{"title":"Adeptus Custodes - Faction Pack","version":"1.1","legal_for_matched_play_from":"2026-07-22","pdf_pages":35,"sha256_of_verified_external_pdf":"2bd44272dd4abb2c4e44b77ecb3bac55cb21d14f3be9312ee4ca2591b8112427","official_download_page":"https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/","mfm_interactive_version":"1.2","mfm_updated":"2026-07-22","checked_at":"2026-08-15","wahapedia_11e_crosscheck":"https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/"},
+  "runtime_state":{"status":"CURRENT_USER_FACTIONS_20260815","mfm_version":"1.2","mfm_official_updated":"2026-07-22","checked_at":"2026-08-15","faction_pack_version":"1.1","faction_pack_legal_from":"2026-07-22","current_points_file":"mfm_v1_2_points.json","current_detachments_file":"mfm_v1_2_detachments.json","current_leader_support_file":"leader_support_graph_v1_2.json","current_rules_update_file":"rules_updates_v1_1_20260722.json","historical_note":"Explicit *_v1_0_* and live_source_snapshot_20260710 files are retained as historical evidence."}
+}
