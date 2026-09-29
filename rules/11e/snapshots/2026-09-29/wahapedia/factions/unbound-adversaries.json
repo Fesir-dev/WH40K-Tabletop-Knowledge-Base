@@ -13,6 +13,7 @@
     "rule_text_policy": "Names/metadata/structured characteristics are stored; long prose is represented by SHA-256 fingerprints and fetched from the source on demand."
   },
   "sources": [],
+  "army_abilities": [],
   "datasheets": [],
   "detachments": [],
   "detachment_abilities": [],

@@ -1,0 +1,1087 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "wahapedia_last_update": "2026-09-28 02:38:04",
+  "faction": {
+    "id": "TL",
+    "name": "Adeptus Titanicus",
+    "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-titanicus",
+    "repository_slug": "adeptus_titanicus"
+  },
+  "copyright_policy": {
+    "full_prose_stored": false,
+    "rule_text_policy": "Names/metadata/structured characteristics are stored; long prose is represented by SHA-256 fingerprints and fetched from the source on demand."
+  },
+  "sources": [
+    {
+      "id": "000000270",
+      "name": "Adeptus Titanicus (Forge World)",
+      "type": "Faction Pack",
+      "edition": "11",
+      "version": "1.1",
+      "errata_date": "22.07.2026 0:00:00",
+      "errata_link": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_adeptus_titanicus-pkhrobh6xn-nmtoszeaxw.pdf"
+    }
+  ],
+  "army_abilities": [
+    {
+      "id": "000008533",
+      "name": "Towering Example",
+      "description_sha256": "73d669f422c073b0ad213822fbda1c0534170b120eeeae50c051a28bb8d78b2d",
+      "description_present": true
+    },
+    {
+      "id": "000008534",
+      "name": "Titanic Support",
+      "description_sha256": "8e76ef4c74ec85cbfe84b51b59ca68459b043d7588536cf9c22bc6e2e1cfb736",
+      "description_present": true
+    },
+    {
+      "id": "000008535",
+      "name": "Titanicus Traitoris",
+      "description_sha256": "b198b567e4de82fda85324986f6a6ae6696f0d6cf19247e42823526b73181d9d",
+      "description_present": true
+    },
+    {
+      "id": "000008536",
+      "name": "Designer’s Note",
+      "description_sha256": "d229695b97bd68765112a3dbfbee8ae693687b3cf4a00d14f1c9673999836c81",
+      "description_present": true
+    },
+    {
+      "id": "000008538",
+      "name": "Super-heavy Walker",
+      "description_sha256": "d3b457f2db0ab1c89403c342ceb955a48dd0326597798a9a6535a2dcb8fb3e83",
+      "description_present": true
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "000000867",
+      "name": "Warhound Titan",
+      "role": "Titanic",
+      "virtual": "false",
+      "is_support": "false",
+      "source_id": "000000270",
+      "source_name": "Adeptus Titanicus (Forge World)",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-titanicus/Warhound-Titan",
+      "loadout_sha256": "707c0d42d6d5d2718d47cd6a69623be22132c41577b55d4714587313beed9ef2",
+      "transport_sha256": null,
+      "damaged_description_sha256": "815d02504d55fd9c653382f71aa7734f06a2e897ddf90fdc830430ff37928078",
+      "models": [
+        {
+          "line": "1",
+          "name": "Warhound Titan",
+          "m": "14\"",
+          "t": "13",
+          "sv": "2+",
+          "w": "40",
+          "ld": "6+",
+          "oc": "16",
+          "inv_sv": "5",
+          "inv_sv_descr": "* Against ranged attacks only",
+          "base_size": "Use model"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "1100"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Warhound inferno gun",
+          "description": "ignores cover, torrent",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3D6",
+          "bs_ws": "N/A",
+          "s": "7",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Warhound plasma blastgun – standard",
+          "description": "blast",
+          "range": "72",
+          "type": "Ranged",
+          "a": "2D6+3",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-3",
+          "d": "4"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Warhound plasma blastgun – supercharge",
+          "description": "blast, hazardous",
+          "range": "72",
+          "type": "Ranged",
+          "a": "2D6+3",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-3",
+          "d": "5"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Warhound turbo-laser destructor",
+          "description": "blast",
+          "range": "72",
+          "type": "Ranged",
+          "a": "D3+3",
+          "bs_ws": "3",
+          "s": "20",
+          "ap": "-3",
+          "d": "2D6"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Warhound vulcan mega-bolter",
+          "description": "sustained hits 1",
+          "range": "48",
+          "type": "Ranged",
+          "a": "20",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Warhound feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "4",
+          "s": "10",
+          "ap": "-1",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Titanicus",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Warhound Titan",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "2D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008538",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Striding Colossus",
+          "type": "Datasheet",
+          "description_sha256": "81e73ec961c6dc3dc26be93125d92f02db4269021cb41af4e8c27894772b4b69",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Flank Speed",
+          "type": "Datasheet",
+          "description_sha256": "a5bba456d37acdde8c8a90980cb732b7cdd9e78c6c5bdda0e885b79e654bc6a7",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "4adc1678065a96c53fcfd065a1d668c8e96fe83d5890029ef3678381e8f2f137",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "1e72998a08c2fa101856a34aaa2382cc905ace1e72a55af390b3a07736599b40",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "5849712a049fe0769a27876f8e2804afff8691329f21ddc612188e7f0970e69a",
+          "description_present": true
+        }
+      ],
+      "leader_links": [],
+      "stratagem_ids": [
+        "000010810002",
+        "000009218006",
+        "000010810004",
+        "000009218004",
+        "000010810007",
+        "000009218005",
+        "000009218002",
+        "000010810012",
+        "000010810011",
+        "000010810006"
+      ],
+      "enhancement_ids": [],
+      "detachment_ability_ids": []
+    },
+    {
+      "id": "000000868",
+      "name": "Reaver Titan",
+      "role": "Titanic",
+      "virtual": "false",
+      "is_support": "false",
+      "source_id": "000000270",
+      "source_name": "Adeptus Titanicus (Forge World)",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-titanicus/Reaver-Titan",
+      "loadout_sha256": "a06f0346f99cce6512267e7d50f0c60a1c37e39e1f27975941505da298211e60",
+      "transport_sha256": null,
+      "damaged_description_sha256": "dabbed590b8db17170a3a7430740b52b988f0c91059fb71bb410ec1aeef186ec",
+      "models": [
+        {
+          "line": "1",
+          "name": "Reaver Titan",
+          "m": "12\"",
+          "t": "14",
+          "sv": "2+",
+          "w": "60",
+          "ld": "6+",
+          "oc": "20",
+          "inv_sv": "5",
+          "inv_sv_descr": "* Against ranged attacks only",
+          "base_size": "Use model"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "2200"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Reaver apocalypse launcher",
+          "description": "blast, indirect fire",
+          "range": "200",
+          "type": "Ranged",
+          "a": "3D6",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Reaver gatling blaster",
+          "description": "sustained hits 1",
+          "range": "72",
+          "type": "Ranged",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Reaver laser blaster",
+          "description": "blast",
+          "range": "72",
+          "type": "Ranged",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "20",
+          "ap": "-3",
+          "d": "D6+2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Reaver melta cannon",
+          "description": "blast, melta 4",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+2",
+          "bs_ws": "3",
+          "s": "13",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Reaver volcano cannon",
+          "description": "blast, heavy",
+          "range": "120",
+          "type": "Ranged",
+          "a": "D3+1",
+          "bs_ws": "3",
+          "s": "24",
+          "ap": "-5",
+          "d": "14"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Reaver feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "4",
+          "s": "12",
+          "ap": "-2",
+          "d": "4"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Reaver power fist – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "20",
+          "ap": "-4",
+          "d": "14"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "2",
+          "name": "Reaver power fist – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "4",
+          "s": "12",
+          "ap": "-3",
+          "d": "6"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Titanicus",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Reaver Titan",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6+6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008538",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Striding Colossus",
+          "type": "Datasheet",
+          "description_sha256": "3aa5531df548c5d2ec6c745744ba23203238a74ac3cc5c3ef81ef1021b0c4200",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "God-machine",
+          "type": "Datasheet",
+          "description_sha256": "0f41513ebea18a7a9c786b2c739991834268f89c1fa7f8a85714f92e1f8f6317",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "09f42f479e42552d44cddeadb167f5cf0f4b6ed5ac39ffd911f61a93e6b7b73f",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "1c43cbd790b574c602b72b9bb086debd3f64a87c3949b1c64f40c2de299dbade",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "cd6021be1e0e015104db02f8819da86b4083c2d7593446f5ceaec9eb4bc04a96",
+          "description_present": true
+        }
+      ],
+      "leader_links": [],
+      "stratagem_ids": [
+        "000010810006",
+        "000010810007",
+        "000009218004",
+        "000009218002",
+        "000010810012",
+        "000010810004",
+        "000010810002",
+        "000009218005",
+        "000010810011",
+        "000009218006"
+      ],
+      "enhancement_ids": [],
+      "detachment_ability_ids": []
+    },
+    {
+      "id": "000000869",
+      "name": "Warlord Titan",
+      "role": "Titanic",
+      "virtual": "false",
+      "is_support": "false",
+      "source_id": "000000270",
+      "source_name": "Adeptus Titanicus (Forge World)",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-titanicus/Warlord-Titan",
+      "loadout_sha256": "3ee48c4200ff17b29c9c695fd940ffdadbdc5c85e1c34dbf4ab14370db5f6326",
+      "transport_sha256": null,
+      "damaged_description_sha256": "4da894fcd0a1c3984844438057d0114c609c4764ac3243d6e32e6d8c508e5f5c",
+      "models": [
+        {
+          "line": "1",
+          "name": "Warlord Titan",
+          "m": "10\"",
+          "t": "16",
+          "sv": "2+",
+          "w": "100",
+          "ld": "6+",
+          "oc": "30",
+          "inv_sv": "5",
+          "inv_sv_descr": "* Against ranged attacks only",
+          "base_size": "Use model"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "3500"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Apocalypse launcher",
+          "description": "blast, indirect fire",
+          "range": "200",
+          "type": "Ranged",
+          "a": "20",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Ardex-defensor lascannon",
+          "range": "48",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Ardex-defensor mauler",
+          "range": "36",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Arioch power claw",
+          "description": "sustained hits 1",
+          "range": "48",
+          "type": "Ranged",
+          "a": "20",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Belicosa volcano cannon",
+          "description": "blast",
+          "range": "120",
+          "type": "Ranged",
+          "a": "D3+3",
+          "bs_ws": "3",
+          "s": "32",
+          "ap": "-5",
+          "d": "18"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Laser blaster",
+          "description": "blast",
+          "range": "72",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "16",
+          "ap": "-4",
+          "d": "D6+3"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Macro gatling blaster",
+          "description": "sustained hits 1",
+          "range": "100",
+          "type": "Ranged",
+          "a": "30",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Mori quake cannon",
+          "description": "blast, ignores cover",
+          "range": "280",
+          "type": "Ranged",
+          "a": "3D6",
+          "bs_ws": "3",
+          "s": "16",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "1",
+          "name": "Sunfury plasma annihilator – standard",
+          "description": "blast",
+          "range": "72",
+          "type": "Ranged",
+          "a": "2D6+6",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-3",
+          "d": "5"
+        },
+        {
+          "line": "10",
+          "line_in_wargear": "2",
+          "name": "Sunfury plasma annihilator – supercharge",
+          "description": "blast, hazardous",
+          "range": "72",
+          "type": "Ranged",
+          "a": "2D6+6",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-3",
+          "d": "8"
+        },
+        {
+          "line": "11",
+          "line_in_wargear": "1",
+          "name": "Arioch power claw – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "20",
+          "ap": "-4",
+          "d": "24"
+        },
+        {
+          "line": "12",
+          "line_in_wargear": "2",
+          "name": "Arioch power claw – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "4",
+          "s": "12",
+          "ap": "-3",
+          "d": "8"
+        },
+        {
+          "line": "13",
+          "line_in_wargear": "1",
+          "name": "Warlord feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "12",
+          "ap": "-2",
+          "d": "4"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Titanicus",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Warlord Titan",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "2D6+6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008538",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Striding Colossus",
+          "type": "Datasheet",
+          "description_sha256": "5e49e0a2303c353ed4a9168f586ab09001beb2032443e8dcc0783f3817325d36",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Wrath of the Omnissiah",
+          "type": "Datasheet",
+          "description_sha256": "219a2d63c979e7cdd01c2e5eedf9366ecce98d91b3d514dd1b633f05f34a5de2",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "750b607a675c759f9a96ea68de6235f1d82d0d3894f890728245e102ec9ef4e0",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "e2c5113ae630708205b78dfbb973b02dee9fb0248336d8c82134a6899386208c",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "58ca029a7e035e3802e17b9cd5ee958c8f28d9624ff469904eb0293f89623b10",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "0e2159d236d618ec543d52a5471aaa601c2b59351620f485c730e2c7edd90136",
+          "description_present": true
+        }
+      ],
+      "leader_links": [],
+      "stratagem_ids": [
+        "000010810007",
+        "000009218002",
+        "000010810002",
+        "000009218005",
+        "000010810004",
+        "000010810012",
+        "000009218004",
+        "000010810011",
+        "000009218006",
+        "000010810006"
+      ],
+      "enhancement_ids": [],
+      "detachment_ability_ids": []
+    },
+    {
+      "id": "000002077",
+      "name": "Warbringer Nemesis Titan",
+      "role": "Titanic",
+      "virtual": "false",
+      "is_support": "false",
+      "source_id": "000000270",
+      "source_name": "Adeptus Titanicus (Forge World)",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-titanicus/Warbringer-Nemesis-Titan",
+      "loadout_sha256": "11d98edde1d2f7a151fb729e2d7595fd9102fe28253d89dc721c72af51e2d20a",
+      "transport_sha256": null,
+      "damaged_description_sha256": "e6ebc0a2eb5afbeb68912df57130cd31a7a40b443d17895d59dba5a4cd1347e9",
+      "models": [
+        {
+          "line": "1",
+          "name": "Warbringer Nemesis Titan",
+          "m": "12\"",
+          "t": "14",
+          "sv": "2+",
+          "w": "80",
+          "ld": "6+",
+          "oc": "20",
+          "inv_sv": "5",
+          "inv_sv_descr": "* Against ranged attacks only",
+          "base_size": "Use model"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "2600"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Anvillus defence battery",
+          "description": "anti-fly 4+",
+          "range": "72",
+          "type": "Ranged",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Ardex-defensor mauler",
+          "range": "36",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Nemesis quake cannon",
+          "description": "blast, indirect fire",
+          "range": "480",
+          "type": "Ranged",
+          "a": "D6+6",
+          "bs_ws": "3",
+          "s": "16",
+          "ap": "-4",
+          "d": "4"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Nemesis volcano cannon",
+          "description": "blast",
+          "range": "120",
+          "type": "Ranged",
+          "a": "D3+3",
+          "bs_ws": "3",
+          "s": "24",
+          "ap": "-5",
+          "d": "14"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Reaver gatling blaster",
+          "description": "sustained hits 1",
+          "range": "72",
+          "type": "Ranged",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Reaver laser blaster",
+          "description": "blast",
+          "range": "72",
+          "type": "Ranged",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "20",
+          "ap": "-3",
+          "d": "D6+2"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Reaver melta cannon",
+          "description": "blast, melta 4",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+2",
+          "bs_ws": "3",
+          "s": "13",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Reaver volcano cannon",
+          "description": "blast, heavy",
+          "range": "120",
+          "type": "Ranged",
+          "a": "D3+1",
+          "bs_ws": "3",
+          "s": "24",
+          "ap": "-5",
+          "d": "14"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "1",
+          "name": "Nemesis feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "12",
+          "ap": "-2",
+          "d": "4"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Titanicus",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Warbringer Nemesis Titan",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6+6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008538",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Striding Colossus",
+          "type": "Datasheet",
+          "description_sha256": "3aa5531df548c5d2ec6c745744ba23203238a74ac3cc5c3ef81ef1021b0c4200",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Titanic Fire Support",
+          "type": "Datasheet",
+          "description_sha256": "79e4d9435946cae83df4266b15d96268a78cc5307463f8fa0336cddbb7bd8695",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "b671b9751a4f9c8a6cc8cf87f8a3367154a84ed69f81bb1c0a191f39a57962d5",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "aa895543d35956cdc29717dfcd171f737f090d6343708ba0a897ff930fdc857d",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "1c43cbd790b574c602b72b9bb086debd3f64a87c3949b1c64f40c2de299dbade",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "c0c57bfcf721fd137f28195fb28e38c63cb87c9eeecf657ec86c8da10325d281",
+          "description_present": true
+        }
+      ],
+      "leader_links": [],
+      "stratagem_ids": [
+        "000009218004",
+        "000009218002",
+        "000010810004",
+        "000010810002",
+        "000009218005",
+        "000010810006",
+        "000010810007",
+        "000010810012",
+        "000010810011",
+        "000009218006"
+      ],
+      "enhancement_ids": [],
+      "detachment_ability_ids": []
+    }
+  ],
+  "detachments": [],
+  "detachment_abilities": [],
+  "enhancements": [],
+  "stratagems": []
+}
