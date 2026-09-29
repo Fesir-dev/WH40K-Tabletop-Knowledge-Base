@@ -133,6 +133,12 @@ def main() -> int:
                 "--mfm-snapshot-date", baseline,
                 "--bsdata-commit", bs_rev,
             ]]
+        elif sid == "OFFICIAL_ASSET_AUDIT":
+            commands = [[
+                sys.executable, "tools/audit_official_11e_assets.py",
+                "--snapshot-date", candidate_date,
+                "--report-path", f"ingestion/candidates/{plan['plan_id']}/official_assets.json",
+            ]]
         else:
             stage_results.append({"id": sid, "status": "FAIL", "reason": "Unsupported stage id"})
             hard_fail = True
