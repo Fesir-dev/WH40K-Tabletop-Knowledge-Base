@@ -1,0 +1,179 @@
+name: Reviewed upstream reingestion promotion
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_run_id:
+        description: "Workflow run ID that produced the candidate artifact"
+        required: true
+        type: string
+      plan_id:
+        description: "Exact REINGEST_* plan id from the candidate artifact"
+        required: true
+        type: string
+      confirmation:
+        description: "Type PROMOTE_REVIEWED_CANDIDATE"
+        required: true
+        type: string
+
+permissions:
+  actions: read
+  contents: write
+  pull-requests: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require explicit reviewed-promotion confirmation
+        run: |
+          test "${{ inputs.confirmation }}" = "PROMOTE_REVIEWED_CANDIDATE" || {
+            echo "Explicit confirmation string missing"
+            exit 2
+          }
+
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download exact candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p .cache/promotion-artifact
+          gh run download "${{ inputs.candidate_run_id }}" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name "upstream-reingestion-${{ inputs.plan_id }}" \
+            --dir .cache/promotion-artifact
+
+      - name: Verify plan identity and promotion eligibility
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open(".cache/promotion-artifact/reingestion_plan.json",encoding="utf-8"))
+          r=json.load(open(".cache/promotion-artifact/candidate_report.json",encoding="utf-8"))
+          assert p["plan_id"]=="${{ inputs.plan_id }}", (p["plan_id"], "${{ inputs.plan_id }}")
+          assert r["plan_id"]==p["plan_id"]
+          assert r["plan_fingerprint"]==p["plan_fingerprint"]
+          assert r["status"]=="PASS", r["status"]
+          assert r["promotion_gate"]=="ELIGIBLE_FOR_REVIEWED_PROMOTION", r["promotion_gate"]
+          assert p["promotion"]["auto_promote"] is False
+          assert r["auto_promote"] is False
+          assert not p.get("blockers")
+          print("reviewed promotion candidate: ELIGIBLE")
+          PY
+          python tools/apply_reingestion_promotion.py \
+            --artifact-dir .cache/promotion-artifact \
+            --promoted-at "$(date -u +%Y-%m-%d)" \
+            --proposal-out .cache/promotion-proposal.json
+
+      - name: Create isolated promotion branch
+        id: branch
+        shell: bash
+        run: |
+          slug="$(echo "${{ inputs.plan_id }}" | tr '[:upper:]_' '[:lower:]-' | tr -cd 'a-z0-9-')"
+          promotion_branch="promotion/${slug}-${GITHUB_RUN_ID}"
+          git switch -c "$promotion_branch"
+          echo "name=$promotion_branch" >> "$GITHUB_OUTPUT"
+
+      - name: Apply reviewed candidate to promotion branch worktree
+        run: |
+          python tools/apply_reingestion_promotion.py \
+            --artifact-dir .cache/promotion-artifact \
+            --repo-root . \
+            --promoted-at "$(date -u +%Y-%m-%d)" \
+            --apply
+
+      - name: Recheck upstream did not move during promotion
+        run: python tools/watch_upstreams.py
+
+      - name: Revalidate New Recruit against promoted pointers
+        run: python tools/validate_new_recruit_runtime.py
+
+      - name: Sync runtime summary only after classified PASS
+        run: python tools/sync_new_recruit_runtime_status.py
+
+      - name: Verify semantic resolver follows promoted pointer
+        run: python tools/query_current_semantics.py --smoke-test
+
+      - name: Validate repository after promotion
+        run: |
+          python tools/validate_repo.py
+          python -m unittest discover -s tests -v
+
+      - name: Enforce promotion mutation whitelist
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          plan=json.load(open(".cache/promotion-artifact/reingestion_plan.json",encoding="utf-8"))
+          candidate=plan["candidate_snapshot_date"]
+          plan_id=plan["plan_id"]
+          out=subprocess.check_output(["git","status","--porcelain"],text=True)
+          changed=[]
+          for line in out.splitlines():
+              if not line.strip():
+                  continue
+              path=line[3:]
+              if " -> " in path:
+                  path=path.split(" -> ",1)[1]
+              changed.append(path)
+          exact={
+              "coverage/current.json",
+              "rules/11e/current.json",
+              "sources/registry.json",
+              "sources/currentness_gate.json",
+              "reports/UPSTREAM_CHANGE_WATCH_CURRENT.json",
+              "reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json",
+          }
+          prefixes={
+              f"rules/11e/snapshots/{candidate}/",
+              f"ingestion/promotions/{plan_id}/",
+          }
+          bad=[p for p in changed if p not in exact and not any(p.startswith(x) for x in prefixes)]
+          if bad:
+              raise SystemExit("Unexpected promotion mutations: "+repr(bad))
+          print("promotion mutation whitelist: PASS", len(changed))
+          PY
+
+      - name: Commit promotion proposal branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            coverage/current.json \
+            rules/11e/current.json \
+            sources/registry.json \
+            sources/currentness_gate.json \
+            reports/UPSTREAM_CHANGE_WATCH_CURRENT.json \
+            reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json \
+            rules/11e/snapshots \
+            ingestion/promotions
+          git commit -m "Promote reviewed upstream candidate ${{ inputs.plan_id }}"
+          git push -u origin "${{ steps.branch.outputs.name }}"
+
+      - name: Open reviewed promotion pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr create \
+            --repo "$GITHUB_REPOSITORY" \
+            --base main \
+            --head "${{ steps.branch.outputs.name }}" \
+            --title "Promote reviewed upstream candidate ${{ inputs.plan_id }}" \
+            --body "Reviewed promotion proposal generated from candidate workflow run ${{ inputs.candidate_run_id }}.
+
+          Safety properties:
+          - candidate status PASS;
+          - exact plan fingerprint matched;
+          - auto_promote=false;
+          - no MFM normative change;
+          - upstream rechecked after apply;
+          - New Recruit runtime revalidated;
+          - semantic resolver smoke passed;
+          - repository validation and unit tests passed;
+          - final merge remains a separate human-reviewed action."
