@@ -67,8 +67,9 @@ legacy/                  Metadata for superseded project baselines
 - [x] Complete Wave B structural faction ingestion: Wahapedia 11E CSV snapshot, MFM/BSData reconciliation and 35/37 roster-specific structural views.
 - [x] Add a hash-verified on-demand semantic resolver with daily drift smoke checks.
 - [x] Complete Wave B operational semantic/FAQ currentness: 16,506/16,506 mirror fingerprints match live data; 28/28 official faction-pack PDF assets verified; normative text equivalence remains explicitly unclaimed.
-- [ ] Build automated GW ↔ Wahapedia ↔ BSData normalization/diff workers.
-- [ ] Add New Recruit runtime validation/projection checks after normalized faction imports.
+- [x] Add automated upstream revision/hash change watcher for BSData, MFM extraction and all 20 Wahapedia CSV snapshot files; changes stop the baseline and require re-ingestion/reconciliation.
+- [x] Add drift-aware New Recruit runtime validation for all 37 roster identities plus representative MFM point checks.
+- [ ] Build automated re-ingestion/reconciliation/promotion after a detected upstream change.
 - [ ] Add collection-aware roster legality/physical-feasibility solver.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 

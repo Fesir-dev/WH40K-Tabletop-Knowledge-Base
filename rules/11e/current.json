@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.4",
+  "schema_version": "2.5",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -42,7 +42,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "AUTOMATED_DIFF_AND_NEW_RECRUIT_RUNTIME",
+  "next_milestone": "COLLECTION_AWARE_ROSTER_SOLVER",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -111,6 +111,46 @@
       "expected_fingerprints": 16506,
       "matched_fingerprints": 16506,
       "problems": 0
+    }
+  },
+  "automation": {
+    "upstream_change_watch": {
+      "state": "ACTIVE_NO_CHANGE",
+      "report": "reports/UPSTREAM_CHANGE_WATCH_CURRENT.json",
+      "workflow": ".github/workflows/upstream-change-watch.yml",
+      "cadence": "every 6 hours",
+      "bsdata_wh40k_11e": {
+        "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "live": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "changed": false
+      },
+      "bsdata_mfm_11e": {
+        "pinned": "61a687e858c00a4ad205d564959c622a5605ef3d",
+        "live": "61a687e858c00a4ad205d564959c622a5605ef3d",
+        "changed": false
+      },
+      "wahapedia": {
+        "manifest_files_checked": 20,
+        "changed_files": 0,
+        "last_update_changed": false
+      },
+      "auto_promote": false
+    },
+    "new_recruit_runtime": {
+      "state": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
+      "report": "reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json",
+      "workflow": ".github/workflows/new-recruit-runtime.yml",
+      "cadence": "daily",
+      "roster_identities_resolved": 37,
+      "representative_point_checks": 10,
+      "representative_point_matches": 9,
+      "known_runtime_drifts": 1,
+      "new_runtime_drifts": 0,
+      "known_drift_registry": "sources/runtime_drift_registry.json",
+      "active_known_drift_ids": [
+        "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29"
+      ],
+      "authority_rule": "Runtime drift never changes normative MFM facts."
     }
   }
 }

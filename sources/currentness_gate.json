@@ -92,7 +92,17 @@
         "runtime_validation",
         "integration_crosscheck"
       ],
-      "state": "PASS"
+      "state": "PASS",
+      "runtime_validation": {
+        "state": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
+        "checked_at": "2026-09-29",
+        "report": "reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json",
+        "resolved_runtime_identities": 37,
+        "representative_point_checks": 10,
+        "matched": 9,
+        "known_drifts": 1,
+        "new_drifts": 0
+      }
     },
     {
       "id": "BSDATA_MFM_11E",
@@ -224,6 +234,15 @@
       "repository_dimension": null,
       "report": "sources/snapshots/gw_11e_official_assets_2026-09-29.json",
       "authority_boundary": "Verifies live source catalog plus exact official GW asset availability/hashes; does not claim mirror prose equals official text."
+    },
+    "new_recruit_runtime_projection": {
+      "required_sources": [
+        "NEW_RECRUIT_RUNTIME"
+      ],
+      "content_state": "PASS",
+      "repository_dimension": null,
+      "report": "reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json",
+      "authority_boundary": "Runtime projection check only. Known classified drift is preserved; normative Games Workshop/MFM data remains controlling."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."

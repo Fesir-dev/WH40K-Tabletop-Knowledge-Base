@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "profile_id": "new_recruit_bsdata_11e",
   "as_of": "2026-09-29",
-  "status": "CURRENT_VERIFIED",
+  "status": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
   "purpose": "Define how New Recruit and BSData participate in the WH40K knowledge pipeline without treating either as normative rules authority.",
   "upstream": {
     "source_id": "BSDATA_WH40K_11E",
@@ -24,7 +24,29 @@
       "source_id": "NEW_RECRUIT_WIKI",
       "url": "https://www.newrecruit.eu/wiki/"
     },
-    "role": "runtime projection of catalogue data used by players"
+    "role": "runtime projection of catalogue data used by players",
+    "validation": {
+      "workflow": ".github/workflows/new-recruit-runtime.yml",
+      "report": "reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json",
+      "state": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
+      "roster_identities_resolved": 37,
+      "point_samples": {
+        "checks": 10,
+        "matched": 9,
+        "known_drifts": 1,
+        "new_drifts": 0
+      },
+      "known_drift_registry": "sources/runtime_drift_registry.json"
+    },
+    "known_drifts": [
+      {
+        "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
+        "summary": "Ghazghkull Thraka: MFM/Wahapedia 300 pts vs New Recruit runtime 235 pts.",
+        "classification": "KNOWN_RUNTIME_PROJECTION_DRIFT",
+        "normative_resolution": "Use MFM 300 pts.",
+        "monitoring": "Daily; exact known drift does not fail the workflow, but changed/new drift does."
+      }
+    ]
   },
   "tooling": {
     "editor_repository": "giloushaker/nr-editor",
@@ -68,7 +90,13 @@
     "runtime_crosscheck": [
       "New Recruit Wiki",
       "New Recruit roster validation/export where available"
-    ]
+    ],
+    "runtime_monitoring": {
+      "classified_known_drift_registry": true,
+      "fail_on_new_or_changed_runtime_drift": true,
+      "fail_on_exact_known_drift": false,
+      "auto_promote_runtime_values": false
+    }
   },
   "conflict_examples": [
     {
