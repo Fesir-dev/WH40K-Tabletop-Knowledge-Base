@@ -19,12 +19,17 @@ def main() -> int:
     ap.add_argument("--fail-on-official-recheck", action="store_true")
     args = ap.parse_args()
 
-    release_state = json.loads(args.release_state.read_text(encoding="utf-8"))
+    release_state_path = args.release_state.resolve()
+    release_state = json.loads(release_state_path.read_text(encoding="utf-8"))
+    try:
+        source_display = release_state_path.relative_to(ROOT).as_posix()
+    except ValueError:
+        source_display = str(release_state_path)
     result = evaluate_release_state(release_state, date.fromisoformat(args.as_of))
     result.update({
         "schema_version": "1.0",
         "status": "OFFICIAL_RECHECK_REQUIRED" if result["official_rechecks_due"] else "HOLD_OR_STABLE",
-        "release_state_source": str(args.release_state),
+        "release_state_source": source_display,
         "authority_rule": "Release dates and previews are recheck signals only. Games Workshop evidence must explicitly authorize promotion.",
         "promotion_route": "GUARDED_REINGESTION_CANDIDATE_TO_REVIEWED_PROMOTION",
     })
