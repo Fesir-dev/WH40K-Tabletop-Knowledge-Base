@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "roster_id": "custodes_conversion",
+  "faction": "adeptus-custodes",
+  "detachment": "Shield Host",
+  "points_limit": 2000,
+  "options": {
+    "allow_conversion": true
+  },
+  "units": [
+    {
+      "id": "guard1",
+      "unit": "Custodian Guard",
+      "models": 5
+    },
+    {
+      "id": "guard2",
+      "unit": "Custodian Guard",
+      "models": 5
+    },
+    {
+      "id": "guard3",
+      "unit": "Custodian Guard",
+      "models": 5
+    }
+  ]
+}
