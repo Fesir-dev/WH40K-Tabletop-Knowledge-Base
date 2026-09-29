@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.9",
+  "schema_version": "3.0",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -250,5 +250,32 @@
       "result": "SUCCESS"
     },
     "merged_commit": "67e5493486de247be2646c555c9dbd16c90542dc"
+  },
+  "release_transition_activation_watch": {
+    "state": "OPERATIONAL_V1",
+    "report": "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json",
+    "tool": "tools/watch_release_transition_activation.py",
+    "workflow": ".github/workflows/release-transition-activation-watch.yml",
+    "cadence": "every 6 hours",
+    "checkpoint_as_of": "2026-09-29",
+    "checkpoint_status": "NO_ACTION_REQUIRED",
+    "tracked_transitions": [
+      {
+        "id": "SPACE_MARINES_CODEX_2026",
+        "watch_state": "NO_ACTION",
+        "next_action": "WAIT_PRE_RELEASE"
+      },
+      {
+        "id": "ADEPTUS_CUSTODES_CODEX_2026",
+        "watch_state": "NO_ACTION",
+        "next_action": "WAIT_OFFICIAL_RELEASE_SIGNAL"
+      }
+    ],
+    "safety": {
+      "auto_promote": false,
+      "direct_current_rules_mutation": false,
+      "candidate_generation_only_when_ready": true,
+      "promotion_requires_reviewed_flow": true
+    }
   }
 }
