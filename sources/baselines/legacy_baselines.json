@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "registered_at": "2026-09-29",
+  "baselines": [
+    {
+      "id": "RULES_ASSISTANT_V0_9_20260815",
+      "artifact": "W40K_11E_RULES_ASSISTANT_v0_9_FULL_FACTION_SEMANTICS_20260815(1).zip",
+      "sha256": "98bbc892879e9211fadaff158efbd98321b704e0c56e6dd84df2ef69e9b00947",
+      "checkpoint": "2026-08-15",
+      "legacy_project_version": "0.9-full-faction-semantics",
+      "entries_in_uploaded_archive": 364,
+      "project_manifest_files": 348,
+      "status": "HISTORICAL_VERIFIED",
+      "currentness_on_repository_bootstrap": "CURRENT_PENDING_RECHECK",
+      "notes": [
+        "Legacy project contained structured faction semantics, source reconciliation, validators and regression tests.",
+        "Do not treat the 2026-08-15 current runtime as current on 2026-09-29 until external authority revalidation is complete.",
+        "The public repository registers the legacy archive by checksum rather than mirroring the entire archive verbatim."
+      ]
+    },
+    {
+      "id": "CUSTODES_COLLECTION_V0_5_20260711",
+      "artifact": "W40K_COLLECTION_INVENTORY_v0_5_ADEPTUS_CUSTODES_PROVISIONAL(2).zip",
+      "sha256": "6aee2f7bf491f4fe6f254aeecf79dffe84a5579e24a3022aafcea422b9e97f20",
+      "checkpoint": "2026-07-11",
+      "legacy_inventory_version": "0.5-provisional-r2",
+      "entries_in_uploaded_archive": 4,
+      "status": "PROVISIONAL",
+      "notes": [
+        "75 physical miniatures including 5 shared Imperial Agents.",
+        "70 Custodes/Sisters excluding shared agents.",
+        "Old manifest text about Sisters build state conflicts with the normalized inventory; normalized inventory says 0 built / 10 on sprue and is preferred."
+      ]
+    }
+  ]
+}
