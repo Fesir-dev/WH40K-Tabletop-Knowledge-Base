@@ -51,6 +51,7 @@ class ReingestionPlannerContracts(unittest.TestCase):
         ids = [x["id"] for x in p["stages"]]
         self.assertEqual(ids, ["WAVE_B_RECONCILE", "BSDATA_FALLBACK_REBUILD"])
         self.assertEqual(p["candidate_revisions"]["bsdata_wh40k_11e"]["candidate"], "new-bs")
+        self.assertEqual(p["source_affected_roster_identities"]["bsdata_wh40k_11e"], ["orks"])
         self.assertEqual(p["promotion"]["state"], "REVIEW_REQUIRED_AFTER_CANDIDATE_PASS")
 
     def test_mfm_change_requires_official_authority_gate(self):
