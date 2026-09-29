@@ -20,6 +20,9 @@ class RepositoryContracts(unittest.TestCase):
         cls.bsdata_fallback = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/bsdata_fallback/index.json").read_text(encoding="utf-8"))
         cls.semantic_audit = json.loads((ROOT/"reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json").read_text(encoding="utf-8"))
         cls.official_assets = json.loads((ROOT/"sources/snapshots/gw_11e_official_assets_2026-09-29.json").read_text(encoding="utf-8"))
+        cls.upstream_watch = json.loads((ROOT/"reports/UPSTREAM_CHANGE_WATCH_CURRENT.json").read_text(encoding="utf-8"))
+        cls.nr_runtime = json.loads((ROOT/"reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json").read_text(encoding="utf-8"))
+        cls.runtime_drifts = json.loads((ROOT/"sources/runtime_drift_registry.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -143,6 +146,37 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(self.coverage["global"]["wave_b_current_mirror_semantic_roster_identities"], 35)
         self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
         self.assertEqual(self.current["status"], "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING")
+
+    def test_upstream_watch_and_new_recruit_runtime(self):
+        self.assertEqual(self.upstream_watch["status"], "NO_CHANGE")
+        self.assertEqual(self.upstream_watch["change_summary"]["github_sources_changed"], [])
+        self.assertEqual(self.upstream_watch["change_summary"]["wahapedia_files_changed"], 0)
+        self.assertFalse(self.upstream_watch["change_summary"]["wahapedia_last_update_changed"])
+
+        self.assertEqual(self.nr_runtime["status"], "PASS_WITH_KNOWN_RUNTIME_DRIFT")
+        self.assertEqual(self.nr_runtime["universe"]["resolved_runtime_identities"], 37)
+        self.assertEqual(self.nr_runtime["universe"]["missing"], [])
+        self.assertTrue(all(x["status"] == "PASS" for x in self.nr_runtime["universe"]["page_checks"]))
+        points = self.nr_runtime["representative_points"]
+        self.assertEqual(points["checks"], 10)
+        self.assertEqual(points["matched"], 9)
+        self.assertEqual(points["known_drift_count"], 1)
+        self.assertEqual(points["new_drift_count"], 0)
+        self.assertEqual(points["known_drifts"][0]["known_drift_id"], "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29")
+        self.assertEqual(points["known_drifts"][0]["expected_points"], 300)
+        self.assertEqual(points["known_drifts"][0]["runtime_points"], 235)
+
+        active = [x for x in self.runtime_drifts["active"] if x["state"] == "ACTIVE"]
+        self.assertEqual(len(active), 1)
+        self.assertEqual(active[0]["id"], "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29")
+        self.assertEqual(active[0]["normative"]["points"], 300)
+        self.assertEqual(active[0]["runtime"]["points"], 235)
+
+        automation = self.current["automation"]
+        self.assertEqual(automation["upstream_change_watch"]["state"], "ACTIVE_NO_CHANGE")
+        self.assertEqual(automation["new_recruit_runtime"]["state"], "PASS_WITH_KNOWN_RUNTIME_DRIFT")
+        self.assertEqual(automation["new_recruit_runtime"]["new_runtime_drifts"], 0)
+        self.assertEqual(self.current["next_milestone"], "COLLECTION_AWARE_ROSTER_SOLVER")
 
     def test_preview_never_replaces_current(self):
         for tr in self.release["transitions"]:

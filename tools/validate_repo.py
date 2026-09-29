@@ -587,6 +587,57 @@ try:
 except Exception as exc:
     errors.append(f"Wave B semantic/asset validation failure: {exc}")
 
+# 3h. Automated upstream/runtime monitoring contracts.
+try:
+    upstream_watch = json.loads((ROOT / "reports" / "UPSTREAM_CHANGE_WATCH_CURRENT.json").read_text(encoding="utf-8"))
+    nr_runtime = json.loads((ROOT / "reports" / "NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json").read_text(encoding="utf-8"))
+    runtime_drifts = json.loads((ROOT / "sources" / "runtime_drift_registry.json").read_text(encoding="utf-8"))
+    current_rules = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+
+    if upstream_watch.get("status") != "NO_CHANGE":
+        errors.append("Pinned upstream baseline currently has unresolved change")
+    summary = upstream_watch.get("change_summary", {})
+    if summary.get("github_sources_changed") != []:
+        errors.append("Pinned GitHub upstream source head changed")
+    if summary.get("wahapedia_files_changed") != 0 or summary.get("wahapedia_last_update_changed") is not False:
+        errors.append("Wahapedia baseline changed without re-ingestion")
+
+    if nr_runtime.get("status") != "PASS_WITH_KNOWN_RUNTIME_DRIFT":
+        errors.append("New Recruit runtime state must be PASS_WITH_KNOWN_RUNTIME_DRIFT at this checkpoint")
+    universe = nr_runtime.get("universe", {})
+    if universe.get("resolved_runtime_identities") != 37 or universe.get("missing"):
+        errors.append("New Recruit runtime universe must resolve all 37 identities")
+    if any(x.get("status") != "PASS" for x in universe.get("page_checks", [])):
+        errors.append("New Recruit runtime page check failed")
+    points = nr_runtime.get("representative_points", {})
+    if points.get("checks") != 10 or points.get("matched") != 9:
+        errors.append("New Recruit representative point baseline drifted")
+    if points.get("known_drift_count") != 1 or points.get("new_drift_count") != 0:
+        errors.append("New Recruit known/new runtime drift counts changed")
+    known = points.get("known_drifts", [])
+    if len(known) != 1 or known[0].get("known_drift_id") != "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29":
+        errors.append("Expected Ghazghkull known runtime drift is missing")
+    elif known[0].get("expected_points") != 300 or known[0].get("runtime_points") != 235:
+        errors.append("Ghazghkull known runtime drift values changed")
+
+    active = [x for x in runtime_drifts.get("active", []) if x.get("state") == "ACTIVE"]
+    if len(active) != 1 or active[0].get("id") != "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29":
+        errors.append("Runtime drift registry active set drifted")
+    elif active[0].get("normative", {}).get("points") != 300 or active[0].get("runtime", {}).get("points") != 235:
+        errors.append("Runtime drift registry Ghazghkull values drifted")
+
+    automation = current_rules.get("automation", {})
+    if automation.get("upstream_change_watch", {}).get("state") != "ACTIVE_NO_CHANGE":
+        errors.append("Current rules upstream watcher status drifted")
+    if automation.get("new_recruit_runtime", {}).get("state") != "PASS_WITH_KNOWN_RUNTIME_DRIFT":
+        errors.append("Current rules New Recruit runtime status drifted")
+    if automation.get("new_recruit_runtime", {}).get("new_runtime_drifts") != 0:
+        errors.append("Current rules contains unclassified New Recruit runtime drift")
+    if current_rules.get("next_milestone") != "COLLECTION_AWARE_ROSTER_SOLVER":
+        errors.append("Current milestone must be COLLECTION_AWARE_ROSTER_SOLVER")
+except Exception as exc:
+    errors.append(f"Automated upstream/runtime monitoring validation failure: {exc}")
+
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (
     ROOT
