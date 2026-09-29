@@ -1,0 +1,55 @@
+name: Promote BSData structural fallbacks
+
+on:
+  push:
+    paths:
+      - "tools/promote_bsdata_fallback.py"
+      - ".github/workflows/bsdata-fallback-promote.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Promote fallback source availability
+        run: python tools/promote_bsdata_fallback.py
+      - name: Validate fallback promotion
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          cov=json.loads(Path("coverage/current.json").read_text(encoding="utf-8"))
+          cur=json.loads(Path("rules/11e/current.json").read_text(encoding="utf-8"))
+          g=cov["global"]
+          assert g["wave_b_current_mirror_structural_complete"]==35
+          assert g["wave_b_structured_implementation_fallback_complete"]==2
+          assert g["wave_b_total_structural_source_available"]==37
+          rows={x["slug"]:x for x in cov["factions"]}
+          assert all(x.get("structural_source_available") for x in rows.values())
+          assert rows["titanicus_traitoris"]["structural_current"] is False
+          assert rows["unaligned_forces"]["structural_current"] is False
+          assert rows["titanicus_traitoris"]["wave_b_structural"]["source_role"]=="structured_implementation"
+          assert rows["unaligned_forces"]["wave_b_structural"]["normative_rules_verified"] is False
+          assert cur["wave_b_structural"]["total_structural_source_available"]==37
+          print("Fallback promotion contracts: PASS")
+          PY
+      - name: Commit promotion
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add coverage/current.json rules/11e/current.json
+          if git diff --cached --quiet; then
+            echo "No promotion changes"
+          else
+            git commit -m "Promote BSData structural fallback coverage"
+            git push
+          fi
