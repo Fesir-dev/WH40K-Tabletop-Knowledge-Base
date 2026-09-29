@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "as_of": "2026-09-29",
   "states": [
     "NO_CONFLICT",
@@ -7,7 +7,9 @@
     "IMPLEMENTATION_DRIFT",
     "RUNTIME_PROJECTION_DRIFT",
     "ANALYTICS_DISAGREEMENT",
-    "EVENT_SCOPE_DIFFERENCE"
+    "EVENT_SCOPE_DIFFERENCE",
+    "KNOWN_RUNTIME_PROJECTION_DRIFT",
+    "NEW_RUNTIME_PROJECTION_DRIFT"
   ],
   "rules": [
     {
@@ -39,6 +41,16 @@
       "id": "event_overlay",
       "when": "WTC or another event pack/ruling differs from global matched-play rules.",
       "resolution": "EVENT_SCOPE_DIFFERENCE; apply only when that event ruleset is explicitly selected."
+    },
+    {
+      "id": "known_runtime_drift",
+      "when": "A New Recruit runtime/wiki discrepancy exactly matches an active classified record in sources/runtime_drift_registry.json.",
+      "resolution": "KNOWN_RUNTIME_PROJECTION_DRIFT; keep normative data unchanged, monitor daily, and do not fail scheduled validation unless the drift changes."
+    },
+    {
+      "id": "new_runtime_drift",
+      "when": "A New Recruit runtime/wiki discrepancy is new, changes a known value, or is not present in the runtime drift registry.",
+      "resolution": "NEW_RUNTIME_PROJECTION_DRIFT; fail runtime validation and require classification before accepting the new runtime state."
     }
   ]
 }
