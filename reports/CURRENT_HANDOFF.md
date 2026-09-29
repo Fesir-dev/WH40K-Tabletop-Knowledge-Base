@@ -6,14 +6,14 @@ Updated: **2026-09-29**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest validated runtime-monitor hardening evidence:
+Latest validated collection-solver milestone evidence:
 
-- merged hardening commit: `9523a7285cfe731e527ca6ba3529b43598981ea9`
-- validated PR head: `372ac072c9507eed78376e04f018f66a8a77b9e0`
-- GitHub Actions validation run: `36596463123`
-- result: **SUCCESS**
-- runtime report: `reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json` schema **2.0**
-- runtime report state: **PASS_WITH_KNOWN_RUNTIME_DRIFT**
+- merged solver commit: `b764e6fec07310a1c5e4a2de88d2d1dbd376b93f`
+- validated PR head: `9371bff56d6bc83daae6f3b6b52a048a4dbd6b81`
+- generic repository validation run: `36599414513` — **SUCCESS**
+- collection solver workflow run: `36599414516` — **SUCCESS**
+- solver report: `reports/COLLECTION_AWARE_ROSTER_SOLVER_CURRENT.json` — **PASS**
+- closure report: `reports/COLLECTION_AWARE_ROSTER_SOLVER_CLOSURE_2026-09-29.md`
 
 ## Completed major layers
 
