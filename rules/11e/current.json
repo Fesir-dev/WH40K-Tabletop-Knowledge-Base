@@ -189,13 +189,14 @@
         "unit_tests"
       ],
       "latest_validation": {
-        "head": "ec85e345b65a4b5d9820f893eab0879a02f57a46",
-        "repository_ci_run": 36603325318,
-        "candidate_workflow_run": 36603325327,
+        "head": "d00d9a66213a6d58698d2da3d9108d18e6b2a70a",
+        "repository_ci_run": 36604067969,
+        "candidate_workflow_run": 36604068116,
         "result": "SUCCESS"
       },
       "real_change_promotion_exercised": false,
-      "closure_report": "reports/AUTOMATED_REINGESTION_PROMOTION_CLOSURE_2026-09-29.md"
+      "closure_report": "reports/AUTOMATED_REINGESTION_PROMOTION_CLOSURE_2026-09-29.md",
+      "merged_commit": "f9d3a5c462e06bf809307a329c50b54de9e66561"
     }
   },
   "collection_aware_roster_solver": {
