@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/release_transition_readiness.schema.json",
+  "title": "Release Transition Readiness",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "as_of",
+    "transitions",
+    "blocked_factions",
+    "official_rechecks_due",
+    "auto_promote"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "HOLD_OR_STABLE",
+        "OFFICIAL_RECHECK_REQUIRED"
+      ]
+    },
+    "as_of": {
+      "type": "string"
+    },
+    "transitions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "blocked_factions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "official_rechecks_due": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "authorized_pending_transitions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "auto_promote": {
+      "const": false
+    },
+    "authority_rule": {
+      "type": "string"
+    },
+    "promotion_route": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
