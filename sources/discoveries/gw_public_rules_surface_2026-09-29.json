@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "discovered_at": "2026-09-29",
+  "scope": "OFFICIAL_PUBLIC_RULES_SURFACE",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "findings": [
+    {
+      "id": "GW_11E_CORE_RULES_PUBLIC",
+      "state": "PUBLIC_OFFICIAL_SOURCE_DISCOVERED_NOT_INGESTED",
+      "article_url": "https://www.warhammer-community.com/en-gb/articles/nhqt9wx3/new40k-rules-download-the-free-core-rules-now/",
+      "article_published_at": "2026-06-01",
+      "asset_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+      "conclusion": "11th-edition Core Rules are publicly available from Games Workshop. The repository core-rules gap is an ingestion/registration gap, not a source-availability blocker.",
+      "normative_use": "Eligible for copyright-safe official semantic fingerprint/structured ingestion."
+    },
+    {
+      "id": "GW_FACTION_PACK_SCOPE",
+      "state": "PUBLIC_OFFICIAL_SCOPE_CONFIRMED",
+      "article_url": "https://www.warhammer-community.com/en-gb/articles/9767rbsk/your-downloadable-warhammer-40000-faction-rules-are-changing-find-out-how/",
+      "article_published_at": "2025-10-08",
+      "conclusion": "Faction Packs consolidate supplemental faction rules and clarifications: extra Detachments, datasheets, FAQs and errata. They supplement Codex content; MFM, core rules updates and other products remain separate.",
+      "normative_use": "Eligible for public official supplement/FAQ semantic ingestion, but not sufficient by itself to prove full Codex/app faction equivalence."
+    },
+    {
+      "id": "GW_11E_APP_FULL_INTEGRATION",
+      "state": "OFFICIAL_APP_ROLE_CONFIRMED_ACCESS_NOT_INGESTED",
+      "article_url": "https://www.warhammer-community.com/en-gb/articles/8wi6x7nq/new40k-points-apps-and-updates-incoming/",
+      "article_published_at": "2026-06-15",
+      "conclusion": "Games Workshop states the updated app integrates the new edition rules and exposes army rules/datasheets during play.",
+      "normative_use": "Confirms the app is a normative projection surface; does not grant repository access to app-only wording."
+    },
+    {
+      "id": "GW_APP_LIVE_UPDATES",
+      "state": "OFFICIAL_APP_UPDATE_ROLE_CONFIRMED_ACCESS_NOT_INGESTED",
+      "article_url": "https://www.warhammer-community.com/en-gb/articles/rgqanids/warhammer-40000-july-update-what-you-need-to-know/",
+      "article_published_at": "2026-07-22",
+      "conclusion": "Games Workshop states rules updates are also made available in the Warhammer 40,000 app.",
+      "normative_use": "App wording/currentness remains an authorized-access evidence gap until directly captured and versioned."
+    }
+  ],
+  "policy": {
+    "no_full_faction_equivalence_from_faction_packs_alone": true,
+    "no_app_wording_inference_from_public_mirror": true,
+    "public_core_rules_ingestion_is_currently_feasible": true,
+    "long_rule_prose_should_not_be_vendored": true
+  }
+}
