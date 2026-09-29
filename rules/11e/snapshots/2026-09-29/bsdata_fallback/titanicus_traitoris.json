@@ -1,0 +1,809 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "roster_slug": "titanicus_traitoris",
+  "state": "IMPLEMENTATION_FALLBACK_COMPLETE",
+  "authority": {
+    "structure": "BSDATA_WH40K_11E_STRUCTURED_IMPLEMENTATION",
+    "points": "GW_MFM_1_4",
+    "semantic_rule_text": "HASH_ONLY_NOT_NORMATIVE"
+  },
+  "bsdata_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+  "units": [
+    {
+      "id": "b7e8-f3ae-be53-9ba5",
+      "name": "Reaver Titan",
+      "type": "model",
+      "categories": [
+        "Vehicle",
+        "Walker",
+        "Titanic",
+        "Towering",
+        "Reaver Titan",
+        "Frame"
+      ],
+      "constraints": [
+        {
+          "field": "75bb-ded1-c86d-bdf0",
+          "scope": "self",
+          "type": "max",
+          "value": 3
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "max",
+          "value": 0
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "min",
+          "value": 0
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Reaver Titan",
+          "characteristics": {
+            "M": "12\"",
+            "T": "14",
+            "Sv": "2+",
+            "W": "60",
+            "LD": "6+",
+            "OC": "20",
+            "InSv": "5+ (Ranged)"
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Reaver feet",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "8",
+            "WS": "4+",
+            "S": "12",
+            "AP": "-2",
+            "D": "4"
+          }
+        },
+        {
+          "name": "Reaver apocalypse launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "200\"",
+            "A": "3D6",
+            "BS": "3+",
+            "S": "7",
+            "AP": "-1",
+            "D": "2",
+            "Keywords": "Blast, Indirect Fire"
+          }
+        },
+        {
+          "name": "Reaver gatling blaster",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "12",
+            "BS": "3+",
+            "S": "8",
+            "AP": "-2",
+            "D": "3",
+            "Keywords": "Sustained Hits 1"
+          }
+        },
+        {
+          "name": "Reaver laser blaster",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "8",
+            "BS": "3+",
+            "S": "20",
+            "AP": "-3",
+            "D": "D6+2",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "Reaver melta cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "D6+2",
+            "BS": "3+",
+            "S": "13",
+            "AP": "-4",
+            "D": "6",
+            "Keywords": "Blast, Melta 4"
+          }
+        },
+        {
+          "name": "Reaver volcano cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "120\"",
+            "A": "D3+1",
+            "BS": "3+",
+            "S": "24",
+            "AP": "-5",
+            "D": "14",
+            "Keywords": "Blast, Heavy"
+          }
+        },
+        {
+          "name": "➤ Reaver power fist - strike",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "6",
+            "WS": "4+",
+            "S": "20",
+            "AP": "-4",
+            "D": "14"
+          }
+        },
+        {
+          "name": "➤ Reaver power fist - sweep",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "12",
+            "WS": "4+",
+            "S": "12",
+            "AP": "-3",
+            "D": "6"
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Damaged: 1-20 wounds remaining",
+          "type": "Abilities",
+          "text_sha256": "aa15e335a6438bb56e07491f8a7b4e543716bd87060baec6d3c1b8fb67b7b1e6",
+          "text_present": true
+        },
+        {
+          "name": "God-machine",
+          "type": "Abilities",
+          "text_sha256": "10b6ec06c51c33ef7d9786632dfae0e8354f3a3c950a9d50eeda85ca399304b2",
+          "text_present": true
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "text_sha256": "692bed84cae3fa320c06b3dc27ea08035e19eb7e3e5eca716522f3aa7f981bab",
+          "text_present": true
+        }
+      ],
+      "roster_name": "Reaver Titan",
+      "normative_points_source": "GW_MFM_1_4",
+      "normative_points": [
+        2200
+      ],
+      "implementation_points_non_normative": [
+        {
+          "name": "pts",
+          "value": 2200
+        }
+      ]
+    },
+    {
+      "id": "8e6f-4e09-12d5-fafd",
+      "name": "Warbringer Nemesis Titan",
+      "type": "model",
+      "categories": [
+        "Vehicle",
+        "Walker",
+        "Titanic",
+        "Towering",
+        "Warbringer Nemesis Titan",
+        "Frame"
+      ],
+      "constraints": [
+        {
+          "field": "75bb-ded1-c86d-bdf0",
+          "scope": "self",
+          "type": "max",
+          "value": 3
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "max",
+          "value": 0
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "min",
+          "value": 0
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Warbringer Nemesis Titan",
+          "characteristics": {
+            "M": "12\"",
+            "T": "14",
+            "Sv": "2+",
+            "W": "80",
+            "LD": "6+",
+            "OC": "20",
+            "InSv": "5+ (Ranged)"
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Anvillus defence battery",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "8",
+            "BS": "3+",
+            "S": "8",
+            "AP": "-1",
+            "D": "2",
+            "Keywords": "Anti-FLY 4+"
+          }
+        },
+        {
+          "name": "Ardex-defensor mauler",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "36\"",
+            "A": "6",
+            "BS": "3+",
+            "S": "6",
+            "AP": "-2",
+            "D": "2"
+          }
+        },
+        {
+          "name": "Nemesis feet",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "6",
+            "WS": "4+",
+            "S": "12",
+            "AP": "-2",
+            "D": "4"
+          }
+        },
+        {
+          "name": "Nemesis quake cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "480\"",
+            "A": "D6+6",
+            "BS": "3+",
+            "S": "16",
+            "AP": "-4",
+            "D": "4",
+            "Keywords": "Blast, Indirect Fire"
+          }
+        },
+        {
+          "name": "Nemesis volcano cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "120\"",
+            "A": "D3+3",
+            "BS": "3+",
+            "S": "24",
+            "AP": "-5",
+            "D": "14",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "Reaver gatling blaster",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "12",
+            "BS": "3+",
+            "S": "8",
+            "AP": "-2",
+            "D": "3",
+            "Keywords": "Sustained Hits 1"
+          }
+        },
+        {
+          "name": "Reaver laser blaster",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "8",
+            "BS": "3+",
+            "S": "20",
+            "AP": "-3",
+            "D": "D6+2",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "Reaver melta cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "D6+2",
+            "BS": "3+",
+            "S": "13",
+            "AP": "-4",
+            "D": "6",
+            "Keywords": "Blast, Melta 4"
+          }
+        },
+        {
+          "name": "Reaver volcano cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "120\"",
+            "A": "D3+1",
+            "BS": "3+",
+            "S": "24",
+            "AP": "-5",
+            "D": "14",
+            "Keywords": "Blast, Heavy"
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Damaged: 1-26 wounds remaining",
+          "type": "Abilities",
+          "text_sha256": "b59dfc4a04089c0079fe88d514b2f8a96770d4066a1ee59507e9fe3be17aa1b9",
+          "text_present": true
+        },
+        {
+          "name": "Titanic Fire Support",
+          "type": "Abilities",
+          "text_sha256": "8e8e550872501e415e37d93da5e275d595b978945428cfb32cd5343e5d2c89dd",
+          "text_present": true
+        },
+        {
+          "name": "Titanic Fire Support",
+          "type": "Abilities",
+          "text_sha256": "e95acde5d2346a3100443fbbb1d92a053e80a6986bc2798d6cea1ac931da309a",
+          "text_present": true
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "text_sha256": "692bed84cae3fa320c06b3dc27ea08035e19eb7e3e5eca716522f3aa7f981bab",
+          "text_present": true
+        }
+      ],
+      "roster_name": "Warbringer Nemesis Titan",
+      "normative_points_source": "GW_MFM_1_4",
+      "normative_points": [
+        2600
+      ],
+      "implementation_points_non_normative": [
+        {
+          "name": "pts",
+          "value": 2600
+        }
+      ]
+    },
+    {
+      "id": "8eb5-a990-6eb0-9b41",
+      "name": "Warhound Titan",
+      "type": "model",
+      "categories": [
+        "Vehicle",
+        "Walker",
+        "Titanic",
+        "Towering",
+        "Warhound Titan",
+        "Frame"
+      ],
+      "constraints": [
+        {
+          "field": "75bb-ded1-c86d-bdf0",
+          "scope": "self",
+          "type": "max",
+          "value": 3
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "max",
+          "value": 0
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "min",
+          "value": 0
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Warhound Titan",
+          "characteristics": {
+            "M": "14\"",
+            "T": "13",
+            "Sv": "2+",
+            "W": "40",
+            "LD": "6+",
+            "OC": "16",
+            "InSv": "5+ (Ranged)"
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Warhound feet",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "8",
+            "WS": "4+",
+            "S": "10",
+            "AP": "-1",
+            "D": "2"
+          }
+        },
+        {
+          "name": "Warhound vulcan mega-bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "20",
+            "BS": "3+",
+            "S": "6",
+            "AP": "-1",
+            "D": "2",
+            "Keywords": "Sustained Hits 1"
+          }
+        },
+        {
+          "name": "Warhound inferno gun",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "24\"",
+            "A": "3D6",
+            "BS": "N/A",
+            "S": "7",
+            "AP": "-2",
+            "D": "3",
+            "Keywords": "Ignores Cover, Torrent"
+          }
+        },
+        {
+          "name": "➤ Warhound plasma blastgun - standard",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "2D6+3",
+            "BS": "3+",
+            "S": "9",
+            "AP": "-3",
+            "D": "4",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "➤ Warhound plasma blastgun - supercharge",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "2D6+3",
+            "BS": "3+",
+            "S": "10",
+            "AP": "-3",
+            "D": "5",
+            "Keywords": "Blast, Hazardous"
+          }
+        },
+        {
+          "name": "Warhound turbo-laser destructor",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "D3+3",
+            "BS": "3+",
+            "S": "20",
+            "AP": "-3",
+            "D": "2D6",
+            "Keywords": "Blast"
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Flank Speed",
+          "type": "Abilities",
+          "text_sha256": "823fc46db5c60445997a02c53a232371e675415f791ffb737bdcd8f4a6cca414",
+          "text_present": true
+        },
+        {
+          "name": "Damaged: 1-13 wounds remaining",
+          "type": "Abilities",
+          "text_sha256": "c1907ff103a46ecb75b28c71024fe144c8adf08841b833cba07493c3a71707eb",
+          "text_present": true
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "text_sha256": "3808167ec42ed0f21b0d646965b750974dcc09b108005338145401df3c05241e",
+          "text_present": true
+        }
+      ],
+      "roster_name": "Warhound Titan",
+      "normative_points_source": "GW_MFM_1_4",
+      "normative_points": [
+        1100
+      ],
+      "implementation_points_non_normative": [
+        {
+          "name": "pts",
+          "value": 1100
+        }
+      ]
+    },
+    {
+      "id": "eafa-cd47-1c2f-61ee",
+      "name": "Warlord Titan",
+      "type": "model",
+      "categories": [
+        "Vehicle",
+        "Walker",
+        "Titanic",
+        "Towering",
+        "Warlord Titan",
+        "Frame"
+      ],
+      "constraints": [
+        {
+          "field": "75bb-ded1-c86d-bdf0",
+          "scope": "self",
+          "type": "max",
+          "value": 3
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "max",
+          "value": 0
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "min",
+          "value": 0
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Warlord Titan",
+          "characteristics": {
+            "M": "10\"",
+            "T": "16",
+            "Sv": "2+",
+            "W": "100",
+            "LD": "6+",
+            "OC": "30",
+            "InSv": "5+ (Ranged)"
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Ardex-defensor lascannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "1",
+            "BS": "3+",
+            "S": "12",
+            "AP": "-3",
+            "D": "D6+1"
+          }
+        },
+        {
+          "name": "Ardex-defensor mauler",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "36\"",
+            "A": "6",
+            "BS": "3+",
+            "S": "6",
+            "AP": "-2",
+            "D": "2"
+          }
+        },
+        {
+          "name": "Warlord feet",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "6",
+            "WS": "4+",
+            "S": "12",
+            "AP": "-2",
+            "D": "4"
+          }
+        },
+        {
+          "name": "Arioch power claw",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "20",
+            "BS": "3+",
+            "S": "6",
+            "AP": "-1",
+            "D": "2",
+            "Keywords": "Sustained Hits 1"
+          }
+        },
+        {
+          "name": "➤ Arioch power claw - strike",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "6",
+            "WS": "4+",
+            "S": "20",
+            "AP": "-4",
+            "D": "24"
+          }
+        },
+        {
+          "name": "➤ Arioch power claw - sweep",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "12",
+            "WS": "4+",
+            "S": "12",
+            "AP": "-3",
+            "D": "8"
+          }
+        },
+        {
+          "name": "Belicosa volcano cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "120\"",
+            "A": "D3+3",
+            "BS": "3+",
+            "S": "32",
+            "AP": "-5",
+            "D": "18",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "Macro gatling blaster",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "100\"",
+            "A": "30",
+            "BS": "3+",
+            "S": "9",
+            "AP": "-2",
+            "D": "3",
+            "Keywords": "Sustained Hits 1"
+          }
+        },
+        {
+          "name": "Mori quake cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "280\"",
+            "A": "3D6",
+            "BS": "3+",
+            "S": "16",
+            "AP": "-4",
+            "D": "6",
+            "Keywords": "Blast, Ignores Cover"
+          }
+        },
+        {
+          "name": "➤ Sunfury plasma annihilator - standard",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "2D6+6",
+            "BS": "3+",
+            "S": "10",
+            "AP": "-3",
+            "D": "5",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "➤ Sunfury plasma annihilator - supercharge",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "2D6+6",
+            "BS": "3+",
+            "S": "12",
+            "AP": "-3",
+            "D": "8",
+            "Keywords": "Blast, Hazardous"
+          }
+        },
+        {
+          "name": "Apocalypse launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "200\"",
+            "A": "20",
+            "BS": "3+",
+            "S": "8",
+            "AP": "-2",
+            "D": "2",
+            "Keywords": "Blast, Indirect Fire"
+          }
+        },
+        {
+          "name": "Laser blaster",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "6",
+            "BS": "3+",
+            "S": "16",
+            "AP": "-4",
+            "D": "D6+3",
+            "Keywords": "Blast"
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Damaged: 1-33 wounds remaining",
+          "type": "Abilities",
+          "text_sha256": "66f457f45929b16a3e3556fba3fccac8b569e2ba0295546e5f295f77444c93ba",
+          "text_present": true
+        },
+        {
+          "name": "Wrath of the Omnissiah",
+          "type": "Abilities",
+          "text_sha256": "2dc53a4c8befde95fd3b059d3b2cd4aef4e17298d055657d33d29f51a03490d0",
+          "text_present": true
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "text_sha256": "c4d90452d3b49ecc6663d5df2879de456690f6d187b9bc7c980cb63a31361e6b",
+          "text_present": true
+        }
+      ],
+      "roster_name": "Warlord Titan",
+      "normative_points_source": "GW_MFM_1_4",
+      "normative_points": [
+        3500
+      ],
+      "implementation_points_non_normative": [
+        {
+          "name": "pts",
+          "value": 3500
+        }
+      ]
+    }
+  ],
+  "army_rule_refs": [
+    {
+      "name": "Towering Example",
+      "description_sha256": "5a12d982d67b4c9fbe8508a9b73ccbc9c6b25dc757be6e2c821df9419502b7e1",
+      "description_present": true
+    }
+  ],
+  "counts": {
+    "units": 4,
+    "unit_profiles": 4,
+    "weapon_profiles": 36
+  }
+}

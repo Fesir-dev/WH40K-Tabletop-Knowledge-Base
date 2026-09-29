@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "source_id": "BSDATA_WH40K_11E",
+  "source_role": "structured_implementation",
+  "commit_sha": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+  "provenance": [
+    {
+      "role": "titanicus_catalogue",
+      "path": "Chaos - Titanicus Traitoris.json",
+      "github_blob_sha": "46a76e2c0bd42e0b98d737ce91c10601534a62a6",
+      "sha256": "c01e5ee58248a9c057c6de196912f1d3e618aa322cbd21ee1679577d082bc602",
+      "bytes": 5772,
+      "url": "https://raw.githubusercontent.com/BSData/wh40k-11e/951d5900d1b4a952a4ba560a30c43788e622ccfc/Chaos%20-%20Titanicus%20Traitoris.json"
+    },
+    {
+      "role": "titans_library",
+      "path": "Library - Titans.json",
+      "github_blob_sha": "c1928f1d3cd9c6caa31d6a1889cc6f73157e888c",
+      "sha256": "340f95929a6e17670af80095cfec253d9663de255f563eed9536948f53057408",
+      "bytes": 140962,
+      "url": "https://raw.githubusercontent.com/BSData/wh40k-11e/951d5900d1b4a952a4ba560a30c43788e622ccfc/Library%20-%20Titans.json"
+    },
+    {
+      "role": "unaligned",
+      "path": "Unaligned Forces.json",
+      "github_blob_sha": "65eac5beaaa050ceacdfdcd9668d953444187229",
+      "sha256": "dc1fc71749c40f83299a4e52adf69602ad2de94b3b3c39c138065e19fa21ed3c",
+      "bytes": 235365,
+      "url": "https://raw.githubusercontent.com/BSData/wh40k-11e/951d5900d1b4a952a4ba560a30c43788e622ccfc/Unaligned%20Forces.json"
+    }
+  ],
+  "views": [
+    {
+      "slug": "titanicus_traitoris",
+      "file": "rules/11e/snapshots/2026-09-29/bsdata_fallback/titanicus_traitoris.json",
+      "state": "IMPLEMENTATION_FALLBACK_COMPLETE",
+      "counts": {
+        "units": 4,
+        "unit_profiles": 4,
+        "weapon_profiles": 36
+      }
+    },
+    {
+      "slug": "unaligned_forces",
+      "file": "rules/11e/snapshots/2026-09-29/bsdata_fallback/unaligned_forces.json",
+      "state": "IMPLEMENTATION_FALLBACK_COMPLETE",
+      "counts": {
+        "units": 22,
+        "legends_named_units": 19,
+        "unit_profiles": 21,
+        "weapon_profiles": 26
+      }
+    }
+  ],
+  "policy": "Fallback closes structural source availability only. It does not promote BSData to normative authority or CURRENT_VERIFIED rules truth."
+}

@@ -1,0 +1,1572 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "roster_slug": "unaligned_forces",
+  "state": "IMPLEMENTATION_FALLBACK_COMPLETE",
+  "authority": {
+    "structure": "BSDATA_WH40K_11E_STRUCTURED_IMPLEMENTATION",
+    "points": "BSDATA_IMPLEMENTATION_ONLY_NO_MFM_PROJECTION",
+    "semantic_rule_text": "HASH_ONLY_NOT_NORMATIVE"
+  },
+  "bsdata_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+  "units": [
+    {
+      "id": "e85b-17c7-1ad9-8375",
+      "name": "Ambull [Legends]",
+      "type": "model",
+      "categories": [
+        "Faction: Unaligned Forces",
+        "Monster",
+        "Character",
+        "Ambull",
+        "Allies: Unaligned Forces"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 85
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        },
+        {
+          "field": "75bb-ded1-c86d-bdf0",
+          "scope": "self",
+          "type": "max",
+          "value": 6
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "max",
+          "value": 0
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "min",
+          "value": 0
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Ambull",
+          "characteristics": {
+            "M": "6\"",
+            "T": "8",
+            "Sv": "3+",
+            "W": "8",
+            "LD": "8+",
+            "OC": "3",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Enormous claws",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "4",
+            "WS": "3+",
+            "S": "6",
+            "AP": "-2",
+            "D": "D3",
+            "Keywords": ""
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Frenzy",
+          "type": "Abilities",
+          "text_sha256": "7af06f9e70f7871a1d9297ee9a4db862c52b478a9d3519b25a2be81b1b1e4665",
+          "text_present": true
+        },
+        {
+          "name": "Borewyrm Infestation",
+          "type": "Abilities",
+          "text_sha256": "787760bc480c35617f1f3cb427c986e11372cc7d1b189ae3d887775f1bb5bf83",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "5b1d-134a-9996-b634",
+      "name": "Aegis Defence Line with Weapon Emplacement [Legends]",
+      "type": "model",
+      "categories": [
+        "Faction: Unaligned Forces",
+        "Fortification",
+        "Aegis Defence Line with Weapon Emplacement"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 145
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Aegis Defence Line with Weapon Emplacement",
+          "characteristics": {
+            "M": "-",
+            "T": "12",
+            "Sv": "2+",
+            "W": "10",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [],
+      "semantic_refs": []
+    },
+    {
+      "id": "5134-5fe9-e489-43c4",
+      "name": "Bastion [Legends]",
+      "type": "model",
+      "categories": [
+        "Faction: Unaligned Forces",
+        "Fortification",
+        "Towering",
+        "Vehicle",
+        "Transport",
+        "Bastion"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 275
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Bastion",
+          "characteristics": {
+            "M": "-",
+            "T": "13",
+            "Sv": "2+",
+            "W": "18",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [],
+      "semantic_refs": [
+        {
+          "name": "Bastion",
+          "type": "Transport",
+          "text_sha256": "300b0dbf4cb407beb86c65d6a36f9e8e81aa662aefe3d331fd2a90c28d6b419f",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "71b0-77b9-522c-17d6",
+      "name": "Firestorm Redoubt [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Transport",
+        "Vehicle",
+        "Wall of Martyrs",
+        "Firestorm Redoubt"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 260
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Firestorm Redoubt",
+          "characteristics": {
+            "M": "-",
+            "T": "13",
+            "Sv": "2+",
+            "W": "18",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [],
+      "semantic_refs": [
+        {
+          "name": "Firestorm Redoubt",
+          "type": "Transport",
+          "text_sha256": "a1b0d524504ecc233803013cd399f7d4acd733b8a55b6ce33e5b29b8573bb938",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "c4d1-c85a-a20e-6c94",
+      "name": "Fortress of Redemption [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Transport",
+        "Titanic",
+        "Vehicle",
+        "Towering",
+        "Fortress of Redemption"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 480
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Fortress of Redemption",
+          "characteristics": {
+            "M": "-",
+            "T": "13",
+            "Sv": "2+",
+            "W": "30",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Redemptor lascannons",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "2",
+            "BS": "4+",
+            "S": "14",
+            "AP": "-3",
+            "D": "D6+1",
+            "Keywords": "Anti-Fly 2+"
+          }
+        },
+        {
+          "name": "➤ Redemptor missile silo - superfrag",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "2D6+2",
+            "BS": "4+",
+            "S": "5",
+            "AP": "0",
+            "D": "1",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "➤ Redemptor missile silo - superkrak",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "2",
+            "BS": "4+",
+            "S": "10",
+            "AP": "-2",
+            "D": "D6+1",
+            "Keywords": ""
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Fortress of Redemption",
+          "type": "Transport",
+          "text_sha256": "acb58e75caaa37aca238b2d69a7b86eb01c9352424ff6e8d0a11456aca463b0e",
+          "text_present": true
+        },
+        {
+          "name": "Vantage Point",
+          "type": "Abilities",
+          "text_sha256": "fb792a269309028dbe4aa6a75673004b6ee5aa38a4bd6c81eee0ae0b75270247",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "e3ba-7f87-c32-229",
+      "name": "Guardian Drone [Legends]",
+      "type": "model",
+      "categories": [
+        "Faction: Unaligned Forces",
+        "Monster",
+        "Guardian Drone",
+        "Allies: Unaligned Forces"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 45
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        },
+        {
+          "field": "75bb-ded1-c86d-bdf0",
+          "scope": "self",
+          "type": "max",
+          "value": 3
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "max",
+          "value": 0
+        },
+        {
+          "field": "716d-91b7-d55a-1022",
+          "scope": "self",
+          "type": "min",
+          "value": 0
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Guardian Drone",
+          "characteristics": {
+            "M": "5\"",
+            "T": "7",
+            "Sv": "3+",
+            "W": "7",
+            "LD": "6+",
+            "OC": "2",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Destroyer pulse",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "18\"",
+            "A": "1",
+            "BS": "4+",
+            "S": "8",
+            "AP": "-2",
+            "D": "2",
+            "Keywords": "Pistol"
+          }
+        },
+        {
+          "name": "Guardian salvo launchers",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "24\"",
+            "A": "D6",
+            "BS": "4+",
+            "S": "5",
+            "AP": "-1",
+            "D": "1",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "Manipulator limbs",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "4",
+            "WS": "4+",
+            "S": "5",
+            "AP": "0",
+            "D": "1",
+            "Keywords": ""
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Drone Commander (Aura)",
+          "type": "Abilities",
+          "text_sha256": "924e8883d4df4cba2c3b61cab85fe037a1fc2ef8677a07e5e3b53b68eb977ccf",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "3b75-e314-ecd5-cd63",
+      "name": "Macro-cannon Aquila Strongpoint [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Titanic",
+        "Vehicle",
+        "Transport",
+        "Wall of Martyrs",
+        "Macro-cannon Aquila Strongpoint"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 550
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Macro-cannon Aquila Strongpoint",
+          "characteristics": {
+            "M": "-",
+            "T": "13",
+            "Sv": "2+",
+            "W": "30",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Aquila macro-cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "D6+6",
+            "BS": "5+",
+            "S": "16",
+            "AP": "-4",
+            "D": "4",
+            "Keywords": ""
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Tremor Quake",
+          "type": "Abilities",
+          "text_sha256": "2eb6e57bcf041ec194a04424c424e899650be9513c04383948bc46b36310ad23",
+          "text_present": true
+        },
+        {
+          "name": "Macro-cannon Aquila Strongpoint",
+          "type": "Transport",
+          "text_sha256": "7b8402bd439a6ea5f0e5aeaf48d8fd6eb46e091db065a65bbb91db5345f417b8",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "cabe-2c66-c8b6-de6c",
+      "name": "Plasma Obliterator [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Transport",
+        "Vehicle",
+        "Towering",
+        "Plasma Obliterator"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 225
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Plasma Obliterator",
+          "characteristics": {
+            "M": "-",
+            "T": "13",
+            "Sv": "2+",
+            "W": "18",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "➤ Plasma obliterator - standard",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "D6+3",
+            "BS": "5+",
+            "S": "9",
+            "AP": "-3",
+            "D": "3",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "➤ Plasma obliterator - supercharge",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "D6+3",
+            "BS": "5+",
+            "S": "10",
+            "AP": "-4",
+            "D": "4",
+            "Keywords": "Blast, Hazardous"
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Emergency Plasma Vents",
+          "type": "Abilities",
+          "text_sha256": "401dfeec62213f9c750af26e02056cc1e27a29a1566c7f0d306dbc5025157a85",
+          "text_present": true
+        },
+        {
+          "name": "Plasma Obliterator",
+          "type": "Transport",
+          "text_sha256": "acb58e75caaa37aca238b2d69a7b86eb01c9352424ff6e8d0a11456aca463b0e",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "f39-fc54-f95a-8395",
+      "name": "Primaris Redoubt [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Vehicle",
+        "Primaris Redoubt"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 220
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Primaris Redoubt",
+          "characteristics": {
+            "M": "-",
+            "T": "12",
+            "Sv": "3+",
+            "W": "18",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": "5+"
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Primaris Redoubt turbo-laser destructor",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "96\"",
+            "A": "D3+1",
+            "BS": "4+",
+            "S": "16",
+            "AP": "-3",
+            "D": "D6+3",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "Primaris air defence missiles",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "D6",
+            "BS": "4+",
+            "S": "6",
+            "AP": "-2",
+            "D": "2",
+            "Keywords": "Anti-Fly 2+"
+          }
+        },
+        {
+          "name": "Primaris Icarus lascannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "1",
+            "BS": "4+",
+            "S": "12",
+            "AP": "-3",
+            "D": "D6+1",
+            "Keywords": "Anti-Fly 2+"
+          }
+        },
+        {
+          "name": "Primaris Icarus quad lascannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "2",
+            "BS": "4+",
+            "S": "12",
+            "AP": "-3",
+            "D": "D6+1",
+            "Keywords": "Anti-Fly 2+, Twin-linked"
+          }
+        },
+        {
+          "name": "Primaris quad-gun",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "4",
+            "BS": "4+",
+            "S": "8",
+            "AP": "-1",
+            "D": "2",
+            "Keywords": ""
+          }
+        },
+        {
+          "name": "Primaris castellan launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "D6+1",
+            "BS": "4+",
+            "S": "6",
+            "AP": "0",
+            "D": "1",
+            "Keywords": "Blast, Indirect Fire"
+          }
+        },
+        {
+          "name": "Primaris vengeance launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "D3+1",
+            "BS": "4+",
+            "S": "7",
+            "AP": "-1",
+            "D": "2",
+            "Keywords": "Blast, Indirect Fire"
+          }
+        }
+      ],
+      "semantic_refs": []
+    },
+    {
+      "id": "54c-8b9f-b1d8-93c3",
+      "name": "Skyshield Landing Pad [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Skyshield Landing Pad"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 125
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Skyshield Landing Pad",
+          "characteristics": {
+            "M": "-",
+            "T": "12",
+            "Sv": "3+",
+            "W": "16",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": "5+"
+          }
+        }
+      ],
+      "weapon_profiles": [],
+      "semantic_refs": [
+        {
+          "name": "Skyshield",
+          "type": "Abilities",
+          "text_sha256": "fe0b063712fe0cd405e2088481f1f4b278809bbbc9b311d12c0d563ab42e7102",
+          "text_present": true
+        },
+        {
+          "name": "Repair Aircraft",
+          "type": "Abilities",
+          "text_sha256": "2f0b7601653070c3285f25f297a8166e8e0452e3a61b42bafccdeefa14b1252e",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "11b2-8348-ae67-fa98",
+      "name": "The Archivist [Legends]",
+      "type": "model",
+      "categories": [
+        "Faction: Unaligned Forces",
+        "Monster",
+        "Epic Hero",
+        "Character",
+        "The Archivist",
+        "Allies: Unaligned Forces"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 70
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 1
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "The Archivist",
+          "characteristics": {
+            "M": "5\"",
+            "T": "6",
+            "Sv": "3+",
+            "W": "6",
+            "LD": "7+",
+            "OC": "2",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Atomic disassembler",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "18\"",
+            "A": "1",
+            "BS": "3+",
+            "S": "8",
+            "AP": "-2",
+            "D": "2",
+            "Keywords": "Ignores Cover, Pistol"
+          }
+        },
+        {
+          "name": "Eradicator glove",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "4",
+            "WS": "4+",
+            "S": "8",
+            "AP": "-2",
+            "D": "2",
+            "Keywords": ""
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Fearsome Assault",
+          "type": "Abilities",
+          "text_sha256": "bd4a364b7f53b46af80e4e7ee693233c36275a25803654d071e5e164e8d3121b",
+          "text_present": true
+        },
+        {
+          "name": "Disruptive Influence (Aura)",
+          "type": "Abilities",
+          "text_sha256": "c46e59b3e51ea6e4f3bf2010cc8ebbbc901b3236f149950e0f58f5eef0772580",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "14fe-18ed-9c25-189c",
+      "name": "Vengeance Weapon Battery [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Wall of Martyrs",
+        "Vehicle",
+        "Vengeance Weapon Battery"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 140
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Vengeance Weapon Battery",
+          "characteristics": {
+            "M": "-",
+            "T": "13",
+            "Sv": "2+",
+            "W": "10",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [],
+      "semantic_refs": [
+        {
+          "name": "Automated Defences",
+          "type": "Abilities",
+          "text_sha256": "1f8f2d2afa9ea890583a1adfb8259b44d0d750fd2e66c2a0e1e03c8cbb0f665c",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "4501-646d-e705-9dca",
+      "name": "Void Shield Generator [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Void Shield Generator"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 155
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Void Shield Generator",
+          "characteristics": {
+            "M": "-",
+            "T": "12",
+            "Sv": "3+",
+            "W": "16",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": "4+"
+          }
+        }
+      ],
+      "weapon_profiles": [],
+      "semantic_refs": [
+        {
+          "name": "Projected Void Shields (Aura)",
+          "type": "Abilities",
+          "text_sha256": "02da3fe77b75d40ef375627c422832d4d93bc9a63c1e4f463d45f9de3d2b3de2",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "5c81-92c5-e20b-edf1",
+      "name": "Vortex Missile Strongpoint [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Titanic",
+        "Vehicle",
+        "Transport",
+        "Wall of Martyrs",
+        "Vortex Missile Strongpoint"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 525
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Vortex Missile Strongpoint",
+          "characteristics": {
+            "M": "-",
+            "T": "13",
+            "Sv": "2+",
+            "W": "30",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Vortex missile battery",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "D6+3",
+            "BS": "5+",
+            "S": "16",
+            "AP": "-4",
+            "D": "D6",
+            "Keywords": "Blast, Devastating Wounds, Hazardous, Indirect Fire"
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Vortex Missile Strongpoint",
+          "type": "Transport",
+          "text_sha256": "7b8402bd439a6ea5f0e5aeaf48d8fd6eb46e091db065a65bbb91db5345f417b8",
+          "text_present": true
+        },
+        {
+          "name": "Vortex",
+          "type": "Abilities",
+          "text_sha256": "b7abcbac9371cca5318113e2045d85817e2ac249173d31336bb13da97d78efca",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "9698-2e0-15ac-1193",
+      "name": "Wall of Martyrs Bunker [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Transport",
+        "Vehicle",
+        "Wall of Martyrs",
+        "Bunker"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 180
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Wall of Martyrs Bunker",
+          "characteristics": {
+            "M": "-",
+            "T": "13",
+            "Sv": "2+",
+            "W": "10",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [],
+      "semantic_refs": [
+        {
+          "name": "Inviolable Bastion",
+          "type": "Abilities",
+          "text_sha256": "331eff422585390760e15d0bea72f9cb81431eaf040dd5665709405186a514ad",
+          "text_present": true
+        },
+        {
+          "name": "Wall of Martyrs Bunker",
+          "type": "Transport",
+          "text_sha256": "75ce3e88baf3956177e9ac6caaa43fb45e26b7cf5e02ab163891880edffa4784",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "8419-8133-33f3-e0a4",
+      "name": "Wall of Martyrs Defence Emplacement [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Wall of Martyrs",
+        "Defence Emplacement"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 140
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Wall of Martyrs Defence Emplacement",
+          "characteristics": {
+            "M": "-",
+            "T": "12",
+            "Sv": "2+",
+            "W": "10",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [],
+      "semantic_refs": []
+    },
+    {
+      "id": "64b7-a2df-416a-9963",
+      "name": "Wall of Martyrs Defence Line [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Wall of Martyrs",
+        "Defence Line"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 140
+        }
+      ],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Wall of Martyrs Defence Line",
+          "characteristics": {
+            "M": "-",
+            "T": "12",
+            "Sv": "2+",
+            "W": "10",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [],
+      "semantic_refs": []
+    },
+    {
+      "id": "f6f8-8759-3282-2ab",
+      "name": "Imperial Fortress Walls [Legends]",
+      "type": "model",
+      "categories": [
+        "Fortification",
+        "Faction: Unaligned Forces",
+        "Titanic",
+        "Vehicle",
+        "Towering",
+        "Transport",
+        "Imperial Fortress Walls"
+      ],
+      "implementation_costs": [],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Imperial Fortress Walls",
+          "characteristics": {
+            "M": "-",
+            "T": "14",
+            "Sv": "2+",
+            "W": "80",
+            "LD": "7+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Twin long-barrelled autocannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "60\"",
+            "A": "2",
+            "BS": "4+",
+            "S": "9",
+            "AP": "-1",
+            "D": "3",
+            "Keywords": "Twin-linked"
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Damaged: 1-30 Wounds Remaining",
+          "type": "Abilities",
+          "text_sha256": "ce8ece34febc4d128e14417ceb3f23e3695105cbc2d674b30a6973026a1e3362",
+          "text_present": true
+        },
+        {
+          "name": "Fortress",
+          "type": "Abilities",
+          "text_sha256": "70d7c323b88e49bc41f3509bf16124f6fffe94ce39eaabb3b87bfc290c6faed0",
+          "text_present": true
+        },
+        {
+          "name": "Imperial Fortress Walls",
+          "type": "Transport",
+          "text_sha256": "708ed2989326851bfa08143e74db134f68c028d812054987fb7044fd410b26cc",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "20c8-d2-586d-623",
+      "name": "Castellum Stronghold [Legends]",
+      "type": "model",
+      "categories": [
+        "Castellum Stronghold",
+        "Fortification",
+        "Titanic",
+        "Vehicle",
+        "Transport",
+        "Faction: Unaligned Forces"
+      ],
+      "implementation_costs": [],
+      "constraints": [
+        {
+          "field": "selections",
+          "scope": "roster",
+          "type": "max",
+          "value": 3
+        }
+      ],
+      "unit_profiles": [
+        {
+          "name": "Castellum Stronghold",
+          "characteristics": {
+            "M": "-",
+            "T": "13",
+            "Sv": "2+",
+            "W": "50",
+            "LD": "6+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Castellum battle cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "D6+3",
+            "BS": "4+",
+            "S": "10",
+            "AP": "-1",
+            "D": "3",
+            "Keywords": "Blast"
+          }
+        },
+        {
+          "name": "Whirlwind castellan launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "72\"",
+            "A": "D6+3",
+            "BS": "4+",
+            "S": "8",
+            "AP": "-2",
+            "D": "2",
+            "Keywords": "Blast, Indirect Fire"
+          }
+        },
+        {
+          "name": "Castellum Icarus quad lascannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "48\"",
+            "A": "2",
+            "BS": "4+",
+            "S": "12",
+            "AP": "-3",
+            "D": "D6+1",
+            "Keywords": "Anti-Fly 2+, Twin-linked"
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Stronghold",
+          "type": "Abilities",
+          "text_sha256": "07096b88e8f080e7c502a4de918931e1942487ea3d8b8a6450780a13884a385b",
+          "text_present": true
+        },
+        {
+          "name": "Damaged: 1-15 Wounds Remaining",
+          "type": "Abilities",
+          "text_sha256": "36fb4f6d2197f24acde8305d0028279834bec1bfd80542644949954a8b2dee63",
+          "text_present": true
+        },
+        {
+          "name": "Castellum Stronghold",
+          "type": "Transport",
+          "text_sha256": "a3272b01bf3fab805d5c469e2cdd073beaf2bb8be351ed1d16190b8fe9799393",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "983d-b163-dc9f-3c54",
+      "name": "Sentry Gun",
+      "type": "model",
+      "categories": [
+        "Vehicle",
+        "Faction: Unaligned Forces",
+        "Sentry Gun",
+        "Allies: Unaligned Forces"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 30
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "constraints": [],
+      "unit_profiles": [
+        {
+          "name": "Sentry Gun",
+          "characteristics": {
+            "M": "-",
+            "T": "4",
+            "Sv": "4+",
+            "W": "3",
+            "LD": "6+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Twin heavy bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "Range": "36\"",
+            "A": "3",
+            "BS": "5+",
+            "S": "5",
+            "AP": "-1",
+            "D": "2",
+            "Keywords": "Heavy, Sustained Hits 1, Twin-linked"
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Defensive Emplacement",
+          "type": "Abilities",
+          "text_sha256": "599f7cba24e02940a99104b73b60600d98d9f9d8058cb2794a7ce53469bcf8e6",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "61f3-ff33-ec7a-3546",
+      "name": "Searchlight",
+      "type": "model",
+      "categories": [
+        "Allies: Unaligned Forces"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 10
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "constraints": [],
+      "unit_profiles": [],
+      "weapon_profiles": [],
+      "semantic_refs": [
+        {
+          "name": "Enemy Spotted",
+          "type": "Abilities",
+          "text_sha256": "15a57cef392061f96ba1541ecdba1b128f9b36c5210b1cbbd0d2f37ce7f10217",
+          "text_present": true
+        },
+        {
+          "name": "Wall",
+          "type": "Abilities",
+          "text_sha256": "cdd49b6bc0699d4a9d52232ab1e2b914a5d1dc77caad9744478b8f2e81a64862",
+          "text_present": true
+        },
+        {
+          "name": "Camera Network",
+          "type": "Abilities",
+          "text_sha256": "ec7e3e5d2cea043667f48de19ff65e286c5cffcc3add21b497f09beb92662d65",
+          "text_present": true
+        }
+      ]
+    },
+    {
+      "id": "a5c2-3951-e727-b64a",
+      "name": "Breaching Robot",
+      "type": "model",
+      "categories": [
+        "Vehicle",
+        "Faction: Unaligned Forces",
+        "Breaching Robot",
+        "Allies: Unaligned Forces"
+      ],
+      "implementation_costs": [
+        {
+          "name": "pts",
+          "value": 35
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "constraints": [],
+      "unit_profiles": [
+        {
+          "name": "Breaching Robot",
+          "characteristics": {
+            "M": "6\"",
+            "T": "4",
+            "Sv": "4+",
+            "W": "3",
+            "LD": "6+",
+            "OC": "0",
+            "InSv": ""
+          }
+        }
+      ],
+      "weapon_profiles": [
+        {
+          "name": "Cutting blade",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "Range": "Melee",
+            "A": "2",
+            "WS": "4+",
+            "S": "4",
+            "AP": "-2",
+            "D": "1",
+            "Keywords": ""
+          }
+        }
+      ],
+      "semantic_refs": [
+        {
+          "name": "Limited Loadout",
+          "type": "Abilities",
+          "text_sha256": "31b92303994b69f310216895d9901b8482a7bbba48ad42bf294640786a4d2a5e",
+          "text_present": true
+        },
+        {
+          "name": "Assault Robot",
+          "type": "Abilities",
+          "text_sha256": "998148265b48430aaa60aa7fa6b67444b109e7d0d00f739a4138565456eb8619",
+          "text_present": true
+        },
+        {
+          "name": "Bomb Kit",
+          "type": "Abilities",
+          "text_sha256": "b6f6321777b6e7858eeb4ec0e8e3fab8d1bd321fc167334706eafdbd0a61909e",
+          "text_present": true
+        },
+        {
+          "name": "Cutting Gear",
+          "type": "Abilities",
+          "text_sha256": "80cc10ad979e275d627e33466dc3a7473485577ee8c677a8654a6480e1789a28",
+          "text_present": true
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "units": 22,
+    "legends_named_units": 19,
+    "unit_profiles": 21,
+    "weapon_profiles": 26
+  }
+}
