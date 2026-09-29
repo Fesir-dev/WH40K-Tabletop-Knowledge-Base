@@ -226,6 +226,32 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
         self.assertEqual(self.current["next_milestone"], "AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION")
 
+    def test_guarded_reingestion_control_plane(self):
+        required=[
+            "tools/plan_upstream_reingestion.py",
+            "tools/run_upstream_reingestion_candidate.py",
+            "tools/apply_reingestion_promotion.py",
+            "tools/sync_new_recruit_runtime_status.py",
+            ".github/workflows/upstream-reingestion-candidate.yml",
+            ".github/workflows/upstream-reingestion-promote.yml",
+            "schemas/upstream_reingestion_plan.schema.json",
+            "schemas/upstream_reingestion_candidate.schema.json",
+            "schemas/upstream_reingestion_promotion.schema.json",
+        ]
+        for rel in required:
+            self.assertTrue((ROOT/rel).exists(), rel)
+        for rel in [
+            "schemas/upstream_reingestion_plan.schema.json",
+            "schemas/upstream_reingestion_candidate.schema.json",
+            "schemas/upstream_reingestion_promotion.schema.json",
+        ]:
+            json.loads((ROOT/rel).read_text(encoding="utf-8"))
+        promote=(ROOT/".github/workflows/upstream-reingestion-promote.yml").read_text(encoding="utf-8")
+        self.assertIn("PROMOTE_REVIEWED_CANDIDATE", promote)
+        self.assertIn("pull-requests: write", promote)
+        self.assertIn("git switch -c", promote)
+        self.assertNotIn("git push origin main", promote)
+
     def test_collection_aware_roster_solver(self):
         self.assertEqual(self.collection_solver["status"], "PASS")
         self.assertEqual(self.collection_solver["milestone"], "COLLECTION_AWARE_ROSTER_SOLVER")
