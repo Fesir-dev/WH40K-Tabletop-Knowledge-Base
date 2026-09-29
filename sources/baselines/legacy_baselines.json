@@ -16,7 +16,8 @@
         "Legacy project contained structured faction semantics, source reconciliation, validators and regression tests.",
         "Do not treat the 2026-08-15 current runtime as current on 2026-09-29 until external authority revalidation is complete.",
         "The public repository registers the legacy archive by checksum rather than mirroring the entire archive verbatim."
-      ]
+      ],
+      "preserved_binary_path": "legacy/artifacts/original/W40K_11E_RULES_ASSISTANT_v0_9_FULL_FACTION_SEMANTICS_20260815.zip"
     },
     {
       "id": "CUSTODES_COLLECTION_V0_5_20260711",
@@ -30,7 +31,14 @@
         "75 physical miniatures including 5 shared Imperial Agents.",
         "70 Custodes/Sisters excluding shared agents.",
         "Old manifest text about Sisters build state conflicts with the normalized inventory; normalized inventory says 0 built / 10 on sprue and is preferred."
-      ]
+      ],
+      "preserved_binary_path": "legacy/artifacts/original/W40K_COLLECTION_INVENTORY_v0_5_ADEPTUS_CUSTODES_PROVISIONAL.zip"
     }
-  ]
+  ],
+  "preservation": {
+    "status": "CLOSED",
+    "closed_at": "2026-09-29",
+    "legacy_archives_prune_safe": true,
+    "manifest": "legacy/artifacts/preservation_manifest.json"
+  }
 }
