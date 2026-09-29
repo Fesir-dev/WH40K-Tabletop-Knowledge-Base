@@ -1,21 +1,31 @@
 # Sources and provenance
 
-This directory records **where knowledge came from**, not merely the final answer.
+This directory records **where knowledge came from**, why the source is trusted for a particular purpose, and what it is *not* allowed to establish.
 
-## Authority model
+## Authority is role-specific
 
-Default order for rules questions:
+There is no single flat source ranking for every question.
 
-1. official current Games Workshop rules/update documents;
-2. official companion/app material where applicable;
-3. official older/historical documents for dated questions;
-4. secondary references such as Wahapedia for discovery/cross-checking;
-5. legacy project data.
+- **Normative rules:** current applicable Games Workshop evidence is authoritative.
+- **Readable mirror:** Wahapedia is the preferred current secondary mirror and discovery/cross-check surface.
+- **Structured roster implementation:** BSData/wh40k-11e is the preferred machine-readable community implementation.
+- **Runtime behavior:** New Recruit app/Wiki shows how catalogue data reaches players.
+- **Competitive analytics:** BCP/Stat Check provide empirical evidence; Goonhammer provides attributed expert analysis.
+- **Event overlays:** WTC and event packs apply only inside their declared scope.
+- **Personal collection:** direct user observation/confirmation outranks roster inference.
 
-Personal collection facts use a different authority path: direct user observation/confirmation outranks inferred roster contents.
+See `SOURCE_AUTHORITY_MATRIX.md`, `conflict_policy.json` and `freshness_policy.json`.
 
 ## Required behavior
 
-A source entry should declare a status and a check date. If the current source set has not been rechecked after a known update window, dependent runtime data must not claim `CURRENT_VERIFIED`.
+A current normative rules claim cannot become `CURRENT_VERIFIED` from secondary agreement alone.
 
-Conflicts are recorded rather than silently resolved. For rules, official current sources win over secondary references.
+Wahapedia, BSData and New Recruit are deliberately independent checks:
+
+- Wahapedia helps detect/read current rule drift;
+- BSData exposes machine-readable implementation semantics;
+- New Recruit exposes runtime projection behavior.
+
+Their disagreement is evidence to investigate, not permission to guess.
+
+Analytics and expert opinion must remain in an analytics/analysis domain and never mutate normative rules facts.
