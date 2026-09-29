@@ -1,0 +1,90 @@
+name: Release transition activation watch
+
+on:
+  push:
+    paths:
+      - "ingestion/release_transitions/**"
+      - "tools/evaluate_release_transitions.py"
+      - "tools/watch_release_transition_activation.py"
+      - "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json"
+      - "tests/test_release_transition_activation_watch.py"
+  pull_request:
+    paths:
+      - "ingestion/release_transitions/**"
+      - "tools/evaluate_release_transitions.py"
+      - "tools/watch_release_transition_activation.py"
+      - "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json"
+      - "tests/test_release_transition_activation_watch.py"
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      as_of:
+        description: "Optional YYYY-MM-DD override; defaults to current UTC date"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile activation watch tooling
+        run: python -m compileall -q tools/evaluate_release_transitions.py tools/watch_release_transition_activation.py tests/test_release_transition_activation_watch.py
+
+      - name: Run activation watch unit tests
+        run: python -m unittest tests.test_release_transition_activation_watch -v
+
+      - name: Reproduce committed checkpoint on PR/push
+        if: github.event_name == 'pull_request' || github.event_name == 'push'
+        run: |
+          python tools/watch_release_transition_activation.py \
+            --as-of 2026-09-29 \
+            --output reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json
+          git diff --exit-code -- reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json
+
+      - name: Evaluate live activation watch
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        shell: bash
+        run: |
+          as_of="${{ inputs.as_of }}"
+          if [ -z "$as_of" ]; then as_of="$(date -u +%F)"; fi
+          mkdir -p .cache/release-transition-activation
+          python tools/watch_release_transition_activation.py \
+            --as-of "$as_of" \
+            --output .cache/release-transition-activation/watch.json
+          cat .cache/release-transition-activation/watch.json
+
+      - name: Surface actionable watch state without mutation
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          python - <<'PY'
+          import json, os
+          p='.cache/release-transition-activation/watch.json'
+          r=json.load(open(p,encoding='utf-8'))
+          assert r['safety']['auto_promote'] is False
+          assert r['safety']['direct_current_rules_mutation'] is False
+          assert all(x['promotion_eligible'] is False for x in r['transitions'])
+          status=r['status']
+          if status in {'ACTION_REQUIRED','READY_FOR_GUARDED_CANDIDATE'}:
+              print(f'::warning title=Release transition activation watch::{status}')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
+              f.write(f'## Release transition activation watch\n\nStatus: **{status}**\n\n')
+              for row in r['transitions']:
+                  f.write(f"- {row['transition_id']}: `{row['watch_state']}` → `{row['next_action']}`\n")
+              f.write('\nAuto-promotion: **disabled**.\n')
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        with:
+          name: release-transition-activation-watch-${{ github.run_id }}
+          path: .cache/release-transition-activation/watch.json
+          if-no-files-found: error
