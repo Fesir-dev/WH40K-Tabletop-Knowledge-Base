@@ -224,7 +224,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["known_runtime_drifts"], points["known_drift_count"]+surfaces["known_drift_count"])
         self.assertEqual(nr["new_runtime_drifts"], 0)
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION")
+        self.assertEqual(self.current["next_milestone"], "RELEASE_TRANSITION_INGESTION_READINESS")
 
     def test_guarded_reingestion_control_plane(self):
         required=[
