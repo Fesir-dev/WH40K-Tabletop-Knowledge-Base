@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-29",
+  "inventory_snapshot": "inventory/snapshots/2026-09-29_v25.json",
+  "recipe_catalog": "recipes/catalog_v25.json",
+  "source_manifest": "source_manifest_v25.json",
+  "active_projects": [
+    "projects/daemon_prince/project_v25.json"
+  ],
+  "economics_snapshot": "economics/replacement_cost_2026-09-29.json"
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "ARMY_PAINTING_PIPELINES_V25",
+  "checked_at": "2026-09-29",
+  "pipelines": [
+    {
+      "subject": "Custodian Guard",
+      "level": "Серийный игровой",
+      "primer_and_light": "Black Primer",
+      "main_mass": "Gold 137",
+      "secondary_mass": "Red 121; burgundy 131",
+      "details": "Gems 111/248; steel 138",
+      "weathering": "Burnt Umber pin-wash 311",
+      "focus": "Selective edge 345",
+      "finish": "Matt/Metal/Gloss",
+      "recipe_ref": "351"
+    },
+    {
+      "subject": "Custodes character",
+      "level": "Display",
+      "primer_and_light": "Directional 332 + rim 335",
+      "main_mass": "Hybrid gold 348",
+      "secondary_mass": "Red lacquer 187; silk 291",
+      "details": "Face 116–119; emerald 111",
+      "weathering": "Payne Grey local shadow",
+      "focus": "Face 340; weapon 341",
+      "finish": "Split finish 329",
+      "recipe_ref": "352"
+    },
+    {
+      "subject": "Rubric Marine",
+      "level": "Серийный игровой",
+      "primer_and_light": "Black Primer",
+      "main_mass": "Blue 241/122",
+      "secondary_mass": "Gold 137; yellow stripes 222/249",
+      "details": "Lens 106/248; cloth 251",
+      "weathering": "Basilicanum/Payne line shade",
+      "focus": "Selective edge 345",
+      "finish": "Matt/Metal/Gloss",
+      "recipe_ref": "353"
+    },
+    {
+      "subject": "TS Sorcerer",
+      "level": "Display",
+      "primer_and_light": "Warm/cool 333/334",
+      "main_mass": "Blue 241; hybrid gold 348",
+      "secondary_mass": "Purple cloth 243/251",
+      "details": "Runes 226; smoke 193/195; face 129",
+      "weathering": "Oil mapping 314/315",
+      "focus": "Magic source + face",
+      "finish": "Split finish 329",
+      "recipe_ref": "354"
+    },
+    {
+      "subject": "Warm daemon",
+      "level": "Enhanced",
+      "primer_and_light": "Zenithal 331",
+      "main_mass": "Orange/red skin 247/121",
+      "secondary_mass": "Stipple 156/157",
+      "details": "Horns 163; bone 271; gore 301–310",
+      "weathering": "Warm oils 319",
+      "focus": "Face/eyes 340",
+      "finish": "Matt + local Gloss",
+      "recipe_ref": "355"
+    },
+    {
+      "subject": "Cold daemon",
+      "level": "Enhanced",
+      "primer_and_light": "Zenithal 331",
+      "main_mass": "Purple/cold skin 156/130/243",
+      "secondary_mass": "Cold horns; smoke 195",
+      "details": "Eyes 106/107",
+      "weathering": "Payne Grey oil shadow 319",
+      "focus": "Cold rim 335",
+      "finish": "Matt/Satin",
+      "recipe_ref": "356"
+    },
+    {
+      "subject": "Large daemon",
+      "level": "Display",
+      "primer_and_light": "Directional 332",
+      "main_mass": "Airbrush skin 129/130/154/156",
+      "secondary_mass": "Stipple 155–157",
+      "details": "Face, horns, gore",
+      "weathering": "Oil smoothing 319",
+      "focus": "Rim/bounce 335–339",
+      "finish": "Split finish 329",
+      "recipe_ref": "357"
+    },
+    {
+      "subject": "Five-model batch",
+      "level": "Серийный процесс",
+      "primer_and_light": "One primer",
+      "main_mass": "One main colour for all",
+      "secondary_mass": "One secondary colour for all",
+      "details": "Details model by model",
+      "weathering": "Filter/weather all",
+      "focus": "Faces and weapons last",
+      "finish": "Varnish as group",
+      "recipe_ref": "358"
+    },
+    {
+      "subject": "Demon Prince — current project",
+      "level": "Project workflow",
+      "primer_and_light": "Oil shadows complete → 391–392",
+      "main_mass": "Skin recovery 391–395",
+      "secondary_mass": "Face/mouth/horns/wings 396–406",
+      "details": "Chitin/armour/magic 407–416",
+      "weathering": "Dust and bounce 417–418",
+      "focus": "Final hierarchy 419",
+      "finish": "Finish map 420",
+      "recipe_ref": "391–420"
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "PAINT_WORKBOOK_V25_2026-09-29",
+  "revision": "v25",
+  "imported_at": "2026-09-29",
+  "source_filename": "Ревизия_красок_база_техник_v25.xlsx",
+  "repository_path": "hobby/painting/artifacts/original/Ревизия_красок_база_техник_v25.xlsx",
+  "size_bytes": 497616,
+  "sha256": "1679f1a20dd1e4bc064fb96c577fa9d8c3f54f04a634756febef4abfe2cd7941",
+  "sheet_count": 70,
+  "sheet_roles": {
+    "knowledge": 40,
+    "project_active": 12,
+    "historical_audit": 18
+  },
+  "invariants": {
+    "total_containers_and_materials": 217,
+    "unique_products_reported": 212,
+    "brands": 5,
+    "recipe_count": 540,
+    "daemon_prince_stage_count": 20,
+    "daemon_prince_session_count": 12,
+    "base_replacement_cost_rub": 143088
+  },
+  "sheets": [
+    {
+      "name": "Инвентаризация",
+      "range": "A1:N218",
+      "rows": 218,
+      "cols": 14,
+      "role": "knowledge"
+    },
+    {
+      "name": "Сводка",
+      "range": "A1:E55",
+      "rows": 55,
+      "cols": 5,
+      "role": "knowledge"
+    },
+    {
+      "name": "Повторы",
+      "range": "A1:D8",
+      "rows": 8,
+      "cols": 4,
+      "role": "knowledge"
+    },
+    {
+      "name": "Источники",
+      "range": "A1:C27",
+      "rows": 27,
+      "cols": 3,
+      "role": "knowledge"
+    },
+    {
+      "name": "Инструкция",
+      "range": "A1:B9",
+      "rows": 9,
+      "cols": 2,
+      "role": "knowledge"
+    },
+    {
+      "name": "Анализ палитры",
+      "range": "A1:E24",
+      "rows": 24,
+      "cols": 5,
+      "role": "knowledge"
+    },
+    {
+      "name": "Рекомендации AK",
+      "range": "A1:J20",
+      "rows": 20,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Оценка стоимости",
+      "range": "A1:F38",
+      "rows": 38,
+      "cols": 6,
+      "role": "knowledge"
+    },
+    {
+      "name": "Матрица слоёв",
+      "range": "A1:Q544",
+      "rows": 544,
+      "cols": 17,
+      "role": "knowledge"
+    },
+    {
+      "name": "Модификаторы и смеси",
+      "range": "A1:F25",
+      "rows": 25,
+      "cols": 6,
+      "role": "knowledge"
+    },
+    {
+      "name": "Порядок нанесения",
+      "range": "A1:E123",
+      "rows": 123,
+      "cols": 5,
+      "role": "knowledge"
+    },
+    {
+      "name": "Аудит матрицы",
+      "range": "A1:F44",
+      "rows": 44,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Матрица подложек",
+      "range": "A1:H19",
+      "rows": 19,
+      "cols": 8,
+      "role": "knowledge"
+    },
+    {
+      "name": "Второй аудит",
+      "range": "A1:F34",
+      "rows": 34,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Роли красок",
+      "range": "A1:G18",
+      "rows": 18,
+      "cols": 7,
+      "role": "knowledge"
+    },
+    {
+      "name": "Третий аудит",
+      "range": "A1:F34",
+      "rows": 34,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Стандарты детализации",
+      "range": "A1:F14",
+      "rows": 14,
+      "cols": 6,
+      "role": "knowledge"
+    },
+    {
+      "name": "Четвёртый аудит",
+      "range": "A1:F32",
+      "rows": 32,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Аэрограф — материалы",
+      "range": "A1:J22",
+      "rows": 22,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Аэрографные рецепты",
+      "range": "A1:J29",
+      "rows": 29,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Пятый аудит",
+      "range": "A1:F39",
+      "rows": 39,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Техники — выбор",
+      "range": "A1:I123",
+      "rows": 123,
+      "cols": 9,
+      "role": "knowledge"
+    },
+    {
+      "name": "Диагностика поверхности",
+      "range": "A1:G133",
+      "rows": 133,
+      "cols": 7,
+      "role": "knowledge"
+    },
+    {
+      "name": "Шестой аудит",
+      "range": "A1:F36",
+      "rows": 36,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Материалы и финиши",
+      "range": "A1:H21",
+      "rows": 21,
+      "cols": 8,
+      "role": "knowledge"
+    },
+    {
+      "name": "Седьмой аудит",
+      "range": "A1:F36",
+      "rows": 36,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Карта оттенков кожи",
+      "range": "A1:I13",
+      "rows": 13,
+      "cols": 9,
+      "role": "knowledge"
+    },
+    {
+      "name": "Freehand и маркировка",
+      "range": "A1:I14",
+      "rows": 14,
+      "cols": 9,
+      "role": "knowledge"
+    },
+    {
+      "name": "Направленное загрязнение",
+      "range": "A1:I12",
+      "rows": 12,
+      "cols": 9,
+      "role": "knowledge"
+    },
+    {
+      "name": "Восьмой аудит",
+      "range": "A1:F37",
+      "rows": 37,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Редкие краски — применение",
+      "range": "A1:H31",
+      "rows": 31,
+      "cols": 8,
+      "role": "knowledge"
+    },
+    {
+      "name": "Xpress и яркие Contrast",
+      "range": "A1:I15",
+      "rows": 15,
+      "cols": 9,
+      "role": "knowledge"
+    },
+    {
+      "name": "Снег, пепел и трещины",
+      "range": "A1:I9",
+      "rows": 9,
+      "cols": 9,
+      "role": "knowledge"
+    },
+    {
+      "name": "Девятый аудит",
+      "range": "A1:F39",
+      "rows": 39,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "NMM и отражения",
+      "range": "A1:J15",
+      "rows": 15,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Прозрачность и камни",
+      "range": "A1:I12",
+      "rows": 12,
+      "cols": 9,
+      "role": "knowledge"
+    },
+    {
+      "name": "Crackle и фактурные базы",
+      "range": "A1:I9",
+      "rows": 9,
+      "cols": 9,
+      "role": "knowledge"
+    },
+    {
+      "name": "Десятый аудит",
+      "range": "A1:F38",
+      "rows": 38,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Кровь и живая плоть",
+      "range": "A1:I14",
+      "rows": 14,
+      "cols": 9,
+      "role": "knowledge"
+    },
+    {
+      "name": "Масляные техники",
+      "range": "A1:J14",
+      "rows": 14,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Камуфляж и финиш",
+      "range": "A1:J14",
+      "rows": 14,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Одиннадцатый аудит",
+      "range": "A1:F38",
+      "rows": 38,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Освещение и фокус",
+      "range": "A1:J18",
+      "rows": 18,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Армейские пайплайны",
+      "range": "A1:J13",
+      "rows": 13,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Тестовые карты",
+      "range": "A1:R52",
+      "rows": 52,
+      "cols": 18,
+      "role": "knowledge"
+    },
+    {
+      "name": "Двенадцатый аудит",
+      "range": "A1:F35",
+      "rows": 35,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Субсборки и маскирование",
+      "range": "A1:J13",
+      "rows": 13,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Декали и интеграция",
+      "range": "A1:J13",
+      "rows": 13,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Ремонт и коррекция",
+      "range": "A1:J13",
+      "rows": 13,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Тринадцатый аудит",
+      "range": "A1:F36",
+      "rows": 36,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Переходы материалов",
+      "range": "A1:J16",
+      "rows": 16,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Навигатор базы",
+      "range": "A1:F75",
+      "rows": 75,
+      "cols": 6,
+      "role": "knowledge"
+    },
+    {
+      "name": "Четырнадцатый аудит",
+      "range": "A1:F35",
+      "rows": 35,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Демон-принц — проект",
+      "range": "A1:M34",
+      "rows": 34,
+      "cols": 13,
+      "role": "project_active"
+    },
+    {
+      "name": "Сессии демон-принца",
+      "range": "A1:M19",
+      "rows": 19,
+      "cols": 13,
+      "role": "project_active"
+    },
+    {
+      "name": "Фото-контроль",
+      "range": "A1:J21",
+      "rows": 21,
+      "cols": 10,
+      "role": "knowledge"
+    },
+    {
+      "name": "Карта зон демон-принца",
+      "range": "A1:K24",
+      "rows": 24,
+      "cols": 11,
+      "role": "project_active"
+    },
+    {
+      "name": "Пятнадцатый аудит",
+      "range": "A1:F37",
+      "rows": 37,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Сессия S01 — торс",
+      "range": "A1:N28",
+      "rows": 28,
+      "cols": 14,
+      "role": "project_active"
+    },
+    {
+      "name": "Палитра S01",
+      "range": "A1:L31",
+      "rows": 31,
+      "cols": 12,
+      "role": "project_active"
+    },
+    {
+      "name": "Контроль теней S01",
+      "range": "A1:L21",
+      "rows": 21,
+      "cols": 12,
+      "role": "project_active"
+    },
+    {
+      "name": "Шестнадцатый аудит",
+      "range": "A1:F39",
+      "rows": 39,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Сессия S02 — анатомия",
+      "range": "A1:R35",
+      "rows": 35,
+      "cols": 18,
+      "role": "project_active"
+    },
+    {
+      "name": "Палитра S02",
+      "range": "A1:L26",
+      "rows": 26,
+      "cols": 12,
+      "role": "project_active"
+    },
+    {
+      "name": "Карта анатомии S02",
+      "range": "A1:K25",
+      "rows": 25,
+      "cols": 11,
+      "role": "project_active"
+    },
+    {
+      "name": "Семнадцатый аудит",
+      "range": "A1:F40",
+      "rows": 40,
+      "cols": 6,
+      "role": "historical_audit"
+    },
+    {
+      "name": "Сессия S03 — фактура",
+      "range": "A1:R35",
+      "rows": 35,
+      "cols": 18,
+      "role": "project_active"
+    },
+    {
+      "name": "Палитра S03",
+      "range": "A1:L33",
+      "rows": 33,
+      "cols": 12,
+      "role": "project_active"
+    },
+    {
+      "name": "Карта фактуры S03",
+      "range": "A1:K22",
+      "rows": 22,
+      "cols": 11,
+      "role": "project_active"
+    },
+    {
+      "name": "Восемнадцатый аудит",
+      "range": "A1:F41",
+      "rows": 41,
+      "cols": 6,
+      "role": "historical_audit"
+    }
+  ]
+}

@@ -31,7 +31,7 @@ Agents working here must preserve provenance, version boundaries and the distinc
 21. Never silently combine evidence across materially different rules/points patches. Every competitive recommendation must declare its rules snapshot and analytics window.
 22. Popularity/take rate is not performance evidence; mathhammer efficiency is not table strength; expert confidence is not empirical sample size. Keep these dimensions separate.
 23. Call something expert consensus only when at least three independent expert sources support the same material conclusion; otherwise attribute the individual views.
-24. Paid/subscription sources may be referenced by metadata and accessible summaries, but do not scrape, vendor or reproduce protected subscriber content.
+24. Paid/subscription sources may be referenced by metadata and accessible summaries, but do not scrape, vendor or reproduce protected subscriber content.\n25. For painting/hobby work, read `hobby/painting/current.json` and `hobby/painting/README.md` before using old workbook assumptions.\n26. The painting XLSX source artifact is immutable. New revisions create new snapshots/diffs; never overwrite v25 in place.\n27. Separate physical paint inventory from recipe guidance, active project state, and dated economics/pricing. A current inventory snapshot does not make old prices current.
 
 ## Preferred status values
 
@@ -59,7 +59,7 @@ Read before external-source work:
 - `factions/`: faction-specific normalized/derived knowledge.
 - `collection/`: personally owned physical miniatures and components.
 - `rosters/`: roster snapshots/builds; never authoritative for current points by themselves.
-- `hobby/`: paints, recipes, basing, tools and materials.
+- `hobby/`: paints, recipes, basing, tools and materials. The current painting authority starts at `hobby/painting/current.json`.
 - `analytics/`: dated tournament/meta evidence, mathematical models, expert analysis and roster-recommendation evidence.
 - `sources/`: authority registry, source profiles, hashes, checkpoints and provenance.
 - `schemas/`: machine-readable data contracts.

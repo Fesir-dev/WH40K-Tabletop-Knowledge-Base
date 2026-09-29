@@ -21,6 +21,6 @@ Implemented contracts include:
 
 - `source_entry.schema.json` — source authority/role, lineage and provenance metadata.
 - `collection_inventory.schema.json` — personal physical collection state.
-- `roster_recommendation_evidence.schema.json` — patch-scoped, lineage-aware evidence for roster/unit/build recommendations.
+- `roster_recommendation_evidence.schema.json` — patch-scoped, lineage-aware evidence for roster/unit/build recommendations.\n- `painting_inventory.schema.json` — personal paint/material inventory snapshots.\n- `painting_recipe_catalog.schema.json` — normalized painting recipe catalogue.
 
 Schema evolution must be versioned and backwards-aware.

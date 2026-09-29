@@ -265,6 +265,61 @@ try:
 except Exception as exc:
     errors.append(f"Analytics evidence contract validation failure: {exc}")
 
+# 3d. Painting knowledge-base invariants.
+try:
+    paint_manifest = json.loads(
+        (ROOT / "hobby" / "painting" / "source_manifest_v25.json").read_text(encoding="utf-8")
+    )
+    paint_inv = json.loads(
+        (ROOT / "hobby" / "painting" / "inventory" / "snapshots" / "2026-09-29_v25.json").read_text(encoding="utf-8")
+    )
+    paint_recipes = json.loads(
+        (ROOT / "hobby" / "painting" / "recipes" / "catalog_v25.json").read_text(encoding="utf-8")
+    )
+    paint_project = json.loads(
+        (ROOT / "hobby" / "painting" / "projects" / "daemon_prince" / "project_v25.json").read_text(encoding="utf-8")
+    )
+    paint_cost = json.loads(
+        (ROOT / "hobby" / "painting" / "economics" / "replacement_cost_2026-09-29.json").read_text(encoding="utf-8")
+    )
+
+    artifact = ROOT / "hobby" / "painting" / "artifacts" / "original" / "Ревизия_красок_база_техник_v25.xlsx"
+    if not artifact.exists():
+        errors.append("Missing painting v25 source artifact")
+    else:
+        raw = artifact.read_bytes()
+        if len(raw) != 497616:
+            errors.append(f"Painting v25 artifact size mismatch: {len(raw)} != 497616")
+        got = hashlib.sha256(raw).hexdigest()
+        expected = "1679f1a20dd1e4bc064fb96c577fa9d8c3f54f04a634756febef4abfe2cd7941"
+        if got != expected:
+            errors.append(f"Painting v25 artifact SHA-256 mismatch: {got} != {expected}")
+
+    summary = paint_inv.get("summary", {})
+    if summary.get("total_containers_and_materials") != 217:
+        errors.append("Painting inventory must contain 217 containers/materials in v25")
+    if summary.get("unique_products_by_identity") != 212:
+        errors.append("Painting inventory must contain 212 unique product identities in v25")
+    if summary.get("brand_count") != 5:
+        errors.append("Painting inventory must contain 5 brands in v25")
+
+    recipes = paint_recipes.get("recipes", [])
+    recipe_ids = [int(x["recipe_id"]) for x in recipes]
+    if len(recipes) != 540 or recipe_ids != list(range(1, 541)):
+        errors.append("Painting recipe catalogue must contain contiguous IDs 1..540")
+
+    if paint_project.get("stage_count") != 20 or len(paint_project.get("stages", [])) != 20:
+        errors.append("Demon Prince v25 project must contain 20 stages")
+    if paint_project.get("session_count") != 12 or len(paint_project.get("sessions", [])) != 12:
+        errors.append("Demon Prince v25 project must contain 12 sessions")
+    if paint_cost.get("base_replacement_cost_rub") != 143088:
+        errors.append("Painting v25 replacement-cost baseline must remain 143088 RUB")
+
+    if paint_manifest.get("invariants", {}).get("recipe_count") != 540:
+        errors.append("Painting manifest recipe invariant drifted")
+except Exception as exc:
+    errors.append(f"Painting knowledge-base validation failure: {exc}")
+
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (
     ROOT
@@ -380,5 +435,5 @@ if errors:
 
 print(
     "PASS: repository JSON, baselines, source statuses, Custodes collection, "
-    "semantic-core index, external/analytics source contracts, roster evidence model, and historical repricing invariants validated."
+    "semantic-core index, external/analytics source contracts, roster evidence model, painting KB, and historical repricing invariants validated."
 )

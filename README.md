@@ -28,7 +28,7 @@ These baselines are **historical inputs**, not a claim that their rules or point
 4. **Physical inventory is independent from game points.** Collection files describe owned models, bodies, bits and build constraints; points live in versioned rules/points layers.
 5. **Historical snapshots are immutable.** New updates create new snapshots/diffs rather than silently rewriting old evidence.
 6. **Derived data is reproducible.** The long-term target is raw/source metadata → normalized data → derived runtime → validation/regression.
-7. **Public-repository copyright hygiene.** Official source texts are referenced by provenance, URL/version/hash where appropriate; the repository should not become a verbatim mirror of copyrighted rulebooks.
+7. **Public-repository copyright hygiene.** Official source texts are referenced by provenance, URL/version/hash where appropriate; the repository should not become a verbatim mirror of copyrighted rulebooks.\n8. **Personal hobby knowledge is first-class.** Painting inventory, recipes, techniques and project state are versioned independently from game rules and competitive analytics.
 
 ## Repository layout
 
@@ -63,7 +63,7 @@ legacy/                  Metadata for superseded project baselines
 - [ ] Add New Recruit runtime validation/projection checks to the update pipeline.
 - [ ] Expand faction materialization beyond the old local coverage.
 - [ ] Add collection-aware roster legality/physical-feasibility solver.
-- [ ] Import the user's paint/material inventory and painting recipes.
+- [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary
 

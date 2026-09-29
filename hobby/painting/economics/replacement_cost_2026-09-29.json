@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "PAINT_REPLACEMENT_COST_2026-09-29",
+  "currency": "RUB",
+  "source_revision": "v25",
+  "checked_at": "2026-09-29",
+  "base_replacement_cost_rub": 143088,
+  "categories": [
+    {
+      "category": "Citadel Contrast",
+      "quantity": 35,
+      "replacement_unit_price_rub": 990,
+      "replacement_total_rub": 34650,
+      "method": "Текущая цена Hobby Games за 18 мл",
+      "source_url": "https://hobbygames.ru/citadel-contrast-category"
+    },
+    {
+      "category": "Citadel Shade",
+      "quantity": 17,
+      "replacement_unit_price_rub": 990,
+      "replacement_total_rub": 16830,
+      "method": "Текущая цена Hobby Games за 18 мл",
+      "source_url": "https://hobbygames.ru/kraska-shade-nuln-oil-18-ml/voprosy"
+    },
+    {
+      "category": "Citadel Shade Gloss — эквивалент",
+      "quantity": 3,
+      "replacement_unit_price_rub": 990,
+      "replacement_total_rub": 2970,
+      "method": "Линейка снята; оценено по современной Shade",
+      "source_url": "https://hobbygames.ru/kraska-shade-druchii-violet-18-ml"
+    },
+    {
+      "category": "Citadel Texture",
+      "quantity": 2,
+      "replacement_unit_price_rub": 990,
+      "replacement_total_rub": 1980,
+      "method": "Современная Technical/Texture 24 мл",
+      "source_url": "https://hobbygames.ru/kraski-citadel"
+    },
+    {
+      "category": "Citadel Base — металлики",
+      "quantity": 6,
+      "replacement_unit_price_rub": 790,
+      "replacement_total_rub": 4740,
+      "method": "Retributor/Runelord-подобные металлики",
+      "source_url": "https://hobbygames.ru/citadel-base"
+    },
+    {
+      "category": "Citadel Layer — металлики",
+      "quantity": 6,
+      "replacement_unit_price_rub": 790,
+      "replacement_total_rub": 4740,
+      "method": "Canoptek/Liberator-подобные металлики",
+      "source_url": "https://hobbygames.ru/citadel-layer"
+    },
+    {
+      "category": "Citadel Base — прочие",
+      "quantity": 19,
+      "replacement_unit_price_rub": 590,
+      "replacement_total_rub": 11210,
+      "method": "Текущая цена Base 12 мл",
+      "source_url": "https://hobbygames.ru/citadel-base"
+    },
+    {
+      "category": "Citadel Layer — прочие",
+      "quantity": 36,
+      "replacement_unit_price_rub": 590,
+      "replacement_total_rub": 21240,
+      "method": "Текущая цена Layer 12 мл",
+      "source_url": "https://hobbygames.ru/citadel-layer"
+    },
+    {
+      "category": "Citadel Technical",
+      "quantity": 12,
+      "replacement_unit_price_rub": 590,
+      "replacement_total_rub": 7080,
+      "method": "Консервативная оценка 12 мл",
+      "source_url": "https://hobbygames.ru/kraski-citadel"
+    },
+    {
+      "category": "Citadel Dry",
+      "quantity": 5,
+      "replacement_unit_price_rub": 590,
+      "replacement_total_rub": 2950,
+      "method": "Оценено по текущей цене 12 мл",
+      "source_url": "https://hobbygames.ru/kraski-citadel"
+    },
+    {
+      "category": "Citadel Air",
+      "quantity": 2,
+      "replacement_unit_price_rub": 590,
+      "replacement_total_rub": 1180,
+      "method": "Оценено по текущей цене 12 мл",
+      "source_url": "https://hobbygames.ru/kraski-citadel"
+    },
+    {
+      "category": "Citadel Glaze — эквивалент",
+      "quantity": 2,
+      "replacement_unit_price_rub": 590,
+      "replacement_total_rub": 1180,
+      "method": "Снятая линейка; оценено по обычной 12 мл",
+      "source_url": "https://hobbygames.ru/kraski-citadel"
+    },
+    {
+      "category": "Citadel Edge — эквивалент",
+      "quantity": 1,
+      "replacement_unit_price_rub": 590,
+      "replacement_total_rub": 590,
+      "method": "Снятая линейка; оценено по Layer 12 мл",
+      "source_url": "https://hobbygames.ru/citadel-layer"
+    },
+    {
+      "category": "AK 17 мл: Standard/Intense/Primer/Effect/Varnish/Figure",
+      "quantity": 24,
+      "replacement_unit_price_rub": 390,
+      "replacement_total_rub": 9360,
+      "method": "Текущая типовая цена AK 3GEN",
+      "source_url": "https://hobbygames.ru/3gen-ak-interactive"
+    },
+    {
+      "category": "AK The Inks 30 мл",
+      "quantity": 1,
+      "replacement_unit_price_rub": 650,
+      "replacement_total_rub": 650,
+      "method": "Текущая цена линейки Inks",
+      "source_url": "https://hobbygames.ru/inks-ak"
+    },
+    {
+      "category": "AK Diorama Terrains 250 мл",
+      "quantity": 2,
+      "replacement_unit_price_rub": 1250,
+      "replacement_total_rub": 2500,
+      "method": "Текущая цена Asphalt/Light Earth",
+      "source_url": "https://hobbygames.ru/kraska-ak-interactive-diorama-terrains-light-earth-250-ml/otzyvy"
+    },
+    {
+      "category": "Vallejo обычные 17 мл",
+      "quantity": 33,
+      "replacement_unit_price_rub": 390,
+      "replacement_total_rub": 12870,
+      "method": "Model/Game/Mecha и вспомогательные 17 мл",
+      "source_url": "https://hobbygames.ru/kraski-vallejo"
+    },
+    {
+      "category": "Vallejo Xpress Color",
+      "quantity": 2,
+      "replacement_unit_price_rub": 490,
+      "replacement_total_rub": 980,
+      "method": "Текущая типовая цена Xpress",
+      "source_url": "https://hobbygames.ru/kraski-vallejo"
+    },
+    {
+      "category": "Vallejo Xpress Medium",
+      "quantity": 1,
+      "replacement_unit_price_rub": 490,
+      "replacement_total_rub": 490,
+      "method": "Оценено по линейке Xpress",
+      "source_url": "https://hobbygames.ru/kraski-vallejo"
+    },
+    {
+      "category": "Vallejo Metal Color 32 мл",
+      "quantity": 2,
+      "replacement_unit_price_rub": 990,
+      "replacement_total_rub": 1980,
+      "method": "Текущая цена Metal Color",
+      "source_url": "https://hobbygames.ru/metal-color-category"
+    },
+    {
+      "category": "Vallejo Metal Varnish 32 мл",
+      "quantity": 1,
+      "replacement_unit_price_rub": 790,
+      "replacement_total_rub": 790,
+      "method": "Текущая цена",
+      "source_url": "https://hobbygames.ru/lak-metal-varnish-gloss-varnish-32-ml"
+    },
+    {
+      "category": "Vallejo Mecha Primer",
+      "quantity": 1,
+      "replacement_unit_price_rub": 410,
+      "replacement_total_rub": 410,
+      "method": "Текущая цена 17 мл",
+      "source_url": "https://hobbygames.ru/gruntovka-vallejo-mecha-color-ivory-70-643"
+    },
+    {
+      "category": "Army Painter Warpaint",
+      "quantity": 1,
+      "replacement_unit_price_rub": 390,
+      "replacement_total_rub": 390,
+      "method": "Оценено по типовой цене 17–18 мл",
+      "source_url": "https://hobbygames.ru/kraski-i-kisti"
+    },
+    {
+      "category": "Мастер-Класс масло — Серая Пейна 46 мл",
+      "quantity": 1,
+      "replacement_unit_price_rub": 399,
+      "replacement_total_rub": 399,
+      "method": "Текущая розничная цена; полупрозрачная смесь P.B.29/P.Bk.7",
+      "source_url": "https://www.for-art.ru/catalog/zkh_master-klass_46ml_ot_94_rublej.html"
+    },
+    {
+      "category": "Мастер-Класс масло — Сажа газовая 46 мл",
+      "quantity": 1,
+      "replacement_unit_price_rub": 399,
+      "replacement_total_rub": 399,
+      "method": "Текущая розничная цена; укрывистый P.Bk.7",
+      "source_url": "https://www.for-art.ru/catalog/zkh_master-klass_46ml_ot_94_rublej.html"
+    },
+    {
+      "category": "Мастер-Класс масло — Умбра жжёная 46 мл",
+      "quantity": 1,
+      "replacement_unit_price_rub": 530,
+      "replacement_total_rub": 530,
+      "method": "Текущая розничная цена; светостойкий укрывистый P.Br.7",
+      "source_url": "https://www.for-art.ru/catalog/zkh_master-klass_46ml_ot_94_rublej.html"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "Нижняя граница замещения",
+      "coefficient": 0.95,
+      "estimate_rub": 135933.6,
+      "comment": "С учётом скидок, старых цен и более дешёвых аналогов."
+    },
+    {
+      "scenario": "Базовая замена",
+      "coefficient": 1,
+      "estimate_rub": 143088,
+      "comment": "Расчёт по текущим типовым розничным ценам."
+    },
+    {
+      "scenario": "Верхняя граница замещения",
+      "coefficient": 1.08,
+      "estimate_rub": 154535.04,
+      "comment": "С учётом редких/снятых Citadel и колебания цен."
+    },
+    {
+      "scenario": "Открытая коллекция в хорошем состоянии",
+      "coefficient": 0.45,
+      "estimate_rub": 64389.6,
+      "comment": "Ориентир возможной продажи целиком; не является рыночной офертой."
+    }
+  ],
+  "status": "DATED_ESTIMATE"
+}

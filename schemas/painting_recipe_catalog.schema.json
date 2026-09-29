@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/painting_recipe_catalog.schema.json",
+  "title": "WH40K Painting Recipe Catalog",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "catalog_id",
+    "recipe_count",
+    "recipes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "catalog_id": {
+      "type": "string"
+    },
+    "source_revision": {
+      "type": "string"
+    },
+    "checked_at": {
+      "type": "string"
+    },
+    "recipe_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "recipes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "recipe_id",
+          "family",
+          "result",
+          "technique"
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
