@@ -1,32 +1,72 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "as_of": "2026-09-29",
   "status": "CURRENT_PENDING_RECHECK",
   "required_checks": [
     {
       "id": "GW_40K_DOWNLOADS",
       "authority": "official_primary",
-      "required_for": ["core_rules", "universal_updates", "faction_updates"],
+      "blocking": true,
+      "required_for": [
+        "core_rules",
+        "universal_updates",
+        "faction_updates"
+      ],
       "state": "PENDING"
     },
     {
       "id": "GW_MFM",
       "authority": "official_primary",
-      "required_for": ["points", "detachments", "enhancement_costs"],
+      "blocking": true,
+      "required_for": [
+        "points",
+        "detachments",
+        "enhancement_costs"
+      ],
       "state": "PENDING"
     },
     {
       "id": "GW_40K_APP",
       "authority": "official_primary",
-      "required_for": ["app_wording", "datasheet_and_rules_crosscheck"],
+      "blocking": true,
+      "required_for": [
+        "app_wording",
+        "datasheet_and_rules_crosscheck"
+      ],
       "state": "PENDING"
     },
     {
       "id": "WAHAPEDIA_11E",
       "authority": "secondary_reference",
-      "required_for": ["structured_crosscheck", "drift_detection", "navigation"],
-      "state": "PENDING"
+      "blocking": false,
+      "required_for": [
+        "readable_crosscheck",
+        "drift_detection",
+        "navigation"
+      ],
+      "state": "PASS"
+    },
+    {
+      "id": "BSDATA_WH40K_11E",
+      "authority": "structured_implementation",
+      "blocking": false,
+      "required_for": [
+        "catalogue_crosscheck",
+        "roster_constraints",
+        "structured_drift_detection"
+      ],
+      "state": "PASS"
+    },
+    {
+      "id": "NEW_RECRUIT_RUNTIME",
+      "authority": "runtime_projection",
+      "blocking": false,
+      "required_for": [
+        "runtime_validation",
+        "integration_crosscheck"
+      ],
+      "state": "PASS"
     }
   ],
-  "promotion_policy": "CURRENT_VERIFIED requires all applicable official-primary checks to be PASS. Secondary cross-check may identify drift but cannot override official evidence."
+  "promotion_policy": "CURRENT_VERIFIED normative rules require all applicable blocking official-primary checks to PASS. Secondary/implementation/runtime checks increase confidence and detect drift but cannot substitute for official evidence."
 }
