@@ -24,8 +24,30 @@
         "official_primary",
         "official_secondary",
         "secondary_reference",
+        "structured_implementation",
+        "runtime_projection",
+        "tooling_reference",
+        "empirical_dataset",
+        "expert_analysis",
+        "event_overlay",
+        "community_intelligence",
         "personal_observation",
         "legacy_project"
+      ]
+    },
+    "source_role": {
+      "enum": [
+        "normative",
+        "current_mirror",
+        "structured_implementation",
+        "runtime_projection",
+        "validation_tooling",
+        "analytics",
+        "analysis",
+        "event_overlay",
+        "community_intelligence",
+        "historical_baseline",
+        "personal_collection"
       ]
     },
     "edition": {
@@ -73,6 +95,15 @@
         "PROVISIONAL",
         "UNKNOWN"
       ]
+    },
+    "upstream_source_id": {
+      "type": "string"
+    },
+    "use_for": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "notes": {
       "type": "array",
