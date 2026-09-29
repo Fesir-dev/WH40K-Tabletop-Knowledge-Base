@@ -65,7 +65,7 @@ jobs:
           python - <<'PY'
           import json, pathlib
           p=json.load(open(".cache/reingestion-plan.json",encoding="utf-8"))
-          out={"schema_version":"1.0","plan_id":p["plan_id"],"status":"NO_ACTION","promotion_gate":"NOT_APPLICABLE","auto_promote":False}
+          out={"schema_version":"1.0","plan_id":p["plan_id"],"status":"NO_ACTION","affected_roster_identities":[],"promotion_gate":"NOT_APPLICABLE","auto_promote":False}
           pathlib.Path(".cache/reingestion-artifact/candidate_report.json").write_text(json.dumps(out,indent=2)+"\n",encoding="utf-8")
           PY
 
