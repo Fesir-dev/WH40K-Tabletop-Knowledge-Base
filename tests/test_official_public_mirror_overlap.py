@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"tools"))
 
-from audit_official_public_mirror_overlap import canonical_text, classify, shingle_coverage  # noqa: E402
+from audit_official_public_mirror_overlap import canonical_text, classify, shingle_coverage, tokens  # noqa: E402
 
 
 class OfficialPublicMirrorOverlapContracts(unittest.TestCase):
@@ -18,7 +18,7 @@ class OfficialPublicMirrorOverlapContracts(unittest.TestCase):
         official="Ancient Doom When this model makes an attack re roll a Hit roll of 1"
         state,cov,anchor=classify(
             "When this model makes an attack, re-roll a Hit roll of 1.",
-            "Ancient Doom",official.split(),"EXACT_SOURCE_ID"
+            "Ancient Doom",tokens(official),"EXACT_SOURCE_ID"
         )
         self.assertEqual(state,"EXACT_TOKEN_SEQUENCE_MATCH")
         self.assertEqual(cov,1.0)
@@ -47,7 +47,7 @@ class OfficialPublicMirrorOverlapContracts(unittest.TestCase):
     def test_faction_candidate_without_anchor_is_outside_or_unmapped(self):
         state,cov,anchor=classify(
             "some codex only rule text that is not in the public pack",
-            "Codex Only Rule","faction pack different content".split(),"FACTION_SCOPE_CANDIDATE"
+            "Codex Only Rule",tokens("faction pack different content"),"FACTION_SCOPE_CANDIDATE"
         )
         self.assertEqual(state,"OUTSIDE_PUBLIC_PACK_OR_UNMAPPED")
         self.assertFalse(anchor)
