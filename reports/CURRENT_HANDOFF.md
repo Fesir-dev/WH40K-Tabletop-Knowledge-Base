@@ -8,9 +8,10 @@ Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
 Latest validated guarded-reingestion milestone evidence:
 
-- validated automation head: `ec85e345b65a4b5d9820f893eab0879a02f57a46`
-- generic repository validation run: `36603325318` — **SUCCESS**
-- upstream reingestion candidate run: `36603325327` — **SUCCESS**
+- merged milestone commit: `f9d3a5c462e06bf809307a329c50b54de9e66561`
+- validated PR head: `d00d9a66213a6d58698d2da3d9108d18e6b2a70a`
+- generic repository validation run: `36604067969` — **SUCCESS**
+- upstream reingestion candidate run: `36604068116` — **SUCCESS**
 - synthetic candidate path: **PASS**
 - reviewed promotion safety tests: **PASS**
 - auto-promotion: **disabled**
