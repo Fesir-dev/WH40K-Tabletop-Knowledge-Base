@@ -1,0 +1,24 @@
+{
+  "schema": "w40k11.interaction_rules.v0.7",
+  "as_of": "2026-08-15",
+  "sources": {
+    "checked_at": "2026-08-15",
+    "official_downloads": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+    "official_army_building_article": "https://www.warhammer-community.com/en-gb/articles/95fucn12/building-an-army-in-the-new-edition-of-warhammer-40000/",
+    "official_july_update_article": "https://www.warhammer-community.com/en-gb/articles/rgqanids/warhammer-40000-july-update-what-you-need-to-know/",
+    "official_core_pdf": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+    "secondary_current_core": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/",
+    "authority": "Official Games Workshop sources override all secondary sources. Wahapedia is a structured current cross-check/navigation layer."
+  },
+  "rules": [
+    {"id":"normal_move_once_per_phase","status":"CURRENT_CERTIFIED","limit":1,"scope":"unit/phase"},
+    {"id":"extra_cp_once_per_round","status":"CURRENT_CERTIFIED","limit":1,"scope":"player/battle_round","source_priority":"official_july_update_article"},
+    {"id":"same_stratagem_once_per_phase","status":"CURRENT_CERTIFIED","limit":1,"scope":"stratagem/phase","exception":"explicit permission"},
+    {"id":"same_unit_one_stratagem_target_per_phase","status":"CURRENT_CERTIFIED","limit":1,"scope":"unit/phase","exception":"explicit permission"},
+    {"id":"generic_zero_cp_reduction","status":"CURRENT_CERTIFIED","effect":"reduce CP cost by 1 rather than generic 0 unless the rule explicitly names the stratagem","source":"universal_rules_updates_v1_0_20260722.json"},
+    {"id":"repeat_stratagem_permission","status":"CURRENT_CERTIFIED","effect":"repeat-use bypass requires permission explicitly naming the stratagem","source":"universal_rules_updates_v1_0_20260722.json"},
+    {"id":"stratagem_granted_targeting_protection","status":"CURRENT_CERTIFIED","effect":"generic 12-inch protection standardized to 18 inches by July universal update","source":"universal_rules_updates_v1_0_20260722.json"},
+    {"id":"replacement_unit_stratagem_frequency","status":"CURRENT_CERTIFIED","effect":"replacement-unit stratagem constrained to once per battle","source":"universal_rules_updates_v1_0_20260722.json"},
+    {"id":"revived_character_attachment_scope","status":"CURRENT_CERTIFIED","source":"source_conflict_registry_v0_7_20260815.json","effect":"A slain Character that revives returns separately as a unit of one rather than rejoining its former attached unit.","source_priority":"official_july_update_article","supersedes":"June 2026 Core Rules attachment-return wording"}
+  ]
+}
