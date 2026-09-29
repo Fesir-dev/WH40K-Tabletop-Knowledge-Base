@@ -8,6 +8,7 @@ on:
       - "schemas/official_public_semantic_fingerprint.schema.json"
       - "sources/discoveries/gw_public_rules_surface_2026-09-29.json"
       - "sources/snapshots/gw_11e_official_assets_2026-09-29.json"
+      - ".github/workflows/official-public-semantic-fingerprints.yml"
   pull_request:
     paths:
       - "tools/build_official_public_semantic_fingerprints.py"
@@ -15,6 +16,7 @@ on:
       - "schemas/official_public_semantic_fingerprint.schema.json"
       - "sources/discoveries/gw_public_rules_surface_2026-09-29.json"
       - "sources/snapshots/gw_11e_official_assets_2026-09-29.json"
+      - ".github/workflows/official-public-semantic-fingerprints.yml"
   workflow_dispatch:
 
 permissions:
@@ -79,7 +81,7 @@ jobs:
       - name: Commit generated report on push
         if: github.event_name == 'push' && github.ref_name != 'main'
         run: |
-          if git diff --quiet -- reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json; then
+          if [ -z "$(git status --porcelain -- reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json)" ]; then
             echo "Fingerprint report already current"
             exit 0
           fi
