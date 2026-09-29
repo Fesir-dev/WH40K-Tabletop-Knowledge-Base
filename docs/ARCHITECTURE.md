@@ -42,7 +42,25 @@ New Recruit consumes catalogue data and shows how those semantics behave for pla
 
 ### Analytics plane
 
-Tournament results, statistical aggregations and expert analysis are stored separately from normative rules. They answer what is played, what performs and how experts interpret the environment — not what the rulebook says.
+Tournament results, statistical aggregations, list-composition feeds, mathematical models and expert analysis are stored separately from normative rules. They answer what is played, what performs and how experts interpret the environment — not what the rulebook says.
+
+The analytics plane is internally split into:
+
+```text
+raw tournament evidence
+    ↓
+aggregate statistics / matchup data
+    ↓
+winning-list composition
+    + mathhammer/model evidence
+    + independent expert interpretation
+    ↓
+lineage-aware evidence synthesis
+    ↓
+collection-aware roster recommendation
+```
+
+Dependent transformations of the same raw tournament feed retain their upstream lineage and do not multiply confidence.
 
 ## Layering
 
@@ -71,7 +89,9 @@ Examples:
 - keyword membership closures;
 - transport eligibility;
 - physical model allocation constraints;
-- collection-aware army feasibility.
+- collection-aware army feasibility;
+- patch-scoped competitive evidence vectors;
+- lineage-aware roster recommendation support.
 
 ### 4. Historical snapshots
 
