@@ -344,7 +344,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["known_runtime_drifts"], points["known_drift_count"]+surfaces["known_drift_count"])
         self.assertEqual(nr["new_runtime_drifts"], 0)
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT")
+        self.assertEqual(self.current["next_milestone"], "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE")
         layer=self.current["release_transition_readiness"]
         self.assertEqual(layer["state"], "OPERATIONAL_V1")
         self.assertFalse(layer["policy"]["auto_promote"])
@@ -356,6 +356,13 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(activation["checkpoint_status"], "NO_ACTION_REQUIRED")
         self.assertFalse(activation["safety"]["auto_promote"])
         self.assertFalse(activation["safety"]["direct_current_rules_mutation"])
+        gap_layer=self.current["normative_equivalence_gap_audit"]
+        self.assertEqual(gap_layer["state"], "PASS_GAPS_CLASSIFIED")
+        self.assertEqual(gap_layer["current_normalized_factions"], 0)
+        self.assertTrue(gap_layer["public_core_rules_source_discovered"])
+        self.assertEqual(gap_layer["verified_public_faction_pack_pdfs"], 28)
+        self.assertEqual(gap_layer["public_faction_pack_scope"], "SUPPLEMENTAL_NOT_FULL_CODEX")
+        self.assertEqual(gap_layer["gw_app_wording"], "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE")
 
     def test_guarded_reingestion_control_plane(self):
         required=[
