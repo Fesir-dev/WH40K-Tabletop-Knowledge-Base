@@ -167,6 +167,7 @@ def main() -> int:
     wanted_prefixes = [
         f"rules/11e/snapshots/{candidate_date}/",
         f"ingestion/candidates/{plan['plan_id']}/",
+        f"ingestion/runs/{candidate_date}_",
         ".cache/wahapedia11e/",
     ]
     copied = []
