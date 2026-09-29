@@ -347,11 +347,12 @@
     "authority_rule": "Official public fingerprints improve evidence and drift detection only; full faction normalization remains blocked where Codex/app semantics are not publicly available or not yet normalized.",
     "closure_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CLOSURE_2026-09-29.md",
     "latest_validation": {
-      "head": "148843a72d27f20459e064da8c9943eab19c5ed2",
-      "fingerprint_workflow_run": 36615907736,
-      "normative_gap_audit_run": 36615908005,
-      "repository_ci_run": 36615907686,
+      "head": "d265ec44b70a62384ffb1d36af987d0aaa7aa8ee",
+      "fingerprint_workflow_run": 36616297652,
+      "normative_gap_audit_run": 36616297679,
+      "repository_ci_run": 36616297669,
       "result": "SUCCESS"
-    }
+    },
+    "merged_commit": "1eaa07e137c72ebc5087c3306a3eaa0752356c80"
   }
 }
