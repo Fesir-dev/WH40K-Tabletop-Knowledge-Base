@@ -117,6 +117,7 @@ class ReingestionPromotionContracts(unittest.TestCase):
                     "coverage/current.json",
                     "sources/registry.json",
                     "sources/currentness_gate.json",
+                    "sources/release_state.json",
                 ]:
                     src=ROOT/rel
                     dst=repo/rel
@@ -136,6 +137,16 @@ class ReingestionPromotionContracts(unittest.TestCase):
                 self.assertFalse(meta["normative_mfm_changed"])
                 self.assertTrue((repo/"ingestion"/"promotions"/plan["plan_id"]/"promotion.json").exists())
                 self.assertTrue((repo/"ingestion"/"promotions"/plan["plan_id"]/"wave_b_conflicts.json").exists())
+        finally:
+            td.cleanup()
+
+    def test_active_release_transition_blocks_affected_candidate(self):
+        td,root,plan,report=self.make_artifact("wahapedia_change.json")
+        try:
+            report["affected_roster_identities"]=["space_marines"]
+            release=json.loads((ROOT/"sources/release_state.json").read_text(encoding="utf-8"))
+            with self.assertRaises(SystemExit):
+                check(plan,report,root,release)
         finally:
             td.cleanup()
 
