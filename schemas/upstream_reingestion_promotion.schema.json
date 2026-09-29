@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/upstream_reingestion_promotion.schema.json",
+  "title": "Reviewed Upstream Reingestion Promotion",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "plan_id",
+    "plan_fingerprint",
+    "candidate_snapshot",
+    "promoted_at",
+    "changed_sources",
+    "auto_promote",
+    "normative_mfm_changed",
+    "pointer_updates"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "plan_id": {
+      "type": "string"
+    },
+    "plan_fingerprint": {
+      "type": "string"
+    },
+    "candidate_snapshot": {
+      "type": "string"
+    },
+    "promoted_at": {
+      "type": "string"
+    },
+    "changed_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "auto_promote": {
+      "const": false
+    },
+    "normative_mfm_changed": {
+      "const": false
+    },
+    "copied_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pointer_updates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

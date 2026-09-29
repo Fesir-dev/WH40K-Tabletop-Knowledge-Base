@@ -4,9 +4,22 @@ import argparse, csv, hashlib, io, json, urllib.request
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-DATE="2026-09-29"
-WROOT=ROOT/"rules"/"11e"/"snapshots"/DATE/"wahapedia"
 BASE="https://wahapedia.ru/wh40k11ed/"
+
+def resolve_current_wahapedia_root() -> Path:
+    current = json.loads((ROOT/"rules"/"11e"/"current.json").read_text(encoding="utf-8"))
+    pointer = current.get("wave_b_structural", {}).get("snapshot")
+    if not pointer:
+        raise RuntimeError("rules/11e/current.json has no wave_b_structural.snapshot pointer")
+    index_path = ROOT / pointer
+    if index_path.name != "index.json" or index_path.parent.name != "roster_views":
+        raise RuntimeError(f"Unexpected current Wahapedia roster-view pointer: {pointer}")
+    wroot = index_path.parent.parent
+    if not (wroot/"manifest.json").exists():
+        raise RuntimeError(f"Current Wahapedia manifest missing under {wroot}")
+    return wroot
+
+WROOT=resolve_current_wahapedia_root()
 
 KIND_FILE={
     "ability":"Abilities.csv",

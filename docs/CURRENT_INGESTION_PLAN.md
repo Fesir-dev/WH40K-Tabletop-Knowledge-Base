@@ -88,3 +88,22 @@ A normalized object can become current only when:
 - 29 edition-11 sources are indexed; one is MFM and 28 faction-pack PDF assets were fetched from the official Games Workshop asset domain and SHA-256 recorded.
 - No long copyrighted rule prose is vendored.
 - This closes **operational currentness**, not normative prose equivalence. Games Workshop remains authoritative and app-only wording remains a separate unresolved scope.
+
+## Automated refresh control plane — COMPLETE 2026-09-29
+
+Detected mirror/implementation changes now use:
+
+`watch → deterministic plan → isolated candidate → reconciliation/audits → explicit reviewed promotion branch → PR`.
+
+Automatic candidate generation is allowed; automatic promotion is not. A changed MFM extraction remains blocked until official Games Workshop MFM authority is revalidated.
+
+## Active Wave C readiness milestone
+
+`RELEASE_TRANSITION_INGESTION_READINESS`
+
+Current transition facts remain unchanged:
+
+- Space Marines ecosystem: current legal rules remain current; scheduled release date is 2026-10-03 and must not be promoted early.
+- Adeptus Custodes: preview/preorder material remains upcoming-only until release/current-legality evidence exists.
+- Both transitions should use the guarded candidate/reconciliation/promotion control plane once legally current.
+

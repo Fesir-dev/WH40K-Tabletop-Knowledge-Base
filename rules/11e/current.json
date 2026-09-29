@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.7",
+  "schema_version": "2.8",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -42,7 +42,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION",
+  "next_milestone": "RELEASE_TRANSITION_INGESTION_READINESS",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -168,6 +168,34 @@
         "UNKNOWN_RUNTIME_DRIFT"
       ],
       "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+    },
+    "upstream_reingestion": {
+      "state": "OPERATIONAL_GUARDED_V1",
+      "planner": "tools/plan_upstream_reingestion.py",
+      "candidate_runner": "tools/run_upstream_reingestion_candidate.py",
+      "candidate_workflow": ".github/workflows/upstream-reingestion-candidate.yml",
+      "promotion_tool": "tools/apply_reingestion_promotion.py",
+      "promotion_workflow": ".github/workflows/upstream-reingestion-promote.yml",
+      "candidate_execution": "ISOLATED_REVIEWABLE_ARTIFACT",
+      "promotion_execution": "EXPLICIT_WORKFLOW_DISPATCH_TO_BRANCH_AND_PR",
+      "auto_promote": false,
+      "mfm_authority_gate": "BLOCKING_OFFICIAL_REVALIDATION_REQUIRED",
+      "source_catalog_asset_gate": true,
+      "post_promotion_checks": [
+        "upstream_recheck",
+        "new_recruit_runtime_revalidation",
+        "semantic_smoke",
+        "repository_validation",
+        "unit_tests"
+      ],
+      "latest_validation": {
+        "head": "ec85e345b65a4b5d9820f893eab0879a02f57a46",
+        "repository_ci_run": 36603325318,
+        "candidate_workflow_run": 36603325327,
+        "result": "SUCCESS"
+      },
+      "real_change_promotion_exercised": false,
+      "closure_report": "reports/AUTOMATED_REINGESTION_PROMOTION_CLOSURE_2026-09-29.md"
     }
   },
   "collection_aware_roster_solver": {

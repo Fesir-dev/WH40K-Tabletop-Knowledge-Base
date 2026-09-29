@@ -11,15 +11,26 @@ class RepositoryContracts(unittest.TestCase):
         cls.coverage = json.loads((ROOT/"coverage/current.json").read_text(encoding="utf-8"))
         cls.gate = json.loads((ROOT/"sources/currentness_gate.json").read_text(encoding="utf-8"))
         cls.release = json.loads((ROOT/"sources/release_state.json").read_text(encoding="utf-8"))
+        cls.registry = json.loads((ROOT/"sources/registry.json").read_text(encoding="utf-8"))
         cls.bsdata = json.loads((ROOT/"ingestion/source_snapshots/bsdata_wh40k_11e_2026-09-29.json").read_text(encoding="utf-8"))
-        cls.mfm = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/mfm/index.json").read_text(encoding="utf-8"))
-        cls.wave_b = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/wahapedia/roster_views/index.json").read_text(encoding="utf-8"))
-        cls.wave_b_manifest = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/wahapedia/manifest.json").read_text(encoding="utf-8"))
-        cls.wave_b_recon = json.loads((ROOT/"reports/WAVE_B_RECONCILIATION_2026-09-29.json").read_text(encoding="utf-8"))
         cls.current = json.loads((ROOT/"rules/11e/current.json").read_text(encoding="utf-8"))
-        cls.bsdata_fallback = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/bsdata_fallback/index.json").read_text(encoding="utf-8"))
-        cls.semantic_audit = json.loads((ROOT/"reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json").read_text(encoding="utf-8"))
-        cls.official_assets = json.loads((ROOT/"sources/snapshots/gw_11e_official_assets_2026-09-29.json").read_text(encoding="utf-8"))
+
+        mfm_index_path = ROOT / cls.current["wave_a_mfm"]["snapshot"]
+        cls.mfm = json.loads(mfm_index_path.read_text(encoding="utf-8"))
+
+        wave_b_index_path = ROOT / cls.current["wave_b_structural"]["snapshot"]
+        cls.wave_b = json.loads(wave_b_index_path.read_text(encoding="utf-8"))
+        cls.wave_b_manifest = json.loads((wave_b_index_path.parent.parent/"manifest.json").read_text(encoding="utf-8"))
+        cls.wave_b_recon = json.loads((ROOT/cls.current["wave_b_structural"]["reconciliation_report"]).read_text(encoding="utf-8"))
+
+        fallback_path = ROOT / cls.current["wave_b_structural"]["implementation_fallback_snapshot"]
+        cls.bsdata_fallback = json.loads(fallback_path.read_text(encoding="utf-8"))
+
+        sem_path = ROOT / cls.current["semantic_resolver"]["full_audit"]["report"]
+        cls.semantic_audit = json.loads(sem_path.read_text(encoding="utf-8"))
+        official_path = ROOT / cls.current["source_currentness"]["faq_errata_assets"]["report"]
+        cls.official_assets = json.loads(official_path.read_text(encoding="utf-8"))
+
         cls.upstream_watch = json.loads((ROOT/"reports/UPSTREAM_CHANGE_WATCH_CURRENT.json").read_text(encoding="utf-8"))
         cls.nr_runtime = json.loads((ROOT/"reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json").read_text(encoding="utf-8"))
         cls.runtime_drifts = json.loads((ROOT/"sources/runtime_drift_registry.json").read_text(encoding="utf-8"))
@@ -84,51 +95,68 @@ class RepositoryContracts(unittest.TestCase):
 
 
     def test_wave_b_structural_views(self):
-        self.assertEqual(
-            self.wave_b["counts"],
-            {"roster_identities":37,"structural_complete":35,"structural_partial":0,"unavailable":2},
-        )
+        counts=self.wave_b["counts"]
+        self.assertEqual(counts["roster_identities"], 37)
+        self.assertEqual(counts["structural_partial"], 0)
+        self.assertEqual(counts["structural_complete"] + counts["unavailable"], 37)
+        self.assertEqual(len(self.wave_b["views"]), 37)
         unavailable={
             x["slug"] for x in self.wave_b["views"]
             if x["status"].startswith("UNAVAILABLE")
         }
-        self.assertEqual(unavailable, {"titanicus_traitoris","unaligned_forces"})
-        self.assertEqual(self.wave_b_manifest["source"]["last_update"], "2026-09-28 02:38:04")
-        self.assertEqual(self.wave_b_manifest["counts"]["datasheets"], 1660)
-        self.assertEqual(self.wave_b_manifest["counts"]["ability_catalog"], 95)
+        self.assertEqual(len(unavailable), counts["unavailable"])
+        self.assertEqual(self.wave_b_manifest["source"]["last_update"], self.current["wave_b_structural"]["wahapedia_last_update"])
+        self.assertEqual(self.coverage["global"]["wave_b_wahapedia_last_update"], self.wave_b_manifest["source"]["last_update"])
+        if self.current["wave_b_structural"]["snapshot"].startswith("rules/11e/snapshots/2026-09-29/"):
+            self.assertEqual(counts, {"roster_identities":37,"structural_complete":35,"structural_partial":0,"unavailable":2})
+            self.assertEqual(unavailable, {"titanicus_traitoris","unaligned_forces"})
+            self.assertEqual(self.wave_b_manifest["source"]["last_update"], "2026-09-28 02:38:04")
+            self.assertEqual(self.wave_b_manifest["counts"]["datasheets"], 1660)
+            self.assertEqual(self.wave_b_manifest["counts"]["ability_catalog"], 95)
 
     def test_wave_b_reconciliation_and_promotion(self):
-        self.assertEqual(self.wave_b_recon["status"], "PASS_WITH_CONFLICTS")
-        self.assertEqual(self.wave_b_recon["conflict_count"], 11)
-        self.assertEqual(self.wave_b_recon["totals"]["points_compared"], 1202)
-        self.assertEqual(self.wave_b_recon["totals"]["unit_name_matches"], 1242)
+        self.assertIn(self.wave_b_recon["status"], {"PASS","PASS_WITH_CONFLICTS"})
+        self.assertEqual(self.wave_b_recon["conflict_count"], self.current["wave_b_structural"]["source_conflicts"])
         self.assertEqual(self.coverage["status"], "WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE")
-        self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_current")), 35)
+        complete=self.wave_b["counts"]["structural_complete"]
+        self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_current")), complete)
         self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
         self.assertEqual(self.current["status"], "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING")
-        self.assertEqual(self.current["wave_b_structural"]["roster_identities_complete"], 35)
+        self.assertEqual(self.current["wave_b_structural"]["roster_identities_complete"], complete)
         self.assertEqual(self.current["wave_b_structural"]["semantic_rule_text"], "CURRENT_SECONDARY_MIRROR_FULL_HASH_VERIFIED")
         self.assertEqual(self.current["wave_b_structural"]["faq_errata"], "SOURCE_CATALOG_CURRENT_OFFICIAL_ASSETS_VERIFIED")
-
+        if self.current["wave_b_structural"]["snapshot"].startswith("rules/11e/snapshots/2026-09-29/"):
+            self.assertEqual(self.wave_b_recon["conflict_count"], 11)
+            self.assertEqual(self.wave_b_recon["totals"]["points_compared"], 1202)
+            self.assertEqual(self.wave_b_recon["totals"]["unit_name_matches"], 1242)
 
     def test_structural_source_availability_37_of_37(self):
         g=self.coverage["global"]
-        self.assertEqual(g["wave_b_current_mirror_structural_complete"], 35)
-        self.assertEqual(g["wave_b_structured_implementation_fallback_complete"], 2)
+        complete=self.wave_b["counts"]["structural_complete"]
+        fallback_count=len(self.bsdata_fallback["views"])
+        self.assertEqual(g["wave_b_current_mirror_structural_complete"], complete)
+        self.assertEqual(g["wave_b_structured_implementation_fallback_complete"], fallback_count)
         self.assertEqual(g["wave_b_total_structural_source_available"], 37)
         self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_source_available")), 37)
         rows={x["slug"]:x for x in self.coverage["factions"]}
-        for slug in {"titanicus_traitoris","unaligned_forces"}:
-            self.assertFalse(rows[slug]["structural_current"])
+        for slug in {x["slug"] for x in self.bsdata_fallback["views"]}:
+            if rows[slug]["structural_current"]:
+                continue
             self.assertEqual(rows[slug]["wave_b_structural"]["state"], "IMPLEMENTATION_FALLBACK_COMPLETE")
             self.assertEqual(rows[slug]["wave_b_structural"]["source_role"], "structured_implementation")
             self.assertFalse(rows[slug]["wave_b_structural"]["normative_rules_verified"])
 
     def test_bsdata_fallback_snapshot(self):
-        self.assertEqual(self.bsdata_fallback["commit_sha"], "951d5900d1b4a952a4ba560a30c43788e622ccfc")
+        registry={x["id"]:x for x in self.registry["sources"]}
+        current_commit=registry["BSDATA_WH40K_11E"]["observed_revision"]["commit_sha"]
+        self.assertEqual(self.bsdata_fallback["commit_sha"], current_commit)
         rows={x["slug"]:x for x in self.bsdata_fallback["views"]}
-        self.assertEqual(rows["titanicus_traitoris"]["counts"]["units"], 4)
-        self.assertEqual(rows["unaligned_forces"]["counts"]["units"], 22)
+        self.assertEqual(set(rows), {"titanicus_traitoris","unaligned_forces"})
+        if current_commit=="951d5900d1b4a952a4ba560a30c43788e622ccfc":
+            self.assertEqual(rows["titanicus_traitoris"]["counts"]["units"], 4)
+            self.assertEqual(rows["unaligned_forces"]["counts"]["units"], 22)
+        else:
+            self.assertTrue(all(x["counts"]["units"] > 0 for x in rows.values()))
 
     def test_semantic_resolver_contract(self):
         self.assertTrue((ROOT/"tools/query_current_semantics.py").exists())
@@ -138,16 +166,24 @@ class RepositoryContracts(unittest.TestCase):
 
     def test_wave_b_semantic_and_official_asset_audits(self):
         self.assertEqual(self.semantic_audit["status"], "PASS")
-        self.assertEqual(self.semantic_audit["expected_fingerprints"], 16506)
-        self.assertEqual(self.semantic_audit["counts"], {"MATCH":16506})
+        expected=self.semantic_audit["expected_fingerprints"]
+        matched=self.semantic_audit["counts"]["MATCH"]
+        self.assertGreater(expected, 0)
+        self.assertEqual(matched, expected)
         self.assertEqual(len(self.semantic_audit["problems"]), 0)
         self.assertEqual(self.official_assets["status"], "PASS")
         self.assertEqual(self.official_assets["live_source_csv"]["catalog_drift_count"], 0)
-        self.assertEqual(self.official_assets["official_assets"]["edition_11_sources"], 29)
-        self.assertEqual(self.official_assets["official_assets"]["verified_pdf_assets"], 28)
-        self.assertEqual(self.official_assets["official_assets"]["failures"], 0)
-        self.assertEqual(self.coverage["global"]["wave_b_current_mirror_semantic_roster_identities"], 35)
-        self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
+        off=self.official_assets["official_assets"]
+        self.assertEqual(off["verified_pdf_assets"], off["pdf_assets"])
+        self.assertEqual(off["failures"], 0)
+        complete=self.current["wave_b_structural"]["roster_identities_complete"]
+        g=self.coverage["global"]
+        self.assertEqual(g["wave_b_current_mirror_semantic_roster_identities"], complete)
+        self.assertEqual(g["wave_b_semantic_fingerprints_expected"], expected)
+        self.assertEqual(g["wave_b_semantic_fingerprints_matched"], matched)
+        self.assertEqual(g["wave_b_official_edition11_sources"], off["edition_11_sources"])
+        self.assertEqual(g["wave_b_official_pdf_assets_verified"], off["verified_pdf_assets"])
+        self.assertEqual(g["current_normalized_factions"], 0)
         self.assertEqual(self.current["status"], "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING")
 
     def test_upstream_watch_and_new_recruit_runtime(self):
@@ -157,56 +193,64 @@ class RepositoryContracts(unittest.TestCase):
         self.assertFalse(self.upstream_watch["change_summary"]["wahapedia_last_update_changed"])
 
         self.assertEqual(self.nr_runtime["schema_version"], "2.0")
-        self.assertEqual(self.nr_runtime["status"], "PASS_WITH_KNOWN_RUNTIME_DRIFT")
+        self.assertIn(self.nr_runtime["status"], {"PASS","PASS_WITH_KNOWN_RUNTIME_DRIFT"})
         self.assertEqual(self.nr_runtime["universe"]["resolved_runtime_identities"], 37)
         self.assertEqual(self.nr_runtime["universe"]["missing"], [])
         self.assertTrue(all(x["status"] == "PASS" for x in self.nr_runtime["universe"]["page_checks"]))
         self.assertEqual(self.nr_runtime["lineage"]["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
 
-        points = self.nr_runtime["representative_points"]
+        points=self.nr_runtime["representative_points"]
+        surfaces=self.nr_runtime["representative_surfaces"]
         self.assertEqual(points["checks"], 15)
-        self.assertEqual(points["matched"], 10)
-        self.assertEqual(points["known_drift_count"], 5)
-        self.assertEqual(points["new_drift_count"], 0)
-        self.assertTrue(all(x["classification"] == "RUNTIME_PROJECTION_DRIFT" for x in points["known_drifts"]))
-        ghaz = next(x for x in points["known_drifts"] if x["unit"] == "Ghazghkull Thraka")
-        self.assertEqual(ghaz["gw_mfm_value"], 300)
-        self.assertEqual(ghaz["wahapedia_value"], 300)
-        self.assertEqual(ghaz["pinned_bsdata_value"], 300)
-        self.assertEqual(ghaz["live_bsdata_value"], 300)
-        self.assertEqual(ghaz["new_recruit_runtime_value"], 235)
-        self.assertFalse(ghaz["normative_kb_change_required"])
-
-        surfaces = self.nr_runtime["representative_surfaces"]
         self.assertEqual(surfaces["checks"], 5)
-        self.assertEqual(surfaces["matched"], 4)
-        self.assertEqual(surfaces["known_drift_count"], 1)
+        self.assertEqual(points["new_drift_count"], 0)
         self.assertEqual(surfaces["new_drift_count"], 0)
-        det = surfaces["known_drifts"][0]
-        self.assertEqual(det["check_id"], "ORKS_CURRENT_DETACHMENT_SHOOTA_BOYZ")
-        self.assertEqual(det["classification"], "RUNTIME_PROJECTION_DRIFT")
-        self.assertTrue(det["lineage"]["gw_mfm_present"])
-        self.assertTrue(det["lineage"]["wahapedia_present"])
-        self.assertTrue(det["lineage"]["pinned_bsdata_present"])
-        self.assertTrue(det["lineage"]["live_bsdata_present"])
-        self.assertFalse(det["lineage"]["new_recruit_runtime_present"])
-        self.assertFalse(det["normative_kb_change_required"])
 
-        active = [x for x in self.runtime_drifts["active"] if x["state"] == "ACTIVE"]
-        self.assertEqual(len(active), 6)
-        self.assertTrue(all(x["classification"] == "RUNTIME_PROJECTION_DRIFT" for x in active))
+        allowed={"NORMATIVE_MATCH","IMPLEMENTATION_DRIFT","RUNTIME_PROJECTION_DRIFT","UPSTREAM_REVISION_DRIFT","UNKNOWN_RUNTIME_DRIFT"}
+        known=points["known_drifts"]+surfaces["known_drifts"]
+        self.assertTrue(all(x["classification"] in allowed for x in known))
+        self.assertTrue(all(x["normative_kb_change_required"] is False for x in known))
+
+        active=[x for x in self.runtime_drifts["active"] if x["state"]=="ACTIVE"]
+        self.assertTrue(all(x["classification"] in allowed-{"NORMATIVE_MATCH"} for x in active))
         self.assertTrue(all(x["normative_kb_change_required"] is False for x in active))
-        self.assertTrue(any(x["id"] == "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29" for x in active))
-        self.assertTrue(any(x["id"] == "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29" for x in active))
 
-        automation = self.current["automation"]
+        automation=self.current["automation"]
+        nr=automation["new_recruit_runtime"]
         self.assertEqual(automation["upstream_change_watch"]["state"], "ACTIVE_NO_CHANGE")
-        self.assertEqual(automation["new_recruit_runtime"]["state"], "PASS_WITH_KNOWN_RUNTIME_DRIFT")
-        self.assertEqual(automation["new_recruit_runtime"]["representative_point_checks"], 15)
-        self.assertEqual(automation["new_recruit_runtime"]["known_runtime_drifts"], 6)
-        self.assertEqual(automation["new_recruit_runtime"]["new_runtime_drifts"], 0)
-        self.assertEqual(automation["new_recruit_runtime"]["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION")
+        self.assertEqual(nr["state"], self.nr_runtime["status"])
+        self.assertEqual(nr["representative_point_checks"], points["checks"])
+        self.assertEqual(nr["representative_point_matches"], points["matched"])
+        self.assertEqual(nr["known_runtime_drifts"], points["known_drift_count"]+surfaces["known_drift_count"])
+        self.assertEqual(nr["new_runtime_drifts"], 0)
+        self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
+        self.assertEqual(self.current["next_milestone"], "RELEASE_TRANSITION_INGESTION_READINESS")
+
+    def test_guarded_reingestion_control_plane(self):
+        required=[
+            "tools/plan_upstream_reingestion.py",
+            "tools/run_upstream_reingestion_candidate.py",
+            "tools/apply_reingestion_promotion.py",
+            "tools/sync_new_recruit_runtime_status.py",
+            ".github/workflows/upstream-reingestion-candidate.yml",
+            ".github/workflows/upstream-reingestion-promote.yml",
+            "schemas/upstream_reingestion_plan.schema.json",
+            "schemas/upstream_reingestion_candidate.schema.json",
+            "schemas/upstream_reingestion_promotion.schema.json",
+        ]
+        for rel in required:
+            self.assertTrue((ROOT/rel).exists(), rel)
+        for rel in [
+            "schemas/upstream_reingestion_plan.schema.json",
+            "schemas/upstream_reingestion_candidate.schema.json",
+            "schemas/upstream_reingestion_promotion.schema.json",
+        ]:
+            json.loads((ROOT/rel).read_text(encoding="utf-8"))
+        promote=(ROOT/".github/workflows/upstream-reingestion-promote.yml").read_text(encoding="utf-8")
+        self.assertIn("PROMOTE_REVIEWED_CANDIDATE", promote)
+        self.assertIn("pull-requests: write", promote)
+        self.assertIn("git switch -c", promote)
+        self.assertNotIn("git push origin main", promote)
 
     def test_collection_aware_roster_solver(self):
         self.assertEqual(self.collection_solver["status"], "PASS")

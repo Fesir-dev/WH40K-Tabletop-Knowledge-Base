@@ -1,0 +1,107 @@
+name: Upstream reingestion candidate
+
+on:
+  workflow_run:
+    workflows: ["Upstream change watch"]
+    types: [completed]
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "tools/plan_upstream_reingestion.py"
+      - "tools/run_upstream_reingestion_candidate.py"
+      - "tools/crosscheck_wave_b.py"
+      - "tools/build_wave_b_roster_views.py"
+      - "tools/audit_wave_b_views.py"
+      - "tools/audit_semantic_fingerprints.py"
+      - "tools/build_bsdata_fallback_views.py"
+      - ".github/workflows/upstream-reingestion-candidate.yml"
+      - "schemas/upstream_reingestion_plan.schema.json"
+      - "schemas/upstream_reingestion_candidate.schema.json"
+
+permissions:
+  contents: read
+
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build deterministic reingestion plan
+        id: plan
+        shell: bash
+        run: |
+          candidate_key="candidate-$(date -u +%Y-%m-%d)-${GITHUB_RUN_ID}"
+          python tools/plan_upstream_reingestion.py \
+            --candidate-snapshot-date "$candidate_key" \
+            --output .cache/reingestion-plan.json
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          p=json.load(open(".cache/reingestion-plan.json",encoding="utf-8"))
+          print("state="+p["state"])
+          print("plan_id="+p["plan_id"])
+          print("promotion_state="+p["promotion"]["state"])
+          PY
+
+      - name: Execute candidate ingestion in isolated workspace
+        if: steps.plan.outputs.state != 'NO_ACTION'
+        run: |
+          python tools/run_upstream_reingestion_candidate.py \
+            --plan .cache/reingestion-plan.json \
+            --workspace .cache/reingestion-workspace \
+            --artifact-dir .cache/reingestion-artifact
+
+      - name: Record no-change plan
+        if: steps.plan.outputs.state == 'NO_ACTION'
+        run: |
+          mkdir -p .cache/reingestion-artifact
+          cp .cache/reingestion-plan.json .cache/reingestion-artifact/reingestion_plan.json
+          python - <<'PY'
+          import json, pathlib
+          p=json.load(open(".cache/reingestion-plan.json",encoding="utf-8"))
+          out={"schema_version":"1.0","plan_id":p["plan_id"],"status":"NO_ACTION","promotion_gate":"NOT_APPLICABLE","auto_promote":False}
+          pathlib.Path(".cache/reingestion-artifact/candidate_report.json").write_text(json.dumps(out,indent=2)+"\n",encoding="utf-8")
+          PY
+
+      - name: Synthetic end-to-end candidate smoke
+        if: github.event_name == 'pull_request'
+        run: |
+          smoke_key="candidate-smoke-${GITHUB_RUN_ID}"
+          python tools/plan_upstream_reingestion.py \
+            --watch-report tests/fixtures/reingestion/wahapedia_change.json \
+            --candidate-snapshot-date "$smoke_key" \
+            --output .cache/reingestion-smoke-plan.json
+          python tools/run_upstream_reingestion_candidate.py \
+            --plan .cache/reingestion-smoke-plan.json \
+            --workspace .cache/reingestion-smoke-workspace \
+            --artifact-dir .cache/reingestion-smoke-artifact
+          python - <<'PY'
+          import json
+          r=json.load(open(".cache/reingestion-smoke-artifact/candidate_report.json",encoding="utf-8"))
+          assert r["status"]=="PASS", r
+          assert r["promotion_gate"]=="ELIGIBLE_FOR_REVIEWED_PROMOTION", r
+          assert not r["forbidden_current_authority_mutations"], r
+          assert all(x["status"]=="PASS" for x in r["stages"]), r
+          print("synthetic candidate smoke: PASS")
+          PY
+      - name: Upload reviewable candidate evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: upstream-reingestion-${{ steps.plan.outputs.plan_id }}
+          path: .cache/reingestion-artifact/
+          retention-days: 30
+
+      - name: Assert no automatic promotion
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open(".cache/reingestion-plan.json",encoding="utf-8"))
+          assert p["promotion"]["auto_promote"] is False
+          print("auto-promote: DISABLED")
+          PY

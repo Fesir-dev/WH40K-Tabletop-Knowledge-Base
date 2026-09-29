@@ -7,7 +7,9 @@ import urllib.request
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-WROOT=ROOT/"rules"/"11e"/"snapshots"/"2026-09-29"/"wahapedia"
+CURRENT=json.loads((ROOT/"rules"/"11e"/"current.json").read_text(encoding="utf-8"))
+WAHA_INDEX=ROOT/CURRENT["wave_b_structural"]["snapshot"]
+WROOT=WAHA_INDEX.parent.parent
 REG=json.loads((ROOT/"sources"/"registry.json").read_text(encoding="utf-8"))
 MAN=json.loads((WROOT/"manifest.json").read_text(encoding="utf-8"))
 BY_ID={x["id"]:x for x in REG["sources"]}
@@ -100,7 +102,7 @@ def main():
     report={
         "schema_version":"1.0",
         "status":"CHANGE_DETECTED" if changed else "NO_CHANGE",
-        "baseline_snapshot":"2026-09-29",
+        "baseline_snapshot":str(WROOT.parent.name),
         "github_sources":github_sources,
         "wahapedia":{
             "snapshot_last_update":MAN["source"]["last_update"],

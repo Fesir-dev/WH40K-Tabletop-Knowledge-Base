@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import csv, hashlib, io, json, urllib.request
+import argparse, csv, hashlib, io, json, urllib.request
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -101,6 +101,13 @@ def expected_records():
     return out
 
 def main():
+    global DATE, WROOT
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--snapshot-date",default=DATE)
+    ap.add_argument("--report-path")
+    a=ap.parse_args()
+    DATE=a.snapshot_date
+    WROOT=ROOT/"rules"/"11e"/"snapshots"/DATE/"wahapedia"
     live={}
     file_meta={}
     for kind,filename in sorted(FILES.items()):
@@ -165,7 +172,8 @@ def main():
             "copyright_policy":"Long prose remains external; repository stores fingerprints and structured metadata only."
         }
     }
-    out=ROOT/"reports"/f"WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_{DATE}.json"
+    out=Path(a.report_path).resolve() if a.report_path else ROOT/"reports"/f"WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_{DATE}.json"
+    out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"status":report["status"],"expected_fingerprints":len(expected),"counts":dict(counts),"problems":len(results)},ensure_ascii=False,indent=2))
     return 0 if report["status"]=="PASS" else 2

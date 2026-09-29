@@ -6,14 +6,15 @@ Updated: **2026-09-29**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest validated collection-solver milestone evidence:
+Latest validated guarded-reingestion milestone evidence:
 
-- merged solver commit: `b764e6fec07310a1c5e4a2de88d2d1dbd376b93f`
-- validated PR head: `9371bff56d6bc83daae6f3b6b52a048a4dbd6b81`
-- generic repository validation run: `36599414513` — **SUCCESS**
-- collection solver workflow run: `36599414516` — **SUCCESS**
-- solver report: `reports/COLLECTION_AWARE_ROSTER_SOLVER_CURRENT.json` — **PASS**
-- closure report: `reports/COLLECTION_AWARE_ROSTER_SOLVER_CLOSURE_2026-09-29.md`
+- validated automation head: `ec85e345b65a4b5d9820f893eab0879a02f57a46`
+- generic repository validation run: `36603325318` — **SUCCESS**
+- upstream reingestion candidate run: `36603325327` — **SUCCESS**
+- synthetic candidate path: **PASS**
+- reviewed promotion safety tests: **PASS**
+- auto-promotion: **disabled**
+- closure report: `reports/AUTOMATED_REINGESTION_PROMOTION_CLOSURE_2026-09-29.md`
 
 ## Completed major layers
 
@@ -53,6 +54,29 @@ Latest validated collection-solver milestone evidence:
 - 20 Wahapedia CSV hash watcher: active;
 - current upstream state: **NO_CHANGE**;
 - auto-promotion: **disabled by design**.
+
+
+### Guarded automated re-ingestion / reconciliation / promotion
+**CLOSED AT OPERATIONAL V1**
+- upstream watcher → deterministic reingestion planner: active;
+- candidate execution: isolated workspace + reviewable artifact;
+- Wahapedia candidate ingestion/reconciliation/roster-view/semantic stages: active;
+- BSData implementation candidate reconciliation/fallback rebuild: active;
+- Wahapedia Source.csv drift triggers official GW asset verification;
+- BSData MFM extraction drift is a blocking official-authority gate;
+- reviewed promotion requires exact workflow run ID + plan ID + explicit confirmation;
+- promotion applies only to a new branch and opens a PR;
+- post-apply upstream recheck: required;
+- New Recruit runtime revalidation: required;
+- semantic smoke + repository validation + unit tests: required;
+- `auto_promote=false` is invariant;
+- no real upstream revision was promoted during closure because watcher state is currently **NO_CHANGE**.
+
+Current-promotion consumers are pointer-aware:
+- semantic resolver follows current Wahapedia snapshot;
+- watcher follows current Wahapedia/registry baselines;
+- New Recruit validator follows current MFM/Wahapedia/BSData revisions;
+- repository validation distinguishes immutable bootstrap regression from mutable current projection.
 
 ### New Recruit runtime projection
 **CLOSED AS VALIDATION LAYER — LINEAGE HARDENED**
@@ -133,17 +157,17 @@ Closure report:
 
 ## Current active milestone
 
-`AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION`
+`RELEASE_TRANSITION_INGESTION_READINESS`
 
 High-level remaining work:
 
-1. automated re-ingestion/reconciliation/promotion when upstream watcher detects change;
-2. upcoming Space Marines/Custodes release-transition ingestion when legally current;
+1. prepare release-transition ingestion for the Space Marines ecosystem scheduled for 2026-10-03 without replacing current legal data early;
+2. preserve Adeptus Custodes preview/preorder material as upcoming-only until legally current, then route it through candidate → reconciliation → reviewed promotion;
 3. optional deeper normative/app equivalence where official/app access permits;
 4. extend collection-aware solver profiles when additional personal faction inventories are normalized.
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, or the Custodes collection solver v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, or guarded reingestion/promotion v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.

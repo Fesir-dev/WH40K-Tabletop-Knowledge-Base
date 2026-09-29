@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "status": "CHANGE_DETECTED",
+  "baseline_snapshot": "2026-09-29",
+  "github_sources": [
+    {
+      "source_id": "BSDATA_WH40K_11E",
+      "repository": "BSData/wh40k-11e",
+      "pinned": "old-bs",
+      "live": "old-bs",
+      "changed": false,
+      "files": []
+    },
+    {
+      "source_id": "BSDATA_MFM_11E",
+      "repository": "BSData/wh40k-11e-mfm",
+      "pinned": "old-mfm",
+      "live": "old-mfm",
+      "changed": false,
+      "files": []
+    }
+  ],
+  "wahapedia": {
+    "snapshot_last_update": "2026-09-28 02:38:04",
+    "live_last_update": "2026-09-29 10:00:00",
+    "manifest_files_checked": 20,
+    "changed_files": [
+      {
+        "file": "Datasheets.csv",
+        "snapshot_sha256": "a",
+        "live_sha256": "b"
+      }
+    ]
+  },
+  "change_summary": {
+    "github_sources_changed": [],
+    "wahapedia_files_changed": 1,
+    "wahapedia_last_update_changed": true
+  },
+  "policy": {
+    "auto_promote": false
+  }
+}

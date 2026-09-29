@@ -32,3 +32,9 @@ Schema evolution must be versioned and backwards-aware.
 - `faction_coverage.schema.json` — measured normalized current coverage by faction/dimension.
 - `ingestion_run.schema.json` — reproducible source-refresh/diff/promotion run record.
 - `mfm_faction_snapshot.schema.json` — normalized current MFM page with exact extraction provenance.
+
+Re-ingestion automation contracts:
+
+- `upstream_reingestion_plan.schema.json` — deterministic classification of detected source changes and required candidate stages.
+- `upstream_reingestion_candidate.schema.json` — isolated candidate execution result and promotion eligibility.
+- `upstream_reingestion_promotion.schema.json` — reviewed promotion metadata; `auto_promote=false` and `normative_mfm_changed=false` are invariant.

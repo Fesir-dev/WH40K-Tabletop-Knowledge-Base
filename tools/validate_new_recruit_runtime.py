@@ -14,7 +14,15 @@ from urllib.parse import quote, urljoin
 ROOT = Path(__file__).resolve().parents[1]
 SYSTEM_URL = "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40,000-11th-edition"
 UA = {"User-Agent": "WH40K-Tabletop-Knowledge-Base/1.0"}
-PINNED_BSDATA_COMMIT = "951d5900d1b4a952a4ba560a30c43788e622ccfc"
+CURRENT_RULES = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+SOURCE_REGISTRY = json.loads((ROOT / "sources" / "registry.json").read_text(encoding="utf-8"))
+MFM_ROOT = (ROOT / CURRENT_RULES["wave_a_mfm"]["snapshot"]).parent
+WAHAPEDIA_ROOT = (ROOT / CURRENT_RULES["wave_b_structural"]["snapshot"]).parent.parent
+PINNED_BSDATA_COMMIT = next(
+    x["observed_revision"]["commit_sha"]
+    for x in SOURCE_REGISTRY["sources"]
+    if x["id"] == "BSDATA_WH40K_11E"
+)
 BSDATA_REPO = "BSData/wh40k-11e"
 
 EXPECTED = {
@@ -163,7 +171,7 @@ def link_map(parser, base):
     return out
 
 def expected_mfm_points(mfm_slug, unit_name):
-    path = ROOT / "rules" / "11e" / "snapshots" / "2026-09-29" / "mfm" / "factions" / f"{mfm_slug}.json"
+    path = MFM_ROOT / "factions" / f"{mfm_slug}.json"
     data = json.loads(path.read_text(encoding="utf-8"))
     hits = [
         x for x in data.get("units", [])
@@ -205,7 +213,7 @@ def parse_cached(url):
     return result
 
 def wahapedia_datasheet(roster_slug, unit_name):
-    path = ROOT / "rules" / "11e" / "snapshots" / "2026-09-29" / "wahapedia" / "factions" / f"{roster_slug}.json"
+    path = WAHAPEDIA_ROOT / "factions" / f"{roster_slug}.json"
     if not path.exists():
         return None
     data = json.loads(path.read_text(encoding="utf-8"))
@@ -225,12 +233,12 @@ def wahapedia_points(roster_slug, unit_name):
     return min(vals) if vals else None
 
 def mfm_detachment_exists(mfm_slug, detachment_name):
-    path = ROOT / "rules" / "11e" / "snapshots" / "2026-09-29" / "mfm" / "factions" / f"{mfm_slug}.json"
+    path = MFM_ROOT / "factions" / f"{mfm_slug}.json"
     data = json.loads(path.read_text(encoding="utf-8"))
     return any(norm(x.get("name")) == norm(detachment_name) for x in data.get("detachments", []))
 
 def wahapedia_detachment_exists(roster_slug, detachment_name):
-    path = ROOT / "rules" / "11e" / "snapshots" / "2026-09-29" / "wahapedia" / "factions" / f"{roster_slug}.json"
+    path = WAHAPEDIA_ROOT / "factions" / f"{roster_slug}.json"
     if not path.exists():
         return None
     data = json.loads(path.read_text(encoding="utf-8"))
