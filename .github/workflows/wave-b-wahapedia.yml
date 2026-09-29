@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "tools/import_wahapedia_wave_b.py"
+      - "tools/crosscheck_wave_b.py"
       - ".github/workflows/wave-b-wahapedia.yml"
   workflow_dispatch:
 
@@ -24,6 +25,10 @@ jobs:
       - name: Download and normalize Wahapedia 11E CSV export
         run: |
           python tools/import_wahapedia_wave_b.py --download --snapshot-date 2026-09-29
+
+      - name: Reconcile Wahapedia against MFM and pinned BSData
+        run: |
+          python tools/crosscheck_wave_b.py --snapshot-date 2026-09-29 --fetch-bsdata
 
       - name: Validate generated JSON syntax
         run: |
@@ -48,7 +53,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add rules/11e/snapshots/2026-09-29/wahapedia ingestion/runs/2026-09-29_wahapedia_wave_b_structural.json
+          git add rules/11e/snapshots/2026-09-29/wahapedia ingestion/runs/2026-09-29_wahapedia_wave_b_structural.json reports/WAVE_B_RECONCILIATION_2026-09-29.json
           if git diff --cached --quiet; then
             echo "No generated changes"
           else
