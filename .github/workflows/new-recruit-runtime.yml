@@ -1,0 +1,51 @@
+name: New Recruit runtime validation
+
+on:
+  push:
+    paths:
+      - "tools/validate_new_recruit_runtime.py"
+      - ".github/workflows/new-recruit-runtime.yml"
+      - "factions/catalog.json"
+      - "rules/11e/snapshots/2026-09-29/mfm/**"
+  workflow_dispatch:
+  schedule:
+    - cron: "43 6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate New Recruit public runtime projection
+        id: runtime
+        shell: bash
+        run: |
+          set +e
+          python tools/validate_new_recruit_runtime.py
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Commit runtime validation report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json
+          if git diff --cached --quiet; then
+            echo "No runtime report changes"
+          else
+            git commit -m "Refresh New Recruit runtime validation"
+            git push
+          fi
+      - name: Fail on runtime projection drift
+        if: steps.runtime.outputs.code != '0'
+        run: |
+          echo "New Recruit runtime projection drift detected"
+          exit 2
