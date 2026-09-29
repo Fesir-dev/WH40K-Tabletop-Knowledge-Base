@@ -206,7 +206,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(automation["new_recruit_runtime"]["known_runtime_drifts"], 6)
         self.assertEqual(automation["new_recruit_runtime"]["new_runtime_drifts"], 0)
         self.assertEqual(automation["new_recruit_runtime"]["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "COLLECTION_AWARE_ROSTER_SOLVER")
+        self.assertEqual(self.current["next_milestone"], "AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION")
 
     def test_collection_aware_roster_solver(self):
         self.assertEqual(self.collection_solver["status"], "PASS")
@@ -227,6 +227,8 @@ class RepositoryContracts(unittest.TestCase):
         solver = self.custodes_current_collection["solver"]
         self.assertEqual(solver["state"], "OPERATIONAL_PROVISIONAL")
         self.assertEqual(solver["profile"], "collection/adeptus_custodes/solver_profile.json")
+        self.assertEqual(self.current["collection_aware_roster_solver"]["state"], "OPERATIONAL_V1_CUSTODES")
+        self.assertEqual(self.current["collection_aware_roster_solver"]["full_normative_legality"], "UNKNOWN_PENDING_NORMATIVE_APP")
         self.assertTrue((ROOT/"tools/solve_collection_roster.py").exists())
         self.assertTrue((ROOT/".github/workflows/collection-roster-solver.yml").exists())
 
