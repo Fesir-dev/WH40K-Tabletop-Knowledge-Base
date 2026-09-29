@@ -1,0 +1,26 @@
+{
+  "faction":{"name_en":"Adeptus Custodes","name_ru":"Адептус Кустодес"},
+  "source":{"interactive_version":"1.2","official_updated":"2026-07-22","checked_at":"2026-08-15","official_download_page":"https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/","interactive_root":"https://mfm.warhammer-community.com/en/","app_baseline_data_version":909,"app_baseline_released":"2026-07-22","secondary_structured_crosscheck":"https://www.40k.app/","secondary_rules_crosscheck":"https://wahapedia.ru/wh40k11ed/","authority_note":"Official Games Workshop sources are authoritative. Secondary sites are reconciliation/cross-check aids only.","scope":"current Detachment Points, Force Dispositions and enhancement costs for the eight user factions"},
+  "detachments":[
+    {"name_en":"Auric Champions","dp":2,"force_disposition":"Priority Assets","unique_tags":[]},
+    {"name_en":"Lions of the Emperor","dp":2,"force_disposition":"Disruption","unique_tags":["LIONS"]},
+    {"name_en":"Might of the Moritoi","dp":1,"force_disposition":"Take and Hold","unique_tags":["ARMOURY"]},
+    {"name_en":"Null Maiden Vigil","dp":2,"force_disposition":"Reconnaissance","unique_tags":[]},
+    {"name_en":"Shield Host","dp":2,"force_disposition":"Purge the Foe","unique_tags":[]},
+    {"name_en":"Silent Hunters","dp":1,"force_disposition":"Reconnaissance","unique_tags":[]},
+    {"name_en":"Solar Spearhead","dp":2,"force_disposition":"Take and Hold","unique_tags":["ARMOURY"]},
+    {"name_en":"Talons of the Emperor","dp":3,"force_disposition":"Take and Hold","unique_tags":[]},
+    {"name_en":"Tharanatoi Hammerblow","dp":1,"force_disposition":"Priority Assets","unique_tags":["LIONS"]}
+  ],
+  "enhancement_costs":{
+    "Auric Champions":{"Blade Imperator":25,"Inspirational Exemplar":10,"Martial Philosopher":30,"Veiled Blade":25},
+    "Lions of the Emperor":{"Admonimortis":30,"Fierce Conqueror":15,"Praesidius":25,"Superior Creation":25},
+    "Might of the Moritoi":{"Auramite Sarcophagus":15,"Interred Expertise":25},
+    "Null Maiden Vigil":{"Enhanced Voidsheen Cloak":10,"Huntress’ Eye":15,"Oblivion Knight":25,"Raptor Blade":5},
+    "Shield Host":{"Auric Mantle":15,"Castellan’s Mark":20,"From the Hall of Armouries":20,"Panoptispex":5},
+    "Silent Hunters":{"Encircling Hunter":15,"Psyk-out Grenades":10},
+    "Solar Spearhead":{"Adamantine Talisman":25,"Augury Uplink":35,"Honoured Fallen":15,"Veteran of the Kataphraktoi":10},
+    "Talons of the Emperor":{"Aegis Projector":20,"Champion of the Imperium":25,"Gift of Terran Artifice":15,"Radiant Mantle":30},
+    "Tharanatoi Hammerblow":{"Efficient Aggression":25,"Mnemo-locked Shrine Cipher":25}
+  }
+}
