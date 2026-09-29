@@ -16,6 +16,12 @@ SPACE_MARINE_CHILDREN={
     "space_wolves","ultramarines","white_scars",
 }
 UNAVAILABLE={"titanicus_traitoris","unaligned_forces"}
+NAME_ALIASES={
+    "vyper":"vypers",
+    "myphitic blight haulers":"myphitic blight hauler",
+    "ferren aerios":"ferren areios",
+    "sentry pylons":"sentry pylon",
+}
 
 def norm(v):
     v=unicodedata.normalize("NFKD",v or "")
@@ -72,7 +78,10 @@ def main():
 
         selected=[]; unresolved=[]
         for u in m_units:
-            candidates=wb.get(norm(u.get("name")),[])
+            key=norm(u.get("name"))
+            candidates=wb.get(key,[])
+            if not candidates and key in NAME_ALIASES:
+                candidates=wb.get(NAME_ALIASES[key],[])
             if not candidates:
                 unresolved.append(u.get("name"))
                 continue
