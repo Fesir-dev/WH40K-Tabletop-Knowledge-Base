@@ -488,6 +488,60 @@ try:
 except Exception as exc:
     errors.append(f"Wave B structural validation failure: {exc}")
 
+# 3g. BSData fallback and semantic resolver contracts.
+try:
+    fallback = json.loads(
+        (ROOT / "rules" / "11e" / "snapshots" / "2026-09-29" / "bsdata_fallback" / "index.json").read_text(encoding="utf-8")
+    )
+    if fallback.get("commit_sha") != "951d5900d1b4a952a4ba560a30c43788e622ccfc":
+        errors.append("BSData fallback commit drifted")
+    fallback_views = {x.get("slug"): x for x in fallback.get("views", [])}
+    if set(fallback_views) != {"titanicus_traitoris", "unaligned_forces"}:
+        errors.append("BSData fallback roster identity set drifted")
+    if fallback_views.get("titanicus_traitoris", {}).get("counts", {}).get("units") != 4:
+        errors.append("Titanicus Traitoris fallback must contain 4 units")
+    if fallback_views.get("unaligned_forces", {}).get("counts", {}).get("units") != 22:
+        errors.append("Unaligned Forces fallback must contain 22 implementation units")
+
+    cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+    gcov = cov.get("global", {})
+    if gcov.get("wave_b_current_mirror_structural_complete") != 35:
+        errors.append("Wave B current-mirror structural count must remain 35")
+    if gcov.get("wave_b_structured_implementation_fallback_complete") != 2:
+        errors.append("Wave B implementation fallback count must remain 2")
+    if gcov.get("wave_b_total_structural_source_available") != 37:
+        errors.append("Wave B total structural source availability must remain 37")
+    rows = {x.get("slug"): x for x in cov.get("factions", [])}
+    if sum(bool(x.get("structural_source_available")) for x in rows.values()) != 37:
+        errors.append("All 37 roster identities must have a structural source available")
+    for slug in {"titanicus_traitoris", "unaligned_forces"}:
+        row = rows.get(slug, {})
+        if row.get("structural_current") is not False:
+            errors.append(f"{slug} fallback must not be marked structural_current")
+        wb = row.get("wave_b_structural", {})
+        if wb.get("state") != "IMPLEMENTATION_FALLBACK_COMPLETE":
+            errors.append(f"{slug} fallback state drifted")
+        if wb.get("source_role") != "structured_implementation":
+            errors.append(f"{slug} fallback source role must remain structured_implementation")
+        if wb.get("normative_rules_verified") is not False:
+            errors.append(f"{slug} fallback must not claim normative rules verification")
+
+    current_rules = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    wb_current = current_rules.get("wave_b_structural", {})
+    if wb_current.get("total_structural_source_available") != 37:
+        errors.append("rules/11e/current.json structural source availability drifted")
+    if wb_current.get("implementation_fallback_roster_identities_complete") != 2:
+        errors.append("rules/11e/current.json fallback count drifted")
+
+    semantic_tool = ROOT / "tools" / "query_current_semantics.py"
+    semantic_workflow = ROOT / ".github" / "workflows" / "semantic-smoke.yml"
+    if not semantic_tool.exists():
+        errors.append("Missing hash-verified semantic resolver")
+    if not semantic_workflow.exists():
+        errors.append("Missing semantic resolver smoke workflow")
+except Exception as exc:
+    errors.append(f"BSData fallback / semantic resolver validation failure: {exc}")
+
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (
     ROOT
