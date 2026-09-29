@@ -27,6 +27,13 @@ class OfficialPublicSemanticFingerprintContracts(unittest.TestCase):
         self.assertTrue(all(x["expected_binary_sha256"] and len(x["expected_binary_sha256"])==64 for x in packs))
         self.assertTrue(all(x["source_scope"]=="PUBLIC_SUPPLEMENTAL_FACTION_PACK_NOT_FULL_CODEX" for x in packs))
 
+    def test_document_ids_urls_and_titles_are_unique(self):
+        docs=build_sources()
+        self.assertEqual(len({x["document_id"] for x in docs}),len(docs))
+        self.assertEqual(len({x["url"] for x in docs}),len(docs))
+        self.assertEqual(len({(x["document_type"],x["title"]) for x in docs}),len(docs))
+        self.assertTrue(all(x["url"].startswith("https://assets.warhammer-community.com/") for x in docs))
+
     def test_normalization_is_stable_and_removes_page_number_only_lines(self):
         raw="  DETACHMENT   RULES  \n12\nAlpha\u2011Beta\u00ad\n\n  one   two "
         self.assertEqual(normalize_text(raw),"DETACHMENT RULES\nAlpha-Beta\none two")
