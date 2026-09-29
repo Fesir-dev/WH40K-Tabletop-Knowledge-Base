@@ -8,7 +8,7 @@
   "mfm_version": "1.4",
   "mfm_view_mode": "base_plus_group",
   "mfm_group_title": "Ultramarines",
-  "status": "STRUCTURAL_PARTIAL",
+  "status": "STRUCTURAL_COMPLETE",
   "authority": {
     "points_and_costs": "GW_MFM",
     "rules_structure": "WAHAPEDIA_11E_CSV_SECONDARY_MIRROR",
@@ -569,6 +569,16 @@
       "datasheet_id": "000002704",
       "name": "Fellblade",
       "mfm_name": "Fellblade",
+      "legends": true,
+      "source_id": "000000356",
+      "source_name": "Space Marines (Warhammer Legends)",
+      "source_edition": "0",
+      "source_version": null
+    },
+    {
+      "datasheet_id": "000004204",
+      "name": "Ferren Areios",
+      "mfm_name": "Ferren Aerios",
       "legends": true,
       "source_id": "000000356",
       "source_name": "Space Marines (Warhammer Legends)",
@@ -1924,22 +1934,20 @@
     "000011114003",
     "000011114004"
   ],
-  "unresolved_mfm_units": [
-    "Ferren Aerios"
-  ],
+  "unresolved_mfm_units": [],
   "counts": {
-    "datasheets": 167,
+    "datasheets": 168,
     "mfm_units": 168,
-    "unresolved_mfm_units": 1,
+    "unresolved_mfm_units": 0,
     "current_edition_11_datasheets": 90,
-    "legends_datasheets": 75,
-    "model_profiles": 170,
-    "weapon_profiles": 1107,
-    "keyword_rows": 1159,
-    "datasheet_ability_rows": 661,
+    "legends_datasheets": 76,
+    "model_profiles": 171,
+    "weapon_profiles": 1109,
+    "keyword_rows": 1168,
+    "datasheet_ability_rows": 665,
     "option_rows": 302,
-    "unit_composition_rows": 218,
-    "leader_links": 402,
+    "unit_composition_rows": 219,
+    "leader_links": 425,
     "detachments": 23,
     "enhancements": 87,
     "stratagems": 122

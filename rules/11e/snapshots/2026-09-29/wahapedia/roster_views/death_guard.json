@@ -8,7 +8,7 @@
   "mfm_version": "1.4",
   "mfm_view_mode": "full_page",
   "mfm_group_title": null,
-  "status": "STRUCTURAL_PARTIAL",
+  "status": "STRUCTURAL_COMPLETE",
   "authority": {
     "points_and_costs": "GW_MFM",
     "rules_structure": "WAHAPEDIA_11E_CSV_SECONDARY_MIRROR",
@@ -306,6 +306,16 @@
       "source_version": "1.2"
     },
     {
+      "datasheet_id": "000001374",
+      "name": "Myphitic Blight-hauler",
+      "mfm_name": "Myphitic Blight-Haulers",
+      "legends": false,
+      "source_id": "000000014",
+      "source_name": "Death Guard",
+      "source_edition": "11",
+      "source_version": "1.2"
+    },
+    {
       "datasheet_id": "000001058",
       "name": "Noxious Blightbringer",
       "mfm_name": "Noxious Blightbringer",
@@ -506,21 +516,19 @@
     "000010124006",
     "000010124007"
   ],
-  "unresolved_mfm_units": [
-    "Myphitic Blight-Haulers"
-  ],
+  "unresolved_mfm_units": [],
   "counts": {
-    "datasheets": 40,
+    "datasheets": 41,
     "mfm_units": 41,
-    "unresolved_mfm_units": 1,
-    "current_edition_11_datasheets": 35,
+    "unresolved_mfm_units": 0,
+    "current_edition_11_datasheets": 36,
     "legends_datasheets": 5,
-    "model_profiles": 40,
-    "weapon_profiles": 172,
-    "keyword_rows": 321,
-    "datasheet_ability_rows": 176,
+    "model_profiles": 41,
+    "weapon_profiles": 177,
+    "keyword_rows": 329,
+    "datasheet_ability_rows": 179,
     "option_rows": 57,
-    "unit_composition_rows": 47,
+    "unit_composition_rows": 48,
     "leader_links": 22,
     "detachments": 9,
     "enhancements": 30,

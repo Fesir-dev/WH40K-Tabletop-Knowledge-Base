@@ -4,37 +4,35 @@
   "wahapedia_last_update": "2026-09-28 02:38:04",
   "counts": {
     "roster_identities": 37,
-    "structural_complete": 25,
-    "structural_partial": 10,
+    "structural_complete": 35,
+    "structural_partial": 0,
     "unavailable": 2
   },
   "views": [
     {
       "slug": "aeldari_craftworlds",
-      "status": "STRUCTURAL_PARTIAL",
+      "status": "STRUCTURAL_COMPLETE",
       "file": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/aeldari_craftworlds.json",
       "wahapedia_source_slug": "aeldari_craftworlds",
       "mfm_source_slug": "aeldari",
       "counts": {
-        "datasheets": 98,
+        "datasheets": 99,
         "mfm_units": 99,
-        "unresolved_mfm_units": 1,
-        "current_edition_11_datasheets": 73,
+        "unresolved_mfm_units": 0,
+        "current_edition_11_datasheets": 74,
         "legends_datasheets": 23,
-        "model_profiles": 110,
-        "weapon_profiles": 482,
-        "keyword_rows": 805,
-        "datasheet_ability_rows": 412,
-        "option_rows": 133,
-        "unit_composition_rows": 124,
+        "model_profiles": 111,
+        "weapon_profiles": 489,
+        "keyword_rows": 812,
+        "datasheet_ability_rows": 415,
+        "option_rows": 135,
+        "unit_composition_rows": 125,
         "leader_links": 61,
         "detachments": 15,
         "enhancements": 52,
         "stratagems": 78
       },
-      "unresolved_mfm_units": [
-        "Vyper"
-      ]
+      "unresolved_mfm_units": []
     },
     {
       "slug": "drukhari",
@@ -138,30 +136,28 @@
     },
     {
       "slug": "death_guard",
-      "status": "STRUCTURAL_PARTIAL",
+      "status": "STRUCTURAL_COMPLETE",
       "file": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/death_guard.json",
       "wahapedia_source_slug": "death_guard",
       "mfm_source_slug": "death-guard",
       "counts": {
-        "datasheets": 40,
+        "datasheets": 41,
         "mfm_units": 41,
-        "unresolved_mfm_units": 1,
-        "current_edition_11_datasheets": 35,
+        "unresolved_mfm_units": 0,
+        "current_edition_11_datasheets": 36,
         "legends_datasheets": 5,
-        "model_profiles": 40,
-        "weapon_profiles": 172,
-        "keyword_rows": 321,
-        "datasheet_ability_rows": 176,
+        "model_profiles": 41,
+        "weapon_profiles": 177,
+        "keyword_rows": 329,
+        "datasheet_ability_rows": 179,
         "option_rows": 57,
-        "unit_composition_rows": 47,
+        "unit_composition_rows": 48,
         "leader_links": 22,
         "detachments": 9,
         "enhancements": 30,
         "stratagems": 45
       },
-      "unresolved_mfm_units": [
-        "Myphitic Blight-Haulers"
-      ]
+      "unresolved_mfm_units": []
     },
     {
       "slug": "emperors_children",
@@ -545,30 +541,28 @@
     },
     {
       "slug": "imperial_fists",
-      "status": "STRUCTURAL_PARTIAL",
+      "status": "STRUCTURAL_COMPLETE",
       "file": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/imperial_fists.json",
       "wahapedia_source_slug": "space_marines",
       "mfm_source_slug": "space-marines",
       "counts": {
-        "datasheets": 162,
+        "datasheets": 163,
         "mfm_units": 163,
-        "unresolved_mfm_units": 1,
+        "unresolved_mfm_units": 0,
         "current_edition_11_datasheets": 85,
-        "legends_datasheets": 75,
-        "model_profiles": 164,
-        "weapon_profiles": 1082,
-        "keyword_rows": 1112,
-        "datasheet_ability_rows": 636,
+        "legends_datasheets": 76,
+        "model_profiles": 165,
+        "weapon_profiles": 1084,
+        "keyword_rows": 1121,
+        "datasheet_ability_rows": 640,
         "option_rows": 302,
-        "unit_composition_rows": 206,
-        "leader_links": 349,
+        "unit_composition_rows": 207,
+        "leader_links": 372,
         "detachments": 23,
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": [
-        "Ferren Aerios"
-      ]
+      "unresolved_mfm_units": []
     },
     {
       "slug": "imperial_knights",
@@ -597,111 +591,103 @@
     },
     {
       "slug": "iron_hands",
-      "status": "STRUCTURAL_PARTIAL",
+      "status": "STRUCTURAL_COMPLETE",
       "file": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/iron_hands.json",
       "wahapedia_source_slug": "space_marines",
       "mfm_source_slug": "space-marines",
       "counts": {
-        "datasheets": 161,
+        "datasheets": 162,
         "mfm_units": 162,
-        "unresolved_mfm_units": 1,
+        "unresolved_mfm_units": 0,
         "current_edition_11_datasheets": 84,
-        "legends_datasheets": 75,
-        "model_profiles": 163,
-        "weapon_profiles": 1084,
-        "keyword_rows": 1101,
-        "datasheet_ability_rows": 631,
+        "legends_datasheets": 76,
+        "model_profiles": 164,
+        "weapon_profiles": 1086,
+        "keyword_rows": 1110,
+        "datasheet_ability_rows": 635,
         "option_rows": 302,
-        "unit_composition_rows": 205,
-        "leader_links": 344,
+        "unit_composition_rows": 206,
+        "leader_links": 367,
         "detachments": 23,
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": [
-        "Ferren Aerios"
-      ]
+      "unresolved_mfm_units": []
     },
     {
       "slug": "raven_guard",
-      "status": "STRUCTURAL_PARTIAL",
+      "status": "STRUCTURAL_COMPLETE",
       "file": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/raven_guard.json",
       "wahapedia_source_slug": "space_marines",
       "mfm_source_slug": "space-marines",
       "counts": {
-        "datasheets": 161,
+        "datasheets": 162,
         "mfm_units": 162,
-        "unresolved_mfm_units": 1,
+        "unresolved_mfm_units": 0,
         "current_edition_11_datasheets": 84,
-        "legends_datasheets": 75,
-        "model_profiles": 163,
-        "weapon_profiles": 1081,
-        "keyword_rows": 1106,
-        "datasheet_ability_rows": 634,
+        "legends_datasheets": 76,
+        "model_profiles": 164,
+        "weapon_profiles": 1083,
+        "keyword_rows": 1115,
+        "datasheet_ability_rows": 638,
         "option_rows": 302,
-        "unit_composition_rows": 205,
-        "leader_links": 340,
+        "unit_composition_rows": 206,
+        "leader_links": 363,
         "detachments": 23,
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": [
-        "Ferren Aerios"
-      ]
+      "unresolved_mfm_units": []
     },
     {
       "slug": "salamanders",
-      "status": "STRUCTURAL_PARTIAL",
+      "status": "STRUCTURAL_COMPLETE",
       "file": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/salamanders.json",
       "wahapedia_source_slug": "space_marines",
       "mfm_source_slug": "space-marines",
       "counts": {
-        "datasheets": 161,
+        "datasheets": 162,
         "mfm_units": 162,
-        "unresolved_mfm_units": 1,
+        "unresolved_mfm_units": 0,
         "current_edition_11_datasheets": 84,
-        "legends_datasheets": 75,
-        "model_profiles": 163,
-        "weapon_profiles": 1082,
-        "keyword_rows": 1103,
-        "datasheet_ability_rows": 629,
+        "legends_datasheets": 76,
+        "model_profiles": 164,
+        "weapon_profiles": 1084,
+        "keyword_rows": 1112,
+        "datasheet_ability_rows": 633,
         "option_rows": 302,
-        "unit_composition_rows": 205,
-        "leader_links": 358,
+        "unit_composition_rows": 206,
+        "leader_links": 381,
         "detachments": 23,
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": [
-        "Ferren Aerios"
-      ]
+      "unresolved_mfm_units": []
     },
     {
       "slug": "space_marines",
-      "status": "STRUCTURAL_PARTIAL",
+      "status": "STRUCTURAL_COMPLETE",
       "file": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/space_marines.json",
       "wahapedia_source_slug": "space_marines",
       "mfm_source_slug": "space-marines",
       "counts": {
-        "datasheets": 178,
+        "datasheets": 179,
         "mfm_units": 179,
-        "unresolved_mfm_units": 1,
+        "unresolved_mfm_units": 0,
         "current_edition_11_datasheets": 101,
-        "legends_datasheets": 75,
-        "model_profiles": 181,
-        "weapon_profiles": 1134,
-        "keyword_rows": 1263,
-        "datasheet_ability_rows": 724,
+        "legends_datasheets": 76,
+        "model_profiles": 182,
+        "weapon_profiles": 1136,
+        "keyword_rows": 1272,
+        "datasheet_ability_rows": 728,
         "option_rows": 302,
-        "unit_composition_rows": 229,
-        "leader_links": 459,
+        "unit_composition_rows": 230,
+        "leader_links": 482,
         "detachments": 23,
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": [
-        "Ferren Aerios"
-      ]
+      "unresolved_mfm_units": []
     },
     {
       "slug": "space_wolves",
@@ -730,57 +716,53 @@
     },
     {
       "slug": "ultramarines",
-      "status": "STRUCTURAL_PARTIAL",
+      "status": "STRUCTURAL_COMPLETE",
       "file": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/ultramarines.json",
       "wahapedia_source_slug": "space_marines",
       "mfm_source_slug": "space-marines",
       "counts": {
-        "datasheets": 167,
+        "datasheets": 168,
         "mfm_units": 168,
-        "unresolved_mfm_units": 1,
+        "unresolved_mfm_units": 0,
         "current_edition_11_datasheets": 90,
-        "legends_datasheets": 75,
-        "model_profiles": 170,
-        "weapon_profiles": 1107,
-        "keyword_rows": 1159,
-        "datasheet_ability_rows": 661,
+        "legends_datasheets": 76,
+        "model_profiles": 171,
+        "weapon_profiles": 1109,
+        "keyword_rows": 1168,
+        "datasheet_ability_rows": 665,
         "option_rows": 302,
-        "unit_composition_rows": 218,
-        "leader_links": 402,
+        "unit_composition_rows": 219,
+        "leader_links": 425,
         "detachments": 23,
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": [
-        "Ferren Aerios"
-      ]
+      "unresolved_mfm_units": []
     },
     {
       "slug": "white_scars",
-      "status": "STRUCTURAL_PARTIAL",
+      "status": "STRUCTURAL_COMPLETE",
       "file": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/white_scars.json",
       "wahapedia_source_slug": "space_marines",
       "mfm_source_slug": "space-marines",
       "counts": {
-        "datasheets": 161,
+        "datasheets": 162,
         "mfm_units": 162,
-        "unresolved_mfm_units": 1,
+        "unresolved_mfm_units": 0,
         "current_edition_11_datasheets": 84,
-        "legends_datasheets": 75,
-        "model_profiles": 163,
-        "weapon_profiles": 1083,
-        "keyword_rows": 1102,
-        "datasheet_ability_rows": 628,
+        "legends_datasheets": 76,
+        "model_profiles": 164,
+        "weapon_profiles": 1085,
+        "keyword_rows": 1111,
+        "datasheet_ability_rows": 632,
         "option_rows": 302,
-        "unit_composition_rows": 205,
-        "leader_links": 351,
+        "unit_composition_rows": 206,
+        "leader_links": 374,
         "detachments": 23,
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": [
-        "Ferren Aerios"
-      ]
+      "unresolved_mfm_units": []
     },
     {
       "slug": "leagues_of_votann",
@@ -809,30 +791,28 @@
     },
     {
       "slug": "necrons",
-      "status": "STRUCTURAL_PARTIAL",
+      "status": "STRUCTURAL_COMPLETE",
       "file": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/necrons.json",
       "wahapedia_source_slug": "necrons",
       "mfm_source_slug": "necrons",
       "counts": {
-        "datasheets": 63,
+        "datasheets": 64,
         "mfm_units": 64,
-        "unresolved_mfm_units": 1,
+        "unresolved_mfm_units": 0,
         "current_edition_11_datasheets": 51,
-        "legends_datasheets": 11,
-        "model_profiles": 64,
-        "weapon_profiles": 169,
-        "keyword_rows": 326,
-        "datasheet_ability_rows": 267,
-        "option_rows": 38,
-        "unit_composition_rows": 64,
+        "legends_datasheets": 12,
+        "model_profiles": 65,
+        "weapon_profiles": 172,
+        "keyword_rows": 331,
+        "datasheet_ability_rows": 272,
+        "option_rows": 39,
+        "unit_composition_rows": 65,
         "leader_links": 41,
         "detachments": 12,
         "enhancements": 42,
         "stratagems": 63
       },
-      "unresolved_mfm_units": [
-        "Sentry Pylons"
-      ]
+      "unresolved_mfm_units": []
     },
     {
       "slug": "orks",
