@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-29",
+  "policy": {
+    "purpose": "Known runtime projection drifts are retained as evidence and monitored without making scheduled validation permanently red.",
+    "fail_rule": "Fail runtime validation only for new/unclassified drift, changed known-drift values, missing runtime identities, or runtime access failures.",
+    "resolve_rule": "If a known drift disappears, report it as RESOLVED_CANDIDATE and require registry review before deletion.",
+    "authority": "Known runtime drift never changes normative Games Workshop/MFM facts."
+  },
+  "active": [
+    {
+      "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
+      "parent_state": "RUNTIME_PROJECTION_DRIFT",
+      "classification": "KNOWN_RUNTIME_PROJECTION_DRIFT",
+      "roster_slug": "orks",
+      "unit": "Ghazghkull Thraka",
+      "normative": {
+        "source_id": "GW_MFM",
+        "mfm_version": "1.4",
+        "official_last_updated": "2026-09-02",
+        "points": 300,
+        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json"
+      },
+      "current_mirror_crosscheck": {
+        "source_id": "WAHAPEDIA_11E",
+        "points": 300,
+        "url": "https://wahapedia.ru/wh40k11ed/factions/orks/Ghazghkull-Thraka"
+      },
+      "runtime": {
+        "source_id": "NEW_RECRUIT_WIKI",
+        "observed_at": "2026-09-29",
+        "points": 235,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka"
+      },
+      "structured_upstream_evidence": {
+        "source_id": "BSDATA_WH40K_11E",
+        "repository": "BSData/wh40k-11e",
+        "pinned_head": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "evidence_commit": "5ca1013537f539995acdac2caafb93c879163f00",
+        "evidence_commit_date": "2026-09-05",
+        "evidence": "Orks.json patch changed Ghazghkull Thraka root pts from 235 to 175.",
+        "interpretation": "Runtime value 235 matches the pre-change BSData value and is evidence of a lagging/stale runtime projection relative to at least that known upstream mutation. This record does not assert the exact current BSData-head value unless independently extracted."
+      },
+      "resolution": "Use current MFM 300 as normative points. Keep New Recruit 235 only as runtime drift evidence.",
+      "state": "ACTIVE"
+    }
+  ]
+}
