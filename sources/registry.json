@@ -30,10 +30,30 @@
         "event_companion"
       ],
       "source_health": "PASS",
-      "repository_coverage_state": "NOT_INGESTED",
+      "repository_coverage_state": "PUBLIC_OFFICIAL_SEMANTIC_FINGERPRINTED_PARTIAL",
       "notes": [
-        "Downloads endpoint verified live on 2026-09-29. This does not imply all faction content has been normalized."
-      ]
+        "Downloads endpoint verified live on 2026-09-29. This does not imply all faction content has been normalized.",
+        "Official public 11E Core Rules plus 28 Faction Pack PDFs have copyright-safe semantic fingerprints; this is evidence/drift coverage, not full Codex/app normalization."
+      ],
+      "observed_revision": {
+        "official_public_semantic_fingerprints": {
+          "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
+          "observed_at": "2026-09-29",
+          "documents": 29,
+          "core_rules": 1,
+          "faction_packs": 28,
+          "pages": 1430,
+          "text_chars": 1915296,
+          "extraction_engine": "pypdf 5.9.0",
+          "normalization_version": "OFFICIAL_TEXT_NFKC_WS_V1"
+        },
+        "core_rules": {
+          "snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
+          "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+          "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+          "page_count": 88
+        }
+      }
     },
     {
       "id": "GW_MFM",
