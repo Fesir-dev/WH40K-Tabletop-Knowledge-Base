@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/collection_inventory.schema.json",
+  "title": "Physical Miniature Collection Inventory",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "inventory_id",
+    "status",
+    "physical_pools"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "inventory_id": {
+      "type": "string"
+    },
+    "faction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "checkpoint": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "CURRENT_VERIFIED",
+        "CURRENT_PENDING_RECHECK",
+        "HISTORICAL_VERIFIED",
+        "PROVISIONAL",
+        "UNKNOWN"
+      ]
+    },
+    "physical_pools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "pool_id",
+          "physical_bodies"
+        ],
+        "properties": {
+          "pool_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "physical_bodies": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "status": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "body_variants": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "component_pools": {
+      "type": "object"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "provenance": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}
