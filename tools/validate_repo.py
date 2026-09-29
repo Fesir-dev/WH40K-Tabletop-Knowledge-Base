@@ -213,8 +213,8 @@ try:
     catalog = json.loads((ROOT / "factions" / "catalog.json").read_text(encoding="utf-8"))
     catalog_slugs = {x.get("slug") for x in catalog.get("factions", [])}
 
-    if release.get("schema_version") != "1.1":
-        errors.append("release_state.json must be schema 1.1 for readiness v1")
+    if release.get("schema_version") != "1.2":
+        errors.append("release_state.json must be schema 1.2 with activation watch v1")
     transition_policy = release.get("transition_policy", {})
     if transition_policy.get("state") != "OPERATIONAL_READINESS_V1":
         errors.append("Release transition policy must be OPERATIONAL_READINESS_V1")
@@ -303,6 +303,51 @@ try:
         errors.append("Release-transition readiness workflow must remain repository read-only")
     if "release-transition auto-promotion: DISABLED" not in readiness_workflow:
         errors.append("Release-transition readiness workflow lost explicit no-auto-promotion assertion")
+    activation_report = json.loads(
+        (ROOT / "reports" / "RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json").read_text(encoding="utf-8")
+    )
+    activation_cfg = release.get("activation_watch", {})
+    if activation_cfg.get("state") != "OPERATIONAL_V1":
+        errors.append("Release transition activation watch must be OPERATIONAL_V1")
+    if activation_cfg.get("current_status") != "NO_ACTION_REQUIRED":
+        errors.append("Release transition activation watch checkpoint status drifted")
+    if activation_cfg.get("auto_promote") is not False:
+        errors.append("Release transition activation watch must keep auto_promote=false")
+    if activation_cfg.get("direct_current_rules_mutation") is not False:
+        errors.append("Release transition activation watch must remain read-only")
+    if activation_cfg.get("cadence") != "every 6 hours":
+        errors.append("Release transition activation watch cadence drifted")
+    if activation_cfg.get("report") != "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json":
+        errors.append("Release transition activation watch report pointer drifted")
+
+    if activation_report.get("status") != "NO_ACTION_REQUIRED":
+        errors.append("Committed activation watch checkpoint must be NO_ACTION_REQUIRED")
+    if activation_report.get("as_of") != "2026-09-29":
+        errors.append("Committed activation watch checkpoint must remain 2026-09-29")
+    if activation_report.get("summary", {}).get("transition_count") != 2:
+        errors.append("Activation watch must track exactly two pending transitions")
+    if activation_report.get("summary", {}).get("no_action") != 2:
+        errors.append("Activation watch checkpoint should have two NO_ACTION transitions")
+    if any(x.get("promotion_eligible") is not False for x in activation_report.get("transitions", [])):
+        errors.append("Activation watch must never mark direct promotion eligibility")
+    safety = activation_report.get("safety", {})
+    if safety.get("auto_promote") is not False or safety.get("direct_current_rules_mutation") is not False:
+        errors.append("Activation watch safety contract drifted")
+
+    activation_workflow = ROOT / ".github" / "workflows" / "release-transition-activation-watch.yml"
+    activation_tool = ROOT / "tools" / "watch_release_transition_activation.py"
+    activation_test = ROOT / "tests" / "test_release_transition_activation_watch.py"
+    for path in [activation_workflow, activation_tool, activation_test]:
+        if not path.exists():
+            errors.append(f"Missing release activation watch artifact: {path.relative_to(ROOT)}")
+    if activation_workflow.exists():
+        activation_text = activation_workflow.read_text(encoding="utf-8")
+        if "contents: read" not in activation_text:
+            errors.append("Activation watch workflow must remain repository read-only")
+        if "contents: write" in activation_text or "pull-requests: write" in activation_text:
+            errors.append("Activation watch workflow acquired mutation permissions")
+        if "23 */6 * * *" not in activation_text:
+            errors.append("Activation watch workflow cadence no longer matches six-hour schedule")
 except Exception as exc:
     errors.append(f"Release-transition readiness validation failure: {exc}")
 
@@ -830,6 +875,15 @@ try:
         errors.append("Current Space Marines transition state drifted")
     if tracked.get("ADEPTUS_CUSTODES_CODEX_2026", {}).get("state") != "UPCOMING_HOLD_NO_RELEASE_DATE":
         errors.append("Current Custodes transition state drifted")
+    activation_layer = current_rules.get("release_transition_activation_watch", {})
+    if activation_layer.get("state") != "OPERATIONAL_V1":
+        errors.append("Current rules must record release activation watch v1 as operational")
+    if activation_layer.get("checkpoint_status") != "NO_ACTION_REQUIRED":
+        errors.append("Current release activation checkpoint status drifted")
+    if activation_layer.get("safety", {}).get("auto_promote") is not False:
+        errors.append("Current release activation watch must keep auto_promote=false")
+    if activation_layer.get("safety", {}).get("direct_current_rules_mutation") is not False:
+        errors.append("Current release activation watch must remain read-only")
 except Exception as exc:
     errors.append(f"Automated upstream/runtime monitoring validation failure: {exc}")
 
