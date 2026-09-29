@@ -200,6 +200,11 @@ def main() -> int:
     for r in sources:
         source_rows.append(clean_row(r, keep=("id","name","type","edition","version","errata_date","errata_link")))
 
+    ability_catalog = [
+        clean_row(r, prose_hash_fields=("description","legend"), keep=("id","name","faction_id"))
+        for r in tables["Abilities.csv"]
+    ]
+
     faction_index = []
     totals = defaultdict(int)
     for fid, faction in sorted(faction_by_id.items(), key=lambda kv: kv[1].get("name","")):
@@ -364,6 +369,7 @@ def main() -> int:
     }
     (snap_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (snap_dir / "source_catalog.json").write_text(json.dumps(source_rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (snap_dir / "ability_catalog.json").write_text(json.dumps(ability_catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     report = {
         "schema_version": "1.0",
