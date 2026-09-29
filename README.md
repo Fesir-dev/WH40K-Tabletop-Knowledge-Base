@@ -69,8 +69,9 @@ legacy/                  Metadata for superseded project baselines
 - [x] Complete Wave B operational semantic/FAQ currentness: 16,506/16,506 mirror fingerprints match live data; 28/28 official faction-pack PDF assets verified; normative text equivalence remains explicitly unclaimed.
 - [x] Add automated upstream revision/hash change watcher for BSData, MFM extraction and all 20 Wahapedia CSV snapshot files; changes stop the baseline and require re-ingestion/reconciliation.
 - [x] Add drift-aware New Recruit runtime validation for all 37 roster identities, five-source mismatch lineage, representative point archetypes and selected structural runtime surfaces.
-- [ ] Build automated re-ingestion/reconciliation/promotion after a detected upstream change.
+- [x] Build guarded automated re-ingestion/reconciliation plus explicit reviewed promotion PR flow after a detected upstream change; auto-promotion remains disabled.
 - [x] Add collection-aware roster legality/physical-feasibility solver v1 for Adeptus Custodes, with shared-body allocation, build/conversion states, component limits and fail-closed unknowns.
+- [ ] Build release-transition ingestion readiness for pending Space Marines and Adeptus Custodes releases without promoting preview material early.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary
