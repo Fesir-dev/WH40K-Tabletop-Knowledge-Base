@@ -241,6 +241,13 @@
       "upstream_projection_change_required": true,
       "route": "GUARDED_REINGESTION_CANDIDATE_REVIEWED_PROMOTION",
       "auto_promote": false
+    },
+    "closure_report": "reports/RELEASE_TRANSITION_READINESS_CLOSURE_2026-09-29.md",
+    "latest_validation": {
+      "head": "22814f3bcc6a5f45cdb0746ffeb7c2dcc6a35eab",
+      "readiness_workflow_run": 36609106222,
+      "repository_ci_run": 36609106327,
+      "result": "SUCCESS"
     }
   }
 }
