@@ -72,7 +72,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Build guarded automated re-ingestion/reconciliation plus explicit reviewed promotion PR flow after a detected upstream change; auto-promotion remains disabled.
 - [x] Add collection-aware roster legality/physical-feasibility solver v1 for Adeptus Custodes, with shared-body allocation, build/conversion states, component limits and fail-closed unknowns.
 - [x] Build release-transition ingestion readiness v1 for pending Space Marines and Adeptus Custodes releases with fail-closed date/evidence gates and no direct promotion.
-- [ ] Watch release activation evidence and route newly current rules through guarded re-ingestion once official current-legality plus upstream projection changes are present.
+- [x] Add read-only six-hour release activation watch with fail-closed action states and guarded-candidate readiness only after official currentness plus upstream projection drift.
+- [ ] Audit the remaining normative/app equivalence gaps that keep `current_normalized_factions = 0`, without weakening GW authority.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary

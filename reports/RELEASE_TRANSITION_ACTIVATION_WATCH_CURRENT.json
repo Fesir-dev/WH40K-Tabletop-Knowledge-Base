@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "status": "NO_ACTION_REQUIRED",
+  "as_of": "2026-09-29",
+  "readiness_milestone": "RELEASE_TRANSITION_INGESTION_READINESS",
+  "watch_status": "NO_CHANGE",
+  "transitions": [
+    {
+      "transition_id": "ADEPTUS_CUSTODES_CODEX_2026",
+      "title": "Codex: Adeptus Custodes 2026 release transition",
+      "readiness_state": "UPCOMING_HOLD_NO_RELEASE_DATE",
+      "watch_state": "NO_ACTION",
+      "next_action": "WAIT_OFFICIAL_RELEASE_SIGNAL",
+      "scheduled_release_date": null,
+      "current_legal_confirmed": false,
+      "upstream_changed": false,
+      "candidate_eligible": false,
+      "promotion_eligible": false
+    },
+    {
+      "transition_id": "SPACE_MARINES_CODEX_2026",
+      "title": "Codex: Space Marines 2026 release transition",
+      "readiness_state": "PRE_RELEASE_HOLD",
+      "watch_state": "NO_ACTION",
+      "next_action": "WAIT_PRE_RELEASE",
+      "scheduled_release_date": "2026-10-03",
+      "current_legal_confirmed": false,
+      "upstream_changed": false,
+      "candidate_eligible": false,
+      "promotion_eligible": false
+    }
+  ],
+  "summary": {
+    "transition_count": 2,
+    "no_action": 2,
+    "action_required": 0,
+    "monitoring": 0,
+    "ready_for_candidate": 0
+  },
+  "safety": {
+    "auto_promote": false,
+    "direct_current_rules_mutation": false,
+    "candidate_generation_only_when_ready": true,
+    "promotion_requires_existing_reviewed_promotion_flow": true
+  }
+}

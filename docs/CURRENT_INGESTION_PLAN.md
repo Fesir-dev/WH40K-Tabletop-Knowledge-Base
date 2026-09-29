@@ -123,3 +123,20 @@ Active milestone:
 
 `RELEASE_TRANSITION_ACTIVATION_WATCH`
 
+## Release-transition activation watch v1 — COMPLETE
+
+The release-transition layer now runs a read-only six-hour watch.
+
+Checkpoint 2026-09-29:
+
+- Space Marines: `NO_ACTION → WAIT_PRE_RELEASE`;
+- Adeptus Custodes: `NO_ACTION → WAIT_OFFICIAL_RELEASE_SIGNAL`;
+- global status: `NO_ACTION_REQUIRED`;
+- direct promotion eligibility: always false.
+
+Future transitions are surfaced as `ACTION_REQUIRED`, `MONITORING_UPSTREAM_PROJECTION`, or `READY_FOR_GUARDED_CANDIDATE`. Even the candidate-ready state only authorizes the existing isolated candidate path; reviewed promotion remains separate.
+
+The release watch remains operational while development proceeds to:
+
+`NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT`
+

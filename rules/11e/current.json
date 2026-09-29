@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.9",
+  "schema_version": "3.1",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -42,7 +42,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "RELEASE_TRANSITION_ACTIVATION_WATCH",
+  "next_milestone": "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -250,5 +250,40 @@
       "result": "SUCCESS"
     },
     "merged_commit": "67e5493486de247be2646c555c9dbd16c90542dc"
+  },
+  "release_transition_activation_watch": {
+    "state": "OPERATIONAL_V1",
+    "report": "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json",
+    "tool": "tools/watch_release_transition_activation.py",
+    "workflow": ".github/workflows/release-transition-activation-watch.yml",
+    "cadence": "every 6 hours",
+    "checkpoint_as_of": "2026-09-29",
+    "checkpoint_status": "NO_ACTION_REQUIRED",
+    "tracked_transitions": [
+      {
+        "id": "SPACE_MARINES_CODEX_2026",
+        "watch_state": "NO_ACTION",
+        "next_action": "WAIT_PRE_RELEASE"
+      },
+      {
+        "id": "ADEPTUS_CUSTODES_CODEX_2026",
+        "watch_state": "NO_ACTION",
+        "next_action": "WAIT_OFFICIAL_RELEASE_SIGNAL"
+      }
+    ],
+    "safety": {
+      "auto_promote": false,
+      "direct_current_rules_mutation": false,
+      "candidate_generation_only_when_ready": true,
+      "promotion_requires_reviewed_flow": true
+    },
+    "closure_report": "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CLOSURE_2026-09-29.md",
+    "latest_validation": {
+      "head": "cdcb3e2e66635520c8670d60f8e762840e087d8c",
+      "activation_watch_run": 36609958145,
+      "readiness_run": 36609957868,
+      "repository_ci_run": 36609957783,
+      "result": "SUCCESS"
+    }
   }
 }
