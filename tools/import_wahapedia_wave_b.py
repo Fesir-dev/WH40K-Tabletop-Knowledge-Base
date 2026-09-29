@@ -5,6 +5,7 @@ import argparse
 import csv
 import hashlib
 import json
+import io
 import re
 import time
 import urllib.request
@@ -95,7 +96,7 @@ def fetch(url: str, dest: Path) -> None:
 
 def load_csv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
     text = path.read_text(encoding="utf-8-sig")
-    reader = csv.DictReader(text.splitlines(), delimiter="|")
+    reader = csv.DictReader(io.StringIO(text), delimiter="|")
     original_headers = [h for h in (reader.fieldnames or []) if h]
     headers = [h.strip().lower() for h in original_headers]
     rows = []
