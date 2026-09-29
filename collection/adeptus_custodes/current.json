@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "inventory_id": "adeptus_custodes_personal",
+  "checkpoint": "2026-07-11",
+  "repository_registered_at": "2026-09-29",
+  "status": "PROVISIONAL",
+  "canonical_source": "legacy/v0_5_provisional/collection_adeptus_custodes_v0_5_provisional.json",
+  "confirmed_totals": {
+    "physical_models_including_shared_agents": 75,
+    "custodes_and_sisters_excluding_shared_agents": 70,
+    "shared_imperial_agents": 5
+  },
+  "unresolved": [
+    "WARDEN_EXTRA_SHOULDER_PADS"
+  ],
+  "notes": [
+    "This pointer intentionally does not duplicate historical roster point values as current collection authority.",
+    "Re-audit physical state before promoting to CURRENT_VERIFIED."
+  ]
+}
