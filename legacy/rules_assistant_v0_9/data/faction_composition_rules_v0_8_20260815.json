@@ -1,0 +1,88 @@
+{
+  "schema": "w40k11.faction_composition_rules.v0.8",
+  "as_of": "2026-08-15",
+  "rules": [
+    {
+      "id": "thousand_sons.scintillating_legions",
+      "army_faction": "thousand_sons",
+      "detachment_required": null,
+      "kind": "ally_keyword_cap",
+      "required_all": ["SCINTILLATING LEGIONS"],
+      "point_caps": {"incursion": 500, "strike_force": 1000, "onslaught": 1500},
+      "allied_warlord_forbidden": true,
+      "source_url": "https://wahapedia.ru/wh40k11ed/factions/thousand-sons/",
+      "status": "CURRENT_EXACT"
+    },
+    {
+      "id": "genestealer_cults.final_day_star_children",
+      "army_faction": "genestealer_cults",
+      "detachment_required": "Final Day",
+      "kind": "ally_keyword_cap",
+      "required_all": ["TYRANIDS", "VANGUARD INVADER"],
+      "excluded": ["AIRCRAFT", "BROODLORD", "GENESTEALERS"],
+      "point_caps": {"incursion": 500, "strike_force": 1000, "onslaught": 1500},
+      "allied_warlord_forbidden": true,
+      "source_url": "https://wahapedia.ru/wh40k11ed/factions/genestealer-cults/",
+      "status": "CURRENT_EXACT"
+    },
+    {
+      "id": "imperial_knights.questor_forgepact_mechanicus_allies",
+      "army_faction": "imperial_knights",
+      "detachment_required": "Questor Forgepact",
+      "kind": "ally_unit_name_cap",
+      "allowed_source_faction": "adeptus_mechanicus",
+      "allowed_units": ["Tech-Priest Dominus","Tech-Priest Manipulus","Skitarii Marshal","Skitarii Rangers","Skitarii Vanguard"],
+      "point_cap": 500,
+      "source_url": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Tech-priest-Manipulus",
+      "status": "CURRENT_EXACT"
+    },
+    {
+      "id": "chaos_space_marines.renegade_warband_no_cults",
+      "army_faction": "chaos_space_marines",
+      "detachment_required": "Renegade Warband",
+      "kind": "boolean_forbid",
+      "roster_flag": "uses_cults_of_dark_gods",
+      "forbidden_value": true,
+      "source_url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/",
+      "status": "CURRENT_EXACT"
+    },
+    {
+      "id": "adeptus_custodes.solar_spearhead_moritoi_ancients",
+      "army_faction": "adeptus_custodes",
+      "detachment_required": "Solar Spearhead",
+      "kind": "keyword_grant_selection",
+      "selection_field": "moritoi_ancients_unit_ids",
+      "max_selected": 2,
+      "required_all": ["ADEPTUS CUSTODES","WALKER"],
+      "grant": ["CHARACTER"],
+      "warlord_allowed": true,
+      "source_url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/",
+      "status": "CURRENT_EXACT"
+    },
+    {
+      "id": "chaos_space_marines.pactbound_marks",
+      "army_faction": "chaos_space_marines",
+      "detachment_required": "Pactbound Zealots",
+      "kind": "marks_of_chaos",
+      "allowed_marks": ["KHORNE","TZEENTCH","NURGLE","SLAANESH","CHAOS UNDIVIDED"],
+      "non_epic_heretic_astartes_requires_mark": true,
+      "khorne_forbidden_for_psyker": true,
+      "attached_units_must_share_mark": true,
+      "transport_and_passengers_must_share_mark": true,
+      "source_url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/",
+      "status": "CURRENT_EXACT"
+    },
+    {
+      "id": "world_eaters.blood_legions",
+      "army_faction": "world_eaters",
+      "detachment_required": null,
+      "kind": "ally_keyword_cap",
+      "required_all": ["BLOOD LEGIONS"],
+      "point_caps": {"incursion": 500, "strike_force": 1000, "onslaught": 1500},
+      "allied_warlord_forbidden": true,
+      "source_url": "https://wahapedia.ru/wh40k11ed/factions/world-eaters/",
+      "status": "CURRENT_EXACT"
+    }
+  ],
+  "coverage_note": "This is an additive executable subset. Unnormalized detachment composition clauses remain UNKNOWN rather than inferred."
+}
