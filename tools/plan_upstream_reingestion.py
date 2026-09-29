@@ -46,6 +46,25 @@ STAGE_DEFS = {
     },
 }
 
+def bsdata_affected_rosters(bs: dict) -> list[str]:
+    files = [x.get("filename") for x in bs.get("files", []) if x.get("filename")]
+    if not files:
+        return []
+    catalog = json.loads((ROOT / "factions" / "catalog.json").read_text(encoding="utf-8"))
+    by_path = {x.get("bsdata_path"): x.get("slug") for x in catalog.get("factions", []) if x.get("bsdata_path")}
+    all_slugs = sorted(x.get("slug") for x in catalog.get("factions", []) if x.get("slug"))
+    affected = set()
+    for path in files:
+        if path in by_path:
+            affected.add(by_path[path])
+            continue
+        # Shared libraries can affect many catalogues. Unknown data JSON is also
+        # treated conservatively rather than guessed.
+        if path.startswith("Library") or path.endswith(".json"):
+            return all_slugs
+    return sorted(affected)
+
+
 def stable_fingerprint(payload: dict) -> str:
     body = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(body).hexdigest()
@@ -130,6 +149,7 @@ def build_plan(watch: dict, candidate_snapshot_date: str) -> dict:
             "pinned": bs.get("pinned"),
             "candidate": bs.get("live"),
             "changed": bs_changed,
+            "changed_files_detail": bs.get("files", []),
         },
         "bsdata_mfm_11e": {
             "pinned": mfm.get("pinned"),
@@ -146,6 +166,10 @@ def build_plan(watch: dict, candidate_snapshot_date: str) -> dict:
         "candidate_snapshot_date": candidate_snapshot_date,
         "changed_sources": changed_sources,
         "candidate_revisions": candidate_revisions,
+        "source_affected_roster_identities": {
+            "bsdata_wh40k_11e": bsdata_affected_rosters(bs) if bs_changed else [],
+            "wahapedia_11e": [],
+        },
         "stages": stages,
         "blockers": blockers,
         "promotion": {
