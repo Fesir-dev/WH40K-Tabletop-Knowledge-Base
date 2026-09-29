@@ -400,8 +400,8 @@ try:
 
     gaps = {x.get("id"): x for x in audit.get("gaps", [])}
     expected_states = {
-        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE",
-        "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCES",
+        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING",
+        "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_EXTRACTION_PENDING",
         "FULL_FACTION_CODEX_APP_SEMANTICS": "BLOCKED_OR_CONDITIONAL_ON_AUTHORIZED_CODEX_APP_EVIDENCE",
         "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PARTIALLY_CLOSABLE_PUBLIC_OVERLAP_ONLY",
         "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK": "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE",
@@ -421,8 +421,10 @@ try:
     if public_rules.get("policy", {}).get("no_full_faction_equivalence_from_faction_packs_alone") is not True:
         errors.append("Public-rules discovery lost faction-pack scope boundary")
 
-    if audit.get("conclusion", {}).get("recommended_next_milestone") != "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE":
+    if audit.get("conclusion", {}).get("recommended_next_milestone") != "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT":
         errors.append("Normative gap audit recommended next milestone drifted")
+    if audit.get("official_public_surface", {}).get("official_public_semantic_fingerprints") != "PASS":
+        errors.append("Normative gap audit must record official public fingerprint evidence as PASS")
 
     for required in [
         ROOT / "tools" / "audit_normative_equivalence_gaps.py",
