@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "profile_id": "new_recruit_bsdata_11e",
   "as_of": "2026-09-29",
   "status": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
@@ -31,20 +31,70 @@
       "state": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
       "roster_identities_resolved": 37,
       "point_samples": {
-        "checks": 10,
-        "matched": 9,
+        "checks": 15,
+        "matched": 10,
+        "known_drifts": 5,
+        "new_drifts": 0
+      },
+      "known_drift_registry": "sources/runtime_drift_registry.json",
+      "surface_samples": {
+        "checks": 5,
+        "matched": 4,
         "known_drifts": 1,
         "new_drifts": 0
       },
-      "known_drift_registry": "sources/runtime_drift_registry.json"
+      "known_runtime_drifts": 6,
+      "classification_contract": [
+        "NORMATIVE_MATCH",
+        "IMPLEMENTATION_DRIFT",
+        "RUNTIME_PROJECTION_DRIFT",
+        "UPSTREAM_REVISION_DRIFT",
+        "UNKNOWN_RUNTIME_DRIFT"
+      ],
+      "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
     },
     "known_drifts": [
       {
         "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
-        "summary": "Ghazghkull Thraka: MFM/Wahapedia 300 pts vs New Recruit runtime 235 pts.",
-        "classification": "KNOWN_RUNTIME_PROJECTION_DRIFT",
-        "normative_resolution": "Use MFM 300 pts.",
-        "monitoring": "Daily; exact known drift does not fail the workflow, but changed/new drift does."
+        "summary": "Ghazghkull Thraka: MFM/Wahapedia/pinned BSData/live BSData 300 pts vs New Recruit 235 pts.",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "normative_resolution": "Do not change normative KB data.",
+        "monitoring": "Daily; exact registered drift is reported, while new/changed drift fails validation."
+      },
+      {
+        "id": "NR_ORKS_BOYZ_POINTS_2026_09_29",
+        "summary": "Boyz: normative/current upstream 90 pts vs New Recruit 75 pts.",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "normative_resolution": "Do not change normative KB data.",
+        "monitoring": "Daily; exact registered drift is reported, while new/changed drift fails validation."
+      },
+      {
+        "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
+        "summary": "Battlewagon: normative/current upstream 150 pts vs New Recruit 145 pts.",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "normative_resolution": "Do not change normative KB data.",
+        "monitoring": "Daily; exact registered drift is reported, while new/changed drift fails validation."
+      },
+      {
+        "id": "NR_ORKS_WARBOSS_POINTS_2026_09_29",
+        "summary": "Warboss: normative/current upstream 100 pts vs New Recruit 85 pts.",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "normative_resolution": "Do not change normative KB data.",
+        "monitoring": "Daily; exact registered drift is reported, while new/changed drift fails validation."
+      },
+      {
+        "id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29",
+        "summary": "Necron Warriors: normative/current upstream 85 pts vs New Recruit 80 pts.",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "normative_resolution": "Do not change normative KB data.",
+        "monitoring": "Daily; exact registered drift is reported, while new/changed drift fails validation."
+      },
+      {
+        "id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29",
+        "summary": "Shoota Boyz detachment exists in current MFM/Wahapedia/pinned+live BSData but is absent from the sampled New Recruit Orks detachment selector.",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "normative_resolution": "Do not change normative KB data.",
+        "monitoring": "Daily; exact registered drift is reported, while new/changed drift fails validation."
       }
     ]
   },
