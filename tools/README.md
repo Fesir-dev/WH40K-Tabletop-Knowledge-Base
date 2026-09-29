@@ -47,3 +47,28 @@ Exit codes from `solve_collection_roster.py`:
 - `4` — physical feasibility is unknown because a required component constraint is unresolved.
 
 The solver never upgrades runtime/BSData facts into normative rules and never upgrades a provisional personal collection snapshot into current verified inventory.
+
+## Guarded upstream refresh
+
+Planner / candidate:
+
+```bash
+python tools/plan_upstream_reingestion.py \
+  --candidate-snapshot-date candidate-YYYY-MM-DD-runid \
+  --output .cache/reingestion-plan.json
+
+python tools/run_upstream_reingestion_candidate.py \
+  --plan .cache/reingestion-plan.json \
+  --workspace .cache/reingestion-workspace \
+  --artifact-dir .cache/reingestion-artifact
+```
+
+Reviewed promotion dry-run:
+
+```bash
+python tools/apply_reingestion_promotion.py \
+  --artifact-dir .cache/reingestion-artifact \
+  --promoted-at YYYY-MM-DD
+```
+
+Actual promotion is intended to run through the reviewed GitHub Actions workflow, which applies to a new branch and opens a PR. `apply_reingestion_promotion.py` refuses MFM-derived changes, mismatched fingerprints, unresolved blockers, failed candidates, or `auto_promote=true`.
