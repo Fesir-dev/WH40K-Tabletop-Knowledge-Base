@@ -1,0 +1,102 @@
+name: Release transition readiness
+
+on:
+  push:
+    paths:
+      - "sources/release_state.json"
+      - "tools/release_transition_gate.py"
+      - "tools/evaluate_release_transition_readiness.py"
+      - "tools/apply_reingestion_promotion.py"
+      - "tools/run_upstream_reingestion_candidate.py"
+      - "tools/plan_upstream_reingestion.py"
+      - "reports/RELEASE_TRANSITION_READINESS_CURRENT.json"
+      - "tests/test_release_transition_gate.py"
+      - "tests/test_reingestion_promotion.py"
+      - ".github/workflows/release-transition-readiness.yml"
+  pull_request:
+    paths:
+      - "sources/release_state.json"
+      - "tools/release_transition_gate.py"
+      - "tools/evaluate_release_transition_readiness.py"
+      - "tools/apply_reingestion_promotion.py"
+      - "tools/run_upstream_reingestion_candidate.py"
+      - "tools/plan_upstream_reingestion.py"
+      - "reports/RELEASE_TRANSITION_READINESS_CURRENT.json"
+      - "tests/test_release_transition_gate.py"
+      - "tests/test_reingestion_promotion.py"
+      - ".github/workflows/release-transition-readiness.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "41 5 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile transition tooling
+        run: python -m compileall -q tools/release_transition_gate.py tools/evaluate_release_transition_readiness.py tools/apply_reingestion_promotion.py tests/test_release_transition_gate.py tests/test_reingestion_promotion.py
+
+      - name: Run release transition regression tests
+        run: python -m unittest tests.test_release_transition_gate tests.test_reingestion_promotion -v
+
+      - name: Verify committed checkpoint report
+        run: |
+          python tools/evaluate_release_transition_readiness.py \
+            --as-of 2026-09-29 \
+            --output .cache/release-transition-checkpoint.json
+          diff -u reports/RELEASE_TRANSITION_READINESS_CURRENT.json .cache/release-transition-checkpoint.json
+
+      - name: Verify release date is recheck only
+        run: |
+          set +e
+          python tools/evaluate_release_transition_readiness.py \
+            --as-of 2026-10-03 \
+            --fail-on-official-recheck \
+            --output .cache/release-transition-oct3.json
+          code=$?
+          set -e
+          test "$code" = "2"
+          python - <<'PY'
+          import json
+          d=json.load(open('.cache/release-transition-oct3.json',encoding='utf-8'))
+          rows={x['transition_id']:x for x in d['transitions']}
+          assert rows['SPACE_MARINES_CODEX_2026']['state']=='OFFICIAL_RECHECK_REQUIRED'
+          assert rows['SPACE_MARINES_CODEX_2026']['candidate_authorization'] is False
+          assert 'space_marines' in d['blocked_factions']
+          print('release-date authority boundary: PASS')
+          PY
+
+      - name: Evaluate live date
+        id: live
+        shell: bash
+        run: |
+          set +e
+          python tools/evaluate_release_transition_readiness.py \
+            --as-of "$(date -u +%F)" \
+            --fail-on-official-recheck \
+            --output .cache/release-transition-live.json
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Upload live readiness evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transition-readiness-${{ github.run_id }}
+          path: .cache/release-transition-live.json
+          retention-days: 30
+
+      - name: Fail when official recheck is due
+        if: steps.live.outputs.code != '0'
+        run: |
+          echo "A scheduled release threshold has been reached. Date alone is not authority."
+          echo "Recheck official Games Workshop current/release evidence and update sources/release_state.json explicitly."
+          exit 2
