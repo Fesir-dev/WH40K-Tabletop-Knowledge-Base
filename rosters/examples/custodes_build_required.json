@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "roster_id": "custodes_build_required",
+  "faction": "adeptus-custodes",
+  "detachment": "Null Maiden Vigil",
+  "points_limit": 2000,
+  "units": [
+    {
+      "id": "wardens",
+      "unit": "Custodian Wardens",
+      "models": 5
+    },
+    {
+      "id": "prosecutors",
+      "unit": "Prosecutors",
+      "models": 5
+    },
+    {
+      "id": "centura",
+      "unit": "Knight-Centura",
+      "models": 1
+    }
+  ],
+  "attachments": [
+    {
+      "leader_ref": "centura",
+      "bodyguard_ref": "prosecutors"
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Raptor Blade"
+    }
+  ]
+}

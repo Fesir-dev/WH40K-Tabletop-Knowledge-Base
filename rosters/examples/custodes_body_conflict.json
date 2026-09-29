@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "roster_id": "custodes_body_conflict",
+  "faction": "adeptus-custodes",
+  "detachment": "Solar Spearhead",
+  "points_limit": 2000,
+  "units": [
+    {
+      "id": "vertus1",
+      "unit": "Vertus Praetors",
+      "models": 3
+    },
+    {
+      "id": "vertus2",
+      "unit": "Vertus Praetors",
+      "models": 3
+    },
+    {
+      "id": "bikecapt",
+      "unit": "Shield-Captain On Dawneagle Jetbike",
+      "models": 1
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/collection_solver_profile.schema.json",
+  "title": "Collection Solver Profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "profile_id",
+    "faction_slug",
+    "collection_status",
+    "body_pools",
+    "component_pools",
+    "policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "profile_id": {
+      "type": "string"
+    },
+    "faction_slug": {
+      "type": "string"
+    },
+    "collection_status": {
+      "enum": [
+        "CURRENT_VERIFIED",
+        "CURRENT_PENDING_RECHECK",
+        "HISTORICAL_VERIFIED",
+        "PROVISIONAL",
+        "UNKNOWN"
+      ]
+    },
+    "collection_checkpoint": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "body_pools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "pool_id",
+          "physical_bodies",
+          "ready_bodies",
+          "buildable_bodies",
+          "roles"
+        ],
+        "properties": {
+          "pool_id": {
+            "type": "string"
+          },
+          "physical_bodies": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "ready_bodies": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "buildable_bodies": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "unit",
+                "max_from_pool",
+                "mode"
+              ],
+              "properties": {
+                "unit": {
+                  "type": "string"
+                },
+                "max_from_pool": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "mode": {
+                  "enum": [
+                    "DIRECT",
+                    "CONVERSION_REQUIRED"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "component_pools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "component_id",
+          "capacity"
+        ],
+        "properties": {
+          "component_id": {
+            "type": "string"
+          },
+          "capacity": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "paid_wargear_physical_support": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "unknown_constraints": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "policy": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

@@ -675,10 +675,69 @@ try:
         errors.append("Current rules contains unclassified New Recruit runtime drift")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "COLLECTION_AWARE_ROSTER_SOLVER":
-        errors.append("Current milestone must remain COLLECTION_AWARE_ROSTER_SOLVER")
+    if current_rules.get("next_milestone") != "AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION":
+        errors.append("Current milestone must be AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION")
 except Exception as exc:
     errors.append(f"Automated upstream/runtime monitoring validation failure: {exc}")
+
+# 3i. Collection-aware Custodes roster solver contracts.
+try:
+    solver_report = json.loads((ROOT / "reports" / "COLLECTION_AWARE_ROSTER_SOLVER_CURRENT.json").read_text(encoding="utf-8"))
+    solver_profile = json.loads((ROOT / "collection" / "adeptus_custodes" / "solver_profile.json").read_text(encoding="utf-8"))
+    current_collection = json.loads((ROOT / "collection" / "adeptus_custodes" / "current.json").read_text(encoding="utf-8"))
+
+    if solver_report.get("status") != "PASS":
+        errors.append("Collection-aware roster solver validation report must PASS")
+    if solver_report.get("milestone") != "COLLECTION_AWARE_ROSTER_SOLVER":
+        errors.append("Collection-aware roster solver milestone id drifted")
+    if len(solver_report.get("cases", [])) != 7:
+        errors.append("Collection-aware roster solver smoke matrix must contain seven cases")
+
+    boundary = solver_report.get("authority_boundary", {})
+    if boundary.get("full_normative_legality") != "UNKNOWN_PENDING_NORMATIVE_APP":
+        errors.append("Collection solver must not claim full normative legality")
+    if boundary.get("collection_status") != "PROVISIONAL":
+        errors.append("Custodes collection solver must preserve PROVISIONAL inventory status")
+    if boundary.get("normative_promotion") is not False:
+        errors.append("Collection solver must never promote physical/runtime evidence into normative rules")
+
+    pools = solver_profile.get("body_pools", [])
+    if len(pools) != 15 or sum(int(x.get("physical_bodies", 0)) for x in pools) != 70:
+        errors.append("Custodes solver profile must model exactly 70 Custodes/Sisters bodies across 15 pools")
+    if len(solver_profile.get("component_pools", [])) != 12:
+        errors.append("Custodes solver component pool coverage drifted")
+    if not any(
+        role.get("mode") == "CONVERSION_REQUIRED"
+        for pool in pools
+        for role in pool.get("roles", [])
+    ):
+        errors.append("Custodes solver lost conversion-required role modeling")
+    if not any(
+        x.get("id") == "CUSTODES_VENATARI_GUARD_SPEAR_SHARING"
+        for x in solver_profile.get("unknown_constraints", [])
+    ):
+        errors.append("Custodes solver lost fail-closed Venatari shared-spear constraint")
+
+    solver_ptr = current_collection.get("solver", {})
+    if solver_ptr.get("state") != "OPERATIONAL_PROVISIONAL":
+        errors.append("Custodes current collection solver state must remain OPERATIONAL_PROVISIONAL")
+    rules_solver = current_rules.get("collection_aware_roster_solver", {})
+    if rules_solver.get("state") != "OPERATIONAL_V1_CUSTODES":
+        errors.append("Current rules must record collection solver v1 as operational")
+    if rules_solver.get("full_normative_legality") != "UNKNOWN_PENDING_NORMATIVE_APP":
+        errors.append("Collection solver must preserve the normative/app legality boundary")
+    for required in [
+        ROOT / "tools" / "solve_collection_roster.py",
+        ROOT / "tools" / "validate_collection_solver.py",
+        ROOT / ".github" / "workflows" / "collection-roster-solver.yml",
+        ROOT / "schemas" / "collection_solver_profile.schema.json",
+        ROOT / "schemas" / "roster_request.schema.json",
+        ROOT / "schemas" / "roster_solver_result.schema.json",
+    ]:
+        if not required.exists():
+            errors.append(f"Missing collection solver artifact: {required.relative_to(ROOT)}")
+except Exception as exc:
+    errors.append(f"Collection-aware roster solver validation failure: {exc}")
 
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (

@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/roster_request.schema.json",
+  "title": "Collection-aware Roster Solver Request",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "roster_id",
+    "faction",
+    "detachment",
+    "units"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "roster_id": {
+      "type": "string"
+    },
+    "faction": {
+      "type": "string"
+    },
+    "detachment": {
+      "type": "string"
+    },
+    "points_limit": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "rules_snapshot": {
+      "type": "string"
+    },
+    "collection_profile": {
+      "type": "string"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "allow_conversion": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "unit",
+          "models"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "models": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "paid_wargear": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "item"
+              ],
+              "properties": {
+                "item": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "components": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "enhancements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "leader_ref",
+          "bodyguard_ref"
+        ],
+        "properties": {
+          "leader_ref": {
+            "type": "string"
+          },
+          "bodyguard_ref": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}

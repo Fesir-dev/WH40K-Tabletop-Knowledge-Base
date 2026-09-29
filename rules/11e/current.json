@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.6",
+  "schema_version": "2.7",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -42,7 +42,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "COLLECTION_AWARE_ROSTER_SOLVER",
+  "next_milestone": "AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -169,5 +169,16 @@
       ],
       "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
     }
+  },
+  "collection_aware_roster_solver": {
+    "state": "OPERATIONAL_V1_CUSTODES",
+    "tool": "tools/solve_collection_roster.py",
+    "profile": "collection/adeptus_custodes/solver_profile.json",
+    "validation_report": "reports/COLLECTION_AWARE_ROSTER_SOLVER_CURRENT.json",
+    "closure_report": "reports/COLLECTION_AWARE_ROSTER_SOLVER_CLOSURE_2026-09-29.md",
+    "scoped_rules_legality": "MFM_BACKED",
+    "full_normative_legality": "UNKNOWN_PENDING_NORMATIVE_APP",
+    "collection_status": "PROVISIONAL",
+    "authority_rule": "Physical/runtime solver results never rewrite normative Games Workshop data."
   }
 }

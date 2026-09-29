@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "roster_id": "custodes_component_conflict",
+  "faction": "adeptus-custodes",
+  "detachment": "Might Of The Moritoi",
+  "points_limit": 2000,
+  "units": [
+    {
+      "id": "telemon1",
+      "unit": "Telemon Heavy Dreadnought",
+      "models": 1,
+      "components": {
+        "CUSTODES_TELEMON_ARACHNUS_STORM_CANNON": 2
+      }
+    },
+    {
+      "id": "telemon2",
+      "unit": "Telemon Heavy Dreadnought",
+      "models": 1,
+      "components": {
+        "CUSTODES_TELEMON_ARACHNUS_STORM_CANNON": 2
+      }
+    }
+  ]
+}
