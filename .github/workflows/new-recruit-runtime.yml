@@ -7,6 +7,7 @@ on:
       - ".github/workflows/new-recruit-runtime.yml"
       - "factions/catalog.json"
       - "rules/11e/snapshots/2026-09-29/mfm/**"
+      - "rules/11e/snapshots/2026-09-29/wahapedia/**"
       - "sources/runtime_drift_registry.json"
   workflow_dispatch:
   schedule:
@@ -45,8 +46,8 @@ jobs:
             git commit -m "Refresh New Recruit runtime validation"
             git push
           fi
-      - name: Fail on new or changed runtime projection drift
+      - name: Fail on new or changed runtime drift
         if: steps.runtime.outputs.code != '0'
         run: |
-          echo "New or changed New Recruit runtime projection drift detected"
+          echo "New or changed New Recruit runtime drift detected"
           exit 2
