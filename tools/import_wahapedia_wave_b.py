@@ -95,10 +95,11 @@ def fetch(url: str, dest: Path) -> None:
 def load_csv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
     text = path.read_text(encoding="utf-8-sig")
     reader = csv.DictReader(text.splitlines(), delimiter="|")
-    headers = [h for h in (reader.fieldnames or []) if h]
+    original_headers = [h for h in (reader.fieldnames or []) if h]
+    headers = [h.strip().lower() for h in original_headers]
     rows = []
     for raw in reader:
-        row = {k: (v or "").strip() for k, v in raw.items() if k}
+        row = {k.strip().lower(): (v or "").strip() for k, v in raw.items() if k}
         if any(row.values()):
             rows.append(row)
     return headers, rows
