@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "created": "2026-09-29",
+  "encoding": "base64",
+  "chunk_size_chars": 150000,
+  "artifacts": [
+    {
+      "id": "rules",
+      "original_filename": "W40K_11E_RULES_ASSISTANT_v0_9_FULL_FACTION_SEMANTICS_20260815(1).zip",
+      "size_bytes": 883437,
+      "sha256": "98bbc892879e9211fadaff158efbd98321b704e0c56e6dd84df2ef69e9b00947",
+      "base64_chars": 1177916,
+      "chunks": [
+        {"file":"part-001.b64","chars":150000,"sha256_text":"8c7706f210106abb37d0ca3aaf1824086a5ea6316d94b16ebdc6e48ca7062701"},
+        {"file":"part-002.b64","chars":150000,"sha256_text":"0086f92f9ed11d063b6f49d9120c8e35faa66cb0025a6965e134e352783f04b9"},
+        {"file":"part-003.b64","chars":150000,"sha256_text":"684d895abfa32a515cf6ceec5b7d2c13452059bd7673ecbee41d23a089d523e5"},
+        {"file":"part-004.b64","chars":150000,"sha256_text":"cae375c03bf66a2614a4db707709a580e260c71902bc5b892e0306a32967cbf7"},
+        {"file":"part-005.b64","chars":150000,"sha256_text":"e8d406a6757251035243af9fbbc5cc059ef7ae0e80df70f1350e89619bbd1da0"},
+        {"file":"part-006.b64","chars":150000,"sha256_text":"c3046dffc9b5329744fdca59141e3ed9e3d9d1cb032d20fb117cd9a9fcf5237e"},
+        {"file":"part-007.b64","chars":150000,"sha256_text":"26adc613519974fd6edcc41d0f4d5aaa280534541d00e853dfdc0da0b9282683"},
+        {"file":"part-008.b64","chars":127916,"sha256_text":"b62929b60e4d85d2fb2dcbc051fc880e4777743726c0c30fff9b8792169724dd"}
+      ]
+    },
+    {
+      "id": "collection",
+      "original_filename": "W40K_COLLECTION_INVENTORY_v0_5_ADEPTUS_CUSTODES_PROVISIONAL(2).zip",
+      "size_bytes": 32347,
+      "sha256": "6aee2f7bf491f4fe6f254aeecf79dffe84a5579e24a3022aafcea422b9e97f20",
+      "base64_chars": 43132,
+      "chunks": [
+        {"file":"part-001.b64","chars":43132,"sha256_text":"627515afa119d2552602a5e88d94421d93f3510c8daf7586f51783fad2722c38"}
+      ]
+    }
+  ]
+}
