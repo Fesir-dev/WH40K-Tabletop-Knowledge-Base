@@ -86,7 +86,7 @@ class RepositoryContracts(unittest.TestCase):
 
         report=self.release_readiness
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["milestone"], "RELEASE_TRANSITION_INGESTION_READINESS")
+        self.assertEqual(report["milestone"], "RELEASE_TRANSITION_ACTIVATION_WATCH")
         self.assertEqual(report["as_of"], "2026-09-29")
         self.assertFalse(report["global_policy"]["auto_promote"])
         rows={x["transition_id"]:x for x in report["transitions"]}
@@ -273,7 +273,13 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["known_runtime_drifts"], points["known_drift_count"]+surfaces["known_drift_count"])
         self.assertEqual(nr["new_runtime_drifts"], 0)
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "RELEASE_TRANSITION_INGESTION_READINESS")
+        self.assertEqual(self.current["next_milestone"], "RELEASE_TRANSITION_ACTIVATION_WATCH")
+        layer=self.current["release_transition_readiness"]
+        self.assertEqual(layer["state"], "OPERATIONAL_V1")
+        self.assertFalse(layer["policy"]["auto_promote"])
+        tracked={x["id"]:x for x in layer["tracked_transitions"]}
+        self.assertEqual(tracked["SPACE_MARINES_CODEX_2026"]["state"], "PRE_RELEASE_HOLD")
+        self.assertEqual(tracked["ADEPTUS_CUSTODES_CODEX_2026"]["state"], "UPCOMING_HOLD_NO_RELEASE_DATE")
 
     def test_guarded_reingestion_control_plane(self):
         required=[
