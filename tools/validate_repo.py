@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import collections
+import hashlib
 import json
 import pathlib
 import sys
@@ -132,6 +133,30 @@ try:
         errors.append(f"Expected MFM v1.2 repriced Custodes subtotal 3970, got {repriced_custodes}")
 except Exception as exc:
     errors.append(f"Custodes historical repricing regression failure: {exc}")
+
+
+# 7. Exact preserved bootstrap artifact integrity.
+artifact_expectations = {
+    "legacy/artifacts/original/W40K_11E_RULES_ASSISTANT_v0_9_FULL_FACTION_SEMANTICS_20260815.zip": (
+        883437,
+        "98bbc892879e9211fadaff158efbd98321b704e0c56e6dd84df2ef69e9b00947",
+    ),
+    "legacy/artifacts/original/W40K_COLLECTION_INVENTORY_v0_5_ADEPTUS_CUSTODES_PROVISIONAL.zip": (
+        32347,
+        "6aee2f7bf491f4fe6f254aeecf79dffe84a5579e24a3022aafcea422b9e97f20",
+    ),
+}
+for rel, (expected_size, expected_sha256) in artifact_expectations.items():
+    path = ROOT / rel
+    if not path.exists():
+        errors.append(f"Missing preserved artifact: {rel}")
+        continue
+    raw = path.read_bytes()
+    if len(raw) != expected_size:
+        errors.append(f"Preserved artifact size mismatch {rel}: {len(raw)} != {expected_size}")
+    got = hashlib.sha256(raw).hexdigest()
+    if got != expected_sha256:
+        errors.append(f"Preserved artifact SHA-256 mismatch {rel}: {got} != {expected_sha256}")
 
 if errors:
     print("FAIL")
