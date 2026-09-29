@@ -85,6 +85,29 @@ Additional sampled runtime projection drift:
 
 Exact New Recruit synchronization cadence remains `UNKNOWN_NOT_INFERRED`.
 
+
+### Collection-aware roster solver
+**CLOSED AT OPERATIONAL V1 FOR ADEPTUS CUSTODES**
+- current MFM-backed scoped legality: active;
+- solver-ready physical profile: `collection/adeptus_custodes/solver_profile.json`;
+- physical bodies modeled: **70** Custodes/Sisters across **15** pools;
+- shared-body allocation: active;
+- ready vs build-required bodies: active;
+- explicit conversion gating: active;
+- declared component-capacity checks: active;
+- fail-closed unknown component constraints: active;
+- smoke/regression cases: **7**;
+- solver validation report: **PASS**;
+- full normative army legality remains `UNKNOWN_PENDING_NORMATIVE_APP`;
+- personal collection remains `PROVISIONAL`.
+
+Validated pre-closure code checkpoint:
+- generic repository CI run: `36599092439` — **SUCCESS**;
+- collection solver workflow run: `36599092522` — **SUCCESS**.
+
+Closure report:
+`reports/COLLECTION_AWARE_ROSTER_SOLVER_CLOSURE_2026-09-29.md`
+
 ### Painting
 - workbook v25 preserved;
 - 217 containers/materials;
@@ -110,17 +133,17 @@ Exact New Recruit synchronization cadence remains `UNKNOWN_NOT_INFERRED`.
 
 ## Current active milestone
 
-`COLLECTION_AWARE_ROSTER_SOLVER`
+`AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION`
 
 High-level remaining work:
 
-1. collection-aware roster legality + physical-feasibility solver;
-2. automated re-ingestion/reconciliation/promotion when upstream watcher detects change;
-3. upcoming Space Marines/Custodes release-transition ingestion when legally current;
-4. optional deeper normative/app equivalence where official/app access permits.
+1. automated re-ingestion/reconciliation/promotion when upstream watcher detects change;
+2. upcoming Space Marines/Custodes release-transition ingestion when legally current;
+3. optional deeper normative/app equivalence where official/app access permits;
+4. extend collection-aware solver profiles when additional personal faction inventories are normalized.
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, or New Recruit runtime validation after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, or the Custodes collection solver v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.
