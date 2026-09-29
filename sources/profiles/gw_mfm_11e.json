@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "source_id": "GW_MFM",
+  "checked_at": "2026-09-29",
+  "official_landing_page": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+  "interactive_endpoint": "https://mfm.warhammer-community.com/en/",
+  "observed_official_update_date": "2026-09-02",
+  "official_scope": [
+    "unit_points",
+    "unit_size_costs",
+    "leader_join_relations",
+    "detachment_points",
+    "force_dispositions"
+  ],
+  "retrieval_observations": {
+    "landing_page": "PASS",
+    "direct_interactive_fetch": "HTTP_403",
+    "indexed_faction_pages": "READABLE_BUT_CACHE_AGE_VARIES",
+    "safe_for_bulk_promotion": false
+  },
+  "safe_ingestion_policy": [
+    "Use the official landing page as the revision/date authority.",
+    "Do not bulk-promote values solely from stale search-engine cache copies of MFM faction pages.",
+    "Use pinned BSData and current Wahapedia as structured/readable extraction candidates.",
+    "Cross-check disagreements and changed/high-risk values against current official evidence before normative promotion.",
+    "Keep repository coverage separate from source-currentness."
+  ],
+  "evidence": [
+    {
+      "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+      "checked_at": "2026-09-29",
+      "note": "Official page states MFM updated 02/09/2026 and describes points, Leader relations, Detachment Points and Force Dispositions."
+    }
+  ]
+}
