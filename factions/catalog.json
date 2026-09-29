@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "bootstrap_checkpoint": "2026-09-29",
+  "legacy_checkpoint": "2026-08-15",
+  "factions": [
+    {
+      "slug": "adeptus_custodes",
+      "name": "Adeptus Custodes",
+      "legacy_rules_material": true,
+      "personal_collection": true,
+      "migration_status": "PENDING_REFRESH"
+    },
+    {
+      "slug": "adeptus_mechanicus",
+      "name": "Adeptus Mechanicus",
+      "legacy_rules_material": true,
+      "personal_collection": false,
+      "migration_status": "PENDING_REFRESH"
+    },
+    {
+      "slug": "chaos_daemons",
+      "name": "Chaos Daemons",
+      "legacy_rules_material": true,
+      "personal_collection": false,
+      "migration_status": "PENDING_REFRESH"
+    },
+    {
+      "slug": "chaos_space_marines",
+      "name": "Chaos Space Marines",
+      "legacy_rules_material": true,
+      "personal_collection": false,
+      "migration_status": "PENDING_REFRESH"
+    },
+    {
+      "slug": "genestealer_cults",
+      "name": "Genestealer Cults",
+      "legacy_rules_material": true,
+      "personal_collection": false,
+      "migration_status": "PENDING_REFRESH"
+    },
+    {
+      "slug": "imperial_knights",
+      "name": "Imperial Knights",
+      "legacy_rules_material": true,
+      "personal_collection": false,
+      "migration_status": "PENDING_REFRESH"
+    },
+    {
+      "slug": "thousand_sons",
+      "name": "Thousand Sons",
+      "legacy_rules_material": true,
+      "personal_collection": false,
+      "migration_status": "PENDING_REFRESH"
+    },
+    {
+      "slug": "world_eaters",
+      "name": "World Eaters",
+      "legacy_rules_material": true,
+      "personal_collection": false,
+      "migration_status": "PENDING_REFRESH"
+    }
+  ]
+}
