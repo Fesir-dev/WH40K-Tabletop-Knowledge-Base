@@ -1,0 +1,35 @@
+{
+  "schema": "w40k11.build_verification.v0.9",
+  "as_of": "2026-08-15",
+  "status": "PASS",
+  "official_live_lock": {
+    "mfm_last_update_observed": "2026-07-22",
+    "checked_at": "2026-08-15"
+  },
+  "coverage": {
+    "factions": 8,
+    "mfm_units": 282,
+    "detachments": 79,
+    "enhancement_costs": 267,
+    "leader_support_links": 74,
+    "stratagem_semantic_entries": 169,
+    "enhancement_target_predicates": 115,
+    "keyword_records": 62,
+    "keyword_membership_assertions": 435,
+    "complete_keyword_sets": 52,
+    "transport_profiles": 14,
+    "dedicated_transport_profiles": 6,
+    "non_dedicated_transport_profiles": 8
+  },
+  "regressions": {
+    "v0_6": "18/18 PASS",
+    "v0_7": "19/19 PASS",
+    "v0_8": "25/25 PASS",
+    "v0_9": "18/18 PASS",
+    "cumulative": "80/80 PASS"
+  },
+  "notes": [
+    "Exact executable faction target clauses override generic CHARACTER fallback when explicitly more specific.",
+    "Incomplete keyword sets are positive-only evidence; absence remains UNKNOWN."
+  ]
+}
