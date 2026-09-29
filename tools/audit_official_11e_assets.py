@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import csv, hashlib, io, json, urllib.request
+import argparse, csv, hashlib, io, json, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -65,6 +65,13 @@ def verify_pdf(url):
     }
 
 def main():
+    global DATE, WROOT
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--snapshot-date",default=DATE)
+    ap.add_argument("--report-path")
+    a=ap.parse_args()
+    DATE=a.snapshot_date
+    WROOT=ROOT/"rules"/"11e"/"snapshots"/DATE/"wahapedia"
     committed=json.loads((WROOT/"source_catalog.json").read_text(encoding="utf-8"))
     committed11=[normalized_source(x) for x in committed if str(x.get("edition"))=="11"]
 
@@ -127,7 +134,8 @@ def main():
             "note":"Official PDF reachability/hash proves exact referenced GW asset existence, not that Wahapedia prose is normatively identical to every PDF passage."
         }
     }
-    out=ROOT/"sources"/"snapshots"/f"gw_11e_official_assets_{DATE}.json"
+    out=Path(a.report_path).resolve() if a.report_path else ROOT/"sources"/"snapshots"/f"gw_11e_official_assets_{DATE}.json"
+    out.parent.mkdir(parents=True,exist_ok=True)
     out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({
