@@ -18,6 +18,35 @@ VALID_STATUSES = {
     "UNKNOWN",
 }
 
+VALID_AUTHORITIES = {
+    "official_primary",
+    "official_secondary",
+    "secondary_reference",
+    "structured_implementation",
+    "runtime_projection",
+    "tooling_reference",
+    "empirical_dataset",
+    "expert_analysis",
+    "event_overlay",
+    "community_intelligence",
+    "personal_observation",
+    "legacy_project",
+}
+
+VALID_SOURCE_ROLES = {
+    "normative",
+    "current_mirror",
+    "structured_implementation",
+    "runtime_projection",
+    "validation_tooling",
+    "analytics",
+    "analysis",
+    "event_overlay",
+    "community_intelligence",
+    "historical_baseline",
+    "personal_collection",
+}
+
 # 1. Every tracked JSON file must parse.
 for path in ROOT.rglob("*.json"):
     if ".git" in path.parts:
@@ -45,11 +74,89 @@ try:
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     if registry.get("status") not in VALID_STATUSES:
         errors.append(f"Invalid source registry status: {registry.get('status')}")
-    for src in registry.get("sources", []):
+    source_rows = registry.get("sources", [])
+    source_ids = [src.get("id") for src in source_rows]
+    if len(source_ids) != len(set(source_ids)):
+        errors.append("Duplicate source IDs in registry")
+    required_source_ids = {
+        "GW_40K_DOWNLOADS",
+        "GW_MFM",
+        "GW_40K_APP",
+        "WAHAPEDIA_11E",
+        "BSDATA_WH40K_11E",
+        "NEW_RECRUIT_RUNTIME",
+        "NEW_RECRUIT_WIKI",
+        "GOONHAMMER_40K",
+        "STAT_CHECK_40K",
+        "BCP_40K",
+    }
+    missing_sources = required_source_ids - set(source_ids)
+    if missing_sources:
+        errors.append("Missing required external source IDs: " + ", ".join(sorted(missing_sources)))
+
+    by_source_id = {src["id"]: src for src in source_rows if src.get("id")}
+    for src in source_rows:
         if src.get("status") not in VALID_STATUSES:
             errors.append(f"Invalid source status {src.get('id')}: {src.get('status')}")
+        if src.get("authority") not in VALID_AUTHORITIES:
+            errors.append(f"Invalid source authority {src.get('id')}: {src.get('authority')}")
+        if src.get("source_role") not in VALID_SOURCE_ROLES:
+            errors.append(f"Invalid source role {src.get('id')}: {src.get('source_role')}")
+
+    if by_source_id.get("BSDATA_WH40K_11E", {}).get("source_role") != "structured_implementation":
+        errors.append("BSData 11E must remain a structured_implementation source")
+    if by_source_id.get("NEW_RECRUIT_RUNTIME", {}).get("upstream_source_id") != "BSDATA_WH40K_11E":
+        errors.append("New Recruit runtime must declare BSData WH40K 11E as its upstream source")
+    if by_source_id.get("NEW_RECRUIT_WIKI", {}).get("upstream_source_id") != "BSDATA_WH40K_11E":
+        errors.append("New Recruit Wiki must declare BSData WH40K 11E as its upstream source")
+    if by_source_id.get("GOONHAMMER_40K", {}).get("source_role") != "analysis":
+        errors.append("Goonhammer must remain in the analysis source role")
+    for analytics_id in {"STAT_CHECK_40K", "BCP_40K"}:
+        if by_source_id.get(analytics_id, {}).get("source_role") != "analytics":
+            errors.append(f"{analytics_id} must remain in the analytics source role")
 except Exception as exc:
     errors.append(f"Source registry failure: {exc}")
+
+# 3b. External-source currentness/conflict contracts.
+try:
+    gate = json.loads((ROOT / "sources" / "currentness_gate.json").read_text(encoding="utf-8"))
+    gate_rows = gate.get("required_checks", [])
+    gate_by_id = {x["id"]: x for x in gate_rows}
+    for official_id in {"GW_40K_DOWNLOADS", "GW_MFM", "GW_40K_APP"}:
+        row = gate_by_id.get(official_id)
+        if not row:
+            errors.append(f"Missing official currentness gate: {official_id}")
+        elif row.get("blocking") is not True:
+            errors.append(f"Official currentness gate must be blocking: {official_id}")
+    for secondary_id in {"WAHAPEDIA_11E", "BSDATA_WH40K_11E", "NEW_RECRUIT_RUNTIME"}:
+        row = gate_by_id.get(secondary_id)
+        if not row:
+            errors.append(f"Missing cross-check currentness gate: {secondary_id}")
+        elif row.get("blocking") is not False:
+            errors.append(f"Secondary/runtime currentness gate must be non-blocking: {secondary_id}")
+
+    conflict = json.loads((ROOT / "sources" / "conflict_policy.json").read_text(encoding="utf-8"))
+    required_conflict_states = {
+        "SOURCE_CONFLICT",
+        "IMPLEMENTATION_DRIFT",
+        "RUNTIME_PROJECTION_DRIFT",
+        "EVENT_SCOPE_DIFFERENCE",
+    }
+    missing_states = required_conflict_states - set(conflict.get("states", []))
+    if missing_states:
+        errors.append("Missing conflict states: " + ", ".join(sorted(missing_states)))
+
+    nr_profile = json.loads(
+        (ROOT / "sources" / "profiles" / "new_recruit_bsdata_11e.json").read_text(encoding="utf-8")
+    )
+    if nr_profile.get("upstream", {}).get("source_id") != "BSDATA_WH40K_11E":
+        errors.append("New Recruit profile upstream must be BSDATA_WH40K_11E")
+    registry_bs_sha = by_source_id.get("BSDATA_WH40K_11E", {}).get("observed_revision", {}).get("commit_sha")
+    profile_bs_sha = nr_profile.get("upstream", {}).get("observed_head", {}).get("sha")
+    if registry_bs_sha != profile_bs_sha:
+        errors.append("BSData observed commit SHA differs between registry and New Recruit profile")
+except Exception as exc:
+    errors.append(f"External source contract validation failure: {exc}")
 
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (
@@ -166,5 +273,5 @@ if errors:
 
 print(
     "PASS: repository JSON, baselines, source statuses, Custodes collection, "
-    "semantic-core index and historical repricing invariants validated."
+    "semantic-core index, external source contracts, and historical repricing invariants validated."
 )
