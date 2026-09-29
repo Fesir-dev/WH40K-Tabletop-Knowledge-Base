@@ -710,8 +710,8 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION":
-        errors.append("Current milestone must be AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION")
+    if current_rules.get("next_milestone") != "RELEASE_TRANSITION_INGESTION_READINESS":
+        errors.append("Current milestone must be RELEASE_TRANSITION_INGESTION_READINESS")
 except Exception as exc:
     errors.append(f"Automated upstream/runtime monitoring validation failure: {exc}")
 
