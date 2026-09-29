@@ -317,7 +317,7 @@ try:
         errors.append("Release transition activation watch must remain read-only")
     if activation_cfg.get("cadence") != "every 6 hours":
         errors.append("Release transition activation watch cadence drifted")
-    if activation_cfg.get("report") != "reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json":
+    if activation_cfg.get("report") != "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json":
         errors.append("Release transition activation watch report pointer drifted")
 
     if activation_report.get("status") != "NO_ACTION_REQUIRED":
