@@ -26,6 +26,12 @@ Agents working here must preserve provenance, version boundaries and the distinc
 16. Every migration from legacy material must record the legacy artifact/checkpoint and whether the migrated field was copied, normalized, corrected or re-derived.
 17. Git-backed external sources must be pinned by commit SHA when used for a reproducible snapshot.
 18. Do not invent New Recruit synchronization cadence or undocumented API behavior; record unknowns explicitly.
+19. Before substantial roster/meta recommendations, read `analytics/ANALYTICS_SOURCE_MATRIX.md` and `analytics/ROSTER_RECOMMENDATION_EVIDENCE_MODEL.md`.
+20. Never count dependent aggregators as independent confirmations. Deduplicate evidence by underlying lineage (for example BCP-derived data).
+21. Never silently combine evidence across materially different rules/points patches. Every competitive recommendation must declare its rules snapshot and analytics window.
+22. Popularity/take rate is not performance evidence; mathhammer efficiency is not table strength; expert confidence is not empirical sample size. Keep these dimensions separate.
+23. Call something expert consensus only when at least three independent expert sources support the same material conclusion; otherwise attribute the individual views.
+24. Paid/subscription sources may be referenced by metadata and accessible summaries, but do not scrape, vendor or reproduce protected subscriber content.
 
 ## Preferred status values
 
@@ -44,6 +50,8 @@ Read before external-source work:
 - `sources/conflict_policy.json`
 - `sources/freshness_policy.json`
 - `docs/EXTERNAL_INGESTION_PIPELINE.md`
+- `analytics/ANALYTICS_SOURCE_MATRIX.md`
+- `analytics/ROSTER_RECOMMENDATION_EVIDENCE_MODEL.md`
 
 ## Repository domains
 
@@ -52,6 +60,7 @@ Read before external-source work:
 - `collection/`: personally owned physical miniatures and components.
 - `rosters/`: roster snapshots/builds; never authoritative for current points by themselves.
 - `hobby/`: paints, recipes, basing, tools and materials.
+- `analytics/`: dated tournament/meta evidence, mathematical models, expert analysis and roster-recommendation evidence.
 - `sources/`: authority registry, source profiles, hashes, checkpoints and provenance.
 - `schemas/`: machine-readable data contracts.
 - `tools/`: import/normalize/diff/query/validation utilities.
