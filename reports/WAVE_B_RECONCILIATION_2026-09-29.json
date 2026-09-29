@@ -62,6 +62,59 @@
     {
       "type": "POINT_MISMATCH",
       "faction": "space_marines",
+      "unit": "Vanguard Veteran Squad With Jump Packs",
+      "wahapedia": [
+        [
+          5,
+          105
+        ],
+        [
+          5,
+          110
+        ],
+        [
+          5,
+          115
+        ],
+        [
+          5,
+          120
+        ],
+        [
+          10,
+          210
+        ],
+        [
+          10,
+          220
+        ],
+        [
+          10,
+          230
+        ]
+      ],
+      "mfm": [
+        [
+          5,
+          105
+        ],
+        [
+          5,
+          115
+        ],
+        [
+          10,
+          210
+        ],
+        [
+          10,
+          220
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
       "unit": "Assault Intercessors With Jump Packs",
       "wahapedia": [
         [
@@ -109,6 +162,60 @@
         [
           10,
           170
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
+      "unit": "Chaplain With Jump Pack",
+      "wahapedia": [
+        [
+          1,
+          75
+        ],
+        [
+          1,
+          80
+        ]
+      ],
+      "mfm": [
+        [
+          1,
+          75
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
+      "unit": "Outrider Squad",
+      "wahapedia": [
+        [
+          3,
+          70
+        ],
+        [
+          3,
+          75
+        ],
+        [
+          6,
+          140
+        ]
+      ],
+      "mfm": [
+        [
+          1,
+          60
+        ],
+        [
+          3,
+          70
+        ],
+        [
+          6,
+          140
         ]
       ]
     },
@@ -198,113 +305,6 @@
       "type": "POINT_MISMATCH",
       "faction": "space_marines",
       "unit": "Captain With Jump Pack",
-      "wahapedia": [
-        [
-          1,
-          75
-        ],
-        [
-          1,
-          80
-        ]
-      ],
-      "mfm": [
-        [
-          1,
-          75
-        ]
-      ]
-    },
-    {
-      "type": "POINT_MISMATCH",
-      "faction": "space_marines",
-      "unit": "Vanguard Veteran Squad With Jump Packs",
-      "wahapedia": [
-        [
-          5,
-          105
-        ],
-        [
-          5,
-          110
-        ],
-        [
-          5,
-          115
-        ],
-        [
-          5,
-          120
-        ],
-        [
-          10,
-          210
-        ],
-        [
-          10,
-          220
-        ],
-        [
-          10,
-          230
-        ]
-      ],
-      "mfm": [
-        [
-          5,
-          105
-        ],
-        [
-          5,
-          115
-        ],
-        [
-          10,
-          210
-        ],
-        [
-          10,
-          220
-        ]
-      ]
-    },
-    {
-      "type": "POINT_MISMATCH",
-      "faction": "space_marines",
-      "unit": "Outrider Squad",
-      "wahapedia": [
-        [
-          3,
-          70
-        ],
-        [
-          3,
-          75
-        ],
-        [
-          6,
-          140
-        ]
-      ],
-      "mfm": [
-        [
-          1,
-          60
-        ],
-        [
-          3,
-          70
-        ],
-        [
-          6,
-          140
-        ]
-      ]
-    },
-    {
-      "type": "POINT_MISMATCH",
-      "faction": "space_marines",
-      "unit": "Chaplain With Jump Pack",
       "wahapedia": [
         [
           1,
@@ -898,6 +898,57 @@
       "points": {
         "mismatches": [
           {
+            "unit": "Vanguard Veteran Squad With Jump Packs",
+            "wahapedia": [
+              [
+                5,
+                105
+              ],
+              [
+                5,
+                110
+              ],
+              [
+                5,
+                115
+              ],
+              [
+                5,
+                120
+              ],
+              [
+                10,
+                210
+              ],
+              [
+                10,
+                220
+              ],
+              [
+                10,
+                230
+              ]
+            ],
+            "mfm": [
+              [
+                5,
+                105
+              ],
+              [
+                5,
+                115
+              ],
+              [
+                10,
+                210
+              ],
+              [
+                10,
+                220
+              ]
+            ]
+          },
+          {
             "unit": "Assault Intercessors With Jump Packs",
             "wahapedia": [
               [
@@ -945,6 +996,56 @@
               [
                 10,
                 170
+              ]
+            ]
+          },
+          {
+            "unit": "Chaplain With Jump Pack",
+            "wahapedia": [
+              [
+                1,
+                75
+              ],
+              [
+                1,
+                80
+              ]
+            ],
+            "mfm": [
+              [
+                1,
+                75
+              ]
+            ]
+          },
+          {
+            "unit": "Outrider Squad",
+            "wahapedia": [
+              [
+                3,
+                70
+              ],
+              [
+                3,
+                75
+              ],
+              [
+                6,
+                140
+              ]
+            ],
+            "mfm": [
+              [
+                1,
+                60
+              ],
+              [
+                3,
+                70
+              ],
+              [
+                6,
+                140
               ]
             ]
           },
@@ -1028,107 +1129,6 @@
           },
           {
             "unit": "Captain With Jump Pack",
-            "wahapedia": [
-              [
-                1,
-                75
-              ],
-              [
-                1,
-                80
-              ]
-            ],
-            "mfm": [
-              [
-                1,
-                75
-              ]
-            ]
-          },
-          {
-            "unit": "Vanguard Veteran Squad With Jump Packs",
-            "wahapedia": [
-              [
-                5,
-                105
-              ],
-              [
-                5,
-                110
-              ],
-              [
-                5,
-                115
-              ],
-              [
-                5,
-                120
-              ],
-              [
-                10,
-                210
-              ],
-              [
-                10,
-                220
-              ],
-              [
-                10,
-                230
-              ]
-            ],
-            "mfm": [
-              [
-                5,
-                105
-              ],
-              [
-                5,
-                115
-              ],
-              [
-                10,
-                210
-              ],
-              [
-                10,
-                220
-              ]
-            ]
-          },
-          {
-            "unit": "Outrider Squad",
-            "wahapedia": [
-              [
-                3,
-                70
-              ],
-              [
-                3,
-                75
-              ],
-              [
-                6,
-                140
-              ]
-            ],
-            "mfm": [
-              [
-                1,
-                60
-              ],
-              [
-                3,
-                70
-              ],
-              [
-                6,
-                140
-              ]
-            ]
-          },
-          {
-            "unit": "Chaplain With Jump Pack",
             "wahapedia": [
               [
                 1,

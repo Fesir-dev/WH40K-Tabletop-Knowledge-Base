@@ -1,0 +1,5417 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "wahapedia_last_update": "2026-09-28 02:38:04",
+  "targets": {
+    "space_marines": {
+      "datasheets": 292,
+      "source_counts": {
+        "Space Marines": 101,
+        "Space Marines (Warhammer Legends)": 76,
+        "Space Wolves": 21,
+        "Space Wolves (Warhammer Legends)": 18,
+        "Black Templars": 18,
+        "Dark Angels": 16,
+        "Blood Angels": 15,
+        "Blood Angels (Warhammer Legends)": 10,
+        "Deathwatch": 10,
+        "Dark Angels (Warhammer Legends)": 3,
+        "Space Marines (Forge World)": 2,
+        "<none>": 1,
+        "Imperial Agents (Warhammer Legends)": 1
+      },
+      "faction_keyword_counts": {
+        "Adeptus Astartes": 292,
+        "Space Wolves": 39,
+        "Blood Angels": 25,
+        "Dark Angels": 19,
+        "Black Templars": 18,
+        "Ultramarines": 12,
+        "Deathwatch": 11,
+        "Imperial Fists": 3,
+        "Iron Hands": 2,
+        "Salamanders": 2,
+        "Raven Guard": 2,
+        "White Scars": 2,
+        "Agents of the Imperium": 1
+      },
+      "all_keyword_counts_top100": {
+        "Imperium": 300,
+        "Adeptus Astartes": 292,
+        "Infantry": 165,
+        "Grenades": 136,
+        "Character": 118,
+        "Vehicle": 107,
+        "Tacticus": 68,
+        "Smoke": 67,
+        "Frame": 65,
+        "Epic Hero": 65,
+        "Fly": 50,
+        "Ravenwing": 40,
+        "Space Wolves": 39,
+        "Deathwing": 38,
+        "Transport": 35,
+        "Captain": 32,
+        "Blood Angels": 25,
+        "Mounted": 23,
+        "Jump Pack": 22,
+        "Terminator": 21,
+        "Walker": 21,
+        "Dreadnought": 20,
+        "Dark Angels": 19,
+        "Black Templars": 18,
+        "Kill Team": 16,
+        "Phobos": 14,
+        "Aircraft": 12,
+        "Ultramarines": 12,
+        "Gravis": 11,
+        "Psyker": 11,
+        "Deathwatch": 11,
+        "Chapter Master": 10,
+        "Battleline": 9,
+        "Ordo Xenos": 9,
+        "Kill Team Cassius": 9,
+        "Dedicated Transport": 8,
+        "Chaplain": 8,
+        "Death Company": 8,
+        "Titanic": 7,
+        "Ancient": 7,
+        "Lieutenant": 6,
+        "Librarian": 6,
+        "Land Raider": 4,
+        "Artillery": 4,
+        "Wulfen": 4,
+        "Wolf Guard": 4,
+        "Apothecary": 3,
+        "Techmarine": 3,
+        "Sanguinary Priest": 3,
+        "Imperial Fists": 3,
+        "Pack Leader": 3,
+        "Land Raider Crusader": 2,
+        "Eradicator Squad": 2,
+        "Iron Hands": 2,
+        "Mobile": 2,
+        "Primarch": 2,
+        "Monster": 2,
+        "Vanguard Veteran Squad": 2,
+        "Death Company Dreadnought": 2,
+        "Wolf Priest": 2,
+        "Beasts": 2,
+        "Terminator Squad": 2,
+        "Centurion": 2,
+        "Gladiator Reaper": 2,
+        "Gladiator Valiant": 2,
+        "Salamanders": 2,
+        "Sternguard Veteran Squad": 2,
+        "Impulsor": 2,
+        "Gladiator Lancer": 2,
+        "Raven Guard": 2,
+        "White Scars": 2,
+        "Repulsor": 2,
+        "Repulsor Executioner": 2,
+        "Biologis": 1,
+        "Assault Squad": 1,
+        "Assault Squad with Jump Packs": 1,
+        "Land Raider Excelsior": 1,
+        "Suppressor Squad": 1,
+        "Tactical Squad": 1,
+        "Bladeguard Veteran Squad": 1,
+        "Caestus Assault Ram": 1,
+        "Lieutenant with Combi-weapon": 1,
+        "Stormhawk Interceptor": 1,
+        "Rhino Primaris": 1,
+        "Firestrike Servo-turrets": 1,
+        "Drop Pod": 1,
+        "Ballistus Dreadnought": 1,
+        "Sicaran Venator": 1,
+        "Typhon": 1,
+        "Carab Culln the Risen": 1,
+        "Fortification": 1,
+        "Hammerfall Bunker": 1,
+        "Tarantula Sentry Battery": 1,
+        "Tarantula Air Defence Battery": 1,
+        "Relic Terminator Squad": 1,
+        "Javelin Attack Speeder": 1,
+        "Rapier Carrier": 1,
+        "Mortis Dreadnought": 1,
+        "Storm Eagle Gunship": 1,
+        "Storm Speeder Hammerstrike": 1
+      },
+      "source_faction_keyword_pairs": [
+        {
+          "source": "Space Marines",
+          "keyword": "Adeptus Astartes",
+          "count": 101
+        },
+        {
+          "source": "Space Marines (Warhammer Legends)",
+          "keyword": "Adeptus Astartes",
+          "count": 76
+        },
+        {
+          "source": "Space Wolves",
+          "keyword": "Adeptus Astartes",
+          "count": 21
+        },
+        {
+          "source": "Space Wolves",
+          "keyword": "Space Wolves",
+          "count": 21
+        },
+        {
+          "source": "Space Wolves (Warhammer Legends)",
+          "keyword": "Space Wolves",
+          "count": 18
+        },
+        {
+          "source": "Space Wolves (Warhammer Legends)",
+          "keyword": "Adeptus Astartes",
+          "count": 18
+        },
+        {
+          "source": "Black Templars",
+          "keyword": "Adeptus Astartes",
+          "count": 18
+        },
+        {
+          "source": "Black Templars",
+          "keyword": "Black Templars",
+          "count": 18
+        },
+        {
+          "source": "Dark Angels",
+          "keyword": "Adeptus Astartes",
+          "count": 16
+        },
+        {
+          "source": "Dark Angels",
+          "keyword": "Dark Angels",
+          "count": 16
+        },
+        {
+          "source": "Blood Angels",
+          "keyword": "Blood Angels",
+          "count": 15
+        },
+        {
+          "source": "Blood Angels",
+          "keyword": "Adeptus Astartes",
+          "count": 15
+        },
+        {
+          "source": "Blood Angels (Warhammer Legends)",
+          "keyword": "Adeptus Astartes",
+          "count": 10
+        },
+        {
+          "source": "Blood Angels (Warhammer Legends)",
+          "keyword": "Blood Angels",
+          "count": 10
+        },
+        {
+          "source": "Deathwatch",
+          "keyword": "Adeptus Astartes",
+          "count": 10
+        },
+        {
+          "source": "Deathwatch",
+          "keyword": "Deathwatch",
+          "count": 10
+        },
+        {
+          "source": "Space Marines",
+          "keyword": "Ultramarines",
+          "count": 8
+        },
+        {
+          "source": "Space Marines (Warhammer Legends)",
+          "keyword": "Ultramarines",
+          "count": 4
+        },
+        {
+          "source": "Dark Angels (Warhammer Legends)",
+          "keyword": "Dark Angels",
+          "count": 3
+        },
+        {
+          "source": "Dark Angels (Warhammer Legends)",
+          "keyword": "Adeptus Astartes",
+          "count": 3
+        },
+        {
+          "source": "Space Marines",
+          "keyword": "Imperial Fists",
+          "count": 3
+        },
+        {
+          "source": "Space Marines",
+          "keyword": "Iron Hands",
+          "count": 2
+        },
+        {
+          "source": "Space Marines (Forge World)",
+          "keyword": "Adeptus Astartes",
+          "count": 2
+        },
+        {
+          "source": "Space Marines",
+          "keyword": "Salamanders",
+          "count": 2
+        },
+        {
+          "source": "Space Marines",
+          "keyword": "Raven Guard",
+          "count": 2
+        },
+        {
+          "source": "Space Marines",
+          "keyword": "White Scars",
+          "count": 2
+        },
+        {
+          "source": "<none>",
+          "keyword": "Adeptus Astartes",
+          "count": 1
+        },
+        {
+          "source": "Imperial Agents (Warhammer Legends)",
+          "keyword": "Deathwatch",
+          "count": 1
+        },
+        {
+          "source": "Imperial Agents (Warhammer Legends)",
+          "keyword": "Agents of the Imperium",
+          "count": 1
+        },
+        {
+          "source": "Imperial Agents (Warhammer Legends)",
+          "keyword": "Adeptus Astartes",
+          "count": 1
+        }
+      ],
+      "sample_datasheets": [
+        {
+          "name": "Apothecary Biologis",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Assault Squad",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Apothecary on Bike",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Assault Squad with Jump Packs",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Raider",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Raider Crusader",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Raider Excelsior",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Suppressor Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Tactical Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Bladeguard Veteran Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Caestus Assault Ram",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Captain",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Lieutenant with Combi-weapon",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Librarian In Terminator Armour",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Captain With Jump Pack",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Stormhawk Interceptor",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Rhino Primaris",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Firestrike Servo-turrets",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Drop Pod",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ballistus Dreadnought",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Sicaran Venator",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Typhon",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Chaplain On Bike",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Carab Culln The Risen",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Hammerfall Bunker",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Tarantula Sentry Battery",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Tarantula Air Defence Battery",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Eradicator Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Relic Terminator Squad",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Javelin Attack Speeder",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Rapier Carrier",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Mortis Dreadnought",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Chaplain With Jump Pack",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Storm Eagle Gunship",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Storm Speeder Hammerstrike",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Chaplain In Terminator Armour",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Bike Squad",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Dreadnought",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Terminator Assault Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Librarian In Phobos Armour",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Venerable Dreadnought",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Uriel Ventris",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Ultramarines",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Dreadnought Drop Pod",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Sicaran Punisher",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Storm Speeder Hailstrike",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Inceptor Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Infernus Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Iron Father Feirros",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Iron Hands"
+          ]
+        },
+        {
+          "name": "Infiltrator Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Razorback",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Leviathan Dreadnought",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Speeder Storm",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Astartes Servitors",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Captain In Terminator Armour",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Brutalis Dreadnought",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Scout Bike Squad",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Roboute Guilliman",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Ultramarines",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Thunderhawk Gunship",
+          "source_name": "Space Marines (Forge World)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Techmarine",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Hunter",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Vanguard Veteran Squad With Jump Packs",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Imperial Space Marine",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Commander Dante",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Blood Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Captain Tycho",
+          "source_name": "Blood Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Tycho The Lost",
+          "source_name": "Blood Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Librarian Dreadnought",
+          "source_name": "Blood Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Blood Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Chief Librarian Mephiston",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Blood Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "The Sanguinor",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Astorath",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Sanguinary Priest",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Brother Corbulo",
+          "source_name": "Blood Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Lemartes",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Sanguinary Guard",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Death Company Dreadnought",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Furioso Dreadnought",
+          "source_name": "Blood Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Blood Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Baal Predator",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Blood Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Gabriel Seth",
+          "source_name": "Blood Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Blood Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Azrael",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Dark Angels"
+          ]
+        },
+        {
+          "name": "Belial",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Asmodai",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ezekiel",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Deathwing Terminator Squad",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Deathwing Knights",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ravenwing Darkshroud",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Nephilim Jetfighter",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ravenwing Dark Talon",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ravenwing Black Knights",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Speeder Vengeance",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Logan Grimnar",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Logan Grimnar On Stormrider",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Wolf Lord on Thunderwolf",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ragnar Blackmane",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Krom Dragongaze",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Harald Deathwolf",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Canis Wolfborn",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Njal Stormcaller",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Ulrik The Slayer",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Bjorn The Fell-handed",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Blood Claws",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Lukas The Trickster",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Grey Hunters",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Iron Priest",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Wulfen",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Murderfang",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Wolf Guard",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Arjac Rockfist",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Wolf Guard Terminators",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Stormwolf",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Thunderwolf Cavalry",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Fenrisian Wolves",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Skyclaws",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Stormfang Gunship",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Long Fangs",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Corvus Blackstar",
+          "source_name": "Deathwatch",
+          "source_edition": "10",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Deathwatch"
+          ]
+        },
+        {
+          "name": "Cerberus",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Vanguard Veteran Squad",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Invictor Tactical Warsuit",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Intercessor Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Invader ATV",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Incursor Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Scout Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Sicaran Arcus",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Sergeant Telion",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Ultramarines"
+          ]
+        },
+        {
+          "name": "Sicaran Omega",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Thunderfire Cannon",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Bladeguard Ancient",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Company Veterans On Bikes",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Speeder Tempest",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Speeder Tornado",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Captain In Gravis Armour",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Chaplain",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Kratos",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Heavy Intercessor Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Vindicator Laser Destroyer",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Sokar-pattern Stormbird",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ancient on Bike",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Terminator Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Terminus Ultra",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Sicaran Battle Tank",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Vindicator",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Mastodon",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Stormtalon Gunship",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Stormraven Gunship",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Chaplain Venerable Dreadnought",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Centurion Devastator Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Librarian with Jump Pack",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Lieutenant In Reiver Armour",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Lieutenant",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Raider Prometheus",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Librarian on Bike",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ravenwing Talonmaster",
+          "source_name": "Dark Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Scout Sniper Squad",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Sergeant Chronus",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Ultramarines",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Techmarine on Bike",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Assault Intercessor Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Raider Achilles",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Raider Proteus",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Fire Raptor Gunship",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Storm Speeder Thunderstrike",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Chief Librarian Tigurius",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Ultramarines",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Falchion",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Gladiator Reaper",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Eliminator Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Gladiator Valiant",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Terrax-pattern Termite",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Death Company Marines",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Attack Bike Squad",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Hellblaster Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Aggressor Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Adrax Agatone",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Salamanders"
+          ]
+        },
+        {
+          "name": "Land Speeder Typhoon",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Command Squad",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Darnath Lysander",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Imperial Fists",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Raider Redeemer",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Devastator Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Primaris Company Champion",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Spartan",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Sternguard Veteran Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Stalker",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Librarian",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Deathstorm Drop Pod",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Deimos Predator",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Deredeo Dreadnought",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Desolation Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Death Company Marines with Bolt Rifles",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Sammael",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Dark Angels"
+          ]
+        },
+        {
+          "name": "Lazarus",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Dark Angels"
+          ]
+        },
+        {
+          "name": "Deathwing Command Squad",
+          "source_name": "Dark Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Deathwing Strikemaster",
+          "source_name": "Dark Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Dark Angels"
+          ]
+        },
+        {
+          "name": "Tor Garadon",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Imperial Fists"
+          ]
+        },
+        {
+          "name": "Lieutenant In Phobos Armour",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Impulsor",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ancient In Terminator Armour",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Chaplain Cassius",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Ultramarines",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Lion El’jonson",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Astraeus",
+          "source_name": "Space Marines (Forge World)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Captain In Phobos Armour",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Captain on Bike",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Centurion Assault Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Fellblade",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Gladiator Lancer",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ironclad Dreadnought",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Judiciar",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Kayvaan Shrike",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Raven Guard",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Kor’sarro Khan",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "White Scars"
+          ]
+        },
+        {
+          "name": "Land Raider Helios",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Land Speeder",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Outrider Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Pedro Kantor",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Imperial Fists",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Predator Annihilator",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Predator Destructor",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Redemptor Dreadnought",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Reiver Squad",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Relic Contemptor Dreadnought",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Relic Razorback",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Repulsor",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Repulsor Executioner",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Rhino",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Thunderhawk Transporter",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Tyrannic War Veterans",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Ultramarines"
+          ]
+        },
+        {
+          "name": "Vulkan He’stan",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Salamanders"
+          ]
+        },
+        {
+          "name": "Whirlwind",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Whirlwind Scorpius",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Xiphon Interceptor",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Death Company Marines With Jump Packs",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Sanguinary Priest With Jump Pack",
+          "source_name": "Blood Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Blood Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ravenwing Command Squad",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Dark Angels"
+          ]
+        },
+        {
+          "name": "Company Heroes",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Apothecary",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ancient",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Assault Intercessors With Jump Packs",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Spectrus Kill Team",
+          "source_name": "Deathwatch",
+          "source_edition": "10",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Deathwatch",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Fortis Kill Team",
+          "source_name": "Deathwatch",
+          "source_edition": "10",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Deathwatch",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Indomitor Kill Team",
+          "source_name": "Deathwatch",
+          "source_edition": "10",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Deathwatch",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Deathwatch Veterans",
+          "source_name": "Deathwatch",
+          "source_edition": "10",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Deathwatch",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Impulsor",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Black Templars"
+          ]
+        },
+        {
+          "name": "Gladiator Lancer",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Black Templars"
+          ]
+        },
+        {
+          "name": "Gladiator Valiant",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Black Templars"
+          ]
+        },
+        {
+          "name": "Gladiator Reaper",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Black Templars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Repulsor Executioner",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Black Templars"
+          ]
+        },
+        {
+          "name": "Repulsor",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Black Templars"
+          ]
+        },
+        {
+          "name": "Chaplain Grimaldus",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Black Templars"
+          ]
+        },
+        {
+          "name": "Castellan",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Black Templars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "High Marshal Helbrecht",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Black Templars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Emperor’s Champion",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Black Templars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Marshal",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Black Templars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Sword Brethren Squad",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Black Templars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Crusader Squad",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Black Templars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Venerable Dreadnought",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Wolf Guard Pack Leader With Jump Pack",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Wolf Guard Pack Leader In Terminator Armour",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Wolf Guard Pack Leader",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Cyberwolf",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Hounds Of Morkai",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Inner Circle Companions",
+          "source_name": "Dark Angels",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Dark Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Example Wargear",
+          "source_name": null,
+          "source_edition": null,
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Blood Angels Captain",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Death Company Captain",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Death Company Captain with Jump Pack",
+          "source_name": "Blood Angels",
+          "source_edition": "11",
+          "source_version": "1.0",
+          "faction_keywords": [
+            "Blood Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Death Company Dreadnought with Magna-grapple",
+          "source_name": "Blood Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Blood Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Death Company Marines with Boltguns",
+          "source_name": "Blood Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Blood Angels",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Death Company Marines with Boltguns and Jump Packs",
+          "source_name": "Blood Angels (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Blood Angels"
+          ]
+        },
+        {
+          "name": "Watch Master",
+          "source_name": "Deathwatch",
+          "source_edition": "10",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Deathwatch",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Watch Captain Artemis",
+          "source_name": "Deathwatch",
+          "source_edition": "10",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Deathwatch"
+          ]
+        },
+        {
+          "name": "Deathwatch Terminator Squad",
+          "source_name": "Deathwatch",
+          "source_edition": "10",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Deathwatch"
+          ]
+        },
+        {
+          "name": "Talonstrike Kill Team",
+          "source_name": "Deathwatch",
+          "source_edition": "10",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Deathwatch"
+          ]
+        },
+        {
+          "name": "Kill Team Cassius",
+          "source_name": "Imperial Agents (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Deathwatch",
+            "Agents of the Imperium",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Wolf Priest",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Wolf Guard Battle Leader",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Wolf Guard Headtakers",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Wulfen with Storm Shields",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Wulfen Dreadnought",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Execrator",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Black Templars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Crusade Ancient",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Black Templars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Sternguard Veteran Squad",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Black Templars"
+          ]
+        },
+        {
+          "name": "Terminator Squad",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Black Templars"
+          ]
+        },
+        {
+          "name": "Land Raider Crusader",
+          "source_name": "Black Templars",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Black Templars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Aethon Shaan",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Raven Guard"
+          ]
+        },
+        {
+          "name": "Caanok Var",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Iron Hands",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Suboden Khan",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "White Scars",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Decimus Kill Team",
+          "source_name": "Deathwatch",
+          "source_edition": "10",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Deathwatch"
+          ]
+        },
+        {
+          "name": "Wolf Scouts",
+          "source_name": "Space Wolves",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Marneus Calgar in Armour of Antilochus",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Ultramarines"
+          ]
+        },
+        {
+          "name": "Cato Sicarius",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Ultramarines",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Victrix Honour Guard",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Ultramarines"
+          ]
+        },
+        {
+          "name": "Captain Titus",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Ultramarines"
+          ]
+        },
+        {
+          "name": "Wardens of Ultramar",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Ultramarines",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Ferren Areios",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Eradicator Squad with Heavy Bolters",
+          "source_name": "Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Wolf Guard Battle Leader In Terminator Armour",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Space Wolves",
+            "Adeptus Astartes"
+          ]
+        },
+        {
+          "name": "Wolf Guard Battle Leader On Thunderwolf",
+          "source_name": "Space Wolves (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes",
+            "Space Wolves"
+          ]
+        },
+        {
+          "name": "Company Champion on Bike",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Adeptus Astartes"
+          ]
+        }
+      ]
+    },
+    "adeptus_titanicus": {
+      "datasheets": 4,
+      "source_counts": {
+        "Adeptus Titanicus (Forge World)": 4
+      },
+      "faction_keyword_counts": {
+        "Adeptus Titanicus": 4
+      },
+      "all_keyword_counts_top100": {
+        "Adeptus Titanicus": 4,
+        "Imperium": 4,
+        "Towering": 4,
+        "Frame": 4,
+        "Walker": 4,
+        "Vehicle": 4,
+        "Titanic": 4,
+        "Warhound Titan": 1,
+        "Reaver Titan": 1,
+        "Warlord Titan": 1,
+        "Warbringer Nemesis Titan": 1
+      },
+      "source_faction_keyword_pairs": [
+        {
+          "source": "Adeptus Titanicus (Forge World)",
+          "keyword": "Adeptus Titanicus",
+          "count": 4
+        }
+      ],
+      "sample_datasheets": [
+        {
+          "name": "Warhound Titan",
+          "source_name": "Adeptus Titanicus (Forge World)",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Titanicus"
+          ]
+        },
+        {
+          "name": "Reaver Titan",
+          "source_name": "Adeptus Titanicus (Forge World)",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Titanicus"
+          ]
+        },
+        {
+          "name": "Warlord Titan",
+          "source_name": "Adeptus Titanicus (Forge World)",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Titanicus"
+          ]
+        },
+        {
+          "name": "Warbringer Nemesis Titan",
+          "source_name": "Adeptus Titanicus (Forge World)",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Adeptus Titanicus"
+          ]
+        }
+      ]
+    },
+    "chaos_daemons": {
+      "datasheets": 101,
+      "source_counts": {
+        "Chaos Daemons": 53,
+        "Chaos Space Marines": 21,
+        "Chaos Space Marines (Warhammer Legends)": 17,
+        "Chaos Daemons (Warhammer Legends)": 10
+      },
+      "faction_keyword_counts": {
+        "Legiones Daemonica": 101,
+        "Heretic Astartes": 38
+      },
+      "all_keyword_counts_top100": {
+        "Chaos": 279,
+        "Shadow Legion": 263,
+        "Undivided": 216,
+        "Infantry": 206,
+        "Character": 163,
+        "Grenades": 151,
+        "Legiones Daemonica": 101,
+        "Damned": 90,
+        "Daemon": 71,
+        "Psyker": 68,
+        "Fly": 53,
+        "Chaos Lord": 47,
+        "Nurgle": 45,
+        "Heretic Astartes": 38,
+        "Mounted": 36,
+        "Tzeentch": 31,
+        "Sorcerer": 30,
+        "Slaanesh": 28,
+        "Battleline": 23,
+        "Khorne": 20,
+        "Monster": 18,
+        "Epic Hero": 17,
+        "Disc of Tzeentch": 17,
+        "Terminator": 16,
+        "Palanquin of Nurgle": 15,
+        "Steed of Slaanesh": 14,
+        "Jump Packs": 13,
+        "Dark Commune": 8,
+        "Cult Demagogue": 8,
+        "Jump Pack": 7,
+        "Juggernaut": 7,
+        "Warp Talons": 7,
+        "Beast": 6,
+        "Swarm": 6,
+        "Chaos Lord in Terminator Armour": 6,
+        "Cultist Firebrand": 6,
+        "Traitor Enforcer": 6,
+        "Renegade Enforcer": 6,
+        "Rogue Psyker": 6,
+        "Cultist Mob": 6,
+        "Cultist Mob with Firearms": 6,
+        "Raptors": 6,
+        "Sorcerer in Terminator Armour": 6,
+        "Fellgor Beastmen": 5,
+        "Traitor Guardsmen Squad": 5,
+        "Gellerpox Infected": 5,
+        "Mutoid Vermin": 5,
+        "Renegade Heavy Weapons Squad": 5,
+        "Renegade Plague Ogryns": 5,
+        "Dark Apostle": 5,
+        "Legionaries": 5,
+        "Master of Possession": 5,
+        "Chaos Terminator Squad": 4,
+        "Chosen": 4,
+        "Accursed Cultists": 4,
+        "Negavolt Cultists": 4,
+        "Beasts": 4,
+        "Renegade Ogryn Beast Handler": 4,
+        "Renegade Ogryn Brutes": 4,
+        "Possessed": 4,
+        "Havocs": 3,
+        "Titanic": 2,
+        "Towering": 2,
+        "Fortification": 2,
+        "Frame": 2,
+        "Brimstone": 2,
+        "Blue": 2,
+        "Horrors": 2,
+        "Karanak": 1,
+        "Skarbrand": 1,
+        "Skulltaker": 1,
+        "Rendmaster on Blood throne": 1,
+        "Flesh Hounds": 1,
+        "Bloodletters": 1,
+        "Bloodcrushers": 1,
+        "Skull Cannon": 1,
+        "Kairos Fateweaver": 1,
+        "The Changeling": 1,
+        "The Blue Scribes": 1,
+        "Lord of Change": 1,
+        "Flamers": 1,
+        "Exalted Flamer": 1,
+        "Screamers": 1,
+        "Burning Chariot": 1,
+        "Epidemius": 1,
+        "Great Unclean One": 1,
+        "Plaguebearers": 1,
+        "Nurglings": 1,
+        "Beasts of Nurgle": 1,
+        "Plague Drones": 1,
+        "The Masque of Slaanesh": 1,
+        "Keeper of Secrets": 1,
+        "Tranceweaver": 1,
+        "Herald of Slaanesh": 1,
+        "Daemonettes": 1,
+        "Fiends": 1,
+        "Hellflayers": 1,
+        "Seekers": 1,
+        "Be’lakor": 1,
+        "Daemon Prince of Chaos": 1
+      },
+      "source_faction_keyword_pairs": [
+        {
+          "source": "Chaos Daemons",
+          "keyword": "Legiones Daemonica",
+          "count": 53
+        },
+        {
+          "source": "Chaos Space Marines",
+          "keyword": "Heretic Astartes",
+          "count": 21
+        },
+        {
+          "source": "Chaos Space Marines",
+          "keyword": "Legiones Daemonica",
+          "count": 21
+        },
+        {
+          "source": "Chaos Space Marines (Warhammer Legends)",
+          "keyword": "Heretic Astartes",
+          "count": 17
+        },
+        {
+          "source": "Chaos Space Marines (Warhammer Legends)",
+          "keyword": "Legiones Daemonica",
+          "count": 17
+        },
+        {
+          "source": "Chaos Daemons (Warhammer Legends)",
+          "keyword": "Legiones Daemonica",
+          "count": 10
+        }
+      ],
+      "sample_datasheets": [
+        {
+          "name": "Karanak",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Skarbrand",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Skulltaker",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Rendmaster On Blood Throne",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Flesh Hounds",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Bloodletters",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Bloodcrushers",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Skull Cannon",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Kairos Fateweaver",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "The Changeling",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "The Blue Scribes",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Lord of Change",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Flamers",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Exalted Flamer",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Screamers",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Burning Chariot",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Epidemius",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Great Unclean One",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Plaguebearers",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Nurglings",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Beasts Of Nurgle",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Plague Drones",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "The Masque Of Slaanesh",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Keeper Of Secrets",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Tranceweaver",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Herald Of Slaanesh On Steed Of Slaanesh",
+          "source_name": "Chaos Daemons (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Daemonettes",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Fiends",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Hellflayers",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Seekers",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Be’lakor",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Daemon Prince of Chaos",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Furies",
+          "source_name": "Chaos Daemons (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Soul Grinder",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "An’ggrath the Unbound",
+          "source_name": "Chaos Daemons (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Zarakynel",
+          "source_name": "Chaos Daemons (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Aetaos’rau’keres",
+          "source_name": "Chaos Daemons (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Plague Toads",
+          "source_name": "Chaos Daemons (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Pox Riders",
+          "source_name": "Chaos Daemons (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Spined Chaos Beast",
+          "source_name": "Chaos Daemons (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Giant Chaos Spawn",
+          "source_name": "Chaos Daemons (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Scabeiathrax The Bloated",
+          "source_name": "Chaos Daemons (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Bloodmaster",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Skullmaster",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Changecaster",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Fateskimmer",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Fluxmaster",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Rotigus",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Horticulous Slimux",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Poxbringer",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Sloppity Bilepiper",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Spoilpox Scrivener",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Feculent Gnarlmaw",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Skull Altar",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Infernal Enrapturess",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Contorted Epitome",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Shalaxi Helbane",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Syll’esske",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Bloodthirster",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Blue Horrors",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Pink Horrors",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Daemon Prince Of Chaos With Wings",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Chaos Lord",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Chaos Lord In Terminator Armour",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord with Jump Pack",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord On Disc Of Tzeentch",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Chaos Lord On Juggernaut",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord On Palanquin Of Nurgle",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord On Steed Of Slaanesh",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Terminator Squad",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Chosen",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Cultist Firebrand",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Dark Commune",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Traitor Enforcer",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Renegade Enforcer",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Rogue Psyker",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Cultist Mob",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Cultist Mob with Firearms",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Accursed Cultists",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Fellgor Beastmen",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Traitor Guardsmen Squad",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Gellerpox Infected",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Mutoid Vermin",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Negavolt Cultists",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Renegade Heavy Weapons Squad",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Renegade Ogryn Beast Handler",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Renegade Ogryn Brutes",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Renegade Plague Ogryns",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Dark Apostle",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Havocs",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Legionaries",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Master Of Possession",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Possessed",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Raptors",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sorcerer",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sorcerer On Disc Of Tzeentch",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sorcerer On Palanquin Of Nurgle",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Legiones Daemonica",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sorcerer On Steed Of Slaanesh",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Sorcerer In Terminator Armour",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Warp Talons",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes",
+            "Legiones Daemonica"
+          ]
+        },
+        {
+          "name": "Tormentbringer",
+          "source_name": "Chaos Daemons",
+          "source_edition": "11",
+          "source_version": "1.1",
+          "faction_keywords": [
+            "Legiones Daemonica"
+          ]
+        }
+      ]
+    },
+    "chaos_space_marines": {
+      "datasheets": 111,
+      "source_counts": {
+        "Chaos Space Marines": 54,
+        "Chaos Space Marines (Warhammer Legends)": 31,
+        "Space Marines (Warhammer Legends)": 22,
+        "World Eaters": 1,
+        "Thousand Sons": 1,
+        "Death Guard": 1,
+        "Emperor’s Children": 1
+      },
+      "faction_keyword_counts": {
+        "Heretic Astartes": 111,
+        "World Eaters": 1,
+        "Thousand Sons": 1,
+        "Death Guard": 1,
+        "Emperor’s Children": 1
+      },
+      "all_keyword_counts_top100": {
+        "Chaos": 219,
+        "Vehicle": 153,
+        "Heretic Astartes": 111,
+        "Smoke": 92,
+        "Infantry": 52,
+        "Transport": 51,
+        "Fly": 42,
+        "Character": 35,
+        "Grenades": 35,
+        "Titanic": 32,
+        "Aircraft": 30,
+        "Walker": 29,
+        "Dreadnought": 20,
+        "Daemon": 19,
+        "Damned": 17,
+        "Psyker": 11,
+        "Frame": 11,
+        "Epic Hero": 8,
+        "Sokar-pattern Stormbird": 8,
+        "Chaos Lord": 7,
+        "Mounted": 7,
+        "Nurgle": 7,
+        "Dedicated Transport": 7,
+        "Deredeo Dreadnought": 7,
+        "Mastodon": 7,
+        "Leviathan Dreadnought": 7,
+        "Storm Eagle Gunship": 7,
+        "Chaos Undivided": 6,
+        "Khorne": 6,
+        "Battleline": 6,
+        "Terrax-pattern Termite": 6,
+        "Land Raider Achilles": 6,
+        "Land Raider Proteus": 6,
+        "Fire Raptor Gunship": 6,
+        "Spartan": 6,
+        "Fellblade": 6,
+        "Relic Contemptor Dreadnought": 6,
+        "Xiphon Interceptor": 6,
+        "Falchion": 6,
+        "Terminator": 5,
+        "Cerberus": 5,
+        "Kratos": 5,
+        "Sicaran Battle Tank": 5,
+        "Whirlwind Scorpius": 5,
+        "Rapier Carrier": 5,
+        "Artillery": 5,
+        "Sicaran Venator": 5,
+        "Typhon": 5,
+        "Sicaran Punisher": 5,
+        "Sorcerer": 4,
+        "Tzeentch": 3,
+        "Slaanesh": 3,
+        "Monster": 3,
+        "Disc of Tzeentch": 2,
+        "Palanquin of Nurgle": 2,
+        "Steed of Slaanesh": 2,
+        "Jump Packs": 2,
+        "Jump Pack": 2,
+        "Abaddon the Despoiler": 1,
+        "Huron Blackheart": 1,
+        "Cypher": 1,
+        "Fallen": 1,
+        "Fabius Bile": 1,
+        "Chaos Lord in Terminator Armour": 1,
+        "Chaos Lord on Bike": 1,
+        "Juggernaut": 1,
+        "Dark Apostle": 1,
+        "Daemon Prince": 1,
+        "Sorcerer in Terminator Armour": 1,
+        "Sorcerer on Bike": 1,
+        "Warpsmith": 1,
+        "Cultist Mob": 1,
+        "Chaos Terminator Squad": 1,
+        "Chosen": 1,
+        "Possessed": 1,
+        "Helbrute": 1,
+        "Rhino": 1,
+        "Chaos Bikers": 1,
+        "Raptors": 1,
+        "Warp Talons": 1,
+        "Chaos Spawn": 1,
+        "Beast": 1,
+        "Heldrake": 1,
+        "Land Raider": 1,
+        "Predator Destructor": 1,
+        "Vindicator": 1,
+        "Obliterators": 1,
+        "Havocs": 1,
+        "Forgefiend": 1,
+        "Maulerfiend": 1,
+        "Defiler": 1,
+        "Towering": 1,
+        "Lord of Skulls": 1,
+        "Blood Slaughterer": 1,
+        "Greater Blight Drone": 1,
+        "Decimator": 1,
+        "Kytan Ravager": 1,
+        "Greater Brass Scorpion": 1,
+        "Deimos Predator": 1,
+        "Dreadclaw Drop Pod": 1
+      },
+      "source_faction_keyword_pairs": [
+        {
+          "source": "Chaos Space Marines",
+          "keyword": "Heretic Astartes",
+          "count": 54
+        },
+        {
+          "source": "Chaos Space Marines (Warhammer Legends)",
+          "keyword": "Heretic Astartes",
+          "count": 31
+        },
+        {
+          "source": "Space Marines (Warhammer Legends)",
+          "keyword": "Heretic Astartes",
+          "count": 22
+        },
+        {
+          "source": "World Eaters",
+          "keyword": "World Eaters",
+          "count": 1
+        },
+        {
+          "source": "World Eaters",
+          "keyword": "Heretic Astartes",
+          "count": 1
+        },
+        {
+          "source": "Thousand Sons",
+          "keyword": "Thousand Sons",
+          "count": 1
+        },
+        {
+          "source": "Thousand Sons",
+          "keyword": "Heretic Astartes",
+          "count": 1
+        },
+        {
+          "source": "Death Guard",
+          "keyword": "Death Guard",
+          "count": 1
+        },
+        {
+          "source": "Death Guard",
+          "keyword": "Heretic Astartes",
+          "count": 1
+        },
+        {
+          "source": "Emperor’s Children",
+          "keyword": "Emperor’s Children",
+          "count": 1
+        },
+        {
+          "source": "Emperor’s Children",
+          "keyword": "Heretic Astartes",
+          "count": 1
+        }
+      ],
+      "sample_datasheets": [
+        {
+          "name": "Abaddon The Despoiler",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Huron Blackheart",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Cypher",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Fabius Bile",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord In Terminator Armour",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord On Bike",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord On Juggernaut",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord On Disc Of Tzeentch",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord On Palanquin Of Nurgle",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord On Steed Of Slaanesh",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Dark Apostle",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Heretic Astartes Daemon Prince",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sorcerer",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sorcerer In Terminator Armour",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sorcerer On Bike",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sorcerer On Disc Of Tzeentch",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sorcerer On Palanquin Of Nurgle",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sorcerer On Steed Of Slaanesh",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Warpsmith",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Cultist Mob",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Terminator Squad",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chosen",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Possessed",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Helbrute",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Rhino",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Bikers",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Raptors",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Warp Talons",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Spawn",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Heldrake",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Land Raider",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Predator Destructor",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Vindicator",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Obliterators",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Havocs",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Forgefiend",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Maulerfiend",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Defiler",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Khorne Lord Of Skulls",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Blood Slaughterer",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Greater Blight Drone",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Decimator",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Kytan Ravager",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Greater Brass Scorpion",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Deimos Predator",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Dreadclaw Drop Pod",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Kharybdis Assault Claw",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Hell Blade",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Hell Talon",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Thunderhawk",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Exalted Champion",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Haarken Worldclaimer",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Master Of Possession",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Lord Discordant On Helstalker",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Master Of Executions",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Venomcrawler",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Noctilith Crown",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Rogue Psyker",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Negavolt Cultists",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Fellgor Beastmen",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Dark Commune",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Legionaries",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Accursed Cultists",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Predator Annihilator",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Traitor Enforcer",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Traitor Guardsmen Squad",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Mutoid Vermin",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Gellerpox Infected",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Vashtorr The Arkifane",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Heretic Astartes Daemon Prince With Wings",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Renegade Enforcer",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Renegade Heavy Weapons Squad",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Renegade Ogryn Beast Handler",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Renegade Ogryn Brutes",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Renegade Plague Ogryns",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Khorne Berzerkers",
+          "source_name": "World Eaters",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "World Eaters",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Rubric Marines",
+          "source_name": "Thousand Sons",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Thousand Sons",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Plague Marines",
+          "source_name": "Death Guard",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Death Guard",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Terrax-pattern Termite",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Land Raider Achilles",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Land Raider Proteus",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Fire Raptor Gunship",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Spartan",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Deredeo Dreadnought",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Cerberus",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Kratos",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sokar-pattern Stormbird",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sicaran Battle Tank",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Mastodon",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Leviathan Dreadnought",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Fellblade",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Relic Contemptor Dreadnought",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Whirlwind Scorpius",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Xiphon Interceptor",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Rapier Carrier",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Storm Eagle Gunship",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sicaran Venator",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Typhon",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Sicaran Punisher",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Falchion",
+          "source_name": "Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Chaos Lord with Jump Pack",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Cultist Firebrand",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Cultist Mob with Firearms",
+          "source_name": "Chaos Space Marines (Warhammer Legends)",
+          "source_edition": "0",
+          "source_version": null,
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Nemesis Claw",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Noise Marines",
+          "source_name": "Emperor’s Children",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Emperor’s Children",
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Masters of the Maelstrom",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Red Corsairs Raiders",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Red Corsairs Reave-Captain",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Kravek Morne",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        },
+        {
+          "name": "Mutilators",
+          "source_name": "Chaos Space Marines",
+          "source_edition": "11",
+          "source_version": "1.2",
+          "faction_keywords": [
+            "Heretic Astartes"
+          ]
+        }
+      ]
+    }
+  },
+  "titan_related_sources": [
+    {
+      "id": "000000270",
+      "name": "Adeptus Titanicus (Forge World)",
+      "type": "Faction Pack",
+      "edition": "11",
+      "version": "1.1",
+      "errata_date": "22.07.2026 0:00:00",
+      "errata_link": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_adeptus_titanicus-pkhrobh6xn-nmtoszeaxw.pdf"
+    }
+  ]
+}
