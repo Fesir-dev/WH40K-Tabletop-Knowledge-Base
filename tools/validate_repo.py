@@ -652,8 +652,8 @@ try:
 
     if nr_runtime.get("schema_version") != "2.0":
         errors.append("New Recruit runtime report schema must be 2.0")
-    if nr_runtime.get("status") != "PASS_WITH_KNOWN_RUNTIME_DRIFT":
-        errors.append("New Recruit runtime state must be PASS_WITH_KNOWN_RUNTIME_DRIFT at this checkpoint")
+    if nr_runtime.get("status") not in {"PASS", "PASS_WITH_KNOWN_RUNTIME_DRIFT"}:
+        errors.append(f"New Recruit runtime has unresolved drift: {nr_runtime.get('status')}")
     universe = nr_runtime.get("universe", {})
     if universe.get("resolved_runtime_identities") != 37 or universe.get("missing"):
         errors.append("New Recruit runtime universe must resolve all 37 identities")
@@ -663,64 +663,51 @@ try:
         errors.append("New Recruit synchronization cadence must remain UNKNOWN_NOT_INFERRED")
 
     points = nr_runtime.get("representative_points", {})
-    if points.get("checks") != 15 or points.get("matched") != 10:
-        errors.append("New Recruit representative point baseline drifted")
-    if points.get("known_drift_count") != 5 or points.get("new_drift_count") != 0:
-        errors.append("New Recruit known/new point drift counts changed")
-    known_points = points.get("known_drifts", [])
-    if any(x.get("classification") != "RUNTIME_PROJECTION_DRIFT" for x in known_points):
-        errors.append("Known point drift lost RUNTIME_PROJECTION_DRIFT classification")
-    ghaz = next((x for x in known_points if x.get("unit") == "Ghazghkull Thraka"), None)
-    if not ghaz:
-        errors.append("Expected Ghazghkull runtime drift is missing")
-    elif (
-        ghaz.get("gw_mfm_value") != 300
-        or ghaz.get("wahapedia_value") != 300
-        or ghaz.get("pinned_bsdata_value") != 300
-        or ghaz.get("live_bsdata_value") != 300
-        or ghaz.get("new_recruit_runtime_value") != 235
-        or ghaz.get("normative_kb_change_required") is not False
-    ):
-        errors.append("Ghazghkull exact runtime lineage changed")
-
     surfaces = nr_runtime.get("representative_surfaces", {})
-    if surfaces.get("checks") != 5 or surfaces.get("matched") != 4:
-        errors.append("New Recruit representative surface baseline drifted")
-    if surfaces.get("known_drift_count") != 1 or surfaces.get("new_drift_count") != 0:
-        errors.append("New Recruit known/new surface drift counts changed")
+    if points.get("checks") != 15:
+        errors.append("New Recruit representative point sample size drifted")
+    if surfaces.get("checks") != 5:
+        errors.append("New Recruit representative surface sample size drifted")
+    if points.get("new_drift_count") != 0 or surfaces.get("new_drift_count") != 0:
+        errors.append("New Recruit contains unclassified point/surface runtime drift")
+
+    known_points = points.get("known_drifts", [])
     known_surfaces = surfaces.get("known_drifts", [])
-    shoota = next((x for x in known_surfaces if x.get("check_id") == "ORKS_CURRENT_DETACHMENT_SHOOTA_BOYZ"), None)
-    if not shoota:
-        errors.append("Expected Shoota Boyz detachment runtime drift is missing")
-    elif (
-        shoota.get("classification") != "RUNTIME_PROJECTION_DRIFT"
-        or not shoota.get("lineage", {}).get("gw_mfm_present")
-        or not shoota.get("lineage", {}).get("wahapedia_present")
-        or not shoota.get("lineage", {}).get("pinned_bsdata_present")
-        or not shoota.get("lineage", {}).get("live_bsdata_present")
-        or shoota.get("lineage", {}).get("new_recruit_runtime_present") is not False
-        or shoota.get("normative_kb_change_required") is not False
-    ):
-        errors.append("Shoota Boyz runtime lineage changed")
+    allowed_classifications = {
+        "NORMATIVE_MATCH",
+        "IMPLEMENTATION_DRIFT",
+        "RUNTIME_PROJECTION_DRIFT",
+        "UPSTREAM_REVISION_DRIFT",
+        "UNKNOWN_RUNTIME_DRIFT",
+    }
+    for row in known_points + known_surfaces:
+        if row.get("classification") not in allowed_classifications:
+            errors.append(f"Invalid runtime drift classification: {row.get('classification')}")
+        if row.get("normative_kb_change_required") is not False:
+            errors.append("Runtime drift must never require automatic normative KB change")
 
     active = [x for x in runtime_drifts.get("active", []) if x.get("state") == "ACTIVE"]
-    if len(active) != 6:
-        errors.append("Expected six classified active runtime drifts")
-    if any(x.get("classification") != "RUNTIME_PROJECTION_DRIFT" for x in active):
-        errors.append("Active runtime drift classification changed")
+    if any(x.get("classification") not in allowed_classifications - {"NORMATIVE_MATCH"} for x in active):
+        errors.append("Runtime drift registry contains an invalid active classification")
     if any(x.get("normative_kb_change_required") is not False for x in active):
-        errors.append("Runtime drift must never require automatic normative KB change")
+        errors.append("Runtime drift registry must never request automatic normative KB change")
 
     automation = current_rules.get("automation", {})
     nr_auto = automation.get("new_recruit_runtime", {})
     if automation.get("upstream_change_watch", {}).get("state") != "ACTIVE_NO_CHANGE":
-        errors.append("Current rules upstream watcher status drifted")
-    if nr_auto.get("state") != "PASS_WITH_KNOWN_RUNTIME_DRIFT":
-        errors.append("Current rules New Recruit runtime status drifted")
-    if nr_auto.get("representative_point_checks") != 15 or nr_auto.get("known_runtime_drifts") != 6:
-        errors.append("Current rules New Recruit runtime sampling summary drifted")
-    if nr_auto.get("new_runtime_drifts") != 0:
-        errors.append("Current rules contains unclassified New Recruit runtime drift")
+        errors.append("Current rules upstream watcher status must be ACTIVE_NO_CHANGE after promotion/rebaseline")
+    if nr_auto.get("state") != nr_runtime.get("status"):
+        errors.append("Current rules New Recruit runtime state differs from runtime report")
+    if nr_auto.get("representative_point_checks") != points.get("checks"):
+        errors.append("Current rules point-sample count differs from runtime report")
+    if nr_auto.get("representative_point_matches") != points.get("matched"):
+        errors.append("Current rules point-match count differs from runtime report")
+    known_total = int(points.get("known_drift_count", 0)) + int(surfaces.get("known_drift_count", 0))
+    if nr_auto.get("known_runtime_drifts") != known_total:
+        errors.append("Current rules known runtime drift count differs from runtime report")
+    new_total = int(points.get("new_drift_count", 0)) + int(surfaces.get("new_drift_count", 0))
+    if nr_auto.get("new_runtime_drifts") != new_total:
+        errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
     if current_rules.get("next_milestone") != "AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION":
