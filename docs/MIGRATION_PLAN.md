@@ -1,57 +1,59 @@
 # Migration plan
 
-## Phase 1 — bootstrap and preserve history
+## Phase 1 — bootstrap and preservation
 
-Status: **in progress / largely complete**
+Status: **COMPLETE**
 
-- repository governance;
-- source/provenance contracts;
-- old archive identities and checksums;
-- Custodes physical collection;
-- legacy rules engine and core regressions;
-- semantic-core file index;
-- first dated rules snapshot.
+- repository governance and provenance;
+- exact legacy archive preservation;
+- historical Rules Assistant v0.9 baseline;
+- Custodes physical collection baseline;
+- legacy semantic-core index and regressions.
 
-## Phase 2 — materialize reusable legacy semantics
+## Phase 2 — external-source architecture
 
-Priority order:
+Status: **COMPLETE**
 
-1. Adeptus Custodes — first because collection + rules can be connected.
-2. global roster/interaction semantics.
-3. remaining seven tracked factions.
-4. enhancement/stratagem/keyword layers where useful for diffs.
-5. historical regression corpus.
+- GW normative authority;
+- Wahapedia mirror;
+- BSData structured implementation;
+- New Recruit runtime projection;
+- competitive analytics/evidence model;
+- source conflict/freshness contracts.
 
-Legacy objects remain under `legacy/` or dated `snapshots/`.
+## Phase 3 — FULL 11E CURRENT INGESTION v1
 
-## Phase 3 — current rules refresh
+Status: **ACTIVE**
 
-For each domain:
+See `docs/CURRENT_INGESTION_PLAN.md`.
 
-1. fetch/check official source;
-2. record source version/date/hash;
-3. diff against historical snapshot;
-4. normalize changed facts;
-5. validate;
-6. only then promote to `CURRENT_VERIFIED`.
+Current starting condition on 2026-09-29:
+
+- 37 roster catalogues identified from pinned BSData;
+- 0 factions with complete normalized current coverage;
+- 8 factions with historical migrated material;
+- current MFM source verified as updated 2026-09-02;
+- Space Marines and Adeptus Custodes tracked as active release transitions.
 
 ## Phase 4 — collection intelligence
 
-- collection-aware legal roster solver;
-- physical body allocation;
-- shared weapon/bit allocation;
-- build/purchase gap analysis;
-- roster suggestions based on owned models.
+Status: **PENDING**
 
-## Phase 5 — hobby inventory
+- collection-aware legality solver;
+- physical body/bit allocation;
+- purchase/build gap analysis;
+- collection-constrained roster recommendations.
 
-Import and normalize:
+## Phase 5 — hobby knowledge
 
-- paints;
-- primers;
-- washes/contrasts;
-- mediums/thinners;
-- varnishes;
-- basing materials;
-- brushes/tools;
-- painting recipes and faction schemes.
+Status: **PARTIAL / PAINTING COMPLETE**
+
+Painting workbook v25 is already preserved and normalized:
+
+- 217 physical paint/material containers;
+- 212 unique product identities;
+- 540 recipes;
+- army painting pipelines;
+- active Demon Prince project.
+
+Future hobby additions can cover tools, basing inventory, decals, magnets and other materials not yet normalized.

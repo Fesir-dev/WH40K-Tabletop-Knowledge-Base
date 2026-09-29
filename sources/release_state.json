@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-29",
+  "rule": "Current legal rules and announced future rules are distinct states. Preview material never replaces current legal data before release.",
+  "states": [
+    "CURRENT_LEGAL",
+    "UPCOMING_PREVIEW_PARTIAL",
+    "RELEASE_PENDING",
+    "PREORDER_ANNOUNCED",
+    "SUPERSEDED",
+    "LEGENDS"
+  ],
+  "transitions": [
+    {
+      "id": "ORKS_CODEX_2026",
+      "factions": [
+        "orks"
+      ],
+      "current_legal_state": "CURRENT_LEGAL",
+      "upcoming_state": null,
+      "checked_at": "2026-09-29",
+      "official_evidence": [
+        {
+          "url": "https://www.warhammer-community.com/en-gb/articles/x82yzzth/codex-orks-points-are-live-on-the-munitorum-field-manual/",
+          "published_at": "2026-09-02",
+          "note": "GW states Codex: Orks points and detachments/Force Dispositions are live in MFM/app."
+        }
+      ]
+    },
+    {
+      "id": "SPACE_MARINES_CODEX_2026",
+      "factions": [
+        "black_templars",
+        "blood_angels",
+        "dark_angels",
+        "deathwatch",
+        "imperial_fists",
+        "iron_hands",
+        "raven_guard",
+        "salamanders",
+        "space_marines",
+        "space_wolves",
+        "ultramarines",
+        "white_scars"
+      ],
+      "current_legal_state": "CURRENT_LEGAL",
+      "upcoming_state": "RELEASE_PENDING",
+      "scheduled_release_date": "2026-10-03",
+      "date_confidence": "INFERRED_FROM_OFFICIAL_RELATIVE_DATE",
+      "checked_at": "2026-09-29",
+      "official_evidence": [
+        {
+          "url": "https://www.warhammer-community.com/en-gb/articles/zuwukdba/sunday-preview-might-of-the-ten-thousand/",
+          "published_at": "2026-09-27",
+          "note": "GW says Codex: Space Marines releases on the following Saturday and brings sweeping updates to Space Marines."
+        },
+        {
+          "url": "https://www.warhammer-community.com/en-gb/articles/voakmnny/space-marines-detachments-blood-angels-and-dark-angels/",
+          "published_at": "2026-09-15",
+          "note": "GW states Blood Angels, Dark Angels, Space Wolves, Black Templars and Deathwatch will be updated when Codex: Space Marines releases."
+        }
+      ]
+    },
+    {
+      "id": "ADEPTUS_CUSTODES_CODEX_2026",
+      "factions": [
+        "adeptus_custodes"
+      ],
+      "current_legal_state": "CURRENT_LEGAL",
+      "upcoming_state": "UPCOMING_PREVIEW_PARTIAL",
+      "preorder_state": "PREORDER_ANNOUNCED",
+      "checked_at": "2026-09-29",
+      "official_evidence": [
+        {
+          "url": "https://www.warhammer-community.com/en-gb/articles/2xxurx9j/first-look-adeptus-custodes-datasheets/",
+          "published_at": "2026-09-24",
+          "note": "Partial preview of new Custodes datasheets; not promoted to current legal data."
+        },
+        {
+          "url": "https://www.warhammer-community.com/en-gb/articles/joz5iubm/your-first-look-at-13-new-adeptus-custodes-detachments/",
+          "published_at": "2026-09-28",
+          "note": "Preview of 13 new detachments; still preview material."
+        },
+        {
+          "url": "https://www.warhammer-community.com/en-gb/articles/zuwukdba/sunday-preview-might-of-the-ten-thousand/",
+          "published_at": "2026-09-27",
+          "note": "GW announces new Codex: Adeptus Custodes for the following preorder window."
+        }
+      ]
+    }
+  ]
+}

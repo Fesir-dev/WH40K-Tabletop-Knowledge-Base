@@ -1,0 +1,768 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-29",
+  "status": "CURRENT_INGESTION_NOT_STARTED",
+  "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
+  "global": {
+    "catalogued_roster_universe": 37,
+    "current_normalized_factions": 0,
+    "historical_material_factions": 8,
+    "tests_before_this_pass": 0
+  },
+  "dimensions": [
+    "points",
+    "unit_sizes",
+    "leader_relations",
+    "detachment_points",
+    "force_dispositions",
+    "datasheets",
+    "wargear_constraints",
+    "keywords",
+    "detachments",
+    "enhancements",
+    "stratagems",
+    "faq_errata"
+  ],
+  "factions": [
+    {
+      "slug": "aeldari_craftworlds",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "drukhari",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "chaos_daemons",
+      "status": "HISTORICAL_ONLY",
+      "current_normalized": false,
+      "historical_material": true,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "chaos_knights",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "chaos_space_marines",
+      "status": "HISTORICAL_ONLY",
+      "current_normalized": false,
+      "historical_material": true,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "death_guard",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "emperors_children",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "thousand_sons",
+      "status": "HISTORICAL_ONLY",
+      "current_normalized": false,
+      "historical_material": true,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "titanicus_traitoris",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "world_eaters",
+      "status": "HISTORICAL_ONLY",
+      "current_normalized": false,
+      "historical_material": true,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "genestealer_cults",
+      "status": "HISTORICAL_ONLY",
+      "current_normalized": false,
+      "historical_material": true,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "adepta_sororitas",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "adeptus_custodes",
+      "status": "HISTORICAL_ONLY",
+      "current_normalized": false,
+      "historical_material": true,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "adeptus_mechanicus",
+      "status": "HISTORICAL_ONLY",
+      "current_normalized": false,
+      "historical_material": true,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "adeptus_titanicus",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "agents_of_the_imperium",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "astra_militarum",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "black_templars",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "blood_angels",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "dark_angels",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "deathwatch",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "grey_knights",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "imperial_fists",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "imperial_knights",
+      "status": "HISTORICAL_ONLY",
+      "current_normalized": false,
+      "historical_material": true,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "iron_hands",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "raven_guard",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "salamanders",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "space_marines",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "space_wolves",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "ultramarines",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "white_scars",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "leagues_of_votann",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "necrons",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "orks",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "tau_empire",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "tyranids",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    },
+    {
+      "slug": "unaligned_forces",
+      "status": "SKELETON_ONLY",
+      "current_normalized": false,
+      "historical_material": false,
+      "coverage": {
+        "points": 0,
+        "unit_sizes": 0,
+        "leader_relations": 0,
+        "detachment_points": 0,
+        "force_dispositions": 0,
+        "datasheets": 0,
+        "wargear_constraints": 0,
+        "keywords": 0,
+        "detachments": 0,
+        "enhancements": 0,
+        "stratagems": 0,
+        "faq_errata": 0
+      }
+    }
+  ]
+}

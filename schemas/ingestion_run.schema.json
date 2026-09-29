@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/ingestion_run.schema.json",
+  "title": "WH40K Current Ingestion Run",
+  "type": "object",
+  "required": [
+    "run_id",
+    "started_at",
+    "mode",
+    "source_revisions",
+    "affected_factions",
+    "result"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "SOURCE_INVENTORY",
+        "CURRENT_REFRESH",
+        "DIFF_ONLY",
+        "PROMOTION"
+      ]
+    },
+    "source_revisions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "affected_factions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "changed_objects": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "coverage_before": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "coverage_after": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "PARTIAL",
+        "FAIL",
+        "NO_CHANGE"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

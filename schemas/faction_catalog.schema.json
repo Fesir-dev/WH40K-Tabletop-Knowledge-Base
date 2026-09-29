@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/faction_catalog.schema.json",
+  "title": "WH40K 11E Faction/Roster Universe Catalog",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "factions"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "as_of": {
+      "type": "string"
+    },
+    "factions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "slug",
+          "name",
+          "roster_kind",
+          "bsdata_path",
+          "kb_current_status",
+          "current_normalized"
+        ],
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "roster_kind": {
+            "enum": [
+              "primary_faction",
+              "astartes_supplement",
+              "titan_force",
+              "auxiliary_force"
+            ]
+          },
+          "parent_slug": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "bsdata_path": {
+            "type": "string"
+          },
+          "legacy_rules_material": {
+            "type": "boolean"
+          },
+          "personal_collection": {
+            "type": "boolean"
+          },
+          "kb_current_status": {
+            "enum": [
+              "SKELETON_ONLY",
+              "HISTORICAL_ONLY",
+              "PARTIAL_CURRENT",
+              "CURRENT_VERIFIED"
+            ]
+          },
+          "current_normalized": {
+            "type": "boolean"
+          },
+          "release_track": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

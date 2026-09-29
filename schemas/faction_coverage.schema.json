@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/faction_coverage.schema.json",
+  "title": "WH40K Faction Coverage Report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "as_of",
+    "dimensions",
+    "factions"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "as_of": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "factions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "slug",
+          "status",
+          "current_normalized",
+          "coverage"
+        ],
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "current_normalized": {
+            "type": "boolean"
+          },
+          "coverage": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

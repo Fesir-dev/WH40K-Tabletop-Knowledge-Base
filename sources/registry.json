@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "3.0",
   "as_of": "2026-09-29",
   "status": "CURRENT_PENDING_RECHECK",
   "authority_policy": {
@@ -19,7 +19,7 @@
       "publisher": "Games Workshop",
       "authority": "official_primary",
       "source_role": "normative",
-      "status": "CURRENT_PENDING_RECHECK",
+      "status": "CURRENT_VERIFIED",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "checked_at": "2026-09-29",
       "use_for": [
@@ -28,6 +28,11 @@
         "faq_errata",
         "faction_updates",
         "event_companion"
+      ],
+      "source_health": "PASS",
+      "repository_coverage_state": "NOT_INGESTED",
+      "notes": [
+        "Downloads endpoint verified live on 2026-09-29. This does not imply all faction content has been normalized."
       ]
     },
     {
@@ -36,15 +41,23 @@
       "publisher": "Games Workshop",
       "authority": "official_primary",
       "source_role": "normative",
-      "status": "CURRENT_PENDING_RECHECK",
+      "status": "CURRENT_VERIFIED",
       "url": "https://mfm.warhammer-community.com/en/",
       "checked_at": "2026-09-29",
       "use_for": [
         "points",
+        "unit_sizes",
+        "leader_support_relations",
         "detachment_points",
-        "enhancement_costs",
-        "leader_support_relations"
-      ]
+        "force_dispositions"
+      ],
+      "source_health": "PASS",
+      "repository_coverage_state": "NOT_INGESTED",
+      "observed_revision": {
+        "updated_at": "2026-09-02",
+        "verified_at": "2026-09-29",
+        "evidence_url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/"
+      }
     },
     {
       "id": "GW_40K_APP",
@@ -59,7 +72,9 @@
         "app_only_wording",
         "datasheet_crosscheck",
         "living_rules_state"
-      ]
+      ],
+      "source_health": "PENDING",
+      "repository_coverage_state": "NOT_INGESTED"
     },
     {
       "id": "WAHAPEDIA_11E",
@@ -82,7 +97,9 @@
       "notes": [
         "Direct text retrieval was verified for 11E Core Rules, Rules Appendix, faction pages and Event Companion on 2026-09-29.",
         "Never overrides applicable official Games Workshop evidence."
-      ]
+      ],
+      "source_health": "PASS",
+      "repository_coverage_state": "NOT_INGESTED"
     },
     {
       "id": "BSDATA_WH40K_11E",
@@ -112,7 +129,9 @@
       "notes": [
         "Primary upstream catalogue source for New Recruit Warhammer 40,000 11E runtime.",
         "Community-maintained implementation; not normative rules authority."
-      ]
+      ],
+      "source_health": "PASS",
+      "repository_coverage_state": "NOT_INGESTED"
     },
     {
       "id": "NEW_RECRUIT_RUNTIME",
@@ -129,7 +148,9 @@
         "roster_import_export",
         "catalogue_behavior",
         "integration_testing"
-      ]
+      ],
+      "source_health": "PASS",
+      "repository_coverage_state": "RUNTIME_ONLY"
     },
     {
       "id": "NEW_RECRUIT_WIKI",
@@ -145,7 +166,9 @@
         "runtime_projection_crosscheck",
         "unit_and_rule_projection",
         "catalogue_behavior"
-      ]
+      ],
+      "source_health": "PASS",
+      "repository_coverage_state": "RUNTIME_ONLY"
     },
     {
       "id": "NEW_RECRUIT_EDITOR",
@@ -686,5 +709,10 @@
     "source_matrix": "analytics/ANALYTICS_SOURCE_MATRIX.json",
     "independence_rule": "Count independent underlying evidence lineages, not websites. Aggregators sharing BCP/Tabletop Herald/BSData must not multiply confidence.",
     "temporal_rule": "Every recommendation must declare a rules snapshot and analytics window; edition-lifetime, current-patch and recent-week evidence are not interchangeable."
+  },
+  "source_status_semantics": {
+    "status": "Freshness/verification status of the external source observation itself.",
+    "source_health": "Reachability/current-observation health.",
+    "repository_coverage_state": "Whether this source has actually been normalized into the repository. Never infer coverage from status."
   }
 }

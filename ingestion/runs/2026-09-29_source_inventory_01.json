@@ -1,0 +1,67 @@
+{
+  "run_id": "INGEST_2026-09-29_SOURCE_INVENTORY_01",
+  "started_at": "2026-09-29T00:00:00Z",
+  "completed_at": "2026-09-29T00:00:00Z",
+  "mode": "SOURCE_INVENTORY",
+  "source_revisions": [
+    {
+      "source_id": "GW_MFM",
+      "observed_updated_at": "2026-09-02",
+      "state": "PASS"
+    },
+    {
+      "source_id": "BSDATA_WH40K_11E",
+      "commit_sha": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+      "state": "PASS"
+    }
+  ],
+  "affected_factions": [
+    "aeldari_craftworlds",
+    "drukhari",
+    "chaos_daemons",
+    "chaos_knights",
+    "chaos_space_marines",
+    "death_guard",
+    "emperors_children",
+    "thousand_sons",
+    "titanicus_traitoris",
+    "world_eaters",
+    "genestealer_cults",
+    "adepta_sororitas",
+    "adeptus_custodes",
+    "adeptus_mechanicus",
+    "adeptus_titanicus",
+    "agents_of_the_imperium",
+    "astra_militarum",
+    "black_templars",
+    "blood_angels",
+    "dark_angels",
+    "deathwatch",
+    "grey_knights",
+    "imperial_fists",
+    "imperial_knights",
+    "iron_hands",
+    "raven_guard",
+    "salamanders",
+    "space_marines",
+    "space_wolves",
+    "ultramarines",
+    "white_scars",
+    "leagues_of_votann",
+    "necrons",
+    "orks",
+    "tau_empire",
+    "tyranids",
+    "unaligned_forces"
+  ],
+  "changed_objects": [],
+  "conflicts": [],
+  "coverage_before": null,
+  "coverage_after": {
+    "current_normalized_factions": 0,
+    "catalogued_roster_universe": 37
+  },
+  "result": "PASS",
+  "promotion": "NONE",
+  "note": "This run inventories the current roster universe and source revisions only. It does not normalize or promote current rules."
+}

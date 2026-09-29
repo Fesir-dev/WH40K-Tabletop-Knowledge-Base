@@ -138,6 +138,33 @@
     },
     "observed_data_through": {
       "type": "string"
+    },
+    "source_health": {
+      "enum": [
+        "PASS",
+        "PENDING",
+        "FAIL",
+        "UNKNOWN",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "repository_coverage_state": {
+      "enum": [
+        "NOT_INGESTED",
+        "PARTIAL",
+        "COMPLETE",
+        "REFERENCE_ONLY",
+        "RUNTIME_ONLY",
+        "HISTORICAL_ONLY",
+        "PERSONAL_DATA",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "observed_revision": {
+      "type": [
+        "object",
+        "null"
+      ]
     }
   },
   "additionalProperties": true

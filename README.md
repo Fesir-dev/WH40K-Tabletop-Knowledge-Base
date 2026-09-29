@@ -58,10 +58,13 @@ legacy/                  Metadata for superseded project baselines
 - [x] Register BCP/Stat Check/Goonhammer as separate analytics/analysis sources.
 - [x] Build a broader competitive source matrix (raw events → aggregators → list meta → mathhammer → expert analysis).
 - [x] Define a lineage-aware roster recommendation evidence model and schema.
-- [ ] Re-check current official 11E sources and points against the 2026-08-15 checkpoint.
-- [ ] Build automated GW ↔ Wahapedia ↔ BSData diff/normalization pipeline.
-- [ ] Add New Recruit runtime validation/projection checks to the update pipeline.
-- [ ] Expand faction materialization beyond the old local coverage.
+- [x] Verify the current GW downloads endpoint and MFM revision (updated 2026-09-02).
+- [x] Expand the roster-universe catalogue from 8 historical factions to all 37 observed BSData roster catalogues.
+- [x] Separate source health, scoped currentness and repository coverage.
+- [x] Add release-transition tracking, coverage contracts, ingestion-run schema and repository contract tests.
+- [ ] Run FULL 11E CURRENT INGESTION v1 (MFM first, then faction rules).
+- [ ] Build automated GW ↔ Wahapedia ↔ BSData normalization/diff workers.
+- [ ] Add New Recruit runtime validation/projection checks after normalized faction imports.
 - [ ] Add collection-aware roster legality/physical-feasibility solver.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 

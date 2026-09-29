@@ -24,3 +24,7 @@ Implemented contracts include:
 - `roster_recommendation_evidence.schema.json` — patch-scoped, lineage-aware evidence for roster/unit/build recommendations.\n- `painting_inventory.schema.json` — personal paint/material inventory snapshots.\n- `painting_recipe_catalog.schema.json` — normalized painting recipe catalogue.
 
 Schema evolution must be versioned and backwards-aware.
+
+- `faction_catalog.schema.json` — complete roster-universe identities and hierarchy.
+- `faction_coverage.schema.json` — measured normalized current coverage by faction/dimension.
+- `ingestion_run.schema.json` — reproducible source-refresh/diff/promotion run record.

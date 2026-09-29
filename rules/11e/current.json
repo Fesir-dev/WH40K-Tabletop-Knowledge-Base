@@ -1,17 +1,31 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_PENDING_RECHECK",
+  "source_currentness": {
+    "mfm": {
+      "state": "PASS",
+      "updated_at": "2026-09-02",
+      "verified_at": "2026-09-29"
+    },
+    "downloads_endpoint": {
+      "state": "PASS",
+      "verified_at": "2026-09-29"
+    },
+    "core_rules_content": {
+      "state": "PENDING"
+    },
+    "faction_rules_content": {
+      "state": "PENDING"
+    },
+    "app_wording": {
+      "state": "PENDING"
+    }
+  },
+  "repository_coverage": "coverage/current.json",
+  "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "promotion_requirements": [
-    "Recheck official Warhammer 40,000 downloads page",
-    "Recheck current Munitorum Field Manual version and publication/update date",
-    "Recheck relevant current faction pack / faction update state",
-    "Recheck official app wording for rules that are app-dependent",
-    "Cross-check Wahapedia 11E for structured drift detection",
-    "Generate explicit diff against the 2026-08-15 historical checkpoint",
-    "Pass repository regressions after normalizing changed facts"
-  ],
-  "rule": "No migrated 2026-08-15 object is current merely because its legacy filename or legacy status contained CURRENT."
+  "next_milestone": "FULL_11E_CURRENT_INGESTION_V1",
+  "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy."
 }

@@ -1,7 +1,12 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "3.0",
   "as_of": "2026-09-29",
   "status": "CURRENT_PENDING_RECHECK",
+  "semantics": {
+    "source_state": "Whether the external source/revision was checked and is reachable/current within the stated scope.",
+    "scope_state": "Whether the applicable current source for a rules domain was verified.",
+    "repository_coverage": "Tracked separately in coverage/current.json; source PASS never implies data were imported."
+  },
   "required_checks": [
     {
       "id": "GW_40K_DOWNLOADS",
@@ -12,7 +17,8 @@
         "universal_updates",
         "faction_updates"
       ],
-      "state": "PENDING"
+      "state": "PASS",
+      "checked_at": "2026-09-29"
     },
     {
       "id": "GW_MFM",
@@ -20,10 +26,13 @@
       "blocking": true,
       "required_for": [
         "points",
-        "detachments",
-        "enhancement_costs"
+        "leader_relations",
+        "detachment_points",
+        "force_dispositions"
       ],
-      "state": "PENDING"
+      "state": "PASS",
+      "checked_at": "2026-09-29",
+      "observed_updated_at": "2026-09-02"
     },
     {
       "id": "GW_40K_APP",
@@ -31,7 +40,7 @@
       "blocking": true,
       "required_for": [
         "app_wording",
-        "datasheet_and_rules_crosscheck"
+        "app_locked_datasheet_crosscheck"
       ],
       "state": "PENDING"
     },
@@ -68,5 +77,64 @@
       "state": "PASS"
     }
   ],
-  "promotion_policy": "CURRENT_VERIFIED normative rules require all applicable blocking official-primary checks to PASS. Secondary/implementation/runtime checks increase confidence and detect drift but cannot substitute for official evidence."
+  "scope_profiles": {
+    "points": {
+      "required_sources": [
+        "GW_MFM"
+      ],
+      "content_state": "PASS",
+      "repository_dimension": "points"
+    },
+    "leader_relations": {
+      "required_sources": [
+        "GW_MFM"
+      ],
+      "content_state": "PASS",
+      "repository_dimension": "leader_relations"
+    },
+    "detachment_points": {
+      "required_sources": [
+        "GW_MFM"
+      ],
+      "content_state": "PASS",
+      "repository_dimension": "detachment_points"
+    },
+    "force_dispositions": {
+      "required_sources": [
+        "GW_MFM"
+      ],
+      "content_state": "PASS",
+      "repository_dimension": "force_dispositions"
+    },
+    "core_rules": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS"
+      ],
+      "content_state": "PENDING",
+      "repository_dimension": null
+    },
+    "faction_rules": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS"
+      ],
+      "content_state": "PENDING",
+      "repository_dimension": "datasheets"
+    },
+    "app_wording": {
+      "required_sources": [
+        "GW_40K_APP"
+      ],
+      "content_state": "PENDING",
+      "repository_dimension": null
+    },
+    "full_normative_faction": {
+      "required_profiles": [
+        "points",
+        "faction_rules"
+      ],
+      "content_state": "PENDING",
+      "app_required_if_app_only": true
+    }
+  },
+  "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."
 }

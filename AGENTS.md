@@ -67,3 +67,8 @@ Read before external-source work:
 - `tests/`: regressions and invariants.
 - `reports/`: generated audits and migration records.
 - `legacy/`: immutable historical project baselines and preserved artifacts.
+
+28. Source health/currentness and repository coverage are different facts. Never infer imported coverage from a healthy source.
+29. Before claiming current faction data, check both `sources/currentness_gate.json` for the relevant scope and `coverage/current.json` for normalized coverage.
+30. Preview/preorder rules remain separate from CURRENT_LEGAL data. Follow `sources/release_state.json`; never overwrite current rules from preview articles.
+31. A faction/dimension can be promoted to CURRENT_VERIFIED only with applicable official-source currentness, provenance, complete claimed coverage, resolved/scoped conflicts, and passing tests.

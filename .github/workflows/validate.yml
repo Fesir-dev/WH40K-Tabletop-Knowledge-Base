@@ -13,6 +13,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: Compile Python
-        run: python -m compileall -q tools legacy
+        run: python -m compileall -q tools legacy tests
       - name: Validate repository
         run: python tools/validate_repo.py
+      - name: Run repository contract tests
+        run: python -m unittest discover -s tests -v

@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "source_id": "BSDATA_WH40K_11E",
+  "checked_at": "2026-09-29",
+  "commit_sha": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+  "tree_sha": "a21bc561468687b8066069db0cb915d46a99badf",
+  "json_file_count": 46,
+  "roster_catalogue_count": 37,
+  "files": [
+    {
+      "path": "Aeldari - Aeldari Library.json",
+      "role": "shared_or_legends_library"
+    },
+    {
+      "path": "Aeldari - Craftworlds.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Aeldari - Drukhari.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Chaos - Chaos Daemons Library.json",
+      "role": "shared_or_legends_library"
+    },
+    {
+      "path": "Chaos - Chaos Daemons.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Chaos - Chaos Knights Library.json",
+      "role": "shared_or_legends_library"
+    },
+    {
+      "path": "Chaos - Chaos Knights.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Chaos - Chaos Space Marines.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Chaos - Death Guard.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Chaos - Emperor's Children.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Chaos - Thousand Sons.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Chaos - Titanicus Traitoris.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Chaos - World Eaters.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Genestealer Cults.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Adepta Sororitas.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Adeptus Custodes.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Adeptus Mechanicus.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Adeptus Titanicus.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Agents of the Imperium.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Astra Militarum - Library.json",
+      "role": "shared_or_legends_library"
+    },
+    {
+      "path": "Imperium - Astra Militarum.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Black Templars.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Blood Angels.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Dark Angels.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Deathwatch.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Grey Knights.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Imperial Fists.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Imperial Knights - Library.json",
+      "role": "shared_or_legends_library"
+    },
+    {
+      "path": "Imperium - Imperial Knights.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Iron Hands.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Raven Guard.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Salamanders.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Space Marines.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Space Wolves.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - Ultramarines.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Imperium - White Scars.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Leagues of Votann.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Library - Astartes Heresy Legends.json",
+      "role": "shared_or_legends_library"
+    },
+    {
+      "path": "Library - Titans.json",
+      "role": "shared_or_legends_library"
+    },
+    {
+      "path": "Library - Tyranids.json",
+      "role": "shared_or_legends_library"
+    },
+    {
+      "path": "Necrons.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Orks.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "T'au Empire.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Tyranids.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Unaligned Forces.json",
+      "role": "roster_catalogue"
+    },
+    {
+      "path": "Warhammer 40,000.json",
+      "role": "game_system"
+    }
+  ]
+}
