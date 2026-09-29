@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.5",
+  "schema_version": "2.6",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -142,15 +142,32 @@
       "workflow": ".github/workflows/new-recruit-runtime.yml",
       "cadence": "daily",
       "roster_identities_resolved": 37,
-      "representative_point_checks": 10,
-      "representative_point_matches": 9,
-      "known_runtime_drifts": 1,
+      "representative_point_checks": 15,
+      "representative_point_matches": 10,
+      "known_runtime_drifts": 6,
       "new_runtime_drifts": 0,
       "known_drift_registry": "sources/runtime_drift_registry.json",
       "active_known_drift_ids": [
-        "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29"
+        "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
+        "NR_ORKS_BOYZ_POINTS_2026_09_29",
+        "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
+        "NR_ORKS_WARBOSS_POINTS_2026_09_29",
+        "NR_NECRONS_WARRIORS_POINTS_2026_09_29",
+        "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29"
       ],
-      "authority_rule": "Runtime drift never changes normative MFM facts."
+      "authority_rule": "Runtime mismatch never automatically changes normative Games Workshop/MFM data.",
+      "known_point_drifts": 5,
+      "representative_surface_checks": 5,
+      "representative_surface_matches": 4,
+      "known_surface_drifts": 1,
+      "classification_contract": [
+        "NORMATIVE_MATCH",
+        "IMPLEMENTATION_DRIFT",
+        "RUNTIME_PROJECTION_DRIFT",
+        "UPSTREAM_REVISION_DRIFT",
+        "UNKNOWN_RUNTIME_DRIFT"
+      ],
+      "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
     }
   }
 }
