@@ -28,3 +28,4 @@ Schema evolution must be versioned and backwards-aware.
 - `faction_catalog.schema.json` — complete roster-universe identities and hierarchy.
 - `faction_coverage.schema.json` — measured normalized current coverage by faction/dimension.
 - `ingestion_run.schema.json` — reproducible source-refresh/diff/promotion run record.
+- `mfm_faction_snapshot.schema.json` — normalized current MFM page with exact extraction provenance.

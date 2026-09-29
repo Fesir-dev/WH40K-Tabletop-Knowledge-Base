@@ -20,3 +20,13 @@ python tools/check_currentness.py --scope faction_rules --faction adeptus_custod
 ```
 
 A source-current PASS is not a coverage PASS. Use `--require-coverage` when the question depends on data actually normalized into this repository.
+
+## Current MFM query
+
+```bash
+python tools/query_mfm.py orks --summary
+python tools/query_mfm.py adeptus_custodes --unit "Custodian Guard"
+python tools/query_mfm.py imperial_fists --summary
+```
+
+`query_mfm.py` resolves repository roster identities to their MFM source page. For derived Codex-compliant Space Marine chapter views it applies `base_plus_group` unit filtering.
