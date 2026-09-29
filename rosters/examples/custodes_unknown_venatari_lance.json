@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "roster_id": "custodes_unknown_venatari_lance",
+  "faction": "adeptus-custodes",
+  "detachment": "Shield Host",
+  "points_limit": 2000,
+  "units": [
+    {
+      "id": "venatari",
+      "unit": "Venatari Custodians",
+      "models": 3,
+      "paid_wargear": [
+        {
+          "item": "Venatari lance",
+          "quantity": 3
+        }
+      ]
+    }
+  ]
+}
