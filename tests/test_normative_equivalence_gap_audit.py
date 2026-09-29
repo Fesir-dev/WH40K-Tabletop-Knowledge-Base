@@ -1,0 +1,84 @@
+import json
+import sys
+import unittest
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/"tools"))
+
+from audit_normative_equivalence_gaps import build_audit  # noqa: E402
+
+
+class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.generated=build_audit(ROOT)
+        cls.committed=json.loads((ROOT/"reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json").read_text(encoding="utf-8"))
+
+    def test_report_is_reproducible(self):
+        self.assertEqual(self.generated,self.committed)
+
+    def test_authority_boundary(self):
+        a=self.generated["authority_boundary"]
+        self.assertEqual(a["normative_authority"],"GAMES_WORKSHOP")
+        self.assertFalse(a["mirror_hash_match_is_normative_equivalence"])
+        self.assertFalse(a["faction_pack_is_full_codex_replacement"])
+        self.assertFalse(a["app_wording_inference_allowed"])
+
+    def test_current_zero_is_intentional_normative_threshold(self):
+        c=self.generated["coverage_summary"]
+        self.assertEqual(c["roster_universe"],37)
+        self.assertEqual(c["current_normalized_factions"],0)
+        self.assertEqual(c["full_normative_semantic_factions"],0)
+        self.assertEqual(c["secondary_semantic_current_roster_identities"],35)
+        self.assertTrue(all(v==0 for v in c["normative_semantic_complete_by_dimension"].values()))
+        self.assertTrue(all(v==37 for v in c["normative_semantic_zero_by_dimension"].values()))
+
+    def test_mfm_normative_dimensions_are_closed(self):
+        closed={x["id"]:x for x in self.generated["closed_layers"]}
+        mfm=closed["MFM_NORMATIVE_DIMENSIONS"]
+        self.assertEqual(mfm["state"],"CLOSED_CURRENT_NORMATIVE")
+        complete=mfm["evidence"]["complete_roster_identities_by_dimension"]
+        self.assertTrue(all(v==36 for v in complete.values()))
+
+    def test_public_core_rules_are_closable_not_blocked(self):
+        gaps={x["id"]:x for x in self.generated["gaps"]}
+        core=gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]
+        self.assertEqual(core["state"],"CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE")
+        self.assertTrue(core["evidence"]["official_public_source"]["asset_url"].startswith("https://assets.warhammer-community.com/"))
+
+    def test_public_faction_packs_are_supplemental(self):
+        gaps={x["id"]:x for x in self.generated["gaps"]}
+        public=gaps["PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION"]
+        self.assertEqual(public["evidence"]["verified_public_faction_pack_pdfs"],28)
+        full=gaps["FULL_FACTION_CODEX_APP_SEMANTICS"]
+        self.assertEqual(full["evidence"]["public_faction_pack_scope"],"SUPPLEMENTS_CODEX_NOT_FULL_CODEX")
+        self.assertIn("AUTHORIZED_CODEX_APP_EVIDENCE",full["state"])
+
+    def test_app_gap_stays_blocked(self):
+        gaps={x["id"]:x for x in self.generated["gaps"]}
+        app=gaps["GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK"]
+        self.assertEqual(app["state"],"BLOCKED_ON_AUTHORIZED_APP_EVIDENCE")
+        self.assertEqual(app["evidence"]["repository_coverage_state"],"NOT_INGESTED")
+        self.assertEqual(app["evidence"]["gate_state"],"PENDING")
+
+    def test_source_mapping_is_candidate_only(self):
+        m=self.generated["roster_source_mapping"]
+        self.assertEqual(m["counts"],{
+            "DIRECT_NAME_MATCH":25,
+            "NAMING_ALIAS_CANDIDATE":3,
+            "NO_PUBLIC_FACTION_PACK_MAPPING":2,
+            "PARENT_SOURCE_CANDIDATE":7,
+        })
+        self.assertIn("candidates only",m["policy"])
+        unresolved={x["slug"] for x in m["rows"] if x["mapping_state"]=="NO_PUBLIC_FACTION_PACK_MAPPING"}
+        self.assertEqual(unresolved,{"titanicus_traitoris","unaligned_forces"})
+
+    def test_next_pipeline_does_not_promise_full_normalization(self):
+        conclusion=self.generated["conclusion"]
+        self.assertEqual(conclusion["recommended_next_milestone"],"OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE")
+        self.assertIn("must not automatically promote full-faction normalization",conclusion["expected_effect"])
+
+
+if __name__=="__main__":
+    unittest.main()
