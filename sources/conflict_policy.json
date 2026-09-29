@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-29",
+  "states": [
+    "NO_CONFLICT",
+    "SOURCE_CONFLICT",
+    "IMPLEMENTATION_DRIFT",
+    "RUNTIME_PROJECTION_DRIFT",
+    "ANALYTICS_DISAGREEMENT",
+    "EVENT_SCOPE_DIFFERENCE"
+  ],
+  "rules": [
+    {
+      "id": "official_over_secondary",
+      "when": "Applicable current official Games Workshop evidence conflicts with any non-official source.",
+      "resolution": "Official evidence controls normative rule truth; preserve secondary disagreement as drift evidence."
+    },
+    {
+      "id": "wahapedia_vs_bsdata",
+      "when": "Wahapedia and BSData disagree on a rules/points/constraint fact.",
+      "resolution": "SOURCE_CONFLICT; verify official source before promotion."
+    },
+    {
+      "id": "bsdata_vs_newrecruit",
+      "when": "BSData catalogue state and New Recruit runtime/wiki projection disagree.",
+      "resolution": "RUNTIME_PROJECTION_DRIFT; investigate parser/cache/runtime behavior."
+    },
+    {
+      "id": "secondary_agreement_without_official",
+      "when": "Wahapedia, BSData and New Recruit agree but applicable official evidence has not been checked.",
+      "resolution": "May record HIGH_CONFIDENCE_SECONDARY evidence, but normative fact remains CURRENT_PENDING_RECHECK."
+    },
+    {
+      "id": "analytics_never_rules",
+      "when": "Goonhammer, Stat Check, BCP or community discussion conflicts with normative rule data.",
+      "resolution": "Keep analysis/empirical claim separate. Never modify normative rules from analytics."
+    },
+    {
+      "id": "event_overlay",
+      "when": "WTC or another event pack/ruling differs from global matched-play rules.",
+      "resolution": "EVENT_SCOPE_DIFFERENCE; apply only when that event ruleset is explicitly selected."
+    }
+  ]
+}
