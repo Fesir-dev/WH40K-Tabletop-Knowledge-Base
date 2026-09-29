@@ -1,54 +1,258 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "as_of": "2026-09-29",
   "status": "CURRENT_PENDING_RECHECK",
   "authority_policy": {
-    "rules_order": [
-      "official Games Workshop / Warhammer Community current rules and updates",
-      "official Warhammer 40,000 app where applicable",
-      "Wahapedia 11E as secondary structured cross-check",
-      "legacy local snapshots"
-    ],
-    "conflict_rule": "newer applicable official source wins; unresolved scope/version conflicts remain UNKNOWN until verified",
-    "collection_rule": "direct user-confirmed physical ownership state outranks roster inference"
+    "normative_rule": "Only applicable current official Games Workshop sources can promote a rules fact to CURRENT_VERIFIED.",
+    "mirror_rule": "Wahapedia is the preferred readable current mirror/discovery source, but cannot override official evidence.",
+    "implementation_rule": "BSData/wh40k-11e is the preferred machine-readable roster implementation cross-check. Its data can expose constraints and drift but cannot override official rules.",
+    "runtime_rule": "New Recruit is a runtime projection of catalogue data. It validates how structured data behaves for players; it is not an independent normative rules authority.",
+    "analytics_rule": "Tournament datasets and expert analysis describe observed play and interpretation. They never mutate normative rules facts.",
+    "event_rule": "Event/WTC rulings are scoped overlays and must not be promoted to global 40K rules.",
+    "conflict_rule": "Applicable current official evidence wins. Secondary disagreement creates SOURCE_CONFLICT and requires official verification; never guess.",
+    "collection_rule": "Direct user-confirmed physical ownership state outranks roster inference."
   },
   "sources": [
     {
       "id": "GW_40K_DOWNLOADS",
-      "title": "Warhammer 40,000 downloads",
+      "title": "Warhammer 40,000 Downloads",
+      "publisher": "Games Workshop",
       "authority": "official_primary",
+      "source_role": "normative",
       "status": "CURRENT_PENDING_RECHECK",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
-      "checked_at": null
+      "checked_at": "2026-09-29",
+      "use_for": [
+        "core_rules",
+        "rules_updates",
+        "faq_errata",
+        "faction_updates",
+        "event_companion"
+      ]
     },
     {
       "id": "GW_MFM",
       "title": "Munitorum Field Manual",
+      "publisher": "Games Workshop",
       "authority": "official_primary",
+      "source_role": "normative",
       "status": "CURRENT_PENDING_RECHECK",
       "url": "https://mfm.warhammer-community.com/en/",
-      "checked_at": null
+      "checked_at": "2026-09-29",
+      "use_for": [
+        "points",
+        "detachment_points",
+        "enhancement_costs",
+        "leader_support_relations"
+      ]
     },
     {
       "id": "GW_40K_APP",
       "title": "Warhammer 40,000 app",
+      "publisher": "Games Workshop",
       "authority": "official_primary",
+      "source_role": "normative",
       "status": "CURRENT_PENDING_RECHECK",
       "url": null,
-      "checked_at": null
+      "checked_at": null,
+      "use_for": [
+        "app_only_wording",
+        "datasheet_crosscheck",
+        "living_rules_state"
+      ]
     },
     {
       "id": "WAHAPEDIA_11E",
-      "title": "Wahapedia Warhammer 40,000 11th edition",
+      "title": "Wahapedia — Warhammer 40,000 11th edition",
+      "publisher": "Wahapedia",
       "authority": "secondary_reference",
-      "status": "CURRENT_PENDING_RECHECK",
+      "source_role": "current_mirror",
+      "status": "CURRENT_VERIFIED",
       "url": "https://wahapedia.ru/wh40k11ed/",
-      "checked_at": null
+      "checked_at": "2026-09-29",
+      "use_for": [
+        "readable_rules_mirror",
+        "datasheets",
+        "detachments",
+        "stratagems",
+        "keywords",
+        "crosscheck",
+        "drift_detection"
+      ],
+      "notes": [
+        "Direct text retrieval was verified for 11E Core Rules, Rules Appendix, faction pages and Event Companion on 2026-09-29.",
+        "Never overrides applicable official Games Workshop evidence."
+      ]
+    },
+    {
+      "id": "BSDATA_WH40K_11E",
+      "title": "BSData Warhammer 40,000 11th Edition",
+      "publisher": "BSData community",
+      "authority": "structured_implementation",
+      "source_role": "structured_implementation",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://github.com/BSData/wh40k-11e",
+      "checked_at": "2026-09-29",
+      "observed_revision": {
+        "commit_sha": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "commit_date": "2026-09-27",
+        "message": "Fix weapon limits for Berzerkers"
+      },
+      "use_for": [
+        "machine_readable_catalogues",
+        "roster_constraints",
+        "unit_sizes",
+        "wargear_limits",
+        "categories",
+        "keywords",
+        "detachments",
+        "validation_logic",
+        "change_detection"
+      ],
+      "notes": [
+        "Primary upstream catalogue source for New Recruit Warhammer 40,000 11E runtime.",
+        "Community-maintained implementation; not normative rules authority."
+      ]
+    },
+    {
+      "id": "NEW_RECRUIT_RUNTIME",
+      "title": "New Recruit",
+      "publisher": "New Recruit",
+      "authority": "runtime_projection",
+      "source_role": "runtime_projection",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://www.newrecruit.eu/app/MySystems",
+      "checked_at": "2026-09-29",
+      "upstream_source_id": "BSDATA_WH40K_11E",
+      "use_for": [
+        "runtime_validation",
+        "roster_import_export",
+        "catalogue_behavior",
+        "integration_testing"
+      ]
+    },
+    {
+      "id": "NEW_RECRUIT_WIKI",
+      "title": "New Recruit Wiki",
+      "publisher": "New Recruit",
+      "authority": "runtime_projection",
+      "source_role": "runtime_projection",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://www.newrecruit.eu/wiki/",
+      "checked_at": "2026-09-29",
+      "upstream_source_id": "BSDATA_WH40K_11E",
+      "use_for": [
+        "runtime_projection_crosscheck",
+        "unit_and_rule_projection",
+        "catalogue_behavior"
+      ]
+    },
+    {
+      "id": "NEW_RECRUIT_EDITOR",
+      "title": "New Recruit Data Editor",
+      "publisher": "New Recruit",
+      "authority": "tooling_reference",
+      "source_role": "validation_tooling",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://github.com/giloushaker/nr-editor",
+      "checked_at": "2026-09-29",
+      "use_for": [
+        "catalogue_validation",
+        "bsdata_compatible_editing",
+        "future_mcp_validation"
+      ]
+    },
+    {
+      "id": "STAT_CHECK_40K",
+      "title": "Stat Check — 40K Meta",
+      "publisher": "Stat Check",
+      "authority": "empirical_dataset",
+      "source_role": "analytics",
+      "status": "CURRENT_PENDING_RECHECK",
+      "url": "https://www.stat-check.com/the-meta",
+      "checked_at": "2026-09-29",
+      "use_for": [
+        "win_rates",
+        "representation",
+        "matchups",
+        "meta_trends"
+      ]
+    },
+    {
+      "id": "BCP_40K",
+      "title": "Best Coast Pairings",
+      "publisher": "Best Coast Pairings",
+      "authority": "empirical_dataset",
+      "source_role": "analytics",
+      "status": "CURRENT_PENDING_RECHECK",
+      "url": "https://www.bestcoastpairings.com/",
+      "checked_at": "2026-09-29",
+      "use_for": [
+        "event_results",
+        "placements",
+        "lists_when_available",
+        "raw_tournament_evidence"
+      ]
+    },
+    {
+      "id": "GOONHAMMER_40K",
+      "title": "Goonhammer — Warhammer 40,000",
+      "publisher": "Goonhammer",
+      "authority": "expert_analysis",
+      "source_role": "analysis",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://www.goonhammer.com/category/gaming/warhammer-40k/",
+      "checked_at": "2026-09-29",
+      "use_for": [
+        "competitive_analysis",
+        "rules_interpretation",
+        "faction_reviews",
+        "list_analysis",
+        "meta_context"
+      ],
+      "notes": [
+        "Ruleshammer-style interpretation and competitive analysis must remain attributed analysis, never normative rule truth."
+      ]
+    },
+    {
+      "id": "WTC_40K",
+      "title": "World Team Championship — 40K rules/event material",
+      "publisher": "World Team Championship",
+      "authority": "event_overlay",
+      "source_role": "event_overlay",
+      "status": "CURRENT_PENDING_RECHECK",
+      "url": "https://worldteamchampionship.com/",
+      "checked_at": null,
+      "use_for": [
+        "wtc_event_pack",
+        "wtc_faq",
+        "event_scoped_rulings"
+      ],
+      "notes": [
+        "Always scope WTC material to the relevant event/rules pack."
+      ]
+    },
+    {
+      "id": "BSDATA_WH40K_11E_ISSUES",
+      "title": "BSData wh40k-11e issue tracker",
+      "publisher": "BSData community",
+      "authority": "community_intelligence",
+      "source_role": "community_intelligence",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://github.com/BSData/wh40k-11e/issues",
+      "checked_at": "2026-09-29",
+      "use_for": [
+        "early_warning",
+        "implementation_bugs",
+        "validation_errors",
+        "data_corrections"
+      ]
     },
     {
       "id": "LEGACY_RULES_ASSISTANT_V0_9",
       "title": "Rules Assistant v0.9 checkpoint 2026-08-15",
       "authority": "legacy_project",
+      "source_role": "historical_baseline",
       "status": "HISTORICAL_VERIFIED",
       "sha256": "98bbc892879e9211fadaff158efbd98321b704e0c56e6dd84df2ef69e9b00947"
     },
@@ -56,6 +260,7 @@
       "id": "PERSONAL_CUSTODES_INVENTORY_V0_5",
       "title": "Adeptus Custodes personal physical inventory",
       "authority": "personal_observation",
+      "source_role": "personal_collection",
       "status": "PROVISIONAL",
       "sha256": "6aee2f7bf491f4fe6f254aeecf79dffe84a5579e24a3022aafcea422b9e97f20",
       "checked_at": "2026-07-11"
