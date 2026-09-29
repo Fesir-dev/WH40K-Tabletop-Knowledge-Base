@@ -72,3 +72,14 @@ Read before external-source work:
 29. Before claiming current faction data, check both `sources/currentness_gate.json` for the relevant scope and `coverage/current.json` for normalized coverage.
 30. Preview/preorder rules remain separate from CURRENT_LEGAL data. Follow `sources/release_state.json`; never overwrite current rules from preview articles.
 31. A faction/dimension can be promoted to CURRENT_VERIFIED only with applicable official-source currentness, provenance, complete claimed coverage, resolved/scoped conflicts, and passing tests.
+
+
+## Long-run execution resilience
+
+32. Substantial multi-stage work may remain a long single task, but each completed logical phase must be committed before the next high-risk phase begins.
+33. A long task should normally use 3–6 durable milestones rather than dozens of tiny commits or one giant uncommitted run.
+34. After each durable milestone, update or verify `reports/CURRENT_HANDOFF.md` before proceeding to the next major phase.
+35. GitHub commit history and CI are the recovery authority if the ChatGPT delivery stream fails; never assume a missing chat update implies missing repository work.
+36. Avoid repeated polling of the same workflow when no new state is expected. Prefer one status check at natural milestone boundaries.
+37. Avoid loading entire large JSON files when a targeted summary/range/query is sufficient.
+38. Do not continue far beyond a newly created unstable checkpoint. If a later phase depends on it, require passing validation first.
