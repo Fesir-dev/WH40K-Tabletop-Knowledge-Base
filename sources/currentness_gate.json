@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-29",
+  "status": "CURRENT_PENDING_RECHECK",
+  "required_checks": [
+    {
+      "id": "GW_40K_DOWNLOADS",
+      "authority": "official_primary",
+      "required_for": ["core_rules", "universal_updates", "faction_updates"],
+      "state": "PENDING"
+    },
+    {
+      "id": "GW_MFM",
+      "authority": "official_primary",
+      "required_for": ["points", "detachments", "enhancement_costs"],
+      "state": "PENDING"
+    },
+    {
+      "id": "GW_40K_APP",
+      "authority": "official_primary",
+      "required_for": ["app_wording", "datasheet_and_rules_crosscheck"],
+      "state": "PENDING"
+    },
+    {
+      "id": "WAHAPEDIA_11E",
+      "authority": "secondary_reference",
+      "required_for": ["structured_crosscheck", "drift_detection", "navigation"],
+      "state": "PENDING"
+    }
+  ],
+  "promotion_policy": "CURRENT_VERIFIED requires all applicable official-primary checks to be PASS. Secondary cross-check may identify drift but cannot override official evidence."
+}
