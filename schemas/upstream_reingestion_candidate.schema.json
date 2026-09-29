@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/upstream_reingestion_candidate.schema.json",
+  "title": "Upstream Reingestion Candidate Result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "plan_id",
+    "status",
+    "promotion_gate",
+    "auto_promote"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "plan_id": {
+      "type": "string"
+    },
+    "plan_fingerprint": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "NO_ACTION",
+        "PASS",
+        "PASS_WITH_BLOCKER",
+        "FAIL"
+      ]
+    },
+    "candidate_snapshot_date": {
+      "type": "string"
+    },
+    "changed_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "changed_files_in_isolated_workspace": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifact_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_current_authority_mutations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "promotion_gate": {
+      "enum": [
+        "NOT_APPLICABLE",
+        "ELIGIBLE_FOR_REVIEWED_PROMOTION",
+        "BLOCKED_AUTHORITY_REVALIDATION",
+        "CANDIDATE_FAILED"
+      ]
+    },
+    "auto_promote": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}
