@@ -33,14 +33,65 @@ Wahapedia 11E   BSData/wh40k-11e
 ## Analytics pipeline
 
 ```text
-BCP / event results ──► empirical snapshots
-Stat Check ───────────► aggregated meta snapshots
-Goonhammer ───────────► attributed expert analysis
-community discussion ─► issue/lead discovery
+BCP ─────────────┐
+Tabletop Herald ─┴─► raw event snapshots
+                         │
+              ┌──────────┴───────────┐
+              ▼                      ▼
+      Stat Check / Infinite      Listhammer
+      Archive / Hutber               │
+      aggregate performance          ▼
+                              Meta Merge
+                              list composition
 
-all ──► analytics domain
+BSData ─► Tactical Reroll ─► mathhammer + pick-rate model
+profiles ─► UnitCrunch ────► independent simulation
+
+Goonhammer / Art of War / Fireside / Vanguard / others
+                         └─► attributed expert evidence
+
+all analytics evidence
+        ↓
+lineage de-duplication
+        ↓
+patch/time-window alignment
+        ↓
+ROSTER_RECOMMENDATION_EVIDENCE_MODEL
+        ↓
+collection-aware recommendation
+
 never ──► normative rules mutation
 ```
+
+### Evidence lineage
+
+A derived dashboard is not an independent dataset merely because it is a different website.
+
+Examples:
+
+- Infinite Archive performance data inherits BCP lineage.
+- Meta Merge inherits Listhammer, which inherits BCP/Tabletop Herald event lineage.
+- Hutber inherits BCP/Tabletop Herald for tournament evidence and BSData for list-building reference data.
+- New Recruit/Tactical Reroll/Hutber can share BSData catalogue lineage.
+
+Confidence synthesis therefore counts independent upstream lineages, not raw source count.
+
+### Recommendation snapshots
+
+Every substantial roster recommendation must retain:
+
+- rules snapshot / points snapshot;
+- analytics window start/end;
+- patch/dataslate identity;
+- faction / detachment / Force Disposition context;
+- source IDs and lineage IDs;
+- sample sizes where available;
+- observed vs modelled vs expert evidence;
+- counter-evidence;
+- collection snapshot if collection-constrained;
+- confidence and recommendation state.
+
+See `analytics/ROSTER_RECOMMENDATION_EVIDENCE_MODEL.md`.
 
 ## BSData change ingestion
 
