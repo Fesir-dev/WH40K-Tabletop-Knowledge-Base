@@ -64,7 +64,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Separate source health, scoped currentness and repository coverage.
 - [x] Add release-transition tracking, coverage contracts, ingestion-run schema and repository contract tests.
 - [x] Complete Wave A MFM v1.4 normalization: 30 faction pages / 36 roster identities / points, sizes, Leaders, DP, Force Dispositions and costs.
-- [ ] Continue FULL 11E CURRENT INGESTION v1 with Wave B faction rules.
+- [x] Complete Wave B structural faction ingestion: Wahapedia 11E CSV snapshot, MFM/BSData reconciliation and 35/37 roster-specific structural views.
+- [ ] Complete Wave B semantic rules/FAQ normalization without vendoring long copyrighted prose.
 - [ ] Build automated GW ↔ Wahapedia ↔ BSData normalization/diff workers.
 - [ ] Add New Recruit runtime validation/projection checks after normalized faction imports.
 - [ ] Add collection-aware roster legality/physical-feasibility solver.
@@ -84,3 +85,17 @@ legacy/                  Metadata for superseded project baselines
 Independent audit / ingestion hardening: `reports/INDEPENDENT_REPO_AUDIT_2026-09-29.md`.
 
 Machine-readable current coverage: `coverage/current.json`.
+
+
+## Wave B structural status
+
+Checkpoint: **2026-09-29**.
+
+- Wahapedia CSV last update: `2026-09-28 02:38:04`.
+- Structural roster views complete: **35 / 37**.
+- Unavailable in the Wahapedia 11E roster projection: `titanicus_traitoris`, `unaligned_forces`.
+- Reconciliation: 1,242 MFM/Wahapedia unit-name matches; 1,202 point signatures compared.
+- Retained source conflicts: **11**. MFM remains normative for cost-bearing conflicts.
+- Full semantic rules text and FAQ/errata normalization remain pending; therefore `current_normalized_factions` intentionally remains 0.
+
+See `reports/WAVE_B_STRUCTURAL_CLOSURE_2026-09-29.md`.
