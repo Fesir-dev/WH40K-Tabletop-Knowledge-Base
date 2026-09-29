@@ -1,13 +1,23 @@
-# Preserved legacy upload artifacts
+# Preserved legacy artifacts
 
-The original uploaded ZIP archives are preserved exactly as base64 chunks because GitHub Contents writes text while the source artifacts are binary ZIP files.
+This directory contains the exact original ZIP archives used to bootstrap the repository.
 
-Reconstruction is deterministic:
+## Canonical binary artifacts
 
-```bash
-python tools/reconstruct_legacy_artifacts.py
-```
+- `original/W40K_11E_RULES_ASSISTANT_v0_9_FULL_FACTION_SEMANTICS_20260815.zip`
+  - size: 883437 bytes
+  - SHA-256: `98bbc892879e9211fadaff158efbd98321b704e0c56e6dd84df2ef69e9b00947`
+  - source archive contents: 350 files + 14 directory entries; 3,325,692 uncompressed bytes.
 
-The script concatenates the ordered `.b64` chunks, decodes them, writes the original ZIP and verifies its SHA-256 against `artifact_reconstruction_manifest.json`.
+- `original/W40K_COLLECTION_INVENTORY_v0_5_ADEPTUS_CUSTODES_PROVISIONAL.zip`
+  - size: 32347 bytes
+  - SHA-256: `6aee2f7bf491f4fe6f254aeecf79dffe84a5579e24a3022aafcea422b9e97f20`
+  - source archive contents: 4 files; 250,473 uncompressed bytes.
 
-These artifacts are immutable historical evidence. Do not edit chunk files in place. New project state belongs in normalized/current repository domains.
+GitHub copies were compared byte-for-byte (via identical complete base64 encodings) against the exact Google Drive preservation copies on 2026-09-29.
+
+## Policy
+
+These ZIPs are immutable historical evidence. Do not edit or rebuild them in place.
+
+New work belongs in normalized repository domains. CI verifies the exact artifact size and SHA-256 so corruption or accidental replacement fails validation.
