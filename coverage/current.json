@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "as_of": "2026-09-29",
-  "status": "WAVE_A_MFM_COMPLETE",
+  "status": "WAVE_B_STRUCTURAL_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
   "global": {
     "catalogued_roster_universe": 37,
@@ -12,7 +12,12 @@
     "mfm_last_updated": "2026-09-02",
     "mfm_faction_pages_normalized": 30,
     "mfm_roster_identities_complete": 36,
-    "mfm_roster_identities_not_applicable": 1
+    "mfm_roster_identities_not_applicable": 1,
+    "wave_b_wahapedia_last_update": "2026-09-28 02:38:04",
+    "wave_b_structural_roster_identities_complete": 35,
+    "wave_b_structural_roster_identities_unavailable": 2,
+    "wave_b_reconciliation_conflicts": 11,
+    "full_semantic_current_factions": 0
   },
   "dimensions": [
     "points",
@@ -57,7 +62,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "aeldari"
+      "mfm_source_slug": "aeldari",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/aeldari_craftworlds.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "drukhari",
@@ -83,7 +111,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "drukhari"
+      "mfm_source_slug": "drukhari",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/drukhari.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "chaos_daemons",
@@ -109,7 +160,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "chaos-daemons"
+      "mfm_source_slug": "chaos-daemons",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/chaos_daemons.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "chaos_knights",
@@ -135,7 +209,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "chaos-knights"
+      "mfm_source_slug": "chaos-knights",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/chaos_knights.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "chaos_space_marines",
@@ -161,7 +258,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "chaos-space-marines"
+      "mfm_source_slug": "chaos-space-marines",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/chaos_space_marines.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "death_guard",
@@ -187,7 +307,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "death-guard"
+      "mfm_source_slug": "death-guard",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/death_guard.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "emperors_children",
@@ -213,7 +356,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "emperors-children"
+      "mfm_source_slug": "emperors-children",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/emperors_children.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "thousand_sons",
@@ -239,7 +405,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "thousand-sons"
+      "mfm_source_slug": "thousand-sons",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/thousand_sons.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "titanicus_traitoris",
@@ -265,7 +454,29 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "chaos-titan-legions"
+      "mfm_source_slug": "chaos-titan-legions",
+      "structural_current": false,
+      "wave_b_structural": {
+        "state": "UNAVAILABLE",
+        "source_id": "WAHAPEDIA_11E",
+        "reason": "no mapped Wahapedia 11E roster view",
+        "dimensions": {
+          "roster_view": 0,
+          "datasheet_index": 0,
+          "model_profiles": 0,
+          "weapon_profiles": 0,
+          "keyword_index": 0,
+          "ability_index": 0,
+          "options_index": 0,
+          "unit_composition_index": 0,
+          "leader_graph": 0,
+          "detachment_index": 0,
+          "enhancement_index": 0,
+          "stratagem_index": 0
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "world_eaters",
@@ -291,7 +502,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "world-eaters"
+      "mfm_source_slug": "world-eaters",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/world_eaters.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "genestealer_cults",
@@ -317,7 +551,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "genestealer-cults"
+      "mfm_source_slug": "genestealer-cults",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/genestealer_cults.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "adepta_sororitas",
@@ -343,7 +600,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "adepta-sororitas"
+      "mfm_source_slug": "adepta-sororitas",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/adepta_sororitas.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "adeptus_custodes",
@@ -369,7 +649,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "adeptus-custodes"
+      "mfm_source_slug": "adeptus-custodes",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/adeptus_custodes.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "adeptus_mechanicus",
@@ -395,7 +698,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "adeptus-mechanicus"
+      "mfm_source_slug": "adeptus-mechanicus",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/adeptus_mechanicus.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "adeptus_titanicus",
@@ -421,7 +747,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "titan-legions"
+      "mfm_source_slug": "titan-legions",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/adeptus_titanicus.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "agents_of_the_imperium",
@@ -447,7 +796,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "imperial-agents"
+      "mfm_source_slug": "imperial-agents",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/agents_of_the_imperium.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "astra_militarum",
@@ -473,7 +845,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "astra-militarum"
+      "mfm_source_slug": "astra-militarum",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/astra_militarum.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "black_templars",
@@ -499,7 +894,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "black-templars"
+      "mfm_source_slug": "black-templars",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/black_templars.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "blood_angels",
@@ -525,7 +943,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "blood-angels"
+      "mfm_source_slug": "blood-angels",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/blood_angels.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "dark_angels",
@@ -551,7 +992,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "dark-angels"
+      "mfm_source_slug": "dark-angels",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/dark_angels.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "deathwatch",
@@ -577,7 +1041,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "deathwatch"
+      "mfm_source_slug": "deathwatch",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/deathwatch.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "grey_knights",
@@ -603,7 +1090,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "grey-knights"
+      "mfm_source_slug": "grey-knights",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/grey_knights.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "imperial_fists",
@@ -629,7 +1139,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "space-marines"
+      "mfm_source_slug": "space-marines",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/imperial_fists.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "imperial_knights",
@@ -655,7 +1188,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "imperial-knights"
+      "mfm_source_slug": "imperial-knights",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/imperial_knights.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "iron_hands",
@@ -681,7 +1237,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "space-marines"
+      "mfm_source_slug": "space-marines",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/iron_hands.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "raven_guard",
@@ -707,7 +1286,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "space-marines"
+      "mfm_source_slug": "space-marines",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/raven_guard.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "salamanders",
@@ -733,7 +1335,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "space-marines"
+      "mfm_source_slug": "space-marines",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/salamanders.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "space_marines",
@@ -759,7 +1384,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "space-marines"
+      "mfm_source_slug": "space-marines",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/space_marines.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "space_wolves",
@@ -785,7 +1433,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "space-wolves"
+      "mfm_source_slug": "space-wolves",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/space_wolves.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "ultramarines",
@@ -811,7 +1482,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "space-marines"
+      "mfm_source_slug": "space-marines",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/ultramarines.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "white_scars",
@@ -837,7 +1531,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "space-marines"
+      "mfm_source_slug": "space-marines",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/white_scars.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "leagues_of_votann",
@@ -863,7 +1580,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "leagues-of-votann"
+      "mfm_source_slug": "leagues-of-votann",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/leagues_of_votann.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "necrons",
@@ -889,7 +1629,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "necrons"
+      "mfm_source_slug": "necrons",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/necrons.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "orks",
@@ -915,7 +1678,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "orks"
+      "mfm_source_slug": "orks",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/orks.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "tau_empire",
@@ -941,7 +1727,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "tau-empire"
+      "mfm_source_slug": "tau-empire",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/tau_empire.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "tyranids",
@@ -967,7 +1776,30 @@
         "legends_pricing": 100
       },
       "mfm_applicable": true,
-      "mfm_source_slug": "tyranids"
+      "mfm_source_slug": "tyranids",
+      "structural_current": true,
+      "wave_b_structural": {
+        "state": "COMPLETE",
+        "source_id": "WAHAPEDIA_11E",
+        "source_last_update": "2026-09-28 02:38:04",
+        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/tyranids.json",
+        "dimensions": {
+          "roster_view": 100,
+          "datasheet_index": 100,
+          "model_profiles": 100,
+          "weapon_profiles": 100,
+          "keyword_index": 100,
+          "ability_index": 100,
+          "options_index": 100,
+          "unit_composition_index": 100,
+          "leader_graph": 100,
+          "detachment_index": 100,
+          "enhancement_index": 100,
+          "stratagem_index": 100
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     },
     {
       "slug": "unaligned_forces",
@@ -993,7 +1825,43 @@
         "legends_pricing": 0
       },
       "mfm_applicable": false,
-      "mfm_source_slug": null
+      "mfm_source_slug": null,
+      "structural_current": false,
+      "wave_b_structural": {
+        "state": "UNAVAILABLE",
+        "source_id": "WAHAPEDIA_11E",
+        "reason": "no mapped Wahapedia 11E roster view",
+        "dimensions": {
+          "roster_view": 0,
+          "datasheet_index": 0,
+          "model_profiles": 0,
+          "weapon_profiles": 0,
+          "keyword_index": 0,
+          "ability_index": 0,
+          "options_index": 0,
+          "unit_composition_index": 0,
+          "leader_graph": 0,
+          "detachment_index": 0,
+          "enhancement_index": 0,
+          "stratagem_index": 0
+        },
+        "semantic_rule_text_current_verified": false,
+        "faq_errata_current_verified": false
+      }
     }
+  ],
+  "structural_dimensions": [
+    "roster_view",
+    "datasheet_index",
+    "model_profiles",
+    "weapon_profiles",
+    "keyword_index",
+    "ability_index",
+    "options_index",
+    "unit_composition_index",
+    "leader_graph",
+    "detachment_index",
+    "enhancement_index",
+    "stratagem_index"
   ]
 }

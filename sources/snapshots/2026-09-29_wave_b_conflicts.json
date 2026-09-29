@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "state": "SOURCE_CONFLICT",
+  "source_pair": [
+    "WAHAPEDIA_11E",
+    "GW_MFM"
+  ],
+  "conflict_count": 11,
+  "resolution_policy": {
+    "points": "GW_MFM",
+    "detachment_points": "GW_MFM",
+    "enhancement_costs": "GW_MFM",
+    "wahapedia_role": "secondary current mirror; conflicts retained as drift evidence"
+  },
+  "conflicts": [
+    {
+      "type": "DETACHMENT_POINT_MISMATCH",
+      "faction": "chaos_daemons",
+      "detachment": "Daemonic Incursion",
+      "wahapedia": null,
+      "mfm": 3
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "orks",
+      "unit": "Gargantuan Squiggoth",
+      "wahapedia": [
+        [
+          1,
+          440
+        ],
+        [
+          1,
+          490
+        ],
+        [
+          1,
+          500
+        ],
+        [
+          1,
+          550
+        ]
+      ],
+      "mfm": [
+        [
+          1,
+          500
+        ],
+        [
+          1,
+          550
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
+      "unit": "Assault Intercessor Squad",
+      "wahapedia": [
+        [
+          5,
+          75
+        ],
+        [
+          5,
+          80
+        ],
+        [
+          10,
+          150
+        ]
+      ],
+      "mfm": [
+        [
+          5,
+          75
+        ],
+        [
+          10,
+          150
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
+      "unit": "Chaplain With Jump Pack",
+      "wahapedia": [
+        [
+          1,
+          75
+        ],
+        [
+          1,
+          80
+        ]
+      ],
+      "mfm": [
+        [
+          1,
+          75
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
+      "unit": "Vanguard Veteran Squad With Jump Packs",
+      "wahapedia": [
+        [
+          5,
+          105
+        ],
+        [
+          5,
+          110
+        ],
+        [
+          5,
+          115
+        ],
+        [
+          5,
+          120
+        ],
+        [
+          10,
+          210
+        ],
+        [
+          10,
+          220
+        ],
+        [
+          10,
+          230
+        ]
+      ],
+      "mfm": [
+        [
+          5,
+          105
+        ],
+        [
+          5,
+          115
+        ],
+        [
+          10,
+          210
+        ],
+        [
+          10,
+          220
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
+      "unit": "Bladeguard Veteran Squad",
+      "wahapedia": [
+        [
+          3,
+          80
+        ],
+        [
+          3,
+          85
+        ],
+        [
+          3,
+          90
+        ],
+        [
+          3,
+          95
+        ],
+        [
+          6,
+          160
+        ],
+        [
+          6,
+          170
+        ],
+        [
+          6,
+          180
+        ]
+      ],
+      "mfm": [
+        [
+          3,
+          80
+        ],
+        [
+          3,
+          90
+        ],
+        [
+          6,
+          160
+        ],
+        [
+          6,
+          170
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
+      "unit": "Centurion Devastator Squad",
+      "wahapedia": [
+        [
+          3,
+          175
+        ],
+        [
+          6,
+          350
+        ],
+        [
+          6,
+          365
+        ]
+      ],
+      "mfm": [
+        [
+          3,
+          175
+        ],
+        [
+          6,
+          365
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
+      "unit": "Assault Intercessors With Jump Packs",
+      "wahapedia": [
+        [
+          5,
+          85
+        ],
+        [
+          5,
+          95
+        ],
+        [
+          5,
+          105
+        ],
+        [
+          10,
+          160
+        ],
+        [
+          10,
+          170
+        ],
+        [
+          10,
+          180
+        ],
+        [
+          10,
+          190
+        ]
+      ],
+      "mfm": [
+        [
+          5,
+          85
+        ],
+        [
+          5,
+          95
+        ],
+        [
+          10,
+          160
+        ],
+        [
+          10,
+          170
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
+      "unit": "Captain With Jump Pack",
+      "wahapedia": [
+        [
+          1,
+          75
+        ],
+        [
+          1,
+          80
+        ]
+      ],
+      "mfm": [
+        [
+          1,
+          75
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "space_marines",
+      "unit": "Outrider Squad",
+      "wahapedia": [
+        [
+          3,
+          70
+        ],
+        [
+          3,
+          75
+        ],
+        [
+          6,
+          140
+        ]
+      ],
+      "mfm": [
+        [
+          1,
+          60
+        ],
+        [
+          3,
+          70
+        ],
+        [
+          6,
+          140
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "tau_empire",
+      "unit": "Tidewall Shieldline",
+      "wahapedia": [
+        [
+          1,
+          85
+        ]
+      ],
+      "mfm": [
+        [
+          1,
+          20
+        ],
+        [
+          1,
+          85
+        ]
+      ]
+    }
+  ],
+  "source_report": "reports/WAVE_B_RECONCILIATION_2026-09-29.json"
+}

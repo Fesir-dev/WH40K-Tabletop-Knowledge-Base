@@ -1,8 +1,8 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.2",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
-  "status": "CURRENT_PENDING_RECHECK",
+  "status": "CURRENT_STRUCTURAL_READY_SEMANTIC_PENDING",
   "source_currentness": {
     "mfm": {
       "state": "PASS",
@@ -17,7 +17,9 @@
       "state": "PENDING"
     },
     "faction_rules_content": {
-      "state": "PENDING"
+      "state": "STRUCTURAL_PASS_SEMANTIC_PENDING",
+      "verified_at": "2026-09-29",
+      "secondary_mirror_last_update": "2026-09-28 02:38:04"
     },
     "app_wording": {
       "state": "PENDING"
@@ -26,7 +28,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "WAVE_B_STABLE_FACTION_RULES",
+  "next_milestone": "WAVE_B_SEMANTIC_AND_FAQ_CURRENTNESS",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -46,5 +48,20 @@
       "wargear_costs",
       "legends_pricing"
     ]
+  },
+  "wave_b_structural": {
+    "state": "CURRENT_SECONDARY_MIRROR_STRUCTURAL",
+    "snapshot": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/index.json",
+    "wahapedia_last_update": "2026-09-28 02:38:04",
+    "roster_identities_complete": 35,
+    "roster_identities_unavailable": [
+      "titanicus_traitoris",
+      "unaligned_forces"
+    ],
+    "reconciliation_report": "reports/WAVE_B_RECONCILIATION_2026-09-29.json",
+    "source_conflicts": 11,
+    "authority_rule": "GW MFM remains normative for points, detachment points and enhancement costs when Wahapedia differs.",
+    "semantic_rule_text": "PENDING",
+    "faq_errata": "PENDING"
   }
 }
