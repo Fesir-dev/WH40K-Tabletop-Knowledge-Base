@@ -1,0 +1,57 @@
+name: Wave B Wahapedia structural refresh
+
+on:
+  push:
+    paths:
+      - "tools/import_wahapedia_wave_b.py"
+      - ".github/workflows/wave-b-wahapedia.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download and normalize Wahapedia 11E CSV export
+        run: |
+          python tools/import_wahapedia_wave_b.py --download --snapshot-date 2026-09-29
+
+      - name: Validate generated JSON syntax
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("rules/11e/snapshots/2026-09-29/wahapedia")
+          for p in root.rglob("*.json"):
+              json.loads(p.read_text(encoding="utf-8"))
+          json.loads(Path("ingestion/runs/2026-09-29_wahapedia_wave_b_structural.json").read_text(encoding="utf-8"))
+          print("generated JSON: PASS")
+          PY
+
+      - name: Upload raw CSV evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: wahapedia-11e-csv-2026-09-29
+          path: .cache/wahapedia11e/
+          retention-days: 30
+
+      - name: Commit generated structural snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rules/11e/snapshots/2026-09-29/wahapedia ingestion/runs/2026-09-29_wahapedia_wave_b_structural.json
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+          else
+            git commit -m "Generate Wave B Wahapedia structural snapshot"
+            git push
+          fi
