@@ -4,9 +4,6 @@ on:
   push:
     paths:
       - "tools/import_wahapedia_wave_b.py"
-      - "tools/crosscheck_wave_b.py"
-      - "tools/audit_wave_b_views.py"
-      - "tools/build_wave_b_roster_views.py"
       - ".github/workflows/wave-b-wahapedia.yml"
   workflow_dispatch:
 
