@@ -1,0 +1,5597 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "wahapedia_last_update": "2026-09-28 02:38:04",
+  "faction": {
+    "id": "EC",
+    "name": "Emperor’s Children",
+    "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children",
+    "repository_slug": "emperors_children"
+  },
+  "copyright_policy": {
+    "full_prose_stored": false,
+    "rule_text_policy": "Names/metadata/structured characteristics are stored; long prose is represented by SHA-256 fingerprints and fetched from the source on demand."
+  },
+  "sources": [
+    {
+      "id": "000000280",
+      "name": "Emperor’s Children",
+      "type": "Faction Pack",
+      "edition": "11",
+      "version": "1.2",
+      "errata_date": "26.08.2026 0:00:00",
+      "errata_link": "https://assets.warhammer-community.com/eng_wh40k_faction_pack_emperors_children-s7cvl3p8e4-ddwa1akamk.pdf"
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "000004077",
+      "name": "Fulgrim",
+      "role": "Monster Epic Hero",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Fulgrim",
+      "loadout_sha256": "b1e02f1c4b2837c0edd5b600501a0f3511e1450ea53fabfb31f8d0016d9ac6e8",
+      "transport_sha256": null,
+      "damaged_description_sha256": "71948d8060f431f4de130073abbd83174c6addb173602f9fb658047124bc4407",
+      "models": [
+        {
+          "line": "1",
+          "name": "Fulgrim",
+          "m": "16\"",
+          "t": "11",
+          "sv": "2+",
+          "w": "16",
+          "ld": "5+",
+          "oc": "6",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "340"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Malefic lash",
+          "description": "sustained hits 1",
+          "range": "12",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Daemonic blades – strike",
+          "description": "sustained hits 1",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Daemonic blades – sweep",
+          "description": "sustained hits 1",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Serpentine tail",
+          "description": "extra attacks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Mobile",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Monster",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fulgrim",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Primarch",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Daemonic Poisons",
+          "type": "Datasheet",
+          "description_sha256": "56d1d96269b1f048d5471f2222f83a9f61c9581b618144cdf7b0e14998cffc0b",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Daemon Primarch of Slaanesh",
+          "type": "Datasheet",
+          "description_sha256": "ca4a5453fca3cb9ed295ba3b976d9a52f34dee7e8d56000fe3a38bf2f9b4f5c7",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Beguiling Form",
+          "type": "Primarch",
+          "description_sha256": "b1d72de189090371262e4a02612769a0dd06ae044981c6baf2f883812d0c6739",
+          "description_present": true
+        },
+        {
+          "line": "7",
+          "name": "Daemonic Speed",
+          "type": "Primarch",
+          "description_sha256": "0a3e79a2525c27a8a9e8529cfb2cf708c9a9b68d015a79edcb63c064245b59e0",
+          "description_present": true
+        },
+        {
+          "line": "8",
+          "name": "Enthralling Hypnosis (Aura)",
+          "type": "Primarch",
+          "description_sha256": "a4ea46fbde811946433ad6c0f8e82eb3e643dfeff6594625de877ba398e49a45",
+          "description_present": true
+        },
+        {
+          "line": "9",
+          "name": "SUPREME COMMANDER",
+          "type": "Fortification (левая колонка)",
+          "description_sha256": "2ebbbfce0b11fd6edc7b118a64f61b7cd24f57536e191f20c7fe7852f6ed153f",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "5c73bee57b04a5ac48cacf7f2354adff6b472b171643723aff635db03a22239e",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004078",
+      "name": "Lord Exultant",
+      "role": "Infantry Character",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Lord-Exultant",
+      "loadout_sha256": "ffe07337fb1a5cd7aa817b76163c0fd8e6f74327864afa6f11c371038e4ebde1",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Lord Exultant",
+          "m": "7\"",
+          "t": "4",
+          "sv": "3+",
+          "w": "5",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "90"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "100"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Bolt pistol",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Plasma pistol - standard",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Plasma pistol - supercharge",
+          "description": "hazardous, pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Screamer pistol",
+          "description": "ignores cover, pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Master-crafted power sword",
+          "description": "precision",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Phoenix power spear",
+          "description": "lance",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Power fist",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "1",
+          "name": "Rapture lash",
+          "description": "extra attacks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Grenades",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Lord Exultant",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Perfectionists",
+          "type": "Datasheet",
+          "description_sha256": "976574475e227b6f949ee065e273a584f7f82c212f3c9f94f41481a2a68c05d0",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Euphoric Strikes",
+          "type": "Datasheet",
+          "description_sha256": "25e0b51ee3dd0032335245b2395c002487584b176310f4567aeb17cfeca3c061",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "LORD OF THE HOST",
+          "type": "Fortification (левая колонка)",
+          "description_sha256": "7c65e72f945e3895831200eedb4af20037d45b26a7d801cab54e8401d7df48e7",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "fa4e5e4412e5f8f50616cb6fd55a7feb60617a8ee590f620981379a582d9bc8f",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "4c27089703826bee116f67a035f6bd9847ed2e2c0590977a13af8a27e627b252",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "fe0774b894866c3e6e20c6ceee64029c619ccbd67d11a922a4df265945e17374",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004079",
+      "name": "Tormentors",
+      "role": "Battleline",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Tormentors",
+      "loadout_sha256": "db100c751d58154049d31c6aa0ed3b8543fcd6c7acbdb97644bf13bfebce96eb",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Tormentors",
+          "m": "7\"",
+          "t": "4",
+          "sv": "3+",
+          "w": "2",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "5 models",
+          "cost": "80"
+        },
+        {
+          "line": "3",
+          "description": "10 models",
+          "cost": "160"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Bolt pistol",
+          "description": "pistol, precision",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Boltgun",
+          "description": "precision",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Meltagun",
+          "description": "melta 2, precision",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Plasma gun - standard",
+          "description": "precision, rapid fire 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "2",
+          "name": "Plasma gun - supercharge",
+          "description": "hazardous, precision, rapid fire 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Plasma pistol - standard",
+          "description": "pistol, precision",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "2",
+          "name": "Plasma pistol - supercharge",
+          "description": "hazardous, pistol, precision",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "1",
+          "name": "Power sword",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "10",
+          "line_in_wargear": "1",
+          "name": "Rapture lash",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Grenades",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Battleline",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Tormentors",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008345",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Objective Defiled",
+          "type": "Datasheet",
+          "description_sha256": "0f0cca0ae3c12e1647d3a224991a7c20607f000737e0901c0653bf0c91a2f8af",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Icon of Excess",
+          "type": "Wargear",
+          "description_sha256": "2778729a0a4ccff1f29a7fa00e2ebd5310670918440e86806923900807c56e59",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "07a34be4c1bfa1239c1fbaf3cc24a166a6261f0d5d85736ebc952294ac84f027",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "151d781025086ad1403f0dcc1b3dd6a242063ba5fc7435dfe19de4c479d6452f",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "702d4b8723c347a5edb0b50ba5b76880efb0914ec53c4325f5161fa576b04a8e",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "description_sha256": "d02a3c36f99a4145269c3e9e8e20155efc6d29197d7e85e040dab361b00789f6",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "description_sha256": "dbf48a0f7e9af12355b1017d19affe34cd409157ba4332bd9e26ed1ede3420ec",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "983507de156d003a58adab42428a9243421433cd6fe148a4febcca6fd403a7ba",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "b373b06ba90b004483d9b24a4bfe76cec86e4d0ab8534d386b4763272a513ab6",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004080",
+      "name": "Infractors",
+      "role": "Battleline",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Infractors",
+      "loadout_sha256": "ede721231889a6580cc6c89296af476f0e291032902735fc2b493dd73e499918",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Infractors",
+          "m": "7\"",
+          "t": "4",
+          "sv": "3+",
+          "w": "2",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "5 models",
+          "cost": "85"
+        },
+        {
+          "line": "3",
+          "description": "10 models",
+          "cost": "160"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Bolt pistol",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Plasma pistol - standard",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Plasma pistol - supercharge",
+          "description": "hazardous, pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Duelling sabre",
+          "description": "precision",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Power sword",
+          "description": "precision",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Rapture lash",
+          "description": "precision",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infractors",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Grenades",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Battleline",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008344",
+          "type": "Core",
+          "parameter": "6\""
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Excessive Assault",
+          "type": "Datasheet",
+          "description_sha256": "fd3b20edc41911d2b5121ab8b3c9b03122d36bea66a976a737ba8aaf44d1071b",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Icon of Excess",
+          "type": "Wargear",
+          "description_sha256": "2778729a0a4ccff1f29a7fa00e2ebd5310670918440e86806923900807c56e59",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "07a34be4c1bfa1239c1fbaf3cc24a166a6261f0d5d85736ebc952294ac84f027",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "151d781025086ad1403f0dcc1b3dd6a242063ba5fc7435dfe19de4c479d6452f",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "1bf840a6fe62e1f7ef7b738ba8b097637188d1512b34662d8f9487811cce8e4a",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "983507de156d003a58adab42428a9243421433cd6fe148a4febcca6fd403a7ba",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "2805da6734735ff1e24c8faac6eac6909cfbed94512dddc7af32a0a7742843ed",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004081",
+      "name": "Chaos Terminators",
+      "role": "Infantry",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Chaos-Terminators",
+      "loadout_sha256": "ea0df374279b4f94c6c48955b4987398d55db9c9b9267eaf6f3a161f060188a1",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Terminator Squad",
+          "m": "6\"",
+          "t": "5",
+          "sv": "2+",
+          "w": "3",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "5 models",
+          "cost": "145"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Combi-bolter",
+          "description": "rapid fire 2",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Combi-weapon",
+          "description": "anti-infantry 4+, devastating wounds, rapid fire 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Heavy flamer",
+          "description": "ignores cover, torrent",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Reaper autocannon",
+          "description": "devastating wounds, sustained hits 1",
+          "range": "36",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Accursed weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Chainfist",
+          "description": "anti-vehicle 3+",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Paired accursed weapons",
+          "description": "twin-linked",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Power fist",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Terminator",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Terminator Squad",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Lethal Obsession",
+          "type": "Datasheet",
+          "description_sha256": "b2a73f9b462efad400f8f3c96be21da770e72a853df87d7078f28ee804001bc5",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "a148782790a842f79ca55f5b3cd524ca2408f26898ecaa82d38eff0d934405f9",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "21b7a34b7ec06d1be25ed0c37ed480e514fba4e0a3fcfa77c290ce891e779aba",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "41c8810670f575791b38c7313de029e8850dc4b7a581943f3095f0407f77dca4",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "description_sha256": "e1bd22dad8ee52903bb3d58f2551c9bd607c28940c997d29a4f8738f6cce82e6",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "description_sha256": "bc7ddda81f6c26e53751fb63b57549944e60c079c48fb4dc7f0f40e32135e286",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "fe10a4144d833ac605bb96ca87663d735b0ce13fc30b96e6b191a9c03cee2c8e",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "88c4059a735e2a01c287986f72a2c239e31ad83de1983660bc069da645127f80",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004082",
+      "name": "Chaos Land Raider",
+      "role": "Transport",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Chaos-Land-Raider",
+      "loadout_sha256": "c936dd293bf21a9a1073574910c39bc794234593e7fe4e204f001e1b17853f1d",
+      "transport_sha256": "9c3fcc87b235cdafe871e8d93e02233ac7ced85bf4c9a5210f425d8c29109a05",
+      "damaged_description_sha256": "59b4c593cb8789fd63d439ef34e0d7a8bdf8bad93af9ffb954d98ecc0b0b7bb4",
+      "models": [
+        {
+          "line": "1",
+          "name": "Chaos Land Raider",
+          "m": "10\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "16",
+          "ld": "6+",
+          "oc": "5",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "220"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "240"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Combi-bolter",
+          "description": "rapid fire 2",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Combi-weapon",
+          "description": "anti-infantry 4+, devastating wounds, rapid fire 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Havoc launcher",
+          "description": "blast",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Soulshatter lascannon",
+          "range": "48",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Twin heavy bolter",
+          "description": "sustained hits 1, twin-linked",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Armoured tracks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Land Raider",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Smoke",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Assault Ramp",
+          "type": "Datasheet",
+          "description_sha256": "2358959230678712a2186a05de13bd3b68d7c046c53b1a3cfa677bf12db97e58",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "c8af22427cb77bdd8aad2c48e4f60e74bd64b4a536bef3d47144a64d86505744",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "1284de0f875a85ca7ad8f08a795cbcb6a4c49aa322103faef53ce6ffc1d555b6",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "36458f14b59aca3e276334363e03937828cf17490c389634fc0f5896796811c2",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004083",
+      "name": "Lucius the Eternal",
+      "role": "Infantry Epic Hero",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Lucius-the-Eternal",
+      "loadout_sha256": "613b8a316915f8ff0a9c5182655c1a802b768b4aa73dfa683485e17dd6fda140",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Lucius the Eternal",
+          "m": "8\"",
+          "t": "5",
+          "sv": "2+",
+          "w": "6",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "120"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Blade of the Laer",
+          "description": "precision",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-3",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Lash of Torment",
+          "description": "sustained hits 1",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "10",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Lucius the Eternal",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008338",
+          "type": "Core",
+          "parameter": "5+"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008336",
+          "type": "Core"
+        },
+        {
+          "line": "4",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "5",
+          "name": "A Challenge Worthy of Skill",
+          "type": "Datasheet",
+          "description_sha256": "0e96cea6dca092751d754154f30e116de87b09adbc343aabf05231b286aa5988",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Duellist’s Hubris",
+          "type": "Datasheet",
+          "description_sha256": "d15af38220a2bd28959436a000b272b46209dc877ab6ef09bf4d73ee665a1941",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "1c5b68e237410d01ab0dad8c33c3976b89e31a5726bad852efca9c7f03f1243f",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004084",
+      "name": "Lord Kakophonist",
+      "role": "Infantry Character",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Lord-Kakophonist",
+      "loadout_sha256": "c125044c6f7e2b57f7c7c96373e7df81ce8e8b98745357d9f4e2060d838029e2",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Lord Kakophonist",
+          "m": "6\"",
+          "t": "5",
+          "sv": "2+",
+          "w": "6",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "70"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Screamer pistol",
+          "description": "ignores cover, pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Power sword",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Lord Kakophonist",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Grenades",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Obsessive Annunciation",
+          "type": "Datasheet",
+          "description_sha256": "11d54e0f5db7facc32aa97aa334ae756fbc2e8283716de288e7bc404325e9538",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Doom Siren",
+          "type": "Datasheet",
+          "description_sha256": "25da622b76f7b4e132b75f1639d42096a3a9e91db40f0494ed6c9aac2ea83830",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "1c0e279e269e5207f3133de1de242b27391476489469b4eeff70a217f6fc3909",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "9f4e6b5819d60f31f042255a5c76a529fa2675b8f6a74161479139760dc0b0cd",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004085",
+      "name": "Sorcerer",
+      "role": "Infantry Character",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Sorcerer",
+      "loadout_sha256": "d90daa7d0d4596015224a83eeb423ae628043160f9d4f87acb407d446d98d3a7",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Sorcerer",
+          "m": "7\"",
+          "t": "4",
+          "sv": "3+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "55"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Agonising Energies – witchfire",
+          "description": "psychic",
+          "range": "18",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-1",
+          "d": "D3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "2",
+          "name": "Agonising Energies – focused witchfire",
+          "description": "devastating wounds, hazardous, psychic",
+          "range": "18",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "D3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Bolt pistol",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Force weapon",
+          "description": "psychic",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "D3"
+        }
+      ],
+      "keywords": [
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Sorcerer",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Psyker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Grenades",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Warped Interference (Psychic)",
+          "type": "Datasheet",
+          "description_sha256": "61452fbc19a87d9e09f2c641c9dfa30647b0cb1dec5e5fa01571cbb09c6f7c8b",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Wracking Agonies (Psychic)",
+          "type": "Datasheet",
+          "description_sha256": "99cf7a245f3a7196072e510d9f2c5f50f494ea52a173816e781933dab392a265",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "099591ffdbb7e71f3a7847b5ede453be773f308d78e785634b3e2a9dfdbb9488",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004086",
+      "name": "Daemon Prince of Slaanesh",
+      "role": "Monster Character",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Daemon-Prince-of-Slaanesh",
+      "loadout_sha256": "4a75bb090c338d2dcdd0a8582b218fa3debac438600aeb2d8aa2056845ae5fce",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Daemon Prince of Slaanesh",
+          "m": "10\"",
+          "t": "10",
+          "sv": "2+",
+          "w": "10",
+          "ld": "6+",
+          "oc": "3",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "170"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "185"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Infernal cannon",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Hellforged weapons – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Hellforged weapons – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "14",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Monster",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon Prince",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Lord of Excess",
+          "type": "Datasheet",
+          "description_sha256": "9e718c2486acc18b48038a0b06413c9893a4127bd99514806c78c0eb186f01f2",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Excessive Vigour (Aura)",
+          "type": "Datasheet",
+          "description_sha256": "564f7f1afb6326b673c3f72de5756362440274fad4c4c461442e9ace42ce8bfa",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Ecstatic Death",
+          "type": "Datasheet",
+          "description_sha256": "6093398da2860af58c4d65a875a41127ce78307b4a894976f81a9fea79c05e06",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "54706d35d7bc6c18db02acad159445ccbc7a07ddb8e1d34aa3c192174fa4afa4",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004087",
+      "name": "Daemon Prince of Slaanesh with Wings",
+      "role": "Monster Character",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Daemon-Prince-of-Slaanesh-with-Wings",
+      "loadout_sha256": "4a75bb090c338d2dcdd0a8582b218fa3debac438600aeb2d8aa2056845ae5fce",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Daemon Prince of Slaanesh with Wings",
+          "m": "14\"",
+          "t": "9",
+          "sv": "2+",
+          "w": "10",
+          "ld": "6+",
+          "oc": "3",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "205"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "235"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Infernal cannon",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Hellforged weapons – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Hellforged weapons – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "14",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Monster",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon Prince with Wings",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Daemonic Destruction",
+          "type": "Datasheet",
+          "description_sha256": "10784045fea7cf61806a9756cd7f767adebd2a13fab1ed7c16e88137e0315ef7",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Stimulated by Pain",
+          "type": "Datasheet",
+          "description_sha256": "b9b595b9ce07546cab372d5357927b657de2fe536fde3df5c3add27f539dc142",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "d2346dcd385c5b42c0b0d532305aab709e4f48966b1b9c0c1558613c62588a57",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004088",
+      "name": "Noise Marines",
+      "role": "Infantry",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Noise-Marines",
+      "loadout_sha256": "51a8ad5690b0529d16ad9a15223f4e954949bd679b5bb7cd14d2c90ed4979dbc",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Noise Marines",
+          "m": "6\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "2",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "6 models",
+          "cost": "145"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "6 models",
+          "cost": "160"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Blastmaster – single frequency",
+          "description": "ignores cover",
+          "range": "18",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "2",
+          "name": "Blastmaster – varied frequency",
+          "description": "ignores cover",
+          "range": "18",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Screamer pistol",
+          "description": "ignores cover, pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Sonic blaster",
+          "description": "ignores cover",
+          "range": "18",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Power sword",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Noise Marines",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "name": "Terrifying Crescendo",
+          "type": "Datasheet",
+          "description_sha256": "452be50ed5daa39dd1973038b54d0d84b78004065bd13f9cbe493c5090b54e79",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "3cadb0c3b946c62415ddf3f05290c12b3daebd6a570fe1ae460570e4f13475df",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "6475b9c0faeb091a5058bf1582809015faf8167fbdb9c9943bf84d51cf18391f",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "7f23af4d6bbec7c9afb100eebe9b658dc7488f23cfdd8d006a0d4d991b736cfb",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "8df29b0ab755333f69108881edc02f0d6e880e73d5c18ffdd1a0018d9b014d84",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004089",
+      "name": "Flawless Blades",
+      "role": "Infantry",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Flawless-Blades",
+      "loadout_sha256": "af8054bc9993bcf03f52f5b209f87d2ffd379cb66e8047b9ce1a058160e7ebf8",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Flawless Blades",
+          "m": "8\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "3",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "3 models",
+          "cost": "95"
+        },
+        {
+          "line": "3",
+          "description": "6 models",
+          "cost": "190"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Bolt pistol",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Blissblade",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-3",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Grenades",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Flawless Blades",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "name": "Daemonic Patrons",
+          "type": "Datasheet",
+          "description_sha256": "761feb30f87511d173ad5db114da86626336d796cc58f6cb21f88fdd71135244",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "5b43a3a3f44931778b172c0f871e55cca1aabda20b82c494adf791700de716fb",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004090",
+      "name": "Chaos Spawn",
+      "role": "Beast",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Chaos-Spawn",
+      "loadout_sha256": "878f61b9f2b347175a18f624a001723a8e8e2c6240983bb3f752c37f34ca8d35",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Chaos Spawn",
+          "m": "10\"",
+          "t": "5",
+          "sv": "4+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "2 models",
+          "cost": "70"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Hideous mutations",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "D6+2",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos Spawn",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Beast",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008338",
+          "type": "Core",
+          "parameter": "5+"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Scuttling Horrors",
+          "type": "Datasheet",
+          "description_sha256": "877148143367d60a89ab8b522fff000e992d80ace19a4cae9f0a07029eb9ee3c",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "549b86a22a005ecb89f9a3b0967378ad6c29e4eb03a989e9f2d2a96fed075993",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004091",
+      "name": "Maulerfiend",
+      "role": "Walker",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Maulerfiend",
+      "loadout_sha256": "09c01825efb7fa86ab761fd02e4eab197e6651da97f99b73c41cc0ebd8f45046",
+      "transport_sha256": null,
+      "damaged_description_sha256": "469029fe0d7496cef75f811b81a4666d3dbac2cfc23c873451981d27e7490f35",
+      "models": [
+        {
+          "line": "1",
+          "name": "Maulerfiend",
+          "m": "10\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "12",
+          "ld": "6+",
+          "oc": "3",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "120"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "130"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Magma cutters",
+          "description": "melta 2",
+          "range": "6",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Lasher tendrils",
+          "description": "extra attacks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Maulerfiend fists",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-2",
+          "d": "D6+1"
+        }
+      ],
+      "keywords": [
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Maulerfiend",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Glutton for Punishment",
+          "type": "Datasheet",
+          "description_sha256": "e4815aa8797fcc8c40a1551d5a84913b7fb74ea541ab58fee1cc3ae8232ae618",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "0d0dbee70d216da893b01e5ed5c985f6eb8177d50c597a663595c527bea877d2",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "3e457c25408613212b477bc874b063fd1abe46ebf4cf4e2934f1af6bf46669fb",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004092",
+      "name": "Heldrake",
+      "role": "Vehicle",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Heldrake",
+      "loadout_sha256": "a0aa032c6df225f1e97a023a8cd85a061620a729be398af223f75e0da8aaa242",
+      "transport_sha256": null,
+      "damaged_description_sha256": "469029fe0d7496cef75f811b81a4666d3dbac2cfc23c873451981d27e7490f35",
+      "models": [
+        {
+          "line": "1",
+          "name": "Heldrake",
+          "m": "12\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "14",
+          "ld": "7+",
+          "oc": "0",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "175"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Baleflamer",
+          "description": "ignores cover, torrent",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Hades autocannon",
+          "range": "36",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Heldrake claws",
+          "description": "anti-fly 2+, devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Heldrake",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008342",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Airborne Predator",
+          "type": "Datasheet",
+          "description_sha256": "26778acc2a52ee97bf6e08154b0966226bcf12611c259bc64a0c8a87c9570860",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "9e3f0b233a62359bbd3827665310c1089f5ad920bc3be1d79822bbe345d425a3",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "8d0784474756fe5efca4920b6242e9a50153c793da543367a549b681fd4a08ae",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004093",
+      "name": "Chaos Rhino",
+      "role": "Dedicated Transports",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Chaos-Rhino",
+      "loadout_sha256": "f642d87dabf5350d16cd3e2e5fce6c53a2037f2b58d3285dbbe95366475345d7",
+      "transport_sha256": "12f04f8d14ab77d2acb2c5ea2bdf320013c413643e78853ac2d313ccb5494d23",
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Chaos Rhino",
+          "m": "12\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "10",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 3RD UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "70"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 4TH + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "80"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Combi-bolter",
+          "description": "rapid fire 2",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Combi-weapon",
+          "description": "anti-infantry 4+, devastating wounds, rapid fire 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Havoc launcher",
+          "description": "blast",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Armoured tracks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Rhino",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Smoke",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Dedicated Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008334",
+          "type": "Core",
+          "parameter": "2"
+        },
+        {
+          "line": "3",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Assault Vehicle",
+          "type": "Datasheet",
+          "description_sha256": "a8ec63ad80d3e561482a61a95d5abbe717148b7b1c1b17facdcf9c05ff2a4136",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "c8af22427cb77bdd8aad2c48e4f60e74bd64b4a536bef3d47144a64d86505744",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "1648c6d7e694750e9aea95a137bbbf374786eeeaad3a0415b7e85597bfe841b9",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "c87489b083368a72fd25d09730eb49f5f1a918bd3867df521b9e8d50675df774",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004094",
+      "name": "Shalaxi Helbane",
+      "role": "Monster Epic Hero",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Shalaxi-Helbane",
+      "loadout_sha256": "e914dc2dc3fe95ba936b8e8c01d8e13dc76df9e376f423828f2041399513f3b0",
+      "transport_sha256": null,
+      "damaged_description_sha256": "089ffb06909084116b5c10f3d3d276f7a003f70043f23a443305f2d2ed7f7bf8",
+      "models": [
+        {
+          "line": "1",
+          "name": "Shalaxi Helbane",
+          "m": "14\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "20",
+          "ld": "6+",
+          "oc": "5",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "315"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Lash of Slaanesh",
+          "description": "assault",
+          "range": "12",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Pavane of Slaanesh – witchfire",
+          "description": "devastating wounds, psychic",
+          "range": "18",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-1",
+          "d": "D3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Pavane of Slaanesh – focused witchfire",
+          "description": "hazardous, devastating wounds, psychic, sustained hits 3",
+          "range": "18",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-2",
+          "d": "D3"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Snapping claws",
+          "description": "devastating wounds, extra attacks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Soulpiercer",
+          "description": "precision",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Legions of Excess",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Summoned",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Psyker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Monster",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Shalaxi Helbane",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000009995",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "No Prey Can Evade",
+          "type": "Datasheet",
+          "description_sha256": "8aae10e86cbdddfa6ffbdad43bf4aa32d0b39b20876ad72f1e92b68b44c59e9d",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Monarch of the Hunt",
+          "type": "Datasheet",
+          "description_sha256": "3cf817ed3f03a2c5413da029027c0f92255b16109f1b2b6e0337ed684886621c",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "93f9eda53b247d129079f4865b0b7e1c7d1b8d20f652c28dcb301227a97e50ec",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004095",
+      "name": "Daemonettes",
+      "role": "Battleline",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Daemonettes",
+      "loadout_sha256": "d412d37e8ec3d5bb4989f808a6c30d37483d26c3aa14c2b3d694b4fa6ae3ba99",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Daemonettes",
+          "m": "9\"",
+          "t": "3",
+          "sv": "7+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "10 models",
+          "cost": "100"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Slashing claws",
+          "description": "devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Legions of Excess",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Battleline",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Summoned",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemonettes",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008340",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000009995",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Horrifying Beauty",
+          "type": "Datasheet",
+          "description_sha256": "505e775333a11020bd8f13a98fa989c6359331e9a5c19b6b1bde76dd51a36197",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Daemonic Icon",
+          "type": "Wargear",
+          "description_sha256": "4212a82b9b995469e17484a2fc5c370d05c5a00de2a13cdbed1b7d557c1faff6",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Instrument of Chaos",
+          "type": "Wargear",
+          "description_sha256": "fb340cdad350805144ae177d08600068f745b774d52f391c7cbabce972682856",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "75b15bd1e19643a66f750991ec0e61eae62a80f4822a9b1ba8321aa08360eef3",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "8aa77c8c2e245716bcf8ed3810adff3f1d2cdf876e85b9dab14563be8b3ace2a",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "b3731aef39551b74faeae1788b76ac1946022990260117ad2c6f0ba704493f25",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "ef1a1540586954b4dbcf41e17329297e53dbdbe7d050fed9e32dbe542764783d",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004096",
+      "name": "Fiends",
+      "role": "Beast",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Fiends",
+      "loadout_sha256": "43de22fb46cbb56a912d02bedf0b611bc325fdb1eb39a927d936d7fe9bf1760a",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Fiends",
+          "m": "12\"",
+          "t": "5",
+          "sv": "7+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "2",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "3 models",
+          "cost": "90"
+        },
+        {
+          "line": "3",
+          "description": "6 models",
+          "cost": "190"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Barbed tail and dissecting claws",
+          "description": "devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Legions of Excess",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Fiends",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Summoned",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Beast",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009995",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Soporific Musk",
+          "type": "Datasheet",
+          "description_sha256": "b708f6f0917c3e4afdef5aa380ff2e4d2d5c42f55d9ee9550f3f930bcda391c3",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "4840fb4ff7874882da78d1f96c1eff82b8f5a615c55a24ac3a8c5bb1eb492f5b",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "2bade2cb89d7c78b1acff0792ee0a14fbe92cba2a3fd496b766e19ac65a21a3d",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004097",
+      "name": "Keeper of Secrets",
+      "role": "Monster Character",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Keeper-of-Secrets",
+      "loadout_sha256": "5a2450456e7eef75e422e34adc25449cec0d2fe40086807782ef0bd7fb8f573b",
+      "transport_sha256": null,
+      "damaged_description_sha256": "71948d8060f431f4de130073abbd83174c6addb173602f9fb658047124bc4407",
+      "models": [
+        {
+          "line": "1",
+          "name": "Keeper of Secrets",
+          "m": "14\"",
+          "t": "10",
+          "sv": "5+",
+          "w": "18",
+          "ld": "6+",
+          "oc": "5",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "265"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "280"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Living whip",
+          "description": "assault",
+          "range": "12",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Phantasmagoria – witchfire",
+          "description": "devastating wounds, psychic",
+          "range": "18",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Phantasmagoria – focused witchfire",
+          "description": "devastating wounds, hazardous, psychic",
+          "range": "18",
+          "type": "Ranged",
+          "a": "9",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Ritual knife",
+          "description": "extra attacks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Snapping claws",
+          "description": "devastating wounds, extra attacks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Witstealer sword",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Legions of Excess",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Psyker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Monster",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Keeper of Secrets",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Summoned",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000009995",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Daemon Lord of Slaanesh (Aura)",
+          "type": "Datasheet",
+          "description_sha256": "15753f7ce48ced1aacd3565d0f1ce6f10a7700fe2f630b268ccd2aa4624b519b",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Mesmerising Form",
+          "type": "Datasheet",
+          "description_sha256": "ebad3eb65ce2539c1348d4495a9f566de3b94e948975bb8308b6f3a3bcec71eb",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Shining Aegis",
+          "type": "Wargear",
+          "description_sha256": "25b3bc08584c28d5ecdc9a13bc782b81f0648ae49e87b1315309874effc7326b",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "1ee3248ac340208b30c2c2354f12a3f42f33453dae61f2fc985c84da2b050723",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "302465f86986f2d8ca3bd121ed0f34ed343fe3264ec707a348c0dcb2a58bcee3",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004098",
+      "name": "Seekers",
+      "role": "Mounted",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Seekers",
+      "loadout_sha256": "5b4c1407dbf7ac8c0d7bfb366df4106c203524b4389d04a4b39620ce246027c1",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Seekers",
+          "m": "14\"",
+          "t": "4",
+          "sv": "7+",
+          "w": "2",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "5 models",
+          "cost": "85"
+        },
+        {
+          "line": "3",
+          "description": "10 models",
+          "cost": "155"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Lashing tongue",
+          "description": "extra attacks, lethal hits",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Slashing claws",
+          "description": "devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Legions of Excess",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Summoned",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Seekers",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Mounted",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008344",
+          "type": "Core",
+          "parameter": "9\""
+        },
+        {
+          "line": "3",
+          "ability_id": "000009995",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Unholy Speed",
+          "type": "Datasheet",
+          "description_sha256": "4f080b8001e30f8f63dda9f5004cd36868cc5f00a9f83e839b5c32b145865159",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Daemonic Icon",
+          "type": "Wargear",
+          "description_sha256": "4212a82b9b995469e17484a2fc5c370d05c5a00de2a13cdbed1b7d557c1faff6",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Instrument of Chaos",
+          "type": "Wargear",
+          "description_sha256": "fb340cdad350805144ae177d08600068f745b774d52f391c7cbabce972682856",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "6646bf6115450cd4bd06fd7ef6f9210d9a42eaee4a1f641fba263f61772b917f",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "017a6e8c1db7bf77f157da4eb36d0aa042591a62756263fc8299e5b5145a89f5",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "28b5bac46f7539333979db9de1fcf028ce0718c2597a9d03a6f768b6fd330d6d",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "6c2f01b7b81e12aa8d1f16dec058252d11be7ae3f0ae732d26a24586bc257997",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004208",
+      "name": "Defiler",
+      "role": "Walker",
+      "source_id": "000000280",
+      "source_name": "Emperor’s Children",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/Defiler",
+      "loadout_sha256": "d282413fa05122cc4123fa38f7ef34e0cadd37ce857637bef9cd273165d04984",
+      "transport_sha256": null,
+      "damaged_description_sha256": "71948d8060f431f4de130073abbd83174c6addb173602f9fb658047124bc4407",
+      "models": [
+        {
+          "line": "1",
+          "name": "Defiler",
+          "m": "12\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "18",
+          "ld": "6+",
+          "oc": "5",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "300"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "350"
+        },
+        {
+          "line": "5",
+          "description": "WARGEAR OPTIONS"
+        },
+        {
+          "line": "6",
+          "description": "per Heavy reaper autocannon",
+          "cost": "15"
+        },
+        {
+          "line": "7",
+          "description": "per Hades lascannon",
+          "cost": "15"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Hades battle cannon",
+          "description": "blast",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Ectoplasma destructor",
+          "description": "blast",
+          "range": "36",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-3",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Excruciator cannon",
+          "range": "36",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Magma cutters",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Heavy baleflamer",
+          "description": "ignores cover, torrent",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "N/A",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Hades lascannon",
+          "range": "48",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Heavy reaper autocannon",
+          "description": "devastating wounds, sustained hits 1",
+          "range": "48",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Heavy missile launcher – krak",
+          "range": "48",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-2",
+          "d": "D6+1"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "2",
+          "name": "Heavy missile launcher – frag",
+          "description": "blast",
+          "range": "48",
+          "type": "Ranged",
+          "a": "2D6",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "10",
+          "line_in_wargear": "1",
+          "name": "Shearing claws – strike",
+          "description": "precision",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "3",
+          "s": "16",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "11",
+          "line_in_wargear": "2",
+          "name": "Shearing claws – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "10",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "12",
+          "line_in_wargear": "1",
+          "name": "Electroscourge",
+          "description": "extra attacks, sustained hits 2",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Emperor’s Children",
+          "is_faction_keyword": "true"
+        },
+        {
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Daemon",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Defiler",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Slaanesh",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Chaos",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000009994",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Scuttling Walker",
+          "type": "Datasheet",
+          "description_sha256": "1f986f6cd3d01ca242920df063f62fdb65cb072ee29659744c51fd8c09662bc5",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Revel in Desecration",
+          "type": "Datasheet",
+          "description_sha256": "bd08b45b84c5e6a1f1f4b7bd6c2e66c9787c30d222b8252319a2afa6941d88c5",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "e8c4030f5e589ee9a465c7c65a1a248e02270aa0da3f4e2d20bc8720277b25fd",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "6e96e4ffa37622a610969c9b43728b5d41a521b01d125de414da524460b30ef6",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "ea13d6a05308d3de271e7f92fbb3287474c26db4763cb78614a453374fc54050",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "description_sha256": "5891cc8ba58d16553cbdcfdb66247744598a7f787eafbb23fcfb2e87039d0a25",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "5e53813856bb89ff03042a3f40dd9f93cdce65509b8f210398ad6981e71c3621",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    }
+  ],
+  "detachments": [
+    {
+      "id": "000001033",
+      "faction_id": "EC",
+      "name": "Mercurial Host",
+      "dp": "2",
+      "force_disposition": "Reconnaissance",
+      "legend_sha256": "63bd96359bb729ba746f43966135b3269fa89c3fc26c7ee70169d5f7d25665ba",
+      "legend_present": true
+    },
+    {
+      "id": "000001034",
+      "faction_id": "EC",
+      "name": "Peerless Bladesmen",
+      "dp": "2",
+      "force_disposition": "Priority Assets",
+      "legend_sha256": "826f02a1a68934eeccfc08011b8f280c50c38612ddb169d815ac5e13e1665a06",
+      "legend_present": true
+    },
+    {
+      "id": "000001035",
+      "faction_id": "EC",
+      "name": "Rapid Evisceration",
+      "dp": "2",
+      "force_disposition": "Disruption",
+      "legend_sha256": "bf90918ba0ff3af20dddfc5a5dd7abc3a50e85982a1a1deb7d07c24ca2eb956e",
+      "legend_present": true
+    },
+    {
+      "id": "000001036",
+      "faction_id": "EC",
+      "name": "Carnival of Excess",
+      "dp": "2",
+      "force_disposition": "Disruption",
+      "legend_sha256": "24978c6f2bab1c363d87ffbe5dd7d143a27752b19db5c422546fbfb836ce0273",
+      "legend_present": true
+    },
+    {
+      "id": "000001037",
+      "faction_id": "EC",
+      "name": "Coterie of the Conceited",
+      "dp": "3",
+      "force_disposition": "Priority Assets",
+      "legend_sha256": "75bac8b9eae4da83a108d87b0b9604b8f894d05adb0a5c5568e7c10f320bd2bf",
+      "legend_present": true
+    },
+    {
+      "id": "000001038",
+      "faction_id": "EC",
+      "name": "Slaanesh’s Chosen",
+      "dp": "2",
+      "force_disposition": "Purge the Foe",
+      "legend_sha256": "59dc99c18dab9fc4f59b451ef489bfcd950b5ba952d56ab85277cf0e931af6c0",
+      "legend_present": true
+    },
+    {
+      "id": "000001125",
+      "faction_id": "EC",
+      "name": "Court of the Phoenician",
+      "dp": "2",
+      "force_disposition": "Purge the Foe",
+      "legend_sha256": "a756e28580603d8597cf1396d33ee6a1f84dcf40c8cf48b56e178780e403b27d",
+      "legend_present": true
+    },
+    {
+      "id": "000001154",
+      "faction_id": "EC",
+      "name": "Sublime Strike",
+      "type": "Boarding Actions",
+      "legend_sha256": "0811fe8da63ec34502b7184c946a50a765e526d8067bdb225a6c90d690ab03bb",
+      "legend_present": true
+    },
+    {
+      "id": "000001180",
+      "faction_id": "EC",
+      "name": "Elegant Brutes",
+      "dp": "1",
+      "force_disposition": "Take and Hold",
+      "legend_sha256": "67bb0bbbeb475d3adb757ea6b5a264f7957490a9a904ace6d923b8bf52d3e4a5",
+      "legend_present": true
+    },
+    {
+      "id": "000001181",
+      "faction_id": "EC",
+      "name": "Frenzied Host",
+      "dp": "1",
+      "force_disposition": "Reconnaissance",
+      "legend_sha256": "a3d8f59968a44b0d76f9b0ab1caea1552cb9549c9a0252eb470b07e89196c6dc",
+      "legend_present": true
+    },
+    {
+      "id": "000001182",
+      "faction_id": "EC",
+      "name": "Spectacle of Slaughter",
+      "dp": "1",
+      "force_disposition": "Disruption",
+      "legend_sha256": "88397df5fba9a100437d9d962d0c9490dd6dab4babb17301771cfc1c38065d99",
+      "legend_present": true
+    }
+  ],
+  "detachment_abilities": [
+    {
+      "id": "000009997",
+      "detachment_id": "000001033",
+      "detachment": "Mercurial Host",
+      "name": "Quicksilver Grace",
+      "description_sha256": "e476c23f84be9ee984565e4d0bcdb58f4c85b97accde6469c535f8e44f4decbf",
+      "description_present": true,
+      "legend_sha256": "1a289de5420f75a9f9abf329eea5a20bd01bcdc71ff89aef09c1ac4ab72ac309",
+      "legend_present": true
+    },
+    {
+      "id": "000010001",
+      "detachment_id": "000001034",
+      "detachment": "Peerless Bladesmen",
+      "name": "Exquisite Swordsmanship",
+      "description_sha256": "9bdfe4fb51a6a4cf728a67bf57bff802dbbd6c4a19343414e12711586e7cf80a",
+      "description_present": true,
+      "legend_sha256": "b9f2225eede86bcc344a7230e13809c3094769f7f07993448903078f4c5b3bd6",
+      "legend_present": true
+    },
+    {
+      "id": "000010005",
+      "detachment_id": "000001035",
+      "detachment": "Rapid Evisceration",
+      "name": "Mechanised Murder",
+      "description_sha256": "57b71f3accbc4c67eabdafc80b9bb9fc78844fc1aa7b5bee21370082e9f68b52",
+      "description_present": true,
+      "legend_sha256": "686800ab1e5dadc23220f251c6ee16b1c9872bbfdb120367a82348f63909ec28",
+      "legend_present": true
+    },
+    {
+      "id": "000010009",
+      "detachment_id": "000001036",
+      "detachment": "Carnival of Excess",
+      "name": "Daemonic Empowerment",
+      "description_sha256": "5353686fb35028609daffeaed8c7ede4e2b45e5145f9f015a21c84a99a65003a",
+      "description_present": true,
+      "legend_sha256": "18ee9e0c56da3a931360df366a50d89d4ca804884299ba5d62d352a48daa0740",
+      "legend_present": true
+    },
+    {
+      "id": "000010013",
+      "detachment_id": "000001037",
+      "detachment": "Coterie of the Conceited",
+      "name": "Pledges to the Dark Prince",
+      "description_sha256": "55c2808f07cd473c465e155e6cb0f8b2707cf780a04022ea430ea5ac82989994",
+      "description_present": true,
+      "legend_sha256": "6ee64395dcaf9d92394e3cc038b7ce44e1f29962bc3f06a3dccbddbf21fe740b",
+      "legend_present": true
+    },
+    {
+      "id": "000010017",
+      "detachment_id": "000001038",
+      "detachment": "Slaanesh’s Chosen",
+      "name": "Internal Rivalries",
+      "description_sha256": "44f8896a6c27e68e8e774e1ec428e1f6417e87f0a193edbd71eb0db48396b445",
+      "description_present": true,
+      "legend_sha256": "a9e0193f0b701457738ae1654484f8809f79e66517cf56d552da371772f19135",
+      "legend_present": true
+    },
+    {
+      "id": "000010652",
+      "detachment_id": "000001125",
+      "detachment": "Court of the Phoenician",
+      "name": "Sensational Performance",
+      "description_sha256": "ff2ddb0560c46b40ef5619c7e9e569e639f3f04a07c8d787d23b1a1fbcba5038",
+      "description_present": true,
+      "legend_sha256": "d3536f239696aa00472d60b0dd6bb002421911dffbaf914766822df66fcea1c9",
+      "legend_present": true
+    },
+    {
+      "id": "000010653",
+      "detachment_id": "000001125",
+      "detachment": "Court of the Phoenician",
+      "name": "Master of the Pageant",
+      "description_sha256": "9d0b6cfdd8dd47155a2925a047ddeb07100f5ac4b130b61b0aa5234141586a28",
+      "description_present": true,
+      "legend_sha256": "7f6c4ddd5cff542b9726dc505661deaaed200530098dff111ae6ca5f6dccb5d4",
+      "legend_present": true
+    },
+    {
+      "id": "000010807",
+      "detachment_id": "000001154",
+      "detachment": "Sublime Strike",
+      "name": "Dark Radiance",
+      "description_sha256": "94cd39abb725d3238910c6a5b3b59260741f76caa208f446ab8f5906325c2d39",
+      "description_present": true,
+      "legend_sha256": "4789a3daf76ef95b153145fe8fc545c56f5c8169876df07c2c8b6a134c671625",
+      "legend_present": true
+    },
+    {
+      "id": "000010951",
+      "detachment_id": "000001180",
+      "detachment": "Elegant Brutes",
+      "name": "Eager to Kill",
+      "description_sha256": "0eebcdaf93ef87ca7e5f523d00993d52cbde5f62f742b4e9f84e50b412f15e7c",
+      "description_present": true,
+      "legend_sha256": "9a720589dc167c5660f93d54c5e8de4e8b12966c6e6cb90f0a238343f5b4f069",
+      "legend_present": true
+    },
+    {
+      "id": "000010955",
+      "detachment_id": "000001181",
+      "detachment": "Frenzied Host",
+      "name": "Frantic Focus",
+      "description_sha256": "476bb6a28821f0ebfc85e93fbe4129fdf5b2d41783becb71cab7685aa5c311bf",
+      "description_present": true,
+      "legend_sha256": "7ee05d5aa5c702e764a305f66404840aefee874b07a8ed5b72e026e80cee3f1e",
+      "legend_present": true
+    },
+    {
+      "id": "000010959",
+      "detachment_id": "000001182",
+      "detachment": "Spectacle of Slaughter",
+      "name": "Entitled to Victory",
+      "description_sha256": "07c582b84da9a4ef8325df83bdfaf13d0386cefe526c15f2f66a6c330f692329",
+      "description_present": true,
+      "legend_sha256": "dcb51e33d517948e19edbc11a4d42d55122f47a6d0c6b64c035a95ca22008e4b",
+      "legend_present": true
+    }
+  ],
+  "enhancements": [
+    {
+      "id": "000010006002",
+      "detachment_id": "000001035",
+      "detachment": "Rapid Evisceration",
+      "name": "Sublime Prescience",
+      "cost": "25",
+      "description_sha256": "f79e77d41810561a5e8f744ae063a83c9905c1cdc0a7756577e28e18b6780136",
+      "description_present": true,
+      "legend_sha256": "4874ec9cce80924f81b8d03b535de4c23f159f421e873456af543fd145ce75c0",
+      "legend_present": true
+    },
+    {
+      "id": "000010952002",
+      "detachment_id": "000001180",
+      "detachment": "Elegant Brutes",
+      "name": "Cacophonic Accompaniment",
+      "cost": "20",
+      "description_sha256": "834cac88cd20bf6ff2c3e32ba30d6a20f0eaf65366a2517facdb1f09d8a9dc90",
+      "description_present": true,
+      "legend_sha256": "f855d7a97aae3ab84dc42ec90488305f2c951399413a3360ef45085fb2f810f4",
+      "legend_present": true
+    },
+    {
+      "id": "000010956002",
+      "detachment_id": "000001181",
+      "detachment": "Frenzied Host",
+      "name": "Euphoric Crown",
+      "cost": "20",
+      "description_sha256": "b94ea96344af9ac2077f8682e8908b91a5f46eb82edc2e84ccdde24c2bffee11",
+      "description_present": true,
+      "legend_sha256": "e0146d756426348eb3f5908f8badb940ca076c902d2e3929f18c4185ed1d8a2c",
+      "legend_present": true
+    },
+    {
+      "id": "000010960002",
+      "detachment_id": "000001182",
+      "detachment": "Spectacle of Slaughter",
+      "name": "Eager Patrons",
+      "cost": "20",
+      "description_sha256": "8d9cc9205caac438519800c9963371dce6f8ae1f7c9a6959a2ab1f73d0b56389",
+      "description_present": true,
+      "legend_sha256": "ba7c9fcb3d19adca965f338fb6fea7de14f61bc93327fa70b0ddb7d60a60270e",
+      "legend_present": true
+    },
+    {
+      "id": "000010018002",
+      "detachment_id": "000001038",
+      "detachment": "Slaanesh’s Chosen",
+      "name": "Eager to Prove",
+      "cost": "15",
+      "description_sha256": "792667e88630eab695efe0bb184023db5ddfee79426e9a69ed0eafb28df1d62e",
+      "description_present": true,
+      "legend_sha256": "2ff48f4de6d9de7e39668ecd0b4b819c397e75e0dce6ff03c0721e4b97f2561b",
+      "legend_present": true
+    },
+    {
+      "id": "000010808002",
+      "detachment_id": "000001154",
+      "detachment": "Sublime Strike",
+      "name": "Venom of the Six-fanged Serpent",
+      "cost": "0",
+      "description_sha256": "6eb4365230e45d186d9095730dfe81beb8b7122341b7344e97de9af6cdbd4d6a",
+      "description_present": true,
+      "legend_sha256": "00f8cfb180758e652f65b63bf18f8c5adfd74c4f24ea6c7c235a12d5acb812be",
+      "legend_present": true
+    },
+    {
+      "id": "000010014002",
+      "detachment_id": "000001037",
+      "detachment": "Coterie of the Conceited",
+      "name": "Pledge of Eternal Servitude",
+      "cost": "25",
+      "description_sha256": "3a0b01267cd7e8f396e0510713fc907ceea8e559b80c5e1051f2fb3826144fa3",
+      "description_present": true,
+      "legend_sha256": "f3b3f2eeb359ca1a87bea69dc8a96a4752206ac06022f51265ab329779ddede5",
+      "legend_present": true
+    },
+    {
+      "id": "000009998002",
+      "detachment_id": "000001033",
+      "detachment": "Mercurial Host",
+      "name": "Steeped in Suffering",
+      "cost": "20",
+      "description_sha256": "592a8ec664fd6f82fc1b9c1990a4082ef20b625bc4a7775a4ae1c4f9ac6f89e7",
+      "description_present": true,
+      "legend_sha256": "f79b4bd6bb551e50effabcaac7daa4ac3fcd26aca52865988063bc7264e516b0",
+      "legend_present": true
+    },
+    {
+      "id": "000010002002",
+      "detachment_id": "000001034",
+      "detachment": "Peerless Bladesmen",
+      "name": "Faultless Opportunist",
+      "cost": "15",
+      "description_sha256": "7ad536bb0e62b9aa97773c0e7d0289f68a000c8bb35aa159feab7187e16d5dd8",
+      "description_present": true,
+      "legend_sha256": "80d560e9ad6d90c56171c7c2a9f3301d927eb522a56be44a5f6b88c7e4cb5561",
+      "legend_present": true
+    },
+    {
+      "id": "000010010002",
+      "detachment_id": "000001036",
+      "detachment": "Carnival of Excess",
+      "name": "Empyric Suffusion",
+      "cost": "15",
+      "description_sha256": "fa2b090474ddfafe176210b00eb01072746af8089ad3cea29ad93267ad8d1429",
+      "description_present": true,
+      "legend_sha256": "ce88392e3371746e081ed32570b53139393153565e3f66122e61b39c3aa75d7e",
+      "legend_present": true
+    },
+    {
+      "id": "000010654002",
+      "detachment_id": "000001125",
+      "detachment": "Court of the Phoenician",
+      "name": "Tears of the Phoenix",
+      "cost": "25",
+      "description_sha256": "bdaa1cc38b4dfafb0615bf4f7ebcb8ac63889ef69e3884f9a308ae17f9dcb685",
+      "description_present": true,
+      "legend_sha256": "06b069e626978de134fc743a97129fd5fec86d01f8044c3a8a11861c306b98d4",
+      "legend_present": true
+    },
+    {
+      "id": "000010018003",
+      "detachment_id": "000001038",
+      "detachment": "Slaanesh’s Chosen",
+      "name": "Repulsed by Weakness",
+      "cost": "25",
+      "description_sha256": "bba0cd3b8b81836ae0ef25e62071548e801d623ce821f70494aaab9d23d617c4",
+      "description_present": true,
+      "legend_sha256": "6c592f9183fb94f24efef20f4e2c37fd1eff684756f694358abcd02e556ef335",
+      "legend_present": true
+    },
+    {
+      "id": "000010952003",
+      "detachment_id": "000001180",
+      "detachment": "Elegant Brutes",
+      "name": "Frenzied Ferocity",
+      "cost": "15",
+      "description_sha256": "1573c654a8cc61721b03f1654478d03dc51a7f354feceded2e73565f465572f2",
+      "description_present": true,
+      "legend_sha256": "11f81ce7bc8df976837d559fe26d1b6b3c9f792b5f960f31ca94764d14429b45",
+      "legend_present": true
+    },
+    {
+      "id": "000010960003",
+      "detachment_id": "000001182",
+      "detachment": "Spectacle of Slaughter",
+      "name": "Beguiling Grotesquerie",
+      "cost": "15",
+      "description_sha256": "d634acebd4dda927047f1282794c1419b290df0e37075248354115eee74660f0",
+      "description_present": true,
+      "legend_sha256": "8375a3bd8372d308e526629524692da805d66d7e9c79f19fee6cbf0e3387387c",
+      "legend_present": true
+    },
+    {
+      "id": "000010808003",
+      "detachment_id": "000001154",
+      "detachment": "Sublime Strike",
+      "name": "Daemonshrieker",
+      "cost": "0",
+      "description_sha256": "581870f87a9bae8c5886854c9a571c7b23694b6d4da062a493e3e3f332d39719",
+      "description_present": true,
+      "legend_sha256": "0b9be2642caf61d651e998ac0d8f0ee9bc6abbf925470dbb9859dde45c824903",
+      "legend_present": true
+    },
+    {
+      "id": "000010014003",
+      "detachment_id": "000001037",
+      "detachment": "Coterie of the Conceited",
+      "name": "Pledge of Dark Glory",
+      "cost": "25",
+      "description_sha256": "1b06624a08cb509cc237ac64d5a3d995dfcba2a15429391304d22384eb7f747c",
+      "description_present": true,
+      "legend_sha256": "77aa93902b1b06674d607ef56229ec3b396f8a5bdfb9f6c35b8f74e98a06f988",
+      "legend_present": true
+    },
+    {
+      "id": "000010010003",
+      "detachment_id": "000001036",
+      "detachment": "Carnival of Excess",
+      "name": "Dark Blessings",
+      "cost": "10",
+      "description_sha256": "f5ad6a16ef3364719d1d1e1bdab7c263317aeb9bfb8e18cc2a974a21bb58c4c7",
+      "description_present": true,
+      "legend_sha256": "78bb632385f709529035bcde2cb17cf27590289582c48ec6161cb6067416e3fd",
+      "legend_present": true
+    },
+    {
+      "id": "000010654003",
+      "detachment_id": "000001125",
+      "detachment": "Court of the Phoenician",
+      "name": "Exalted Patron",
+      "cost": "15",
+      "description_sha256": "eb6fe27eb1749998fd33c63b6b617289365ac179d165074fed2fc56d257bd22a",
+      "description_present": true,
+      "legend_sha256": "e80aad364436d878ed555c1402648c7477e3041afdcf7f9f06de8d1841ec0e84",
+      "legend_present": true
+    },
+    {
+      "id": "000010006003",
+      "detachment_id": "000001035",
+      "detachment": "Rapid Evisceration",
+      "name": "Spearhead Striker",
+      "cost": "20",
+      "description_sha256": "faced974f581dc58f42bec60086e4ab6e2a0db90a5e90ff331019d6020bb874b",
+      "description_present": true,
+      "legend_sha256": "18e7c33aefd124160a0f7320a6a29b7850e6ae803a1effd4f6ea4d72ef3cbcc2",
+      "legend_present": true
+    },
+    {
+      "id": "000010002003",
+      "detachment_id": "000001034",
+      "detachment": "Peerless Bladesmen",
+      "name": "Blinding Speed",
+      "cost": "25",
+      "description_sha256": "6432c81735d0066fe6ef64eff01323888e2d13e3b79051e88f75827b16085141",
+      "description_present": true,
+      "legend_sha256": "673d145e2b1c7db88e771fc3280578ab91833a3299514c12ec51b064e655baa6",
+      "legend_present": true
+    },
+    {
+      "id": "000009998003",
+      "detachment_id": "000001033",
+      "detachment": "Mercurial Host",
+      "name": "Intoxicating Musk",
+      "cost": "20",
+      "description_sha256": "f860bee1e6399d81a7155225589f1ab4d42b63e822b9b12df7d56c52529d6999",
+      "description_present": true,
+      "legend_sha256": "d4a3283d480a66251bc459706199698b55dc2caeffa1fc194b828ac93fc07543",
+      "legend_present": true
+    },
+    {
+      "id": "000010956003",
+      "detachment_id": "000001181",
+      "detachment": "Frenzied Host",
+      "name": "Howling Plate",
+      "cost": "20",
+      "description_sha256": "605b0deabbd94f900e26a5d2b36f7b45160b99fd935ed17991937870ad404464",
+      "description_present": true,
+      "legend_sha256": "817fb29d1504ca4b708c2c023f9ee0b40d06195020728536150c5f2284f846f7",
+      "legend_present": true
+    },
+    {
+      "id": "000010010004",
+      "detachment_id": "000001036",
+      "detachment": "Carnival of Excess",
+      "name": "Possessed Blade",
+      "cost": "35",
+      "description_sha256": "97f01829b75495e59a616132248a97ef2b700e7644b9cda37e746d557709d026",
+      "description_present": true,
+      "legend_sha256": "af184ce802ceb9d3e8849503337261bcb6036d4f35f35fd40bc2b32bd5dd558f",
+      "legend_present": true
+    },
+    {
+      "id": "000009998004",
+      "detachment_id": "000001033",
+      "detachment": "Mercurial Host",
+      "name": "Tactical Perfection",
+      "cost": "15",
+      "description_sha256": "0bf37ecb0fb672aade795cd2d905401cc6aa8ebf364b80f4666c93aa3b211742",
+      "description_present": true,
+      "legend_sha256": "1124948ccbaa4cca9514ff9323b944a56f8ef06518dbcb704464365c25b1f06f",
+      "legend_present": true
+    },
+    {
+      "id": "000010006004",
+      "detachment_id": "000001035",
+      "detachment": "Rapid Evisceration",
+      "name": "Accomplished Tactician",
+      "cost": "35",
+      "description_sha256": "65e3a4bc4ec09cd27f5eeb7c1513f8b3aeeb22a4792d5576bade2ed7fc4acc9d",
+      "description_present": true,
+      "legend_sha256": "faca0ffd303a7e7e75815d6605914697aa2b91209535d45b00d287ccc0c2ba40",
+      "legend_present": true
+    },
+    {
+      "id": "000010002004",
+      "detachment_id": "000001034",
+      "detachment": "Peerless Bladesmen",
+      "name": "Distortion",
+      "cost": "25",
+      "description_sha256": "522e3d1f0193a0b40d495c694b6a0f208b7abcd18fddaae75f786f885c8fbc1d",
+      "description_present": true,
+      "legend_sha256": "fabe4675607c54ce26d40d07fe490339fe7746450aeec1351989d560d7ba4097",
+      "legend_present": true
+    },
+    {
+      "id": "000010654004",
+      "detachment_id": "000001125",
+      "detachment": "Court of the Phoenician",
+      "name": "Soulstain Made Manifest",
+      "cost": "15",
+      "description_sha256": "131d8bd5e41cc9ede3d8f2e15d3076abd07805c7d05973e44ac02a9e07976704",
+      "description_present": true,
+      "legend_sha256": "05b70b97cb5d923df8cb2ae7f4bbc5ed8646ac8312ba0ac1d4123cc4afe9bc5b",
+      "legend_present": true
+    },
+    {
+      "id": "000010018004",
+      "detachment_id": "000001038",
+      "detachment": "Slaanesh’s Chosen",
+      "name": "Proud and Vainglorious",
+      "cost": "20",
+      "description_sha256": "b698c595d93c80d3648b5d23ad9d988147f529f034d67d9eada0161136331878",
+      "description_present": true,
+      "legend_sha256": "da2e5bbec94c40f120ca4707ef8043ed9a318688d94d4584c280390f46da4cea",
+      "legend_present": true
+    },
+    {
+      "id": "000010014004",
+      "detachment_id": "000001037",
+      "detachment": "Coterie of the Conceited",
+      "name": "Pledge of Mortal Pain",
+      "cost": "15",
+      "description_sha256": "7008b45467447acca4f4c345886c23eb90ce6d302763f062a42d079c8030821b",
+      "description_present": true,
+      "legend_sha256": "32025a418ca5d355c81a62381c40e8448aa495dbaee989fd2a98ea715150fbae",
+      "legend_present": true
+    },
+    {
+      "id": "000010018005",
+      "detachment_id": "000001038",
+      "detachment": "Slaanesh’s Chosen",
+      "name": "Slayer of Champions",
+      "cost": "15",
+      "description_sha256": "19cc486fc6330c0706d4d6353b1001b0d50898996d3d045fe2e5c5a98cb88a13",
+      "description_present": true,
+      "legend_sha256": "d2f691ae826324faa47c36243bd47952f06421296248620df7ecaa2645b1129d",
+      "legend_present": true
+    },
+    {
+      "id": "000010654005",
+      "detachment_id": "000001125",
+      "detachment": "Court of the Phoenician",
+      "name": "Spiritsliver",
+      "cost": "20",
+      "description_sha256": "49ab349524e003bbf27148f471b4ae7eac09c0e30a683b0487f43f593bc4b878",
+      "description_present": true,
+      "legend_sha256": "b74c21557c417c83e7fcada254420b5c6e75ddd29d1e93d95896b33e3ededc3e",
+      "legend_present": true
+    },
+    {
+      "id": "000009998005",
+      "detachment_id": "000001033",
+      "detachment": "Mercurial Host",
+      "name": "Loathsome Dexterity",
+      "cost": "10",
+      "description_sha256": "ee83c2facc1bff2a8237765f6a8aa30dd583eb460e30a59841add72f97457180",
+      "description_present": true,
+      "legend_sha256": "7aec12aa0112a607a621f0babb0d7ff85947d4a637a1f1a6ea2d50ebdc429807",
+      "legend_present": true
+    },
+    {
+      "id": "000010002005",
+      "detachment_id": "000001034",
+      "detachment": "Peerless Bladesmen",
+      "name": "Rise to the Challenge",
+      "cost": "30",
+      "description_sha256": "85013b3ab4dd9b4bc487d2bd2e40054f6622efe044e07f8a3889cd6c2e7daa53",
+      "description_present": true,
+      "legend_sha256": "3b9cfe5a111907b58e66c3bf630be15d4b3b130e0d07917dc730a288b25c4965",
+      "legend_present": true
+    },
+    {
+      "id": "000010006005",
+      "detachment_id": "000001035",
+      "detachment": "Rapid Evisceration",
+      "name": "Heretek Adept",
+      "cost": "35",
+      "description_sha256": "2657d60a77f2945f3e6cebcce8754508130c3c78c7602b2088af1d76a2d75c40",
+      "description_present": true,
+      "legend_sha256": "95362dc033759edcdf23725400c8f12fb282ef113d594e29f588f3daf7cdd397",
+      "legend_present": true
+    },
+    {
+      "id": "000010010005",
+      "detachment_id": "000001036",
+      "detachment": "Carnival of Excess",
+      "name": "Warp Walker",
+      "cost": "35",
+      "description_sha256": "708a093f510676eecc81a457bb90402407a0b36b6922940144b82b3438cb06a2",
+      "description_present": true,
+      "legend_sha256": "5c549b069e10062f60386fccf59edc9725d619423d3b87b818e4965cfa7faed9",
+      "legend_present": true
+    },
+    {
+      "id": "000010014005",
+      "detachment_id": "000001037",
+      "detachment": "Coterie of the Conceited",
+      "name": "Pledge of Unholy Fortune",
+      "cost": "30",
+      "description_sha256": "c8e0ba66b87a6e068a2efae3c7d899b23d804e76cb437c13db8667b62bebce0c",
+      "description_present": true,
+      "legend_sha256": "390d03c9133f15305fc3d6780cdfea75ad67ced0fc593c4fdd4cf6fb59547758",
+      "legend_present": true
+    }
+  ],
+  "stratagems": [
+    {
+      "id": "000010011002",
+      "name": "SUSTAINED BY AGONY",
+      "type": "Carnival of Excess – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Carnival of Excess",
+      "description_sha256": "eb197bc7017f895e2f19f048143c00462990e0f7717fd76364c9d4f7b7c22712",
+      "description_present": true,
+      "legend_sha256": "2d14ed047310bbe5514d15efefca4eb2e3ec544138850307cafface00706d93a",
+      "legend_present": true
+    },
+    {
+      "id": "000010011005",
+      "name": "SYCOPHANTIC SURGE",
+      "type": "Carnival of Excess – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Charge phase",
+      "detachment": "Carnival of Excess",
+      "description_sha256": "1637f5105349529e36db6bd0c64854ea66373aa5fe340884d89244e03f9a1366",
+      "description_present": true,
+      "legend_sha256": "35cb57bc6bc1f6c9b55fc10efc000359c82aedfeeab44e902c0db1930b3af49d",
+      "legend_present": true
+    },
+    {
+      "id": "000010011006",
+      "name": "UNCANNY REACTIONS",
+      "type": "Carnival of Excess – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Carnival of Excess",
+      "description_sha256": "ad0892c2a1f94d68eb27752aa60d2a08e34961103a46f0bf30b4224e9a7b7fd2",
+      "description_present": true,
+      "legend_sha256": "74654badcda2da30f74d73ef245e5653660a482690a241317c790ddcdd9108f0",
+      "legend_present": true
+    },
+    {
+      "id": "000010011004",
+      "name": "VIOLENT CRESCENDO",
+      "type": "Carnival of Excess – Strategic Ploy Stratagem",
+      "cp_cost": "2",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Carnival of Excess",
+      "description_sha256": "246aae20b031b73578a84183a5089a5e8bf62b07385bc9a0f533ce85aca268a0",
+      "description_present": true,
+      "legend_sha256": "b5a6bdaa322a78b5ccaddd8ed81f4c65d42fc0e03eb005d68cdff954d503e19d",
+      "legend_present": true
+    },
+    {
+      "id": "000010011003",
+      "name": "ECSTATIC SLAUGHTER",
+      "type": "Carnival of Excess – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Carnival of Excess",
+      "description_sha256": "dcabbdd50ada41e8b610cdd31e6e2a55fe2ae3d040ef8e31a24cf48735b36cef",
+      "description_present": true,
+      "legend_sha256": "0158984d4c2681f099558641301c4b148672cb8cf5bb2784fc1687808e0c29eb",
+      "legend_present": true
+    },
+    {
+      "id": "000010011007",
+      "name": "DARK APPARITIONS",
+      "type": "Carnival of Excess – Strategic Ploy Stratagem",
+      "cp_cost": "2",
+      "turn": "Opponent’s turn",
+      "phase": "Fight phase",
+      "detachment": "Carnival of Excess",
+      "description_sha256": "f20f5d1de66a049a16164b496a1cb99fed47b3bf1bdadf6ad28f3e6733d88839",
+      "description_present": true,
+      "legend_sha256": "0dc5a4acaf91fc58bd93d40b4831eeee1fe3f56251a3faf89fb057eb46447db0",
+      "legend_present": true
+    },
+    {
+      "id": "000010015005",
+      "name": "MARTIAL PERFECTION",
+      "type": "Coterie of the Conceited – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Coterie of the Conceited",
+      "description_sha256": "66b8d1bb4e073c9f4086c481db021fb05c9778c1fbd39e0a4a45e3bff1c09b3a",
+      "description_present": true,
+      "legend_sha256": "a56fc4d2c3deb6c60b261c10ac07eab07180f69b48781cf84f0a033b08c47965",
+      "legend_present": true
+    },
+    {
+      "id": "000010015003",
+      "name": "UNSHAKEABLE OPPONENTS",
+      "type": "Coterie of the Conceited – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Command phase",
+      "detachment": "Coterie of the Conceited",
+      "description_sha256": "b2a7fed934fdebe1c67c6cd6d251e621af00117e298f60150982a5083b6b033e",
+      "description_present": true,
+      "legend_sha256": "80232fd77ac84bffe62aae06f46b815f830455d77a4701bb322d0a42cced94fc",
+      "legend_present": true
+    },
+    {
+      "id": "000010015006",
+      "name": "UNBOUND ARROGANCE",
+      "type": "Coterie of the Conceited – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Coterie of the Conceited",
+      "description_sha256": "36b48db3c640911209fee9b0fc8015a4eb2886c6d43093a39373617c5b671e1e",
+      "description_present": true,
+      "legend_sha256": "7a84cf4c7912b12e1fae63c47dc286b2dbe54dfe00ee0a1d41aced334a8532ad",
+      "legend_present": true
+    },
+    {
+      "id": "000010015002",
+      "name": "PROTECTION OF THE DARK PRINCE",
+      "type": "Coterie of the Conceited – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Coterie of the Conceited",
+      "description_sha256": "1e23d43a908286b21ec30e18ae3f5c3f9a853a8c0c715b3de38f72964323d09d",
+      "description_present": true,
+      "legend_sha256": "17379771af834fe079decf7d4d5aefb3ba075153665862f99b35becc931ada7a",
+      "legend_present": true
+    },
+    {
+      "id": "000010015004",
+      "name": "EMBRACE THE PAIN",
+      "type": "Coterie of the Conceited – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Coterie of the Conceited",
+      "description_sha256": "7d1205678b4f72654197e3dd9822c6e28c4cae9087b26cf3851a5bff4904ec6b",
+      "description_present": true,
+      "legend_sha256": "6654cab7b2887219254c5e1938835eccd09c865c8028f3a931665efa54fc4fa5",
+      "legend_present": true
+    },
+    {
+      "id": "000010015007",
+      "name": "ARMOUR OF ABHORRENCE",
+      "type": "Coterie of the Conceited – Wargear Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Coterie of the Conceited",
+      "description_sha256": "d7d2d687b12000b8bea5ddb2e1d19d7b614d47c90bd0e02e2911d42b1b613465",
+      "description_present": true,
+      "legend_sha256": "2beaea801eda76916689ef9d51c336c9c5ad266888b09107766a89765ce3a8a3",
+      "legend_present": true
+    },
+    {
+      "id": "000010655002",
+      "name": "CONTEMPTUOUS DISREGARD",
+      "type": "Court of the Phoenician Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Court of the Phoenician",
+      "description_sha256": "032b5c04bb962d31a4db97fb9997c9403a6ddbef1a2fc88976b757101b16dbd9",
+      "description_present": true,
+      "legend_sha256": "4c9ab162c8839fed8f38b653ecb8281d1cf51108b2f16abe60d3f96e470c08d3",
+      "legend_present": true
+    },
+    {
+      "id": "000010655003",
+      "name": "PRIDEFUL SUPERIORITY",
+      "type": "Court of the Phoenician Stratagem",
+      "cp_cost": "2",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Court of the Phoenician",
+      "description_sha256": "7be73ad946b60cd3c514ae01cfddc0231bed23c06774e09393b7c15c1448df2c",
+      "description_present": true,
+      "legend_sha256": "e7649e7b0f043e2d097acbd31db2a18852db496564a8c742a5dd3c4874c11a6f",
+      "legend_present": true
+    },
+    {
+      "id": "000010655005",
+      "name": "CLOSE-QUARTERS EXCRUCIATION",
+      "type": "Court of the Phoenician Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Court of the Phoenician",
+      "description_sha256": "7a861477e2750e6e41a2ec0d2228a41b985dc55cf7f5baf78e8641e335e821c9",
+      "description_present": true,
+      "legend_sha256": "020a6f0b527abcc448048b7831a466dc247db6c439920eb4c4fc65c1a93e5adf",
+      "legend_present": true
+    },
+    {
+      "id": "000010655006",
+      "name": "EUPHORIC INSPIRATION",
+      "type": "Court of the Phoenician Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Charge phase",
+      "detachment": "Court of the Phoenician",
+      "description_sha256": "ceb44af092713d2d6b95b0050366db5c1e0eeb87523a86232699caed6652de25",
+      "description_present": true,
+      "legend_sha256": "24729657fe2b9f70502af26911ae53ecbfd3da8895b70281b9a4cb4dd9dcdae4",
+      "legend_present": true
+    },
+    {
+      "id": "000010655004",
+      "name": "SINUOUS BREACH",
+      "type": "Court of the Phoenician Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement or Charge phase",
+      "detachment": "Court of the Phoenician",
+      "description_sha256": "56ddac18a7d7a5673059bbf6555de3f698dba64c8ff09a559f4a4b968a1f4111",
+      "description_present": true,
+      "legend_sha256": "75d116deba20a1c9657de87c404a5a77c1b108bdca17b250588f510a7c511076",
+      "legend_present": true
+    },
+    {
+      "id": "000010655007",
+      "name": "CATALYTIC STIMULUS",
+      "type": "Court of the Phoenician Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Court of the Phoenician",
+      "description_sha256": "4bded6426343012e7ee0ae1c8c3a7194f8f258f1331b9ec4f74dca67cd66e702",
+      "description_present": true,
+      "legend_sha256": "c6f928e913006d7cf8f05442b84b08f58214263e234e4db55e9ecd7f3ec5526d",
+      "legend_present": true
+    },
+    {
+      "id": "000010953002",
+      "name": "DELIGHT IN AGONY",
+      "type": "Elegant Brutes Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Elegant Brutes",
+      "description_sha256": "df6f3963dd5774cf2ea7a61161b150c0898f0f45eb942bc0e10bdc6cbf8012b5",
+      "description_present": true,
+      "legend_sha256": "852a92033201b351642bc6880f4d65bf43dc3e4b053692e79ca3378ba089d318",
+      "legend_present": true
+    },
+    {
+      "id": "000010953003",
+      "name": "PSYCHEDELIC SOULFLAME",
+      "type": "Elegant Brutes Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Elegant Brutes",
+      "description_sha256": "88380e92a1762f4af51194f815faf126e76e073c351006f87b9fc8fbfe03eaee",
+      "description_present": true,
+      "legend_sha256": "66f0a2a024d2493d27a1fb1e93dbad4b3d95d354ff063c821318e0acc4770a9f",
+      "legend_present": true
+    },
+    {
+      "id": "000010953004",
+      "name": "WARP PLUNGE",
+      "type": "Elegant Brutes Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Fight phase",
+      "detachment": "Elegant Brutes",
+      "description_sha256": "8f5fdc1e877396dd08b14a980ed7a5784507cfb403e2ae5d418c38688b9b8f1f",
+      "description_present": true,
+      "legend_sha256": "17bf26f87856986137f8727de9f7afac49284cd4d97bf595eef1cd9fe170d754",
+      "legend_present": true
+    },
+    {
+      "id": "000010957004",
+      "name": "ABSOLUTE SENSORY OVERLOAD",
+      "type": "Frenzied Host Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Frenzied Host",
+      "description_sha256": "bcd3f836cb799ce561c229fb8d9035c30b6d1f4342b8457a5e3e5d33a2e7dc79",
+      "description_present": true,
+      "legend_sha256": "bdb6c22e952c76e43e965a663f810b5b74b69a4085f0eb81829bca1a10d52969",
+      "legend_present": true
+    },
+    {
+      "id": "000010957003",
+      "name": "AGONISED CACOPHONY",
+      "type": "Frenzied Host Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Frenzied Host",
+      "description_sha256": "9409cc53119528f7407d7f9b35160144d2ede219926ed054a0eb01cbac19a99f",
+      "description_present": true,
+      "legend_sha256": "a0ab31cc035eaef882e057014cc2cbfc1d280d2923290a734cdd7c61c8de5721",
+      "legend_present": true
+    },
+    {
+      "id": "000010957002",
+      "name": "POSSESSIVE MANIA",
+      "type": "Frenzied Host Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Frenzied Host",
+      "description_sha256": "3b5e2bbeb42e4cb1e4057c8d54a4758fbe246487668917401071cad894fc4428",
+      "description_present": true,
+      "legend_sha256": "6db6993d083470b9e68a2eec65261bd83381f662f3515382b841119f21d030bf",
+      "legend_present": true
+    },
+    {
+      "id": "000009999004",
+      "name": "HONOUR THE PRINCE",
+      "type": "Mercurial Host – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Mercurial Host",
+      "description_sha256": "805d07c86bb3a09acd46785b5feef9011458a1027c1e6c082ceeecf92a3c8a11",
+      "description_present": true,
+      "legend_sha256": "4558f9439698b89460637cd98adaa67623d30ae7b8bfb77a2dedfda0d2e39a18",
+      "legend_present": true
+    },
+    {
+      "id": "000009999006",
+      "name": "CAPRICIOUS REACTIONS",
+      "type": "Mercurial Host – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Mercurial Host",
+      "description_sha256": "0b09f495225894832b58633b3d82daf14cb44639fcf53ceb9808013bd4e71ef0",
+      "description_present": true,
+      "legend_sha256": "5463b5fab0666b7ebbadc6bae701835a1efefdc7031f32b0777c76cbe429e468",
+      "legend_present": true
+    },
+    {
+      "id": "000009999003",
+      "name": "COMBAT STIMMS",
+      "type": "Mercurial Host – Battle Tactic Stratagem",
+      "cp_cost": "2",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Mercurial Host",
+      "description_sha256": "3dd7709fd0089dba296675764bdb922ab49c0cf0b809e075ef1981f92afe793f",
+      "description_present": true,
+      "legend_sha256": "085f571dfe9a495df61b2620d890f7eca7986aede2a19f79c876192d226c7e9d",
+      "legend_present": true
+    },
+    {
+      "id": "000009999002",
+      "name": "VIOLENT EXCESS",
+      "type": "Mercurial Host – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Mercurial Host",
+      "description_sha256": "52911ec0bf88455325c17db265187b6ecc399fcd6da900b49e6d822da788efa0",
+      "description_present": true,
+      "legend_sha256": "ae29f7b502dbb62abc6742899ce17ff3df0f7a413cf5d4c19bc3d31899622325",
+      "legend_present": true
+    },
+    {
+      "id": "000009999005",
+      "name": "DARK VIGOUR",
+      "type": "Mercurial Host – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Mercurial Host",
+      "description_sha256": "dfb9efbe2891a6dc55390efaa633d3f8ea1e78ad989254b783c562d715bfa59e",
+      "description_present": true,
+      "legend_sha256": "27d9800eeefd9932d59696bd4bb1cd6b2af1f9fde5d7702fd1eab716965304fa",
+      "legend_present": true
+    },
+    {
+      "id": "000009999007",
+      "name": "CRUEL RAIDERS",
+      "type": "Mercurial Host – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Fight phase",
+      "detachment": "Mercurial Host",
+      "description_sha256": "28db8eb6eed160bdf5feb20bbd8152af00fa602784fed613160a9f8061573a83",
+      "description_present": true,
+      "legend_sha256": "812e53b7e628ff98256ab7284d7e85b79f56b02cc02e67b30530ef12ba31cb12",
+      "legend_present": true
+    },
+    {
+      "id": "000010003004",
+      "name": "INCESSANT VIOLENCE",
+      "type": "Peerless Bladesmen – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Peerless Bladesmen",
+      "description_sha256": "70faf237ed164827b53b041c0742e01d3558d11c6fe2f3319a9c5e965faae524",
+      "description_present": true,
+      "legend_sha256": "2c1a2e4eab090e015f2584272e66050ffc720f4d5ba05890a90350954259b310",
+      "legend_present": true
+    },
+    {
+      "id": "000010003005",
+      "name": "CRUEL BLADESMAN",
+      "type": "Peerless Bladesmen – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Peerless Bladesmen",
+      "description_sha256": "1d10c543a7ed392bb64249cc7843f427c2fff63a6c2f57324c038fe411f04828",
+      "description_present": true,
+      "legend_sha256": "bd7795bbe701dd7e92ff6c192f8402f2ca32089e64eb8f792161972de1a2090a",
+      "legend_present": true
+    },
+    {
+      "id": "000010003002",
+      "name": "DEFT PARRY",
+      "type": "Peerless Bladesmen – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Peerless Bladesmen",
+      "description_sha256": "3522e03670630eb34d5e8bc153197daf829a785e8eb376d4cacf26d2a6278d52",
+      "description_present": true,
+      "legend_sha256": "cadb5c5b606e0e11e79489ac99b5207204df99f9640a4021911e5f65d27a5c92",
+      "legend_present": true
+    },
+    {
+      "id": "000010003006",
+      "name": "TERRIFYING SPECTACLE",
+      "type": "Peerless Bladesmen – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Command phase",
+      "detachment": "Peerless Bladesmen",
+      "description_sha256": "cad60ec83a88242c9807dac5e0bdc481fa7f7fb10ba62594ff6a7c93add62039",
+      "description_present": true,
+      "legend_sha256": "a665c22a35047f622ca0ca496966c240d61afa8f1c1e45546f57bffeb00a14cc",
+      "legend_present": true
+    },
+    {
+      "id": "000010003007",
+      "name": "CUT DOWN THE WEAK",
+      "type": "Peerless Bladesmen – Strategic Ploy Stratagem",
+      "cp_cost": "2",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Peerless Bladesmen",
+      "description_sha256": "90f9384d2db492e1beb5fe05316d045c864e197b88bf19028e06035af82f7a2c",
+      "description_present": true,
+      "legend_sha256": "38184c09cc686f8bebe24c044595ae5434e0b500974c5c98e44832dc14189fb4",
+      "legend_present": true
+    },
+    {
+      "id": "000010003003",
+      "name": "DEATH ECSTASY",
+      "type": "Peerless Bladesmen – Strategic Ploy Stratagem",
+      "cp_cost": "2",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Peerless Bladesmen",
+      "description_sha256": "3c3f1cea3e255646a656ac5550a90636c5552690c2e8fb90ee41b9838c55b5a0",
+      "description_present": true,
+      "legend_sha256": "b9bb0860cccd0f50b6d420d3ddc4d583dba60061a6ce25248ece4f0160026fd2",
+      "legend_present": true
+    },
+    {
+      "id": "000010007004",
+      "name": "DYNAMIC BREAKTHROUGH",
+      "type": "Rapid Evisceration – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Rapid Evisceration",
+      "description_sha256": "c827b3e4ac550b0e3cb60bf856f491f0722b3c7cc58250ef5a9c8c2e425a0e7c",
+      "description_present": true,
+      "legend_sha256": "3975d542fd6ed7f5cb0c111484befafda636574be1036a1e98accc218f76cc54",
+      "legend_present": true
+    },
+    {
+      "id": "000010007007",
+      "name": "OUTFLANKING STRIKE",
+      "type": "Rapid Evisceration – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Fight phase",
+      "detachment": "Rapid Evisceration",
+      "description_sha256": "491e203e5dc5f53272749b9cdc74e8edbdc9d700f2f15095dd851a9314fd0d81",
+      "description_present": true,
+      "legend_sha256": "bd27fa11f47e63d60508d81428491cdf0b2396fd3270c83bdfcbd47b9f25b949",
+      "legend_present": true
+    },
+    {
+      "id": "000010007003",
+      "name": "ADVANCE AND CLAIM",
+      "type": "Rapid Evisceration – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Command phase",
+      "detachment": "Rapid Evisceration",
+      "description_sha256": "635f6c2de9da836d4974cdea22f18f39215a1ddbf3bc8f8711e36de02269a7b0",
+      "description_present": true,
+      "legend_sha256": "f95c29a51376c4f7934330d9fd80a638d9dddaa115ea270a653ec8ca32901381",
+      "legend_present": true
+    },
+    {
+      "id": "000010007002",
+      "name": "ONTO THE NEXT",
+      "type": "Rapid Evisceration – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Rapid Evisceration",
+      "description_sha256": "39598080d7634224bfdf617af69223f556b4e1abfa48081709dbce6537875913",
+      "description_present": true,
+      "legend_sha256": "888f11c84b73c50a9a806c8131a46acf81c23834c4d199652b27dc02b6c662ec",
+      "legend_present": true
+    },
+    {
+      "id": "000010007005",
+      "name": "CEASELESS ONSLAUGHT",
+      "type": "Rapid Evisceration – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Charge phase",
+      "detachment": "Rapid Evisceration",
+      "description_sha256": "1cc456fe44de01cb8ccf602a53f0f8ba6159ac5dd4e236461015fece212d52b5",
+      "description_present": true,
+      "legend_sha256": "8f0521ecff59719dbb1ad28aeb24b0998f612043de7b7e133f3a777aa22e7120",
+      "legend_present": true
+    },
+    {
+      "id": "000010007006",
+      "name": "REACTIVE DISEMBARKATION",
+      "type": "Rapid Evisceration – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Rapid Evisceration",
+      "description_sha256": "c6d93f76da737791de314129e15d2971d5e46fa4523fb45665e8a2fac76ac734",
+      "description_present": true,
+      "legend_sha256": "602cb46ded7d65db061cb9f6477c1396806e18f0ef8eaeb46543eccfcb725b87",
+      "legend_present": true
+    },
+    {
+      "id": "000010019002",
+      "name": "DEVOTED DUELLISTS",
+      "type": "Slaanesh’s Chosen – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Slaanesh’s Chosen",
+      "description_sha256": "91cd1f8b6b77716e98a17b5fd05a3af8ab07e467dca7b86ab7dc0a887fa77393",
+      "description_present": true,
+      "legend_sha256": "20b642a944b873c2d05579bf1a5012e44ca2e51f3daae8f231fd84d4d6a9b361",
+      "legend_present": true
+    },
+    {
+      "id": "000010019004",
+      "name": "HEIGHTENED JEALOUSY",
+      "type": "Slaanesh’s Chosen – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Slaanesh’s Chosen",
+      "description_sha256": "55d0bbca75a094c5e2dafefa5f26af192a6ff559dfc6b5bd7335122eb83cdf1c",
+      "description_present": true,
+      "legend_sha256": "3f3cb2e592c0cda5f11996d3c2ac0f5d3a9ae52074bee6a0220c6d0b3fc461e1",
+      "legend_present": true
+    },
+    {
+      "id": "000010019006",
+      "name": "REFUSAL TO BE OUTDONE",
+      "type": "Slaanesh’s Chosen – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Charge phase",
+      "detachment": "Slaanesh’s Chosen",
+      "description_sha256": "ff8c3a68ebbe2b60b80f82c6ecb49c837b91fffa96a11f14a872000dd05b15d2",
+      "description_present": true,
+      "legend_sha256": "4816f606013efbe7b9c589c830e635d71ca4cad2755c284d8cf7122c6a8be434",
+      "legend_present": true
+    },
+    {
+      "id": "000010019005",
+      "name": "DIABOLIC MAJESTY",
+      "type": "Slaanesh’s Chosen – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Slaanesh’s Chosen",
+      "description_sha256": "64069d1963c9542434da5c5bee55f1f5d6557910f06a28c3faa176a9e3d60450",
+      "description_present": true,
+      "legend_sha256": "2f10564e5ad9cbbe9809ac50b74b5fe6669e297c17a057ba1b408efc2f9cb2b2",
+      "legend_present": true
+    },
+    {
+      "id": "000010019007",
+      "name": "VENGEFUL SURGE",
+      "type": "Slaanesh’s Chosen – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Slaanesh’s Chosen",
+      "description_sha256": "9b6c39ffbd6842876f522bbbaae1745fcbcfb7f202c5cbb17eddc8ef0caa67b4",
+      "description_present": true,
+      "legend_sha256": "1853c85bf7b4bec4ffb552778bc63360d78d8e81b729935a0725f9f12bf66f7e",
+      "legend_present": true
+    },
+    {
+      "id": "000010019003",
+      "name": "BEAUTIFUL DEATH",
+      "type": "Slaanesh’s Chosen – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Slaanesh’s Chosen",
+      "description_sha256": "79b846e2ea2c9b637fe0808707320ee280dceb078aa29352daf970f29aa37c56",
+      "description_present": true,
+      "legend_sha256": "de514b650a354e6a1f6a6e2924cbf45f9455824c6f07c657eafc79c20fe9ec8f",
+      "legend_present": true
+    },
+    {
+      "id": "000010961003",
+      "name": "SINGLE-MINDED STRIKE",
+      "type": "Spectacle of Slaughter Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Charge phase",
+      "detachment": "Spectacle of Slaughter",
+      "description_sha256": "461d1600db64b12f61af1e0a25729a037416b01accf6670f4413957aa1ea284b",
+      "description_present": true,
+      "legend_sha256": "6d0c586afde4d5c9bf596cf1bf4e4222314306f9513f0b1c952715ee22419a4d",
+      "legend_present": true
+    },
+    {
+      "id": "000010961004",
+      "name": "INTOXICATED BY TRIUMPH",
+      "type": "Spectacle of Slaughter Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Spectacle of Slaughter",
+      "description_sha256": "93f24090537df4dbe0da6123c6724fb46666d86e6ebe738c5e4360d3b25ad8b1",
+      "description_present": true,
+      "legend_sha256": "5f367dd73e6a49828c34256f04b6f73ee3788f1fcb80d62d7b94a2b82d9e00e0",
+      "legend_present": true
+    },
+    {
+      "id": "000010961002",
+      "name": "HONOUR IS FOR FOOLS",
+      "type": "Spectacle of Slaughter Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Spectacle of Slaughter",
+      "description_sha256": "c7c900974363564f8f3325b944efb897cc93359f36c6a1f5da12e61b261eff6e",
+      "description_present": true,
+      "legend_sha256": "275306bbcab208af4bcaef364c1d8b3a64fae954d2767cf09304e4b35f8bd92a",
+      "legend_present": true
+    },
+    {
+      "id": "000010809002",
+      "name": "ALLURING GROTESQUERIE",
+      "type": "Sublime Strike – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Sublime Strike",
+      "description_sha256": "b06f9cf7235a94502ef142e400d2ddd5d7c6535189a5c1f74c8c17008926a19e",
+      "description_present": true,
+      "legend_sha256": "2b1434fc5b73ad86926438ed82534a6da63157c365c3c4895a992d4f86904b8d",
+      "legend_present": true
+    },
+    {
+      "id": "000010809004",
+      "name": "EAGER FOR MORE",
+      "type": "Sublime Strike – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Sublime Strike",
+      "description_sha256": "57f84accd880abd2c6469d533ed62947d67a41aebe42d1ded91fabc9f3ea60f3",
+      "description_present": true,
+      "legend_sha256": "50bfcefbb7e1308d4387bd37e72f60581f470c046d48affbe537c877551a1576",
+      "legend_present": true
+    },
+    {
+      "id": "000010809005",
+      "name": "VYING FOR VICTORY",
+      "type": "Sublime Strike – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Sublime Strike",
+      "description_sha256": "e570c7a3db749187daedeeb65646ba1ba2b641ccb0e91ed97c8a33d75298bbe9",
+      "description_present": true,
+      "legend_sha256": "76966bb856753770a9b259d15557e853d83c2b5af481b5365a453bd814ba70e0",
+      "legend_present": true
+    },
+    {
+      "id": "000010809003",
+      "name": "CLOYING CORRUPTION",
+      "type": "Sublime Strike – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Sublime Strike",
+      "description_sha256": "970c20c919ef2aed631df3d5a37732e1cec99b238abb7b531715d2e7ad14260d",
+      "description_present": true,
+      "legend_sha256": "cfe92e6495d88e176d787861ae5f29bc02e847ad314e29746bbb18e7501aa39e",
+      "legend_present": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "status": "STRUCTURAL_SNAPSHOT_READY_FOR_REVIEW",
+  "wahapedia_last_update": "2026-09-28 02:38:04",
+  "counts": {
+    "factions": 25,
+    "models": 1763,
+    "weapons": 8972,
+    "keywords": 16188,
+    "abilities": 6934,
+    "options": 2745,
+    "composition_rows": 2103,
+    "leader_rows": 0,
+    "datasheets": 1660,
+    "detachments": 329,
+    "detachment_abilities": 350,
+    "enhancements": 1024,
+    "stratagems": 1570
+  },
+  "mapped_repository_factions": 23,
+  "unmapped_wahapedia_factions": [
+    {
+      "faction_id": "TL",
+      "name": "Adeptus Titanicus",
+      "repository_slug": null,
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/adeptus-titanicus.json",
+      "datasheets": 4,
+      "detachments": 0,
+      "detachment_abilities": 0,
+      "enhancements": 0,
+      "stratagems": 0
+    },
+    {
+      "faction_id": "UA",
+      "name": "Unbound Adversaries",
+      "repository_slug": null,
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/unbound-adversaries.json",
+      "datasheets": 0,
+      "detachments": 0,
+      "detachment_abilities": 0,
+      "enhancements": 0,
+      "stratagems": 0
+    }
+  ],
+  "promotion": "NONE",
+  "note": "This importer does not modify coverage/current.json. Promotion is a separate reviewed step."
+}

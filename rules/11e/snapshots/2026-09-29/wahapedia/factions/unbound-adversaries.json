@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "wahapedia_last_update": "2026-09-28 02:38:04",
+  "faction": {
+    "id": "UA",
+    "name": "Unbound Adversaries",
+    "link": "https://wahapedia.ru/wh40k11ed/factions/unbound-adversaries",
+    "repository_slug": null
+  },
+  "copyright_policy": {
+    "full_prose_stored": false,
+    "rule_text_policy": "Names/metadata/structured characteristics are stored; long prose is represented by SHA-256 fingerprints and fetched from the source on demand."
+  },
+  "sources": [],
+  "datasheets": [],
+  "detachments": [],
+  "detachment_abilities": [],
+  "enhancements": [],
+  "stratagems": []
+}

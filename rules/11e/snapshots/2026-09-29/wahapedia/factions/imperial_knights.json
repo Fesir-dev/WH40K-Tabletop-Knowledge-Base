@@ -1,0 +1,6911 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "wahapedia_last_update": "2026-09-28 02:38:04",
+  "faction": {
+    "id": "QI",
+    "name": "Imperial Knights",
+    "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights",
+    "repository_slug": "imperial_knights"
+  },
+  "copyright_policy": {
+    "full_prose_stored": false,
+    "rule_text_policy": "Names/metadata/structured characteristics are stored; long prose is represented by SHA-256 fingerprints and fetched from the source on demand."
+  },
+  "sources": [
+    {
+      "id": "000000015",
+      "name": "Adeptus Mechanicus",
+      "type": "Faction Pack",
+      "edition": "11",
+      "version": "1.2",
+      "errata_date": "26.08.2026 0:00:00",
+      "errata_link": "https://assets.warhammer-community.com/eng_wh40k_faction_pack_adeptus_mechanicus-nnsofctxvp-ed7amkvryu.pdf"
+    },
+    {
+      "id": "000000034",
+      "name": "Imperial Knights",
+      "type": "Faction Pack",
+      "edition": "11",
+      "version": "1.2",
+      "errata_date": "26.08.2026 0:00:00",
+      "errata_link": "https://assets.warhammer-community.com/eng_wh40k_faction_pack_imperial_knights-n1irjnjygs-w8jfnk8kdn.pdf"
+    },
+    {
+      "id": "000000370",
+      "name": "Imperial Knights (Forge World)",
+      "type": "Faction Pack",
+      "edition": "0",
+      "version": "",
+      "errata_date": "01.01.0001 0:00:00",
+      "errata_link": ""
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "000000855",
+      "name": "Knight Paladin",
+      "role": "Vehicle Character",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Knight-Paladin",
+      "loadout_sha256": "87184f0e908a45688f39ea8da9f81bd4dbf7af66d74e7b7a42a7d5421a1f719f",
+      "transport_sha256": null,
+      "damaged_description_sha256": "2d4a92a295ba8402cc05d944e5051763dc68393f48102e24eededad44d712ab1",
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight Paladin",
+          "m": "10\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "26",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "375"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "390"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Ironstorm missile pod",
+          "description": "blast, indirect fire",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+1",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Meltagun",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Questoris heavy stubber",
+          "description": "rapid fire 3",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Rapid-fire battle cannon",
+          "description": "blast, rapid fire d6+3",
+          "range": "72",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Stormspear rocket pod",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "D6"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Twin Icarus autocannon",
+          "description": "anti-fly 2+, twin-linked",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Reaper chainsword – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "2",
+          "name": "Reaper chainsword – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "1",
+          "name": "Thunderstrike gauntlet – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "20",
+          "ap": "-3",
+          "d": "8"
+        },
+        {
+          "line": "10",
+          "line_in_wargear": "2",
+          "name": "Thunderstrike gauntlet – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Questoris",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Paladin",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Paladin’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "05085667f644955e93876f04262b29ca451d89ae5222a1d9653df228d9f44120",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Seasoned Noble",
+          "type": "Datasheet",
+          "description_sha256": "f65d08c221007cdee07b8d801fbaba2918c16674dfa884bdd7d492de6bb36a73",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "fdb7870a76558e9d5a04874e09305ddd8df8e32c4fcbb4cc4703794457f1d5d0",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "614c166782b388912861c87b1f08e78300e89b33721d397c22d649eae526825f",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "99a9837cbf7f48e5c19ee3ef5358ca36ffff759d6cb6c6df0fc81d19a73e7df1",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "5b2129fe0cc8d09e5fd5d0dcbf56b6bab46e053cc545298aa8f5986d51bd7305",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000856",
+      "name": "Knight Errant",
+      "role": "Vehicle Character",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Knight-Errant",
+      "loadout_sha256": "82b25c11c208fc1095b2c810651dbd95bb9e85e7fb2c2d0130ed520081a8700a",
+      "transport_sha256": null,
+      "damaged_description_sha256": "2d4a92a295ba8402cc05d944e5051763dc68393f48102e24eededad44d712ab1",
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight Errant",
+          "m": "10\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "26",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "355"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "370"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Ironstorm missile pod",
+          "description": "blast, indirect fire",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+1",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Meltagun",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Questoris heavy stubber",
+          "description": "rapid fire 3",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Stormspear rocket pod",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "D6"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Thermal cannon",
+          "description": "blast, melta 6",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2D3",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Twin Icarus autocannon",
+          "description": "anti-fly 2+, twin-linked",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Reaper chainsword – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "2",
+          "name": "Reaper chainsword – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "1",
+          "name": "Thunderstrike gauntlet – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "20",
+          "ap": "-3",
+          "d": "8"
+        },
+        {
+          "line": "10",
+          "line_in_wargear": "2",
+          "name": "Thunderstrike gauntlet – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Errant",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Questoris",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Errant’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "7359d1c49f7d5178c6643c6ca1d2f7d949ebf6f93b4f5caa93929ed919be8612",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Aggressive Assault",
+          "type": "Datasheet",
+          "description_sha256": "9427f23d4bf4b5faed1585fa1729e37d26bdce358bdb4199c83a1adcad92b9ec",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "fdb7870a76558e9d5a04874e09305ddd8df8e32c4fcbb4cc4703794457f1d5d0",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "614c166782b388912861c87b1f08e78300e89b33721d397c22d649eae526825f",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "99a9837cbf7f48e5c19ee3ef5358ca36ffff759d6cb6c6df0fc81d19a73e7df1",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "e33d34594e1ecec4e7c35e4a898ec98e635e32257485673c61ad389e4e6f8647",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000857",
+      "name": "Knight Warden",
+      "role": "Vehicle Character",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Knight-Warden",
+      "loadout_sha256": "ff1bec968f433fed7777d94e4fe96f2f577d1a1ab1d2800b080fa975ed8bbd22",
+      "transport_sha256": null,
+      "damaged_description_sha256": "2d4a92a295ba8402cc05d944e5051763dc68393f48102e24eededad44d712ab1",
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight Warden",
+          "m": "10\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "26",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "375"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "390"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Avenger gatling cannon",
+          "range": "36",
+          "type": "Ranged",
+          "a": "18",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Heavy flamer",
+          "description": "ignores cover, torrent",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Ironstorm missile pod",
+          "description": "blast, indirect fire",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+1",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Meltagun",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Questoris heavy stubber",
+          "description": "rapid fire 3",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Stormspear rocket pod",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "D6"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Twin Icarus autocannon",
+          "description": "anti-fly 2+, twin-linked",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Reaper chainsword – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "2",
+          "name": "Reaper chainsword – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "10",
+          "line_in_wargear": "1",
+          "name": "Thunderstrike gauntlet – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "20",
+          "ap": "-3",
+          "d": "8"
+        },
+        {
+          "line": "11",
+          "line_in_wargear": "2",
+          "name": "Thunderstrike gauntlet – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Knight Warden",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Questoris",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Warden’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "f6d9e3bc4f1e48a85ef6b00683aff73a58e870817b3566b3ae2add42b5a99c16",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Thin Their Ranks",
+          "type": "Datasheet",
+          "description_sha256": "4929a630fb8c3ae4513c92fc130497310c5335dcfed8d76e0cd73af67e0518e9",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "fdb7870a76558e9d5a04874e09305ddd8df8e32c4fcbb4cc4703794457f1d5d0",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "614c166782b388912861c87b1f08e78300e89b33721d397c22d649eae526825f",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "99a9837cbf7f48e5c19ee3ef5358ca36ffff759d6cb6c6df0fc81d19a73e7df1",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "3cacc446260d2190c7865a0bb3bf6c1ddc68e99e5bbfbc7c9450026cf9723a71",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000858",
+      "name": "Knight Gallant",
+      "role": "Vehicle Character",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Knight-Gallant",
+      "loadout_sha256": "e1ec8784b934585d9f3b580807fe8a54e9bb9c8f9be9561e9bddac9c170b8547",
+      "transport_sha256": null,
+      "damaged_description_sha256": "2d4a92a295ba8402cc05d944e5051763dc68393f48102e24eededad44d712ab1",
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight Gallant",
+          "m": "12\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "26",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "355"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "370"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Ironstorm missile pod",
+          "description": "blast, indirect fire",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+1",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Meltagun",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Questoris heavy stubber",
+          "description": "rapid fire 3",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Stormspear rocket pod",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "D6"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Twin Icarus autocannon",
+          "description": "anti-fly 2+, twin-linked",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Reaper chainsword – strike",
+          "description": "devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "14",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "2",
+          "name": "Reaper chainsword – sweep",
+          "description": "lethal hits",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "18",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Thunderstrike gauntlet – strike",
+          "description": "devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "20",
+          "ap": "-3",
+          "d": "8"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "2",
+          "name": "Thunderstrike gauntlet – sweep",
+          "description": "lethal hits",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "2",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Questoris",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Gallant",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Gallant’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "c9796d6ad50bb689ee9d3fe15214d50fae24f3dedbfba86a9cc1969e89d3f984",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Martial Pride",
+          "type": "Datasheet",
+          "description_sha256": "16636f10008de5fcfe5e8dfe74db771e4c27cdc8b9e57c53da0569c99e658187",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "fdb7870a76558e9d5a04874e09305ddd8df8e32c4fcbb4cc4703794457f1d5d0",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "99a9837cbf7f48e5c19ee3ef5358ca36ffff759d6cb6c6df0fc81d19a73e7df1",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "0a9d84f169ca305ba13f6262956d232f95712742748499765bb93bb149ce60e1",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000859",
+      "name": "Knight Crusader",
+      "role": "Vehicle Character",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Knight-Crusader",
+      "loadout_sha256": "063dd36dc8927ae6d062a74bede0f916552a42646ff22477d981ce47be38146f",
+      "transport_sha256": null,
+      "damaged_description_sha256": "2d4a92a295ba8402cc05d944e5051763dc68393f48102e24eededad44d712ab1",
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight Crusader",
+          "m": "10\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "26",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "395"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "415"
+        },
+        {
+          "line": "5",
+          "description": "WARGEAR OPTIONS"
+        },
+        {
+          "line": "6",
+          "description": "per Rapid-fire battle cannon",
+          "cost": "15"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Avenger gatling cannon",
+          "range": "36",
+          "type": "Ranged",
+          "a": "18",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Heavy flamer",
+          "description": "ignores cover, torrent",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Ironstorm missile pod",
+          "description": "blast, indirect fire",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+1",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Meltagun",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Questoris heavy stubber",
+          "description": "rapid fire 3",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Rapid-fire battle cannon",
+          "description": "blast, rapid fire d6+3",
+          "range": "72",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Stormspear rocket pod",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "D6"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Thermal cannon",
+          "description": "blast, melta 6",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2D3",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "1",
+          "name": "Twin Icarus autocannon",
+          "description": "anti-fly 2+, twin-linked",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "10",
+          "line_in_wargear": "1",
+          "name": "Titanic feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-1",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Questoris",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Crusader",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Crusader’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "cb466686a4f7d160e30a86c7804e5966d72dad6dbd504fdd5be9276bb50d924d",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Punishing Salvoes",
+          "type": "Datasheet",
+          "description_sha256": "0eb266cf942a534aff4ddacb33dc3b5a916a2d875ec51b2910c704fdee2f3a86",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "fdb7870a76558e9d5a04874e09305ddd8df8e32c4fcbb4cc4703794457f1d5d0",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "fe69179ff09b40ad23f7855dc76ad27a1857deaac3fd0371988469b68cfca18a",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "840a57081b1bad5c629ee6487c40a56572c8d7ad2d4afdd2a6703e2c224eeb17",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "6c05db03c4a88ab1c4427d0233f8f9ce07c3e8047da38911d41d78b8ca59bbf6",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000860",
+      "name": "Acastus Knight Porphyrion",
+      "role": "Titanic",
+      "source_id": "000000370",
+      "source_name": "Imperial Knights (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Acastus-Knight-Porphyrion",
+      "loadout_sha256": "0f0dfe61aaf68e5647c9cde808323f13096982847e561f77453a3561c188777b",
+      "transport_sha256": null,
+      "damaged_description_sha256": "3a172fd2ea8cfc71ebcc6054d4f2427b3093badd0ea227563eaedf9a830996fd",
+      "models": [
+        {
+          "line": "1",
+          "name": "Acastus Knight Porphyrion",
+          "m": "8\"",
+          "t": "13",
+          "sv": "2+",
+          "w": "30",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* Against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "725"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "800"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Acastus autocannon",
+          "range": "48",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Acastus ironstorm missile pod",
+          "description": "blast, heavy, indirect fire",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+6",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Helios defence missiles",
+          "description": "anti-fly 2+, heavy",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-2",
+          "d": "D6"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Lascannon",
+          "range": "48",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Twin magna lascannon",
+          "description": "blast, twin-linked",
+          "range": "72",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "18",
+          "ap": "-4",
+          "d": "D6+6"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Titanic feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "10",
+          "ap": "-1",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Acastus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Porphyrion",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "2D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Bastion of Firepower",
+          "type": "Datasheet",
+          "description_sha256": "3c8a9456e37e317449d39e48f583bdbc369fe792e796454d46ad32ae675aaf0f",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "50db7715567a759a33bdcc299c3382216d2be2e1401dfac48e8262eb72eb6518",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "9bdf560bc842eed1eb3ce4a9c80e41b771c661ce8a7e4fe111b288ed2f4267aa",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "a8d3df1e3131bb10ba495896081496db2a99be18ae9e6186f895b69e20c1571f",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000861",
+      "name": "Cerastus Knight Acheron",
+      "role": "Vehicle Character",
+      "source_id": "000000370",
+      "source_name": "Imperial Knights (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Cerastus-Knight-Acheron",
+      "loadout_sha256": "5c647779e71fa9e4ac724dff5ab41fe2af201b85cf61e5e14d3a6609f6452936",
+      "transport_sha256": null,
+      "damaged_description_sha256": "3a172fd2ea8cfc71ebcc6054d4f2427b3093badd0ea227563eaedf9a830996fd",
+      "models": [
+        {
+          "line": "1",
+          "name": "Cerastus Knight Acheron",
+          "m": "12\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "28",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* Against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "380"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "395"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Acheron flame cannon",
+          "description": "ignores cover, torrent",
+          "range": "18",
+          "type": "Ranged",
+          "a": "2D6",
+          "bs_ws": "N/A",
+          "s": "8",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Twin heavy bolter",
+          "description": "sustained hits 1, twin-linked",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Reaper chainfist – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "2",
+          "name": "Reaper chainfist – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-3",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Acheron",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Cerastus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6+2"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Acheron’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "10b466bc2a7243bf4307d31e3ac91609d407bf027567e9c12f6085ceb07a00f5",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Searing Flames",
+          "type": "Datasheet",
+          "description_sha256": "d3303decd1eb92f5c1b2e9e6efc4c5f4db96afa680a72faa24a24ef27a576ddf",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "d26223e7c9a80cffa628af9e96bf710b5a807f37e7e336d9090606510f9f7511",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000862",
+      "name": "Cerastus Knight Atrapos",
+      "role": "Vehicle Character",
+      "source_id": "000000370",
+      "source_name": "Imperial Knights (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Cerastus-Knight-Atrapos",
+      "loadout_sha256": "12fb36f2d57d03dfb2f96810455f85c27e762e2e54909d0f24642afbf71f0f1e",
+      "transport_sha256": null,
+      "damaged_description_sha256": "3a172fd2ea8cfc71ebcc6054d4f2427b3093badd0ea227563eaedf9a830996fd",
+      "models": [
+        {
+          "line": "1",
+          "name": "Cerastus Knight Atrapos",
+          "m": "12\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "28",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "405"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "425"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Atrapos lascutter – low intensity",
+          "description": "sustained hits 1",
+          "range": "36",
+          "type": "Ranged",
+          "a": "2D6",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "2",
+          "name": "Atrapos lascutter – high intensity",
+          "description": "sustained hits 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-3",
+          "d": "4"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Graviton singularity cannon – contained",
+          "description": "blast",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D3",
+          "bs_ws": "3",
+          "s": "16",
+          "ap": "-4",
+          "d": "D6+1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "2",
+          "name": "Graviton singularity cannon – singularity",
+          "description": "blast, devastating wounds, hazardous",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D3",
+          "bs_ws": "3",
+          "s": "16",
+          "ap": "-4",
+          "d": "D6+1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Atrapos lascutter – low intensity",
+          "description": "sustained hits 1",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "2",
+          "name": "Atrapos lascutter – high intensity",
+          "description": "sustained hits 1",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-3",
+          "d": "4"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Knight Atrapos",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Cerastus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6+2"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Atrapos’ Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "ee046e75c287a27ee20f5f357bca392d9d3992759e46a66586c165b1855ff048",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Macro-extinction Protocols",
+          "type": "Datasheet",
+          "description_sha256": "0ca8676b0150f1f6cebe0fe10ecaaf34fc05d005c43451def27eeaebd4b758ab",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "c5856cfd79a51b0e93f967b95e1f6cfee4668eb74bea3aeb8336fd62576cfb73",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000863",
+      "name": "Cerastus Knight Castigator",
+      "role": "Vehicle Character",
+      "source_id": "000000370",
+      "source_name": "Imperial Knights (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Cerastus-Knight-Castigator",
+      "loadout_sha256": "7db29847f5eaa07d8f627d292855ba10378eed92b83aab58fc207b009d337ff6",
+      "transport_sha256": null,
+      "damaged_description_sha256": "3a172fd2ea8cfc71ebcc6054d4f2427b3093badd0ea227563eaedf9a830996fd",
+      "models": [
+        {
+          "line": "1",
+          "name": "Cerastus Knight Castigator",
+          "m": "12\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "28",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* Against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "380"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "395"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Castigator bolt cannon",
+          "description": "twin-linked",
+          "range": "36",
+          "type": "Ranged",
+          "a": "18",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Tempest warblade – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Tempest warblade – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-3",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Castigator",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Cerastus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6+2"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Castigator’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "81011e69f54f68e442c57fa9a8dd55e39f7e748359926a95d36bb934922f17d6",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Storm of Bolts",
+          "type": "Datasheet",
+          "description_sha256": "369a92a6298207037b429d1a966f682f2d2fb96912da40801cd4104f44040c6f",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "e1041f2780c1471ce3569346d0224f40ee5ea79d5a557988b05186af61153196",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000864",
+      "name": "Cerastus Knight Lancer",
+      "role": "Vehicle Character",
+      "source_id": "000000370",
+      "source_name": "Imperial Knights (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Cerastus-Knight-Lancer",
+      "loadout_sha256": "4fb7cf4981c1bacd39fe6a8a038ded923d7a05de21413d122b013fbf3046b823",
+      "transport_sha256": null,
+      "damaged_description_sha256": "3a172fd2ea8cfc71ebcc6054d4f2427b3093badd0ea227563eaedf9a830996fd",
+      "models": [
+        {
+          "line": "1",
+          "name": "Cerastus Knight Lancer",
+          "m": "14\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "28",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "415"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "435"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Cerastus shock lance",
+          "description": "assault, sustained hits 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "0",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "2",
+          "name": "Cerastus shock lance – strike",
+          "description": "lance",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "20",
+          "ap": "-3",
+          "d": "8"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "3",
+          "name": "Cerastus shock lance – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "10",
+          "bs_ws": "2",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Lancer",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Cerastus",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6+2"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Lancer’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "aa5791f4a2d2e3ab5a3fdefae4366d9633e9edb79cd1935101101f89ca08b6b1",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Shock Charge",
+          "type": "Datasheet",
+          "description_sha256": "2dc52b4655fb844a31209c39394414e64f548a2e58f33cdbce5672ac576437c5",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "93629e097951565d21a7d611663093173e8e3e42d0e5aae91aad38188097cabc",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000865",
+      "name": "Questoris Knight Magaera",
+      "role": "Vehicle Character",
+      "source_id": "000000370",
+      "source_name": "Imperial Knights (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Questoris-Knight-Magaera",
+      "loadout_sha256": "e63a604708675770e422c0a25b73ce7e3b78e63312e52fc352ad76058360cec0",
+      "transport_sha256": null,
+      "damaged_description_sha256": "af97bd2d1801eecc82d0b337f1ab5eeca652e27708c8a7ebdc7fa905acc14143",
+      "models": [
+        {
+          "line": "1",
+          "name": "Questoris Knight Magaera",
+          "m": "10\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "26",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "385"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "400"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Lightning cannon",
+          "description": "sustained hits 2",
+          "range": "48",
+          "type": "Ranged",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "0",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Phased plasma-fusil",
+          "description": "rapid fire 2",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Twin rad cleanser",
+          "description": "anti-infantry 2+, ignores cover, torrent, twin-linked",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "2",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Hekaton siege claw – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "20",
+          "ap": "-3",
+          "d": "8"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "2",
+          "name": "Hekaton siege claw – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Reaper chainsword – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "2",
+          "name": "Reaper chainsword – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-3",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Magaera",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Questoris",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Magaera’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "396fbea1836d1520495e0b3e8d9ce64245a3816d777e1405b9dc78f2dd67fd8d",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Repair Auto-simulacra",
+          "type": "Datasheet",
+          "description_sha256": "fead849235b17b579488dbaa8cba824e90335a0732c0e1a7b4613149bcb4ef02",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "aec0539a48f78a4db2b85cf92855087c0a44e9a181d3425b69b64058e28aa1e0",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "d94a7c78fb07db9d1d20041dbf2490872f23a23e1dd74767ad0a1ecddaf3d6f4",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000866",
+      "name": "Questoris Knight Styrix",
+      "role": "Vehicle Character",
+      "source_id": "000000370",
+      "source_name": "Imperial Knights (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Questoris-Knight-Styrix",
+      "loadout_sha256": "3b1b3165887df6dc3f022cd7863d4b75a98254f5fd2e805c2bda2a5add8c1272",
+      "transport_sha256": null,
+      "damaged_description_sha256": "af97bd2d1801eecc82d0b337f1ab5eeca652e27708c8a7ebdc7fa905acc14143",
+      "models": [
+        {
+          "line": "1",
+          "name": "Questoris Knight Styrix",
+          "m": "10\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "26",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "375"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "390"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Graviton crusher",
+          "description": "anti-vehicle 2+, blast",
+          "range": "18",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Twin rad cleanser",
+          "description": "anti-infantry 2+, ignores cover, torrent, twin-linked",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "2",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Volkite chierovile",
+          "description": "devastating wounds",
+          "range": "30",
+          "type": "Ranged",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "0",
+          "d": "3"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Hekaton siege claw – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "20",
+          "ap": "-3",
+          "d": "8"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "2",
+          "name": "Hekaton siege claw – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Reaper chainsword – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "2",
+          "name": "Reaper chainsword – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-3",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Knight Styrix",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Questoris",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Styrix’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "653fde586e7b1a3cb4e98682798bceb9adf8e8081ada9c2a5ea2ecbc75c02377",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Grav-pinned",
+          "type": "Datasheet",
+          "description_sha256": "9b037a76c780f46a4376060ac8a01805a32c610a38340a029d93d1d0ad6a998e",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "aec0539a48f78a4db2b85cf92855087c0a44e9a181d3425b69b64058e28aa1e0",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "1028b2f906de5d2258eaee130a81cc98506028f3d3a03522262a68c3bce34731",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001481",
+      "name": "Armiger Helverin",
+      "role": "Walker",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Armiger-Helverin",
+      "loadout_sha256": "b3c3ad1a24d62468a58e8d52df545fc5380e35c71e1abf80189d150d0d3aa26e",
+      "transport_sha256": null,
+      "damaged_description_sha256": "ca28d191f289a6412e308465530290628f05234ba7646889ed7a352b5a486ad7",
+      "models": [
+        {
+          "line": "1",
+          "name": "Armiger Helverin",
+          "m": "12\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "14",
+          "ld": "7+",
+          "oc": "6",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "140"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Armiger autocannon",
+          "range": "48",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Meltagun",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Questoris heavy stubber",
+          "description": "rapid fire 3",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Armoured feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Armiger",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Helverin",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Suppression Protocols",
+          "type": "Datasheet",
+          "description_sha256": "eabeee0d064f21621ad35c4ad189c82dca15da3a13a0667016bd2ab00632cbed",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "41c3c9ccf81d18a8f7583956bad23abe0f3f744da74ad8bf293dd4fe246675c0",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "3016c99cb6436875e057cbc9c91bd428088a303a2999196e34230425aec107df",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001482",
+      "name": "Armiger Warglaive",
+      "role": "Walker",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Armiger-Warglaive",
+      "loadout_sha256": "ed7ab9bf593a20381ea670dad88daf0e4cd01afc8e2c4c1979656d9d813ce5a1",
+      "transport_sha256": null,
+      "damaged_description_sha256": "ca28d191f289a6412e308465530290628f05234ba7646889ed7a352b5a486ad7",
+      "models": [
+        {
+          "line": "1",
+          "name": "Armiger Warglaive",
+          "m": "12\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "14",
+          "ld": "7+",
+          "oc": "6",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "140"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Meltagun",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Questoris heavy stubber",
+          "description": "rapid fire 3",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Thermal spear",
+          "description": "melta 4",
+          "range": "18",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Reaper chain-cleaver – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-3",
+          "d": "3"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "2",
+          "name": "Reaper chain-cleaver – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Warglaive",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Armiger",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Impetuous Glory",
+          "type": "Datasheet",
+          "description_sha256": "7cce8e4688fa4338a80520129e2fba1001a4424afd59d5a3af3a41ca14824e21",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "41c3c9ccf81d18a8f7583956bad23abe0f3f744da74ad8bf293dd4fe246675c0",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "19cf901a841cc9b07b3c78609481b938e0271173460de9657e5bfad8243983bc",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001483",
+      "name": "Knight Preceptor",
+      "role": "Vehicle Character",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Knight-Preceptor",
+      "loadout_sha256": "9b3508cb13e83b240a1e40a2db6f864b6317c72962df95ea4b3cc8f471e3ff67",
+      "transport_sha256": null,
+      "damaged_description_sha256": "2d4a92a295ba8402cc05d944e5051763dc68393f48102e24eededad44d712ab1",
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight Preceptor",
+          "m": "10\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "26",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "365"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "380"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Ironstorm missile pod",
+          "description": "blast, indirect fire",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+1",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Las-impulsor – high intensity",
+          "description": "blast",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-3",
+          "d": "4"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Las-impulsor – low intensity",
+          "description": "blast",
+          "range": "36",
+          "type": "Ranged",
+          "a": "2D6",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Meltagun",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Questoris multi-laser",
+          "range": "36",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Questoris heavy stubber",
+          "description": "rapid fire 3",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Stormspear rocket pod",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "D6"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Twin Icarus autocannon",
+          "description": "anti-fly 2+, twin-linked",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "1",
+          "name": "Reaper chainsword – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "14",
+          "ap": "-4",
+          "d": "6"
+        },
+        {
+          "line": "10",
+          "line_in_wargear": "2",
+          "name": "Reaper chainsword – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "11",
+          "line_in_wargear": "1",
+          "name": "Thunderstrike gauntlet – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "20",
+          "ap": "-3",
+          "d": "8"
+        },
+        {
+          "line": "12",
+          "line_in_wargear": "2",
+          "name": "Thunderstrike gauntlet – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Knight Preceptor",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Questoris",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Mentor (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "fd46477c48d4ad76bcef063ef81d08e7a0fa52dff8de981eba9100c980dc27bb",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Exemplar of the Code",
+          "type": "Datasheet",
+          "description_sha256": "0cc33ca4aac254d34589ec30dc1c6ecdcbcd6c27c5b8e886d5ac06595ca0d9db",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "b353caf12ddfd0c6f94e10a067f7cb00204b881f48ed6a1be8470bc05054af56",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "614c166782b388912861c87b1f08e78300e89b33721d397c22d649eae526825f",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "99a9837cbf7f48e5c19ee3ef5358ca36ffff759d6cb6c6df0fc81d19a73e7df1",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "ff43b2a43545258950465de68777ed03aa222bccb1f6a1b2bdea3b835c8bd0f7",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001484",
+      "name": "Canis Rex",
+      "role": "Vehicle Epic Hero",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Canis-Rex",
+      "loadout_sha256": "6a34014151e3fcbe7c1220142af457b0d56ab5f2aff7174628a36da878d8337d",
+      "transport_sha256": null,
+      "damaged_description_sha256": "2d4a92a295ba8402cc05d944e5051763dc68393f48102e24eededad44d712ab1",
+      "models": [
+        {
+          "line": "1",
+          "name": "Canis Rex",
+          "m": "10\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "26",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "415"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Las-impulsor – high intensity",
+          "description": "blast, sustained hits 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "2",
+          "s": "14",
+          "ap": "-3",
+          "d": "4"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "2",
+          "name": "Las-impulsor – low intensity",
+          "description": "blast, sustained hits 1",
+          "range": "36",
+          "type": "Ranged",
+          "a": "2D6",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Questoris multi-laser",
+          "description": "sustained hits 1",
+          "range": "36",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Freedom’s Hand – strike",
+          "description": "sustained hits 1",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "20",
+          "ap": "-3",
+          "d": "9"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "2",
+          "name": "Freedom’s Hand – sweep",
+          "description": "sustained hits 1",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "10",
+          "bs_ws": "2",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Questoris",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Canis Rex",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Legendary Freeblade",
+          "type": "Datasheet",
+          "description_sha256": "c153c2e958d276582c6bc9172c1a97dc10447c93874d7f2a66b051cb59241560",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Chainbreaker",
+          "type": "Datasheet",
+          "description_sha256": "2f79b94fe327d06764fedf42f4d5d9626092cecdea32e29b0a6033aece2f6486",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "60654b4ed5186cc16e39346f5c0b9cf819d7353b1967b0c4b9efb8b4a6c2d375",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001485",
+      "name": "Knight Castellan",
+      "role": "Vehicle Character",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Knight-Castellan",
+      "loadout_sha256": "155177cacb3b32f289558e55066a1a63e551f4dc0854935d28d1448ad21b1574",
+      "transport_sha256": null,
+      "damaged_description_sha256": "d2ab878d90f630756e52741835750e9c82976d191fd2747a2cfdd5fb73499dc9",
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight Castellan",
+          "m": "8\"",
+          "t": "12",
+          "sv": "3+",
+          "w": "28",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "425"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "450"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Plasma decimator – standard",
+          "description": "blast",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "2",
+          "name": "Plasma decimator – supercharge",
+          "description": "blast, hazardous",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Shieldbreaker missile launcher",
+          "description": "anti-titanic 4+, devastating wounds",
+          "range": "72",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-6",
+          "d": "D6+1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Twin meltagun",
+          "description": "melta 2, twin-linked",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Twin siegebreaker cannon",
+          "description": "blast, twin-linked",
+          "range": "36",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Volcano lance",
+          "description": "blast",
+          "range": "72",
+          "type": "Ranged",
+          "a": "D3",
+          "bs_ws": "3",
+          "s": "18",
+          "ap": "-5",
+          "d": "D6+8"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Titanic feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-1",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Dominus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Castellan",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6+2"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Ion Aegis (Aura)",
+          "type": "Datasheet",
+          "description_sha256": "be737d606c89fc90a565127f9ca85dee270db1da49175a7caf8d98b989cc748a",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Titan Hunter",
+          "type": "Datasheet",
+          "description_sha256": "4d32ec32f54425f32419ffe8eb0afa3bf8aa8aba169733f066f8686e945e9f64",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "7e588f35c6e020f92f49e528192bae71223922c7be6e705f7200019643e381b3",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "cbf7165f41ecb1dec4032e3004296b28a5b4a3ff26d2a028aac46494ff90f651",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001486",
+      "name": "Knight Valiant",
+      "role": "Vehicle Character",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Knight-Valiant",
+      "loadout_sha256": "a45b4fe6ef15e6b3e27c567d51e952789ea2dc8b1fa240bf9f0b36fc15deb9a5",
+      "transport_sha256": null,
+      "damaged_description_sha256": "d2ab878d90f630756e52741835750e9c82976d191fd2747a2cfdd5fb73499dc9",
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight Valiant",
+          "m": "8\"",
+          "t": "12",
+          "sv": "3+",
+          "w": "28",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "400"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "415"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Conflagration cannon",
+          "description": "ignores cover, torrent",
+          "range": "18",
+          "type": "Ranged",
+          "a": "3D6",
+          "bs_ws": "N/A",
+          "s": "8",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Shieldbreaker missile launcher",
+          "description": "anti-titanic 4+, devastating wounds",
+          "range": "72",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-6",
+          "d": "D6+1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Thundercoil harpoon",
+          "description": "blast, devastating wounds",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D3",
+          "bs_ws": "3",
+          "s": "24",
+          "ap": "-6",
+          "d": "10"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Twin meltagun",
+          "description": "melta 2, twin-linked",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Twin siegebreaker cannon",
+          "description": "blast, twin-linked",
+          "range": "36",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Titanic feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-1",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Dominus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Valiant",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6+2"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Ion Aegis (Aura)",
+          "type": "Datasheet",
+          "description_sha256": "be737d606c89fc90a565127f9ca85dee270db1da49175a7caf8d98b989cc748a",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Thundershock",
+          "type": "Datasheet",
+          "description_sha256": "768f44988396eae9b025f6df0952c3dd26610524760ad90baa8e7d20e7531eb6",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "7e588f35c6e020f92f49e528192bae71223922c7be6e705f7200019643e381b3",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "98a8afe1a2e805efb20541bc869abcf8817880dd40fdc1a9221d4b505d7137ab",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001664",
+      "name": "Acastus Knight Asterius",
+      "role": "Titanic",
+      "source_id": "000000370",
+      "source_name": "Imperial Knights (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Acastus-Knight-Asterius",
+      "loadout_sha256": "091ee283407cfd1a8ce60d0ca763d0200080cb29528435a1e4c657750d995099",
+      "transport_sha256": null,
+      "damaged_description_sha256": "3a172fd2ea8cfc71ebcc6054d4f2427b3093badd0ea227563eaedf9a830996fd",
+      "models": [
+        {
+          "line": "1",
+          "name": "Acastus Knight Asterius",
+          "m": "8\"",
+          "t": "13",
+          "sv": "2+",
+          "w": "30",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "5",
+          "inv_sv_descr": "* Against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "785"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "860"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Asterius volkite culverin",
+          "description": "devastating wounds",
+          "range": "24",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "0",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Karacnos mortar battery",
+          "description": "anti-infantry 2+, blast, ignores cover, indirect fire",
+          "range": "48",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Twin conversion beam cannon",
+          "description": "conversion, sustained hits d3, twin-linked",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "16",
+          "ap": "-2",
+          "d": "6"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Titanic feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "10",
+          "ap": "-1",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Asterius",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Acastus",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "2D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Sunderer of Fortresses",
+          "type": "Datasheet",
+          "description_sha256": "228a3e8ec91d7c04bb9182a75bef131513d71214afe71eda0d0255e1ff37b2b4",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Conversion",
+          "type": "Wargear profile",
+          "description_sha256": "84793313c80a7ea72d02cb45b97b13c140505adafdddeccad8b2e6d8187603e7",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "de74a8b24f6ed24ee8af986a74b4df1edb234f71127534e66ac8c628bb39a569",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002769",
+      "name": "Armiger Moirax",
+      "role": "Walker",
+      "source_id": "000000370",
+      "source_name": "Imperial Knights (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Armiger-Moirax",
+      "loadout_sha256": "535bf693385376c9039f5d504910579fe8dbb21c71081094a2f272ba8cae9f6f",
+      "transport_sha256": null,
+      "damaged_description_sha256": "ca28d191f289a6412e308465530290628f05234ba7646889ed7a352b5a486ad7",
+      "models": [
+        {
+          "line": "1",
+          "name": "Armiger Moirax",
+          "m": "12\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "14",
+          "ld": "7+",
+          "oc": "6",
+          "inv_sv": "5",
+          "inv_sv_descr": "* Against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "150"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "160"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Conversion beam cannon",
+          "description": "conversion, sustained hits d3",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Graviton pulsar",
+          "description": "ANTI-VEHICLE 2+, BLAST",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Lightning lock",
+          "description": "sustained hits 2",
+          "range": "36",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Rad cleanser",
+          "description": "anti-infantry 2+, ignores cover, torrent",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "2",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Volkite veuglaire",
+          "description": "devastating wounds",
+          "range": "36",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "0",
+          "d": "2"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Armoured feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Siege claw",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Moirax",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Armiger",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Protection Protocols",
+          "type": "Datasheet",
+          "description_sha256": "ae759b207c8e30d6b372270f674e698be8c38d81d19fc1db60a48c0ea2a91c61",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Conversion",
+          "type": "Wargear profile",
+          "description_sha256": "547bcf0919a878533b986125afa55bdfa547a2a1115b33d5eb3899b59de72d1e",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "f491351d58c6051d8f5f5dcc7970cd05fed765892006c85defeddbf63b57fa45",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "35e922cb25bac91ceb365a394c76036c3fac12b5c217cb19f96427b33b40c73f",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "9416ad3e643f68a2bda76ce414c03ec81cbbf9d2b620123dac2e345da2825808",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002770",
+      "name": "Sir Hekhtur",
+      "role": "Infantry Epic Hero",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Sir-Hekhtur",
+      "loadout_sha256": "85beb02538dc074aaa5ad053496164008713a963389da11997d295615c2ba939",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Sir Hekhtur",
+          "m": "6\"",
+          "t": "3",
+          "sv": "4+",
+          "w": "3",
+          "ld": "5+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Hekhtur’s pistol",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Sir Hekhtur",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008336",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "name": "USING SIR HEKHTUR",
+          "type": "Fortification (левая колонка)",
+          "description_sha256": "9ef204933d389ae16910f2296fb9168fd989f71cc50a1b5fc95386cd9dc7875d",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "bc4a10040948379e71478698755d21f0a1c3d7b0089fbee23b79875cce33bd68",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000003839",
+      "name": "Tech-priest Dominus",
+      "role": "Infantry Character",
+      "source_id": "000000015",
+      "source_name": "Adeptus Mechanicus",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Tech-priest-Dominus",
+      "loadout_sha256": "d49367834732c19832eca41f43a52d087abf9d3b2319d1e75e2989208745b5c1",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Tech-priest Dominus",
+          "m": "6\"",
+          "t": "4",
+          "sv": "2+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "60"
+        }
+      ],
+      "weapons": [
+        {
+          "line_in_wargear": "1",
+          "name": "Eradication ray – dissipated",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D3",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Macrostubber",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "5",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Phosphor serpenta",
+          "description": "ignores cover, pistol",
+          "range": "18",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Omnissian axe",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Eradication ray – focused",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D3",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Volkite blaster",
+          "description": "devastating wounds",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Adeptus Mechanicus",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Cult Mechanicus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Tech-Priest",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Dominus",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008382",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "name": "Lord of the Machine Cult",
+          "type": "Datasheet",
+          "description_sha256": "fe1b8f765cc787cfca41078359f84c2a14a5a4238822517c3dcb5d6a69416831",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Data-spike",
+          "type": "Datasheet",
+          "description_sha256": "cf1527ae45163c30ba17899f559cb2bb222587cab45751bde4bbe72c280a8022",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "7bea2519664744f7588b9dd19f6fa11bd601fb6248d0cb3d11efabd20f68cca9",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "35ec45be6bdfdfb4f03f113cd4eb88be99cc9bce4d2774de866faa3e66f4a445",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "d7e364254056d577aaede2b198ed08d6eab134e7a5edf60b1f45d36525db411b",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000003840",
+      "name": "Tech-priest Manipulus",
+      "role": "Infantry Character",
+      "source_id": "000000015",
+      "source_name": "Adeptus Mechanicus",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Tech-priest-Manipulus",
+      "loadout_sha256": "7eb1111310563f85065c9efd9bdd2ffab7ebf2104c90ca13b72861f516aad553",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Tech-priest Manipulus",
+          "m": "6\"",
+          "t": "4",
+          "sv": "2+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "60"
+        }
+      ],
+      "weapons": [
+        {
+          "line_in_wargear": "1",
+          "name": "Omnissian staff",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Transonic cannon",
+          "description": "devastating wounds, torrent",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "2"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Magnarail lance",
+          "description": "heavy",
+          "range": "36",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Mechanicus",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Tech-Priest",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Cult Mechanicus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Manipulus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008382",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "name": "Galvanic Field",
+          "type": "Datasheet",
+          "description_sha256": "976574475e227b6f949ee065e273a584f7f82c212f3c9f94f41481a2a68c05d0",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Defend the Divine Work",
+          "type": "Datasheet",
+          "description_sha256": "76841d22f05d03cc6c44638ce19177d801f59cc75c307aa9d3be1bf2f7cfa33d",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "23125292249d8e45226813674c67852ffb23c83e995b078acedd83e388e19b0c",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "911de38e27a1ce6a4ab44b11a2b7236dc2746c030873eaf98aa55e38f3225baf",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000003841",
+      "name": "Skitarii Marshal",
+      "role": "Infantry Character",
+      "source_id": "000000015",
+      "source_name": "Adeptus Mechanicus",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Skitarii-Marshal",
+      "loadout_sha256": "e364d707b4ab813bfaac25624ea62bc70fd71cebf106abd5495fee3fa84fcd3b",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Skitarii Marshal",
+          "m": "6\"",
+          "t": "3",
+          "sv": "4+",
+          "w": "3",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "35"
+        }
+      ],
+      "weapons": [
+        {
+          "line_in_wargear": "1",
+          "name": "Control stave",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Mechanicus pistol",
+          "description": "devastating wounds, pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Mechanicus",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Skitarii",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Marshal",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000010857",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008382",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Control Edict",
+          "type": "Datasheet",
+          "description_sha256": "de5def131571643484ec913637e63a926ace67b259cff1f4d5526e536c8d4f1d",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Servo-skull Uplink",
+          "type": "Datasheet",
+          "description_sha256": "8bd3e631d05510192a04d4385e3c6b2a20c20308c2ef8bd38f670baff4296bc6",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "70ebe1b8bfedc9fd4fa783d582cad50cbc7a410cf5d3248e18caa7d711dfa59c",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000003842",
+      "name": "Skitarii Rangers",
+      "role": "Battleline",
+      "source_id": "000000015",
+      "source_name": "Adeptus Mechanicus",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Skitarii-Rangers",
+      "loadout_sha256": "3eae49ed482b79a7e7062e08849b92ebb299ab9de65b1458f30ae626510ebc19",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Skitarii Rangers",
+          "m": "6\"",
+          "t": "3",
+          "sv": "4+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "2",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "10 models",
+          "cost": "85"
+        }
+      ],
+      "weapons": [
+        {
+          "line_in_wargear": "1",
+          "name": "Plasma caliver – supercharge",
+          "description": "hazardous",
+          "range": "30",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Transuranic arquebus",
+          "description": "heavy, precision",
+          "range": "36",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-2",
+          "d": "D3"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Alpha combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Mechanicus pistol",
+          "description": "devastating wounds, pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Arc rifle",
+          "description": "anti-vehicle 4+, devastating wounds, rapid fire 1",
+          "range": "30",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-1",
+          "d": "D3"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Galvanic rifle",
+          "range": "30",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Plasma caliver – standard",
+          "range": "30",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Mechanicus",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Battleline",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Skitarii",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Rangers",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008344",
+          "type": "Core",
+          "parameter": "6\""
+        },
+        {
+          "line": "2",
+          "ability_id": "000008382",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Enhanced data-tether",
+          "type": "Wargear",
+          "description_sha256": "397ca90faec49789e1c0e07ce7399d05255fd395e5f3330b0114070c948d0b94",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Omnispex",
+          "type": "Wargear",
+          "description_sha256": "6b6e8832989092cf94aa9c9270d25ecaa0e3178f0c8b5229d7f4b2daeb092130",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Objective Scouted",
+          "type": "Datasheet",
+          "description_sha256": "8080f9fe168b86a0fb2c1004898b7a2373be9a866a3237703d2d62e691f920fc",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "1afffd9ecb754ed08403567b2dd3de2971334e6e071c7c2fa7d5473448b0d265",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "2e9c3bf93e89f70259df22432fb04f5ac425b1f9fe22bde719fd39b9dbcf74c0",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "4a90d191778bf6504ac0a863c9b38c298b7ee4e11723e117026f0e29f62a30e0",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "description_sha256": "f9e1a10b2c5e82fc956e662544c7ca0e918a4532bdff1d31307e13599b3fe8ca",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "description_sha256": "f26f46e5ffc3837dba1c12f115d105ffe160e8054be29be7aa83082a498b6c5d",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "description_sha256": "622b69f0d75fbc16c8e9b962f7f1710ade668c3b20a04b55ac06edc12b0d6b29",
+          "description_present": true
+        },
+        {
+          "line": "7",
+          "description_sha256": "3415181f0d017c1692cd442e1afbbbd1e196e0968c99a4fccf148beab6738111",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "7ecc2ea7bf4e0389cc1967d870ca2c60b53ca245e0754e55194bf02feaa0d53e",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "2f41c1855be62ad6f7e4b1f57f181420515a4c97c0276e803d9bca2bb9b724d5",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000003843",
+      "name": "Skitarii Vanguard",
+      "role": "Battleline",
+      "source_id": "000000015",
+      "source_name": "Adeptus Mechanicus",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Skitarii-Vanguard",
+      "loadout_sha256": "bc171b63569cd1830ed04c718eea67131ab8f255dac5dff84d79a12206eeaa1f",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Skitarii Vanguard",
+          "m": "6\"",
+          "t": "3",
+          "sv": "4+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "2",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "10 models",
+          "cost": "85"
+        }
+      ],
+      "weapons": [
+        {
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Mechanicus pistol",
+          "description": "devastating wounds, pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Arc rifle",
+          "description": "anti-vehicle 4+, devastating wounds, rapid fire 1",
+          "range": "30",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-1",
+          "d": "D3"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Plasma caliver – standard",
+          "range": "30",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "2",
+          "name": "Plasma caliver – supercharge",
+          "description": "hazardous",
+          "range": "30",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Radium carbine",
+          "description": "anti-infantry 4+",
+          "range": "18",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Transuranic arquebus",
+          "description": "heavy, precision",
+          "range": "36",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-2",
+          "d": "D3"
+        },
+        {
+          "line_in_wargear": "1",
+          "name": "Alpha combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Adeptus Mechanicus",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Vanguard",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Battleline",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Skitarii",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008382",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "name": "Enhanced data-tether",
+          "type": "Wargear",
+          "description_sha256": "397ca90faec49789e1c0e07ce7399d05255fd395e5f3330b0114070c948d0b94",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "name": "Omnispex",
+          "type": "Wargear",
+          "description_sha256": "6b6e8832989092cf94aa9c9270d25ecaa0e3178f0c8b5229d7f4b2daeb092130",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Rad-saturation (Aura)",
+          "type": "Datasheet",
+          "description_sha256": "a7631af74dc6419c95c3f6d2a33508ca42c5bed7924e8f2c7c47b68a886f5496",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "75feabadd495811b314e7673aed4a81c1c76b6d7c515a5922243d90c118e5400",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "5a1d45f5662beb1c599a71963371ba3c8373209c47ce9f5e64511ccd725c8c3e",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "3f9e7da871740a3bfd5b3afb4934955911068f32e84ad9543b85e7145324127f",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "description_sha256": "819229d9894038a3707a9aeff0f6740f3bace5596927110a612e1c90aa9ffcdc",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "description_sha256": "37f0471b9f0bd7e57fe6abcef903b1aee4105e6dc7d8160b93866a882241c989",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "description_sha256": "70179a60fa5759b0956993ca5455ed159588b047d75dc637274badc32cfd446c",
+          "description_present": true
+        },
+        {
+          "line": "7",
+          "description_sha256": "389b6e0199b9fe717e51be6d800424b827aa928b574d565735e2bb7b6a94ef47",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "30654a8235ad7dc5f0a1c493bd756430eb7440bc7d035536591d3cdf2ff05a97",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "2f92d81707e1baf78eb5f2d39427548724373ce30ef50d2b537a5d50c105674e",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004149",
+      "name": "Knight Defender",
+      "role": "Vehicle Character",
+      "source_id": "000000034",
+      "source_name": "Imperial Knights",
+      "source_version": "1.2",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Knight-Defender",
+      "loadout_sha256": "414cb7c2ed15437e3f9fc62963c3db019da02cddfe612948e2f0bc3ea06e2ab7",
+      "transport_sha256": null,
+      "damaged_description_sha256": "2d4a92a295ba8402cc05d944e5051763dc68393f48102e24eededad44d712ab1",
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight Defender",
+          "m": "10\"",
+          "t": "11",
+          "sv": "3+",
+          "w": "26",
+          "ld": "6+",
+          "oc": "10",
+          "inv_sv": "4",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "400"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "420"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Conversion beam obliterator",
+          "description": "conversion, sustained hits d3",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-2",
+          "d": "4"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Plasma executor – standard",
+          "description": "blast",
+          "range": "36",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Plasma executor – supercharge",
+          "description": "blast, hazardous",
+          "range": "36",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "3",
+          "s": "9",
+          "ap": "-3",
+          "d": "3"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Phosphor blaster",
+          "description": "ignores cover, rapid fire 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Twin incendine combustor",
+          "description": "ignores cover, torrent, twin-linked",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Titanic feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-1",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Questoris",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Defender",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Defender’s Duty (Bondsman)",
+          "type": "Datasheet",
+          "description_sha256": "99bd01da32e855ddb8395070f31b9c4d6de3e682a89d6eab6d35fa7ef52e3092",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Selfless Protector",
+          "type": "Datasheet",
+          "description_sha256": "17a67e3508f72d86b0c3d18cc0d236cdfa327c3544351f1ce562369fcda0f918",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Conversion",
+          "type": "Wargear profile",
+          "description_sha256": "5776ecc3357f0538b61b32298026f5c392335e2d33481c4e0c1e5cf7f60d405a",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "017a5642a7a38c282fc490267276779bfa6a54977d0ac80b04c7157a5b52d2bd",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004213",
+      "name": "Knight Destrier",
+      "role": "Vehicle Character",
+      "source_id": null,
+      "source_name": null,
+      "source_version": null,
+      "source_edition": null,
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/imperial-knights/Knight-Destrier",
+      "loadout_sha256": "a1886f8e736de5542b39780cdd6be8a57dcca6f54cc6ccc9149320a725c4d866",
+      "transport_sha256": null,
+      "damaged_description_sha256": "5374629df7d8bf720c02f5b0d36d3502f23cdd5d0c04bd3df2bd4252430887d9",
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight Destrier",
+          "m": "12\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "18",
+          "ld": "6+",
+          "oc": "8",
+          "inv_sv": "5",
+          "inv_sv_descr": "* against ranged attacks only"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "265"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "280"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Chastiser gatling cannon",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "12",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Frag bombard",
+          "description": "assault, blast, rapid fire d6+3",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Questoris heavy stubber",
+          "description": "assault, rapid fire 3",
+          "range": "36",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Bellatus reaper chainsword – strike",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-3",
+          "d": "D3+3"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "2",
+          "name": "Bellatus reaper chainsword – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "10",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Thundershock spear – strike",
+          "description": "lance",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-3",
+          "d": "D3+3"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "2",
+          "name": "Thundershock spear – sweep",
+          "description": "lance",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Titanic feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Imperial Knights",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Towering",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Titanic",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight Destrier",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Bellatus",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008458",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008460",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Ram Jets",
+          "type": "Datasheet",
+          "description_sha256": "ec808eb27ee340872e3856a618bf369791265dd44691b06ccac7fb7ab3f39a9c",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Thundercharge",
+          "type": "Datasheet",
+          "description_sha256": "3191643c5d6845e88caa194a9a0311ce0dcd771e1d22d5cfa815d4b214f7464b",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Saturation Fire",
+          "type": "Datasheet",
+          "description_sha256": "28f501a16d97d5d379037e34b536b7ef324f85a8feab6966cc2497695b2c0325",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "f4bc17e7c547fe2b92231f9cfe01afb23cec52a8e26d1542df71e1c434112f8b",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "8bcd554ee1ae83b72a25bc5bbd9a0978fd37e9e388bb76a6121885de1ae7a889",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "29baa4eef9dbf81f4971d3cf43fc97b11d1cda427c88213341b816d183108f0a",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "017a5642a7a38c282fc490267276779bfa6a54977d0ac80b04c7157a5b52d2bd",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    }
+  ],
+  "detachments": [
+    {
+      "id": "000000988",
+      "faction_id": "QI",
+      "name": "Questor Forgepact",
+      "dp": "1",
+      "force_disposition": "Disruption",
+      "legend_sha256": "a6154c6eeee05df9727f8d57b1ac862697d26001c2f76c59abe2cb562e88390c",
+      "legend_present": true
+    },
+    {
+      "id": "000001106",
+      "faction_id": "QI",
+      "name": "Valourstrike Lance",
+      "dp": "2",
+      "force_disposition": "Purge the Foe",
+      "legend_sha256": "724b24bc8e609f1038e9fb599ec5cd251da716d732186dce932e42926cea58f5",
+      "legend_present": true
+    },
+    {
+      "id": "000001107",
+      "faction_id": "QI",
+      "name": "Gate Warden Lance",
+      "dp": "2",
+      "force_disposition": "Take and Hold",
+      "legend_sha256": "454705e45a2dfa8789be94103bb2d6dafba8eefa726dca98c4482c4b5fe84dda",
+      "legend_present": true
+    },
+    {
+      "id": "000001108",
+      "faction_id": "QI",
+      "name": "Questoris Companions",
+      "dp": "3",
+      "force_disposition": "Take and Hold",
+      "legend_sha256": "4a7e5d2d1854e28863db4ecbe7f463ca55076e0914925af45a3810ac9cfb4ba5",
+      "legend_present": true
+    },
+    {
+      "id": "000001109",
+      "faction_id": "QI",
+      "name": "Spearhead-At-Arms",
+      "dp": "2",
+      "force_disposition": "Reconnaissance",
+      "legend_sha256": "a7a46ed2536996e289f53c673246d5877baacf367f064485b883de7f31da0a06",
+      "legend_present": true
+    },
+    {
+      "id": "000001145",
+      "faction_id": "QI",
+      "name": "Freeblade Company",
+      "dp": "3",
+      "force_disposition": "Priority Assets",
+      "legend_sha256": "ebaf407c5333c83f621d9bbd7079073e04dc8c0178d400c34028d92a942aa239",
+      "legend_present": true
+    },
+    {
+      "id": "000001219",
+      "faction_id": "QI",
+      "name": "Dominus Foebreakers",
+      "dp": "1",
+      "force_disposition": "Priority Assets",
+      "legend_sha256": "aed8f256a0656b7a569a210070f572f3b491967ba42399d210dcc975808bf3a6",
+      "legend_present": true
+    },
+    {
+      "id": "000001167",
+      "faction_id": "QI",
+      "name": "Throne-Bonded Outriders",
+      "dp": "1",
+      "force_disposition": "Reconnaissance",
+      "legend_sha256": "5168dc4a985f9945a4a6f73d31b1d5ae5bd64d7dc6382c107a72603b442f6011",
+      "legend_present": true
+    }
+  ],
+  "detachment_abilities": [
+    {
+      "id": "000009760",
+      "detachment_id": "000000988",
+      "detachment": "Questor Forgepact",
+      "name": "Cogbound Alliance",
+      "description_sha256": "c798757c3218add1d2d5c7bba07146c091fc910393d3055fcbc111a3ca5fe719",
+      "description_present": true,
+      "legend_sha256": "2435c156a4c1c10237969d9714bcba82a3705d3a248d43d046fe432005a95141",
+      "legend_present": true
+    },
+    {
+      "id": "000010492",
+      "detachment_id": "000001106",
+      "detachment": "Valourstrike Lance",
+      "name": "Bold Gallantry",
+      "description_sha256": "31fe1c242e65c5434a8625bf71feefad7e5c7963affaf369d17f46b8df4c4065",
+      "description_present": true,
+      "legend_sha256": "fe2c14f93e15e3904c09443ae6d27825b66c557ff227a822933f7d962877b9b5",
+      "legend_present": true
+    },
+    {
+      "id": "000010496",
+      "detachment_id": "000001107",
+      "detachment": "Gate Warden Lance",
+      "name": "Dauntless Defenders",
+      "description_sha256": "f71ee1c219a6506d8ce4cc4d62be51f1d65daed74fea5ed1d591be03c19ba1f8",
+      "description_present": true,
+      "legend_sha256": "dfc41acd4abfc88c1721a27824bb6faac11e690d901ecb958bfbe64067f52979",
+      "legend_present": true
+    },
+    {
+      "id": "000010500",
+      "detachment_id": "000001108",
+      "detachment": "Questoris Companions",
+      "name": "Heroes of Legend",
+      "description_sha256": "ac741bf816959616a4d20205eca5e97b9741f4d4d273ce63a4a6ea62d9f331dc",
+      "description_present": true,
+      "legend_sha256": "e0e01252ca7225636a97fa440eb19b713632a289454396ebe5c30b5836d9a2ed",
+      "legend_present": true
+    },
+    {
+      "id": "000010501",
+      "detachment_id": "000001108",
+      "detachment": "Questoris Companions",
+      "name": "Valour’s Reward",
+      "description_sha256": "b8f9004189f2120d8deb7ee4cad7dbe0bb5ddc8bd5e3d80918eece8c79145b14",
+      "description_present": true,
+      "legend_sha256": "b5e27794a3414a689ea68b283df09a4c21a29fb8aee67a24f26ecea2723db4bb",
+      "legend_present": true
+    },
+    {
+      "id": "000010505",
+      "detachment_id": "000001109",
+      "detachment": "Spearhead-At-Arms",
+      "name": "Knightly Teachings",
+      "description_sha256": "ddf0879216d85cacfff967a8cbe13a05d4b3d8721539d3703e12f1e8e48667ca",
+      "description_present": true,
+      "legend_sha256": "ea4fafdd7b480bb67a1216aef0e4a5e5dc2b7e0b77078900017740101763aabc",
+      "legend_present": true
+    },
+    {
+      "id": "000010754",
+      "detachment_id": "000001145",
+      "detachment": "Freeblade Company",
+      "name": "Knights of Legend",
+      "description_sha256": "e409e86cf4f9a386af930d6016fbfb07c47ba970ace0129f1c3549cfde701727",
+      "description_present": true,
+      "legend_sha256": "410dfb03a6e20e603eead88f7dd4d7bd37d2eeec4492a3e58499a0170a3e57cf",
+      "legend_present": true
+    },
+    {
+      "id": "000011003",
+      "detachment_id": "000001219",
+      "detachment": "Dominus Foebreakers",
+      "name": "Rain of Devastation",
+      "description_sha256": "a03626d8439b761952ff5b32d84050da9ee81c213b52e51f770c361b901bc1f8",
+      "description_present": true,
+      "legend_sha256": "68959cb37ed018b8586c551fb48474c9d1d3ec114aeed24ff33be3f415b9e709",
+      "legend_present": true
+    },
+    {
+      "id": "000011007",
+      "detachment_id": "000001167",
+      "detachment": "Throne-Bonded Outriders",
+      "name": "Driven from Their Lairs",
+      "description_sha256": "b9e294e286b2103ccbe9420a8f9a2a33ea472ad8c615553a1979cb7d13f861f5",
+      "description_present": true,
+      "legend_sha256": "cbdf3593d3d1150a2f671826dd23a941a91646fdec2420b87ef7555c58aea00a",
+      "legend_present": true
+    }
+  ],
+  "enhancements": [
+    {
+      "id": "000011004002",
+      "detachment_id": "000001219",
+      "detachment": "Dominus Foebreakers",
+      "name": "Blessed Plate",
+      "cost": "30",
+      "description_sha256": "e64103c47179bce903eda780462136fdcdb8612fb2d08dfb7b81f44cb8d59237",
+      "description_present": true,
+      "legend_sha256": "7dea761d2fc3cc3d8a9ab9004c4b96e9e5dfccea52b4bac84fd9d00c6d2c78d1",
+      "legend_present": true
+    },
+    {
+      "id": "000010493002",
+      "detachment_id": "000001106",
+      "detachment": "Valourstrike Lance",
+      "name": "Bearer of the Iron Chalice",
+      "cost": "20",
+      "description_sha256": "2fcdeae9fead514a605ec0346e58d41d158ec5252c503893969fff069a882b09",
+      "description_present": true,
+      "legend_sha256": "969238ccf24126d64e8b7b74ea911455bef39b146c56536da2c90ff1858764a6",
+      "legend_present": true
+    },
+    {
+      "id": "000010755002",
+      "detachment_id": "000001145",
+      "detachment": "Freeblade Company",
+      "name": "Bringer of Justice",
+      "cost": "30",
+      "description_sha256": "c7ca7917b0d1ecbd809cc19d2012c71887574f4e640efada99b8b14cff5a5c53",
+      "description_present": true,
+      "legend_sha256": "4c0a44c21c101c5856ec4e207f29ea048819db6dafbca92c59d377160d0a637c",
+      "legend_present": true
+    },
+    {
+      "id": "000010502002",
+      "detachment_id": "000001108",
+      "detachment": "Questoris Companions",
+      "name": "Herald of Triumph",
+      "cost": "15",
+      "description_sha256": "2476b808e3a0b2bff2c929635e21381cad0d816e9692b8409e8aabc836091921",
+      "description_present": true,
+      "legend_sha256": "a80f10cc2f30843ae15b1ae68f90e1d5954424c82755934de47683f71207e807",
+      "legend_present": true
+    },
+    {
+      "id": "000011008002",
+      "detachment_id": "000001167",
+      "detachment": "Throne-Bonded Outriders",
+      "name": "Gyro-Optimised Actuators",
+      "cost": "15",
+      "description_sha256": "9bf143190e6373976c129d38db17c314e303b665424aeb6dd8627b4cd85ca32c",
+      "description_present": true,
+      "legend_sha256": "c434054890bd97b0d82e5a9c263b280a3af1c152cd9ae236b37a437aa12033ed",
+      "legend_present": true
+    },
+    {
+      "id": "000010506002",
+      "detachment_id": "000001109",
+      "detachment": "Spearhead-At-Arms",
+      "name": "Mentor’s Pride",
+      "cost": "20",
+      "description_sha256": "c1d21a151251769218b356419b98eec7641bafa9a3e7c40d7c0569cc044a15ee",
+      "description_present": true,
+      "legend_sha256": "a88ebf93b5676f925fdcb6bfc77af4944ab1f198d2c0ed1acea1ba5b3979ed8b",
+      "legend_present": true
+    },
+    {
+      "id": "000009761002",
+      "detachment_id": "000000988",
+      "detachment": "Questor Forgepact",
+      "name": "Magos Questoris",
+      "cost": "20",
+      "description_sha256": "adfff6024cecf2a13b125c95ce58c8756260567b9b853e52cc270a3b8661d717",
+      "description_present": true,
+      "legend_sha256": "ed39b9ee9766a42254677fec2ec330b64d442b10a6c5435aa6ca4555e2591e14",
+      "legend_present": true
+    },
+    {
+      "id": "000010497002",
+      "detachment_id": "000001107",
+      "detachment": "Gate Warden Lance",
+      "name": "Acquisitor-at-Arms",
+      "cost": "15",
+      "description_sha256": "a7aee2b541279f14f15067bd92bc80ae4880254e8daa9d4cce09518768b81883",
+      "description_present": true,
+      "legend_sha256": "a7aab9552041d3d5337b14acaaae7b6559f0c09ed4b06a50557186a335de6eff",
+      "legend_present": true
+    },
+    {
+      "id": "000010497003",
+      "detachment_id": "000001107",
+      "detachment": "Gate Warden Lance",
+      "name": "Purgation’s Hand",
+      "cost": "20",
+      "description_sha256": "3088dcafe5df7acdda34ae1dda00287ee7eaa86bef822d58341b3f96dbdd0966",
+      "description_present": true,
+      "legend_sha256": "6d4be5cb19a3a4f5c953759a3d0399fa8e98f0f43fc2e7a253c9a95b90e2e230",
+      "legend_present": true
+    },
+    {
+      "id": "000010506003",
+      "detachment_id": "000001109",
+      "detachment": "Spearhead-At-Arms",
+      "name": "Fables of Nightmare",
+      "cost": "10",
+      "description_sha256": "da15049e0d4026910b48dd17dfc1c082d7770cad71b9dc74e8b2004977d4861e",
+      "description_present": true,
+      "legend_sha256": "4bec9c95fe7910d9e8bc68b5c73a69d93ae853ddb3ebcf1692e014b52bd71dab",
+      "legend_present": true
+    },
+    {
+      "id": "000011008003",
+      "detachment_id": "000001167",
+      "detachment": "Throne-Bonded Outriders",
+      "name": "Ancestral Overbleed",
+      "cost": "10",
+      "description_sha256": "cacd1338bbec57cd7d316b6f6cb7a6c020bdcf58100233d3220a3a935200ac0c",
+      "description_present": true,
+      "legend_sha256": "bfbcfd573a1c06bcda645f26d92c2a006373be91e93d487dccc21f891d4c4625",
+      "legend_present": true
+    },
+    {
+      "id": "000010493003",
+      "detachment_id": "000001106",
+      "detachment": "Valourstrike Lance",
+      "name": "Bearer of the Evanescent Ion",
+      "cost": "15",
+      "description_sha256": "53e467ed1d09aa7d6fce23f4ed1c8d5c435b09d933751b0822ca343ee4dd6d2d",
+      "description_present": true,
+      "legend_sha256": "b24bad80dee81a0af1195ebbb90bd3a08214d0e96bc276880f0a81f837a4349d",
+      "legend_present": true
+    },
+    {
+      "id": "000011004003",
+      "detachment_id": "000001219",
+      "detachment": "Dominus Foebreakers",
+      "name": "Archeotech Autoloaders",
+      "cost": "25",
+      "description_sha256": "6b0c0d0cce828d1789a87cf97cae7b8e268fbbaadbd8123d62447dd8b2e10522",
+      "description_present": true,
+      "legend_sha256": "678c8c6dcc8bfbac7fbc1873df4b31278234deb76378388617a9364ade63820a",
+      "legend_present": true
+    },
+    {
+      "id": "000010755003",
+      "detachment_id": "000001145",
+      "detachment": "Freeblade Company",
+      "name": "Hunter’s Eye",
+      "cost": "25",
+      "description_sha256": "f5db951a208b8462997062798582acf8a2d7e1b1cbdc97f2345c7436dc09e825",
+      "description_present": true,
+      "legend_sha256": "e40bb3b982416a6f2ab1a141bc60405d3ecb7be1a3bfb93f20266b9e32b5f5cd",
+      "legend_present": true
+    },
+    {
+      "id": "000010502003",
+      "detachment_id": "000001108",
+      "detachment": "Questoris Companions",
+      "name": "Wyrmslayer Divination",
+      "cost": "10",
+      "description_sha256": "2cc2bca1efbe249102279b5a77e218022eade9466c1d51a2d94c7edf29582c41",
+      "description_present": true,
+      "legend_sha256": "1380417b37b900b5e98b9f2e9ffcb9f62a0229a6f6311be95f190550ba2f4871",
+      "legend_present": true
+    },
+    {
+      "id": "000009761003",
+      "detachment_id": "000000988",
+      "detachment": "Questor Forgepact",
+      "name": "Knight of the Opus Machina (Aura)",
+      "cost": "15",
+      "description_sha256": "88f8b8e8a45e0c8883d9d168de0d2839cf7b31af3ab335bf473845cea9a51950",
+      "description_present": true,
+      "legend_sha256": "1fcea6d32ac6560424e5d8cfa7e10f8ef65383ede13218d9f093b46d99aba77c",
+      "legend_present": true
+    },
+    {
+      "id": "000010497004",
+      "detachment_id": "000001107",
+      "detachment": "Gate Warden Lance",
+      "name": "Augury Halo",
+      "cost": "20",
+      "description_sha256": "49434ac0829fb1a8b431cc7d3234cbefbd8f6c8c5b239ddd3a4a88fe0d3cfb8c",
+      "description_present": true,
+      "legend_sha256": "4c486c8510c699a33a7d61013a04fc89898087a8153ec12e4a44af4758c110de",
+      "legend_present": true
+    },
+    {
+      "id": "000010493004",
+      "detachment_id": "000001106",
+      "detachment": "Valourstrike Lance",
+      "name": "Bearer of the Judicant’s Helm",
+      "cost": "25",
+      "description_sha256": "349ebba5f6d4143e8c3cad00e88160c1572f10cb8a9b1dfb3545d7eaa3c6bd3b",
+      "description_present": true,
+      "legend_sha256": "50bd1ac1d910e4cdcc27c9d876a0f6c260c1decd64a4b86bbcc814b910fa7964",
+      "legend_present": true
+    },
+    {
+      "id": "000010506004",
+      "detachment_id": "000001109",
+      "detachment": "Spearhead-At-Arms",
+      "name": "Tales of Heroism",
+      "cost": "10",
+      "description_sha256": "255987c4a8c82acc2a3a175f1b5fa88342a758ea0d47717e09d0aecad214310f",
+      "description_present": true,
+      "legend_sha256": "3b026738089d47c1b5254b4a5bbc8a43c18aa932f563ae47789fda67b401857f",
+      "legend_present": true
+    },
+    {
+      "id": "000010502004",
+      "detachment_id": "000001108",
+      "detachment": "Questoris Companions",
+      "name": "Pennant of Silvered Fury",
+      "cost": "15",
+      "description_sha256": "1482c116db1fc14b66529de1a4821e3b0c45831eab39e27b6466a588133e5aa2",
+      "description_present": true,
+      "legend_sha256": "faf0e47449adb3436eed1427d90c9b24417c51a9cbe6776f89b7a0d52dd5b51e",
+      "legend_present": true
+    },
+    {
+      "id": "000010755004",
+      "detachment_id": "000001145",
+      "detachment": "Freeblade Company",
+      "name": "Mysterious Guardian",
+      "cost": "35",
+      "description_sha256": "ec6e42f0c3a295fbd96002202f4af219e04e96aac2cae97315e6606057519ffc",
+      "description_present": true,
+      "legend_sha256": "8d771c69a985126f42ed110f62f1a12b28a1ea404cbb6a5b7e5754954445c422",
+      "legend_present": true
+    },
+    {
+      "id": "000010497005",
+      "detachment_id": "000001107",
+      "detachment": "Gate Warden Lance",
+      "name": "Vengeful Tread",
+      "cost": "15",
+      "description_sha256": "c9eb82f8608daaa0f1466cb1d93932d316933cb108a3a9726999886a62e5feff",
+      "description_present": true,
+      "legend_sha256": "eb85fae3e4445c00861cbc5fc02dd171f05c72e31aa70f569af709b5517536de",
+      "legend_present": true
+    },
+    {
+      "id": "000010493005",
+      "detachment_id": "000001106",
+      "detachment": "Valourstrike Lance",
+      "name": "Bearer of the Lancer’s Sigil",
+      "cost": "25",
+      "description_sha256": "ccd5e27982adda352c421b1d03fecf37b1ae280be8f3e613e103cba5efe88319",
+      "description_present": true,
+      "legend_sha256": "2d815cda988cfe4cb260a039f61af9e888bfe1811722a397b445db0bb505772f",
+      "legend_present": true
+    },
+    {
+      "id": "000010755005",
+      "detachment_id": "000001145",
+      "detachment": "Freeblade Company",
+      "name": "Sanctuary",
+      "cost": "20",
+      "description_sha256": "4e905df1c6140f7497776ac434805dc19ad2378dfb03932877c3e11fc644ff31",
+      "description_present": true,
+      "legend_sha256": "d218955c10b21b34dee2f3c4e4daa8029f2524cd24cbbda0e117baca4f67857f",
+      "legend_present": true
+    },
+    {
+      "id": "000010506005",
+      "detachment_id": "000001109",
+      "detachment": "Spearhead-At-Arms",
+      "name": "Martial Tuition",
+      "cost": "15",
+      "description_sha256": "228378ddf301dd6df5e2731ff260e78258563e38bc542e9a20680df1866fc287",
+      "description_present": true,
+      "legend_sha256": "7809630ef48c8caf4f55fd617e01f6c99ef97a2f3dabfb17d37b7d2a13af5771",
+      "legend_present": true
+    },
+    {
+      "id": "000010502005",
+      "detachment_id": "000001108",
+      "detachment": "Questoris Companions",
+      "name": "Crushing Condemnation",
+      "cost": "10",
+      "description_sha256": "141fc39075111e3b0b85e6268ec70031ee341c4c6ee9d9023edef444bb3f0d4f",
+      "description_present": true,
+      "legend_sha256": "91c06a7067c23547a4d07304bfcde6ad4cdfd5e3ad757424c234cdb3ae65de62",
+      "legend_present": true
+    }
+  ],
+  "stratagems": [
+    {
+      "id": "000011005004",
+      "name": "FIRE SHOCKED",
+      "type": "Dominus Foebreakers Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Dominus Foebreakers",
+      "description_sha256": "de39d93d6a1264024a1762131223ab1258296a34b083bde2a860365029d4e287",
+      "description_present": true,
+      "legend_sha256": "0ae179d735950fdf7236cddcc638285c4406d30236e071204baded63ff2ed90e",
+      "legend_present": true
+    },
+    {
+      "id": "000011005003",
+      "name": "FOEBREAKER FIRESTORM",
+      "type": "Dominus Foebreakers Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Dominus Foebreakers",
+      "description_sha256": "819393851c7c634849f1a48878fd0e57c645b111d33f069137dbda5bd5c1e0ec",
+      "description_present": true,
+      "legend_sha256": "2239facfa424d1286333fcb2d3460ec1ab00ad4c0c68728c6d59e7577e1a5e8a",
+      "legend_present": true
+    },
+    {
+      "id": "000011005002",
+      "name": "GROUND-SHAKING STRIDES",
+      "type": "Dominus Foebreakers Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Dominus Foebreakers",
+      "description_sha256": "8a46ab9012b4c1fbfe9ec930400f7efef52a66561fac1fa9573c7af31076df1f",
+      "description_present": true,
+      "legend_sha256": "41b08bd21ee474d2c0b10c9ea50e608da71b0a6fa590afbce46d436cf326b3a0",
+      "legend_present": true
+    },
+    {
+      "id": "000010756003",
+      "name": "STRENGTH FROM EXILE",
+      "type": "Freeblade Company – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Freeblade Company",
+      "description_sha256": "6c41cca9e3498ef00414cc00fce62d826da0e0f51b6615b8d79e9b67333937aa",
+      "description_present": true,
+      "legend_sha256": "1cf2e0b6199092d266de3742bfd05c34e7bd3df26e2c2ffee613691a9a6d0363",
+      "legend_present": true
+    },
+    {
+      "id": "000010756002",
+      "name": "NOBLE SACRIFICE",
+      "type": "Freeblade Company – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Freeblade Company",
+      "description_sha256": "3aa81f37c8eb8801a22a6f545d781fbefd3b672119f79bd6b3bcfb3a35a27ae8",
+      "description_present": true,
+      "legend_sha256": "149f4ffbee6b7a1cd5f51bc6e7b08d36e8b0a2b903d7cef8eb9eaf6c549cf5d3",
+      "legend_present": true
+    },
+    {
+      "id": "000010756006",
+      "name": "SURVIVOR OF STRIFE",
+      "type": "Freeblade Company – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Freeblade Company",
+      "description_sha256": "f231238039f7a5197c70016756af3648a0f568335289d8a597544451e5d04f9e",
+      "description_present": true,
+      "legend_sha256": "d4e2e102dbdcfc716baa538849692c429b8af635606a5ff94f646ef4f9eb0370",
+      "legend_present": true
+    },
+    {
+      "id": "000010756007",
+      "name": "FLANKING MANOEUVRES",
+      "type": "Freeblade Company – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Fight phase",
+      "detachment": "Freeblade Company",
+      "description_sha256": "ca155f624a114f4c0ebe6fc0cab9294fe3e5b2ba88c71714c130d165e70cff06",
+      "description_present": true,
+      "legend_sha256": "9001ddb8d7c4378849a56a4df7ede2ab980fbd5f559fa8774d38a22c9624fcd8",
+      "legend_present": true
+    },
+    {
+      "id": "000010756005",
+      "name": "POINT‑BLANK BARRAGE",
+      "type": "Freeblade Company – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Freeblade Company",
+      "description_sha256": "c8b6af15032a707dab3533da4415c6c6e204c5b18e6906385ad95ca059c248f5",
+      "description_present": true,
+      "legend_sha256": "c23bafc696b6e01c53554c2542d0765a751b0045cbbc021d29f58e884a2ee6b3",
+      "legend_present": true
+    },
+    {
+      "id": "000010756004",
+      "name": "FULL TILT",
+      "type": "Freeblade Company – Wargear Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Freeblade Company",
+      "description_sha256": "9e088cd4ac11e94c88cc14c1b1f70977dce6ac0d89834167d720cf441e5b64ef",
+      "description_present": true,
+      "legend_sha256": "d50490f1072cc8b30f42b6cbe600dce71df4e66ebccf4b3ff82b36d03cc74ba3",
+      "legend_present": true
+    },
+    {
+      "id": "000010498002",
+      "name": "DRIVE THEM OUT!",
+      "type": "Gate Warden Lance – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Gate Warden Lance",
+      "description_sha256": "8aced52bcbb75b7ddcb7077c3e92ba89fd2fd778243450b6040e5b19a1f0d990",
+      "description_present": true,
+      "legend_sha256": "41286622ebf664019cce7270fc4c51355a8a52c550c8a0cfa9add6621e5b148e",
+      "legend_present": true
+    },
+    {
+      "id": "000010498004",
+      "name": "STEADFAST SUPERIORITY",
+      "type": "Gate Warden Lance – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Gate Warden Lance",
+      "description_sha256": "3c0556ed9b782a338b5943062fc2494cb85f0c82b3e17157509afbfd5a779bac",
+      "description_present": true,
+      "legend_sha256": "4857d6b393d1a7dc9dfee9a6f938a7d3e762fa50b85b4bc4bb62514007543820",
+      "legend_present": true
+    },
+    {
+      "id": "000010498005",
+      "name": "MARSHAL THE DEFENCE",
+      "type": "Gate Warden Lance – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Gate Warden Lance",
+      "description_sha256": "54cf98504fbd1f615b0b75ba70f1635bb5859c033640eb7ec4989444c47319f1",
+      "description_present": true,
+      "legend_sha256": "688037d7f2415b518388a116ea26dc2e3824dd842862a9bb2de836b67bdd635d",
+      "legend_present": true
+    },
+    {
+      "id": "000010498006",
+      "name": "TITANIC BOMBARDMENT",
+      "type": "Gate Warden Lance – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Gate Warden Lance",
+      "description_sha256": "404a842de78541cf2c3ec6bb352808f950c7fdd34325614d4c797d1391e26514",
+      "description_present": true,
+      "legend_sha256": "8dbea8ca6d2e6d4f1afb9ad63595050d4f749c0de1dea6066b4040a4b3e4689c",
+      "legend_present": true
+    },
+    {
+      "id": "000010498007",
+      "name": "FORTRESS OF INTIMIDATION",
+      "type": "Gate Warden Lance – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Charge phase",
+      "detachment": "Gate Warden Lance",
+      "description_sha256": "6ebe2bd0d67acdd4477303638686eadf0f6abf9acc94750d91d5cb08dbff085d",
+      "description_present": true,
+      "legend_sha256": "ca9f2999b56699fee9a74ca84ae2822df52b3c34f9c763d0df00b4c6e8563b6f",
+      "legend_present": true
+    },
+    {
+      "id": "000010498003",
+      "name": "LANCEBREAKER",
+      "type": "Gate Warden Lance – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Gate Warden Lance",
+      "description_sha256": "e98eec0a984c751fa603a54519000b321e47ca8956b9ab7611feb5e949764ae6",
+      "description_present": true,
+      "legend_sha256": "5279be6764e47674b98db4ec016a312bd8ce7dc0939f29b0346be2e74924135a",
+      "legend_present": true
+    },
+    {
+      "id": "000009762002",
+      "name": "OMNISSIAH’S GRACE",
+      "type": "Questor Forgepact Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Questor Forgepact",
+      "description_sha256": "384fe6eb934262868c3fa32b4606deb3043bfa74f6a12a18ac070728671759f0",
+      "description_present": true,
+      "legend_sha256": "c629ca7955e1eee9b8fefd4b785574cd07865fb0aaa2c6ed9356ad90101a6992",
+      "legend_present": true
+    },
+    {
+      "id": "000009762003",
+      "name": "VENGEANCE OF THE MACHINE CULT",
+      "type": "Questor Forgepact Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Questor Forgepact",
+      "description_sha256": "f74624d3b9e40c4959e5485d49a08c061acf8f654293ac49f92e2bb4e9dc6632",
+      "description_present": true,
+      "legend_sha256": "d4ceb5f357140604fcec2e60728edfacf8d7b6fce008aa42439a7514f918be6f",
+      "legend_present": true
+    },
+    {
+      "id": "000009762004",
+      "name": "IN THE SHADOW OF GIANTS",
+      "type": "Questor Forgepact Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Questor Forgepact",
+      "description_sha256": "5f0ab547f77e757506c41fadc08480dca690a01751f1c63e70a4a8519d628baa",
+      "description_present": true,
+      "legend_sha256": "5852c1b0cf59e6b60514d40a885cbf9a446f08a531960ff59ab1695799f49787",
+      "legend_present": true
+    },
+    {
+      "id": "000010503006",
+      "name": "UNSTOPPABLE WARRIOR",
+      "type": "Questoris Companions – Epic Deed Stratagem",
+      "cp_cost": "2",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Questoris Companions",
+      "description_sha256": "c43a568aa13b1336a9d929f96b6a5424f80a5e720e49526db2168e2bbc5a511c",
+      "description_present": true,
+      "legend_sha256": "de8340f8077c5cb5189f5cdc5a060ee3c8595ef27d0e5f9e06bc4d86297d49ad",
+      "legend_present": true
+    },
+    {
+      "id": "000010503004",
+      "name": "MOMENT OF GLORY",
+      "type": "Questoris Companions – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Questoris Companions",
+      "description_sha256": "e46ef199542071cc4aec99fa8e4a0d2f8c2688290cb4f81a6b57ffc51593c566",
+      "description_present": true,
+      "legend_sha256": "51a495cfae44171a11394381798d03642c6a7b82e7e738a37f3cb7d47bff0e29",
+      "legend_present": true
+    },
+    {
+      "id": "000010503003",
+      "name": "TITANIC DUEL",
+      "type": "Questoris Companions – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Questoris Companions",
+      "description_sha256": "e5b79eaae01258203dddbf3d7055db5c2de0be328c27db2024930f3de65aec11",
+      "description_present": true,
+      "legend_sha256": "0ad1e9ed0bff58de68dd8cab032f842e25e9df287c45f1da6934a672875dd975",
+      "legend_present": true
+    },
+    {
+      "id": "000010503002",
+      "name": "COURAGEOUS STAND",
+      "type": "Questoris Companions – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Questoris Companions",
+      "description_sha256": "28bc509a82cf1b2042857760fddff89746c0ea1e50571953dc9c1b01d8daa474",
+      "description_present": true,
+      "legend_sha256": "3b066b575c602b0f9765f99d9418989b59a52739c5882a736905a2da3296fb7b",
+      "legend_present": true
+    },
+    {
+      "id": "000010503005",
+      "name": "HERO’S TREAD",
+      "type": "Questoris Companions – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Command phase",
+      "detachment": "Questoris Companions",
+      "description_sha256": "4bc2f4df0d706d6b1e78c0b2909c25338ab31584bd40c9c7a0583d34a05234a9",
+      "description_present": true,
+      "legend_sha256": "c0fa38b1726c17a80c2fcc41d9e6263aa4692ce63892b634e1c3a92e88b217e2",
+      "legend_present": true
+    },
+    {
+      "id": "000010503007",
+      "name": "DRIVEN BY THE PAST",
+      "type": "Questoris Companions – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Charge phase",
+      "detachment": "Questoris Companions",
+      "description_sha256": "540dbc64ee3e5a8492335554154c8d47fb2e520354eed7814153404ddb1bbad0",
+      "description_present": true,
+      "legend_sha256": "f26dc4ad74e61bbf22d19c2330625a9ee152ec366b2dba0720f02e9a2529ed24",
+      "legend_present": true
+    },
+    {
+      "id": "000010507003",
+      "name": "EXEMPLAR’S WISDOM",
+      "type": "Spearhead-At-Arms – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Spearhead-At-Arms",
+      "description_sha256": "aa6dff79c2efea12e4b0bb0a39f4412aaaeba44637034947a7b85ad882e26a3e",
+      "description_present": true,
+      "legend_sha256": "877bcda663070f8a1e99b93f48813758c2fa31555c8de143186e6723416ed305",
+      "legend_present": true
+    },
+    {
+      "id": "000010507002",
+      "name": "VIRTUE OF COURAGE",
+      "type": "Spearhead-At-Arms – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Spearhead-At-Arms",
+      "description_sha256": "aadcf89d2a1ea400d4c51bccd3d174587f46715166f404d09b02bf315b1b01b0",
+      "description_present": true,
+      "legend_sha256": "c1c83f6ba295ac2370e6772a23c1011642b212b2024d7af0f8a26965b98a90de",
+      "legend_present": true
+    },
+    {
+      "id": "000010507005",
+      "name": "THIN THEIR RANKS",
+      "type": "Spearhead-At-Arms – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Spearhead-At-Arms",
+      "description_sha256": "12cd71dfc607d180b9f08284eb94d2fca856e4a4c44d5de141c80b65b274d379",
+      "description_present": true,
+      "legend_sha256": "6ca6cfcd66dc3f8fdee84257f3a0d9af7ea26b547eb0d4d5824c64f9b0e27b07",
+      "legend_present": true
+    },
+    {
+      "id": "000010507006",
+      "name": "LET DUTY BE YOUR SHIELD",
+      "type": "Spearhead-At-Arms – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Spearhead-At-Arms",
+      "description_sha256": "3d9b589c49115110a768297190ec959b31b22ff98b5571c7f921cb661734599e",
+      "description_present": true,
+      "legend_sha256": "1e425cfb6e6c82e03acdfde0a2d706e94ceaad2dfa1210524adfff2a9accac23",
+      "legend_present": true
+    },
+    {
+      "id": "000010507004",
+      "name": "MANTLE OF THE MENTOR",
+      "type": "Spearhead-At-Arms – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Spearhead-At-Arms",
+      "description_sha256": "f5c75a22be595e415af35b86bc7baee081bbf32906637d51a54fde0dfda1a866",
+      "description_present": true,
+      "legend_sha256": "14e73143709d43056d99ee3c37f30f5bfa846b968f0e22e756360bd91df5485c",
+      "legend_present": true
+    },
+    {
+      "id": "000010507007",
+      "name": "SQUIRES OFTHE HUNT",
+      "type": "Spearhead-At-Arms – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Fight phase",
+      "detachment": "Spearhead-At-Arms",
+      "description_sha256": "32a824df047ede5f549ead89c0e4651581d397ca1a90dca8b0ac80de13fd0e44",
+      "description_present": true,
+      "legend_sha256": "9a1c8d08f319518446e2e1412333fcad61a81aea51f12f785889e38f6b7473c4",
+      "legend_present": true
+    },
+    {
+      "id": "000011009002",
+      "name": "NEURAL LASH",
+      "type": "Throne-Bonded Outriders Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Command phase",
+      "detachment": "Throne-Bonded Outriders",
+      "description_sha256": "0570fbc625d0b18c3c2284dd562770f00df09fb7989c703e98defde962804a35",
+      "description_present": true,
+      "legend_sha256": "fa560ed3c637ffc28712256c0d5738ace7d5b79b684f1db09ab5c73620ea7ecf",
+      "legend_present": true
+    },
+    {
+      "id": "000011009003",
+      "name": "HELM CONDITIONING",
+      "type": "Throne-Bonded Outriders Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Command phase",
+      "detachment": "Throne-Bonded Outriders",
+      "description_sha256": "0700a0951a025617ee18f0333f1e37d07c332b15a391a8e5056e4c4ecb9671a2",
+      "description_present": true,
+      "legend_sha256": "0b3468eabe38e30d7d61fe269d2f104b6e72d2011fcf91a6e25b3ad40dda4306",
+      "legend_present": true
+    },
+    {
+      "id": "000011009004",
+      "name": "HONOURED TO SERVE",
+      "type": "Throne-Bonded Outriders Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Throne-Bonded Outriders",
+      "description_sha256": "4e39b72549cceaa161f3054dda801c88c7fe2789244ee3246e4f7922d1ab564b",
+      "description_present": true,
+      "legend_sha256": "be1b7839c9f923ce910e36744b0c2726bf402fc8404e1bfe43f334a719d4a8f5",
+      "legend_present": true
+    },
+    {
+      "id": "000010494003",
+      "name": "THUNDERSTOMP",
+      "type": "Valourstrike Lance – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Valourstrike Lance",
+      "description_sha256": "0a2563829bbd521c41758e01961a7e090f5a1b7ebde1c6f01a2eeb8430a2ba65",
+      "description_present": true,
+      "legend_sha256": "27ce90cafe513cc3b4b46d691de363644c88e483727a547f97614b906f95254b",
+      "legend_present": true
+    },
+    {
+      "id": "000010494004",
+      "name": "FULL TILT",
+      "type": "Valourstrike Lance – Battle Tactic Stratagem",
+      "cp_cost": "2",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Valourstrike Lance",
+      "description_sha256": "f0217e5a44d249f48d740f88332723e0d39d57c8369e398325b2fab039b69c3b",
+      "description_present": true,
+      "legend_sha256": "aec1b349d357e859e81baaafd1ff9272e8193c4bdb1aa5a199f75c5b9f2c05bc",
+      "legend_present": true
+    },
+    {
+      "id": "000010494002",
+      "name": "RUN THEM THROUGH!",
+      "type": "Valourstrike Lance – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Valourstrike Lance",
+      "description_sha256": "7dc9bc55cc83d20f54f6f3fd7891841a4c4f07a2cb0b451d723a70757414c775",
+      "description_present": true,
+      "legend_sha256": "79d8844851aea347812130909b81d839d232963dbe7d151a43cc36d6263ccb12",
+      "legend_present": true
+    },
+    {
+      "id": "000010494005",
+      "name": "VOW OF RETRIBUTION",
+      "type": "Valourstrike Lance – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Valourstrike Lance",
+      "description_sha256": "8e1ae5550e371b9767e1ed6719b7a43e7fd9de78a8d14c89da84760c2b3d35d7",
+      "description_present": true,
+      "legend_sha256": "06ecfdfea1610cf422452df00006320100c1a1cf34feccdfad5d26e89294c08a",
+      "legend_present": true
+    },
+    {
+      "id": "000010494006",
+      "name": "TACTICAL FOIL",
+      "type": "Valourstrike Lance – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Valourstrike Lance",
+      "description_sha256": "0081192b5e36722b8a756a02f24ddbcd3d0145c8fabad9091c0801012aad9d90",
+      "description_present": true,
+      "legend_sha256": "9308d28b0a7d7ea8077ee4a0eeda1151b55b262156ef07c2d107d7ccf18544b8",
+      "legend_present": true
+    },
+    {
+      "id": "000010494007",
+      "name": "ROTATE ION SHIELDS",
+      "type": "Valourstrike Lance – Wargear Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Valourstrike Lance",
+      "description_sha256": "a3ec55880c89dfc3afa9f3befc7291b47586d9c8f6a6390ee7a836cd9ddc2337",
+      "description_present": true,
+      "legend_sha256": "31d18aecf4e2e2907f6bad7102193324bf0e880a91454057eb0f8d3c21006ec3",
+      "legend_present": true
+    }
+  ]
+}

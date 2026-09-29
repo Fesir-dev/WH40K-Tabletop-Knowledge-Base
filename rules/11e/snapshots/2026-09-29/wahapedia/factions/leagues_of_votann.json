@@ -1,0 +1,5429 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "wahapedia_last_update": "2026-09-28 02:38:04",
+  "faction": {
+    "id": "LoV",
+    "name": "Leagues of Votann",
+    "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann",
+    "repository_slug": "leagues_of_votann"
+  },
+  "copyright_policy": {
+    "full_prose_stored": false,
+    "rule_text_policy": "Names/metadata/structured characteristics are stored; long prose is represented by SHA-256 fingerprints and fetched from the source on demand."
+  },
+  "sources": [
+    {
+      "id": "000000203",
+      "name": "Leagues of Votann",
+      "type": "Faction Pack",
+      "edition": "11",
+      "version": "1.1",
+      "errata_date": "22.07.2026 0:00:00",
+      "errata_link": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_leagues-of-votann-kpfosalfyb-sbqk309w4w.pdf"
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "000002593",
+      "name": "Ûthar the Destined",
+      "role": "Infantry Epic Hero",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Ûthar-the-Destined",
+      "loadout_sha256": "b5d95c434bda7aac209eea8b125410246d9560df2c9884e09a8a574e6f5a99e5",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Ûthar The Destined",
+          "m": "5\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "5",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "90"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Volkanite disintegrator",
+          "description": "devastating wounds",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Blade of the Ancestors",
+          "description": "devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-3",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Kâhl",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Ûthar the Destined",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Ancestral Fortune",
+          "type": "Datasheet",
+          "description_sha256": "20a3caae1ec9883d8c2cac9c4a727ac11f98232dca4f47227f4b6f22f49f2afe",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Grim Efficiency",
+          "type": "Datasheet",
+          "description_sha256": "48c38d0bb76702cd71b0f94a3bafb8a2233ff4da7d4c2568d865c23318caf875",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Rampart Crest",
+          "type": "Wargear",
+          "description_sha256": "de54a79788d01c43ce94f52382dc7c255a4ead7d5436f9ec326561c2a4363a91",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "34cc9906358be970d7e29cc6fa2bc723272e25668d7c2fa536ce0f245b11f45d",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002594",
+      "name": "Kâhl",
+      "role": "Infantry Character",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/K-hl",
+      "loadout_sha256": "e03da810a2e15da56cc00c16927d78c8ab979d3b7d8b4be6c95049a49cdb6e4a",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Kâhl",
+          "m": "5\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "65"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern combi-bolter",
+          "range": "24",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Volkanite disintegrator",
+          "description": "devastating wounds",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Forgewrought plasma axe",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Mass gauntlet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-3",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Kâhl",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Kindred Hero",
+          "type": "Datasheet",
+          "description_sha256": "976574475e227b6f949ee065e273a584f7f82c212f3c9f94f41481a2a68c05d0",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Seized Opportunity",
+          "type": "Datasheet",
+          "description_sha256": "86ceb4ec137dcd24963a75b0177e0b5eb56e5385073f36e6e609d011f2f17fca",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Rampart Crest",
+          "type": "Wargear",
+          "description_sha256": "454bcf70dcf8928cebd302d5db6aa07c2cbf1cf7763428a1b54fcce2acb9d04a",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Teleport Crest",
+          "type": "Wargear",
+          "description_sha256": "8c95c8055662ce9e68e70e5c0812649074fd2e7a42eb1d4d7398bd386f8bd709",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "886761f7a16f30e75abc3d77caa8667a71af7bcbc14c0a9b7a42a387c60ea995",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "cb7370c56f51a2fa3626340819091e90038c99b39c2d464a64a6fb0cf01c2ccd",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "85991d283ec91475354102c442c77d0036aef36ea2993feeaaeaf9796cb6d2ca",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "d24f02ae7f320c9f44319c47d5b7559f4c881ded80875fe40b641e2de2745d60",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002595",
+      "name": "Einhyr Champion",
+      "role": "Infantry Character",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Einhyr-Champion",
+      "loadout_sha256": "d3fea734a1fbecf712b8bf3417840d0d325378226e15968c7c3a5a063a72b132",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Einhyr Champion",
+          "m": "5\"",
+          "t": "5",
+          "sv": "2+",
+          "w": "5",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "65"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern combi-bolter",
+          "range": "24",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Darkstar axe",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Mass hammer",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Exoarmour",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Einhyr Champion",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Exemplar of the Einhyr",
+          "type": "Datasheet",
+          "description_sha256": "54b07977a3f061baf9f0c9bdf3b4e8b0b54f493963227482cae94a68862642f2",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Mass Driver Accelerators",
+          "type": "Datasheet",
+          "description_sha256": "1e683cb8e85ff86af95d21a8eef5b914c35083e327a00866cd29915a73c3c65b",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Teleport Crest",
+          "type": "Wargear",
+          "description_sha256": "8c95c8055662ce9e68e70e5c0812649074fd2e7a42eb1d4d7398bd386f8bd709",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Weavefield Crest",
+          "type": "Wargear",
+          "description_sha256": "63aef24e7fc3fbdc3f5cc9bd75f1aec14af3261cf71a69314e7a2c46d823b4c7",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "1a7cfda56469177365e90b962f5d0b53f29fed927aa112bac3892a07b6d16b89",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "f6f1a025fc9c214cd7d467564aca44d088c49d021263d1fac08e422a657aa0a6",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "4de4f4bbb087cc45a0350f559fd789aad6dd478712dcb41c2a35986469082dec",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002596",
+      "name": "Grimnyr",
+      "role": "Infantry Character",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Grimnyr",
+      "loadout_sha256": "ad6cfba094432aed2e1077a3907739f4b26c970eff3b6d273087258622ed7573",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "GRIMNYR",
+          "m": "5\"",
+          "t": "5",
+          "sv": "4+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "4"
+        },
+        {
+          "line": "2",
+          "name": "CORV",
+          "m": "5\"",
+          "t": "5",
+          "sv": "4+",
+          "w": "1",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "3 models",
+          "cost": "65"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Ancestral Wrath – witchfire",
+          "description": "psychic",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "D3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "2",
+          "name": "Ancestral Wrath – focused witchfire",
+          "description": "hazardous, psychic",
+          "range": "24",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "D3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern bolter",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Ancestral ward stave",
+          "description": "psychic",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-1",
+          "d": "D3"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Grimnyr",
+          "model": "GRIMNYR MODEL",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Psyker",
+          "model": "GRIMNYR MODEL",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "model": "GRIMNYR MODEL",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "model": "ALL MODELS",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Fortify (Psychic)",
+          "type": "Datasheet",
+          "description_sha256": "b37b08e8eb1c6d10a22af622223853b3e0562e993e6ad1f9e94835a6588742f0",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Grimnyr’s Regard",
+          "type": "Datasheet",
+          "description_sha256": "24de63eef0c7f5857593aec237c74cdaaf979a90b4bb3552c9ea132304c6acfa",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "80125648946948c9414f4e0d02a38877e772f56e70b9486f83d0842bd4cc238b",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "407cabcc69f0a825d201280aea314d26f68238f8bccf827263889247611fdbdf",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002597",
+      "name": "Brôkhyr Iron-master",
+      "role": "Infantry Character",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Brôkhyr-Iron-master",
+      "loadout_sha256": "2d88665274532cc0b87a4e0396206692d0802b96387b9ef9feb5513e2fd4d30b",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "BRÔKHYR IRON-MASTER",
+          "m": "5\"",
+          "t": "5",
+          "sv": "4+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        },
+        {
+          "line": "2",
+          "name": "IRONKIN ASSISTANT",
+          "m": "5\"",
+          "t": "5",
+          "sv": "4+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        },
+        {
+          "line": "3",
+          "name": "E-COG",
+          "m": "5\"",
+          "t": "5",
+          "sv": "4+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "5 models",
+          "cost": "70"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern bolt pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Graviton rifle",
+          "description": "anti-monster 3+, anti-vehicle 3+",
+          "range": "18",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Las-beam cutter",
+          "range": "6",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-3",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Graviton hammer",
+          "description": "anti-monster 3+, anti-vehicle 3+",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "9",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Manipulator arms",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Plasma torch",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-3",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Iron-master",
+          "model": "BRÔKHYR IRON-MASTER MODEL",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "model": "BRÔKHYR IRON-MASTER MODEL",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "model": "ALL MODELS",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Brôkhyr",
+          "model": "ALL MODELS",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Brôkhyr Guild Support",
+          "type": "Datasheet",
+          "description_sha256": "439e9f6cfb162e71cf6640d1792021a99c1b1c44d74d9f2b63149c33688fbb91",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Multispectral Visor",
+          "type": "Datasheet",
+          "description_sha256": "986fb72fef6b2d5ef09d2718a2062204060e9e7fc16ad1aaf001b0c224659af3",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Forgewrought Expertise",
+          "type": "Datasheet",
+          "description_sha256": "74c8f750eaa4a1b1926fe07ac2218339573b0ed3186f1ec991d93d99c8a16639",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "2d4150a3212eff1a73ece8fb0cc1e6fc6a191a6d3fd8009755c72549c7a67691",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "c4ea5a010937d182c3bc043421433520b220d8a6961ae162daf84e1a3a4d7a86",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "db4187cd7ac9f6fc30f983d2dd27c12e2d96b115e424dbf53257049479376b59",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002598",
+      "name": "Hearthkyn Warriors",
+      "role": "Battleline",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Hearthkyn-Warriors",
+      "loadout_sha256": "19059a18537b7717c55d5dcb397c966aff57da444c98d3415c3f5ebe1e85f7f0",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Hearthkyn Warriors",
+          "m": "5\"",
+          "t": "5",
+          "sv": "4+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "10 models",
+          "cost": "90"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern bolt pistol",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern bolter",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "EtaCarn plasma beamer",
+          "description": "sustained hits d3",
+          "range": "18",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "HYLas auto rifle",
+          "description": "assault, rapid fire 3",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "HYLas rotary cannon",
+          "description": "heavy, sustained hits 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "5",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Ion blaster",
+          "range": "18",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "L7 missile launcher – blast",
+          "description": "blast",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "2",
+          "name": "L7 missile launcher – focused",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6"
+        },
+        {
+          "line": "9",
+          "line_in_wargear": "1",
+          "name": "Magna-rail rifle",
+          "description": "devastating wounds, heavy",
+          "range": "18",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "5",
+          "s": "12",
+          "ap": "-3",
+          "d": "D3+3"
+        },
+        {
+          "line": "10",
+          "line_in_wargear": "1",
+          "name": "Theyn’s pistol",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "11",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "12",
+          "line_in_wargear": "1",
+          "name": "Plasma knife",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "13",
+          "line_in_wargear": "1",
+          "name": "Theyn’s melee weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Battleline",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Hearthkyn Warriors",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Grenades",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008338",
+          "type": "Core",
+          "parameter": "6+"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Luck Has. Need Keeps. Toil Earns",
+          "type": "Datasheet",
+          "description_sha256": "f7ac81d850750e338fc2cc5abf8ba37f72ed9f1d0bc1a6a91b6337a1376695ae",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Panspectral Scanning",
+          "type": "Datasheet",
+          "description_sha256": "ee1531c616beba17253652647f41222bcdc594933e8d0aa7536c3fa46305cae9",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Weavefield Crest",
+          "type": "Wargear",
+          "description_sha256": "fcf4a2b462fba2f4c55c0641fbb096c0fc62dee2e78d0941efdbeabb17893624",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "9a57a03f52f6c35e59351631a330a1e82afb54e501d15e084019e6511a386fb5",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "ad72d18ccf2b0daa1f509620ce34f98b521a8429425eb2003034eacc31301ce0",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "f2ed8bde7620f84ac04ea8a591cd0b4c1734de17cbd69774f67dbb0680180ff6",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "description_sha256": "9d676ed4203d4e850dfeafba93de219cb59b6c82e913a38e729eb622596f149f",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "description_sha256": "0d237045815e6cbd8e0f50f7eb8d0161d841bd01bc926671f7ac1f2e86c570b8",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "832fc98e7b4c0024b15881c86ea496fd8564f9f23e06f95f006905cd0f57891c",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "f05e86d41ac7054963366a362d286dc9691f4acc233a541abbb1e08b3e6108c5",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002599",
+      "name": "Einhyr Hearthguard",
+      "role": "Infantry",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Einhyr-Hearthguard",
+      "loadout_sha256": "a6898996c66c734e18165e359ebbfb314fad4c185ea533ac76d4fe7b3ba3364b",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Einhyr Hearthguard",
+          "m": "5\"",
+          "t": "5",
+          "sv": "2+",
+          "w": "2",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "5 models",
+          "cost": "130"
+        },
+        {
+          "line": "3",
+          "description": "10 models",
+          "cost": "270"
+        },
+        {
+          "line": "4",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "5",
+          "description": "5 models",
+          "cost": "140"
+        },
+        {
+          "line": "6",
+          "description": "10 models",
+          "cost": "280"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "EtaCarn plasma gun",
+          "description": "rapid fire 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "7",
+          "ap": "-3",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Exoarmour grenade launcher",
+          "description": "blast",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D3",
+          "bs_ws": "3",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Volkanite disintegrator",
+          "description": "devastating wounds",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Concussion gauntlet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Graviton hammer",
+          "description": "anti-monster 3+, anti-vehicle 3+",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "9",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Plasma blade gauntlet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Exoarmour",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Einhyr Hearthguard",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "name": "Decisive Destruction",
+          "type": "Datasheet",
+          "description_sha256": "a16322834c2d1affbc2b936df20e443fca3933837ce88b5cd23f88e5c6a6f5dd",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "name": "Teleport Crest",
+          "type": "Wargear",
+          "description_sha256": "d234e42f70ae12cd64bfd6d87bc895486e7342d3217e7e142bd889908daa497e",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Weavefield Crest",
+          "type": "Wargear",
+          "description_sha256": "fcf4a2b462fba2f4c55c0641fbb096c0fc62dee2e78d0941efdbeabb17893624",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "872ebe91ffdeadf895e547eb69b2f5fe694c71b15d111603a476cf17dbf2e3bf",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "59bf07d3c9ba7a1acf03991deebd0d3eeec438d630aec1941ecce3a7e6e05e8d",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "d115274f95b180da05f1735705d5f7b2a14d5941a300b0d70dae33ad59556ef6",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "description_sha256": "f991be3293ae64a45eca81591774a9607a065a406660492a820ab7925e68e2a3",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "c7ff1acd29b89b9fbf63007650951da3db9e0d51e0ca20b831f2f280acbf5571",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "33297c9644a9d367694109150f3cd09bdf77521614d27660a12593c66551aa26",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002600",
+      "name": "Cthonian Beserks",
+      "role": "Infantry",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Cthonian-Beserks",
+      "loadout_sha256": "ad3f3d265a6d281b2c7acd00394511da474b7ee43b89e8e338c2d922670bd5fb",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Cthonian Beserks",
+          "m": "6\"",
+          "t": "6",
+          "sv": "5+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "5 models",
+          "cost": "95"
+        },
+        {
+          "line": "3",
+          "description": "10 models",
+          "cost": "190"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Mole grenade launcher",
+          "description": "blast, indirect fire",
+          "range": "18",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "5",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Concussion maul",
+          "description": "anti-monster 3+, anti-vehicle 3+",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Heavy plasma axe",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Twin concussion gauntlet",
+          "description": "twin-linked",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "4",
+          "s": "9",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Cthonian",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Beserks",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008338",
+          "type": "Core",
+          "parameter": "4+"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Cyberstimms",
+          "type": "Datasheet",
+          "description_sha256": "7ec75c995f6423c11f20e4cdf503a19070fde3855370cc50e5e92c125af2d876",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Subterranean Explosives",
+          "type": "Datasheet",
+          "description_sha256": "1658e853dddde7a6209aabf8c4c5da157913d8d040930036f5a86bb318248a3a",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "c423728792beaab149dbf57dd57a97d6590666802efef7e49963c4d3bc7e31b9",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "218ca643117313741e53806220931666ea3d2a1e2017c37cb2603d1037fe08d0",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "12a967f3785e91f67b2d85b46623fa30a4b0727da4b5557cbb2c22b26bb76c38",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "description_sha256": "138bdcca16d219370e24cda039acc767d07805af4341e3e23353c520548b0785",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "8d9404740f4d4344db3109c76740fc7a5edab7c95e1334cbfd52da286185bf02",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002601",
+      "name": "Hernkyn Pioneers",
+      "role": "Mounted",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Hernkyn-Pioneers",
+      "loadout_sha256": "145ed18f12fdb99f80f4ec7973a6da7d58a518e2faa3bc701555502b72c5216a",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Hernkyn Pioneers",
+          "m": "12\"",
+          "t": "6",
+          "sv": "4+",
+          "w": "3",
+          "ld": "7+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "3 models",
+          "cost": "80"
+        },
+        {
+          "line": "3",
+          "description": "6 models",
+          "cost": "160"
+        },
+        {
+          "line": "4",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "5",
+          "description": "3 models",
+          "cost": "90"
+        },
+        {
+          "line": "6",
+          "description": "6 models",
+          "cost": "170"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Bolt revolver",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Bolt shotgun",
+          "description": "assault",
+          "range": "18",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "HYLas rotary cannon",
+          "description": "sustained hits 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Ion beamer",
+          "description": "blast",
+          "range": "18",
+          "type": "Ranged",
+          "a": "D3+1",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Magna-coil autocannon",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Plasma knife",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Grenades",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Pioneers",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Mounted",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Hernkyn",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008344",
+          "type": "Core",
+          "parameter": "9\""
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Outflanking Mag-riders",
+          "type": "Datasheet",
+          "description_sha256": "ca91d08d730916e9060711e2a6af618337ce075fe7a135aac6aab5e8638c627d",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Multiwave Comms Array",
+          "type": "Wargear",
+          "description_sha256": "813246ccc5daf0d5817543871e81af4fce5bd6296ed908acea3efbfe90862450",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Panspectral Scanner",
+          "type": "Wargear",
+          "description_sha256": "6306b1877349b2d058b673680eb22b7b5cf5d27760fd7f5579d8f35801decdfe",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Rollbar Searchlight",
+          "type": "Wargear",
+          "description_sha256": "62a9540c952df89550727e4a41624d50d1de5d873e647ce233aa5dfd971ff2b0",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "e21c5f46ba8dfbe0faef9c81c64db408cf31729462e7d1935ff638cb20492188",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "ecb368ef8caad5a6f9686b081880526b3e7fbeb1df7e010148a6f2a8e64953d1",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "89b4ad30247734ca86ada95dad24b2704d219e5fed05061ec513ffef805c0ec1",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "description_sha256": "0b7edbcc44070b6ad030a51fea993aa6bcb1615db0be61d077e60205b34e0e45",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "description_sha256": "e6b6e9217a775283efff93c24163a0876fb00b85b5cce9b7eda4ce8cc7a42271",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "f4e718ee3fb7ea239d1713adf964f7b5e62a5df9d13f4d9c9782967e849f90e3",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002602",
+      "name": "Sagitaur",
+      "role": "Dedicated Transports",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Sagitaur",
+      "loadout_sha256": "83f19e885a6b1e82ef6f65c181c563ad64e26e7a8a6044a8928f0f165586b074",
+      "transport_sha256": "dee7ccb4c6ea7b53b7ab3ac78dedefd74a2f18e32b80df73b700dc8790d4cfc9",
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Sagitaur",
+          "m": "12\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "9",
+          "ld": "7+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 3RD UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "85"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 4TH + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "95"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "HYLas beam cannon",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "L7 missile launcher – blast",
+          "description": "blast",
+          "range": "36",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "L7 missile launcher – focused",
+          "range": "36",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "MATR autocannon",
+          "description": "assault, sustained hits 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Sagitaur missile launcher",
+          "range": "36",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "10",
+          "ap": "-3",
+          "d": "3"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Twin bolt cannon",
+          "description": "sustained hits 2, twin-linked",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Armoured wheels",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Dedicated Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Sagitaur",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "1"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Blistering Advance",
+          "type": "Datasheet",
+          "description_sha256": "a8ec63ad80d3e561482a61a95d5abbe717148b7b1c1b17facdcf9c05ff2a4136",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "42169cd2d75f6579176e3f8b446c33262856351758e791a571965c2eaad70bf0",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "2cb016dcd073b5ff77d848d508f07629e5d8ad413882365ddb44982ddbc43ba4",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002603",
+      "name": "Brôkhyr Thunderkyn",
+      "role": "Infantry",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Brôkhyr-Thunderkyn",
+      "loadout_sha256": "faec7c98b3942d76b1ff18f147b80070bff0beb6e5260cb890e15c7dd27c4eec",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Brôkhyr Thunderkyn",
+          "m": "5\"",
+          "t": "6",
+          "sv": "3+",
+          "w": "2",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "3 models",
+          "cost": "80"
+        },
+        {
+          "line": "3",
+          "description": "6 models",
+          "cost": "170"
+        },
+        {
+          "line": "4",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "5",
+          "description": "3 models",
+          "cost": "90"
+        },
+        {
+          "line": "6",
+          "description": "6 models",
+          "cost": "180"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Bolt cannon",
+          "description": "sustained hits 2",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Graviton blast cannon",
+          "description": "anti-monster 3+, anti-vehicle 3+",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "SP conversion beamer",
+          "description": "conversion, lethal hits",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Thunderkyn",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Brôkhyr",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Exoframe",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "name": "Breaching Fire",
+          "type": "Datasheet",
+          "description_sha256": "3b48f92f4f23affd9572e3e1e5581e8b3278f912e5006609b2dc7030a8385af2",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "name": "Conversion",
+          "type": "Wargear profile",
+          "description_sha256": "57194a3f0630ffc6995f39bf80cca17a21b8f58b109ad4d9fe4e39a7f3266873",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "ec5b55fe2a90968ba44220edb3330530e1162b2d6c94668bd6cbd6699b644c7b",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "0fce031787fb70fcb0332f18275a4538c0d424f81a04647de74bd9e2804ab4ec",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "c916ea6830abd76970fe464381da8c47fe81fe54243461963c791f79392cdef0",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002604",
+      "name": "Hekaton Land Fortress",
+      "role": "Transport",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Hekaton-Land-Fortress",
+      "loadout_sha256": "e321afd140dcea53748d9ade6f019ff0603ce1fc201868f3b4aadb8f5a7fab6d",
+      "transport_sha256": "288248456b64970dbfdecb73e1faa22f9db3d0b7d6ca281b0762aa8a9f1d00ba",
+      "damaged_description_sha256": "59b4c593cb8789fd63d439ef34e0d7a8bdf8bad93af9ffb954d98ecc0b0b7bb4",
+      "models": [
+        {
+          "line": "1",
+          "name": "Hekaton Land Fortress",
+          "m": "10\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "16",
+          "ld": "7+",
+          "oc": "5",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "250"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "265"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Cyclic ion cannon",
+          "description": "blast",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D6+2",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Heavy magna-rail cannon",
+          "description": "devastating wounds, heavy",
+          "range": "30",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "18",
+          "ap": "-4",
+          "d": "D6+4"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Hekaton warhead",
+          "description": "blast, one shot",
+          "range": "36",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "MATR autocannon",
+          "description": "assault, sustained hits 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "SP heavy conversion beamer",
+          "description": "conversion, lethal hits",
+          "range": "24",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "4",
+          "s": "10",
+          "ap": "-2",
+          "d": "4"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Twin bolt cannon",
+          "description": "SUSTAINED HITS 2, TWIN-LINKED",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Twin ion beamer",
+          "description": "blast, twin-linked",
+          "range": "18",
+          "type": "Ranged",
+          "a": "D3+1",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Armoured wheels",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Hekaton Land Fortress",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "MultiCOG Targeting",
+          "type": "Datasheet",
+          "description_sha256": "b5d2ac4278c6b8579267ed13bc8cc51cb026df3cdb0a7cad4379fd5b64804af8",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Panspectral Scanner",
+          "type": "Wargear",
+          "description_sha256": "6306b1877349b2d058b673680eb22b7b5cf5d27760fd7f5579d8f35801decdfe",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Conversion",
+          "type": "Wargear profile",
+          "description_sha256": "cab6d7894942ebc529a960d80b9bdf86f4583898e65253f9d080765e09c7cdf5",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "One Shot",
+          "type": "Wargear profile",
+          "description_sha256": "a584d61871327a3c8b7adeb311ad753fbdef7427e382761bf39a1fa44ca5ba90",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "bf237880cbcb13746ced2d0c4ab08dbf1a9c066be5b7161727ef50db48eabcfc",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "af880a190bb47827ed4d03e9c85ab0a4b0de94f5746b3ad40da1a30a631550da",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "889a418926abf115eabe9205b57f8d2c37da0fd54cb555c10fa0c1fcc1c61902",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "e5fe26954ea5d2d029fe74aca5ff2128fc4811deede90cb93eb8b2f09cc612af",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000003710",
+      "name": "Hernkyn Yaegirs",
+      "role": "Infantry",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Hernkyn-Yaegirs",
+      "loadout_sha256": "f2c782fc4282a42a324c86aa767ce0319bc2bfd1c422f6b5c3ef2134942fee9f",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "m": "6\"",
+          "t": "5",
+          "sv": "5+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "10 models",
+          "cost": "90"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "APM launcher",
+          "description": "anti-monster 3+, anti-vehicle 3+",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-2",
+          "d": "D6"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Bolt revolver",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Bolt shotgun",
+          "description": "assault",
+          "range": "18",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Magna-coil rifle",
+          "description": "ignores cover, precision",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "5",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Plasma knife",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Grenades",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Hernkyn",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Yaegirs",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008345",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Pragmatic Hunters",
+          "type": "Datasheet",
+          "description_sha256": "fe4df2ee69573da7b744c83d873508ce047c76096938f0a845d36b3109cb42ff",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "a13695efe364e9b2b20ef85c59b0fb3ca952dad27fecd00cb72f87d51ed03ceb",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "918fbebdbad42fb12810a5812b86085b3f04d1d10b1b146a650158add799551d",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "description_sha256": "8777e7b14aa0ae14c887c468a426a8b4128e42a3a97a7498614a128f7061b21b",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "479678dec21bf16f4e5705766ace0482caa81a507b94cdd4d7aad08ccdd078cc",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "f34c4f7e6a96234016b3195b1a4b4f13d1b44d6c3dbd7a797ef2376ef8b9c006",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004140",
+      "name": "Buri Aegnirssen",
+      "role": "Infantry Epic Hero",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Buri-Aegnirssen",
+      "loadout_sha256": "a129c5d381ac1f3513a0d518251d9b4cb60bb4d39be9a3ca0e29471f0b6689fe",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Buri Aegnirssen",
+          "m": "5\"",
+          "t": "6",
+          "sv": "3+",
+          "w": "5",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "85"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern bolt pistol",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Bane – strike",
+          "description": "precision",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "12",
+          "ap": "-3",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "2",
+          "name": "Bane – sweep",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "10",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Buri Aegnirssen",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008336",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008337",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Grudge-fuelled Fortitude",
+          "type": "Datasheet",
+          "description_sha256": "c98c55dcbb97f717863f1461bf37ba17538d1c5552590fccde55ec1fc72e71ce",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Unhinged Vengeance",
+          "type": "Datasheet",
+          "description_sha256": "00a135a06bc415e2a0f0fa0f3ce669dd2f2ab6bb7a4b3d770e41f8e3320881c3",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "98e00924ef8716b41fb4b2567ff6438c7bc12906642936f3637c12b950791046",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004141",
+      "name": "Memnyr Strategist",
+      "role": "Infantry Character",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Memnyr-Strategist",
+      "loadout_sha256": "7925805a51208a0d7adba7b990aceb56f2a5b5bb0bb218693252d5088ac146b4",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Memnyr Strategist",
+          "m": "5\"",
+          "t": "5",
+          "sv": "4+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "45"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern bolt pistol",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Memnyr Strategist",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Computational Mastermind",
+          "type": "Datasheet",
+          "description_sha256": "fde491b4597758c4f52490886d96b08c6ec17c08da06109c5d605b08eb15f66b",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Predictive Guidance",
+          "type": "Datasheet",
+          "description_sha256": "7cdfdb687479c9027561874e657aac44d105c0166bc2dae5e9356adb59ecc3d8",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "cedbe4976fab321459aaa8fb7901f3a7710c131c9090cf8278ae04e97a660d12",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004142",
+      "name": "Arkanyst Evaluator",
+      "role": "Infantry Character",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Arkanyst-Evaluator",
+      "loadout_sha256": "580d539e79f622d4bf87ec3d7e650f0b614800e97826e55bc0444b250433e3ec",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Arkanyst Evaluator",
+          "m": "5\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "70"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Transmatter inverter – half charge",
+          "description": "rapid fire 1",
+          "range": "12",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "2",
+          "name": "Transmatter inverter – full charge",
+          "description": "hazardous, rapid fire 2",
+          "range": "18",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "3",
+          "name": "Transmatter inverter – overcharge",
+          "description": "hazardous, overcharge, rapid fire 3",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-3",
+          "d": "3"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Arkanyst Evaluator",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "1"
+        },
+        {
+          "line": "2",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Science Guild Support",
+          "type": "Datasheet",
+          "description_sha256": "bebaaa88cde10fedf8ab22827b19a13ed293d9cd6a0010a259ac0ccc8edccef5",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Resource Transmutation",
+          "type": "Datasheet",
+          "description_sha256": "86bae9a77a35db7b44addb619b1e1e573b692a649796e35a2d145b243f9883b9",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Overcharge",
+          "type": "Wargear profile",
+          "description_sha256": "6fe17ac597f0b9b4423875febed2939d7d5683120be5feba2e857b9679715760",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "9cafe465709e29f449797f4db5e01f8f84a6031a01f51011830577bcb2f18b1f",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004143",
+      "name": "Ironkin Steeljacks with Heavy Volkanite Disintegrators",
+      "role": "Infantry",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Ironkin-Steeljacks-with-Heavy-Volkanite-Disintegrators",
+      "loadout_sha256": "ac52f308db4333497e936c08f79ee42b5f04e57eb964f72e86b5f94340da4ea1",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "m": "5\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "3",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "3 models",
+          "cost": "80"
+        },
+        {
+          "line": "3",
+          "description": "6 models",
+          "cost": "170"
+        },
+        {
+          "line": "4",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "5",
+          "description": "3 models",
+          "cost": "90"
+        },
+        {
+          "line": "6",
+          "description": "6 models",
+          "cost": "180"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern bolter",
+          "description": "pistol",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Heavy volkanite disintegrator",
+          "description": "devastating wounds",
+          "range": "24",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Plasma knife",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Plasma sword",
+          "description": "sustained hits 1",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Ironkin Steeljacks with Heavy Volkanite Disintegrators",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Ironkin Steeljacks",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "name": "Purge Response",
+          "type": "Datasheet",
+          "description_sha256": "61eed6fa6f7d9582826ee81c668af45f61b2d4c14fb2276e5e4868e423c9d2b5",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "name": "Preymark Crest",
+          "type": "Wargear",
+          "description_sha256": "8c93158439c75a2642ad11546d1916444f76024235cc8ba0d4954f001b997ddc",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "e5ef2e6c463efdaffb56cfccc83bd7d3923deae19dddc59f91dfb9280adde39c",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "38f54cfea38643de308e2bc41d887c407b5093588962698547105f1adcf420d7",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "93bd2bc32589d1d5f39a6510921de5a7d9ee493d0c34349bc940495e52d5256d",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004144",
+      "name": "Ironkin Steeljacks with Melee Weapons",
+      "role": "Infantry",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Ironkin-Steeljacks-with-Melee-Weapons",
+      "loadout_sha256": "b1dcaa9127d3d2113fa70788fd87c241874a4de2bd4190eb7db5bebb8d1f9fba",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "m": "5\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "3",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "3 models",
+          "cost": "75"
+        },
+        {
+          "line": "3",
+          "description": "6 models",
+          "cost": "150"
+        },
+        {
+          "line": "4",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "5",
+          "description": "3 models",
+          "cost": "85"
+        },
+        {
+          "line": "6",
+          "description": "6 models",
+          "cost": "160"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern bolter",
+          "description": "pistol",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Concussion gauntlet",
+          "description": "lethal hits",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "10",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Plasma sword",
+          "description": "sustained hits 1",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "3",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Ironkin Steeljacks with Melee Weapons",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Ironkin Steeljacks",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "name": "Merciless Eradication",
+          "type": "Datasheet",
+          "description_sha256": "39c988fcbb476e7ffdbac20515eb71d826f52c8f0d0bea5428d2555341a56871",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "name": "Preymark Crest",
+          "type": "Wargear",
+          "description_sha256": "8c93158439c75a2642ad11546d1916444f76024235cc8ba0d4954f001b997ddc",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "47c09a1f91a3f817463229522b6920826f69116fb2dc14001fc6ddb9e27ebbde",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "38f54cfea38643de308e2bc41d887c407b5093588962698547105f1adcf420d7",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "93bd2bc32589d1d5f39a6510921de5a7d9ee493d0c34349bc940495e52d5256d",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004145",
+      "name": "Cthonian Earthshakers",
+      "role": "Infantry",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Cthonian-Earthshakers",
+      "loadout_sha256": "223feb8900c6a4634d6ad3ac40ebda579dabc428104fe8cd025bb6440145b1e6",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "m": "4\"",
+          "t": "6",
+          "sv": "4+",
+          "w": "6",
+          "ld": "7+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "2 models",
+          "cost": "100"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Autoch-pattern bolt pistol",
+          "description": "pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Breacher ordnance",
+          "description": "blast, heavy, indirect fire",
+          "range": "24",
+          "type": "Ranged",
+          "a": "D6+1",
+          "bs_ws": "5",
+          "s": "10",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Tremor shells",
+          "description": "blast, heavy, indirect fire",
+          "range": "36",
+          "type": "Ranged",
+          "a": "D6+4",
+          "bs_ws": "5",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Plasma picks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Earthshakers",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Cthonian",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Artillery",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "name": "Destabilising Quakes",
+          "type": "Datasheet",
+          "description_sha256": "1f9188667a9fb7df44ff8da82c230f36186879d0470bf83fc3f5267e7453f179",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "name": "Geomantic Hunters",
+          "type": "Datasheet",
+          "description_sha256": "1d31c2d3c3ccc213a676a5210b8dc7b0aaff0d0f911cc4d892f4a132bbccf413",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "c9d9156de4a4b3ba335a553b816f1f04948bc102bde269e655fe353355ac4ca7",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "7691d74fa6adc5d85c4c539098fead0b5befbaa74616d888f174529bbe0a839b",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004146",
+      "name": "Kapricus Defenders",
+      "role": "Vehicle",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Kapricus-Defenders",
+      "loadout_sha256": "aed5ffd8c71f58eb24879d96d224a79f3f01a35ca14c9c928ba62512594b5318",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "m": "12\"",
+          "t": "7",
+          "sv": "4+",
+          "w": "7",
+          "ld": "7+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "70"
+        },
+        {
+          "line": "3",
+          "description": "2 models",
+          "cost": "140"
+        },
+        {
+          "line": "4",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "5",
+          "description": "1 model",
+          "cost": "80"
+        },
+        {
+          "line": "6",
+          "description": "2 models",
+          "cost": "150"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "HYLas rotary cannon",
+          "description": "sustained hits 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Magna-rail cannon",
+          "description": "devastating wounds, heavy",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "4",
+          "s": "14",
+          "ap": "-4",
+          "d": "D3+3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Twin magna-coil autocannon",
+          "description": "twin-linked",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Armoured hull",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Defenders",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Kapricus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Hernkyn",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "1"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008344",
+          "type": "Core",
+          "parameter": "9\""
+        },
+        {
+          "line": "3",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Opportunistic Manoeuvre",
+          "type": "Datasheet",
+          "description_sha256": "dd0fdab1d00adea0c99a428ae4fa1360ef1cd29810fe2ab4cbbdc6461cc94ec2",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Smoke Launcher",
+          "type": "Wargear",
+          "description_sha256": "d685e25fd8e322cf6a23921e2e6890e7ee3b1ce679ec56614cd7e54512ec65f2",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "6de398f34606675f79d61e1f07afaf9397c3911ce69a8c5c532756511191fdaa",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "f11fbbdef7f0dc0dea15bb0418de960229963233249070faf94c3b850ded625e",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "2e81b175d0764462774273d477ad07fe1dc7b5c19581a00f1887cdc9e5c08813",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004147",
+      "name": "Kapricus Carrier",
+      "role": "Dedicated Transports",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Kapricus-Carrier",
+      "loadout_sha256": "7ed83c4c9c5eafb8dcf490ee3d77bb83c9f6fc22ff636faaf38d8ee04556d81c",
+      "transport_sha256": "f2079b970b247f56a0f651caf3f51c542a7fa4626d920f5c0cc6854175992df1",
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "m": "12\"",
+          "t": "7",
+          "sv": "4+",
+          "w": "7",
+          "ld": "7+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 3RD UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "70"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 4TH + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "80"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Magna-coil autocannon",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Twin magna-coil autocannon",
+          "description": "twin-linked",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Armoured hull",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Carrier",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Kapricus",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Hernkyn",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Dedicated Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "1"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008334",
+          "type": "Core",
+          "parameter": "5"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008344",
+          "type": "Core",
+          "parameter": "9\""
+        },
+        {
+          "line": "4",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "5",
+          "name": "Scanner Uplinks",
+          "type": "Datasheet",
+          "description_sha256": "0adfe24dd197769454c2ff4544f67b5f1b1751b8a754302748c697e91b6542c7",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Smoke Launcher",
+          "type": "Wargear",
+          "description_sha256": "d685e25fd8e322cf6a23921e2e6890e7ee3b1ce679ec56614cd7e54512ec65f2",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "e911b5c3cfd1980240943f6c4eefd6c56ca5629e53f0b108e31bb0e03dcd5965",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "6c7550cf49b22cd1707462bcac066ec93f0082c6439635eef8b1db3898548af4",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000004201",
+      "name": "Berehk Stornbröw",
+      "role": "Infantry Epic Hero",
+      "source_id": "000000203",
+      "source_name": "Leagues of Votann",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/leagues-of-votann/Berehk-Stornbröw",
+      "loadout_sha256": "2f4603e6c8b471fdd45de0bf6cafe4685469df2c0d34c7c1680345e57cf6f9bd",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "m": "6\"",
+          "t": "6",
+          "sv": "5+",
+          "w": "5",
+          "ld": "7+",
+          "oc": "1",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "85"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Kromlôk’s Revenge – graviton strikes",
+          "description": "anti-monster 3+, anti-vehicle 3+",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "10",
+          "ap": "-2",
+          "d": "4"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "2",
+          "name": "Kromlôk’s Revenge – plasma sweeps",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Warforge Gauntlets",
+          "description": "extra attacks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Leagues of Votann",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Berehk Stornbröw",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Cthonian",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008338",
+          "type": "Core",
+          "parameter": "4+"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000010432",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Break the Foe",
+          "type": "Datasheet",
+          "description_sha256": "487148e6e0fa61460df5cfe785d6b2d05e957e309c204960841c0ae94f068002",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Relentless Avalanche",
+          "type": "Datasheet",
+          "description_sha256": "bb37228cfd77c491bfe0a4b1e17944a8ba844f33e23b3f97aa8e9557991d49e5",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "5df74512ecdddac4908ec7871386629ccfd82496837bb8b10748e7f00d19d7c7",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    }
+  ],
+  "detachments": [
+    {
+      "id": "000000950",
+      "faction_id": "LoV",
+      "name": "Void Salvagers",
+      "type": "Boarding Actions",
+      "legend_sha256": "4f08936ad3a87a0c7e126f0502c0c1faa4771434e76ead2340019f46fc8a3e22",
+      "legend_present": true
+    },
+    {
+      "id": "000000951",
+      "faction_id": "LoV",
+      "name": "Hearthfire Strike",
+      "type": "Boarding Actions",
+      "legend_sha256": "ee2254077400463794fa443fada1cec46aaa08f0272ffdb63883a4a06166bed4",
+      "legend_present": true
+    },
+    {
+      "id": "000001001",
+      "faction_id": "LoV",
+      "name": "Hearthband",
+      "dp": "3",
+      "force_disposition": "Priority Assets",
+      "legend_sha256": "0a9eb7adf0247d3b20953728f26a9e8335fd8f0c25a4c9c877d3b7c43bfd150a",
+      "legend_present": true
+    },
+    {
+      "id": "000001096",
+      "faction_id": "LoV",
+      "name": "Needgaârd Oathband",
+      "dp": "2",
+      "force_disposition": "Purge the Foe",
+      "legend_sha256": "aefe6f7eb5b80225eaf042c06228b067094863f833b35eab61433a164dc26f2c",
+      "legend_present": true
+    },
+    {
+      "id": "000001097",
+      "faction_id": "LoV",
+      "name": "Persecution Prospect",
+      "dp": "2",
+      "force_disposition": "Disruption",
+      "legend_sha256": "f037c9b8d1ebb12b75872ed830036438b9c8af48766e8478e132459b22ce1477",
+      "legend_present": true
+    },
+    {
+      "id": "000001098",
+      "faction_id": "LoV",
+      "name": "Dêlve Assault Shift",
+      "dp": "2",
+      "force_disposition": "Purge the Foe",
+      "legend_sha256": "fd2e9d8cc4a91b387f64ada77fde888ce2ce1e7ab6f4fa840eaee6f1951d9060",
+      "legend_present": true
+    },
+    {
+      "id": "000001099",
+      "faction_id": "LoV",
+      "name": "Brandfast Oathband",
+      "dp": "2",
+      "force_disposition": "Take and Hold",
+      "legend_sha256": "57d811dc7d5e2c6af5459f236b39704775f03afc59db7e43f4895fd1b84f84eb",
+      "legend_present": true
+    },
+    {
+      "id": "000001100",
+      "faction_id": "LoV",
+      "name": "Hearthfyre Arsenal",
+      "dp": "2",
+      "force_disposition": "Priority Assets",
+      "legend_sha256": "21afe683abdd75ee1f6606a5ab5b58abd9399aec127f22b222c8ff8cc3fdbe3b",
+      "legend_present": true
+    },
+    {
+      "id": "000001137",
+      "faction_id": "LoV",
+      "name": "Mercenary Oathband",
+      "dp": "2",
+      "force_disposition": "Take and Hold",
+      "legend_sha256": "65902c1b54a1641884add3f06a6b25fc28a67d4c8a9eb591a8aa9e961143dcf2",
+      "legend_present": true
+    },
+    {
+      "id": "000001194",
+      "faction_id": "LoV",
+      "name": "Armoured Trailblazers",
+      "dp": "1",
+      "force_disposition": "Disruption",
+      "legend_sha256": "be456f598d7ba3ee041c44646d190c2fe0188fdd0c9f36ab3eb9109a6b21d814",
+      "legend_present": true
+    },
+    {
+      "id": "000001195",
+      "faction_id": "LoV",
+      "name": "Farseekers",
+      "dp": "1",
+      "force_disposition": "Reconnaissance",
+      "legend_sha256": "56d33231e0778af2adff9213e897770b9d6b712a10fa5f5d2f0cfc812b4896f8",
+      "legend_present": true
+    },
+    {
+      "id": "000001196",
+      "faction_id": "LoV",
+      "name": "Hearthguard Covenant",
+      "dp": "1",
+      "force_disposition": "Priority Assets",
+      "legend_sha256": "87ff91b45ce47b9e5edea98584f28ae883ad2eb229ee3e37ed58a2805cc98e1d",
+      "legend_present": true
+    }
+  ],
+  "detachment_abilities": [
+    {
+      "id": "000009528",
+      "detachment_id": "000000950",
+      "detachment": "Void Salvagers",
+      "name": "Stalwart Advance",
+      "description_sha256": "6e4dabc4c7b11ad1ef45b764d5afd5dec9a06a9702a7aa51c076bac268fa5a71",
+      "description_present": true,
+      "legend_sha256": "1b946c32959ed9c33e507333c6f30ee6b6ba42b0f7a2f40bb3dd32327544364c",
+      "legend_present": true
+    },
+    {
+      "id": "000009536",
+      "detachment_id": "000000951",
+      "detachment": "Hearthfire Strike",
+      "name": "Wrought in Wrath",
+      "description_sha256": "19c3262e1355a592f3e928d6fc4211b9586157f5800df901167bef664fa29320",
+      "description_present": true,
+      "legend_sha256": "e2b3864a14b269d5a4eb9b7da1cc834bff41e2efc8ba1110b22d64f824c1324d",
+      "legend_present": true
+    },
+    {
+      "id": "000009822",
+      "detachment_id": "000001001",
+      "detachment": "Hearthband",
+      "name": "Methodical Annihilation",
+      "description_sha256": "6212f9923e81d032517bbbad0bf2b270c37e80409f6b054a237edcbf37a53b21",
+      "description_present": true,
+      "legend_sha256": "604c88e83a870039424481612c51cc98888919eb40c900ce173b5764743d3b1d",
+      "legend_present": true
+    },
+    {
+      "id": "000010434",
+      "detachment_id": "000001096",
+      "detachment": "Needgaârd Oathband",
+      "name": "Martial Leverage",
+      "description_sha256": "6450bae8e591dedc66e5504f477e5257a5547576b2fe1a694d8849599804e3ac",
+      "description_present": true,
+      "legend_sha256": "3d9611c6c73a80b8aae8da4db8233ac9abc8b9fd06f5a2873bf9a59713b9e5a4",
+      "legend_present": true
+    },
+    {
+      "id": "000010438",
+      "detachment_id": "000001097",
+      "detachment": "Persecution Prospect",
+      "name": "Assailed From Every Angle",
+      "description_sha256": "2308d9dd3dc90db7e3b6f06300b8e54188a77ca62bff6ea2b30dfa7b732744e1",
+      "description_present": true,
+      "legend_sha256": "48c8ab4ab423dddf8ca50da28298129c910193b4ab541bf788891ed55d5ff430",
+      "legend_present": true
+    },
+    {
+      "id": "000010442",
+      "detachment_id": "000001098",
+      "detachment": "Dêlve Assault Shift",
+      "name": "Fury From The Dêlve",
+      "description_sha256": "baea76a7506940b38da58faa74890f48047b6ca7183cc000c85f0f744bc4b89f",
+      "description_present": true,
+      "legend_sha256": "78d5a1c51fd9f92bb11716a99acfc3b894e67f1b6362e2d42db5c0cf50e6f606",
+      "legend_present": true
+    },
+    {
+      "id": "000010446",
+      "detachment_id": "000001099",
+      "detachment": "Brandfast Oathband",
+      "name": "Mobile Sensor Relays",
+      "description_sha256": "d3961e545540c0e69928d3b2fe488afda8f5cc200983da7be5b1a580f07f29c4",
+      "description_present": true,
+      "legend_sha256": "3b0ce33d9aa663d94cfa65d930c62d42a919af4bc3174b7cd057eb490c07d019",
+      "legend_present": true
+    },
+    {
+      "id": "000010450",
+      "detachment_id": "000001100",
+      "detachment": "Hearthfyre Arsenal",
+      "name": "Optimal Application",
+      "description_sha256": "076c2f4720ae0881036f61c823644c1a13b6d6afc868e74158c0ee3986423d82",
+      "description_present": true,
+      "legend_sha256": "5cd331f83680207403217f06f27e0855c08f57ff22bd76262e2baaeebb3571f6",
+      "legend_present": true
+    },
+    {
+      "id": "000010707",
+      "detachment_id": "000001137",
+      "detachment": "Mercenary Oathband",
+      "name": "Ruthless Reinvestment",
+      "description_sha256": "9fc264e202f480d915c4849dba7fea469050839aa9a23d0586f62d39042b0e5c",
+      "description_present": true,
+      "legend_sha256": "08e0314dbae20fac8181d7f2c1ef9ce3ab6f8622b51aada7996f5c57f639f4f6",
+      "legend_present": true
+    },
+    {
+      "id": "000011055",
+      "detachment_id": "000001194",
+      "detachment": "Armoured Trailblazers",
+      "name": "Sagitaur Spearhead",
+      "description_sha256": "1b3a086b8d2e1577b094528243af12de225b6de8204dcc68a83acb41f04cc385",
+      "description_present": true,
+      "legend_sha256": "a34be23caa5c77335c11fe9cef647a769fcf05ade42f52b251415023d6b1b639",
+      "legend_present": true
+    },
+    {
+      "id": "000011059",
+      "detachment_id": "000001195",
+      "detachment": "Farseekers",
+      "name": "Eye of the Hunt",
+      "description_sha256": "981917bf3a6b5e1ed53c73c3a986b7ff0d26df44ab061fcf2b01887cd3947c8f",
+      "description_present": true,
+      "legend_sha256": "3bcf769645d68013e72d3e81d66ce133a7fb2c8139ffb30731315d1bddb9197d",
+      "legend_present": true
+    },
+    {
+      "id": "000011063",
+      "detachment_id": "000001196",
+      "detachment": "Hearthguard Covenant",
+      "name": "Avatars of the Ancestors",
+      "description_sha256": "597ca4ccdae2af9be1982906c35532145d4c79450cd2c12a434b46b869a18eaa",
+      "description_present": true,
+      "legend_sha256": "1cad6f7aeb71f0be67e4882fa7eae456f0bc86efeeceeed560ade93760cd4193",
+      "legend_present": true
+    }
+  ],
+  "enhancements": [
+    {
+      "id": "000009823002",
+      "detachment_id": "000001001",
+      "detachment": "Hearthband",
+      "name": "Bastion Shield",
+      "cost": "25",
+      "description_sha256": "a29fe4a62ca826d36496d10d4209c99581f43641d43e5bcfdeef2d28b4a06691",
+      "description_present": true,
+      "legend_sha256": "c20600419cc99ecd63be4114762bf1043b9a22cda6a17ad459540d6ec5cc5afe",
+      "legend_present": true
+    },
+    {
+      "id": "000011056002",
+      "detachment_id": "000001194",
+      "detachment": "Armoured Trailblazers",
+      "name": "Saturation Rounds",
+      "cost": "15",
+      "description_sha256": "5b7b3b16c57dcf830caf738bf5db1efba9e52f4f198ea85fef7eab14afbf3ebc",
+      "description_present": true,
+      "legend_sha256": "a34be23caa5c77335c11fe9cef647a769fcf05ade42f52b251415023d6b1b639",
+      "legend_present": true
+    },
+    {
+      "id": "000009537002",
+      "detachment_id": "000000951",
+      "detachment": "Hearthfire Strike",
+      "name": "Celebrated Folk Hero",
+      "cost": "0",
+      "description_sha256": "79a1f830922953367149052b2c5844ac6080cfef74951d3b45c0d03c812287b3",
+      "description_present": true,
+      "legend_sha256": "1e81a8a36f8a5103a82d4b35a286515096f043bca7013a751f147496ac295c0a",
+      "legend_present": true
+    },
+    {
+      "id": "000009529002",
+      "detachment_id": "000000950",
+      "detachment": "Void Salvagers",
+      "name": "Masterful Construction",
+      "cost": "0",
+      "description_sha256": "32d16921a74891c171d402cbf11fa1e8e29a97e86f69fa796596fd3617671d1d",
+      "description_present": true,
+      "legend_sha256": "9ed46ceba54da608d4f81534ee80ae42d93cb15ad8e4716b7e2735ac6ff2d0e6",
+      "legend_present": true
+    },
+    {
+      "id": "000010443002",
+      "detachment_id": "000001098",
+      "detachment": "Dêlve Assault Shift",
+      "name": "Dêlvwerke Navigator",
+      "cost": "25",
+      "description_sha256": "24147d744779a55dfb8d49565e23ca0e048f691aa72631c89d84d003e154c42a",
+      "description_present": true,
+      "legend_sha256": "0f2e16c2cce1a2a345e2eb4ec0dcb1ba24eb8d9ae385f2e92fb492aa7107ed7c",
+      "legend_present": true
+    },
+    {
+      "id": "000010451002",
+      "detachment_id": "000001100",
+      "detachment": "Hearthfyre Arsenal",
+      "name": "Fârstrydr Node",
+      "cost": "20",
+      "description_sha256": "94d3863abe60d28ff6b4da2bbd06a4770f119effd48a1068cadc10cef112406b",
+      "description_present": true,
+      "legend_sha256": "a8b55141f11276a3664161f6c771e23a6a766591468639e05fd4c79da0586edc",
+      "legend_present": true
+    },
+    {
+      "id": "000010439002",
+      "detachment_id": "000001097",
+      "detachment": "Persecution Prospect",
+      "name": "Eye for Weakness",
+      "cost": "25",
+      "description_sha256": "5906a2878deda9ef2f6d68d4f9ded679ac30a63bd043a74edca5ed28151117b3",
+      "description_present": true,
+      "legend_sha256": "e332756d5506d3ff4544e05499fc57cc21cff169205f91533ee238aab4288324",
+      "legend_present": true
+    },
+    {
+      "id": "000010708002",
+      "detachment_id": "000001137",
+      "detachment": "Mercenary Oathband",
+      "name": "Mercenary Prospector",
+      "cost": "20",
+      "description_sha256": "a3b1cd55ac5a64176b1a8f4e4c777d62bdcb2444f19e348b3a13f83f7cc9b690",
+      "description_present": true,
+      "legend_sha256": "83182f27e44ef53a82e43b0df29129e8200e4799c199ea65b8911578e638f37f",
+      "legend_present": true
+    },
+    {
+      "id": "000011060002",
+      "detachment_id": "000001195",
+      "detachment": "Farseekers",
+      "name": "Pan-Spectral Lockons",
+      "cost": "10",
+      "description_sha256": "005ba8c15f4792f80bebf743f6ea666e7d4cd81772a163120f1d6ffcd9045b30",
+      "description_present": true,
+      "legend_sha256": "292bbdd5d853ba5a7a2151dec251888cc9a84ba685308d713571821d91d3c181",
+      "legend_present": true
+    },
+    {
+      "id": "000010435002",
+      "detachment_id": "000001096",
+      "detachment": "Needgaârd Oathband",
+      "name": "Oathbound Speculator",
+      "cost": "30",
+      "description_sha256": "6d7addb3255d6ccc317271388b798a52bc495d36b6716ca11b19a674224ad0d3",
+      "description_present": true,
+      "legend_sha256": "d6dcfcdc438a60abb9b3826dc3deb73397a5a8bba45351ab3b5ae1d456a7e60a",
+      "legend_present": true
+    },
+    {
+      "id": "000011064002",
+      "detachment_id": "000001196",
+      "detachment": "Hearthguard Covenant",
+      "name": "High Kâhl",
+      "cost": "30",
+      "description_sha256": "4533a59ccf56fe010bfb155a0e3927419797d731a9192790e5e20e1b20d22ba8",
+      "description_present": true,
+      "legend_sha256": "1fdca4542fb13d6de671b6aa242b504cb0adcb8d75a04350c7b7ce3378a06be0",
+      "legend_present": true
+    },
+    {
+      "id": "000010447002",
+      "detachment_id": "000001099",
+      "detachment": "Brandfast Oathband",
+      "name": "Tactical Alchemy",
+      "cost": "10",
+      "description_sha256": "b3f6eec18dee2ca31e6d531bbebe551ba3dbda1d4cf82378f5dee22c1cfc69f0",
+      "description_present": true,
+      "legend_sha256": "e678e1e1c62dc1cda1409fb76a3a863a93d85f4cc7d9b5fabcdc1b48beacd2d0",
+      "legend_present": true
+    },
+    {
+      "id": "000011056003",
+      "detachment_id": "000001194",
+      "detachment": "Armoured Trailblazers",
+      "name": "Optimised Attack Lines",
+      "cost": "15",
+      "description_sha256": "22f8395c335491815ae4dc1c0cf161c3b969b9938085e124cb6407db351c4796",
+      "description_present": true,
+      "legend_sha256": "cb0001e21f96b9eb3026fc5c2112493b349dedc63a8c2c9914a939acdb4786d9",
+      "legend_present": true
+    },
+    {
+      "id": "000010443003",
+      "detachment_id": "000001098",
+      "detachment": "Dêlve Assault Shift",
+      "name": "Multiwave System Jammer",
+      "cost": "10",
+      "description_sha256": "24dbac04c58e743830e43a3a1855a6bb31161e221a2d6f44736b31b2bc73e683",
+      "description_present": true,
+      "legend_sha256": "0e5fc49a3dd4c56b31c7e0c95c5be8f578475473bf7da5a20c81b39b7e4e8721",
+      "legend_present": true
+    },
+    {
+      "id": "000010439003",
+      "detachment_id": "000001097",
+      "detachment": "Persecution Prospect",
+      "name": "Writ of Acquisition",
+      "cost": "10",
+      "description_sha256": "3fa7ada6ed0e3eedc493d92ab89356aaecb6ef3c469a4335ab185e40fe81ab99",
+      "description_present": true,
+      "legend_sha256": "c2c04a599fd32d8084ad6886719c6ee4ee8b3a4ec9d7ae010609ec20ea224999",
+      "legend_present": true
+    },
+    {
+      "id": "000011064003",
+      "detachment_id": "000001196",
+      "detachment": "Hearthguard Covenant",
+      "name": "Ironskein",
+      "cost": "10",
+      "description_sha256": "99356fc3bc52dc87af5d989f4eb2abc756a91bcb132723af171788d2aa06012a",
+      "description_present": true,
+      "legend_sha256": "4a3c9f0f626a22453deca459d61016f0649cb1c48966ba63c7ae5d98d50574e4",
+      "legend_present": true
+    },
+    {
+      "id": "000010708003",
+      "detachment_id": "000001137",
+      "detachment": "Mercenary Oathband",
+      "name": "Metaphysical Brokerage",
+      "cost": "20",
+      "description_sha256": "b3330dfa3c7a5a887d19cf2330625afb424efc844684e0cfc6bc0f7f6589a057",
+      "description_present": true,
+      "legend_sha256": "a0a328fc0e2090432fbb389a4ca56acc8ea98dceeb374c47a175ef996e1c4cf4",
+      "legend_present": true
+    },
+    {
+      "id": "000010435003",
+      "detachment_id": "000001096",
+      "detachment": "Needgaârd Oathband",
+      "name": "Dead Reckoning",
+      "cost": "10",
+      "description_sha256": "ba6ef0ca42a1e0a880bb718e1e387e8977c9e0af0114b487d15c4c11f4d6eeab",
+      "description_present": true,
+      "legend_sha256": "80fbfc1670a3aa432115baae912c83e2e2a70f3f38b7c4d5639184af8e290128",
+      "legend_present": true
+    },
+    {
+      "id": "000009529003",
+      "detachment_id": "000000950",
+      "detachment": "Void Salvagers",
+      "name": "Obsessive Drive",
+      "cost": "0",
+      "description_sha256": "a27e09ac0d862ea1b42d0c6d63bac8b8cb77b80b6c85c6b14172ab16395602a6",
+      "description_present": true,
+      "legend_sha256": "2749abb87bb606bbf429028805a45e10253f69b33615557c67260460a03cfa78",
+      "legend_present": true
+    },
+    {
+      "id": "000009537003",
+      "detachment_id": "000000951",
+      "detachment": "Hearthfire Strike",
+      "name": "Gûlyk’s Stars",
+      "cost": "0",
+      "description_sha256": "10037eb00acd048375ab70b690e234e8c3f95ae6c7d2759134a82b2ea3ace8d4",
+      "description_present": true,
+      "legend_sha256": "5d8076816c8fc1e4468528baf103d4f654d22f149bda1b12ccf6a529344a1ea0",
+      "legend_present": true
+    },
+    {
+      "id": "000009823003",
+      "detachment_id": "000001001",
+      "detachment": "Hearthband",
+      "name": "Quake Multigenerator",
+      "cost": "15",
+      "description_sha256": "2295faa8c978d061ccad23785b65a8c15e36985e9cb86035fa57f6c30c7d4592",
+      "description_present": true,
+      "legend_sha256": "74c90f5257f4a90136711ac8511e3b65ecebb42b190e4e11145775e0bbc57e77",
+      "legend_present": true
+    },
+    {
+      "id": "000010451003",
+      "detachment_id": "000001100",
+      "detachment": "Hearthfyre Arsenal",
+      "name": "Calculated Tenacity",
+      "cost": "15",
+      "description_sha256": "054ba5f8269bc0eacaedc083d79950a88dd9bb376b3f88750ad9105102de0bb9",
+      "description_present": true,
+      "legend_sha256": "de0fcce75c7c42b0a37fef51ca2a5f69e27bb63ee021d7dc6741975b9ad90cfa",
+      "legend_present": true
+    },
+    {
+      "id": "000010447003",
+      "detachment_id": "000001099",
+      "detachment": "Brandfast Oathband",
+      "name": "Trivärg Cyber Implant",
+      "cost": "40",
+      "description_sha256": "bdec1487ec919982053d073b2c7c67757015ac2d36a350d22c13dd35b8b89376",
+      "description_present": true,
+      "legend_sha256": "8a70a32850aaf7447bd67f153fcea006934e84d69cb37ed10a32cc436f39cf6b",
+      "legend_present": true
+    },
+    {
+      "id": "000011060003",
+      "detachment_id": "000001195",
+      "detachment": "Farseekers",
+      "name": "Shroudwërke Talismans",
+      "cost": "15",
+      "description_sha256": "924fce492d8f93ea1c1bf38b2ae95e9366a50906d157c383dd8bec11fcba1043",
+      "description_present": true,
+      "legend_sha256": "1f57fe6f5f799d32771d98f211281facfaaa2699bfaa40de7eb9df08bd237ef6",
+      "legend_present": true
+    },
+    {
+      "id": "000009823004",
+      "detachment_id": "000001001",
+      "detachment": "Hearthband",
+      "name": "Ironskein",
+      "cost": "10",
+      "description_sha256": "611dac467713ba4e6aaebf48d818727876facf627af6f2b2b273a97f83c68339",
+      "description_present": true,
+      "legend_sha256": "4a3c9f0f626a22453deca459d61016f0649cb1c48966ba63c7ae5d98d50574e4",
+      "legend_present": true
+    },
+    {
+      "id": "000010443004",
+      "detachment_id": "000001098",
+      "detachment": "Dêlve Assault Shift",
+      "name": "Quake Supervisor",
+      "cost": "20",
+      "description_sha256": "a4c7f9182010eece52ddec62fa72356527c3aaf8d4b6106cab19a147e9da5049",
+      "description_present": true,
+      "legend_sha256": "5fada09c25904665868571ca938e700cc3996e6e72c0ed259c537de264066e5f",
+      "legend_present": true
+    },
+    {
+      "id": "000010447004",
+      "detachment_id": "000001099",
+      "detachment": "Brandfast Oathband",
+      "name": "Precursive Judgement",
+      "cost": "15",
+      "description_sha256": "3a68434b544b2ee59ffa805f6091c6dd3790e01a8f3eb25072cfe611049acb4b",
+      "description_present": true,
+      "legend_sha256": "debf533e1a6f443efa2a2b8b748efc8d59715f787690d3458438b748cc47be0f",
+      "legend_present": true
+    },
+    {
+      "id": "000010451004",
+      "detachment_id": "000001100",
+      "detachment": "Hearthfyre Arsenal",
+      "name": "Mantle of Elders",
+      "cost": "10",
+      "description_sha256": "6b9e04d3906875556ba609c4f8685d237895c44d3a5dbf54e4683ab7b48a7a0f",
+      "description_present": true,
+      "legend_sha256": "e0ea6704bc7e3e9f32a475061a3af41c86894b3fc207379ddbd5c226c5f98043",
+      "legend_present": true
+    },
+    {
+      "id": "000010435004",
+      "detachment_id": "000001096",
+      "detachment": "Needgaârd Oathband",
+      "name": "Iron Ambassador",
+      "cost": "5",
+      "description_sha256": "059d9d5ac753e4b6c3ff3b907f729333100c53e0c62956e8c94fd11a6f2e8cba",
+      "description_present": true,
+      "legend_sha256": "02fadb33a48373c4415120744605ad64fecd7ab1171ba4c4f4492b9899ba6b42",
+      "legend_present": true
+    },
+    {
+      "id": "000010439004",
+      "detachment_id": "000001097",
+      "detachment": "Persecution Prospect",
+      "name": "Surgical Saboteur",
+      "cost": "10",
+      "description_sha256": "92f09ed1f0ed8491ae623168e84717ab911b4e5c75c9c1cac211395d3ae9d120",
+      "description_present": true,
+      "legend_sha256": "79668266cf4a578597048333de88ae7fc5a890dfa235638d8133ebc6614ee6d8",
+      "legend_present": true
+    },
+    {
+      "id": "000010708004",
+      "detachment_id": "000001137",
+      "detachment": "Mercenary Oathband",
+      "name": "Etacarn SB9 Targeting Implant",
+      "cost": "15",
+      "description_sha256": "4fe0d9dfaba98ceb8f01a7329f75d6253fedd50efa5348608213bb170fe73117",
+      "description_present": true,
+      "legend_sha256": "467de8e32abc8374976926b0713e7b4b66bbb139fdd451137ddc487ab35dd31f",
+      "legend_present": true
+    },
+    {
+      "id": "000009823005",
+      "detachment_id": "000001001",
+      "detachment": "Hearthband",
+      "name": "High Kâhl",
+      "cost": "30",
+      "description_sha256": "85d6431de47e584ec0987afcde9eafbe079df7c934c6842b1b8a2a32e69dc4cd",
+      "description_present": true,
+      "legend_sha256": "19ae7dcf1e2613f6805b80263e928b9741e56995f4c3d5f82729c129dae96b83",
+      "legend_present": true
+    },
+    {
+      "id": "000010447005",
+      "detachment_id": "000001099",
+      "detachment": "Brandfast Oathband",
+      "name": "Signature Restoration",
+      "cost": "5",
+      "description_sha256": "b138f2dcd931ab2c7b1e3010e6dd8a91b004de387a99cd0efc16f82e4c8f64ea",
+      "description_present": true,
+      "legend_sha256": "5b1d65178cfbddf5af727a34b39baf77fd5560080b2443e575a0fa44cebca35d",
+      "legend_present": true
+    },
+    {
+      "id": "000010435005",
+      "detachment_id": "000001096",
+      "detachment": "Needgaârd Oathband",
+      "name": "Ancestral Crest",
+      "cost": "15",
+      "description_sha256": "03b0aa21152a860c872ccba1ae06df0449cd23fcebd51e6a28e02027e99cf1c8",
+      "description_present": true,
+      "legend_sha256": "69b0258d9f94665449fdecf4d245f5c693562c9fb393f5d3201ed97fece2fd66",
+      "legend_present": true
+    },
+    {
+      "id": "000010451005",
+      "detachment_id": "000001100",
+      "detachment": "Hearthfyre Arsenal",
+      "name": "Graviton Vault",
+      "cost": "5",
+      "description_sha256": "ab4096fb24cd8edb7f2dc7cc3642983127b8f65587789ed5bfa915c182a9e2a3",
+      "description_present": true,
+      "legend_sha256": "25f248f1244cfded21281e946da4a2221e507e7e5c0f7df02734ebf86e7c38c9",
+      "legend_present": true
+    },
+    {
+      "id": "000010439005",
+      "detachment_id": "000001097",
+      "detachment": "Persecution Prospect",
+      "name": "Nomad Strategist",
+      "cost": "20",
+      "description_sha256": "10f616816fdf32b9a7895109301ae7a38590c0c0fc7f246f9550313ac43dd717",
+      "description_present": true,
+      "legend_sha256": "3d6cb505d42e064196b582b06523db421a82ebc643da2502d9df2b850b0430aa",
+      "legend_present": true
+    },
+    {
+      "id": "000010708005",
+      "detachment_id": "000001137",
+      "detachment": "Mercenary Oathband",
+      "name": "Asset Manipulator",
+      "cost": "25",
+      "description_sha256": "9a3da68fe8185c064cd30314d5edd52721b52ac823677f0532dbba3bd75d61dd",
+      "description_present": true,
+      "legend_sha256": "19ae7dcf1e2613f6805b80263e928b9741e56995f4c3d5f82729c129dae96b83",
+      "legend_present": true
+    },
+    {
+      "id": "000010443005",
+      "detachment_id": "000001098",
+      "detachment": "Dêlve Assault Shift",
+      "name": "Piledriver",
+      "cost": "15",
+      "description_sha256": "09e3bc6cae5983577d1fb922317dccfa55357bad973d848deee1725ecf0b1084",
+      "description_present": true,
+      "legend_sha256": "4b990166966c1cf78197dfd5d2e3651522e9a9a681cbb5ba6e4da4c955fb2795",
+      "legend_present": true
+    }
+  ],
+  "stratagems": [
+    {
+      "id": "000011057002",
+      "name": "COORDINATED CROSSFIRE",
+      "type": "Armoured Trailblazers Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Armoured Trailblazers",
+      "description_sha256": "af97b965eb92db5651e559eb37f25aaf7e49192f10f4f6fb8a419c392eff3beb",
+      "description_present": true,
+      "legend_sha256": "9e39333deeafab21d4abceba381711aa0ac9cfd3f33c2dd741e6117dce11e4a8",
+      "legend_present": true
+    },
+    {
+      "id": "000011057004",
+      "name": "BUILT TO LAST",
+      "type": "Armoured Trailblazers Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Armoured Trailblazers",
+      "description_sha256": "746350f8409241b5cb2089c92428bf0f913a0eaef2020f59b97963db82761e31",
+      "description_present": true,
+      "legend_sha256": "3a213ede838513e24b2511e05f986ba64b93fd10865d707ce143c298152a4a25",
+      "legend_present": true
+    },
+    {
+      "id": "000011057003",
+      "name": "OUTFLANKING ARMOUR",
+      "type": "Armoured Trailblazers Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Armoured Trailblazers",
+      "description_sha256": "441a5c8a1eb9c2c7b4e40fc616862ad0a9ccf1d0bc672e8319d7c48bcb65de5e",
+      "description_present": true,
+      "legend_sha256": "17314b6b9e335893342881d7417b719d01ba5f3ba350b8f430845e09de4fdfc0",
+      "legend_present": true
+    },
+    {
+      "id": "000010448003",
+      "name": "BASTION RUNNING",
+      "type": "Brandfast Oathband – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Brandfast Oathband",
+      "description_sha256": "22a302273acff653da2e345c7f1fb27eb963408129dc1f1c81567125ce5fc82a",
+      "description_present": true,
+      "legend_sha256": "edf77c913aa88dde7a91c190f53081dda61655467c6df0245f6d04cbe0525fc5",
+      "legend_present": true
+    },
+    {
+      "id": "000010448002",
+      "name": "SECURE POSITIONS",
+      "type": "Brandfast Oathband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Brandfast Oathband",
+      "description_sha256": "774de2db0893b428339437be14e6c577f34b4510f6f41529f1b71895d4d931ec",
+      "description_present": true,
+      "legend_sha256": "80b6359797bb4f4e6027f9bfce6a713f30b440995382ff9da598107611973c9a",
+      "legend_present": true
+    },
+    {
+      "id": "000010448005",
+      "name": "INEXORABLE EFFICIENCY",
+      "type": "Brandfast Oathband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Brandfast Oathband",
+      "description_sha256": "2b2237dae4ec7f966385d2145b3f83f1d8c1185e9485f4dfb5fabe3d08603631",
+      "description_present": true,
+      "legend_sha256": "dceddc566813e6ab39d2a550a46b5276181d0e3be6dd9d46edc18407252c20d3",
+      "legend_present": true
+    },
+    {
+      "id": "000010448006",
+      "name": "OPPORTUNISTIC ESCALATION",
+      "type": "Brandfast Oathband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Brandfast Oathband",
+      "description_sha256": "b56802b9a0112dac90f73d29b2cfff9e61ab2c225f64d02daaa584c46ac474b0",
+      "description_present": true,
+      "legend_sha256": "2ddcb8e20b68cff8da387511925dbb2be0ad8b04ee078e1a923e13eb82c34fa0",
+      "legend_present": true
+    },
+    {
+      "id": "000010448007",
+      "name": "VENGEANCE FLARE",
+      "type": "Brandfast Oathband – Strategic Ploy Stratagem",
+      "cp_cost": "2",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Brandfast Oathband",
+      "description_sha256": "27a114f408abef84079b0ab5dc48ca8d14364ee28b136cbcff70cf58f3789a8b",
+      "description_present": true,
+      "legend_sha256": "9058a69925d0b03a293ac1f0fe79e0d1a206a326af305e4061c0739dfa924e8e",
+      "legend_present": true
+    },
+    {
+      "id": "000010448004",
+      "name": "ILLUMINATED PRIORITY",
+      "type": "Brandfast Oathband – Wargear Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Brandfast Oathband",
+      "description_sha256": "73ffcc5c18c0146020299d0627069b53a66ed4311d8811a43f4ad8193b60db41",
+      "description_present": true,
+      "legend_sha256": "3479e089a404c3a59ca73125e9796a46f4090e0ca526d5c6910f53b69602219b",
+      "legend_present": true
+    },
+    {
+      "id": "000010444002",
+      "name": "CYBERSTIMM INFUSION",
+      "type": "Dêlve Assault Shift – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Dêlve Assault Shift",
+      "description_sha256": "f9586937d52f8509d9a7a74e269daa1206dccf434559400c5d68d2806fd13cbd",
+      "description_present": true,
+      "legend_sha256": "20d3016416d8a11ff72afc6582c900db61e28af3ec841b5d2f133249b75d011c",
+      "legend_present": true
+    },
+    {
+      "id": "000010444007",
+      "name": "HIDDEN ACCESSWAYS",
+      "type": "Dêlve Assault Shift – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Fight phase",
+      "detachment": "Dêlve Assault Shift",
+      "description_sha256": "c344a325d54727bda2458ec72418055b5fe2c4ad8125d9524d2cb5ae0ebfb2a2",
+      "description_present": true,
+      "legend_sha256": "4d01c3ea66c782394b8fea9e898ce4aa65e749107f320c601365136d74c8a037",
+      "legend_present": true
+    },
+    {
+      "id": "000010444003",
+      "name": "UNSTOPPABLE FORCE",
+      "type": "Dêlve Assault Shift – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Dêlve Assault Shift",
+      "description_sha256": "7cd9b5a1b0b2d073631269af1a80db8576a7a7f37893348953ed9a441e2ae479",
+      "description_present": true,
+      "legend_sha256": "f94e4e526be166d7d223338a1b1bb4e5cb2d2f2ffd1daf35eaba92a667be36b6",
+      "legend_present": true
+    },
+    {
+      "id": "000010444004",
+      "name": "AUGMENTED ASSAULT",
+      "type": "Dêlve Assault Shift – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Dêlve Assault Shift",
+      "description_sha256": "3592cb88d2f6e8d5bcde24bdaaf6aa0b0c1efbd0c31d41d41430be12277e124e",
+      "description_present": true,
+      "legend_sha256": "965ce857618bc74888c660b4b624543e1ef342d4fd9532165c9e2598fe747a4f",
+      "legend_present": true
+    },
+    {
+      "id": "000010444005",
+      "name": "TECTONIC FRACTURE",
+      "type": "Dêlve Assault Shift – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Dêlve Assault Shift",
+      "description_sha256": "4542f8c7477639b47e90c6e75c5275e228b5841bbf57efda6224636262448725",
+      "description_present": true,
+      "legend_sha256": "506cc172d617e771813cc73576052a3d9a0c0339f91a3971cc90c1031dcd733a",
+      "legend_present": true
+    },
+    {
+      "id": "000010444006",
+      "name": "WEAVEWËRKE BUTTRESS",
+      "type": "Dêlve Assault Shift – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Dêlve Assault Shift",
+      "description_sha256": "3432bfde57bacd5f368cd712d097bc63f3cb49a00b1be515b552644015b15583",
+      "description_present": true,
+      "legend_sha256": "9d0c60d2a647877925befe0dfa97de43eb78bd33b3ef8383a7b33698432f5973",
+      "legend_present": true
+    },
+    {
+      "id": "000011061002",
+      "name": "SCORNFUL ANALYSIS",
+      "type": "Farseekers Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Farseekers",
+      "description_sha256": "896436d3d5d64d5fd179ad298036e9a386186344010117fdd2504b2512a8fe5a",
+      "description_present": true,
+      "legend_sha256": "3de5997dc0d69114e54ae1f31d8c0abd740793c7e01b07a9f46c7f73f0712593",
+      "legend_present": true
+    },
+    {
+      "id": "000011061003",
+      "name": "NO SHOT WASTED",
+      "type": "Farseekers Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Farseekers",
+      "description_sha256": "51837f38a0a23b553dfd863e6332da8da64f2d5c53a2528be4b4e77741f40789",
+      "description_present": true,
+      "legend_sha256": "ab3b587a0d736af748aba3280b9e233bbb756dfa3d2535c42141beb1f60f8cd1",
+      "legend_present": true
+    },
+    {
+      "id": "000011061004",
+      "name": "ECONOMY OF MOTION",
+      "type": "Farseekers Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Farseekers",
+      "description_sha256": "23dd337f3e69bf0345dd3898aa2d94567ddb490ccfc8e114e2ccae172e9c559b",
+      "description_present": true,
+      "legend_sha256": "81cc8cdc4fe6cb5552b6888975a4028db930c4dc51f38da1a9babc7c85bee795",
+      "legend_present": true
+    },
+    {
+      "id": "000009824004",
+      "name": "SUPERIOR CRAFTSMANSHIP",
+      "type": "Hearthband – Battle Tactic Stratagem",
+      "cp_cost": "2",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Hearthband",
+      "description_sha256": "c6b42b1a2ebc89dadb3d94b988d44237a1a786435b58bcc67e75716f4b2c27bf",
+      "description_present": true,
+      "legend_sha256": "9da645d8f0b6a0208d82ba464f806d4d262775091a549dcd07ed78a67ddda2f8",
+      "legend_present": true
+    },
+    {
+      "id": "000009824007",
+      "name": "FURY OF THE HEARTH",
+      "type": "Hearthband – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Hearthband",
+      "description_sha256": "9685c7e58373a44880162da6fa976ddd0e49f70ccbf8aa295c1b400e9d13fe20",
+      "description_present": true,
+      "legend_sha256": "ba57a28f393fe7bfc6bbc795217f1fa1db88daa16c7497732f1b3f5b20ee0005",
+      "legend_present": true
+    },
+    {
+      "id": "000009824002",
+      "name": "BRËKKEKNOTS",
+      "type": "Hearthband – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Hearthband",
+      "description_sha256": "c6804774ae1054777cfae437c787b244a0dae15418ad16f7ebae6867869d316c",
+      "description_present": true,
+      "legend_sha256": "56ffb10466d44c3f650dd7612fb7518fe8b107de454d45347b56a744aa16846b",
+      "legend_present": true
+    },
+    {
+      "id": "000009824006",
+      "name": "MATERIALISATION MATRICES",
+      "type": "Hearthband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Hearthband",
+      "description_sha256": "68924312eea6feeb5c1027d3e3bdbf586e75524b9e74d8a073dc8f9d97874ad9",
+      "description_present": true,
+      "legend_sha256": "33f4748b30494bd799f90d93f6d6fc74f5e89de41a39dcf0469ffcc6a0633db1",
+      "legend_present": true
+    },
+    {
+      "id": "000009824005",
+      "name": "UNYIELDING AGGRESSION",
+      "type": "Hearthband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Hearthband",
+      "description_sha256": "d60065886e141c6e0955e9421b087cd341ec079f675288504457e3d557cff734",
+      "description_present": true,
+      "legend_sha256": "e34a90535c98b52e91ce60954647b9b7ac76ab12de9aaee20a3da17a468c00fb",
+      "legend_present": true
+    },
+    {
+      "id": "000009824003",
+      "name": "SURE OF PURPOSE",
+      "type": "Hearthband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Hearthband",
+      "description_sha256": "cc349ea29ca08f23f7a0bcbcd70abae349d5debab8ae90b1fb5947238374585c",
+      "description_present": true,
+      "legend_sha256": "7ff1f3c837ecc0f145e23c01379afa92aeb0cb85a4544b849333772be961729e",
+      "legend_present": true
+    },
+    {
+      "id": "000009538005",
+      "name": "GRAVITRONIC PULSE",
+      "type": "Hearthfire Strike – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Charge phase",
+      "detachment": "Hearthfire Strike",
+      "description_sha256": "8c7de6fc932aef43078b81f5ee241489478882bc92a366b3e42f25c83ba681ef",
+      "description_present": true,
+      "legend_sha256": "472aac120988a12c1accec97124a5b57b7acb81907f0e242ab5522195dadab81",
+      "legend_present": true
+    },
+    {
+      "id": "000009538002",
+      "name": "WEAVEFIELD FLARE",
+      "type": "Hearthfire Strike – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Hearthfire Strike",
+      "description_sha256": "7ad5455b41114a9eea05afed40e0c9877557a0c748943ca8474fda457a75546c",
+      "description_present": true,
+      "legend_sha256": "b0d00ce30fb3a3f0faf9917dd8867a573995e01e532669dd30a60d7355211219",
+      "legend_present": true
+    },
+    {
+      "id": "000009538004",
+      "name": "ECONOMY OF AGGRESSION",
+      "type": "Hearthfire Strike – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Hearthfire Strike",
+      "description_sha256": "9bfa402fb7db0a85afb261a91ca9ae03eb159e69c27d3578365e8fe3cc3d29a2",
+      "description_present": true,
+      "legend_sha256": "7b0223176e5a5d38b7f1f1bfc1d2b530fa6223037807ddde7f330efa163b4157",
+      "legend_present": true
+    },
+    {
+      "id": "000009538003",
+      "name": "PAN-SPECTRAL VISUALISER",
+      "type": "Hearthfire Strike – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Hearthfire Strike",
+      "description_sha256": "fe014f811414c2cbd439050ba48e9ec83002db61d34b4a0f40c3313fbac89b15",
+      "description_present": true,
+      "legend_sha256": "0579c25d44eb9d0cd840b3688d189d7bb0caf3cbbbbdbb2c7b67cc9976242887",
+      "legend_present": true
+    },
+    {
+      "id": "000010452002",
+      "name": "UNWAVERING ACCURACY",
+      "type": "Hearthfyre Arsenal – Battle Tactic Stratagem",
+      "cp_cost": "2",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Hearthfyre Arsenal",
+      "description_sha256": "077e084f8bafb9a3bad98c272b1bcb9c43f009df32d8ac13d58eb85a43b8eca0",
+      "description_present": true,
+      "legend_sha256": "d77ec75e5f6d96ef372963b88a49597ed0b5969688b784850d8848ca6649420f",
+      "legend_present": true
+    },
+    {
+      "id": "000010452005",
+      "name": "WALL OF STEEL",
+      "type": "Hearthfyre Arsenal – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Charge phase",
+      "detachment": "Hearthfyre Arsenal",
+      "description_sha256": "c44cacefed92d2429d2a71705c366137ddcdc812e4e8cf7eb437834962dddd9b",
+      "description_present": true,
+      "legend_sha256": "1c47eea3922a9655d86d0e888fb423052daa3125fa84b282d0cb41834a2097f1",
+      "legend_present": true
+    },
+    {
+      "id": "000010452003",
+      "name": "FIRST CONCERN",
+      "type": "Hearthfyre Arsenal – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Hearthfyre Arsenal",
+      "description_sha256": "51ffccc0180cbbf8b9a9c729af7b08250695475fcad7b0ccd9b9cc018c3ccceb",
+      "description_present": true,
+      "legend_sha256": "3ad480c442538512367ded458bbf5d83564f200a4337f31d3b05c8ba6b42ffbc",
+      "legend_present": true
+    },
+    {
+      "id": "000010452007",
+      "name": "COGITATED NEED",
+      "type": "Hearthfyre Arsenal – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Hearthfyre Arsenal",
+      "description_sha256": "1cb99c56523a16c250b9b84bc42d1d5498a3c82365645f8cfcf4b3c09dcd78c3",
+      "description_present": true,
+      "legend_sha256": "87214304cdddb257988e0fe7be32941a6f1655bfa5dd864ddeb407f5e3d72090",
+      "legend_present": true
+    },
+    {
+      "id": "000010452006",
+      "name": "PREVENTATIVE PURGE",
+      "type": "Hearthfyre Arsenal – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Hearthfyre Arsenal",
+      "description_sha256": "de431c9ad0ccb8ec3373d0e56e88fa12019e8a9a15a8d10c09a7e9e87a3ea9d8",
+      "description_present": true,
+      "legend_sha256": "569d4d793e3175fc7bf6b76e5b0535ae7221b84afdf82bfb33c3ea31ba3b4fe1",
+      "legend_present": true
+    },
+    {
+      "id": "000010452004",
+      "name": "DELAYED-FIRE ROUNDS",
+      "type": "Hearthfyre Arsenal – Wargear Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Hearthfyre Arsenal",
+      "description_sha256": "71042b65c44ea3e51c54946243feba079a62fc1c80a46d1a5f3dd0e885f9addd",
+      "description_present": true,
+      "legend_sha256": "3080b3555da3463c679d47ccd528aa95ea6f1163be98f3136317dd064a568b6a",
+      "legend_present": true
+    },
+    {
+      "id": "000011065004",
+      "name": "MATERIALISATION MATRICES",
+      "type": "Hearthguard Covenant Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Hearthguard Covenant",
+      "description_sha256": "c93660af416a0362258109e8ba694e17f08b542a3da7a5937543ce72ce85aae3",
+      "description_present": true,
+      "legend_sha256": "33f4748b30494bd799f90d93f6d6fc74f5e89de41a39dcf0469ffcc6a0633db1",
+      "legend_present": true
+    },
+    {
+      "id": "000011065002",
+      "name": "BRËKKEKNOTS",
+      "type": "Hearthguard Covenant Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Hearthguard Covenant",
+      "description_sha256": "8513b164083b27f1d83975ed52fe908bb65a18accab31e122bf38cfbf359afff",
+      "description_present": true,
+      "legend_sha256": "a9ae58849dd8f5af54b68831654d58f1ec02c9cc108ff5747a09987276936f13",
+      "legend_present": true
+    },
+    {
+      "id": "000011065003",
+      "name": "FURY OF THE HEARTH",
+      "type": "Hearthguard Covenant Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Hearthguard Covenant",
+      "description_sha256": "827c1ed1c2b912f961738a985de9da9b27afb00a0d3538e42f97efb235595587",
+      "description_present": true,
+      "legend_sha256": "ba57a28f393fe7bfc6bbc795217f1fa1db88daa16c7497732f1b3f5b20ee0005",
+      "legend_present": true
+    },
+    {
+      "id": "000010709004",
+      "name": "GRAND ARTIFICE",
+      "type": "Mercenary Oathband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Mercenary Oathband",
+      "description_sha256": "0d60d0038ac275ec21c2ae2b6962653241d7cf406bd76347622cfc839f4e9420",
+      "description_present": true,
+      "legend_sha256": "ce2c076801f07c916f1a0e13299402a5c36fb346e653ac57bf8a781d2348e342",
+      "legend_present": true
+    },
+    {
+      "id": "000010709006",
+      "name": "NEW HORIZONS",
+      "type": "Mercenary Oathband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Fight phase",
+      "detachment": "Mercenary Oathband",
+      "description_sha256": "9579ba6cf0d57ef18e0e3367928dd695cb739e0af34b0dc12d00f6ce7feb9887",
+      "description_present": true,
+      "legend_sha256": "6a2a942bb22a05d9ddc31e96960893fbe76daed6a0eb6c57a87b31d3f82783d5",
+      "legend_present": true
+    },
+    {
+      "id": "000010709007",
+      "name": "MOBILE EXPLOITATION",
+      "type": "Mercenary Oathband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Fight phase",
+      "detachment": "Mercenary Oathband",
+      "description_sha256": "a2744aa8e31689fb2899bf39b7d12669a63d4eb4d81c9c04b5504581477acc06",
+      "description_present": true,
+      "legend_sha256": "3f256186828ee779d3fdb4ff0b1ddaedb5e7599c439682e3da621851b353b90f",
+      "legend_present": true
+    },
+    {
+      "id": "000010709002",
+      "name": "AUXILIARY CONTRACT",
+      "type": "Mercenary Oathband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Mercenary Oathband",
+      "description_sha256": "ab8e87b95c1357151f4ea44bf6633da1fe422adb98e7d0c10b0465dfea752684",
+      "description_present": true,
+      "legend_sha256": "8423abfa58e0f8b1f9285ed97811677453cddc7b570b8ad1b7db8dca06340e4f",
+      "legend_present": true
+    },
+    {
+      "id": "000010709003",
+      "name": "OPTIMAL EXPENDITURE",
+      "type": "Mercenary Oathband – Wargear Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Mercenary Oathband",
+      "description_sha256": "2c77b504beb344cbaa15869ba6b0c1daab845d167b0dda0e840a76f0bcc0c90c",
+      "description_present": true,
+      "legend_sha256": "5ad4146a11402fcc4bab9a4728b0b19b06f5274734a504648deb63fe4c2ffad2",
+      "legend_present": true
+    },
+    {
+      "id": "000010709005",
+      "name": "PRIVATEER ARSENAL",
+      "type": "Mercenary Oathband – Wargear Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Mercenary Oathband",
+      "description_sha256": "9299e2feaebab941c7c978d88671718135f2c391d9f01ec2ef4f15d932d817a8",
+      "description_present": true,
+      "legend_sha256": "86cba05e4adb9f5b32f342fb0d8c03904e1992e4a5e568a2ba4729cbec055fd1",
+      "legend_present": true
+    },
+    {
+      "id": "000010436005",
+      "name": "ANCESTRAL SENTENCE",
+      "type": "Needgaârd Oathband – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Needgaârd Oathband",
+      "description_sha256": "15e3071558a0ea24b7439305fe0e53c4f0ff82aede1ce67c1030f7efeb46eefe",
+      "description_present": true,
+      "legend_sha256": "b87ed7853378c0dd41ef8ca458b04f86b2f510be732e9ac56724ed7858cea407",
+      "legend_present": true
+    },
+    {
+      "id": "000010436006",
+      "name": "HUNTR’S MARK",
+      "type": "Needgaârd Oathband – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Needgaârd Oathband",
+      "description_sha256": "ff366cb3378060c0dced1e3fd0b5010ef0b1c9a3f89059cb5a86c4cc7b969ce8",
+      "description_present": true,
+      "legend_sha256": "182bd60bd8e9e96d32d987197c0fdc7ed927e1c565f455f62582b6027a8bc25e",
+      "legend_present": true
+    },
+    {
+      "id": "000010436003",
+      "name": "HONOUR OF THE HOLD",
+      "type": "Needgaârd Oathband – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Needgaârd Oathband",
+      "description_sha256": "5c249985a240e4bab069f4ce381a3512cc116e4062ef812c3c45a2e1b3047293",
+      "description_present": true,
+      "legend_sha256": "08c1bf912b2a6a9039d234a6a3a6fbacd60e666555ce27b7b530bf5fcc393f0f",
+      "legend_present": true
+    },
+    {
+      "id": "000010436004",
+      "name": "ORDERED RETREAT",
+      "type": "Needgaârd Oathband – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Needgaârd Oathband",
+      "description_sha256": "0d60d0038ac275ec21c2ae2b6962653241d7cf406bd76347622cfc839f4e9420",
+      "description_present": true,
+      "legend_sha256": "0261535b69d9933b7ec6a5e38377a2c5243a81f1f3bc1813a9dee5822764af15",
+      "legend_present": true
+    },
+    {
+      "id": "000010436007",
+      "name": "REACTIVE REPRISAL",
+      "type": "Needgaârd Oathband – Strategic Ploy Stratagem",
+      "cp_cost": "2",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Needgaârd Oathband",
+      "description_sha256": "4bb6478a08aa80b0452117cbc030b3160f161e2852689bc1d27f69628b6e8716",
+      "description_present": true,
+      "legend_sha256": "07f02b05a3ed8c2684e80e6c763d56b8661522a245267ea8ef5ef7609fe7be0b",
+      "legend_present": true
+    },
+    {
+      "id": "000010436002",
+      "name": "VOID HARDENED",
+      "type": "Needgaârd Oathband – Wargear Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Needgaârd Oathband",
+      "description_sha256": "e6f59850649c6cd5220e5ab73179f9820d77130221642c82777c069318517b60",
+      "description_present": true,
+      "legend_sha256": "f3f58213096ba4b7c2e7706d67d0cc07177a88d7bfcd88a2dde212fc56b9145e",
+      "legend_present": true
+    },
+    {
+      "id": "000010440004",
+      "name": "EXPOSED FLAWS",
+      "type": "Persecution Prospect – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Persecution Prospect",
+      "description_sha256": "d2234d264f4a9b3cd89dcaaccf44cadfbe23206e76beb57cda86136af7785af8",
+      "description_present": true,
+      "legend_sha256": "a1534e3ae0375f7284f33cba804a1ddf6f95d9e75ec5403cda9d7556a6da10f2",
+      "legend_present": true
+    },
+    {
+      "id": "000010440003",
+      "name": "FRONTIER MOMENTUM",
+      "type": "Persecution Prospect – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Persecution Prospect",
+      "description_sha256": "75b837b44be9d8f4b3bfa70ed1e6e9a194bd382422800827737ad09222211154",
+      "description_present": true,
+      "legend_sha256": "c4846d55d20fa38619fab6a6f2abceb6388056e6cee2ee4dfa81700624692a9f",
+      "legend_present": true
+    },
+    {
+      "id": "000010440005",
+      "name": "RANGER TACTICS",
+      "type": "Persecution Prospect – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Persecution Prospect",
+      "description_sha256": "ca741b19520f168afa52d7e3d03f291fd0da219af7671280aa439a40ac3f14db",
+      "description_present": true,
+      "legend_sha256": "1499c45d751990fbcfa87e222121602bbcf3710058d5369bea59293dbbe84338",
+      "legend_present": true
+    },
+    {
+      "id": "000010440006",
+      "name": "CLAIMSTAKER REFLEX",
+      "type": "Persecution Prospect – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Persecution Prospect",
+      "description_sha256": "fc905baf49bbf539da1c0c2c5e54ffcc1e596b7aa8255842930078b8058df839",
+      "description_present": true,
+      "legend_sha256": "41eba01054dddde8c7450d3825572425052effda12b580c7492e0d3246ed9d29",
+      "legend_present": true
+    },
+    {
+      "id": "000010440007",
+      "name": "DISPERSED FORMATION",
+      "type": "Persecution Prospect – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Persecution Prospect",
+      "description_sha256": "a3cb820bc49a18ddef332c40c3e39a069c28a4b7dded0ca81b7b4a410dcb3213",
+      "description_present": true,
+      "legend_sha256": "d0d43afdc9139f1c03ef903793c25ee482feb642180b9362c4f5917df9e90e8e",
+      "legend_present": true
+    },
+    {
+      "id": "000010440002",
+      "name": "ADAPTABLE AVARICE",
+      "type": "Persecution Prospect – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Persecution Prospect",
+      "description_sha256": "c323f44961320e3ca4d4d03848188da9fda0e6e5fd772ecda34e967c043d62ab",
+      "description_present": true,
+      "legend_sha256": "c1719cac8113b530daccf2f18c70d266dfe0c6e4db51d96252c9a5333840c92a",
+      "legend_present": true
+    },
+    {
+      "id": "000009530004",
+      "name": "JUDGED AND PUNISHED",
+      "type": "Void Salvagers – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Void Salvagers",
+      "description_sha256": "175641e335d857a69ee5a819284326b26113b0de963dced920dd5055236fd139",
+      "description_present": true,
+      "legend_sha256": "dd6133bf9cacc79dcbf8141b79b068689146bd32d5317dc8079fdb13b3e781cf",
+      "legend_present": true
+    },
+    {
+      "id": "000009530003",
+      "name": "POINT-BLANK FIRE",
+      "type": "Void Salvagers – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Void Salvagers",
+      "description_sha256": "b021658307bff12123ae3d44bb935d2b67abc82c84040c47eaf1fe0d4f7bca14",
+      "description_present": true,
+      "legend_sha256": "8808aad9328b53cb697bc8d3facbc7c798516bff6e9f478e330ce1ea9724b4d0",
+      "legend_present": true
+    },
+    {
+      "id": "000009530005",
+      "name": "CORRIDOR COVERED",
+      "type": "Void Salvagers – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement or Charge phase",
+      "detachment": "Void Salvagers",
+      "description_sha256": "60beb5bb89f9fc848496195339f46f32717d09b36c1026042eb782455571dfe3",
+      "description_present": true,
+      "legend_sha256": "53932bed6b3a09bed8df45ba79277ca00abed0f81672ea314a210b9ed8c34cd9",
+      "legend_present": true
+    },
+    {
+      "id": "000009530002",
+      "name": "RELIC CYPHER",
+      "type": "Void Salvagers – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Command phase",
+      "detachment": "Void Salvagers",
+      "description_sha256": "4c699df7a91c5581ffe743f77930035b2cbeec9ec9114396adb449edb8c23d0f",
+      "description_present": true,
+      "legend_sha256": "29ab0b68721cf352d8488ab11858e6f91debd3d5850b2ab036fec82ae766323f",
+      "legend_present": true
+    }
+  ]
+}

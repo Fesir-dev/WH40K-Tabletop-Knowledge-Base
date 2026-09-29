@@ -1,0 +1,6356 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "wahapedia_last_update": "2026-09-28 02:38:04",
+  "faction": {
+    "id": "AC",
+    "name": "Adeptus Custodes",
+    "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes",
+    "repository_slug": "adeptus_custodes"
+  },
+  "copyright_policy": {
+    "full_prose_stored": false,
+    "rule_text_policy": "Names/metadata/structured characteristics are stored; long prose is represented by SHA-256 fingerprints and fetched from the source on demand."
+  },
+  "sources": [
+    {
+      "id": "000000024",
+      "name": "Adeptus Custodes",
+      "type": "Faction Pack",
+      "edition": "11",
+      "version": "1.1",
+      "errata_date": "22.07.2026 0:00:00",
+      "errata_link": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_adeptus_custodes-9ddgakd3ms-3azheaqd6y.pdf"
+    },
+    {
+      "id": "000000354",
+      "name": "Adeptus Custodes (Forge World)",
+      "type": "Faction Pack",
+      "edition": "0",
+      "version": "",
+      "errata_date": "01.01.0001 0:00:00",
+      "errata_link": ""
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "000000882",
+      "name": "Custodian Guard",
+      "role": "Battleline",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Custodian-Guard",
+      "loadout_sha256": "e03c1202be2c012eaae3b8a7155135ef1135643fee26e1eac597557d89a8544a",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Custodian Guard",
+          "m": "6\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "3",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 3RD UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "4 models",
+          "cost": "170"
+        },
+        {
+          "line": "3",
+          "description": "5 models",
+          "cost": "215"
+        },
+        {
+          "line": "4",
+          "description": "YOUR 4TH + UNIT COSTS"
+        },
+        {
+          "line": "5",
+          "description": "4 models",
+          "cost": "180"
+        },
+        {
+          "line": "6",
+          "description": "5 models",
+          "cost": "225"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Guardian spear",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Sentinel blade",
+          "description": "assault, pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Guardian spear",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Misericordia",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Sentinel blade",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Custodian Guard",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Battleline",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Praesidium Shield",
+          "type": "Wargear",
+          "description_sha256": "79028c999004901e1f3962d92a36493373dd4c9be329863d58b89031bcf2c41e",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Vexilla",
+          "type": "Wargear",
+          "description_sha256": "244204efb9b04ff76a2dc4c61785442e5b9ac7c4c773f0aa5fb6c7bf326d16d6",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Stand Vigil",
+          "type": "Datasheet",
+          "description_sha256": "2b43c5164c7771ac1d04c651a09cf8038b004b0ad34da513103f35938d9e40fd",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Sentinel Storm",
+          "type": "Datasheet",
+          "description_sha256": "eb63bca718214b27ed8168952db6efef507c439e1e7f5a9e89f7bef43146c59c",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "b231caf20a40f4dac6cb75f3a950168d5e9945e8678c23cf7f69aa60e9d92c1c",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "ac6733aa2f6d5ae0b1085def5e1e47103dbd07963ecabb176f160662f266f778",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "56daf30f1f2c8616cf2c1f63b047166cf6d53c6ede539654fbbf1fac3a105433",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000883",
+      "name": "Venerable Contemptor Dreadnought",
+      "role": "Walker",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Venerable-Contemptor-Dreadnought",
+      "loadout_sha256": "23ac428fde8a325a1766a774324630842dc52679507d5cf241508601361802cd",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Venerable Contemptor Dreadnought",
+          "m": "6\"",
+          "t": "9",
+          "sv": "2+",
+          "w": "10",
+          "ld": "6+",
+          "oc": "3",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "170"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "185"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Combi-bolter",
+          "description": "rapid fire 2",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Kheres-pattern assault cannon",
+          "description": "devastating wounds",
+          "range": "24",
+          "type": "Ranged",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Multi-melta",
+          "description": "melta 2",
+          "range": "18",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Contemptor combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "12",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Venerable Contemptor Dreadnought",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "1"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Unyielding Ancient",
+          "type": "Datasheet",
+          "description_sha256": "bdbcc4564d375664c6e6b6cf122b66434ff24f9c590911e16657a760daf81359",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "55d9b883c838eafea499275cc6e276777fb5d13fc6049cce3c06e77f2221ca15",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "375b759bbe1968efcdbe42182cf0aa7a7032738b2f12eff8c1f166878175a8e3",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000000884",
+      "name": "Venerable Land Raider",
+      "role": "Transport",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Venerable-Land-Raider",
+      "loadout_sha256": "616fdfc631af443bbc8ea9d4899b95d04a46cccc0c1f2eef7543e9b05f0ddb33",
+      "transport_sha256": "01d7c776a2be076bb917e00988054a41b25d0bb6777db26c2a78ac61be9a3731",
+      "damaged_description_sha256": "59b4c593cb8789fd63d439ef34e0d7a8bdf8bad93af9ffb954d98ecc0b0b7bb4",
+      "models": [
+        {
+          "line": "1",
+          "name": "Venerable Land Raider",
+          "m": "10\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "16",
+          "ld": "6+",
+          "oc": "5",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "220"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "240"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Godhammer lascannon",
+          "range": "48",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Hunter-killer missile",
+          "description": "one shot",
+          "range": "48",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Storm bolter",
+          "description": "rapid fire 2",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Twin heavy bolter",
+          "description": "sustained hits 1, twin-linked",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Armoured tracks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Venerable Land Raider",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Smoke",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Assault Ramp",
+          "type": "Datasheet",
+          "description_sha256": "2358959230678712a2186a05de13bd3b68d7c046c53b1a3cfa677bf12db97e58",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "One Shot",
+          "type": "Wargear profile",
+          "description_sha256": "a584d61871327a3c8b7adeb311ad753fbdef7427e382761bf39a1fa44ca5ba90",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "37aeec443c779247fc41171b1629401fe65419db7ffd4cca752fa3aacdb3da9d",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "1d7c141d5c1d61b308d436371ae9b706db499b3b9530431a99878b29c284bf97",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "b79a905c33cfe2d8f444c3bcce9016a83392a464373dbdd51750b0ce6d8729f7",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001446",
+      "name": "Trajann Valoris",
+      "role": "Infantry Epic Hero",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Trajann-Valoris",
+      "loadout_sha256": "aea5ce18c81348be5313ada9fa0c0c584e91279663ccf6d446db6b257e3e195c",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Trajann Valoris",
+          "m": "6\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "7",
+          "ld": "5+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "135"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Eagle's Scream",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Watcher’s Axe",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "10",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Trajann Valoris",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008338",
+          "type": "Core",
+          "parameter": "5+"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "4",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "5",
+          "name": "Captain-General",
+          "type": "Datasheet",
+          "description_sha256": "dc1aa5a0149eb73a950ec7ea403f01cc3e39ae1dca61fce233805a37eadd42df",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Moment Shackle",
+          "type": "Datasheet",
+          "description_sha256": "baa04ed90d078a5beaff0deccd8cccceb2b171bf485b524b98f877a885dec544",
+          "description_present": true
+        },
+        {
+          "line": "7",
+          "name": "SUPREME COMMANDER",
+          "type": "Special (правая колонка)",
+          "description_sha256": "d9c8d91e2be660893f8f4cf9840f7fab45aefc3381633456602a571020f74ca3",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "12013732a2e769beb90c22cef81d50567d201a9ba4d183dd83ce82d063b307f8",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001447",
+      "name": "Shield-captain",
+      "role": "Infantry Character",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Shield-captain",
+      "loadout_sha256": "7df24e4a5e66534240407f360cc971c4dd4b92809162be5e8f51f731a068c323",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Shield-captain",
+          "m": "6\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "6",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "110"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Castellan axe",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Guardian spear",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Pyrithite spear",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Sentinel blade",
+          "description": "assault, pistol",
+          "range": "12",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Castellan axe",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Guardian spear",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "7",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "7",
+          "line_in_wargear": "1",
+          "name": "Pyrithite spear",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "7",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "8",
+          "line_in_wargear": "1",
+          "name": "Sentinel blade",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "7",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Shield-Captain",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Master of the Stances",
+          "type": "Datasheet",
+          "description_sha256": "b6c3b187b9f11a1f2ef7dc21ce08e4019436d8661e5993b0938842975db16100",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Strategic Mastery",
+          "type": "Datasheet",
+          "description_sha256": "ba41d9ae26e953d16666591ccf3e66d0f6795583437c5d2452cfbe6aa9ff7578",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Praesidium shield",
+          "type": "Wargear",
+          "description_sha256": "79028c999004901e1f3962d92a36493373dd4c9be329863d58b89031bcf2c41e",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "a3cd6b723fd4b287f4ca85535684a42a63af7bdf346cea8dbe5a2869c3cae20b",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "0ad477f8c7b953b415da727da311a9c728be8ad6655a4e3a86519d535c814772",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001448",
+      "name": "Shield-captain In Allarus Terminator Armour",
+      "role": "Infantry Character",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Shield-captain-In-Allarus-Terminator-Armour",
+      "loadout_sha256": "c2807ef01ea057f1ad327698eb09672785b8a0b663e6120a703ff7a582ab3e03",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Shield-captain In Allarus Terminator Armour",
+          "m": "5\"",
+          "t": "7",
+          "sv": "2+",
+          "w": "7",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "130"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Balistus grenade launcher",
+          "description": "blast",
+          "range": "18",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Castellan axe",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Guardian spear",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Castellan axe",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Guardian spear",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "7",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Terminator",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Shield-Captain",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Auramite and Adamantine",
+          "type": "Datasheet",
+          "description_sha256": "9a0f6d2a52bb574d2baf3afb283cdbb2c565d89c0d66a5a2a729c283e7816c23",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Strategic Mastery",
+          "type": "Datasheet",
+          "description_sha256": "7d92c429ddafbc79c555ed6335b4ec7db4a3c8174bd01ac07f97d11eb9775cf0",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "6801afca21a2ad9b0b6c3cdbfd99ede06bc922316073e7342542ea5be834fe15",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "24edc1f71e97d829e4863e14072d69a02d03ee3965faa44755caaf4344b9ab3b",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001449",
+      "name": "Shield-captain On Dawneagle Jetbike",
+      "role": "Mounted Character",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Shield-captain-On-Dawneagle-Jetbike",
+      "loadout_sha256": "3bf711d908665a38e63786f68d69887de6b4ce5f8c121d07962c2d10b331a1bd",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Shield-captain On Dawneagle Jetbike",
+          "m": "12\"",
+          "t": "7",
+          "sv": "2+",
+          "w": "8",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "140"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Vertus hurricane bolter",
+          "description": "rapid fire 3, twin-linked",
+          "range": "18",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Salvo launcher",
+          "description": "twin-linked",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Interceptor lance",
+          "description": "lance",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Shield-Captain",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Dawneagle Jetbike",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Mounted",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Sweeping Advance",
+          "type": "Datasheet",
+          "description_sha256": "c1129b7e2080995669b559498dfbb4e5e3f3a12178fd85552a0184eb0cd89e8d",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Strategic Mastery",
+          "type": "Datasheet",
+          "description_sha256": "7d92c429ddafbc79c555ed6335b4ec7db4a3c8174bd01ac07f97d11eb9775cf0",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "848fc3aa6dfaea255149a8b99c1267ab71358635c25a0eb741a96db06ac2268c",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "75f15335670c0af45f8221aa2c3e95d33af6ed7494a04c47fb9c6581b648938d",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001450",
+      "name": "Custodian Wardens",
+      "role": "Infantry",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Custodian-Wardens",
+      "loadout_sha256": "e03c1202be2c012eaae3b8a7155135ef1135643fee26e1eac597557d89a8544a",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Custodian Wardens",
+          "m": "6\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "3",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "4 models",
+          "cost": "200"
+        },
+        {
+          "line": "3",
+          "description": "5 models",
+          "cost": "250"
+        },
+        {
+          "line": "4",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "5",
+          "description": "4 models",
+          "cost": "220"
+        },
+        {
+          "line": "6",
+          "description": "5 models",
+          "cost": "270"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Castellan axe",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Guardian spear",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Castellan axe",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Guardian spear",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Custodian Wardens",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Vexilla",
+          "type": "Wargear",
+          "description_sha256": "244204efb9b04ff76a2dc4c61785442e5b9ac7c4c773f0aa5fb6c7bf326d16d6",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Resolute Will",
+          "type": "Datasheet",
+          "description_sha256": "4d545b859d61b51bb825de10a8ad64ba4de6390405d7fc7115dafbaded2beb51",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Living Fortress",
+          "type": "Datasheet",
+          "description_sha256": "6aaf4f91fa7003f016651d8c1ca02180e571a5d16d589d12eec7b751f42f8c53",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "6566638ed445d701511bb9bbb675a913e102f68b654ab49785765838298aebda",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "7588ba118ba57602c90c2e44eb5e6606a0c0046763307cbe8320c0e36b34b76c",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "a5fa5ee13b82ebf6eeca3dfc102671f6f6935043c7c61ea4659ca419992f63ab",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001453",
+      "name": "Allarus Custodians",
+      "role": "Infantry",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Allarus-Custodians",
+      "loadout_sha256": "470c57d47146931395fd5fbc512a0db7f506982b0ad5378632c65230e1a26aef",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Allarus Custodians",
+          "m": "5\"",
+          "t": "7",
+          "sv": "2+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "2 models",
+          "cost": "110"
+        },
+        {
+          "line": "3",
+          "description": "3 models",
+          "cost": "165"
+        },
+        {
+          "line": "4",
+          "description": "5 models",
+          "cost": "280"
+        },
+        {
+          "line": "5",
+          "description": "6 models",
+          "cost": "340"
+        },
+        {
+          "line": "6",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "7",
+          "description": "2 models",
+          "cost": "140"
+        },
+        {
+          "line": "8",
+          "description": "3 models",
+          "cost": "195"
+        },
+        {
+          "line": "9",
+          "description": "5 models",
+          "cost": "310"
+        },
+        {
+          "line": "10",
+          "description": "6 models",
+          "cost": "370"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Balistus grenade launcher",
+          "description": "blast",
+          "range": "18",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Castellan axe",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Guardian spear",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Castellan axe",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Guardian spear",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Misericordia",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Terminator",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Allarus Custodians",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Vexilla",
+          "type": "Wargear",
+          "description_sha256": "244204efb9b04ff76a2dc4c61785442e5b9ac7c4c773f0aa5fb6c7bf326d16d6",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Slayers of Tyrants",
+          "type": "Datasheet",
+          "description_sha256": "98f21f8fc19037fa745f1b255db6466ec4673ccf636d051b9c2a863006eefaf7",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "From Golden Light",
+          "type": "Datasheet",
+          "description_sha256": "f5b23dd462a05af2eb6a5fb47bff4f2065d2292710ad68e1753bf8b6813b514b",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "6566638ed445d701511bb9bbb675a913e102f68b654ab49785765838298aebda",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "30e5916ce7f07ebda7ad2c1b517b7a77c81489c03310a6505e2bd019e0796999",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "9e9e3e4737db7ea3dc670a3ac919779ddba8f4362637b23af179c3bf5f008e87",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001454",
+      "name": "Vertus Praetors",
+      "role": "Mounted",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Vertus-Praetors",
+      "loadout_sha256": "3bb202875b40a47abbd4415186a5e787cff1663f111b1258d5f4e961e53c44b3",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Vertus Praetors",
+          "m": "12\"",
+          "t": "7",
+          "sv": "2+",
+          "w": "5",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "2 models",
+          "cost": "145"
+        },
+        {
+          "line": "3",
+          "description": "3 models",
+          "cost": "215"
+        },
+        {
+          "line": "4",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "5",
+          "description": "2 models",
+          "cost": "170"
+        },
+        {
+          "line": "6",
+          "description": "3 models",
+          "cost": "240"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Salvo launcher",
+          "description": "twin-linked",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Vertus hurricane bolter",
+          "description": "rapid fire 3, twin-linked",
+          "range": "18",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Interceptor lance",
+          "description": "lance",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vertus Praetors",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Mounted",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "name": "Turbo-boost",
+          "type": "Datasheet",
+          "description_sha256": "beed2878f78ae5275f512b26c9715ad28736b18df69a796536e64112ac72ed71",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "name": "Quicksilver Execution",
+          "type": "Datasheet",
+          "description_sha256": "72725fa8ca56fb1e035c18b67d0fb05b0a4608ad71416cbaae8affa87e76f4d9",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "935ca714b9c782205629a888b6a0424e158506cf8894ef95b55b1fa940643884",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "d936af05209890edbfb1819611ac87913d42c50b972f5bc910e909e5d9ee3948",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001458",
+      "name": "Contemptor-achillus Dreadnought",
+      "role": "Walker",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Contemptor-achillus-Dreadnought",
+      "loadout_sha256": "59ac5ee1be0922ead25e8d7173fd98c294c4d88ae386eabbc89712d6529c40e6",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Contemptor-achillus Dreadnought",
+          "m": "6\"",
+          "t": "9",
+          "sv": "2+",
+          "w": "10",
+          "ld": "6+",
+          "oc": "3",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "155"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "170"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Achillus dreadspear",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Infernus incinerator",
+          "description": "torrent, ignores cover",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Lastrum storm bolter",
+          "description": "rapid fire 2",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Twin adrathic destructor",
+          "description": "twin-linked",
+          "range": "18",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Achillus dreadspear",
+          "description": "lance",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "12",
+          "ap": "-2",
+          "d": "D6+1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Contemptor-Achillus Dreadnought",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "1"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Dread Foe",
+          "type": "Datasheet",
+          "description_sha256": "11d6cca2955964b51853f58319e0d13fd4b9d406ee6f5977e8a624385f07d2cd",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "7d06de1067cb02298209cfd7e944669e88a3fb31e7fb2990191b181cf7dc193a",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "e839715da74d19f19ca51a67b026839892429c4a859002deb5889834fec740dd",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001460",
+      "name": "Caladius Grav-tank",
+      "role": "Vehicle",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Caladius-Grav-tank",
+      "loadout_sha256": "a987901bb989293deff2d69f5453ea1448d5d471a93406d7eee3e09444563c77",
+      "transport_sha256": null,
+      "damaged_description_sha256": "59b4c593cb8789fd63d439ef34e0d7a8bdf8bad93af9ffb954d98ecc0b0b7bb4",
+      "models": [
+        {
+          "line": "1",
+          "name": "Caladius Grav-tank",
+          "m": "10\"",
+          "t": "11",
+          "sv": "2+",
+          "w": "14",
+          "ld": "6+",
+          "oc": "4",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "210"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "225"
+        },
+        {
+          "line": "5",
+          "description": "WARGEAR OPTIONS"
+        },
+        {
+          "line": "6",
+          "description": "per Twin arachnus heavy blaze cannon",
+          "cost": "15"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Twin arachnus heavy blaze cannon",
+          "description": "twin-linked",
+          "range": "48",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Twin iliastus accelerator cannon",
+          "description": "rapid fire 4, twin-linked",
+          "range": "48",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "10",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Twin lastrum bolt cannon",
+          "description": "sustained hits 1",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Armoured hull",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Caladius Grav-tank",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Advanced Firepower",
+          "type": "Datasheet",
+          "description_sha256": "cde95af7f80f556070d72697da38e5e41d0f569d055b4af94f8361f537574a5f",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "35d020bdf51ede4dda431eacd6f38f8776a04f97f42f655135a5ece6bf89d214",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "da0d0437e48aae0cf6b0b9efc9e1eef29768215c4d7ac1b678765bd5fb308530",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001461",
+      "name": "Coronus Grav-carrier",
+      "role": "Transport",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Coronus-Grav-carrier",
+      "loadout_sha256": "c03c3379c65e2af190be54fe1cf976a2cc6faba0b05104bb385c2ca62250b607",
+      "transport_sha256": "450614743f4a885398ae24c12fbb6d6f958cca74c4aeff3d305d6241d6b8f129",
+      "damaged_description_sha256": "59b4c593cb8789fd63d439ef34e0d7a8bdf8bad93af9ffb954d98ecc0b0b7bb4",
+      "models": [
+        {
+          "line": "1",
+          "name": "Coronus Grav-carrier",
+          "m": "12\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "16",
+          "ld": "6+",
+          "oc": "5",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "180"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "200"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Twin arachnus blaze cannon",
+          "description": "devastating wounds, twin-linked",
+          "range": "24",
+          "type": "Ranged",
+          "a": "8",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Twin lastrum bolt cannon",
+          "description": "sustained hits 1",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Armoured hull",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "4",
+          "s": "8",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Coronus Grav-carrier",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Fire Support",
+          "type": "Datasheet",
+          "description_sha256": "8c9e8657c2abb949d6659d20046a47a16af2ba16e65043338e12273b1ff4ad42",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "d8dfd74eb4cfc27b08f1db7eb2ea8bec48965bc52593f9bcd04252984fd06d4f",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001479",
+      "name": "Telemon Heavy Dreadnought",
+      "role": "Walker",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Telemon-Heavy-Dreadnought",
+      "loadout_sha256": "86109d2d7002b2a6d3b29895c0a4d77e18feeff23bba7e97efcf977db494425f",
+      "transport_sha256": null,
+      "damaged_description_sha256": "469029fe0d7496cef75f811b81a4666d3dbac2cfc23c873451981d27e7490f35",
+      "models": [
+        {
+          "line": "1",
+          "name": "Telemon Heavy Dreadnought",
+          "m": "8\"",
+          "t": "10",
+          "sv": "2+",
+          "w": "12",
+          "ld": "6+",
+          "oc": "4",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "225"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "245"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Arachnus storm cannon",
+          "description": "devastating wounds",
+          "range": "24",
+          "type": "Ranged",
+          "a": "12",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Iliastus accelerator culverin",
+          "range": "48",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-1",
+          "d": "3"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Spiculus bolt launcher",
+          "description": "blast",
+          "range": "36",
+          "type": "Ranged",
+          "a": "D6+3",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Twin plasma projector",
+          "description": "torrent, twin-linked",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D3",
+          "bs_ws": "N/A",
+          "s": "7",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Armoured feet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "6",
+          "line_in_wargear": "1",
+          "name": "Telemon caestus",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "12",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Telemon Heavy Dreadnought",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Guardian Eternal",
+          "type": "Datasheet",
+          "description_sha256": "b9b595b9ce07546cab372d5357927b657de2fe536fde3df5c3add27f539dc142",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Devoted to Destruction",
+          "type": "Datasheet",
+          "description_sha256": "2a07aae4dbb304e8c54d1c96c33dbe15ccb5c998fe70397248c703c3930e1f9a",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "484de1f2698531894786be06d3f2012317d4a61d0a4e5a598622f3b5fbc00cfc",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "ad70ae2fa0ab838c9180fb150d0602f46e8ee9439124a72275c6dcc6661af35e",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001557",
+      "name": "Contemptor-galatus Dreadnought",
+      "role": "Walker",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Contemptor-galatus-Dreadnought",
+      "loadout_sha256": "0f4bd89be0f1adb3042faa3491b06dbda3b16505f99937d6e0bfe9cc529fa10e",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Contemptor-galatus Dreadnought",
+          "m": "6\"",
+          "t": "9",
+          "sv": "2+",
+          "w": "10",
+          "ld": "6+",
+          "oc": "3",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "165"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "180"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Galatus warblade",
+          "description": "ignores cover, torrent, twin-linked",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Galatus warblade",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "8",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-2",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Walker",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Contemptor-Galatus Dreadnought",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "1"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Galatus Shield",
+          "type": "Datasheet",
+          "description_sha256": "ca4f275617ffc91507e7eaf7e44cd5aa1c27017d91b8e9413d292bbd1723549f",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "7e51da1b85c9da0b2decbbf9f20d4218e032fa116d0575ad9d386c65bf270674",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001558",
+      "name": "Aquilon Custodians",
+      "role": "Infantry",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Aquilon-Custodians",
+      "loadout_sha256": "3119066b5e1df202b012213af44a64c1c2f463b208f10db77275383125a63b5d",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Aquilon Custodians",
+          "m": "5\"",
+          "t": "7",
+          "sv": "2+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "3 models",
+          "cost": "195"
+        },
+        {
+          "line": "3",
+          "description": "6 models",
+          "cost": "390"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Infernus firepike",
+          "description": "ignores cover, torrent",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Lastrum storm bolter",
+          "description": "rapid fire 2",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Twin adrathic destructor",
+          "description": "twin-linked",
+          "range": "18",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Solerite power gauntlet",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "5",
+          "line_in_wargear": "1",
+          "name": "Solerite power talon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "7",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Terminator",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Aquilon Custodians",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Heavy Assault Infantry",
+          "type": "Datasheet",
+          "description_sha256": "bdc8e39d3f735a9146a82e03e52f45488c681d96a6a65b2bf90e8395e2df7f42",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "From Golden Light",
+          "type": "Datasheet",
+          "description_sha256": "f5b23dd462a05af2eb6a5fb47bff4f2065d2292710ad68e1753bf8b6813b514b",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "LIONS OF THE EMPEROR",
+          "type": "Special (правая колонка)",
+          "description_sha256": "9347066a494a19a3d0640836c2506b8399433103bf6fc40a86ea07af906cddaa",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "edde97f6054571fcaf9061b7096c57d7e38429c7b0259013221173fb997ed7dd",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "5736a7a7890ed66cac632046bef4c50bfa8409eea447806c4cc72428bf821176",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "2044218c75f08f73b7db2001b90e64ce3bace89147ca70e04cb1100d0c437798",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001559",
+      "name": "Custodian Guard With Adrasite And Pyrithite Spears",
+      "role": "Infantry",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Custodian-Guard-With-Adrasite-And-Pyrithite-Spears",
+      "loadout_sha256": "7fc86e838fd80642a829eeeaa9fb588f9dc4d02bcabfa19795a79f7dc6ada4a6",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Custodian Guard With Adrasite And Pyrithite Spears",
+          "m": "6\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "3",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 3RD UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "5 models",
+          "cost": "250"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 4TH + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "5 models",
+          "cost": "260"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Adrasite spear",
+          "range": "18",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Pyrithite spear",
+          "description": "melta 2",
+          "range": "12",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Adrasite spear",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Pyrithite spear",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Custodian Guard with Adrasite and Pyrithite Spears",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Stand Vigil",
+          "type": "Datasheet",
+          "description_sha256": "2b43c5164c7771ac1d04c651a09cf8038b004b0ad34da513103f35938d9e40fd",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "No Foe Shall Stand",
+          "type": "Datasheet",
+          "description_sha256": "445e559df02083b1694d6f52295aa09efdfc5cc83d95434a38a6d2f6457e7d22",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "CUSTODIAN GUARD",
+          "type": "Special (правая колонка)",
+          "description_sha256": "1596cf0518b8bbfa4b736f6660b5458697ede257bf1cd4e70b39474e88c4a06f",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "4d463ea92d391bcdbda78273bc5918ab92860c09ca977f77f02e76a8897958fb",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "61e8285595ac8a4dad89e8334a18287d757c597dbdfb92b17ce8f3e8e86d86f0",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001560",
+      "name": "Agamatus Custodians",
+      "role": "Mounted",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Agamatus-Custodians",
+      "loadout_sha256": "f5f6283ff8501b2ee6fc98759592b9445ae22c90f2d21f535074f97ab52404ce",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Agamatus Custodians",
+          "m": "12\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "3 models",
+          "cost": "225"
+        },
+        {
+          "line": "3",
+          "description": "6 models",
+          "cost": "450"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Adrathic devastator",
+          "range": "18",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "3"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Lastrum bolt cannon",
+          "description": "sustained hits 1",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Twin las-pulsar",
+          "description": "twin-linked",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "9",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Interceptor lance",
+          "description": "lance",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Mounted",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Agamatus Custodians",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "2",
+          "name": "Turbo-boost",
+          "type": "Datasheet",
+          "description_sha256": "beed2878f78ae5275f512b26c9715ad28736b18df69a796536e64112ac72ed71",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "name": "Implacable Vanguard",
+          "type": "Datasheet",
+          "description_sha256": "0f554c8d874decac57b66ea0a5c6476303a3ac2eb34083f14eab64248a35a00b",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "JETBIKE OUTRIDERS",
+          "type": "Special (правая колонка)",
+          "description_sha256": "81368e0a77afbdc2ded8301a5035f9e66f3f03cbaab8b7c0b6ed5f5984a64529",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "8f4b3f50e3c9c1e21b02079435f381b8c9507586aaabf0eff1c61cd641b63d5c",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "0159a95f9485ea107fbc3247046baaf6931c84b3a45f16b5deab996f120bf091",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001561",
+      "name": "Venatari Custodians",
+      "role": "Infantry",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Venatari-Custodians",
+      "loadout_sha256": "f07b5a6dd75aad0c624829b39a846b4992e9d001e844bae893f3c5a7f65a57bb",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Venatari Custodians",
+          "m": "10\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "3",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 2ND UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "3 models",
+          "cost": "150"
+        },
+        {
+          "line": "3",
+          "description": "6 models",
+          "cost": "300"
+        },
+        {
+          "line": "4",
+          "description": "YOUR 3RD + UNIT COSTS"
+        },
+        {
+          "line": "5",
+          "description": "3 models",
+          "cost": "160"
+        },
+        {
+          "line": "6",
+          "description": "6 models",
+          "cost": "310"
+        },
+        {
+          "line": "7",
+          "description": "WARGEAR OPTIONS"
+        },
+        {
+          "line": "8",
+          "description": "per Venatari lance",
+          "cost": "5"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Kinetic destroyer",
+          "description": "pistol, sustained hits 1",
+          "range": "12",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Venatari lance",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Tarsis buckler",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Venatari lance",
+          "description": "lance",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Venatari Custodians",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Jump Pack",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Tarsis Buckler",
+          "type": "Wargear",
+          "description_sha256": "bb6ef2b67cd853cb374c86d98522b8d1f1e8829fb56a536cfe71ff4fefec6917",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Strike from the Skies",
+          "type": "Datasheet",
+          "description_sha256": "742ed7a23866527b4a6cd8e785144b2d758bb786905e9f38d106e6214da37c0c",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Swooping Dive",
+          "type": "Datasheet",
+          "description_sha256": "cc64c887cc72bb9474a170fe91ae991992bab042f498e3b6478807b05246403c",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "JUMP PACKS",
+          "type": "Special (правая колонка)",
+          "description_sha256": "c53ae1548eea88a5148a0d5f3718d8d7ac33d0c3a977c5a793b92de2a2f86a33",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "372672c4c3ce1dd146a8db310a67006e9512158e69788b966d501d42fcd17b7b",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "f127633ff125241b2d59247aad7654c48fedea36adf4944efcfbac0e41569b6f",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001562",
+      "name": "Pallas Grav-attack",
+      "role": "Vehicle",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Pallas-Grav-attack",
+      "loadout_sha256": "219f4d10a9d7e20b894646551358d2d370ceb7804dd87fe2f37d7347adffb810",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Pallas Grav-attack",
+          "m": "12\"",
+          "t": "8",
+          "sv": "2+",
+          "w": "9",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "100"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Twin arachnus blaze cannon",
+          "description": "devastating wounds, twin-linked",
+          "range": "24",
+          "type": "Ranged",
+          "a": "8",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Armoured hull",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Pallas Grav-attack",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Merciless Hunter",
+          "type": "Datasheet",
+          "description_sha256": "12294dbd2360b35c793641b7a4a31c51888acf6685e6aa008b9a00a780f7d475",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "2536c89641625d22c0bcc076d896402823db777a5e8e1c8777b86f45a9ac2e63",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001563",
+      "name": "Sagittarum Custodians",
+      "role": "Infantry",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Sagittarum-Custodians",
+      "loadout_sha256": "32cd49043acf78be56efa2f9806f83bded4729f0e4d94fb396c5e2abec37b408",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Sagittarum Custodians",
+          "m": "6\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "3",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "5 models",
+          "cost": "225"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Adrastus bolt caliver",
+          "description": "sustained hits 1",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Misericordia",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-2",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Sagittarum Custodians",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Saturation Volleys",
+          "type": "Datasheet",
+          "description_sha256": "afcad9b95c28840faac38371c03d358eb9fdbb2373aee9e7b0f8a120d96419c8",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Disintegration Beams",
+          "type": "Datasheet",
+          "description_sha256": "b07067391f95f4144bd864032002db9ddc75d889cde784edb9075492d5618f3b",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "CUSTODIAN GUARD",
+          "type": "Special (правая колонка)",
+          "description_sha256": "1596cf0518b8bbfa4b736f6660b5458697ede257bf1cd4e70b39474e88c4a06f",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "adc90beac9c077e15265cd602198590c9d648a1f1043af8325c3cbd3ea40e7c5",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001564",
+      "name": "Orion Assault Dropship",
+      "role": "Transport",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Orion-Assault-Dropship",
+      "loadout_sha256": "389f53235cfce6913485867323228a06f91f47003b81994bbc7fd644b65de4e6",
+      "transport_sha256": "7d42bee567ec6839bf6e56e297b7a7373cae5db6feaefd23e1a8d5dfe580cd4d",
+      "damaged_description_sha256": "089ffb06909084116b5c10f3d3d276f7a003f70043f23a443305f2d2ed7f7bf8",
+      "models": [
+        {
+          "line": "1",
+          "name": "Orion Assault Dropship",
+          "m": "14\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "22",
+          "ld": "6+",
+          "oc": "0",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "690"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "740"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Arachnus heavy blaze cannon",
+          "range": "36",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Spiculus heavy bolt launcher",
+          "description": "blast",
+          "range": "36",
+          "type": "Ranged",
+          "a": "D6+6",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Twin lastrum bolt cannon",
+          "description": "sustained hits 1",
+          "range": "36",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Armoured hull",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "9",
+          "bs_ws": "4",
+          "s": "9",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Orion Assault Dropship",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008342",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Assault Dropship",
+          "type": "Datasheet",
+          "description_sha256": "50a6bd81da79efaef31a958093dd1e060b7cb255bf729875323e92dd19d505ab",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "fb0af290370717372edf672fea9313030e61bdf055cba12c812778a25aeaff31",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000001680",
+      "name": "Ares Gunship",
+      "role": "Aircraft",
+      "source_id": "000000354",
+      "source_name": "Adeptus Custodes (Forge World)",
+      "source_version": null,
+      "source_edition": "0",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Ares-Gunship",
+      "loadout_sha256": "a99e9571b2b441e67fedd8f1dd89c18b6b5d22fd40e282c45961fd1665b7a491",
+      "transport_sha256": null,
+      "damaged_description_sha256": "089ffb06909084116b5c10f3d3d276f7a003f70043f23a443305f2d2ed7f7bf8",
+      "models": [
+        {
+          "line": "1",
+          "name": "Ares Gunship",
+          "m": "-",
+          "t": "12",
+          "sv": "2+",
+          "w": "22",
+          "ld": "6+",
+          "oc": "-",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "580"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "610"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Arachnus heavy blaze cannon",
+          "range": "36",
+          "type": "Ranged",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Arachnus magna-blaze cannon",
+          "range": "48",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "18",
+          "ap": "-4",
+          "d": "D6+6"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Armoured hull",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "9",
+          "bs_ws": "4",
+          "s": "9",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Ares Gunship",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Fly",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Aircraft",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D6"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "3",
+          "name": "Infernus Firebombs",
+          "type": "Datasheet",
+          "description_sha256": "db242cbb1aca2319a7d347789ef89b252bc3ad6af3671c007aa45f4054374650",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "b975dbe5b258c0efe16c73f1c78d55b9cb0b66d1a29b625e09cf8f83a2ca11c0",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002088",
+      "name": "Aleya",
+      "role": "Infantry Epic Hero",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Aleya",
+      "loadout_sha256": "2729caf1939b85efdeb7004946fe0e2637694a4bbce53e17697f32b347329f34",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Aleya",
+          "m": "6\"",
+          "t": "3",
+          "sv": "3+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "55"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Somnus",
+          "description": "anti-psyker 5+, devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "4",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-3",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Anathema Psykana",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Aleya",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008338",
+          "type": "Core",
+          "parameter": "5+"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008344",
+          "type": "Core",
+          "parameter": "6\""
+        },
+        {
+          "line": "4",
+          "name": "Tactical Perception",
+          "type": "Datasheet",
+          "description_sha256": "178b0310a512a8386dfe1246ca66339545c3906abe6950c0e39314db4e5103fa",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Tenacious Spirit",
+          "type": "Datasheet",
+          "description_sha256": "45a4d2e4501828fb536e07fc78decb691b26abf4fdf62b7907a264044890dbc5",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Daughter of the Abyss",
+          "type": "Datasheet",
+          "description_sha256": "f1fa0afef83c5b86d227327e0f745229dfafed1baeb1a1bad3f83e55b1db3cfb",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "775aa172894fd3106e142fe309d259e62eac785d43290e636136e42174483bc8",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002518",
+      "name": "Blade Champion",
+      "role": "Infantry Character",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Blade-Champion",
+      "loadout_sha256": "7f3d61c0539b1cf7916bbbc9bc1edbd0e9156a236a0a39c960d7641a8fa185a9",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Blade Champion",
+          "m": "6\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "6",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "110"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 2ND + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "125"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Vaultswords – Behemor",
+          "description": "precision",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "6",
+          "bs_ws": "2",
+          "s": "7",
+          "ap": "-2",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "2",
+          "name": "Vaultswords – Hurricanus",
+          "description": "sustained hits 1",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "9",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-1",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "3",
+          "name": "Vaultswords – Victus",
+          "description": "devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "5",
+          "bs_ws": "2",
+          "s": "6",
+          "ap": "-3",
+          "d": "3"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Blade Champion",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "4",
+          "name": "Swift Onslaught",
+          "type": "Datasheet",
+          "description_sha256": "6857f243c07ca87eb410c166e714ac15512b736d425a4c59bf2867324dd61ebf",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Martial Inspiration",
+          "type": "Datasheet",
+          "description_sha256": "9f1c58d4dec1d0a11b9f886321fc086b68647872425944e592bcc0c634349ee4",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "87e3d17642341c8d3196b73978ed8951e28b38edd0bf0e1e83915d00babdecb3",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002519",
+      "name": "Valerian",
+      "role": "Infantry Epic Hero",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Valerian",
+      "loadout_sha256": "bbc4875fd999f20b67f639bee05e5ed0696e88ea3ce89fcdffe435a9af139d8a",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Valerian",
+          "m": "6\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "6",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "4"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "110"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Gnosis",
+          "description": "assault",
+          "range": "24",
+          "type": "Ranged",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "-1",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Gnosis",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "7",
+          "bs_ws": "2",
+          "s": "8",
+          "ap": "-3",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Valerian",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Shield-Captain",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Epic Hero",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008343",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008338",
+          "type": "Core",
+          "parameter": "6+"
+        },
+        {
+          "line": "3",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "4",
+          "ability_id": "000008391",
+          "type": "Faction"
+        },
+        {
+          "line": "5",
+          "name": "Golden Laurels",
+          "type": "Datasheet",
+          "description_sha256": "1a9924312b36d9a3bf23d4601cc6334164fb8b5405e8b44ff23ce82efdb82da6",
+          "description_present": true
+        },
+        {
+          "line": "6",
+          "name": "Hero of Lion’s Gate",
+          "type": "Datasheet",
+          "description_sha256": "63b09c87a27fe769db9ef75ddf442f270f92a659a012e5d2a33a8aafba3ceffe",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "a57289fd91cf9b77495e1cef3c9f507c74c7e6b8eca84dbc73ab0029d8de5bca",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002520",
+      "name": "Knight-centura",
+      "role": "Infantry Character",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Knight-centura",
+      "loadout_sha256": "b731bde9f4f0f18aad50b88e0cf40dd844baedf6d13513b28dc9081813d6e663",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Knight-centura",
+          "m": "6\"",
+          "t": "3",
+          "sv": "3+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "5"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "55"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Master-crafted boltgun",
+          "description": "rapid fire 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "4",
+          "ap": "0",
+          "d": "2"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Witchseeker flamer",
+          "description": "ignores cover, torrent",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "4",
+          "line_in_wargear": "1",
+          "name": "Executioner greatblade",
+          "description": "anti-psyker 5+, devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "2",
+          "s": "5",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Character",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Anathema Psykana",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Knight-Centura",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008346",
+          "type": "Core"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008344",
+          "type": "Core",
+          "parameter": "6\""
+        },
+        {
+          "line": "3",
+          "name": "Seeker’s Instincts",
+          "type": "Datasheet",
+          "description_sha256": "f448dbcf4518a8aaeeabbc12d5f6cb36abb4e2b0e0c931b713da9b19615aadf7",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Daughter of the Abyss",
+          "type": "Datasheet",
+          "description_sha256": "f1fa0afef83c5b86d227327e0f745229dfafed1baeb1a1bad3f83e55b1db3cfb",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "Corner the Quarry",
+          "type": "Datasheet",
+          "description_sha256": "1773168aca532275917c9e3dd8ac80c8b38732f797f30539c1e571a42bb88db1",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "078865543eba8db2e223032b242093ad38001b9a43cb0c6823685edbd4fb5c38",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "002f3793b11375f56ab841c394a7e37779ac08cf17d72d60f4fc5957451bbeb4",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002521",
+      "name": "Prosecutors",
+      "role": "Infantry",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Prosecutors",
+      "loadout_sha256": "1910f3e78e7ca66e5e24d30783f64022e516df5f6ed82e7bdb4e79286c4af852",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Prosecutors",
+          "m": "6\"",
+          "t": "3",
+          "sv": "3+",
+          "w": "1",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "4 models",
+          "cost": "45"
+        },
+        {
+          "line": "3",
+          "description": "5 models",
+          "cost": "50"
+        },
+        {
+          "line": "4",
+          "description": "9 models",
+          "cost": "75"
+        },
+        {
+          "line": "5",
+          "description": "10 models",
+          "cost": "85"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Boltgun",
+          "description": "rapid fire 1",
+          "range": "24",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Anathema Psykana",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Prosecutors",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "name": "Daughters of the Abyss",
+          "type": "Datasheet",
+          "description_sha256": "7fea69579d4a0fe78b0ba0867ce54aa835e12be8d033ec6a1a93136f6039a425",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "name": "Purity of Execution",
+          "type": "Datasheet",
+          "description_sha256": "11f516b014647fc352aab373be4e83776cfbe796a38f53fd0f43efa7f8e57443",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "a4900d3d4518fc869ac17459e84a9f3c8e48dbfa9cf430b57874b629861f8025",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "94a6a49563a77d282dea8d065063e928b650c7db2847be7aa2e714510dceb04b",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002522",
+      "name": "Vigilators",
+      "role": "Infantry",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Vigilators",
+      "loadout_sha256": "917028cfc16be6a0881f250123b941b9648011a9b8922b5ebb18ab4ba90d922e",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Vigilators",
+          "m": "6\"",
+          "t": "3",
+          "sv": "3+",
+          "w": "1",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "4 models",
+          "cost": "50"
+        },
+        {
+          "line": "3",
+          "description": "5 models",
+          "cost": "55"
+        },
+        {
+          "line": "4",
+          "description": "9 models",
+          "cost": "90"
+        },
+        {
+          "line": "5",
+          "description": "10 models",
+          "cost": "100"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Executioner greatblade",
+          "description": "anti-psyker 5+, devastating wounds",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "5",
+          "ap": "-2",
+          "d": "2"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Anathema Psykana",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vigilators",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "name": "Daughters of the Abyss",
+          "type": "Datasheet",
+          "description_sha256": "7fea69579d4a0fe78b0ba0867ce54aa835e12be8d033ec6a1a93136f6039a425",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "name": "Deft Parry",
+          "type": "Datasheet",
+          "description_sha256": "865af7c329ffb678ae6b9a6ce6ff43a0974999d2e27438d325dff78033dfa05d",
+          "description_present": true
+        }
+      ],
+      "options": [],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "ffa93f687e3546d880c7898bf60757392ce104346c93e750ea141679346b0435",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "f11e37f32fe859d34389c12bad66328183e2bc4d7fe2a0143d79750682751956",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002523",
+      "name": "Witchseekers",
+      "role": "Infantry",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Witchseekers",
+      "loadout_sha256": "e8ea26b282b906240302dc7be2f6078e30fa0b55d06230ef12770a9f52f63f69",
+      "transport_sha256": null,
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Witchseekers",
+          "m": "6\"",
+          "t": "3",
+          "sv": "3+",
+          "w": "1",
+          "ld": "6+",
+          "oc": "1",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR UNIT COSTS"
+        },
+        {
+          "line": "2",
+          "description": "4 models",
+          "cost": "50"
+        },
+        {
+          "line": "3",
+          "description": "5 models",
+          "cost": "55"
+        },
+        {
+          "line": "4",
+          "description": "9 models",
+          "cost": "90"
+        },
+        {
+          "line": "5",
+          "description": "10 models",
+          "cost": "100"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Witchseeker flamer",
+          "description": "ignores cover, torrent",
+          "range": "12",
+          "type": "Ranged",
+          "a": "D6",
+          "bs_ws": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Close combat weapon",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "3",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Anathema Psykana",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Infantry",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Witchseekers",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008344",
+          "type": "Core",
+          "parameter": "6\""
+        },
+        {
+          "line": "2",
+          "name": "Daughters of the Abyss",
+          "type": "Datasheet",
+          "description_sha256": "7fea69579d4a0fe78b0ba0867ce54aa835e12be8d033ec6a1a93136f6039a425",
+          "description_present": true
+        },
+        {
+          "line": "3",
+          "name": "Sanctified Flames",
+          "type": "Datasheet",
+          "description_sha256": "19df64d8b965b85bf11c28f060be65a51e1bffa48da1539e5b1764855d14de40",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "af0e26fbd32c664ea34b483a1c87ade8fb13232cf187ac34620febe95c1470e8",
+          "description_present": true
+        },
+        {
+          "line": "2",
+          "description_sha256": "e009a181d841147b3408100d7e237ddaba53e6d05c3fc583cc63b86a54f80ac2",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    },
+    {
+      "id": "000002524",
+      "name": "Anathema Psykana Rhino",
+      "role": "Dedicated Transports",
+      "source_id": "000000024",
+      "source_name": "Adeptus Custodes",
+      "source_version": "1.1",
+      "source_edition": "11",
+      "is_legends": false,
+      "link": "https://wahapedia.ru/wh40k11ed/factions/adeptus-custodes/Anathema-Psykana-Rhino",
+      "loadout_sha256": "529ef9f189a05ddb87bd2d9f73bd498e40b6f98d563e0d84c6ccdf16ccb35d6a",
+      "transport_sha256": "43a4775978052f34a3a281293dcf1f89e0c295b20b7b87b06eadc9a744e8ac24",
+      "damaged_description_sha256": null,
+      "models": [
+        {
+          "line": "1",
+          "name": "Anathema Psykana Rhino",
+          "m": "12\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "10",
+          "ld": "6+",
+          "oc": "2",
+          "inv_sv": "-"
+        }
+      ],
+      "points_rows": [
+        {
+          "line": "1",
+          "description": "YOUR 1ST TO 3RD UNITS COST"
+        },
+        {
+          "line": "2",
+          "description": "1 model",
+          "cost": "65"
+        },
+        {
+          "line": "3",
+          "description": "YOUR 4TH + UNIT COSTS"
+        },
+        {
+          "line": "4",
+          "description": "1 model",
+          "cost": "75"
+        }
+      ],
+      "weapons": [
+        {
+          "line": "1",
+          "line_in_wargear": "1",
+          "name": "Hunter-killer missile",
+          "description": "one shot",
+          "range": "48",
+          "type": "Ranged",
+          "a": "1",
+          "bs_ws": "2",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6"
+        },
+        {
+          "line": "2",
+          "line_in_wargear": "1",
+          "name": "Storm bolter",
+          "description": "rapid fire 2",
+          "range": "24",
+          "type": "Ranged",
+          "a": "2",
+          "bs_ws": "3",
+          "s": "4",
+          "ap": "0",
+          "d": "1"
+        },
+        {
+          "line": "3",
+          "line_in_wargear": "1",
+          "name": "Armoured tracks",
+          "range": "Melee",
+          "type": "Melee",
+          "a": "3",
+          "bs_ws": "4",
+          "s": "6",
+          "ap": "0",
+          "d": "1"
+        }
+      ],
+      "keywords": [
+        {
+          "keyword": "Adeptus Custodes",
+          "is_faction_keyword": "true"
+        },
+        {
+          "keyword": "Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Vehicle",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Rhino",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Anathema Psykana",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Imperium",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Smoke",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Dedicated Transport",
+          "is_faction_keyword": "false"
+        },
+        {
+          "keyword": "Frame",
+          "is_faction_keyword": "false"
+        }
+      ],
+      "abilities": [
+        {
+          "line": "1",
+          "ability_id": "000008339",
+          "type": "Core",
+          "parameter": "D3"
+        },
+        {
+          "line": "2",
+          "ability_id": "000008334",
+          "type": "Core",
+          "parameter": "2"
+        },
+        {
+          "line": "3",
+          "name": "Daughters of the Abyss",
+          "type": "Datasheet",
+          "description_sha256": "f1fa0afef83c5b86d227327e0f745229dfafed1baeb1a1bad3f83e55b1db3cfb",
+          "description_present": true
+        },
+        {
+          "line": "4",
+          "name": "Self Repair",
+          "type": "Datasheet",
+          "description_sha256": "2cb5764d4f3e840a8f51d09cd13e42eb14b6d0f298898010e880f301c57ca51f",
+          "description_present": true
+        },
+        {
+          "line": "5",
+          "name": "One Shot",
+          "type": "Wargear profile",
+          "description_sha256": "a584d61871327a3c8b7adeb311ad753fbdef7427e382761bf39a1fa44ca5ba90",
+          "description_present": true
+        }
+      ],
+      "options": [
+        {
+          "line": "1",
+          "description_sha256": "37aeec443c779247fc41171b1629401fe65419db7ffd4cca752fa3aacdb3da9d",
+          "description_present": true
+        }
+      ],
+      "unit_composition": [
+        {
+          "line": "1",
+          "description_sha256": "ac50c94c5f071d89657c72b799551ab1b134f5c156f97cd567607c11a061adf6",
+          "description_present": true
+        }
+      ],
+      "leader_links": []
+    }
+  ],
+  "detachments": [
+    {
+      "id": "000000765",
+      "faction_id": "AC",
+      "name": "Shield Host",
+      "dp": "2",
+      "force_disposition": "Purge the Foe"
+    },
+    {
+      "id": "000000861",
+      "faction_id": "AC",
+      "name": "Talons Of The Emperor",
+      "dp": "3",
+      "force_disposition": "Take and Hold"
+    },
+    {
+      "id": "000000862",
+      "faction_id": "AC",
+      "name": "Null Maiden Vigil",
+      "dp": "2",
+      "force_disposition": "Reconnaissance"
+    },
+    {
+      "id": "000000863",
+      "faction_id": "AC",
+      "name": "Auric Champions",
+      "dp": "2",
+      "force_disposition": "Priority Assets"
+    },
+    {
+      "id": "000000909",
+      "faction_id": "AC",
+      "name": "Voyagers in Darkness",
+      "type": "Boarding Actions",
+      "legend_sha256": "66ca807539f29b1770396a672217d7b5ac60ce73690be2914a1d767dd1911b97",
+      "legend_present": true
+    },
+    {
+      "id": "000000910",
+      "faction_id": "AC",
+      "name": "Black Ship Guardians",
+      "type": "Boarding Actions",
+      "legend_sha256": "f033a8dbb8ccc3ced351f1d5f72f2181dcb879eaabbd28ae7a3c989da8619906",
+      "legend_present": true
+    },
+    {
+      "id": "000000986",
+      "faction_id": "AC",
+      "name": "Solar Spearhead",
+      "dp": "2",
+      "force_disposition": "Take and Hold",
+      "legend_sha256": "4c5dbdf02e86d603d957ffd5405d48d6f568ed6cc8a7e75d02bc76dd6881b9bd",
+      "legend_present": true
+    },
+    {
+      "id": "000001029",
+      "faction_id": "AC",
+      "name": "Lions of the Emperor",
+      "dp": "3",
+      "force_disposition": "Take and Hold",
+      "legend_sha256": "d0886798c2057a63de262db45e0fc13642524040ac68dbda5b4fa17e0fb21c2c",
+      "legend_present": true
+    },
+    {
+      "id": "000001164",
+      "faction_id": "AC",
+      "name": "Might of the Moritoi",
+      "dp": "1",
+      "force_disposition": "Take and Hold",
+      "legend_sha256": "dfca4bddb555d6c1de1712061254c8da6bf43f61ba62174fd50f1d811250b57b",
+      "legend_present": true
+    },
+    {
+      "id": "000001165",
+      "faction_id": "AC",
+      "name": "Silent Hunters",
+      "dp": "1",
+      "force_disposition": "Reconnaissance",
+      "legend_sha256": "d3285088029ede3cd25c43fb43821f50120417b6b4a6ea02cfb758557193261f",
+      "legend_present": true
+    },
+    {
+      "id": "000001166",
+      "faction_id": "AC",
+      "name": "Tharanatoi Hammerblow",
+      "dp": "1",
+      "force_disposition": "Disruption",
+      "legend_sha256": "2d31d7fcbee5f4d06c338ba3d05e9e651db45dc291d4fcdb03d3fd21f91acfe6",
+      "legend_present": true
+    }
+  ],
+  "detachment_abilities": [
+    {
+      "id": "000008393",
+      "detachment_id": "000000765",
+      "detachment": "Shield Host",
+      "name": "Martial Mastery",
+      "description_sha256": "85d57d393df72d00416f026696182b465ebcb891ef7394df30d71b1abe02f35d",
+      "description_present": true,
+      "legend_sha256": "dbc57c01b9e92bec40a8cc37840a08f32b7cd758f58925e3e3448d388327bdcb",
+      "legend_present": true
+    },
+    {
+      "id": "000008920",
+      "detachment_id": "000000861",
+      "detachment": "Talons Of The Emperor",
+      "name": "Revered Companions",
+      "description_sha256": "5c377cd4fea13b0da4a236078de7387bdaeacc43966caa02c0c3826e1b8e20f4",
+      "description_present": true,
+      "legend_sha256": "f102fb605403c9a89fc32de9f30ccf2eca0851b549f6b436e87f10ba55ef7ba8",
+      "legend_present": true
+    },
+    {
+      "id": "000008924",
+      "detachment_id": "000000862",
+      "detachment": "Null Maiden Vigil",
+      "name": "Creeping Dread (Aura)",
+      "description_sha256": "91fe91ec0598b6305e314f434fd5c9e1fe639c9a728153ad83cb5992cfb2553f",
+      "description_present": true,
+      "legend_sha256": "984e073a34c8806dbbac2b99dbb5fe4aa49f604d6b12c998c54d3ac926010237",
+      "legend_present": true
+    },
+    {
+      "id": "000008929",
+      "detachment_id": "000000863",
+      "detachment": "Auric Champions",
+      "name": "Assemblage of Might",
+      "description_sha256": "547640f9e32d1b8d263cbd7b53af0ce5a6e0831c2d2334b6dc5c4f0e73be4cec",
+      "description_present": true,
+      "legend_sha256": "882007ae7763993ea30b4c1ca54a6f7d7bfa5f854a8ad769f92da10984d0da2c",
+      "legend_present": true
+    },
+    {
+      "id": "000009263",
+      "detachment_id": "000000909",
+      "detachment": "Voyagers in Darkness",
+      "name": "Overwhelming Magnificence",
+      "description_sha256": "0034a10c9ebe461bb13e31b15de07aa25fe9f183a83452ea06f6ec8ec1cfcaa9",
+      "description_present": true,
+      "legend_sha256": "9f2ef37e84b749f589dcbcfb464f8143b7b489b5a290fbf37617a098081e07b1",
+      "legend_present": true
+    },
+    {
+      "id": "000009272",
+      "detachment_id": "000000910",
+      "detachment": "Black Ship Guardians",
+      "name": "Priority Quarry",
+      "description_sha256": "f361ec751931105273a4a6a71f9977da637ecf46488f86ad7b8ba44a2450729f",
+      "description_present": true,
+      "legend_sha256": "efd65971e988ac47400a5f2fe15119b6b5b66d84bdc93f69ff4958bbf7350876",
+      "legend_present": true
+    },
+    {
+      "id": "000009752",
+      "detachment_id": "000000986",
+      "detachment": "Solar Spearhead",
+      "name": "Auric Armour",
+      "description_sha256": "e445bb0e58d3ca0e687003c6a145b99f099b7451a0d7d7e0334f0628d9b19a17",
+      "description_present": true,
+      "legend_sha256": "f4b47d87485d1172281ca36348d5eb26ac678d5d229306b2c77f447854378a07",
+      "legend_present": true
+    },
+    {
+      "id": "000009986",
+      "detachment_id": "000001029",
+      "detachment": "Lions of the Emperor",
+      "name": "Against All Odds",
+      "description_sha256": "7fb7910d4d7745f98a0b519120ccfb1ceac4570e50ecde912b3a8910d80584e8",
+      "description_present": true,
+      "legend_sha256": "455394dc78cf00d72f9ec931cfce6bfcb4d822bb43e3b14d8c726ce485c79e4a",
+      "legend_present": true
+    },
+    {
+      "id": "000010991",
+      "detachment_id": "000001164",
+      "detachment": "Might of the Moritoi",
+      "name": "March of the Honoured Dead",
+      "description_sha256": "5173db6ec61b98c57458db31f867cb49e3ba0b4c969e136f7fbf5c1b02eed724",
+      "description_present": true,
+      "legend_sha256": "caa9c8a74e044b4e2f3df9639c90ddeefa5cc96a974262f9fd10c8de47268a6d",
+      "legend_present": true
+    },
+    {
+      "id": "000010995",
+      "detachment_id": "000001165",
+      "detachment": "Silent Hunters",
+      "name": "Skin-Crawling Disorientation",
+      "description_sha256": "5082ddb5b5d0fae9cd39b95454098086c39e38e41f27836336077c548a86b7c4",
+      "description_present": true,
+      "legend_sha256": "f95f82042c278d612ce8a57a4ca6e6b8f193811a96e95afce3610517876f3237",
+      "legend_present": true
+    },
+    {
+      "id": "000010999",
+      "detachment_id": "000001166",
+      "detachment": "Tharanatoi Hammerblow",
+      "name": "The Hammer Falls",
+      "description_sha256": "f0414373be04ca5cbd5e24ba344a93ffc28180ee799962ae872a1bf97b503249",
+      "description_present": true,
+      "legend_sha256": "842edd5b130d34ba90b382de58b832c7bc8945bf46247e6728e49c50f9814487",
+      "legend_present": true
+    }
+  ],
+  "enhancements": [
+    {
+      "id": "000010992002",
+      "detachment_id": "000001164",
+      "detachment": "Might of the Moritoi",
+      "name": "Interred Expertise",
+      "cost": "25",
+      "description_sha256": "e7e5bc738726ba5b3d06f221de2d0a30c14e9471b4d352b6a66f8022fb1d1e71",
+      "description_present": true,
+      "legend_sha256": "0ce980787c23f6f9eaaade84591af1f7db246cf95679cbf60b229ebb0aec1464",
+      "legend_present": true
+    },
+    {
+      "id": "000011000002",
+      "detachment_id": "000001166",
+      "detachment": "Tharanatoi Hammerblow",
+      "name": "Mnemo-Locked Shrine Cipher",
+      "cost": "25",
+      "description_sha256": "08fcf86e8f9e2fa0fc39e485105e1d2d93c13bed42aebad51811b915e9f56fef",
+      "description_present": true,
+      "legend_sha256": "6ced32c630d3e76c9f468ca816d400056a9da26406f0b1647dbfa90bec0b2c5b",
+      "legend_present": true
+    },
+    {
+      "id": "000008926002",
+      "detachment_id": "000000862",
+      "detachment": "Null Maiden Vigil",
+      "name": "Enhanced Voidsheen Cloak",
+      "cost": "10",
+      "description_sha256": "4091fb1ae7783a476f194fcc2d58815d60a6959383c6d15f1323f4368d99da60",
+      "description_present": true,
+      "legend_sha256": "21111d3a8617b2bb5fe4421664108e55f3c305408d761be37c25f3542e24394d",
+      "legend_present": true
+    },
+    {
+      "id": "000009753002",
+      "detachment_id": "000000986",
+      "detachment": "Solar Spearhead",
+      "name": "Adamantine Talisman",
+      "cost": "25",
+      "description_sha256": "334305d6679286f2d25425c25168b963ab0874ac54cfcd2c44fdc9ac2b519c4d",
+      "description_present": true,
+      "legend_sha256": "bdf36cf08d70131dde0f2da55eafea8e480d8d8b1c5b9d92ca189d5f9d4ebb87",
+      "legend_present": true
+    },
+    {
+      "id": "000009273002",
+      "detachment_id": "000000910",
+      "detachment": "Black Ship Guardians",
+      "name": "The Vratine Aquila (Aura)",
+      "cost": "0",
+      "description_sha256": "9bc61acdb6e7e3a7f30c255b5e39c2a8823a0284e90b63b74caa2af5ddcdce9b",
+      "description_present": true,
+      "legend_sha256": "d8bf5406532a2ff7c5808123cb8e8250a0d6ab0a55dbe5e0d97982ce461bfcfb",
+      "legend_present": true
+    },
+    {
+      "id": "000009264002",
+      "detachment_id": "000000909",
+      "detachment": "Voyagers in Darkness",
+      "name": "Voidstrider",
+      "cost": "0",
+      "description_sha256": "202c3ced6913141af927164ecefc1507a862cbd69c9f8fb0bbe5e5104f7a8d29",
+      "description_present": true,
+      "legend_sha256": "9ebdead5e3823780dce338a073003311f96573cbc4e0fa993ec675d558e70fd5",
+      "legend_present": true
+    },
+    {
+      "id": "000009987002",
+      "detachment_id": "000001029",
+      "detachment": "Lions of the Emperor",
+      "name": "Superior Creation",
+      "cost": "25",
+      "description_sha256": "f37345ccb5053ad9578900b68c9464778992b7dd5f5d2894de7fedc794f9c824",
+      "description_present": true,
+      "legend_sha256": "9d6a037a72c1406bde587c3a4626bef752d886d25d8bf0d8f5a0c23325b0d2d4",
+      "legend_present": true
+    },
+    {
+      "id": "000008921002",
+      "detachment_id": "000000861",
+      "detachment": "Talons Of The Emperor",
+      "name": "Aegis Projector",
+      "cost": "20",
+      "description_sha256": "251904cbe44d7c150e2140f9ca8a84bcd13e819758b3071f9e76ab05aefab6f4",
+      "description_present": true,
+      "legend_sha256": "ef0e48fdc1bd7cfe895b207ecaf051c6d7a8eb06ec804e5e08cc909f50cce069",
+      "legend_present": true
+    },
+    {
+      "id": "000008930002",
+      "detachment_id": "000000863",
+      "detachment": "Auric Champions",
+      "name": "Blade Imperator",
+      "cost": "25",
+      "description_sha256": "78328689076d41693f2a062c331f4decdcd8279c06f624df1266cd7a0ceceea8",
+      "description_present": true,
+      "legend_sha256": "dd6491ba02b21390782f6fdd28f971337f54f953eec448cbd55dae0845693c60",
+      "legend_present": true
+    },
+    {
+      "id": "000008395002",
+      "detachment_id": "000000765",
+      "detachment": "Shield Host",
+      "name": "Auric Mantle",
+      "cost": "15",
+      "description_sha256": "e63c099b399d53f0d8b51414f18a31f84a58d36bbfc969be8ec367f66f19c01c",
+      "description_present": true,
+      "legend_sha256": "3236830bdfef6215dde64011567799501dfcc30893c426c9786a1417ec8a5a29",
+      "legend_present": true
+    },
+    {
+      "id": "000010996002",
+      "detachment_id": "000001165",
+      "detachment": "Silent Hunters",
+      "name": "Encircling Hunter",
+      "cost": "15",
+      "description_sha256": "071bb582694f239be608aea1d55fa2845569a3abedbee2da7000b09433a49482",
+      "description_present": true,
+      "legend_sha256": "2ffebb265de1a9608e4aa5fe61b5780552a719d16d69b5ebcbffa4ff486c2121",
+      "legend_present": true
+    },
+    {
+      "id": "000010996003",
+      "detachment_id": "000001165",
+      "detachment": "Silent Hunters",
+      "name": "Psyk-Out Grenades",
+      "cost": "10",
+      "description_sha256": "40a1b210bd083a2515418c4b235b705bc58b183777790bd9b40fd0ee630887dc",
+      "description_present": true,
+      "legend_sha256": "6f6fb1d3d262b37f24e199ce884964613291bd20f0325f1518d3e20a9f52ae6b",
+      "legend_present": true
+    },
+    {
+      "id": "000011000003",
+      "detachment_id": "000001166",
+      "detachment": "Tharanatoi Hammerblow",
+      "name": "Efficient Aggression",
+      "cost": "25",
+      "description_sha256": "9e4a03a7f742f581dd9f35a30c3473f71e802545070888dcd7c462bd5b9509b6",
+      "description_present": true,
+      "legend_sha256": "6eb64d95cd201893782ec453c638deccc0cc37746a77cb6bcedbdf018a53d78c",
+      "legend_present": true
+    },
+    {
+      "id": "000009273003",
+      "detachment_id": "000000910",
+      "detachment": "Black Ship Guardians",
+      "name": "Sinister Presence (Aura)",
+      "cost": "0",
+      "description_sha256": "03476f9bef12a2c20cecc5cb4b0f59682acec5e8eb99f4e5b1b843f68885f097",
+      "description_present": true,
+      "legend_sha256": "b3cd90e7154017914dfd8d6a0dd9dee5c6ef9e31e6eb91d876b906a920b836d0",
+      "legend_present": true
+    },
+    {
+      "id": "000010992003",
+      "detachment_id": "000001164",
+      "detachment": "Might of the Moritoi",
+      "name": "Auramite Sarcophagus",
+      "cost": "15",
+      "description_sha256": "fc9cf8e42bc9649e79bfa18105347532d373a3b664ff26711e76218b96260bbf",
+      "description_present": true,
+      "legend_sha256": "9802baac621e963319a15de868a37f557347b8bc7d0b1742a9b00a1c833c3d15",
+      "legend_present": true
+    },
+    {
+      "id": "000009987003",
+      "detachment_id": "000001029",
+      "detachment": "Lions of the Emperor",
+      "name": "Praesidius",
+      "cost": "25",
+      "description_sha256": "e9e239d157af090a4bc98c510963efb49a55b48b474fbc1a87ab056a6f1fbf43",
+      "description_present": true,
+      "legend_sha256": "76192bea249c1db50b6976298c024a2dc87b000f218685b59630e9673916b5c2",
+      "legend_present": true
+    },
+    {
+      "id": "000009753003",
+      "detachment_id": "000000986",
+      "detachment": "Solar Spearhead",
+      "name": "Augury Uplink",
+      "cost": "35",
+      "description_sha256": "2ef49ce7bd3b7001dea4d2cdade130529142f0141f030929d690f7daa5a571f1",
+      "description_present": true,
+      "legend_sha256": "4b43c7ef4607cc43882c511b5d81224447bb050e29b2e09705d88fd3438567d5",
+      "legend_present": true
+    },
+    {
+      "id": "000008926003",
+      "detachment_id": "000000862",
+      "detachment": "Null Maiden Vigil",
+      "name": "Huntress’ Eye",
+      "cost": "15",
+      "description_sha256": "af098c39498917314f3ba26d1e604a5e57a90a7bb8bb635204ac5925c46869b9",
+      "description_present": true,
+      "legend_sha256": "e6b2bb542852c3de266dfae8c4547337eac9baae23a05656762cb4e314a320a1",
+      "legend_present": true
+    },
+    {
+      "id": "000008921003",
+      "detachment_id": "000000861",
+      "detachment": "Talons Of The Emperor",
+      "name": "Champion of the Imperium",
+      "cost": "25",
+      "description_sha256": "ede6255e48da52cd91a935b08e7e220ebe305262b5f9da3887758fd19f2e0e58",
+      "description_present": true,
+      "legend_sha256": "5e25b1046b69a89157762b89b825a697d393448a3a4a2e05a4aafd42f6e6d123",
+      "legend_present": true
+    },
+    {
+      "id": "000009264003",
+      "detachment_id": "000000909",
+      "detachment": "Voyagers in Darkness",
+      "name": "Mantle of the Emissary",
+      "cost": "0",
+      "description_sha256": "6912791ae6119656eb68bcc5f5425249c3da9b727885282ed15d876069eac98f",
+      "description_present": true,
+      "legend_sha256": "a14611bed3a099e0fbe7063786e1d9128e6e55f6f89869544e129f349cd8cb5e",
+      "legend_present": true
+    },
+    {
+      "id": "000008930003",
+      "detachment_id": "000000863",
+      "detachment": "Auric Champions",
+      "name": "Inspirational Exemplar",
+      "cost": "10",
+      "description_sha256": "65a0f84fec54c6d5035ed6d0083c5b06b2a1857d74f28a61363223b5d8bae0e3",
+      "description_present": true,
+      "legend_sha256": "00a44c3702bf3598027d86c7d4719ad49f49a6729d508a937be56db79c08b064",
+      "legend_present": true
+    },
+    {
+      "id": "000008395003",
+      "detachment_id": "000000765",
+      "detachment": "Shield Host",
+      "name": "Castellan’s Mark",
+      "cost": "20",
+      "description_sha256": "2851850eda3f05705f570a5a861f10d62fd897aa04d69a3637902657e929d124",
+      "description_present": true,
+      "legend_sha256": "57c8f2096f05625e574beec51684391cb6f632757060dfbf4359653a4bf6f5f3",
+      "legend_present": true
+    },
+    {
+      "id": "000008930004",
+      "detachment_id": "000000863",
+      "detachment": "Auric Champions",
+      "name": "Martial Philosopher",
+      "cost": "30",
+      "description_sha256": "2c670ffda98ff0f757e198b69ddec2b5bf7407670c1a5cba600e99b9697491c7",
+      "description_present": true,
+      "legend_sha256": "321abd990c16e74feae6877159f72ae89a9d9d1a66d94ec5399e2c04a7b003c4",
+      "legend_present": true
+    },
+    {
+      "id": "000008395004",
+      "detachment_id": "000000765",
+      "detachment": "Shield Host",
+      "name": "From the Hall of Armouries",
+      "cost": "20",
+      "description_sha256": "4cb483b9389f63fc50bc416320c8761ce989797ab80bdb8c1b4ee4c03f9d1715",
+      "description_present": true,
+      "legend_sha256": "53b4a9aab3fa6110b047782a6cc3f7c7ac40488dfbb823f21a806597d96d3856",
+      "legend_present": true
+    },
+    {
+      "id": "000008921004",
+      "detachment_id": "000000861",
+      "detachment": "Talons Of The Emperor",
+      "name": "Gift of Terran Artifice",
+      "cost": "15",
+      "description_sha256": "9294a47213f1b2a3c93fa8c79909c598d83ad8b0c91a722cb04c294d018afefd",
+      "description_present": true,
+      "legend_sha256": "0dc3411907c516ced793547f5bca4cbe2935f77a39bde33f7e82f3cd338d8ea4",
+      "legend_present": true
+    },
+    {
+      "id": "000008926004",
+      "detachment_id": "000000862",
+      "detachment": "Null Maiden Vigil",
+      "name": "Oblivion Knight",
+      "cost": "25",
+      "description_sha256": "67c90bf01953ade73adaef40decc7c774a0e2ade2d0e52522bc4ac1b5bc14a68",
+      "description_present": true,
+      "legend_sha256": "17475eb2ede3345addcf010595d7170d37b66b430d782a65c807fec01400ea6d",
+      "legend_present": true
+    },
+    {
+      "id": "000009987004",
+      "detachment_id": "000001029",
+      "detachment": "Lions of the Emperor",
+      "name": "Fierce Conqueror",
+      "cost": "15",
+      "description_sha256": "c88c9c8f2f335c65faf9e502baba55d541044fe446eea7546580cecce6eb5444",
+      "description_present": true,
+      "legend_sha256": "5a59a26831eeffd862482f208218d4380aae2f30feb80949ba1ab142e7e27ea5",
+      "legend_present": true
+    },
+    {
+      "id": "000009753004",
+      "detachment_id": "000000986",
+      "detachment": "Solar Spearhead",
+      "name": "Honoured Fallen (Aura)",
+      "cost": "15",
+      "description_sha256": "d517649587044e99a36c1ec70019be0940236d3efe8bde7a729631666f824767",
+      "description_present": true,
+      "legend_sha256": "24f5a5e43a0cf97f61faef7e37e1103084013621bbd41566f6980a5698143251",
+      "legend_present": true
+    },
+    {
+      "id": "000008926005",
+      "detachment_id": "000000862",
+      "detachment": "Null Maiden Vigil",
+      "name": "Raptor Blade",
+      "cost": "5",
+      "description_sha256": "154df70ccb0dd2b4c137bb59cad1ab744c9343045313e9b70349fe24e8485164",
+      "description_present": true,
+      "legend_sha256": "9ee26cde20cb1201b6292f82b839275c78511acc6eb826de30a67d1c02a5223a",
+      "legend_present": true
+    },
+    {
+      "id": "000009753005",
+      "detachment_id": "000000986",
+      "detachment": "Solar Spearhead",
+      "name": "Veteran of the Kataphraktoi",
+      "cost": "10",
+      "description_sha256": "ba07b85cf6783eb08b133810657480d5019fd42682f1e945ec6f88f42e5f98b7",
+      "description_present": true,
+      "legend_sha256": "ec93cf01b1d19cfa6d16dac677d5ed77414dc5b3435dc4fb8abd9d5913626ffb",
+      "legend_present": true
+    },
+    {
+      "id": "000008930005",
+      "detachment_id": "000000863",
+      "detachment": "Auric Champions",
+      "name": "Veiled Blade",
+      "cost": "25",
+      "description_sha256": "767a960e8cd1d5d90b65aa897d637c762ef90c5776c3507e176bcef7f7716beb",
+      "description_present": true,
+      "legend_sha256": "ad0fdcf4703fa5d9bd445754c8545e52c3e7bdf9889228b536318089cdb3e179",
+      "legend_present": true
+    },
+    {
+      "id": "000008395005",
+      "detachment_id": "000000765",
+      "detachment": "Shield Host",
+      "name": "Panoptispex",
+      "cost": "5",
+      "description_sha256": "3d3156062ec3fac2d609ea341c424cabe0f56860686e26cc683c9af702120330",
+      "description_present": true,
+      "legend_sha256": "ecd543c7466edf94232cb38f3332b14524e9c369e6529b556b96acf630549d85",
+      "legend_present": true
+    },
+    {
+      "id": "000009987005",
+      "detachment_id": "000001029",
+      "detachment": "Lions of the Emperor",
+      "name": "Admonimortis",
+      "cost": "30",
+      "description_sha256": "3714438c3af9d34abd2ba25bc09e34c9990ff1f4621e603dc242d440256791a5",
+      "description_present": true,
+      "legend_sha256": "e73d024981b3b3cfdf4b74ba59130951953967b2984ff8488f7da27cd88f4dd5",
+      "legend_present": true
+    },
+    {
+      "id": "000008921005",
+      "detachment_id": "000000861",
+      "detachment": "Talons Of The Emperor",
+      "name": "Radiant Mantle",
+      "cost": "30",
+      "description_sha256": "2dfad927ccc8fdfd0561647eacc0cd4e8e6d3f69ea848da0362a1683a57813a4",
+      "description_present": true,
+      "legend_sha256": "70e98ed673c5c2ee5a8113ae7252db9044d0f00ef0fac79ea598fe84ed4e8a64",
+      "legend_present": true
+    }
+  ],
+  "stratagems": [
+    {
+      "id": "000008931002",
+      "name": "SLAYER OF CHAMPIONS",
+      "type": "Auric Champions – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Auric Champions",
+      "description_sha256": "ce8bbb38481899b885e5e920c0c4535602a98d758856daf736e5e71dfd5ce152",
+      "description_present": true,
+      "legend_sha256": "14275f998a17e953d15ed72e4814807d26e16ca6a20f604a26270cebfde85c9d",
+      "legend_present": true
+    },
+    {
+      "id": "000008931007",
+      "name": "SHOULDER THE MANTLE",
+      "type": "Auric Champions – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Auric Champions",
+      "description_sha256": "514ef1b5e792d35fa7dc8c681b6afead38db7dc53827268cf2dab23a7896691c",
+      "description_present": true,
+      "legend_sha256": "8210742de5de13d5c3f1a65ad7caa91d630a4d97c5f46d419495ca75db92e697",
+      "legend_present": true
+    },
+    {
+      "id": "000008931006",
+      "name": "VIGIL UNENDING",
+      "type": "Auric Champions – Epic Deed Stratagem",
+      "cp_cost": "2",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Auric Champions",
+      "description_sha256": "cc46e0ac70f103637398e93ffce4bc8975150b62342ec81193c7005a6f5f5a79",
+      "description_present": true,
+      "legend_sha256": "efec5ca338a518fce5a4693e6e9e48dc56bdbb64ef8870429d6691512924d2d2",
+      "legend_present": true
+    },
+    {
+      "id": "000008931005",
+      "name": "EARNING OF A NAME",
+      "type": "Auric Champions – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Auric Champions",
+      "description_sha256": "2d21ca5e0d01969e79e09b8529e0f59bd6f821799e4b2fc86a5d0a09ea32dacd",
+      "description_present": true,
+      "legend_sha256": "b73e01289d8fbb14fc938918671ca5498153fbd8d5e4e0dcd3ac4ba6d374783b",
+      "legend_present": true
+    },
+    {
+      "id": "000008931004",
+      "name": "THE EMPEROR’S AUSPICE",
+      "type": "Auric Champions – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Auric Champions",
+      "description_sha256": "73e7b7a2654774eb9fa64477ba8ba7a2061e2c61b227fdaf1cdc6d26c7bc8d36",
+      "description_present": true,
+      "legend_sha256": "d34181dfe3be5b822528c07edb075ffdd4c67213026e7a2ba530ca2a6dd7f74b",
+      "legend_present": true
+    },
+    {
+      "id": "000008931003",
+      "name": "SUPERHUMAN RESERVES",
+      "type": "Auric Champions – Epic Deed Stratagem",
+      "cp_cost": "2",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Auric Champions",
+      "description_sha256": "95ff4c240ee93ccb5bf9a869b9e1bf0f1d20d823115672ce7ce8a1e4f585c0d5",
+      "description_present": true,
+      "legend_sha256": "ce980685e551678cf7a71899557372e2526b4b0b7879a7ef9d3aa6cc76aba21f",
+      "legend_present": true
+    },
+    {
+      "id": "000009274002",
+      "name": "BLADES OF THE VIGILATORS",
+      "type": "Black Ship Guardians – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Black Ship Guardians",
+      "description_sha256": "57046ae29c37a2277dac2d8161d0950a01761a4106c1e35100bb8153ec4652e6",
+      "description_present": true,
+      "legend_sha256": "d32556027fd4e487f494970f4fc867ba59e5dd65d8864e60e64cde1e57a0b75e",
+      "legend_present": true
+    },
+    {
+      "id": "000009274003",
+      "name": "FOCUSED FEAR",
+      "type": "Black Ship Guardians – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Black Ship Guardians",
+      "description_sha256": "a520c18e72af0c188e8ccafa5a9ecb442dc55a5dde164534b16b3c0e077da2c3",
+      "description_present": true,
+      "legend_sha256": "5659bce52c99df240a83bea195f4d970a3f44326293b46c9ddfa9d398f326ecc",
+      "legend_present": true
+    },
+    {
+      "id": "000009274005",
+      "name": "PUNISHMENT OF THE PROSECUTORS",
+      "type": "Black Ship Guardians – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Black Ship Guardians",
+      "description_sha256": "6e2221f227d7eb47d758a3ce319538b0ae00e65da4bb37c5880a4268c1f97a47",
+      "description_present": true,
+      "legend_sha256": "9f95ee7bdd8012877be4fee733b74a8f8d36c8f86ded0a4a89471b3879b3dcc9",
+      "legend_present": true
+    },
+    {
+      "id": "000009274004",
+      "name": "CORNERED PREY",
+      "type": "Black Ship Guardians – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Black Ship Guardians",
+      "description_sha256": "1709ac0b1f108937f87c08ffbfa86de4867f5717aae4ffff3ef6dbf2a34d95f8",
+      "description_present": true,
+      "legend_sha256": "143549087131b29c5753ff530cc2d472b51a7a3c6192472f11072daa53302990",
+      "legend_present": true
+    },
+    {
+      "id": "000009988004",
+      "name": "PEERLESS WARRIOR",
+      "type": "Lions of the Emperor – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Lions of the Emperor",
+      "description_sha256": "0923c318bcbff943045c7718059446aeb583889b76387d695605105f56f8b92f",
+      "description_present": true,
+      "legend_sha256": "0ed0c9439c3dfc19e4d0b752e13bcefa065264420ba9448554b82c4d5df6d32f",
+      "legend_present": true
+    },
+    {
+      "id": "000009988007",
+      "name": "SWIFT AS THE EAGLE",
+      "type": "Lions of the Emperor – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Lions of the Emperor",
+      "description_sha256": "b44c63df4f50c527b840574c119c4f4c6715bf8f8943416a307ecc3c9efbf309",
+      "description_present": true,
+      "legend_sha256": "97c235e5bd4fac892d46c6953427e93799a8c8c1ed875408d4a3b102780ef592",
+      "legend_present": true
+    },
+    {
+      "id": "000009988006",
+      "name": "MANOEUVRE AND FIRE",
+      "type": "Lions of the Emperor – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Lions of the Emperor",
+      "description_sha256": "9a53565f4824970786c681d508fd0ea079fa1e608f867408ffe8ff6874e8afe7",
+      "description_present": true,
+      "legend_sha256": "6e766c6effb6f2798ec0ffaf902cf48dad4617f7851c8b9b6cad7e2568421488",
+      "legend_present": true
+    },
+    {
+      "id": "000009988005",
+      "name": "UNLEASH THE LIONS",
+      "type": "Lions of the Emperor – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Command phase",
+      "detachment": "Lions of the Emperor",
+      "description_sha256": "24ab269e7f0979bc363b30b724e4c3feeb5328113dd5f168237068e1a96aab41",
+      "description_present": true,
+      "legend_sha256": "283e984109435df8f2f575f22182ef46f27148d4c0e03478ea6575a130b42498",
+      "legend_present": true
+    },
+    {
+      "id": "000009988003",
+      "name": "DEFIANT TO THE LAST",
+      "type": "Lions of the Emperor – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Lions of the Emperor",
+      "description_sha256": "40db0d2e828373a2a2158d40c8f7f6480865c41d7233546766880205d77341c8",
+      "description_present": true,
+      "legend_sha256": "7c1f065047bf13e456ebbd5cc6cda2f7c76930715ed491b333886de0776ccaff",
+      "legend_present": true
+    },
+    {
+      "id": "000009988002",
+      "name": "GILDED CHAMPION",
+      "type": "Lions of the Emperor – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Lions of the Emperor",
+      "description_sha256": "c1fa1864240297bb6eabe5a375dfaddd1d28efc240cf5f1f7f6aa9f3c258d0ad",
+      "description_present": true,
+      "legend_sha256": "db312100fb4481a56bf0cf64b4251d527d9cd0cf57f3f8fe64a4a2b75a56fbfe",
+      "legend_present": true
+    },
+    {
+      "id": "000010993004",
+      "name": "PRIORITISED ERADICATION",
+      "type": "Might of the Moritoi Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Might of the Moritoi",
+      "description_sha256": "2824115dbac4eb1017c4ea501c5ce9e6ab3d410130915fa46969ea5b5f0df338",
+      "description_present": true,
+      "legend_sha256": "a027dce39a6abd1fd7fe1e4e542bd646114877dba34e3ea9284a7f33a58b93bf",
+      "legend_present": true
+    },
+    {
+      "id": "000010993002",
+      "name": "FLAWLESS CONSTRUCTION",
+      "type": "Might of the Moritoi Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Might of the Moritoi",
+      "description_sha256": "108f21f0360b938b286a9b2126369ffa315594ae4bca034704ea57a8c9edda24",
+      "description_present": true,
+      "legend_sha256": "2474ba7a7fb4c53d5988203a31c66607bbd7d93db0dc50baef50a2d1b33875de",
+      "legend_present": true
+    },
+    {
+      "id": "000010993003",
+      "name": "UNSTOPPABLE ADVANCE",
+      "type": "Might of the Moritoi Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Might of the Moritoi",
+      "description_sha256": "9bf120f31b6f96761cfe7f01539c808dfa91c03c1cac8b9b9bd2a178c73f5557",
+      "description_present": true,
+      "legend_sha256": "38f4d3b7329a09eee49abad3c53b8cdfeb51d33bc648e46bd60d4877c6805956",
+      "legend_present": true
+    },
+    {
+      "id": "000008927006",
+      "name": "PURGATION SWEEP",
+      "type": "Null Maiden Vigil – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Null Maiden Vigil",
+      "description_sha256": "2dc2676aad3e8946b1e8c686f1c18ebc0d9077a500274b97916a243a02a25faf",
+      "description_present": true,
+      "legend_sha256": "72e82a7d5dbd5bcafeb5298171c749ac75056f88485a43d2d86bb08d203fd235",
+      "legend_present": true
+    },
+    {
+      "id": "000008927004",
+      "name": "ANATHEMA BLADEMASTERY",
+      "type": "Null Maiden Vigil – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Null Maiden Vigil",
+      "description_sha256": "cc1dfcb62d5c4c35bf1748e819da498753861c64101d82498206f78faa800494",
+      "description_present": true,
+      "legend_sha256": "324cd7c5d193eee3b5826dbf19998943adac08470d3d45b8683c7e1de0da356c",
+      "legend_present": true
+    },
+    {
+      "id": "000008927003",
+      "name": "WITCH HUNTERS",
+      "type": "Null Maiden Vigil – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Null Maiden Vigil",
+      "description_sha256": "5dd76f0d177ae1e35ca7585f96bceb10b1717b13702b8ab245136eac9ad8fdc1",
+      "description_present": true,
+      "legend_sha256": "9f9e03c06e31f7bc389df0c063a7211903f08d64862d64bc97915fd4fd0c52ad",
+      "legend_present": true
+    },
+    {
+      "id": "000008927007",
+      "name": "PSYCHIC ABOMINATIONS",
+      "type": "Null Maiden Vigil – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Null Maiden Vigil",
+      "description_sha256": "86a7575a6afb4d64212a4bca7918649e88157482f1317bd8d03d15a587c64104",
+      "description_present": true,
+      "legend_sha256": "ec477033ece5e0a70bf1f432636ab0d9fd5e7af906278ea7dd6a1f7d1d601372",
+      "legend_present": true
+    },
+    {
+      "id": "000008927005",
+      "name": "PSY-CHAFF VOLLEY",
+      "type": "Null Maiden Vigil – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Null Maiden Vigil",
+      "description_sha256": "c1ad88e97f6280f0659703a4886475ee11b2fcc56e2191451b80e8f61e1ab5ee",
+      "description_present": true,
+      "legend_sha256": "293d14f67dfcfb807293e07fedca18c7b90311b1dad4b7884f099fdb13a83c28",
+      "legend_present": true
+    },
+    {
+      "id": "000008927002",
+      "name": "DESPERATION’S PRICE",
+      "type": "Null Maiden Vigil – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Null Maiden Vigil",
+      "description_sha256": "720ec2b35cdc401701aa67f4acbea1616a1c8d9b8c2191478cb43b56397c588e",
+      "description_present": true,
+      "legend_sha256": "8c35be366207844a565285aa92b7d80013dce491fa594b3e338a072ed158dd37",
+      "legend_present": true
+    },
+    {
+      "id": "000008394007",
+      "name": "ARCHEOTECH MUNITIONS",
+      "type": "Shield Host  – Wargear Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Shield Host",
+      "description_sha256": "5bcb30f324955e0be142929ed5abdc525a8260855f47853d7db6ed3727e155c9",
+      "description_present": true,
+      "legend_sha256": "fa99490f8861e486310f2633fa838d3d7568658035767cddadc3231015212bdc",
+      "legend_present": true
+    },
+    {
+      "id": "000008394002",
+      "name": "ARCANE GENETIC ALCHEMY",
+      "type": "Shield Host – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Any phase",
+      "detachment": "Shield Host",
+      "description_sha256": "797bbbf3808f819fd9d41f3cc8e364e4202162c7307eeb895487b8349f1f83e7",
+      "description_present": true,
+      "legend_sha256": "255b579a4fcf49cbd4f6c3ee86bd399320f95483a9f74b439c2b0965a200c087",
+      "legend_present": true
+    },
+    {
+      "id": "000008394006",
+      "name": "VIGILANCE ETERNAL",
+      "type": "Shield Host – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Shield Host",
+      "description_sha256": "0b364d8567dd0ecb6f25dc6a0317997de02117517a9becc501259596ac2a21da",
+      "description_present": true,
+      "legend_sha256": "eb2764ff47decdf556e65a7abb0a8257847a344702b3fd18e5e737298bf4cd1f",
+      "legend_present": true
+    },
+    {
+      "id": "000008394005",
+      "name": "MULTIPOTENTIALITY",
+      "type": "Shield Host – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Shield Host",
+      "description_sha256": "02a868732ea8fe97187521f05ea952bcccaab1e92247fcd4057dd7d46279bc05",
+      "description_present": true,
+      "legend_sha256": "de4b09ac2997c7253cafb0240d8e91eeb1c587bcac9f476910202ad5cefe515a",
+      "legend_present": true
+    },
+    {
+      "id": "000008394004",
+      "name": "UNWAVERING SENTINELS",
+      "type": "Shield Host – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Shield Host",
+      "description_sha256": "147cf3a74cda119628e95eeaf6c681df6eba4702ece2a6b341a52e9086e1a034",
+      "description_present": true,
+      "legend_sha256": "912cee552f4608530deae535ab7c0f7e10257601990a3c006c6854de846d795b",
+      "legend_present": true
+    },
+    {
+      "id": "000008394003",
+      "name": "AVENGE THE FALLEN",
+      "type": "Shield Host – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Shield Host",
+      "description_sha256": "3c90564c1c028c1e457b54f2834a5c4d63fd2e9a68d1140f0298019829c2d423",
+      "description_present": true,
+      "legend_sha256": "28d10feeefcb79e613221e54434c64902695c754abc5f1f09064633aa26ce516",
+      "legend_present": true
+    },
+    {
+      "id": "000010997003",
+      "name": "UMBRAL PROSECUTION",
+      "type": "Silent Hunters Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Silent Hunters",
+      "description_sha256": "f66da919990294783ce3e8214bdb391cc2ff430fe6be2ea5ff23c501bb9492ff",
+      "description_present": true,
+      "legend_sha256": "7cc7f03b5e6a20af6203188cf6d2024a08b1003c873d3c99155f5d3ca90aef0d",
+      "legend_present": true
+    },
+    {
+      "id": "000010997002",
+      "name": "DEATHSONG SCYTHES",
+      "type": "Silent Hunters Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Silent Hunters",
+      "description_sha256": "a720bbd2b13f39577c4db7795ac9cfe5b41e1b06a1ca70317e3afca1d533f1a1",
+      "description_present": true,
+      "legend_sha256": "3dd2da7e0eff9f0e1ba4e6e9a1aa1e8d638abfc8b865e2aa16488824517c146b",
+      "legend_present": true
+    },
+    {
+      "id": "000010997004",
+      "name": "SYNCHRONISED INFERNO",
+      "type": "Silent Hunters Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Silent Hunters",
+      "description_sha256": "63ec10688fa437d8629b231c81c0f6b5c214f47e73bea86bea3637dd6033e9a0",
+      "description_present": true,
+      "legend_sha256": "79a674ed1c58b6f95fc90d76daf583c1d6caaf53a57db59c0e1b3cc0ebe6cddd",
+      "legend_present": true
+    },
+    {
+      "id": "000009754004",
+      "name": "WRATHFUL ADVANCE",
+      "type": "Solar Spearhead – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Solar Spearhead",
+      "description_sha256": "4a13d5fefa98b538dfbecb07e62b8b59ad5e55af1094ae5cf9071c68cd8095d6",
+      "description_present": true,
+      "legend_sha256": "7660528e8edab6e872b2ac2bc28e13e98378c3f59ad1491f111a2f8bd1bc470d",
+      "legend_present": true
+    },
+    {
+      "id": "000009754003",
+      "name": "EMPEROR’S VENGEANCE",
+      "type": "Solar Spearhead – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Solar Spearhead",
+      "description_sha256": "d4821191de6e3c66c02a89e9dd04b27e987d95708f0942c2016fe7f5c7a232da",
+      "description_present": true,
+      "legend_sha256": "36dfe0d7725ed27d4327670f7a5ef53d29a2d83940a8d60439f1ddc6cd1d223c",
+      "legend_present": true
+    },
+    {
+      "id": "000009754002",
+      "name": "FLAWLESS CONSTRUCTION",
+      "type": "Solar Spearhead – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Solar Spearhead",
+      "description_sha256": "3b23f6192d0bcbd1e506b045280c0bff7d5fb1d5c38c1032186186db01499dfb",
+      "description_present": true,
+      "legend_sha256": "860898152069e4c61d8c462cc441b7de6d0f40210b63ffe2050bd81812b75f3d",
+      "legend_present": true
+    },
+    {
+      "id": "000009754005",
+      "name": "UNSTOPPABLE",
+      "type": "Solar Spearhead – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement or Charge phase",
+      "detachment": "Solar Spearhead",
+      "description_sha256": "00d840b5bf0a40bab49a16c5971a0c807e4d5968d00237f787110046ca745a38",
+      "description_present": true,
+      "legend_sha256": "a44ee8c180f683837baada60bc80444893a80c8b4299b9165c5150846099055f",
+      "legend_present": true
+    },
+    {
+      "id": "000009754006",
+      "name": "RELENTLESS PERSECUTION",
+      "type": "Solar Spearhead – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Solar Spearhead",
+      "description_sha256": "79d2e39f37dc9cba0e36cd4d1378f1534f2f73dfef750cfeb7727d5e95b73491",
+      "description_present": true,
+      "legend_sha256": "55ec3acd107c57a96f451c07353a38ffe701a2eae194c1479f6cf37a15541cea",
+      "legend_present": true
+    },
+    {
+      "id": "000009754007",
+      "name": "PUNISHMENT INESCAPABLE",
+      "type": "Solar Spearhead – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Solar Spearhead",
+      "description_sha256": "5b6291fbf4b29f4ddbf8dfc282bf2e8dcad73015a0795911af2ec133b3863179",
+      "description_present": true,
+      "legend_sha256": "8186dfc8f85994c6fc04de3a6fd24b460d740c26ab6347ca3ed439c42ff62035",
+      "legend_present": true
+    },
+    {
+      "id": "000008922004",
+      "name": "EMPYRIC SEVERANCE",
+      "type": "Talons Of The Emperor – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Talons Of The Emperor",
+      "description_sha256": "d5c666b192b707395aefd67ea24b3434f2a06b5445c60303db9a7156d35fc5f4",
+      "description_present": true,
+      "legend_sha256": "f106a5b1d5bb157525d6765fb2e2066e74155ab3e0c1a96f9a9eab81f9372a6d",
+      "legend_present": true
+    },
+    {
+      "id": "000008922005",
+      "name": "EMPEROR’S EXECUTIONERS",
+      "type": "Talons Of The Emperor – Battle Tactic Stratagem",
+      "cp_cost": "2",
+      "turn": "Either player’s turn",
+      "phase": "Fight phase",
+      "detachment": "Talons Of The Emperor",
+      "description_sha256": "1a3e7049c11e6a0dd4f9d71199b45d4274f96d056897e41c9801bdb190670970",
+      "description_present": true,
+      "legend_sha256": "cddae6fbc2a3e99a8ad9d8f123cb61753a063caf327607b9f819500f8ee366a1",
+      "legend_present": true
+    },
+    {
+      "id": "000008922006",
+      "name": "TALONED PINCER",
+      "type": "Talons Of The Emperor – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Movement phase",
+      "detachment": "Talons Of The Emperor",
+      "description_sha256": "de0fa586b9a936fa6713276ff3f84da77fb515dcd2c2b51bcc6ee5c05cfa17e0",
+      "description_present": true,
+      "legend_sha256": "93faf5a583eeeeb10237c8eb2c4e7edccf8ebb90d77571ae210f5cc30516168d",
+      "legend_present": true
+    },
+    {
+      "id": "000008922003",
+      "name": "TALONS INTERLOCKED",
+      "type": "Talons Of The Emperor – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Talons Of The Emperor",
+      "description_sha256": "181e3c7ccdf04ca5539c661bc3b7a6731c180c0bb66ccb382f0feeba649e3ce7",
+      "description_present": true,
+      "legend_sha256": "ce980685e551678cf7a71899557372e2526b4b0b7879a7ef9d3aa6cc76aba21f",
+      "legend_present": true
+    },
+    {
+      "id": "000008922007",
+      "name": "SHIELD OF HONOUR",
+      "type": "Talons Of The Emperor – Epic Deed Stratagem",
+      "cp_cost": "1",
+      "turn": "Opponent’s turn",
+      "phase": "Shooting phase",
+      "detachment": "Talons Of The Emperor",
+      "description_sha256": "d037d5e7b503b03a5370e722bc5e139868a339923faee952e982ee4594dad8a1",
+      "description_present": true,
+      "legend_sha256": "c29dbec7da448c23c6032db40c4528db4f19dd537f8eed9fdbbee21b5d31d32f",
+      "legend_present": true
+    },
+    {
+      "id": "000008922002",
+      "name": "HUNT AS ONE",
+      "type": "Talons Of The Emperor – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Talons Of The Emperor",
+      "description_sha256": "6dc4896f6e08b4eb9931ab8d724b4d3c071fff2e18ea3800cbd9e2873d562d03",
+      "description_present": true,
+      "legend_sha256": "b4b9100ced93ec15343cbef6ca78b77d07686098f95bc7e24337ed97ddf45988",
+      "legend_present": true
+    },
+    {
+      "id": "000011001004",
+      "name": "ELECTROEXORCIST SATURATION",
+      "type": "Tharanatoi Hammerblow Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Tharanatoi Hammerblow",
+      "description_sha256": "8d2cc642c95780a6d1407acafa29be004e596c40c6226bd67534493f293a479e",
+      "description_present": true,
+      "legend_sha256": "2b8b1ae694cea4f0e5d6ee5e9eddbf6a0b6c4dc31faf6ca0ba2e9575f3e624f8",
+      "legend_present": true
+    },
+    {
+      "id": "000011001003",
+      "name": "UNLEASH THE LIONS",
+      "type": "Tharanatoi Hammerblow Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Command phase",
+      "detachment": "Tharanatoi Hammerblow",
+      "description_sha256": "14b0e13e71b118d3b6eb1616e3f5c5bf73f04555528fdab14a60874d0e518542",
+      "description_present": true,
+      "legend_sha256": "1327b6f9e2eb011c96ea4bcf63cb970207e5927e08726b3896e4fe34f86cbf70",
+      "legend_present": true
+    },
+    {
+      "id": "000011001002",
+      "name": "HARDENED RESOLVE",
+      "type": "Tharanatoi Hammerblow Stratagem",
+      "cp_cost": "1",
+      "turn": "Either player’s turn",
+      "phase": "Shooting or Fight phase",
+      "detachment": "Tharanatoi Hammerblow",
+      "description_sha256": "ff9e242fb943ebce2eb74e9f60407db1247fdc12d79e595f68b6883c9cc03e0a",
+      "description_present": true,
+      "legend_sha256": "0026a179e5ffd29fd4b85d1a9f65794a4679271a33532e8b843076cc45c1f422",
+      "legend_present": true
+    },
+    {
+      "id": "000009265004",
+      "name": "ARTIFICER ROUNDS",
+      "type": "Voyagers in Darkness – Battle Tactic Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Shooting phase",
+      "detachment": "Voyagers in Darkness",
+      "description_sha256": "ff017bde02a741e543a04ecb13bfd2c058addb5997e49916d218436c33ff7d74",
+      "description_present": true,
+      "legend_sha256": "e0a6a6ffd89886f584c028b6bdcf2fd298969cb24db9856e19f6f351367d121e",
+      "legend_present": true
+    },
+    {
+      "id": "000009265005",
+      "name": "AURIC STORM",
+      "type": "Voyagers in Darkness – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Charge phase",
+      "detachment": "Voyagers in Darkness",
+      "description_sha256": "89716eacef4e18e01d502cf2ee37761c0f1f6f3b9fe881458e4f3b8ff2bb4206",
+      "description_present": true,
+      "legend_sha256": "8e960ab6c2e05f5f20f72bf5d3c702a350c285262c12b9d6589b8bfff7d1c403",
+      "legend_present": true
+    },
+    {
+      "id": "000009265002",
+      "name": "INESCAPABLE VENGEANCE",
+      "type": "Voyagers in Darkness – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Voyagers in Darkness",
+      "description_sha256": "ef0c5e755b196b6b586423e60067ac65fd997d0878b508ffaf7e13519395dedb",
+      "description_present": true,
+      "legend_sha256": "475180573b553007c9c62f9fe1fb51e5a8ab2ae8a78b6eb9509e740386a331fe",
+      "legend_present": true
+    },
+    {
+      "id": "000009265003",
+      "name": "BREACHING BEHEMOTHS",
+      "type": "Voyagers in Darkness – Strategic Ploy Stratagem",
+      "cp_cost": "1",
+      "turn": "Your turn",
+      "phase": "Movement phase",
+      "detachment": "Voyagers in Darkness",
+      "description_sha256": "fafd1f18cec72b0642206d04a4a1ede1dbe4132360b170ffe09717bc9050fbbd",
+      "description_present": true,
+      "legend_sha256": "cf8adce3c71a99965098a285b01b7ecea48b658e0638d0fba4a3a35c91739d94",
+      "legend_present": true
+    }
+  ]
+}

@@ -1,0 +1,594 @@
+{
+  "schema_version": "1.0",
+  "captured_at": "2026-09-29T12:57:23Z",
+  "snapshot_date": "2026-09-29",
+  "source": {
+    "id": "WAHAPEDIA_11E_CSV",
+    "base_url": "https://wahapedia.ru/wh40k11ed/",
+    "last_update": "2026-09-28 02:38:04",
+    "data_export_page": "https://wahapedia.ru/wh40k11ed/the-rules/data-export/"
+  },
+  "validation": {
+    "edition_11_sources_present": true,
+    "minimum_factions": 20,
+    "minimum_datasheets": 1000,
+    "copyright_reduced_snapshot": true
+  },
+  "files": [
+    {
+      "name": "Last_update.csv",
+      "bytes": 39,
+      "sha256": "4b3a7e63006be965073bdc34022bdd17f6f7b063602b46a4640a11ac641b20a9",
+      "rows": 1,
+      "headers": [
+        "last_update"
+      ]
+    },
+    {
+      "name": "Source.csv",
+      "bytes": 8432,
+      "sha256": "e6f74afb7b43f6779ec9a03ad0699ff11dd27b9d2f08243d5c04dd07fd99f6e0",
+      "rows": 66,
+      "headers": [
+        "id",
+        "name",
+        "type",
+        "edition",
+        "version",
+        "errata_date",
+        "errata_link"
+      ]
+    },
+    {
+      "name": "Factions.csv",
+      "bytes": 1876,
+      "sha256": "d5038518059e5deeafa8d74e814a51598929a45c2864d3056c92c8629e7d4608",
+      "rows": 25,
+      "headers": [
+        "id",
+        "name",
+        "link"
+      ]
+    },
+    {
+      "name": "Datasheets.csv",
+      "bytes": 876603,
+      "sha256": "ba363e9a68e6d7ee19f93a32abc06ba3f6a5f1efd0da5aaab32701a130a15623",
+      "rows": 1660,
+      "headers": [
+        "id",
+        "name",
+        "faction_id",
+        "source_id",
+        "legend",
+        "role",
+        "loadout",
+        "transport",
+        "virtual",
+        "is_support",
+        "leader_head",
+        "leader_footer",
+        "damaged_w",
+        "damaged_description",
+        "link"
+      ]
+    },
+    {
+      "name": "Datasheets_models.csv",
+      "bytes": 107314,
+      "sha256": "dddb131c2b81fa199832f5250f0469f7cef4ba4fef77b6e477380b592d61e6ff",
+      "rows": 1767,
+      "headers": [
+        "datasheet_id",
+        "line",
+        "name",
+        "m",
+        "t",
+        "sv",
+        "inv_sv",
+        "inv_sv_descr",
+        "w",
+        "ld",
+        "oc",
+        "base_size",
+        "base_size_descr"
+      ]
+    },
+    {
+      "name": "Datasheets_models_cost.csv",
+      "bytes": 189351,
+      "sha256": "2e2f9be00eae5924a62dd27c4322bdb6b663070fd80781a81ca1b5305ed24c47",
+      "rows": 6269,
+      "headers": [
+        "datasheet_id",
+        "line",
+        "description",
+        "cost"
+      ]
+    },
+    {
+      "name": "Datasheets_keywords.csv",
+      "bytes": 476771,
+      "sha256": "10cb386fc3134257bdf3bad3bb1fd94615ea94a5fe3c94aad874da390b1ec1df",
+      "rows": 16212,
+      "headers": [
+        "datasheet_id",
+        "keyword",
+        "model",
+        "is_faction_keyword"
+      ]
+    },
+    {
+      "name": "Datasheets_wargear.csv",
+      "bytes": 632930,
+      "sha256": "eeaa33777769367d836cab0562a82bb84bcb8fc1a8064539a58ead972d302241",
+      "rows": 8996,
+      "headers": [
+        "datasheet_id",
+        "line",
+        "line_in_wargear",
+        "dice",
+        "name",
+        "description",
+        "range",
+        "type",
+        "a",
+        "bs_ws",
+        "s",
+        "ap",
+        "d"
+      ]
+    },
+    {
+      "name": "Datasheets_options.csv",
+      "bytes": 371173,
+      "sha256": "4b729297fe68b3c7cfc2c99205610a1741f838e29ae7150501d84365882e8d13",
+      "rows": 2745,
+      "headers": [
+        "datasheet_id",
+        "line",
+        "button",
+        "description"
+      ]
+    },
+    {
+      "name": "Datasheets_unit_composition.csv",
+      "bytes": 85472,
+      "sha256": "fca0b694f146a13f56c828d78f2aaa0dbe79341273173c68f534b8985494b03f",
+      "rows": 2107,
+      "headers": [
+        "datasheet_id",
+        "line",
+        "description"
+      ]
+    },
+    {
+      "name": "Abilities.csv",
+      "bytes": 202161,
+      "sha256": "f3fc44a0fd91b7b45b38ae477632517e732bda64b4a0c548033a9f874664c7f3",
+      "rows": 128,
+      "headers": [
+        "id",
+        "name",
+        "legend",
+        "faction_id",
+        "description"
+      ]
+    },
+    {
+      "name": "Datasheets_abilities.csv",
+      "bytes": 961930,
+      "sha256": "5aba5ff1d7a2353904fac32d2b2b234c03573bef418f1bf4afabca1001cc2109",
+      "rows": 6935,
+      "headers": [
+        "datasheet_id",
+        "line",
+        "ability_id",
+        "model",
+        "name",
+        "description",
+        "type",
+        "parameter"
+      ]
+    },
+    {
+      "name": "Datasheets_leader.csv",
+      "bytes": 35117,
+      "sha256": "c75b00eed968babbc89c6b7e077b40f7234c3040537816692ae0e609ebca174c",
+      "rows": 1595,
+      "headers": [
+        "leader_id",
+        "attached_id"
+      ]
+    },
+    {
+      "name": "Detachments.csv",
+      "bytes": 147249,
+      "sha256": "445af298071f5014f7f1e49e55669b4a6bbaf8e798d95717d9ea85fb94314e5e",
+      "rows": 329,
+      "headers": [
+        "id",
+        "faction_id",
+        "name",
+        "legend",
+        "type",
+        "dp",
+        "force_disposition"
+      ]
+    },
+    {
+      "name": "Stratagems.csv",
+      "bytes": 1148707,
+      "sha256": "2ed24cacbe826c4eccea0920385669ac2fea5ebf3aca8822169d15d03f5814cb",
+      "rows": 1645,
+      "headers": [
+        "faction_id",
+        "name",
+        "id",
+        "type",
+        "cp_cost",
+        "legend",
+        "turn",
+        "phase",
+        "detachment",
+        "detachment_id",
+        "description"
+      ]
+    },
+    {
+      "name": "Datasheets_stratagems.csv",
+      "bytes": 2150631,
+      "sha256": "7dacd927c0cf17b3516fdad5344e6d9f569bf172f3fbfe6a96e010bcfea5b67c",
+      "rows": 86024,
+      "headers": [
+        "datasheet_id",
+        "stratagem_id"
+      ]
+    },
+    {
+      "name": "Enhancements.csv",
+      "bytes": 477886,
+      "sha256": "7e7fa39c9e1f9d268bda75affa8cd647c72b5511726631a8ee4110c8e86bc212",
+      "rows": 1024,
+      "headers": [
+        "faction_id",
+        "name",
+        "id",
+        "cost",
+        "detachment",
+        "detachment_id",
+        "upgrade",
+        "legend",
+        "description",
+        "support_leader"
+      ]
+    },
+    {
+      "name": "Datasheets_enhancements.csv",
+      "bytes": 285258,
+      "sha256": "1d6576003a346565168369b75efc586d3c12a766d8514571ed81ff333d241376",
+      "rows": 11409,
+      "headers": [
+        "datasheet_id",
+        "enhancement_id"
+      ]
+    },
+    {
+      "name": "Detachment_abilities.csv",
+      "bytes": 324910,
+      "sha256": "d7e4966e2b094d43feaa88a66e10608301ff817d92393b9c7f04ec2ac1ed6a44",
+      "rows": 350,
+      "headers": [
+        "id",
+        "faction_id",
+        "name",
+        "legend",
+        "description",
+        "detachment",
+        "detachment_id"
+      ]
+    },
+    {
+      "name": "Datasheets_detachment_abilities.csv",
+      "bytes": 354262,
+      "sha256": "843395ebfa4f2dceab87b56792fff48d03d861cbfcb1eda6df3bbf2fe822ba38",
+      "rows": 16101,
+      "headers": [
+        "datasheet_id",
+        "detachment_ability_id"
+      ]
+    }
+  ],
+  "counts": {
+    "factions": 25,
+    "models": 1763,
+    "weapons": 8972,
+    "keywords": 16188,
+    "abilities": 6934,
+    "options": 2745,
+    "composition_rows": 2103,
+    "leader_rows": 0,
+    "datasheets": 1660,
+    "detachments": 329,
+    "detachment_abilities": 350,
+    "enhancements": 1024,
+    "stratagems": 1570
+  },
+  "factions": [
+    {
+      "faction_id": "AS",
+      "name": "Adepta Sororitas",
+      "repository_slug": "adepta_sororitas",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/adepta_sororitas.json",
+      "datasheets": 38,
+      "detachments": 10,
+      "detachment_abilities": 10,
+      "enhancements": 29,
+      "stratagems": 44
+    },
+    {
+      "faction_id": "AC",
+      "name": "Adeptus Custodes",
+      "repository_slug": "adeptus_custodes",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/adeptus_custodes.json",
+      "datasheets": 31,
+      "detachments": 11,
+      "detachment_abilities": 11,
+      "enhancements": 34,
+      "stratagems": 53
+    },
+    {
+      "faction_id": "AdM",
+      "name": "Adeptus Mechanicus",
+      "repository_slug": "adeptus_mechanicus",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/adeptus_mechanicus.json",
+      "datasheets": 38,
+      "detachments": 13,
+      "detachment_abilities": 13,
+      "enhancements": 40,
+      "stratagems": 63
+    },
+    {
+      "faction_id": "TL",
+      "name": "Adeptus Titanicus",
+      "repository_slug": null,
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/adeptus-titanicus.json",
+      "datasheets": 4,
+      "detachments": 0,
+      "detachment_abilities": 0,
+      "enhancements": 0,
+      "stratagems": 0
+    },
+    {
+      "faction_id": "AE",
+      "name": "Aeldari",
+      "repository_slug": "aeldari_craftworlds",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/aeldari_craftworlds.json",
+      "datasheets": 99,
+      "detachments": 19,
+      "detachment_abilities": 21,
+      "enhancements": 60,
+      "stratagems": 100
+    },
+    {
+      "faction_id": "AM",
+      "name": "Astra Militarum",
+      "repository_slug": "astra_militarum",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/astra_militarum.json",
+      "datasheets": 135,
+      "detachments": 13,
+      "detachment_abilities": 13,
+      "enhancements": 42,
+      "stratagems": 65
+    },
+    {
+      "faction_id": "CD",
+      "name": "Chaos Daemons",
+      "repository_slug": "chaos_daemons",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/chaos_daemons.json",
+      "datasheets": 101,
+      "detachments": 14,
+      "detachment_abilities": 17,
+      "enhancements": 39,
+      "stratagems": 66
+    },
+    {
+      "faction_id": "QT",
+      "name": "Chaos Knights",
+      "repository_slug": "chaos_knights",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/chaos_knights.json",
+      "datasheets": 37,
+      "detachments": 8,
+      "detachment_abilities": 8,
+      "enhancements": 28,
+      "stratagems": 39
+    },
+    {
+      "faction_id": "CSM",
+      "name": "Chaos Space Marines",
+      "repository_slug": "chaos_space_marines",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/chaos_space_marines.json",
+      "datasheets": 111,
+      "detachments": 20,
+      "detachment_abilities": 23,
+      "enhancements": 68,
+      "stratagems": 105
+    },
+    {
+      "faction_id": "DG",
+      "name": "Death Guard",
+      "repository_slug": "death_guard",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/death_guard.json",
+      "datasheets": 71,
+      "detachments": 12,
+      "detachment_abilities": 12,
+      "enhancements": 36,
+      "stratagems": 57
+    },
+    {
+      "faction_id": "DRU",
+      "name": "Drukhari",
+      "repository_slug": "drukhari",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/drukhari.json",
+      "datasheets": 46,
+      "detachments": 13,
+      "detachment_abilities": 13,
+      "enhancements": 38,
+      "stratagems": 61
+    },
+    {
+      "faction_id": "EC",
+      "name": "Emperor’s Children",
+      "repository_slug": "emperors_children",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/emperors_children.json",
+      "datasheets": 23,
+      "detachments": 11,
+      "detachment_abilities": 12,
+      "enhancements": 36,
+      "stratagems": 55
+    },
+    {
+      "faction_id": "GC",
+      "name": "Genestealer Cults",
+      "repository_slug": "genestealer_cults",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/genestealer_cults.json",
+      "datasheets": 139,
+      "detachments": 12,
+      "detachment_abilities": 13,
+      "enhancements": 36,
+      "stratagems": 57
+    },
+    {
+      "faction_id": "GK",
+      "name": "Grey Knights",
+      "repository_slug": "grey_knights",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/grey_knights.json",
+      "datasheets": 31,
+      "detachments": 11,
+      "detachment_abilities": 11,
+      "enhancements": 34,
+      "stratagems": 53
+    },
+    {
+      "faction_id": "AoI",
+      "name": "Imperial Agents",
+      "repository_slug": "agents_of_the_imperium",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/agents_of_the_imperium.json",
+      "datasheets": 46,
+      "detachments": 7,
+      "detachment_abilities": 7,
+      "enhancements": 24,
+      "stratagems": 38
+    },
+    {
+      "faction_id": "QI",
+      "name": "Imperial Knights",
+      "repository_slug": "imperial_knights",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/imperial_knights.json",
+      "datasheets": 28,
+      "detachments": 8,
+      "detachment_abilities": 9,
+      "enhancements": 26,
+      "stratagems": 39
+    },
+    {
+      "faction_id": "LoV",
+      "name": "Leagues of Votann",
+      "repository_slug": "leagues_of_votann",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/leagues_of_votann.json",
+      "datasheets": 22,
+      "detachments": 12,
+      "detachment_abilities": 12,
+      "enhancements": 38,
+      "stratagems": 59
+    },
+    {
+      "faction_id": "NEC",
+      "name": "Necrons",
+      "repository_slug": "necrons",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/necrons.json",
+      "datasheets": 64,
+      "detachments": 16,
+      "detachment_abilities": 16,
+      "enhancements": 50,
+      "stratagems": 79
+    },
+    {
+      "faction_id": "ORK",
+      "name": "Orks",
+      "repository_slug": "orks",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/orks.json",
+      "datasheets": 67,
+      "detachments": 17,
+      "detachment_abilities": 17,
+      "enhancements": 42,
+      "stratagems": 48
+    },
+    {
+      "faction_id": "SM",
+      "name": "Space Marines",
+      "repository_slug": "space_marines",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/space_marines.json",
+      "datasheets": 292,
+      "detachments": 57,
+      "detachment_abilities": 65,
+      "enhancements": 190,
+      "stratagems": 279
+    },
+    {
+      "faction_id": "TS",
+      "name": "Thousand Sons",
+      "repository_slug": "thousand_sons",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/thousand_sons.json",
+      "datasheets": 60,
+      "detachments": 12,
+      "detachment_abilities": 12,
+      "enhancements": 36,
+      "stratagems": 57
+    },
+    {
+      "faction_id": "TYR",
+      "name": "Tyranids",
+      "repository_slug": "tyranids",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/tyranids.json",
+      "datasheets": 57,
+      "detachments": 14,
+      "detachment_abilities": 14,
+      "enhancements": 41,
+      "stratagems": 67
+    },
+    {
+      "faction_id": "TAU",
+      "name": "T’au Empire",
+      "repository_slug": "tau_empire",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/tau_empire.json",
+      "datasheets": 62,
+      "detachments": 9,
+      "detachment_abilities": 11,
+      "enhancements": 27,
+      "stratagems": 39
+    },
+    {
+      "faction_id": "UA",
+      "name": "Unbound Adversaries",
+      "repository_slug": null,
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/unbound-adversaries.json",
+      "datasheets": 0,
+      "detachments": 0,
+      "detachment_abilities": 0,
+      "enhancements": 0,
+      "stratagems": 0
+    },
+    {
+      "faction_id": "WE",
+      "name": "World Eaters",
+      "repository_slug": "world_eaters",
+      "file": "rules/11e/snapshots/2026-09-29/wahapedia/factions/world_eaters.json",
+      "datasheets": 58,
+      "detachments": 10,
+      "detachment_abilities": 10,
+      "enhancements": 30,
+      "stratagems": 47
+    }
+  ]
+}
