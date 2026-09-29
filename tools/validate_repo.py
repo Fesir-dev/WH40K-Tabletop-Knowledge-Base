@@ -374,6 +374,120 @@ try:
 except Exception as exc:
     errors.append(f"MFM Wave A validation failure: {exc}")
 
+# 3f. Wave B structural ingestion contracts.
+try:
+    waha_root = ROOT / "rules" / "11e" / "snapshots" / "2026-09-29" / "wahapedia"
+    waha_manifest = json.loads((waha_root / "manifest.json").read_text(encoding="utf-8"))
+    view_index = json.loads((waha_root / "roster_views" / "index.json").read_text(encoding="utf-8"))
+    ability_catalog = json.loads((waha_root / "ability_catalog.json").read_text(encoding="utf-8"))
+    reconciliation = json.loads(
+        (ROOT / "reports" / "WAVE_B_RECONCILIATION_2026-09-29.json").read_text(encoding="utf-8")
+    )
+    wave_b_conflicts = json.loads(
+        (ROOT / "sources" / "snapshots" / "2026-09-29_wave_b_conflicts.json").read_text(encoding="utf-8")
+    )
+    current_rules = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+
+    expected_view_counts = {
+        "roster_identities": 37,
+        "structural_complete": 35,
+        "structural_partial": 0,
+        "unavailable": 2,
+    }
+    if view_index.get("counts") != expected_view_counts:
+        errors.append(f"Wave B roster-view counts drifted: {view_index.get('counts')} != {expected_view_counts}")
+
+    unavailable = {
+        x.get("slug")
+        for x in view_index.get("views", [])
+        if str(x.get("status", "")).startswith("UNAVAILABLE")
+    }
+    if unavailable != {"titanicus_traitoris", "unaligned_forces"}:
+        errors.append(f"Unexpected Wave B unavailable roster views: {sorted(unavailable)}")
+
+    if waha_manifest.get("source", {}).get("last_update") != "2026-09-28 02:38:04":
+        errors.append("Wave B Wahapedia source timestamp drifted")
+    expected_wave_b_counts = {
+        "factions": 25,
+        "ability_catalog": 95,
+        "datasheets": 1660,
+        "models": 1763,
+        "weapons": 8972,
+        "keywords": 16188,
+        "abilities": 6934,
+        "options": 2745,
+        "composition_rows": 2103,
+        "leader_rows": 1595,
+        "army_abilities": 81,
+        "detachments": 329,
+        "detachment_abilities": 350,
+        "enhancements": 1024,
+        "stratagems": 1570,
+    }
+    for key, value in expected_wave_b_counts.items():
+        if waha_manifest.get("counts", {}).get(key) != value:
+            errors.append(
+                f"Wave B Wahapedia aggregate {key} drifted: "
+                f"{waha_manifest.get('counts', {}).get(key)} != {value}"
+            )
+
+    bad_ability_ids = [x.get("id") for x in ability_catalog if not str(x.get("id", "")).isdigit()]
+    if bad_ability_ids:
+        errors.append(f"Wave B ability catalogue contains malformed IDs: {bad_ability_ids[:5]}")
+
+    if reconciliation.get("status") != "PASS_WITH_CONFLICTS":
+        errors.append(f"Unexpected Wave B reconciliation state: {reconciliation.get('status')}")
+    if reconciliation.get("conflict_count") != 11:
+        errors.append(f"Expected 11 retained Wave B source conflicts, got {reconciliation.get('conflict_count')}")
+    if reconciliation.get("totals", {}).get("points_compared") != 1202:
+        errors.append("Wave B reconciliation point-comparison baseline drifted")
+    if reconciliation.get("totals", {}).get("unit_name_matches") != 1242:
+        errors.append("Wave B reconciliation unit-name overlap baseline drifted")
+
+    if wave_b_conflicts.get("state") != "SOURCE_CONFLICT":
+        errors.append("Wave B conflict snapshot must remain SOURCE_CONFLICT")
+    if wave_b_conflicts.get("conflict_count") != reconciliation.get("conflict_count"):
+        errors.append("Wave B conflict snapshot count differs from reconciliation report")
+
+    global_cov = cov.get("global", {})
+    if cov.get("status") != "WAVE_B_STRUCTURAL_COMPLETE":
+        errors.append("coverage/current.json must retain WAVE_B_STRUCTURAL_COMPLETE")
+    if global_cov.get("wave_b_structural_roster_identities_complete") != 35:
+        errors.append("Wave B structural coverage must contain 35 complete roster identities")
+    if global_cov.get("wave_b_structural_roster_identities_unavailable") != 2:
+        errors.append("Wave B structural coverage must contain exactly 2 unavailable roster identities")
+    if global_cov.get("current_normalized_factions") != 0:
+        errors.append("Full semantic current_normalized_factions must remain 0 until semantic/FAQ promotion")
+
+    structural_rows = [x for x in cov.get("factions", []) if x.get("structural_current")]
+    if len(structural_rows) != 35:
+        errors.append(f"Expected 35 structural_current roster identities, got {len(structural_rows)}")
+    structural_dims = set(cov.get("structural_dimensions", []))
+    for row in structural_rows:
+        dims = row.get("wave_b_structural", {}).get("dimensions", {})
+        if row.get("wave_b_structural", {}).get("state") != "COMPLETE":
+            errors.append(f"Wave B structural state not COMPLETE: {row.get('slug')}")
+        for dim in structural_dims:
+            if dims.get(dim) != 100:
+                errors.append(f"Incomplete Wave B structural dimension {row.get('slug')}.{dim}")
+
+    wb_current = current_rules.get("wave_b_structural", {})
+    if current_rules.get("status") != "CURRENT_STRUCTURAL_READY_SEMANTIC_PENDING":
+        errors.append("rules/11e/current.json Wave B status drifted")
+    if wb_current.get("roster_identities_complete") != 35:
+        errors.append("rules/11e/current.json Wave B complete count drifted")
+    if wb_current.get("semantic_rule_text") != "PENDING" or wb_current.get("faq_errata") != "PENDING":
+        errors.append("Wave B must not claim semantic/FAQ completion")
+
+    waha_registry = by_source_id.get("WAHAPEDIA_11E", {})
+    if waha_registry.get("repository_coverage_state") != "STRUCTURAL_INGESTED":
+        errors.append("WAHAPEDIA_11E repository coverage state must be STRUCTURAL_INGESTED")
+    if waha_registry.get("observed_revision", {}).get("last_update") != waha_manifest.get("source", {}).get("last_update"):
+        errors.append("WAHAPEDIA_11E registry revision differs from ingested manifest")
+except Exception as exc:
+    errors.append(f"Wave B structural validation failure: {exc}")
+
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (
     ROOT
@@ -489,5 +603,5 @@ if errors:
 
 print(
     "PASS: repository JSON, baselines, source statuses, Custodes collection, "
-    "semantic-core index, external/analytics source contracts, roster evidence model, painting KB, current MFM Wave A, and historical repricing invariants validated."
+    "semantic-core index, external/analytics source contracts, roster evidence model, painting KB, current MFM Wave A, Wave B structural coverage, and historical repricing invariants validated."
 )
