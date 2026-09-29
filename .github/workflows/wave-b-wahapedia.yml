@@ -6,6 +6,7 @@ on:
       - "tools/import_wahapedia_wave_b.py"
       - "tools/crosscheck_wave_b.py"
       - "tools/audit_wave_b_views.py"
+      - "tools/build_wave_b_roster_views.py"
       - ".github/workflows/wave-b-wahapedia.yml"
   workflow_dispatch:
 
@@ -34,6 +35,10 @@ jobs:
       - name: Audit roster-view structure
         run: |
           python tools/audit_wave_b_views.py
+
+      - name: Build roster-specific structural views
+        run: |
+          python tools/build_wave_b_roster_views.py
 
       - name: Validate generated JSON syntax
         run: |
