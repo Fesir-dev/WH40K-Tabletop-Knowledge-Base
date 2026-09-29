@@ -76,3 +76,9 @@ legacy/                  Metadata for superseded project baselines
 - `PROVISIONAL` — useful working data with known unresolved questions.
 - `UNKNOWN` — insufficient evidence; do not infer.
 
+
+## Current ingestion status
+
+Independent audit / ingestion hardening: `reports/INDEPENDENT_REPO_AUDIT_2026-09-29.md`.
+
+Machine-readable current coverage: `coverage/current.json`.
