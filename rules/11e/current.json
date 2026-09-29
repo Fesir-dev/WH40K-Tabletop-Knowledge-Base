@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "edition": "11e",
+  "repository_checkpoint": "2026-09-29",
+  "status": "CURRENT_PENDING_RECHECK",
+  "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
+  "promotion_requirements": [
+    "Recheck official Warhammer 40,000 downloads page",
+    "Recheck current Munitorum Field Manual version and publication/update date",
+    "Recheck relevant current faction pack / faction update state",
+    "Recheck official app wording for rules that are app-dependent",
+    "Cross-check Wahapedia 11E for structured drift detection",
+    "Generate explicit diff against the 2026-08-15 historical checkpoint",
+    "Pass repository regressions after normalizing changed facts"
+  ],
+  "rule": "No migrated 2026-08-15 object is current merely because its legacy filename or legacy status contained CURRENT."
+}
