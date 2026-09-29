@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.2",
+  "schema_version": "2.3",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_STRUCTURAL_READY_SEMANTIC_PENDING",
@@ -17,9 +17,10 @@
       "state": "PENDING"
     },
     "faction_rules_content": {
-      "state": "STRUCTURAL_PASS_SEMANTIC_PENDING",
+      "state": "STRUCTURAL_PASS_SEMANTIC_RESOLVER_AVAILABLE",
       "verified_at": "2026-09-29",
-      "secondary_mirror_last_update": "2026-09-28 02:38:04"
+      "secondary_mirror_last_update": "2026-09-28 02:38:04",
+      "full_normalized_semantics": "PENDING"
     },
     "app_wording": {
       "state": "PENDING"
@@ -68,5 +69,26 @@
     "total_structural_source_available": 37,
     "implementation_fallback_snapshot": "rules/11e/snapshots/2026-09-29/bsdata_fallback/index.json",
     "implementation_fallback_policy": "Fallback provides structured implementation evidence only; it does not promote BSData to normative or current-mirror authority."
+  },
+  "semantic_resolver": {
+    "state": "LIVE_HASH_VERIFIED",
+    "tool": "tools/query_current_semantics.py",
+    "workflow": ".github/workflows/semantic-smoke.yml",
+    "last_smoke_at": "2026-09-29",
+    "workflow_run_id": 36579177714,
+    "smoke_checks": 8,
+    "verified_kinds": [
+      "datasheet-ability",
+      "datasheet-option",
+      "unit-composition",
+      "datasheet-loadout",
+      "detachment-ability",
+      "enhancement",
+      "stratagem",
+      "ability"
+    ],
+    "behavior": "Fetch current Wahapedia CSV text on demand, compare SHA-256 with the committed snapshot fingerprint, return SNAPSHOT_MATCH or SOURCE_DRIFT.",
+    "copyright_policy": "Long rule prose is retrieved on demand and is not vendored in the repository.",
+    "authority_policy": "Hash match verifies the secondary mirror projection only; it does not make Wahapedia normative over Games Workshop."
   }
 }
