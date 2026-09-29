@@ -1,0 +1,83 @@
+name: Official public ↔ mirror overlap audit
+
+on:
+  push:
+    paths:
+      - "tools/audit_official_public_mirror_overlap.py"
+      - "tests/test_official_public_mirror_overlap.py"
+      - "schemas/official_public_mirror_overlap_audit.schema.json"
+      - ".github/workflows/official-public-mirror-overlap.yml"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - "rules/11e/snapshots/**/wahapedia/manifest.json"
+      - "rules/11e/snapshots/**/wahapedia/source_catalog.json"
+  pull_request:
+    paths:
+      - "tools/audit_official_public_mirror_overlap.py"
+      - "tests/test_official_public_mirror_overlap.py"
+      - "schemas/official_public_mirror_overlap_audit.schema.json"
+      - ".github/workflows/official-public-mirror-overlap.yml"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - "rules/11e/snapshots/**/wahapedia/manifest.json"
+      - "rules/11e/snapshots/**/wahapedia/source_catalog.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  overlap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned PDF extractor
+        run: python -m pip install --disable-pip-version-check pypdf==5.9.0
+      - name: Compile and run overlap contracts
+        run: |
+          python -m compileall -q tools/audit_official_public_mirror_overlap.py tests/test_official_public_mirror_overlap.py
+          python -m unittest tests.test_official_public_mirror_overlap -v
+      - uses: actions/cache@v4
+        with:
+          path: .cache/official-public-rules
+          key: official-public-rules-${{ hashFiles('sources/discoveries/gw_public_rules_surface_2026-09-29.json', 'sources/snapshots/gw_11e_official_assets_2026-09-29.json') }}
+      - name: Run full public official mirror overlap audit
+        run: |
+          python tools/audit_official_public_mirror_overlap.py \
+            --as-of 2026-09-29 \
+            --output reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json
+      - name: Enforce authority boundary
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json',encoding='utf-8'))
+          assert r['status']=='PASS'
+          assert r['source_integrity']['official_documents_verified']==28
+          assert r['source_integrity']['mirror_csv_files_verified']==r['source_integrity']['mirror_csv_files_expected']
+          assert r['authority_boundary']['full_codex_app_equivalence_claimed'] is False
+          assert r['authority_boundary']['public_overlap_match_promotes_full_faction'] is False
+          assert r['interpretation']['normative_promotion'] is False
+          assert r['core_rules']['state']=='NO_COMPARABLE_WAVE_B_GLOBAL_RULES_CORPUS'
+          assert all('_text' not in x for d in r['documents'] for x in d['results'])
+          print(json.dumps(r['summary'],indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: official-public-mirror-overlap-${{ github.run_id }}
+          path: reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json
+          if-no-files-found: error
+      - name: Commit generated overlap report on push
+        if: github.event_name == 'push' && github.ref_name != 'main'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json)" ]; then
+            echo "Overlap report already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json
+          git commit -m "Refresh official public mirror overlap audit"
+          git push origin HEAD:${GITHUB_REF_NAME}
