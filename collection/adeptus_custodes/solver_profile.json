@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "adeptus_custodes_collection_solver_v1",
+  "faction_slug": "adeptus-custodes",
+  "collection_status": "PROVISIONAL",
+  "collection_checkpoint": "2026-07-11",
+  "derived_at": "2026-09-29",
+  "source": {
+    "current_pointer": "collection/adeptus_custodes/current.json",
+    "canonical_inventory": "collection/adeptus_custodes/legacy/v0_5_provisional/collection_adeptus_custodes_v0_5_provisional.json",
+    "canonical_inventory_git_blob_sha": "d71da6592b9319178d2f0e13434f55b70d061c4e",
+    "rule": "Derived solver profile; source inventory remains authoritative for personal physical facts."
+  },
+  "scope": {
+    "body_allocation": "SUPPORTED",
+    "declared_component_allocation": "SUPPORTED",
+    "paid_wargear_physical_crosscheck": "PARTIAL",
+    "shared_imperial_agents": "OUT_OF_SCOPE_V1",
+    "full_wysiwyg_loadout_inference": "NOT_CLAIMED"
+  },
+  "body_pools": [
+    {
+      "pool_id": "CUSTODES_TRAJANN_01",
+      "physical_bodies": 1,
+      "ready_bodies": 1,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Trajann Valoris",
+          "max_from_pool": 1,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_BLADE_CHAMPION_ORIGINAL_01",
+      "physical_bodies": 1,
+      "ready_bodies": 1,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Blade Champion",
+          "max_from_pool": 1,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_GUARD_MAIN_01",
+      "physical_bodies": 9,
+      "ready_bodies": 9,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Custodian Guard",
+          "max_from_pool": 9,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_FOOT_CAPTAIN_GUARD_DERIVED_01",
+      "physical_bodies": 2,
+      "ready_bodies": 2,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Shield-Captain",
+          "max_from_pool": 2,
+          "mode": "DIRECT"
+        },
+        {
+          "unit": "Custodian Guard",
+          "max_from_pool": 2,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_FOOT_CAPTAIN_FW_01",
+      "physical_bodies": 2,
+      "ready_bodies": 2,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Shield-Captain",
+          "max_from_pool": 2,
+          "mode": "DIRECT"
+        },
+        {
+          "unit": "Blade Champion",
+          "max_from_pool": 1,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_SAGITTARUM_01",
+      "physical_bodies": 9,
+      "ready_bodies": 9,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Sagittarum Custodians",
+          "max_from_pool": 9,
+          "mode": "DIRECT"
+        },
+        {
+          "unit": "Custodian Guard",
+          "max_from_pool": 9,
+          "mode": "CONVERSION_REQUIRED"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_WARDENS_01",
+      "physical_bodies": 10,
+      "ready_bodies": 0,
+      "buildable_bodies": 10,
+      "roles": [
+        {
+          "unit": "Custodian Wardens",
+          "max_from_pool": 10,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_ALLARUS_01",
+      "physical_bodies": 9,
+      "ready_bodies": 6,
+      "buildable_bodies": 3,
+      "roles": [
+        {
+          "unit": "Allarus Custodians",
+          "max_from_pool": 9,
+          "mode": "DIRECT"
+        },
+        {
+          "unit": "Shield-Captain In Allarus Terminator Armour",
+          "max_from_pool": 9,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_VERTUS_01",
+      "physical_bodies": 6,
+      "ready_bodies": 6,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Vertus Praetors",
+          "max_from_pool": 6,
+          "mode": "DIRECT"
+        },
+        {
+          "unit": "Shield-Captain On Dawneagle Jetbike",
+          "max_from_pool": 6,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_SISTERS_01",
+      "physical_bodies": 10,
+      "ready_bodies": 0,
+      "buildable_bodies": 10,
+      "roles": [
+        {
+          "unit": "Prosecutors",
+          "max_from_pool": 10,
+          "mode": "DIRECT"
+        },
+        {
+          "unit": "Witchseekers",
+          "max_from_pool": 10,
+          "mode": "DIRECT"
+        },
+        {
+          "unit": "Vigilators",
+          "max_from_pool": 10,
+          "mode": "DIRECT"
+        },
+        {
+          "unit": "Knight-Centura",
+          "max_from_pool": 1,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_VENATARI_01",
+      "physical_bodies": 6,
+      "ready_bodies": 6,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Venatari Custodians",
+          "max_from_pool": 6,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_CALADIUS_01",
+      "physical_bodies": 1,
+      "ready_bodies": 1,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Caladius Grav-Tank",
+          "max_from_pool": 1,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_ACHILLUS_01",
+      "physical_bodies": 1,
+      "ready_bodies": 1,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Contemptor-Achillus Dreadnought",
+          "max_from_pool": 1,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_GALATUS_01",
+      "physical_bodies": 1,
+      "ready_bodies": 1,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Contemptor-Galatus Dreadnought",
+          "max_from_pool": 1,
+          "mode": "DIRECT"
+        }
+      ]
+    },
+    {
+      "pool_id": "CUSTODES_TELEMON_01",
+      "physical_bodies": 2,
+      "ready_bodies": 2,
+      "buildable_bodies": 0,
+      "roles": [
+        {
+          "unit": "Telemon Heavy Dreadnought",
+          "max_from_pool": 2,
+          "mode": "DIRECT"
+        }
+      ]
+    }
+  ],
+  "component_pools": [
+    {
+      "component_id": "CUSTODES_GUARD_SWORD_SHIELD_SET",
+      "capacity": 7,
+      "source_constraint": "CUSTODES_GUARD_SWORD_SHIELD_MAX"
+    },
+    {
+      "component_id": "CUSTODES_BLADE_CHAMPION_VAULTSWORD_SET",
+      "capacity": 2,
+      "source_constraint": "CUSTODES_BLADE_CHAMPION_MAX_PHYSICAL"
+    },
+    {
+      "component_id": "CUSTODES_ALLARUS_BUILT_AXE",
+      "capacity": 6
+    },
+    {
+      "component_id": "CUSTODES_ALLARUS_MAGNETIZED_SPEAR",
+      "capacity": 7
+    },
+    {
+      "component_id": "CUSTODES_ALLARUS_VEXILLA",
+      "capacity": 1
+    },
+    {
+      "component_id": "CUSTODES_SISTERS_BOLTGUN",
+      "capacity": 15
+    },
+    {
+      "component_id": "CUSTODES_SISTERS_EXECUTIONER_GREATBLADE",
+      "capacity": 15
+    },
+    {
+      "component_id": "CUSTODES_SISTERS_FLAMER",
+      "capacity": 15
+    },
+    {
+      "component_id": "CUSTODES_TELEMON_ARACHNUS_STORM_CANNON",
+      "capacity": 2
+    },
+    {
+      "component_id": "CUSTODES_TELEMON_ILIASTUS_ACCELERATOR_CULVERIN",
+      "capacity": 2
+    },
+    {
+      "component_id": "CUSTODES_TELEMON_CAESTUS_PLASMA_PROJECTOR",
+      "capacity": 2
+    },
+    {
+      "component_id": "CUSTODES_VENATARI_PISTOL_BUCKLER_SET",
+      "capacity": 6
+    }
+  ],
+  "paid_wargear_physical_support": [
+    {
+      "unit": "Caladius Grav-Tank",
+      "item": "Twin arachnus heavy blaze cannon",
+      "status": "SUPPORTED_CONFIRMED"
+    },
+    {
+      "unit": "Venatari Custodians",
+      "item": "Venatari lance",
+      "status": "UNKNOWN_EXACT_COMPONENT_CAPACITY",
+      "constraint_id": "CUSTODES_VENATARI_GUARD_SPEAR_SHARING"
+    }
+  ],
+  "unknown_constraints": [
+    {
+      "id": "CUSTODES_VENATARI_GUARD_SPEAR_SHARING",
+      "trigger": {
+        "unit": "Venatari Custodians",
+        "paid_wargear": "Venatari lance"
+      },
+      "reason": "Venatari lances draw from the Guard removable spear pool, but the exact lance-equivalent simultaneously allocatable count is not explicitly normalized."
+    },
+    {
+      "id": "WARDEN_EXTRA_SHOULDER_PADS",
+      "trigger": {
+        "component_id": "CUSTODES_WARDEN_EXTRA_FULL_ARM_SWAP_SET"
+      },
+      "reason": "Extra Warden shoulder-pad pair count remains unresolved. This does not prevent building ten Wardens."
+    }
+  ],
+  "policy": {
+    "allow_conversion_default": false,
+    "assembly_from_owned_sprue_is_physically_feasible": true,
+    "provisional_inventory_never_promotes_to_current_verified": true,
+    "undeclared_loadout_components_are_not_inferred": true
+  }
+}
