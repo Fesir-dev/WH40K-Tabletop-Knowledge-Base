@@ -6,16 +6,15 @@ Updated: **2026-09-29**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest validated release-transition readiness evidence:
+Latest validated release-transition activation-watch evidence:
 
-- merged milestone commit: `67e5493486de247be2646c555c9dbd16c90542dc`
-- validated PR head: `83e91886e467b7b154895adbb1216866ac460a7c`
-- release-transition readiness run: `36609275591` — **SUCCESS**
-- generic repository validation run: `36609275318` — **SUCCESS**
-- deterministic checkpoint reproduction: **PASS**
-- release-transition unit tests: **PASS**
-- direct promotion eligibility: **false for all tracked transitions**
-- closure report: `reports/RELEASE_TRANSITION_READINESS_CLOSURE_2026-09-29.md`
+- validated implementation head: `cdcb3e2e66635520c8670d60f8e762840e087d8c`
+- activation-watch run: `36609958145` — **SUCCESS**
+- release-readiness run: `36609957868` — **SUCCESS**
+- generic repository validation run: `36609957783` — **SUCCESS**
+- activation-watch checkpoint: `NO_ACTION_REQUIRED`
+- auto-promotion / direct current mutation: **disabled**
+- closure report: `reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CLOSURE_2026-09-29.md`
 
 ## Completed major layers
 
@@ -98,6 +97,22 @@ Checkpoint 2026-09-29:
 - Adeptus Custodes: `UPCOMING_HOLD_NO_RELEASE_DATE`, retail/current-legal release date **UNKNOWN**, current-legal confirmation **false**;
 - no future rules promoted.
 
+
+### Release-transition activation watch
+**CLOSED AT OPERATIONAL READ-ONLY V1**
+- cadence: **every 6 hours**;
+- current checkpoint: `NO_ACTION_REQUIRED`;
+- Space Marines: `NO_ACTION → WAIT_PRE_RELEASE`;
+- Adeptus Custodes: `NO_ACTION → WAIT_OFFICIAL_RELEASE_SIGNAL`;
+- actionable future states: `ACTION_REQUIRED`, `MONITORING_UPSTREAM_PROJECTION`, `READY_FOR_GUARDED_CANDIDATE`;
+- unknown states fail closed to `ACTION_REQUIRED`;
+- GitHub warnings/step summary: active;
+- repository mutation permissions: none;
+- direct promotion eligibility: always false;
+- candidate-ready state only authorizes the existing guarded candidate route.
+
+The watch remains operational while other development continues.
+
 ### New Recruit runtime projection
 **CLOSED AS VALIDATION LAYER — LINEAGE HARDENED**
 - roster identities resolved: **37 / 37**;
@@ -177,14 +192,14 @@ Closure report:
 
 ## Current active milestone
 
-`RELEASE_TRANSITION_ACTIVATION_WATCH`
+`NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT`
 
 High-level remaining work:
 
-1. watch for explicit official Space Marines current-legal activation evidence around 2026-10-03;
-2. watch for explicit Adeptus Custodes current-legal activation evidence without inventing a release date;
-3. after activation, require actual upstream projection change and route through guarded candidate → reconciliation → reviewed promotion;
-4. optional deeper normative/app equivalence and additional collection solver profiles remain later work.
+1. inventory the exact normative/app gaps that keep `current_normalized_factions = 0`;
+2. separate app-only wording, unavailable official text, mirror-to-official equivalence, and genuinely unresolved rules dimensions;
+3. define which gaps can be closed with current repository capabilities and which must remain explicit UNKNOWN;
+4. release-transition watch continues in parallel and must not be restarted or bypassed.
 
 ## Execution reliability rule
 
@@ -195,6 +210,6 @@ High-level remaining work:
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, or release-transition readiness v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, or activation-watch v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.
