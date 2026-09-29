@@ -4,7 +4,10 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+from datetime import date
 from pathlib import Path
+
+from release_transition_gate import promotion_blockers
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -46,7 +49,13 @@ def source(registry: dict, sid: str) -> dict:
     return hits[0]
 
 
-def check(plan: dict, report: dict, artifact_dir: Path) -> dict:
+def check(
+    plan: dict,
+    report: dict,
+    artifact_dir: Path,
+    release_state: dict | None = None,
+    as_of: date | None = None,
+) -> dict:
     if plan.get("state") != "CANDIDATE_REQUIRED":
         raise SystemExit("Promotion requires a CANDIDATE_REQUIRED plan")
     if report.get("plan_id") != plan.get("plan_id"):
@@ -66,6 +75,20 @@ def check(plan: dict, report: dict, artifact_dir: Path) -> dict:
     if "BSDATA_MFM_11E" in plan.get("changed_sources", []):
         raise SystemExit("MFM-derived extraction changes require the separate official authority gate")
 
+    if release_state is None:
+        release_path = ROOT / "sources" / "release_state.json"
+        release_state = load(release_path) if release_path.exists() else {"transitions": []}
+    transition_blockers = promotion_blockers(
+        release_state,
+        report.get("affected_roster_identities", []),
+        as_of or date.today(),
+    )
+    if transition_blockers:
+        raise SystemExit(
+            "Release transition promotion blocked: "
+            + json.dumps(transition_blockers, ensure_ascii=False, sort_keys=True)
+        )
+
     plan_id = safe_key(plan["plan_id"])
     candidate_key = safe_key(plan["candidate_snapshot_date"])
     candidate_root = artifact_dir / "candidate"
@@ -79,6 +102,8 @@ def check(plan: dict, report: dict, artifact_dir: Path) -> dict:
         "changed_sources": sorted(changed),
         "snapshot_root": snapshot_root,
         "evidence_root": evidence_root,
+        "affected_roster_identities": sorted(report.get("affected_roster_identities", [])),
+        "release_transition_blockers": [],
     }
 
     if "WAHAPEDIA_11E" in changed:
@@ -129,7 +154,8 @@ def check(plan: dict, report: dict, artifact_dir: Path) -> dict:
 def apply_promotion(repo_root: Path, artifact_dir: Path, promoted_at: str) -> dict:
     plan = load(artifact_dir / "reingestion_plan.json")
     report = load(artifact_dir / "candidate_report.json")
-    ev = check(plan, report, artifact_dir)
+    release_state = load(repo_root / "sources" / "release_state.json")
+    ev = check(plan, report, artifact_dir, release_state, date.fromisoformat(promoted_at))
 
     plan_id = ev["plan_id"]
     candidate_key = ev["candidate_key"]
@@ -429,13 +455,16 @@ def main() -> int:
     artifact_dir = args.artifact_dir.resolve()
     plan = load(artifact_dir / "reingestion_plan.json")
     report = load(artifact_dir / "candidate_report.json")
-    ev = check(plan, report, artifact_dir)
+    release_state = load(ROOT / "sources" / "release_state.json")
+    ev = check(plan, report, artifact_dir, release_state, date.fromisoformat(args.promoted_at))
     proposal = {
         "schema_version": "1.0",
         "plan_id": ev["plan_id"],
         "plan_fingerprint": plan["plan_fingerprint"],
         "candidate_snapshot": ev["candidate_key"],
         "changed_sources": ev["changed_sources"],
+        "affected_roster_identities": ev["affected_roster_identities"],
+        "release_transition_blockers": ev["release_transition_blockers"],
         "promotion_gate": "ELIGIBLE_FOR_REVIEWED_PROMOTION",
         "auto_promote": False,
         "requires_explicit_apply": True,
