@@ -1,0 +1,37 @@
+name: Full semantic fingerprint audit
+
+on:
+  push:
+    paths:
+      - "tools/audit_semantic_fingerprints.py"
+      - ".github/workflows/semantic-full-audit.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "47 5 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit all live semantic fingerprints
+        run: python tools/audit_semantic_fingerprints.py
+      - name: Commit semantic audit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json
+          if git diff --cached --quiet; then
+            echo "No semantic report changes"
+          else
+            git commit -m "Refresh Wave B semantic fingerprint audit"
+            git push
+          fi
