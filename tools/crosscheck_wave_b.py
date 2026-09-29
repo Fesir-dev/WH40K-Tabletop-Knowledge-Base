@@ -4,7 +4,7 @@ import argparse, json, re, unicodedata, urllib.parse, urllib.request
 from collections import defaultdict
 from pathlib import Path
 
-BSDATA_COMMIT = "951d5900d1b4a952a4ba560a30c43788e622ccfc"
+DEFAULT_BSDATA_COMMIT = "951d5900d1b4a952a4ba560a30c43788e622ccfc"
 
 def norm(v):
     v = unicodedata.normalize("NFKD", v or "").replace("’", "'").replace("‘", "'")
@@ -35,9 +35,9 @@ def collect_units(obj, out):
     elif isinstance(obj,list):
         for x in obj: collect_units(x,out)
 
-def bsdata_names(path):
+def bsdata_names(path, commit):
     q=urllib.parse.quote(path,safe="/")
-    url="https://raw.githubusercontent.com/BSData/wh40k-11e/"+BSDATA_COMMIT+"/"+q
+    url="https://raw.githubusercontent.com/BSData/wh40k-11e/"+commit+"/"+q
     req=urllib.request.Request(url,headers={"User-Agent":"WH40K-Tabletop-Knowledge-Base/1.0"})
     with urllib.request.urlopen(req,timeout=60) as r:
         obj=json.loads(r.read().decode("utf-8"))
@@ -48,9 +48,15 @@ def main():
     ap.add_argument("--root",default=".")
     ap.add_argument("--snapshot-date",default="2026-09-29")
     ap.add_argument("--fetch-bsdata",action="store_true")
+    ap.add_argument("--bsdata-commit",default=DEFAULT_BSDATA_COMMIT)
+    ap.add_argument("--wahapedia-snapshot-date")
+    ap.add_argument("--mfm-snapshot-date")
+    ap.add_argument("--report-path")
     a=ap.parse_args()
     root=Path(a.root).resolve()
-    wroot=root/"rules"/"11e"/"snapshots"/a.snapshot_date/"wahapedia"
+    waha_date=a.wahapedia_snapshot_date or a.snapshot_date
+    mfm_date=a.mfm_snapshot_date or a.snapshot_date
+    wroot=root/"rules"/"11e"/"snapshots"/waha_date/"wahapedia"
     manifest=json.loads((wroot/"manifest.json").read_text(encoding="utf-8"))
     catalog=json.loads((root/"factions"/"catalog.json").read_text(encoding="utf-8"))
     cats={x["slug"]:x for x in catalog["factions"]}
@@ -59,7 +65,7 @@ def main():
         slug=ent.get("repository_slug")
         if not slug or ent.get("datasheets",0)==0 or slug not in cats: continue
         cat=cats[slug]; ms=cat.get("mfm_source_slug")
-        mp=root/"rules"/"11e"/"snapshots"/a.snapshot_date/"mfm"/"factions"/(str(ms)+".json")
+        mp=root/"rules"/"11e"/"snapshots"/mfm_date/"mfm"/"factions"/(str(ms)+".json")
         if not ms or not mp.exists(): continue
         w=json.loads((root/ent["file"]).read_text(encoding="utf-8"))
         m=json.loads(mp.read_text(encoding="utf-8"))
@@ -93,7 +99,7 @@ def main():
         bs=None
         if a.fetch_bsdata:
             try:
-                bn=bsdata_names(cat["bsdata_path"])
+                bn=bsdata_names(cat["bsdata_path"], a.bsdata_commit)
                 bs={"unit_names":len(bn),"matched_wahapedia_names":len(bn&wn),"overlap_ratio":round(len(bn&wn)/len(bn),4) if bn else None}
             except Exception as e:
                 bs={"error":str(e)}
@@ -108,8 +114,9 @@ def main():
     if totals["factions_compared"]<23: raise SystemExit("insufficient faction reconciliation")
     if totals["unit_name_matches"]<900: raise SystemExit("suspicious unit-name overlap")
     if totals["points_compared"]<600: raise SystemExit("suspicious points comparison count")
-    report={"schema_version":"1.0","snapshot_date":a.snapshot_date,"wahapedia_last_update":manifest["source"]["last_update"],"mfm_version":"1.4","bsdata_commit":BSDATA_COMMIT if a.fetch_bsdata else None,"status":"PASS_WITH_CONFLICTS" if conflicts else "PASS","totals":dict(totals),"conflict_count":len(conflicts),"conflicts":conflicts,"factions":results,"promotion_guidance":{"structural_snapshot":"ELIGIBLE","mfm_overrides_cost_conflicts":True,"full_rule_text_semantics":"NOT_PROMOTED","faq_errata":"NOT_PROMOTED"}}
-    out=root/"reports"/("WAVE_B_RECONCILIATION_"+a.snapshot_date+".json")
+    report={"schema_version":"1.0","snapshot_date":a.snapshot_date,"wahapedia_last_update":manifest["source"]["last_update"],"mfm_version":"1.4","bsdata_commit":a.bsdata_commit if a.fetch_bsdata else None,"status":"PASS_WITH_CONFLICTS" if conflicts else "PASS","totals":dict(totals),"conflict_count":len(conflicts),"conflicts":conflicts,"factions":results,"promotion_guidance":{"structural_snapshot":"ELIGIBLE","mfm_overrides_cost_conflicts":True,"full_rule_text_semantics":"NOT_PROMOTED","faq_errata":"NOT_PROMOTED"}}
+    out=Path(a.report_path).resolve() if a.report_path else root/"reports"/("WAVE_B_RECONCILIATION_"+a.snapshot_date+".json")
+    out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"status":report["status"],"totals":report["totals"],"conflict_count":len(conflicts)},ensure_ascii=False,indent=2))
     return 0
