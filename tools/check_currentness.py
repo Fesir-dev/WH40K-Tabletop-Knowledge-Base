@@ -10,7 +10,7 @@ gate = json.loads((ROOT / "sources" / "currentness_gate.json").read_text(encodin
 pending = [
     check["id"]
     for check in gate["required_checks"]
-    if check["authority"] == "official_primary" and check["state"] != "PASS"
+    if check.get("blocking", check.get("authority") == "official_primary") and check["state"] != "PASS"
 ]
 
 if pending:
@@ -19,4 +19,14 @@ if pending:
         print("-", source_id)
     raise SystemExit(2)
 
-print("Official-primary currentness gate PASS")
+print("Blocking normative currentness gate PASS")
+
+nonblocking = [
+    check["id"]
+    for check in gate["required_checks"]
+    if not check.get("blocking", False) and check["state"] != "PASS"
+]
+if nonblocking:
+    print("Non-blocking cross-checks pending:")
+    for source_id in nonblocking:
+        print("-", source_id)
