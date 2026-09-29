@@ -96,7 +96,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(self.wave_b_recon["conflict_count"], 11)
         self.assertEqual(self.wave_b_recon["totals"]["points_compared"], 1202)
         self.assertEqual(self.wave_b_recon["totals"]["unit_name_matches"], 1242)
-        self.assertEqual(self.coverage["status"], "WAVE_B_STRUCTURAL_COMPLETE")
+        self.assertEqual(self.coverage["status"], "WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE")
         self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_current")), 35)
         self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
         self.assertEqual(self.current["status"], "CURRENT_STRUCTURAL_READY_SEMANTIC_PENDING")
