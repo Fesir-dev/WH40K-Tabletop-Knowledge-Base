@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "captured_at": "2026-09-29T13:04:21Z",
+  "captured_at": "2026-09-29T13:06:25Z",
   "snapshot_date": "2026-09-29",
   "source": {
     "id": "WAHAPEDIA_11E_CSV",
@@ -12,7 +12,8 @@
     "edition_11_sources_present": true,
     "minimum_factions": 20,
     "minimum_datasheets": 1000,
-    "copyright_reduced_snapshot": true
+    "copyright_reduced_snapshot": true,
+    "ability_catalog_numeric_ids_only": true
   },
   "files": [
     {
@@ -301,6 +302,7 @@
   ],
   "counts": {
     "factions": 25,
+    "ability_catalog": 95,
     "models": 1763,
     "weapons": 8972,
     "keywords": 16188,

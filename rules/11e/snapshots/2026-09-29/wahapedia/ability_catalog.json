@@ -117,39 +117,6 @@
     "legend_present": true
   },
   {
-    "id": "<div class=\"str11Wrap\">"
-  },
-  {
-    "id": "<div class=\"str11BodyWrap\">"
-  },
-  {
-    "id": "<div class=\"str11HeadBlock str11Name\">SCOUT MOVE<span class=\"h_number\">24.32</span></div>"
-  },
-  {
-    "id": "</div>"
-  },
-  {
-    "id": "<div class=\"str11BodyWrap\">"
-  },
-  {
-    "id": "<div class=\"str11TextWrap\">"
-  },
-  {
-    "id": "<div class=\"str11Text\"><div class=\"strGreyBg\"><b>MAXIMUM DISTANCE:</b> The <b>X\"</b> in <b>Scouts X\"</b>.</div><div class=\"str11Line\"></div><b>ELIGIBLE IF:</b> It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.<br><div class=\"str11Line\"></div><b>EFFECT:</b> Your unit moves as described in Moving (<span class=\"kwn\"><a href=\"/wh40k11ed/the-rules/core-rules/#Moving\">03</a></span>).<br><div class=\"str11Line\"></div><b>AFTER MOVING:</b> Your unit must be more than 8\" horizontally from all enemy units.</div>"
-  },
-  {
-    "id": "</div>"
-  },
-  {
-    "id": "<div class=\"str11Bg str11AMoveBg\"><div class=\"str11Icon str11AMove\"></div></div>"
-  },
-  {
-    "id": "</div>"
-  },
-  {
-    "id": "</div></div></div>"
-  },
-  {
     "id": "000008345",
     "name": "Infiltrators",
     "description_sha256": "0ff147fcef1661af2312c8b94784e70249e8bae6a129489f0b6fa9c03db342b3",
@@ -834,71 +801,5 @@
     "faction_id": "ORK",
     "description_sha256": "ce4e7ce353f89c5b691d431e300d5517e564aac86cdec8dff6084bde5723c413",
     "description_present": true
-  },
-  {
-    "id": "<div class=\"str11Wrap\">"
-  },
-  {
-    "id": "<div class=\"str11BodyWrap\">"
-  },
-  {
-    "id": "<div class=\"str11HeadBlock str11Name\">PULSE JET MOVE</div>"
-  },
-  {
-    "id": "</div>"
-  },
-  {
-    "id": "<div class=\"str11BodyWrap\">"
-  },
-  {
-    "id": "<div class=\"str11TextWrap\">"
-  },
-  {
-    "id": "<div class=\"str11Text\"><div class=\"strGreyBg\"><b>MAXIMUM DISTANCE:</b> Pulse roll + 18\"</div><div class=\"str11Line\"></div><b>ELIGIBLE IF:</b> As stated in the rule allowing this <b><b><a href=\"/wh40k11ed/the-rules/core-rules/#2.-Move-Units-Step\">move type</a></b></b>.<br><div class=\"str11Line\"></div><b>EFFECT:</b> Your unit moves as described in Moving (Core Rules, <span class=\"kwn\"><a href=\"/wh40k11ed/the-rules/core-rules/#Moving\">03</a></span>).<br><div class=\"str11Line\"></div><b>BEFORE MOVING:</b><br><ul><li>Make a <b>pulse roll</b> by rolling one D6.</li></ul><div class=\"str11Line\"></div><b>WHILE MOVING:</b><br><ul><li>Ignore all vertical distance for the purposes of how far your unit has moved.</li><li>Your unit can move through all types of model.</li><li>Your unit can move horizontally and vertically through all categories of <b><b><a href=\"/wh40k11ed/the-rules/core-rules/#Terrain\">terrain feature</a></b></b>.</li></ul><div class=\"str11Line\"></div><b>AFTER MOVING:</b><br><ul><li>Your unit must be <b><b><span class=\"tooltip00009\" data-tooltip-content=\"#tooltip_content00009\"><span class=\"tt kwbu\">unengaged</span></span></b></b>.</li><li>Until the end of the turn, your unit is <u>not</u> <b><b><a href=\"/wh40k11ed/the-rules/core-rules/#2.-Charge-Step\">eligible to declare a charge</a></b></b> or <b><b><a href=\"/wh40k11ed/the-rules/core-rules/#Starting-an-Action\">start an action</a></b></b>.</li><li>Until the start of your next turn, attacks that target your unit have -1 to <b><b><span class=\"tooltip00026\" data-tooltip-content=\"#tooltip_content00026\"><span class=\"tt kwbu\">hit</span> <span class=\"tt kwbu\">rolls</span></span></b></b>.</li></ul></div>"
-  },
-  {
-    "id": "</div>"
-  },
-  {
-    "id": "<div class=\"str11Bg str11AMoveBg\"><div class=\"str11Icon str11AMove\"></div></div>"
-  },
-  {
-    "id": "</div>"
-  },
-  {
-    "id": "</div></div><br><a id=\"ASSAULT-DISEMBARK-MOVE\" name=\"ASSAULT-DISEMBARK-MOVE\"></a><div class=\" BreakInsideAvoid\">"
-  },
-  {
-    "id": "<div class=\"str11Wrap\">"
-  },
-  {
-    "id": "<div class=\"str11BodyWrap\">"
-  },
-  {
-    "id": "<div class=\"str11HeadBlock str11Name\">ASSAULT DISEMBARK MOVE<span class=\"h_number\">18.06</span></div>"
-  },
-  {
-    "id": "</div>"
-  },
-  {
-    "id": "<div class=\"str11BodyWrap\">"
-  },
-  {
-    "id": "<div class=\"str11TextWrap\">"
-  },
-  {
-    "id": "<div class=\"str11Text\"><div class=\"strGreyBg\"><b>SET-UP DISTANCE:</b> 3\"</div><div class=\"str11Line\"></div><b>ELIGIBLE IF:</b><br><ul><li>Embarked within a <a href=\"/wh40k11ed/the-rules/core-rules/#Transports\"><span class=\"kwb kwbu\">TRANSPORT</span></a> on the battlefield</li><li>Did not embark within that <span class=\"kwb\">TRANSPORT</span> this phase</li><li>That <span class=\"kwb\">TRANSPORT</span> has not made an <b><span class=\"tooltip00022\" data-tooltip-content=\"#tooltip_content00022\"><span class=\"tt kwbu\">advance</span></span></b>/<b><span class=\"tooltip00082\" data-tooltip-content=\"#tooltip_content00082\"><span class=\"tt kwbu\">fall-back</span> <span class=\"tt kwbu\">move</span></span></b> this phase</li></ul><div class=\"str11Line\"></div><b>EFFECT:</b> Set up as described in Set Up (<span class=\"kwn\"><a href=\"/wh40k11ed/the-rules/core-rules/#Set-Up\">03.02</a></span>).<br><div class=\"str11Line\"></div><b>WHILE MOVING:</b> Set up each model wholly within the <b>set-up distance</b> of that <span class=\"kwb\">TRANSPORT</span>.</div>"
-  },
-  {
-    "id": "</div>"
-  },
-  {
-    "id": "<div class=\"str11Bg str11AMoveBg\"><div class=\"str11Icon str11AMove\"></div></div>"
-  },
-  {
-    "id": "</div>"
-  },
-  {
-    "id": "</div></div>"
   }
 ]
