@@ -1,0 +1,364 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-29",
+  "purpose": "Source-role and lineage matrix for competitive 40K analytics. It prevents dependent aggregators from being mistaken for independent confirmation.",
+  "independence_policy": {
+    "rule": "Confidence is based on independent underlying evidence lineages, not the number of websites repeating the same tournament feed.",
+    "examples": [
+      "BCP + Infinite Archive performance metrics count primarily as one BCP-derived empirical lineage.",
+      "Listhammer + Meta Merge do not become two independent winning-list samples when Meta Merge consumes Listhammer.",
+      "Hutber statistics derived from BCP/Tabletop Herald are cross-checks/transformations of those feeds, not new raw tournaments.",
+      "Expert sources are independent only when their conclusions are authored independently; an expert merely quoting an aggregator does not create a new empirical lineage."
+    ]
+  },
+  "priority_tiers": {
+    "P0": "Core ingestion: high-value, current and directly useful for reproducible roster/meta analysis.",
+    "P1": "Strong supporting evidence or modelling; ingest after P0.",
+    "P2": "Supplementary/interpretive evidence; useful for disagreement discovery and context."
+  },
+  "sources": [
+    {
+      "id": "BCP_40K",
+      "tier": "P0",
+      "class": "raw_event_results",
+      "strengths": [
+        "event results",
+        "pairings",
+        "placements",
+        "submitted lists"
+      ],
+      "limitations": [
+        "access/coverage varies by event"
+      ],
+      "lineages": [
+        "bcp_event_results"
+      ],
+      "automation": "medium"
+    },
+    {
+      "id": "TABLETOP_HERALD_40K",
+      "tier": "P0",
+      "class": "raw_event_results",
+      "strengths": [
+        "events",
+        "pairings",
+        "results",
+        "lists",
+        "European coverage"
+      ],
+      "limitations": [
+        "regional/platform coverage bias"
+      ],
+      "lineages": [
+        "tabletop_herald_event_results"
+      ],
+      "automation": "high"
+    },
+    {
+      "id": "STAT_CHECK_40K",
+      "tier": "P0",
+      "class": "aggregate_statistics",
+      "strengths": [
+        "win rate",
+        "representation",
+        "matchups",
+        "Elo",
+        "filters"
+      ],
+      "limitations": [
+        "underlying lineage must be audited before treating as independent from other aggregators"
+      ],
+      "lineages": [
+        "stat_check_aggregation"
+      ],
+      "automation": "medium"
+    },
+    {
+      "id": "INFINITE_ARCHIVE_40K",
+      "tier": "P0",
+      "class": "advanced_statistics",
+      "strengths": [
+        "Wilson confidence intervals",
+        "matchup matrix",
+        "top-cut conversion",
+        "VP differential",
+        "consistency",
+        "round attrition",
+        "Elo"
+      ],
+      "limitations": [
+        "performance layer is BCP-derived; do not double-count with BCP"
+      ],
+      "lineages": [
+        "bcp_event_results"
+      ],
+      "automation": "high"
+    },
+    {
+      "id": "LISTHAMMER_40K",
+      "tier": "P0",
+      "class": "winning_list_feed",
+      "strengths": [
+        "recent undefeated/X-1 lists",
+        "detachments",
+        "dispositions",
+        "list discovery"
+      ],
+      "limitations": [
+        "winner-only feed; not a win-rate dataset"
+      ],
+      "lineages": [
+        "bcp_event_results",
+        "tabletop_herald_event_results"
+      ],
+      "automation": "high"
+    },
+    {
+      "id": "META_MERGE_40K",
+      "tier": "P0",
+      "class": "winning_list_composition",
+      "strengths": [
+        "build share",
+        "momentum",
+        "spine/flex/tech",
+        "consensus list",
+        "ROZ/ROSZ workflow"
+      ],
+      "limitations": [
+        "derived from Listhammer; winner share is not win rate"
+      ],
+      "lineages": [
+        "bcp_event_results",
+        "tabletop_herald_event_results",
+        "bsdata_catalogue"
+      ],
+      "automation": "high"
+    },
+    {
+      "id": "TACTICAL_REROLL_40K",
+      "tier": "P1",
+      "class": "mathhammer_plus_meta",
+      "strengths": [
+        "damage-per-point",
+        "durability-per-point",
+        "unit utility",
+        "meta pick rate",
+        "recent lists"
+      ],
+      "limitations": [
+        "model outputs are not tournament observations; utility includes analyst judgment"
+      ],
+      "lineages": [
+        "grimstat_tournament_lists",
+        "bsdata_catalogue",
+        "tactical_reroll_model"
+      ],
+      "automation": "high"
+    },
+    {
+      "id": "HUTBER_STATS_40K",
+      "tier": "P1",
+      "class": "integrated_meta_platform",
+      "strengths": [
+        "faction/detachment stats",
+        "unit presence",
+        "Elo",
+        "army lists",
+        "events"
+      ],
+      "limitations": [
+        "mixes BCP/Tabletop Herald upstream; some older pages still show migration messaging"
+      ],
+      "lineages": [
+        "bcp_event_results",
+        "tabletop_herald_event_results",
+        "bsdata_catalogue"
+      ],
+      "automation": "high"
+    },
+    {
+      "id": "META_TRACKER_40K",
+      "tier": "P1",
+      "class": "curated_top_tables",
+      "strengths": [
+        "top-table lists",
+        "top-4 momentum",
+        "practice rosters"
+      ],
+      "limitations": [
+        "curated top tables only; not population win rate"
+      ],
+      "lineages": [
+        "curated_public_top_tables"
+      ],
+      "automation": "medium"
+    },
+    {
+      "id": "UNITCRUNCH_40K",
+      "tier": "P1",
+      "class": "simulation_tool",
+      "strengths": [
+        "Monte Carlo",
+        "damage distributions",
+        "probability cross-check"
+      ],
+      "limitations": [
+        "theorycrafting only; does not measure board control or tournament success"
+      ],
+      "lineages": [
+        "unitcrunch_model"
+      ],
+      "automation": "low"
+    },
+    {
+      "id": "GOONHAMMER_40K",
+      "tier": "P1",
+      "class": "expert_editorial",
+      "strengths": [
+        "Competitive Innovations",
+        "Ruleshammer",
+        "faction/list analysis"
+      ],
+      "limitations": [
+        "editorial/expert interpretation; articles can span different patches"
+      ],
+      "lineages": [
+        "goonhammer_editorial"
+      ],
+      "automation": "medium"
+    },
+    {
+      "id": "ART_OF_WAR_40K",
+      "tier": "P1",
+      "class": "elite_competitive_coaching",
+      "strengths": [
+        "top-player list construction",
+        "masterclasses",
+        "tournament strategy",
+        "meta analysis"
+      ],
+      "limitations": [
+        "substantial material is subscription content; only accessible/public evidence may be ingested"
+      ],
+      "lineages": [
+        "art_of_war_experts"
+      ],
+      "automation": "low"
+    },
+    {
+      "id": "FORTY_K_FIRESIDE",
+      "tier": "P1",
+      "class": "matchup_coaching",
+      "strengths": [
+        "matchup guidance",
+        "deployment plans",
+        "player scouting",
+        "coach scores"
+      ],
+      "limitations": [
+        "coach guidance is opinion; some features paid; Stat Check-derived data is not independent"
+      ],
+      "lineages": [
+        "fireside_coaches",
+        "stat_check_aggregation"
+      ],
+      "automation": "medium"
+    },
+    {
+      "id": "VANGUARD_TACTICS_40K",
+      "tier": "P2",
+      "class": "structured_coaching",
+      "strengths": [
+        "faction guides",
+        "list building",
+        "competitive training"
+      ],
+      "limitations": [
+        "primarily coaching/expert content, much of it paid"
+      ],
+      "lineages": [
+        "vanguard_tactics_coaches"
+      ],
+      "automation": "low"
+    },
+    {
+      "id": "WARPFRIENDS_40K",
+      "tier": "P2",
+      "class": "weekly_meta_digest",
+      "strengths": [
+        "weekly meta snapshots",
+        "X-0/X-1",
+        "disposition breakdown"
+      ],
+      "limitations": [
+        "upstream lineage/automation still requires dedicated audit"
+      ],
+      "lineages": [
+        "public_tournament_results"
+      ],
+      "automation": "low"
+    },
+    {
+      "id": "AUSPEX_TACTICS_40K",
+      "tier": "P2",
+      "class": "broad_expert_commentary",
+      "strengths": [
+        "fast unit/points/faction coverage",
+        "broad second opinion"
+      ],
+      "limitations": [
+        "video/editorial format; canonical channel ingestion not pinned yet"
+      ],
+      "lineages": [
+        "auspex_editorial"
+      ],
+      "automation": "low"
+    },
+    {
+      "id": "GRIMDARK_BREAKDOWN_40K",
+      "tier": "P2",
+      "class": "weekly_meta_commentary",
+      "strengths": [
+        "Meta Monday",
+        "play rate",
+        "win rate commentary",
+        "dispositions"
+      ],
+      "limitations": [
+        "editorial layer; canonical channel ingestion not pinned yet"
+      ],
+      "lineages": [
+        "grimdark_breakdown_editorial"
+      ],
+      "automation": "low"
+    },
+    {
+      "id": "FORTYKDC_DATA",
+      "tier": "P1",
+      "class": "architecture_reference",
+      "strengths": [
+        "11E schemas",
+        "ability DSL",
+        "roster import/export",
+        "damage cruncher",
+        "conformance tests"
+      ],
+      "limitations": [
+        "not normative truth and not a tournament meta source"
+      ],
+      "lineages": [
+        "40kdc_architecture"
+      ],
+      "automation": "high"
+    }
+  ],
+  "candidate_sources_for_future_audit": [
+    "Veizla",
+    "Odyssey 40K",
+    "Happy Krumping Wargaming",
+    "Frontline Gaming",
+    "Spikey Bits",
+    "additional WTC/team-event analytics",
+    "regional tournament platforms not covered by BCP/Tabletop Herald"
+  ]
+}
