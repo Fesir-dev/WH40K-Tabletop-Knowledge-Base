@@ -8,9 +8,10 @@ Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
 Latest validated release-transition readiness evidence:
 
-- validated implementation head: `22814f3bcc6a5f45cdb0746ffeb7c2dcc6a35eab`
-- release-transition readiness run: `36609106222` — **SUCCESS**
-- generic repository validation run: `36609106327` — **SUCCESS**
+- merged milestone commit: `67e5493486de247be2646c555c9dbd16c90542dc`
+- validated PR head: `83e91886e467b7b154895adbb1216866ac460a7c`
+- release-transition readiness run: `36609275591` — **SUCCESS**
+- generic repository validation run: `36609275318` — **SUCCESS**
 - deterministic checkpoint reproduction: **PASS**
 - release-transition unit tests: **PASS**
 - direct promotion eligibility: **false for all tracked transitions**
