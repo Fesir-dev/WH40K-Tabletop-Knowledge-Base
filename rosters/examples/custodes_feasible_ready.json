@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "roster_id": "custodes_feasible_ready",
+  "faction": "adeptus-custodes",
+  "detachment": "Shield Host",
+  "points_limit": 2000,
+  "units": [
+    {
+      "id": "trajann",
+      "unit": "Trajann Valoris",
+      "models": 1
+    },
+    {
+      "id": "guard",
+      "unit": "Custodian Guard",
+      "models": 5
+    },
+    {
+      "id": "allarus",
+      "unit": "Allarus Custodians",
+      "models": 3
+    },
+    {
+      "id": "caladius",
+      "unit": "Caladius Grav-Tank",
+      "models": 1,
+      "paid_wargear": [
+        {
+          "item": "Twin arachnus heavy blaze cannon",
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "attachments": [
+    {
+      "leader_ref": "trajann",
+      "bodyguard_ref": "guard"
+    }
+  ]
+}
