@@ -86,7 +86,7 @@ class RepositoryContracts(unittest.TestCase):
 
         report=self.release_readiness
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["milestone"], "RELEASE_TRANSITION_ACTIVATION_WATCH")
+        self.assertEqual(report["milestone"], "RELEASE_TRANSITION_INGESTION_READINESS")
         self.assertEqual(report["as_of"], "2026-09-29")
         self.assertFalse(report["global_policy"]["auto_promote"])
         rows={x["transition_id"]:x for x in report["transitions"]}
