@@ -17,6 +17,7 @@ class RepositoryContracts(unittest.TestCase):
         cls.wave_b_manifest = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/wahapedia/manifest.json").read_text(encoding="utf-8"))
         cls.wave_b_recon = json.loads((ROOT/"reports/WAVE_B_RECONCILIATION_2026-09-29.json").read_text(encoding="utf-8"))
         cls.current = json.loads((ROOT/"rules/11e/current.json").read_text(encoding="utf-8"))
+        cls.bsdata_fallback = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/bsdata_fallback/index.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -100,6 +101,32 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(self.current["wave_b_structural"]["roster_identities_complete"], 35)
         self.assertEqual(self.current["wave_b_structural"]["semantic_rule_text"], "PENDING")
         self.assertEqual(self.current["wave_b_structural"]["faq_errata"], "PENDING")
+
+
+    def test_structural_source_availability_37_of_37(self):
+        g=self.coverage["global"]
+        self.assertEqual(g["wave_b_current_mirror_structural_complete"], 35)
+        self.assertEqual(g["wave_b_structured_implementation_fallback_complete"], 2)
+        self.assertEqual(g["wave_b_total_structural_source_available"], 37)
+        self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_source_available")), 37)
+        rows={x["slug"]:x for x in self.coverage["factions"]}
+        for slug in {"titanicus_traitoris","unaligned_forces"}:
+            self.assertFalse(rows[slug]["structural_current"])
+            self.assertEqual(rows[slug]["wave_b_structural"]["state"], "IMPLEMENTATION_FALLBACK_COMPLETE")
+            self.assertEqual(rows[slug]["wave_b_structural"]["source_role"], "structured_implementation")
+            self.assertFalse(rows[slug]["wave_b_structural"]["normative_rules_verified"])
+
+    def test_bsdata_fallback_snapshot(self):
+        self.assertEqual(self.bsdata_fallback["commit_sha"], "951d5900d1b4a952a4ba560a30c43788e622ccfc")
+        rows={x["slug"]:x for x in self.bsdata_fallback["views"]}
+        self.assertEqual(rows["titanicus_traitoris"]["counts"]["units"], 4)
+        self.assertEqual(rows["unaligned_forces"]["counts"]["units"], 22)
+
+    def test_semantic_resolver_contract(self):
+        self.assertTrue((ROOT/"tools/query_current_semantics.py").exists())
+        self.assertTrue((ROOT/".github/workflows/semantic-smoke.yml").exists())
+        self.assertEqual(self.current["wave_b_structural"]["total_structural_source_available"], 37)
+        self.assertEqual(self.current["wave_b_structural"]["semantic_rule_text"], "PENDING")
 
     def test_preview_never_replaces_current(self):
         for tr in self.release["transitions"]:
