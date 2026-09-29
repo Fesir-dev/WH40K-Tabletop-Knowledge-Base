@@ -27,6 +27,7 @@ VALID_AUTHORITIES = {
     "tooling_reference",
     "empirical_dataset",
     "analytical_model",
+    "derived_extraction",
     "expert_analysis",
     "event_overlay",
     "community_intelligence",
@@ -48,6 +49,7 @@ VALID_SOURCE_ROLES = {
     "mathhammer",
     "expert_analysis",
     "architecture_reference",
+    "official_source_extraction",
     "event_overlay",
     "community_intelligence",
     "historical_baseline",
@@ -105,6 +107,7 @@ try:
         "UNITCRUNCH_40K",
         "ART_OF_WAR_40K",
         "FORTY_K_FIRESIDE",
+        "BSDATA_MFM_11E",
     }
     missing_sources = required_source_ids - set(source_ids)
     if missing_sources:
@@ -139,6 +142,7 @@ try:
         "ART_OF_WAR_40K": "expert_analysis",
         "FORTY_K_FIRESIDE": "expert_analysis",
         "FORTYKDC_DATA": "architecture_reference",
+        "BSDATA_MFM_11E": "official_source_extraction",
     }
     for source_id, expected_role in expected_roles.items():
         if by_source_id.get(source_id, {}).get("source_role") != expected_role:
@@ -320,6 +324,56 @@ try:
 except Exception as exc:
     errors.append(f"Painting knowledge-base validation failure: {exc}")
 
+# 3e. Current MFM Wave A contracts.
+try:
+    mfm_index = json.loads(
+        (ROOT / "rules" / "11e" / "snapshots" / "2026-09-29" / "mfm" / "index.json").read_text(encoding="utf-8")
+    )
+    if mfm_index.get("official_source", {}).get("version") != "1.4":
+        errors.append("Current MFM snapshot must remain version 1.4 for 2026-09-29")
+    if mfm_index.get("official_source", {}).get("last_updated") != "2026-09-02":
+        errors.append("Current MFM snapshot update date drifted")
+    expected_totals = {
+        "units": 1789,
+        "detachments": 348,
+        "pricing_rows": 2980,
+        "leader_relations": 1574,
+        "support_relations": 571,
+        "wargear_cost_entries": 107,
+        "enhancement_cost_entries": 1193,
+        "legends_units": 326,
+    }
+    for key, value in expected_totals.items():
+        if mfm_index.get("totals", {}).get(key) != value:
+            errors.append(f"MFM aggregate {key} drifted: {mfm_index.get('totals', {}).get(key)} != {value}")
+    faction_files = mfm_index.get("faction_files", [])
+    if len(faction_files) != 30:
+        errors.append(f"Expected 30 normalized MFM faction pages, got {len(faction_files)}")
+    for rel in faction_files:
+        path = ROOT / rel
+        if not path.exists():
+            errors.append(f"Missing normalized MFM faction snapshot: {rel}")
+            continue
+        snap = json.loads(path.read_text(encoding="utf-8"))
+        if snap.get("mfm_version") != "1.4":
+            errors.append(f"MFM version drift in {rel}")
+        if snap.get("provenance", {}).get("extraction_commit") != "61a687e858c00a4ad205d564959c622a5605ef3d":
+            errors.append(f"MFM extraction commit drift in {rel}")
+
+    cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+    wave_dims = set(mfm_index.get("coverage", {}).get("dimensions", []))
+    mapped = 0
+    for row in cov.get("factions", []):
+        if row.get("mfm_applicable"):
+            mapped += 1
+            for dim in wave_dims:
+                if row.get("coverage", {}).get(dim) != 100:
+                    errors.append(f"Incomplete MFM Wave A coverage {row.get('slug')}.{dim}")
+    if mapped != 36:
+        errors.append(f"Expected 36 MFM-mapped roster identities, got {mapped}")
+except Exception as exc:
+    errors.append(f"MFM Wave A validation failure: {exc}")
+
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (
     ROOT
@@ -435,5 +489,5 @@ if errors:
 
 print(
     "PASS: repository JSON, baselines, source statuses, Custodes collection, "
-    "semantic-core index, external/analytics source contracts, roster evidence model, painting KB, and historical repricing invariants validated."
+    "semantic-core index, external/analytics source contracts, roster evidence model, painting KB, current MFM Wave A, and historical repricing invariants validated."
 )

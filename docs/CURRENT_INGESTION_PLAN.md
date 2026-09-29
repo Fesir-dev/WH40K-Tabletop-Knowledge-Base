@@ -16,14 +16,20 @@ Move the repository from a historical eight-faction bootstrap to complete, measu
 
 ## Import order
 
-### Wave A — global/MFM
+### Wave A — global/MFM — **COMPLETE 2026-09-29**
 
-Normalize the current MFM first because it gives the cleanest official bulk layer:
+Normalized MFM v1.4 (official update 2026-09-02) through a pinned deterministic extraction of the official MFM. Current snapshot totals: 30 source faction pages, 1,789 unit entries, 2,980 pricing rows, 1,574 Leader relations, 571 Support relations, 348 detachments and 1,193 enhancement-cost entries.
+
+Coverage is complete for 36/37 roster identities (Unaligned Forces has no MFM page) for:
 
 - points and unit-size bands;
-- Leader/bodyguard relations;
-- Detachment Points;
-- Force Dispositions.
+- copy-tier/requisition-threshold pricing;
+- paid wargear;
+- Leader/Support relations;
+- detachment catalogue and Detachment Points;
+- Force Dispositions;
+- enhancement costs;
+- Legends pricing.
 
 ### Wave B — stable faction rules
 

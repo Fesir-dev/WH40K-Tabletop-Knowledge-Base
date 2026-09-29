@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/mfm_faction_snapshot.schema.json",
+  "title": "WH40K 11E MFM Faction Snapshot",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "snapshot_id",
+    "edition",
+    "mfm_version",
+    "official_last_updated",
+    "faction",
+    "provenance",
+    "summary",
+    "detachments",
+    "units"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "snapshot_id": {
+      "type": "string"
+    },
+    "edition": {
+      "const": "11e"
+    },
+    "mfm_version": {
+      "type": "string"
+    },
+    "official_last_updated": {
+      "type": "string"
+    },
+    "content_first_seen": {
+      "type": "string"
+    },
+    "faction": {
+      "type": "object",
+      "required": [
+        "slug",
+        "name"
+      ],
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "normative_source_id",
+        "extraction_source_id",
+        "extraction_commit",
+        "extraction_blob_sha"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "units",
+        "detachments",
+        "pricing_rows",
+        "leader_relations",
+        "support_relations",
+        "wargear_cost_entries",
+        "enhancement_cost_entries",
+        "legends_units"
+      ],
+      "additionalProperties": true
+    },
+    "detachments": {
+      "type": "array"
+    },
+    "units": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

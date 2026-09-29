@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "as_of": "2026-09-29",
   "universe_source": {
     "source_id": "BSDATA_WH40K_11E",
@@ -10,7 +10,9 @@
     "roster_catalogues": 37,
     "standard_or_supplement_roster_identities": 34,
     "titan_forces": 2,
-    "auxiliary_forces": 1
+    "auxiliary_forces": 1,
+    "mfm_mapped_roster_identities": 36,
+    "mfm_unmapped_or_not_applicable": 1
   },
   "factions": [
     {
@@ -21,9 +23,13 @@
       "bsdata_path": "Aeldari - Craftworlds.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "aeldari",
+      "mfm_view_mode": "base_only",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/aeldari.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "drukhari",
@@ -33,9 +39,13 @@
       "bsdata_path": "Aeldari - Drukhari.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "drukhari",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/drukhari.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "chaos_daemons",
@@ -45,9 +55,13 @@
       "bsdata_path": "Chaos - Chaos Daemons.json",
       "legacy_rules_material": true,
       "personal_collection": false,
-      "kb_current_status": "HISTORICAL_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "chaos-daemons",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/chaos-daemons.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "chaos_knights",
@@ -57,9 +71,13 @@
       "bsdata_path": "Chaos - Chaos Knights.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "chaos-knights",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/chaos-knights.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "chaos_space_marines",
@@ -69,9 +87,13 @@
       "bsdata_path": "Chaos - Chaos Space Marines.json",
       "legacy_rules_material": true,
       "personal_collection": false,
-      "kb_current_status": "HISTORICAL_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "chaos-space-marines",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/chaos-space-marines.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "death_guard",
@@ -81,9 +103,13 @@
       "bsdata_path": "Chaos - Death Guard.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "death-guard",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/death-guard.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "emperors_children",
@@ -93,9 +119,13 @@
       "bsdata_path": "Chaos - Emperor's Children.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "emperors-children",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/emperors-children.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "thousand_sons",
@@ -105,9 +135,13 @@
       "bsdata_path": "Chaos - Thousand Sons.json",
       "legacy_rules_material": true,
       "personal_collection": false,
-      "kb_current_status": "HISTORICAL_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "thousand-sons",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/thousand-sons.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "titanicus_traitoris",
@@ -117,9 +151,13 @@
       "bsdata_path": "Chaos - Titanicus Traitoris.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "chaos-titan-legions",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/chaos-titan-legions.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "world_eaters",
@@ -129,9 +167,13 @@
       "bsdata_path": "Chaos - World Eaters.json",
       "legacy_rules_material": true,
       "personal_collection": false,
-      "kb_current_status": "HISTORICAL_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "world-eaters",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/world-eaters.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "genestealer_cults",
@@ -141,9 +183,13 @@
       "bsdata_path": "Genestealer Cults.json",
       "legacy_rules_material": true,
       "personal_collection": false,
-      "kb_current_status": "HISTORICAL_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "genestealer-cults",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/genestealer-cults.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "adepta_sororitas",
@@ -153,9 +199,13 @@
       "bsdata_path": "Imperium - Adepta Sororitas.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "adepta-sororitas",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/adepta-sororitas.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "adeptus_custodes",
@@ -165,9 +215,13 @@
       "bsdata_path": "Imperium - Adeptus Custodes.json",
       "legacy_rules_material": true,
       "personal_collection": true,
-      "kb_current_status": "HISTORICAL_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "ADEPTUS_CUSTODES_CODEX_2026"
+      "release_track": "ADEPTUS_CUSTODES_CODEX_2026",
+      "mfm_source_slug": "adeptus-custodes",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/adeptus-custodes.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "adeptus_mechanicus",
@@ -177,9 +231,13 @@
       "bsdata_path": "Imperium - Adeptus Mechanicus.json",
       "legacy_rules_material": true,
       "personal_collection": false,
-      "kb_current_status": "HISTORICAL_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "adeptus-mechanicus",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/adeptus-mechanicus.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "adeptus_titanicus",
@@ -189,9 +247,13 @@
       "bsdata_path": "Imperium - Adeptus Titanicus.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "titan-legions",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/titan-legions.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "agents_of_the_imperium",
@@ -201,9 +263,13 @@
       "bsdata_path": "Imperium - Agents of the Imperium.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "imperial-agents",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/imperial-agents.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "astra_militarum",
@@ -213,9 +279,13 @@
       "bsdata_path": "Imperium - Astra Militarum.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "astra-militarum",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/astra-militarum.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "black_templars",
@@ -225,9 +295,13 @@
       "bsdata_path": "Imperium - Black Templars.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "black-templars",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/black-templars.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "blood_angels",
@@ -237,9 +311,13 @@
       "bsdata_path": "Imperium - Blood Angels.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "blood-angels",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/blood-angels.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "dark_angels",
@@ -249,9 +327,13 @@
       "bsdata_path": "Imperium - Dark Angels.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "dark-angels",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/dark-angels.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "deathwatch",
@@ -261,9 +343,13 @@
       "bsdata_path": "Imperium - Deathwatch.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "deathwatch",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/deathwatch.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "grey_knights",
@@ -273,9 +359,13 @@
       "bsdata_path": "Imperium - Grey Knights.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "grey-knights",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/grey-knights.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "imperial_fists",
@@ -285,9 +375,14 @@
       "bsdata_path": "Imperium - Imperial Fists.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "space-marines",
+      "mfm_view_mode": "base_plus_group",
+      "mfm_group_title": "Imperial Fists",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/space-marines.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "imperial_knights",
@@ -297,9 +392,13 @@
       "bsdata_path": "Imperium - Imperial Knights.json",
       "legacy_rules_material": true,
       "personal_collection": false,
-      "kb_current_status": "HISTORICAL_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "imperial-knights",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/imperial-knights.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "iron_hands",
@@ -309,9 +408,14 @@
       "bsdata_path": "Imperium - Iron Hands.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "space-marines",
+      "mfm_view_mode": "base_plus_group",
+      "mfm_group_title": "Iron Hands",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/space-marines.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "raven_guard",
@@ -321,9 +425,14 @@
       "bsdata_path": "Imperium - Raven Guard.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "space-marines",
+      "mfm_view_mode": "base_plus_group",
+      "mfm_group_title": "Raven Guard",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/space-marines.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "salamanders",
@@ -333,9 +442,14 @@
       "bsdata_path": "Imperium - Salamanders.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "space-marines",
+      "mfm_view_mode": "base_plus_group",
+      "mfm_group_title": "Salamanders",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/space-marines.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "space_marines",
@@ -345,9 +459,13 @@
       "bsdata_path": "Imperium - Space Marines.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "space-marines",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/space-marines.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "space_wolves",
@@ -357,9 +475,13 @@
       "bsdata_path": "Imperium - Space Wolves.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "space-wolves",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/space-wolves.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "ultramarines",
@@ -369,9 +491,14 @@
       "bsdata_path": "Imperium - Ultramarines.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "space-marines",
+      "mfm_view_mode": "base_plus_group",
+      "mfm_group_title": "Ultramarines",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/space-marines.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "white_scars",
@@ -381,9 +508,14 @@
       "bsdata_path": "Imperium - White Scars.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "SPACE_MARINES_CODEX_2026"
+      "release_track": "SPACE_MARINES_CODEX_2026",
+      "mfm_source_slug": "space-marines",
+      "mfm_view_mode": "base_plus_group",
+      "mfm_group_title": "White Scars",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/space-marines.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "leagues_of_votann",
@@ -393,9 +525,13 @@
       "bsdata_path": "Leagues of Votann.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "leagues-of-votann",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/leagues-of-votann.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "necrons",
@@ -405,9 +541,13 @@
       "bsdata_path": "Necrons.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "necrons",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/necrons.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "orks",
@@ -417,9 +557,13 @@
       "bsdata_path": "Orks.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "ORKS_CODEX_2026"
+      "release_track": "ORKS_CODEX_2026",
+      "mfm_source_slug": "orks",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "tau_empire",
@@ -429,9 +573,13 @@
       "bsdata_path": "T'au Empire.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "tau-empire",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/tau-empire.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "tyranids",
@@ -441,9 +589,13 @@
       "bsdata_path": "Tyranids.json",
       "legacy_rules_material": false,
       "personal_collection": false,
-      "kb_current_status": "SKELETON_ONLY",
+      "kb_current_status": "PARTIAL_CURRENT",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": "tyranids",
+      "mfm_view_mode": "full_page",
+      "mfm_snapshot_path": "rules/11e/snapshots/2026-09-29/mfm/factions/tyranids.json",
+      "mfm_coverage_state": "COMPLETE"
     },
     {
       "slug": "unaligned_forces",
@@ -455,7 +607,11 @@
       "personal_collection": false,
       "kb_current_status": "SKELETON_ONLY",
       "current_normalized": false,
-      "release_track": "STANDARD_CURRENT"
+      "release_track": "STANDARD_CURRENT",
+      "mfm_source_slug": null,
+      "mfm_view_mode": null,
+      "mfm_snapshot_path": null,
+      "mfm_coverage_state": "NOT_APPLICABLE"
     }
   ]
 }

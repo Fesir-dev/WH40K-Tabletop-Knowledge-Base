@@ -1,35 +1,37 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "source_id": "GW_MFM",
   "checked_at": "2026-09-29",
   "official_landing_page": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
   "interactive_endpoint": "https://mfm.warhammer-community.com/en/",
+  "observed_official_version": "1.4",
   "observed_official_update_date": "2026-09-02",
   "official_scope": [
     "unit_points",
     "unit_size_costs",
+    "copy_tier_pricing",
+    "wargear_costs",
     "leader_join_relations",
+    "support_join_relations",
+    "detachment_catalog",
     "detachment_points",
-    "force_dispositions"
+    "force_dispositions",
+    "enhancement_costs",
+    "legends_pricing"
   ],
   "retrieval_observations": {
     "landing_page": "PASS",
-    "direct_interactive_fetch": "HTTP_403",
-    "indexed_faction_pages": "READABLE_BUT_CACHE_AGE_VARIES",
-    "safe_for_bulk_promotion": false
+    "direct_interactive_fetch_from_chat_environment": "HTTP_403",
+    "extraction_bridge": "BSData/wh40k-11e-mfm",
+    "extraction_bridge_commit": "61a687e858c00a4ad205d564959c622a5605ef3d",
+    "extraction_bridge_dataset": "MFM 1.4 / 2026-09-02",
+    "safe_for_bulk_promotion": "YES_WITH_PINNED_EXTRACTION_AND_REPOSITORY_VALIDATION"
   },
   "safe_ingestion_policy": [
-    "Use the official landing page as the revision/date authority.",
-    "Do not bulk-promote values solely from stale search-engine cache copies of MFM faction pages.",
-    "Use pinned BSData and current Wahapedia as structured/readable extraction candidates.",
-    "Cross-check disagreements and changed/high-risk values against current official evidence before normative promotion.",
-    "Keep repository coverage separate from source-currentness."
-  ],
-  "evidence": [
-    {
-      "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
-      "checked_at": "2026-09-29",
-      "note": "Official page states MFM updated 02/09/2026 and describes points, Leader relations, Detachment Points and Force Dispositions."
-    }
+    "Games Workshop remains the normative authority for MFM facts.",
+    "Use pinned deterministic extraction from BSData/wh40k-11e-mfm when direct interactive retrieval is blocked.",
+    "Preserve extraction commit and upstream blob SHA for every normalized faction page.",
+    "Do not use stale search-index copies as the bulk dataset.",
+    "Treat full faction rules/datasheets as a separate Wave B domain; MFM coverage does not imply full faction coverage."
   ]
 }

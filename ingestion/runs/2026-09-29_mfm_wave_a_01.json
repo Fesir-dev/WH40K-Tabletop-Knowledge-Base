@@ -1,0 +1,113 @@
+{
+  "run_id": "INGEST_2026-09-29_MFM_WAVE_A_01",
+  "started_at": "2026-09-29T00:00:00Z",
+  "completed_at": "2026-09-29T00:00:00Z",
+  "mode": "CURRENT_REFRESH",
+  "source_revisions": [
+    {
+      "source_id": "GW_MFM",
+      "version": "1.4",
+      "official_last_updated": "2026-09-02",
+      "state": "PASS"
+    },
+    {
+      "source_id": "BSDATA_MFM_11E",
+      "commit_sha": "61a687e858c00a4ad205d564959c622a5605ef3d",
+      "state": "PASS"
+    }
+  ],
+  "affected_factions": [
+    "aeldari_craftworlds",
+    "drukhari",
+    "chaos_daemons",
+    "chaos_knights",
+    "chaos_space_marines",
+    "death_guard",
+    "emperors_children",
+    "thousand_sons",
+    "titanicus_traitoris",
+    "world_eaters",
+    "genestealer_cults",
+    "adepta_sororitas",
+    "adeptus_custodes",
+    "adeptus_mechanicus",
+    "adeptus_titanicus",
+    "agents_of_the_imperium",
+    "astra_militarum",
+    "black_templars",
+    "blood_angels",
+    "dark_angels",
+    "deathwatch",
+    "grey_knights",
+    "imperial_fists",
+    "imperial_knights",
+    "iron_hands",
+    "raven_guard",
+    "salamanders",
+    "space_marines",
+    "space_wolves",
+    "ultramarines",
+    "white_scars",
+    "leagues_of_votann",
+    "necrons",
+    "orks",
+    "tau_empire",
+    "tyranids"
+  ],
+  "changed_objects": [
+    {
+      "kind": "mfm_faction_pages",
+      "count": 30
+    },
+    {
+      "kind": "unit_entries",
+      "count": 1789
+    },
+    {
+      "kind": "pricing_rows",
+      "count": 2980
+    },
+    {
+      "kind": "leader_relations",
+      "count": 1574
+    },
+    {
+      "kind": "support_relations",
+      "count": 571
+    },
+    {
+      "kind": "detachments",
+      "count": 348
+    },
+    {
+      "kind": "enhancement_cost_entries",
+      "count": 1193
+    },
+    {
+      "kind": "wargear_cost_entries",
+      "count": 107
+    }
+  ],
+  "conflicts": [],
+  "coverage_before": {
+    "mfm_roster_identities_complete": 0
+  },
+  "coverage_after": {
+    "mfm_roster_identities_complete": 36,
+    "mfm_roster_identities_not_applicable": 1,
+    "dimensions": [
+      "points",
+      "unit_sizes",
+      "leader_relations",
+      "detachment_catalog",
+      "detachment_points",
+      "force_dispositions",
+      "enhancement_costs",
+      "wargear_costs",
+      "legends_pricing"
+    ]
+  },
+  "result": "PASS",
+  "promotion": "MFM_DIMENSIONS_CURRENT_VERIFIED",
+  "note": "This promotion is limited to MFM-derived dimensions. Datasheet text, faction rules, stratagem rules and full enhancement rules remain pending Wave B."
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.0",
+  "schema_version": "3.1",
   "as_of": "2026-09-29",
   "status": "CURRENT_PENDING_RECHECK",
   "authority_policy": {
@@ -47,12 +47,17 @@
       "use_for": [
         "points",
         "unit_sizes",
+        "copy_tier_pricing",
+        "wargear_costs",
         "leader_support_relations",
+        "detachment_catalog",
         "detachment_points",
-        "force_dispositions"
+        "force_dispositions",
+        "enhancement_costs",
+        "legends_pricing"
       ],
       "source_health": "PASS",
-      "repository_coverage_state": "NOT_INGESTED",
+      "repository_coverage_state": "PARTIAL",
       "observed_revision": {
         "updated_at": "2026-09-02",
         "verified_at": "2026-09-29",
@@ -701,6 +706,44 @@
       ],
       "notes": [
         "Architectural/reference source, not normative rules authority and not a substitute for our provenance model."
+      ]
+    },
+    {
+      "id": "BSDATA_MFM_11E",
+      "title": "BSData wh40k-11e-mfm — official MFM scraper dataset",
+      "publisher": "BSData community",
+      "authority": "derived_extraction",
+      "source_role": "official_source_extraction",
+      "status": "CURRENT_VERIFIED",
+      "source_health": "PASS",
+      "repository_coverage_state": "PARTIAL",
+      "url": "https://github.com/BSData/wh40k-11e-mfm",
+      "checked_at": "2026-09-29",
+      "depends_on": [
+        "GW_MFM"
+      ],
+      "observed_revision": {
+        "commit_sha": "61a687e858c00a4ad205d564959c622a5605ef3d",
+        "mfm_version": "1.4",
+        "official_last_updated": "2026-09-02"
+      },
+      "use_for": [
+        "points",
+        "unit_sizes",
+        "copy_tier_pricing",
+        "wargear_costs",
+        "leader_relations",
+        "support_relations",
+        "detachment_catalog",
+        "detachment_points",
+        "force_dispositions",
+        "enhancement_costs",
+        "legends_pricing"
+      ],
+      "notes": [
+        "Unofficial deterministic extraction of the official MFM; GW remains normative authority.",
+        "The upstream parser validates output with zod, has offline fixtures/tests, and tracks changes in Git.",
+        "Pinned extraction is used because direct automated access to the interactive MFM endpoint is unreliable in this environment."
       ]
     }
   ],

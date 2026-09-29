@@ -28,7 +28,8 @@ These baselines are **historical inputs**, not a claim that their rules or point
 4. **Physical inventory is independent from game points.** Collection files describe owned models, bodies, bits and build constraints; points live in versioned rules/points layers.
 5. **Historical snapshots are immutable.** New updates create new snapshots/diffs rather than silently rewriting old evidence.
 6. **Derived data is reproducible.** The long-term target is raw/source metadata → normalized data → derived runtime → validation/regression.
-7. **Public-repository copyright hygiene.** Official source texts are referenced by provenance, URL/version/hash where appropriate; the repository should not become a verbatim mirror of copyrighted rulebooks.\n8. **Personal hobby knowledge is first-class.** Painting inventory, recipes, techniques and project state are versioned independently from game rules and competitive analytics.
+7. **Public-repository copyright hygiene.** Official source texts are referenced by provenance, URL/version/hash where appropriate; the repository should not become a verbatim mirror of copyrighted rulebooks.
+8. **Personal hobby knowledge is first-class.** Painting inventory, recipes, techniques and project state are versioned independently from game rules and competitive analytics.
 
 ## Repository layout
 
@@ -62,7 +63,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Expand the roster-universe catalogue from 8 historical factions to all 37 observed BSData roster catalogues.
 - [x] Separate source health, scoped currentness and repository coverage.
 - [x] Add release-transition tracking, coverage contracts, ingestion-run schema and repository contract tests.
-- [ ] Run FULL 11E CURRENT INGESTION v1 (MFM first, then faction rules).
+- [x] Complete Wave A MFM v1.4 normalization: 30 faction pages / 36 roster identities / points, sizes, Leaders, DP, Force Dispositions and costs.
+- [ ] Continue FULL 11E CURRENT INGESTION v1 with Wave B faction rules.
 - [ ] Build automated GW ↔ Wahapedia ↔ BSData normalization/diff workers.
 - [ ] Add New Recruit runtime validation/projection checks after normalized faction imports.
 - [ ] Add collection-aware roster legality/physical-feasibility solver.

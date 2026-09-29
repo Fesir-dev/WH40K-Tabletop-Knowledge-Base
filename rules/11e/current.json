@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_PENDING_RECHECK",
@@ -26,6 +26,25 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "FULL_11E_CURRENT_INGESTION_V1",
-  "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy."
+  "next_milestone": "WAVE_B_STABLE_FACTION_RULES",
+  "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
+  "wave_a_mfm": {
+    "state": "CURRENT_VERIFIED",
+    "snapshot": "rules/11e/snapshots/2026-09-29/mfm/index.json",
+    "version": "1.4",
+    "last_updated": "2026-09-02",
+    "normalized_faction_pages": 30,
+    "mapped_roster_identities": 36,
+    "dimensions": [
+      "points",
+      "unit_sizes",
+      "leader_relations",
+      "detachment_catalog",
+      "detachment_points",
+      "force_dispositions",
+      "enhancement_costs",
+      "wargear_costs",
+      "legends_pricing"
+    ]
+  }
 }
