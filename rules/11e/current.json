@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.2",
+  "schema_version": "3.3",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,9 +14,14 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "PENDING",
-      "public_source_discovered": true,
-      "discovery_evidence": "sources/discoveries/gw_public_rules_surface_2026-09-29.json"
+      "state": "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED",
+      "verified_at": "2026-09-29",
+      "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
+      "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
+      "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+      "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+      "page_count": 88,
+      "normative_structured_normalization": "PENDING"
     },
     "faction_rules_content": {
       "state": "SECONDARY_MIRROR_SEMANTICS_FULL_HASH_MATCH",
@@ -26,7 +31,15 @@
       "expected_fingerprints": 16506,
       "matched_fingerprints": 16506,
       "problems": 0,
-      "normative_equivalence": "NOT_CLAIMED"
+      "normative_equivalence": "NOT_CLAIMED",
+      "official_public_supplements": {
+        "state": "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED",
+        "verified_at": "2026-09-29",
+        "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
+        "faction_pack_pdfs": 28,
+        "scope": "SUPPLEMENTAL_NOT_FULL_CODEX",
+        "full_codex_equivalence": "NOT_CLAIMED"
+      }
     },
     "app_wording": {
       "state": "PENDING",
@@ -45,7 +58,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE",
+  "next_milestone": "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -310,5 +323,27 @@
       "no_public_faction_pack_mapping": 2
     },
     "authority_rule": "Public official overlap may be normalized and compared, but secondary mirror completeness and faction-pack supplement coverage never imply full Codex/app normative equivalence."
+  },
+  "official_public_semantic_fingerprints": {
+    "state": "PASS_FULL_PUBLIC_CORPUS",
+    "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
+    "tool": "tools/build_official_public_semantic_fingerprints.py",
+    "workflow": ".github/workflows/official-public-semantic-fingerprints.yml",
+    "schema": "schemas/official_public_semantic_fingerprint.schema.json",
+    "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
+    "extraction_engine": "pypdf 5.9.0",
+    "normalization_version": "OFFICIAL_TEXT_NFKC_WS_V1",
+    "documents": 29,
+    "core_rules": 1,
+    "faction_packs": 28,
+    "pages": 1430,
+    "text_chars": 1915296,
+    "failures": 0,
+    "core_rules_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "core_rules_semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+    "copyright_policy": "Hashes/counts/classes only; no long Games Workshop rules prose vendored.",
+    "normative_promotion": false,
+    "app_codex_equivalence": "PENDING",
+    "authority_rule": "Official public fingerprints improve evidence and drift detection only; full faction normalization remains blocked where Codex/app semantics are not publicly available or not yet normalized."
   }
 }
