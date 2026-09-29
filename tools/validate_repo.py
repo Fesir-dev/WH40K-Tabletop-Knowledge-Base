@@ -225,7 +225,7 @@ try:
 
     if readiness.get("status") != "PASS":
         errors.append("Release transition readiness report must PASS")
-    if readiness.get("milestone") != "RELEASE_TRANSITION_INGESTION_READINESS":
+    if readiness.get("milestone") != "RELEASE_TRANSITION_ACTIVATION_WATCH":
         errors.append("Release transition readiness milestone id drifted")
     if readiness.get("as_of") != "2026-09-29":
         errors.append("Committed release transition readiness checkpoint must remain 2026-09-29")
@@ -818,8 +818,18 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "RELEASE_TRANSITION_INGESTION_READINESS":
-        errors.append("Current milestone must be RELEASE_TRANSITION_INGESTION_READINESS")
+    if current_rules.get("next_milestone") != "RELEASE_TRANSITION_ACTIVATION_WATCH":
+        errors.append("Current milestone must be RELEASE_TRANSITION_ACTIVATION_WATCH")
+    readiness_layer = current_rules.get("release_transition_readiness", {})
+    if readiness_layer.get("state") != "OPERATIONAL_V1":
+        errors.append("Current rules must record release transition readiness v1 as operational")
+    if readiness_layer.get("policy", {}).get("auto_promote") is not False:
+        errors.append("Current release transition layer must keep auto_promote=false")
+    tracked = {x.get("id"): x for x in readiness_layer.get("tracked_transitions", [])}
+    if tracked.get("SPACE_MARINES_CODEX_2026", {}).get("state") != "PRE_RELEASE_HOLD":
+        errors.append("Current Space Marines transition state drifted")
+    if tracked.get("ADEPTUS_CUSTODES_CODEX_2026", {}).get("state") != "UPCOMING_HOLD_NO_RELEASE_DATE":
+        errors.append("Current Custodes transition state drifted")
 except Exception as exc:
     errors.append(f"Automated upstream/runtime monitoring validation failure: {exc}")
 
