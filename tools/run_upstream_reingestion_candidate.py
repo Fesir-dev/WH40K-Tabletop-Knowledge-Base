@@ -93,6 +93,7 @@ def main() -> int:
             "schema_version": "1.0",
             "plan_id": plan["plan_id"],
             "status": "NO_ACTION",
+            "affected_roster_identities": [],
             "stages": [],
             "promotion_gate": "NOT_APPLICABLE",
             "auto_promote": False,
