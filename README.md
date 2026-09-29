@@ -74,7 +74,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Build release-transition ingestion readiness v1 for pending Space Marines and Adeptus Custodes releases with fail-closed date/evidence gates and no direct promotion.
 - [x] Add read-only six-hour release activation watch with fail-closed action states and guarded-candidate readiness only after official currentness plus upstream projection drift.
 - [x] Audit the remaining normative/app equivalence gaps that keep `current_normalized_factions = 0`, including public Core Rules discovery, supplemental faction-pack scope, app blockers and source-to-roster provenance.
-- [ ] Build copyright-safe official public rules semantic fingerprints for 11E Core Rules plus public Faction Pack supplement/FAQ overlap, without claiming full Codex/app equivalence.
+- [x] Build copyright-safe official public semantic fingerprints for the 11E Core Rules plus all 28 verified public Faction Packs, with daily reproducibility checks and no full Codex/app equivalence claim.
+- [ ] Audit official-public ↔ current-mirror semantic overlap and begin structured official-public normalization without generalizing to Codex/app-only text.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary
