@@ -142,3 +142,55 @@ External structured snapshots should retain:
 - conflict status.
 
 Historical snapshots are immutable.
+
+## Guarded automated re-ingestion
+
+The upstream watcher now feeds a two-stage refresh path.
+
+```text
+upstream watcher
+      ↓
+deterministic reingestion plan
+      ↓
+isolated candidate workspace
+      ↓
+candidate snapshot + reconciliation + semantic audit
+      ↓
+reviewable GitHub Actions artifact
+      ↓
+explicit workflow_dispatch promotion
+      ↓
+new promotion branch
+      ↓
+post-apply upstream recheck
+      ↓
+New Recruit runtime revalidation
+      ↓
+semantic smoke + repository contracts
+      ↓
+promotion pull request
+      ↓
+human merge
+```
+
+Safety contract:
+
+- candidate generation may be automatic;
+- `auto_promote` is always `false`;
+- a changed `BSDATA_MFM_11E` revision blocks this path until the official Games Workshop MFM revision is revalidated;
+- a changed Wahapedia `Source.csv` requires a fresh official GW asset audit;
+- candidate execution occurs in an isolated repository copy and may not mutate current authority pointers;
+- promotion requires the exact candidate `plan_id` and fingerprint;
+- promotion is applied only to a new branch and opens a PR; it never pushes promotion state directly to `main`;
+- the promotion branch reruns the upstream watcher after pointer changes, so a source that moved again invalidates the proposal;
+- New Recruit runtime drift must remain classified; new/unclassified runtime drift blocks promotion;
+- normative GW/MFM authority is never changed by this mirror/implementation refresh path.
+
+Relevant tooling:
+
+- `tools/plan_upstream_reingestion.py`
+- `tools/run_upstream_reingestion_candidate.py`
+- `tools/apply_reingestion_promotion.py`
+- `tools/sync_new_recruit_runtime_status.py`
+- `.github/workflows/upstream-reingestion-candidate.yml`
+- `.github/workflows/upstream-reingestion-promote.yml`
