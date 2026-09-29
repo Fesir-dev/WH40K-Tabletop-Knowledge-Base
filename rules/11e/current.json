@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.3",
+  "schema_version": "3.4",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -344,6 +344,14 @@
     "copyright_policy": "Hashes/counts/classes only; no long Games Workshop rules prose vendored.",
     "normative_promotion": false,
     "app_codex_equivalence": "PENDING",
-    "authority_rule": "Official public fingerprints improve evidence and drift detection only; full faction normalization remains blocked where Codex/app semantics are not publicly available or not yet normalized."
+    "authority_rule": "Official public fingerprints improve evidence and drift detection only; full faction normalization remains blocked where Codex/app semantics are not publicly available or not yet normalized.",
+    "closure_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CLOSURE_2026-09-29.md",
+    "latest_validation": {
+      "head": "148843a72d27f20459e064da8c9943eab19c5ed2",
+      "fingerprint_workflow_run": 36615907736,
+      "normative_gap_audit_run": 36615908005,
+      "repository_ci_run": 36615907686,
+      "result": "SUCCESS"
+    }
   }
 }
