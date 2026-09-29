@@ -37,6 +37,7 @@ rules/                  Rules knowledge, current and historical snapshots
 factions/               Faction-specific normalized/derived knowledge
 collection/             Owned miniatures, bits and physical constraints
 rosters/                Versioned roster snapshots and collection-aware builds
+analytics/              Tournament/meta evidence and explainable roster recommendations
 hobby/                   Paints, recipes, basing, tools and materials
 sources/                 Source registry, provenance and baseline manifests
 schemas/                 Data contracts
@@ -55,6 +56,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Establish role-specific external source authority and conflict/freshness policies.
 - [x] Register Wahapedia, BSData/wh40k-11e and New Recruit as mirror → implementation → runtime cross-check layers.
 - [x] Register BCP/Stat Check/Goonhammer as separate analytics/analysis sources.
+- [x] Build a broader competitive source matrix (raw events → aggregators → list meta → mathhammer → expert analysis).
+- [x] Define a lineage-aware roster recommendation evidence model and schema.
 - [ ] Re-check current official 11E sources and points against the 2026-08-15 checkpoint.
 - [ ] Build automated GW ↔ Wahapedia ↔ BSData diff/normalization pipeline.
 - [ ] Add New Recruit runtime validation/projection checks to the update pipeline.
