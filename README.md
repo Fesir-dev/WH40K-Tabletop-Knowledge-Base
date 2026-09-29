@@ -51,9 +51,13 @@ legacy/                  Metadata for superseded project baselines
 - [x] Initialize repository governance and layout.
 - [x] Register the 2026-08-15 rules baseline.
 - [x] Import the current known Adeptus Custodes physical inventory baseline.
-- [ ] Migrate reusable v0.9 rules-engine schemas/tools into the new layout.
-- [ ] Re-check 11E official sources and current points against the 2026-08-15 checkpoint.
-- [ ] Reconcile Wahapedia 11E as a secondary cross-check source.
+- [x] Preserve the complete legacy bootstrap artifacts and integrity-gate them in CI.
+- [x] Establish role-specific external source authority and conflict/freshness policies.
+- [x] Register Wahapedia, BSData/wh40k-11e and New Recruit as mirror → implementation → runtime cross-check layers.
+- [x] Register BCP/Stat Check/Goonhammer as separate analytics/analysis sources.
+- [ ] Re-check current official 11E sources and points against the 2026-08-15 checkpoint.
+- [ ] Build automated GW ↔ Wahapedia ↔ BSData diff/normalization pipeline.
+- [ ] Add New Recruit runtime validation/projection checks to the update pipeline.
 - [ ] Expand faction materialization beyond the old local coverage.
 - [ ] Add collection-aware roster legality/physical-feasibility solver.
 - [ ] Import the user's paint/material inventory and painting recipes.
