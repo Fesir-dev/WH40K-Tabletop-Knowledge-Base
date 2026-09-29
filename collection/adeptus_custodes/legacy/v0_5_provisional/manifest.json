@@ -1,0 +1,29 @@
+{
+  "version": "0.5-provisional-r2",
+  "created": "2026-07-11",
+  "source_file": "коллекция кустов(1).json",
+  "source_roster_points": 4485,
+  "source_roster_models": 63,
+  "confirmed_physical_total_including_agents": 75,
+  "confirmed_custodes_and_sisters_excluding_agents": 70,
+  "open_questions": 1,
+  "files": [
+    "collection_adeptus_custodes_v0_5_provisional.json",
+    "ADEPTUS_CUSTODES_COLLECTION_SUMMARY_RU.md",
+    "sources/коллекция кустов(1).json"
+  ],
+  "resolved_clarifications": [
+    "Sagittarum maximum confirmed at 9 complete models",
+    "Sisters: 5 built boltguns, 5 unbuilt, 15 of each weapon bit",
+    "Telemon: 2 copies of each arm type",
+    "Venatari: 6 pistol+buckler sets",
+    "Fixed Guard sword/shield is additional to magnetic stock",
+    "Two Guard-derived captains may be ordinary Guard"
+  ],
+  "sisters_of_silence": {
+    "physical_bodies": 10,
+    "built_models": 0,
+    "on_sprue": 10,
+    "weapon_bits_each_type": 15
+  }
+}
