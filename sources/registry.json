@@ -745,6 +745,34 @@
         "The upstream parser validates output with zod, has offline fixtures/tests, and tracks changes in Git.",
         "Pinned extraction is used because direct automated access to the interactive MFM endpoint is unreliable in this environment."
       ]
+    },
+    {
+      "id": "WAHA40K_MCP_REFERENCE",
+      "title": "Waha40k MCP Server — Wahapedia 11E CSV integration reference",
+      "publisher": "MEC-Guard",
+      "authority": "tooling_reference",
+      "source_role": "architecture_reference",
+      "status": "CURRENT_VERIFIED",
+      "source_health": "PASS",
+      "repository_coverage_state": "REFERENCE_ONLY",
+      "url": "https://github.com/MEC-Guard/Waha40kMcp",
+      "checked_at": "2026-09-29",
+      "observed_revision": {
+        "commit_sha": "647f59d2e4071aa3bf66dadb0df44de290f7e1d7"
+      },
+      "use_for": [
+        "wahapedia_csv_endpoint_inventory",
+        "csv_schema_reference",
+        "legends_detection_reference",
+        "datasheet_keyword_mapping",
+        "weapon_keyword_mapping",
+        "wave_b_extraction_design"
+      ],
+      "notes": [
+        "Reference implementation points to Wahapedia 11E CSV endpoints for factions, datasheets, keywords, models, wargear, abilities, options, stratagems, detachment abilities and enhancements.",
+        "Its 11E update reports a live smoke test loading 1163 datasheets and 26 factions.",
+        "Reference only: this repository must reproduce and validate the extraction independently before promoting Wave B data."
+      ]
     }
   ],
   "analytics_policy": {

@@ -74,3 +74,24 @@ Upcoming Space Marines and Adeptus Custodes preview/release states remain tracke
 GitHub Actions run `36559861472` completed successfully for commit `c9a2a6fa4010f307c81232bc591f4faff8664925`.
 
 CI validates aggregate counts, per-file extraction commit, faction coverage, mappings and repository contracts.
+
+
+## Wave B extraction candidate
+
+A fresh external reference implementation, `MEC-Guard/Waha40kMcp` at commit `647f59d2e4071aa3bf66dadb0df44de290f7e1d7`, documents Wahapedia 11E CSV endpoints for:
+
+- Factions;
+- Sources;
+- Datasheets;
+- Datasheet keywords;
+- model characteristics;
+- weapons/wargear profiles;
+- abilities;
+- options;
+- Stratagems;
+- Detachment abilities;
+- Enhancements.
+
+Its 11E migration commit reports a live smoke test of 1,163 datasheets / 26 factions and adds regression tests around the real CSV column layout.
+
+This is registered as a **REFERENCE_ONLY** Wave B extraction candidate. It does not establish current rules truth and will not raise faction coverage until our own ingestion reproduces and validates the CSV layer.
