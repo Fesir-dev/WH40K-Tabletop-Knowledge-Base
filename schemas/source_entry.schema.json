@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source_entry.schema.json",
+  "title": "WH40K Tabletop Source Entry",
+  "type": "object",
+  "required": [
+    "id",
+    "authority",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "authority": {
+      "enum": [
+        "official_primary",
+        "official_secondary",
+        "secondary_reference",
+        "personal_observation",
+        "legacy_project"
+      ]
+    },
+    "edition": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "checked_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "status": {
+      "enum": [
+        "CURRENT_VERIFIED",
+        "CURRENT_PENDING_RECHECK",
+        "HISTORICAL_VERIFIED",
+        "PROVISIONAL",
+        "UNKNOWN"
+      ]
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}
