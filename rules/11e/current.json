@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.1",
+  "schema_version": "3.2",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,7 +14,9 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "PENDING"
+      "state": "PENDING",
+      "public_source_discovered": true,
+      "discovery_evidence": "sources/discoveries/gw_public_rules_surface_2026-09-29.json"
     },
     "faction_rules_content": {
       "state": "SECONDARY_MIRROR_SEMANTICS_FULL_HASH_MATCH",
@@ -27,7 +29,8 @@
       "normative_equivalence": "NOT_CLAIMED"
     },
     "app_wording": {
-      "state": "PENDING"
+      "state": "PENDING",
+      "blocker": "AUTHORIZED_APP_EVIDENCE_NOT_INGESTED"
     },
     "faq_errata_assets": {
       "state": "OFFICIAL_ASSETS_VERIFIED",
@@ -42,7 +45,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT",
+  "next_milestone": "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -286,5 +289,26 @@
       "result": "SUCCESS"
     },
     "merged_commit": "1b01255794c0f83af6e61690887f4a41b1b0952f"
+  },
+  "normative_equivalence_gap_audit": {
+    "state": "PASS_GAPS_CLASSIFIED",
+    "report": "reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json",
+    "closure_report": "reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CLOSURE_2026-09-29.md",
+    "tool": "tools/audit_normative_equivalence_gaps.py",
+    "workflow": ".github/workflows/normative-equivalence-gap-audit.yml",
+    "current_normalized_factions": 0,
+    "secondary_semantic_current_roster_identities": 35,
+    "public_core_rules_source_discovered": true,
+    "verified_public_faction_pack_pdfs": 28,
+    "public_faction_pack_scope": "SUPPLEMENTAL_NOT_FULL_CODEX",
+    "gw_app_wording": "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE",
+    "mirror_to_official_equivalence": "PARTIALLY_CLOSABLE_PUBLIC_OVERLAP_ONLY",
+    "source_to_roster_mapping": {
+      "direct_name_matches": 25,
+      "naming_alias_candidates": 3,
+      "parent_source_candidates": 7,
+      "no_public_faction_pack_mapping": 2
+    },
+    "authority_rule": "Public official overlap may be normalized and compared, but secondary mirror completeness and faction-pack supplement coverage never imply full Codex/app normative equivalence."
   }
 }
