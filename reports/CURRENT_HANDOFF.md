@@ -6,18 +6,20 @@ Updated: **2026-09-29**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest validated normative/app gap-audit evidence:
+Latest validated official-public fingerprint evidence:
 
-- audit baseline report: `reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json`
-- reproducible audit tool: `tools/audit_normative_equivalence_gaps.py`
-- audit workflow: `.github/workflows/normative-equivalence-gap-audit.yml`
-- pre-closure validated audit head: `436a053786fbdf6acd4f9c5040dc423f7c1c76a1`
-- normative/app audit run: `36611731432` — **SUCCESS**
-- generic repository validation run: `36611731596` — **SUCCESS**
-- public Core Rules source: **DISCOVERED / NOT YET INGESTED**
-- verified public Faction Pack PDFs: **28 / 28**
-- full Codex/app equivalence: **NOT CLAIMED**
-- closure report: `reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CLOSURE_2026-09-29.md`
+- fingerprint report: `reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json`
+- validated implementation head: `148843a72d27f20459e064da8c9943eab19c5ed2`
+- official fingerprint reproducibility run: `36615907736` — **SUCCESS**
+- normative/app gap projection run: `36615908005` — **SUCCESS**
+- generic repository validation run: `36615907686` — **SUCCESS**
+- official public corpus: **29 / 29 PASS**
+- Core Rules: **1 / 1**, 88 pages
+- public Faction Packs: **28 / 28**, all binary SHAs match prior official-asset evidence
+- total pages: **1,430**
+- normalized fingerprinted text: **1,915,296 characters**
+- strict normative faction promotion: **none**
+- closure report: `reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CLOSURE_2026-09-29.md`
 
 ## Completed major layers
 
@@ -132,6 +134,26 @@ The watch remains operational while other development continues.
 
 Authority boundary remains unchanged: public official overlap can be normalized, but missing Codex/app-only text cannot be inferred from Wahapedia, BSData or New Recruit.
 
+
+### Official public rules semantic fingerprints
+**CLOSED AS OPERATIONAL OFFICIAL EVIDENCE LAYER**
+- Games Workshop public documents fingerprinted: **29 / 29 PASS**;
+- Core Rules: **1**, binary SHA `f6a2443a...276833`, semantic SHA `c8b98076...107fe7`;
+- Faction Packs: **28 / 28**, every binary SHA matches prior verified official asset evidence;
+- pages: **1,430**;
+- normalized text characters: **1,915,296**;
+- extraction failures: **0**;
+- extraction engine: `pypdf 5.9.0`;
+- normalization: `OFFICIAL_TEXT_NFKC_WS_V1`;
+- stored content: hashes/counts/classes only; no long GW rules prose;
+- daily reproducibility/drift workflow: active;
+- Core Rules state: `OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED`;
+- public faction supplement state: `OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING`;
+- `current_normalized_factions = 0` remains intentional;
+- full Codex/app equivalence remains `PENDING`.
+
+The current normative gap projection now records Core/Faction-Pack fingerprint evidence as closed while structured official normalization and public official ↔ mirror overlap remain pending.
+
 ### New Recruit runtime projection
 **CLOSED AS VALIDATION LAYER — LINEAGE HARDENED**
 - roster identities resolved: **37 / 37**;
@@ -211,14 +233,15 @@ Closure report:
 
 ## Current active milestone
 
-`OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE`
+`OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT`
 
 High-level remaining work:
 
-1. register and fingerprint the official 2026 11E Core Rules source;
-2. fingerprint/structure public official Faction Pack supplement + FAQ/errata semantics without treating packs as full Codex replacements;
-3. build reviewed official-source→roster provenance mapping and compare only public official overlap against the current mirror;
-4. keep Codex/app-only wording explicit `PENDING/UNKNOWN`; release-transition watch continues in parallel.
+1. define exact comparable semantic units between the 29-document official public corpus and current Wahapedia projection;
+2. classify public overlap as exact match, normalization/extraction mismatch, semantic drift, or unmappable;
+3. preserve provenance at document/page/source-object level and begin structured official-public normalization only where mappings are exact;
+4. do not generalize public overlap matches into full Codex/app equivalence; app-only wording remains `PENDING/UNKNOWN`;
+5. release-transition activation watch continues independently.
 
 ## Execution reliability rule
 
@@ -229,6 +252,6 @@ High-level remaining work:
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, or the normative/app gap audit after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, or the official-public fingerprint pipeline after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.
