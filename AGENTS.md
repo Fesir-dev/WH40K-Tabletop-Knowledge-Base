@@ -83,3 +83,10 @@ Read before external-source work:
 36. Avoid repeated polling of the same workflow when no new state is expected. Prefer one status check at natural milestone boundaries.
 37. Avoid loading entire large JSON files when a targeted summary/range/query is sufficient.
 38. Do not continue far beyond a newly created unstable checkpoint. If a later phase depends on it, require passing validation first.
+
+## Release-transition ingestion safety
+
+39. A scheduled release date is a recheck trigger, not rules authority. Never promote new rules solely because the calendar date was reached.
+40. Every upstream candidate eligible for promotion must declare `affected_roster_identities`. Legacy candidates without an impact set must be regenerated.
+41. Before reviewed promotion, intersect affected roster identities with active entries in `sources/release_state.json`. Any pending transition with `candidate_authorization=false` blocks promotion until applicable official Games Workshop evidence explicitly authorizes the new release as current.
+
