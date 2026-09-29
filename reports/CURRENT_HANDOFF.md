@@ -6,11 +6,13 @@ Updated: **2026-09-29**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest validated runtime-monitor milestone evidence:
+Latest validated runtime-monitor hardening evidence:
 
-- runtime workflow run: `36591100159`
+- validated branch head: `ecb6e756624dacb09c889e56d110dcfd1498ba95`
+- GitHub Actions validation run: `36596361579`
 - result: **SUCCESS**
-- generated runtime report commit: `4ff07c7c5aeba03d18cd7c0abb8a84c1602824f1`
+- runtime report: `reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json` schema **2.0**
+- runtime report state: **PASS_WITH_KNOWN_RUNTIME_DRIFT**
 
 ## Completed major layers
 
