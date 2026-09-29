@@ -34,6 +34,18 @@ class ReingestionPlannerContracts(unittest.TestCase):
         self.assertEqual(p["blockers"], [])
         self.assertFalse(p["promotion"]["auto_promote"])
 
+    def test_source_catalog_change_adds_official_asset_audit(self):
+        p = self.plan("wahapedia_source_change.json")
+        ids = [x["id"] for x in p["stages"]]
+        self.assertEqual(ids, [
+            "WAHAPEDIA_INGEST",
+            "WAVE_B_RECONCILE",
+            "WAVE_B_ROSTER_VIEWS",
+            "WAHAPEDIA_SEMANTIC_AUDIT",
+            "OFFICIAL_ASSET_AUDIT",
+        ])
+        self.assertEqual(p["promotion"]["state"], "REVIEW_REQUIRED_AFTER_CANDIDATE_PASS")
+
     def test_bsdata_change_reconciles_and_rebuilds_fallback(self):
         p = self.plan("bsdata_change.json")
         ids = [x["id"] for x in p["stages"]]
