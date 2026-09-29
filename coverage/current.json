@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "as_of": "2026-09-29",
   "status": "WAVE_B_STRUCTURAL_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
@@ -17,7 +17,10 @@
     "wave_b_structural_roster_identities_complete": 35,
     "wave_b_structural_roster_identities_unavailable": 2,
     "wave_b_reconciliation_conflicts": 11,
-    "full_semantic_current_factions": 0
+    "full_semantic_current_factions": 0,
+    "wave_b_current_mirror_structural_complete": 35,
+    "wave_b_structured_implementation_fallback_complete": 2,
+    "wave_b_total_structural_source_available": 37
   },
   "dimensions": [
     "points",
@@ -85,7 +88,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "drukhari",
@@ -134,7 +138,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "chaos_daemons",
@@ -183,7 +188,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "chaos_knights",
@@ -232,7 +238,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "chaos_space_marines",
@@ -281,7 +288,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "death_guard",
@@ -330,7 +338,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "emperors_children",
@@ -379,7 +388,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "thousand_sons",
@@ -428,7 +438,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "titanicus_traitoris",
@@ -457,26 +468,19 @@
       "mfm_source_slug": "chaos-titan-legions",
       "structural_current": false,
       "wave_b_structural": {
-        "state": "UNAVAILABLE",
-        "source_id": "WAHAPEDIA_11E",
-        "reason": "no mapped Wahapedia 11E roster view",
-        "dimensions": {
-          "roster_view": 0,
-          "datasheet_index": 0,
-          "model_profiles": 0,
-          "weapon_profiles": 0,
-          "keyword_index": 0,
-          "ability_index": 0,
-          "options_index": 0,
-          "unit_composition_index": 0,
-          "leader_graph": 0,
-          "detachment_index": 0,
-          "enhancement_index": 0,
-          "stratagem_index": 0
-        },
+        "state": "IMPLEMENTATION_FALLBACK_COMPLETE",
+        "source_id": "BSDATA_WH40K_11E",
+        "source_role": "structured_implementation",
+        "pinned_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "view": "rules/11e/snapshots/2026-09-29/bsdata_fallback/titanicus_traitoris.json",
+        "current_mirror_verified": false,
+        "normative_rules_verified": false,
         "semantic_rule_text_current_verified": false,
-        "faq_errata_current_verified": false
-      }
+        "faq_errata_current_verified": false,
+        "points_authority": "GW_MFM",
+        "points_source_slug": "chaos-titan-legions"
+      },
+      "structural_source_available": true
     },
     {
       "slug": "world_eaters",
@@ -525,7 +529,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "genestealer_cults",
@@ -574,7 +579,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "adepta_sororitas",
@@ -623,7 +629,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "adeptus_custodes",
@@ -672,7 +679,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "adeptus_mechanicus",
@@ -721,7 +729,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "adeptus_titanicus",
@@ -770,7 +779,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "agents_of_the_imperium",
@@ -819,7 +829,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "astra_militarum",
@@ -868,7 +879,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "black_templars",
@@ -917,7 +929,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "blood_angels",
@@ -966,7 +979,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "dark_angels",
@@ -1015,7 +1029,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "deathwatch",
@@ -1064,7 +1079,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "grey_knights",
@@ -1113,7 +1129,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "imperial_fists",
@@ -1162,7 +1179,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "imperial_knights",
@@ -1211,7 +1229,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "iron_hands",
@@ -1260,7 +1279,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "raven_guard",
@@ -1309,7 +1329,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "salamanders",
@@ -1358,7 +1379,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "space_marines",
@@ -1407,7 +1429,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "space_wolves",
@@ -1456,7 +1479,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "ultramarines",
@@ -1505,7 +1529,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "white_scars",
@@ -1554,7 +1579,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "leagues_of_votann",
@@ -1603,7 +1629,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "necrons",
@@ -1652,7 +1679,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "orks",
@@ -1701,7 +1729,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "tau_empire",
@@ -1750,7 +1779,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "tyranids",
@@ -1799,7 +1829,8 @@
         },
         "semantic_rule_text_current_verified": false,
         "faq_errata_current_verified": false
-      }
+      },
+      "structural_source_available": true
     },
     {
       "slug": "unaligned_forces",
@@ -1828,26 +1859,18 @@
       "mfm_source_slug": null,
       "structural_current": false,
       "wave_b_structural": {
-        "state": "UNAVAILABLE",
-        "source_id": "WAHAPEDIA_11E",
-        "reason": "no mapped Wahapedia 11E roster view",
-        "dimensions": {
-          "roster_view": 0,
-          "datasheet_index": 0,
-          "model_profiles": 0,
-          "weapon_profiles": 0,
-          "keyword_index": 0,
-          "ability_index": 0,
-          "options_index": 0,
-          "unit_composition_index": 0,
-          "leader_graph": 0,
-          "detachment_index": 0,
-          "enhancement_index": 0,
-          "stratagem_index": 0
-        },
+        "state": "IMPLEMENTATION_FALLBACK_COMPLETE",
+        "source_id": "BSDATA_WH40K_11E",
+        "source_role": "structured_implementation",
+        "pinned_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "view": "rules/11e/snapshots/2026-09-29/bsdata_fallback/unaligned_forces.json",
+        "current_mirror_verified": false,
+        "normative_rules_verified": false,
         "semantic_rule_text_current_verified": false,
-        "faq_errata_current_verified": false
-      }
+        "faq_errata_current_verified": false,
+        "points_authority": "BSDATA_IMPLEMENTATION_ONLY_NO_MFM_PROJECTION"
+      },
+      "structural_source_available": true
     }
   ],
   "structural_dimensions": [

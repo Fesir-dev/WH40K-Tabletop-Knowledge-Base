@@ -62,6 +62,11 @@
     "source_conflicts": 11,
     "authority_rule": "GW MFM remains normative for points, detachment points and enhancement costs when Wahapedia differs.",
     "semantic_rule_text": "PENDING",
-    "faq_errata": "PENDING"
+    "faq_errata": "PENDING",
+    "current_mirror_roster_identities_complete": 35,
+    "implementation_fallback_roster_identities_complete": 2,
+    "total_structural_source_available": 37,
+    "implementation_fallback_snapshot": "rules/11e/snapshots/2026-09-29/bsdata_fallback/index.json",
+    "implementation_fallback_policy": "Fallback provides structured implementation evidence only; it does not promote BSData to normative or current-mirror authority."
   }
 }
