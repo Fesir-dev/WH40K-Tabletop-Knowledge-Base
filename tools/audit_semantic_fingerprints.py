@@ -172,7 +172,8 @@ def main():
             "copyright_policy":"Long prose remains external; repository stores fingerprints and structured metadata only."
         }
     }
-    out=ROOT/"reports"/f"WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_{DATE}.json"
+    out=Path(a.report_path).resolve() if a.report_path else ROOT/"reports"/f"WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_{DATE}.json"
+    out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"status":report["status"],"expected_fingerprints":len(expected),"counts":dict(counts),"problems":len(results)},ensure_ascii=False,indent=2))
     return 0 if report["status"]=="PASS" else 2
