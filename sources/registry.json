@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-29",
+  "status": "CURRENT_PENDING_RECHECK",
+  "authority_policy": {
+    "rules_order": [
+      "official Games Workshop / Warhammer Community current rules and updates",
+      "official Warhammer 40,000 app where applicable",
+      "Wahapedia 11E as secondary structured cross-check",
+      "legacy local snapshots"
+    ],
+    "conflict_rule": "newer applicable official source wins; unresolved scope/version conflicts remain UNKNOWN until verified",
+    "collection_rule": "direct user-confirmed physical ownership state outranks roster inference"
+  },
+  "sources": [
+    {
+      "id": "GW_40K_DOWNLOADS",
+      "title": "Warhammer 40,000 downloads",
+      "authority": "official_primary",
+      "status": "CURRENT_PENDING_RECHECK",
+      "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+      "checked_at": null
+    },
+    {
+      "id": "GW_MFM",
+      "title": "Munitorum Field Manual",
+      "authority": "official_primary",
+      "status": "CURRENT_PENDING_RECHECK",
+      "url": "https://mfm.warhammer-community.com/en/",
+      "checked_at": null
+    },
+    {
+      "id": "GW_40K_APP",
+      "title": "Warhammer 40,000 app",
+      "authority": "official_primary",
+      "status": "CURRENT_PENDING_RECHECK",
+      "url": null,
+      "checked_at": null
+    },
+    {
+      "id": "WAHAPEDIA_11E",
+      "title": "Wahapedia Warhammer 40,000 11th edition",
+      "authority": "secondary_reference",
+      "status": "CURRENT_PENDING_RECHECK",
+      "url": "https://wahapedia.ru/wh40k11ed/",
+      "checked_at": null
+    },
+    {
+      "id": "LEGACY_RULES_ASSISTANT_V0_9",
+      "title": "Rules Assistant v0.9 checkpoint 2026-08-15",
+      "authority": "legacy_project",
+      "status": "HISTORICAL_VERIFIED",
+      "sha256": "98bbc892879e9211fadaff158efbd98321b704e0c56e6dd84df2ef69e9b00947"
+    },
+    {
+      "id": "PERSONAL_CUSTODES_INVENTORY_V0_5",
+      "title": "Adeptus Custodes personal physical inventory",
+      "authority": "personal_observation",
+      "status": "PROVISIONAL",
+      "sha256": "6aee2f7bf491f4fe6f254aeecf79dffe84a5579e24a3022aafcea422b9e97f20",
+      "checked_at": "2026-07-11"
+    }
+  ]
+}
