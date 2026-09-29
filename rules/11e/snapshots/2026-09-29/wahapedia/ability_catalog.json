@@ -1,0 +1,904 @@
+[
+  {
+    "id": "000000705",
+    "name": "Synapse",
+    "faction_id": "GC",
+    "description_sha256": "595b7e80dca9a6c52d0ad501755449838110db48c34ec26fbf84dc98e5d8da2b",
+    "description_present": true,
+    "legend_sha256": "49e8222ddbc8e5bfc08f6855c9d3bd21a3abc1fed8d1b313af32cd9afeb7e3dd",
+    "legend_present": true
+  },
+  {
+    "id": "000000705",
+    "name": "Synapse",
+    "faction_id": "TYR",
+    "description_sha256": "595b7e80dca9a6c52d0ad501755449838110db48c34ec26fbf84dc98e5d8da2b",
+    "description_present": true,
+    "legend_sha256": "49e8222ddbc8e5bfc08f6855c9d3bd21a3abc1fed8d1b313af32cd9afeb7e3dd",
+    "legend_present": true
+  },
+  {
+    "id": "000000707",
+    "name": "Shadow in the Warp",
+    "faction_id": "TYR",
+    "description_sha256": "b3bf622bc0a59b0bfbd6e635f7f0d0ab2dca61f17926f0f8322e75aba11120b5",
+    "description_present": true,
+    "legend_sha256": "b2ee8f45fcde38a768c1ca0e36d3d02024a207b749ce71407878132a9fa9387b",
+    "legend_present": true
+  },
+  {
+    "id": "000000707",
+    "name": "Shadow in the Warp",
+    "faction_id": "GC",
+    "description_sha256": "b3bf622bc0a59b0bfbd6e635f7f0d0ab2dca61f17926f0f8322e75aba11120b5",
+    "description_present": true,
+    "legend_sha256": "b2ee8f45fcde38a768c1ca0e36d3d02024a207b749ce71407878132a9fa9387b",
+    "legend_present": true
+  },
+  {
+    "id": "000003676",
+    "name": "Waaagh!",
+    "faction_id": "ORK",
+    "description_sha256": "2a24b75aa1b0a2400120c8df57c0fed2e474aa6b5f63b261a7074bee4d395ded",
+    "description_present": true,
+    "legend_sha256": "f021e92a5500ed67bbdc69158a7e2067d95da97de09313c54d9b28d9d0f12247",
+    "legend_present": true
+  },
+  {
+    "id": "000008334",
+    "name": "Firing Deck",
+    "description_sha256": "4e0abbfc5e22fb808d1690ce78d4697529212b1551143f76ad03b1ffc123fd53",
+    "description_present": true,
+    "legend_sha256": "6547ab73efa9db3b8dd0cd820e0f6d28e75d96841af4566560fb8f366d7aa55f",
+    "legend_present": true
+  },
+  {
+    "id": "000008336",
+    "name": "Lone Operative",
+    "description_sha256": "7d363af500d442b643da528a3f6870310641f4ad7465645e2245ff87bbcae2dc",
+    "description_present": true,
+    "legend_sha256": "41474823983227d03885e824eb2c26f82710c9fe39ba2b5873be6a17f2cd3c96",
+    "legend_present": true
+  },
+  {
+    "id": "000008337",
+    "name": "Stealth",
+    "description_sha256": "d2ee343cdd20d73f408b95ccbc8e63c11abc6040af4a16942b6096b38698027a",
+    "description_present": true,
+    "legend_sha256": "44410306d6d04b497aa37b6f18172d7fa2352b39c14cf50e49dd0c9609743720",
+    "legend_present": true
+  },
+  {
+    "id": "000008338",
+    "name": "Feel No Pain",
+    "description_sha256": "c876a65659a08c3fc47d32e362b5811931a380409c548aee848a6a1c85bfebc6",
+    "description_present": true,
+    "legend_sha256": "e30f740c54350fce598dc2e75270834eccda9d5e69cf03a4eb5050dc38304e55",
+    "legend_present": true
+  },
+  {
+    "id": "000008339",
+    "name": "Deadly Demise",
+    "description_sha256": "efc9faf0db49d4df92bd468b90fac803c0a7f070db0de524ca29911adb5cc3d1",
+    "description_present": true,
+    "legend_sha256": "35fbeb18fd44fcd7ccc7e467dfa6b9922a3640ff59ddabf88649c9f43bca2681",
+    "legend_present": true
+  },
+  {
+    "id": "000008340",
+    "name": "Fights First",
+    "description_sha256": "48272cfdc389700a60949201302500545f96b3235f6bd0355679df368826e471",
+    "description_present": true,
+    "legend_sha256": "c7e5b527e66c05df83ff020c0b931752b73d12b09d3b4a6b5fdbd6b96c83a034",
+    "legend_present": true
+  },
+  {
+    "id": "000008342",
+    "name": "Hover",
+    "description_sha256": "14461ab2b09daf809fa8f6d39b2568ceb3a63944715efb2d0956edceb3e7b986",
+    "description_present": true,
+    "legend_sha256": "3125e34d82c4785a0ca5a1a92d3f76b3235677a485cc856ae7fa9b8be6c07553",
+    "legend_present": true
+  },
+  {
+    "id": "000008343",
+    "name": "Deep Strike",
+    "description_sha256": "e5a744dcb5a9166e7a9a2a50da88b8a3e211d30703392986c45708d160a57a65",
+    "description_present": true,
+    "legend_sha256": "ce597855af0a27a0132415747a45f901fb29055f20334607d97222776b842a8c",
+    "legend_present": true
+  },
+  {
+    "id": "000008344",
+    "name": "Scouts",
+    "description_sha256": "ebe7b7bc34efbeb4261284cbf33b60c4f58939e57b536961472f3381a8bbda49",
+    "description_present": true,
+    "legend_sha256": "79a0b81102a0931cd39dd48effdcadf4986c2e97008547baf05766907a31a4ef",
+    "legend_present": true
+  },
+  {
+    "id": "<div class=\"str11Wrap\">"
+  },
+  {
+    "id": "<div class=\"str11BodyWrap\">"
+  },
+  {
+    "id": "<div class=\"str11HeadBlock str11Name\">SCOUT MOVE<span class=\"h_number\">24.32</span></div>"
+  },
+  {
+    "id": "</div>"
+  },
+  {
+    "id": "<div class=\"str11BodyWrap\">"
+  },
+  {
+    "id": "<div class=\"str11TextWrap\">"
+  },
+  {
+    "id": "<div class=\"str11Text\"><div class=\"strGreyBg\"><b>MAXIMUM DISTANCE:</b> The <b>X\"</b> in <b>Scouts X\"</b>.</div><div class=\"str11Line\"></div><b>ELIGIBLE IF:</b> It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.<br><div class=\"str11Line\"></div><b>EFFECT:</b> Your unit moves as described in Moving (<span class=\"kwn\"><a href=\"/wh40k11ed/the-rules/core-rules/#Moving\">03</a></span>).<br><div class=\"str11Line\"></div><b>AFTER MOVING:</b> Your unit must be more than 8\" horizontally from all enemy units.</div>"
+  },
+  {
+    "id": "</div>"
+  },
+  {
+    "id": "<div class=\"str11Bg str11AMoveBg\"><div class=\"str11Icon str11AMove\"></div></div>"
+  },
+  {
+    "id": "</div>"
+  },
+  {
+    "id": "</div></div></div>"
+  },
+  {
+    "id": "000008345",
+    "name": "Infiltrators",
+    "description_sha256": "0ff147fcef1661af2312c8b94784e70249e8bae6a129489f0b6fa9c03db342b3",
+    "description_present": true,
+    "legend_sha256": "9d24a76ac4309245e9de2f3323327321d1eaf9043b88f1c51944a480aff87291",
+    "legend_present": true
+  },
+  {
+    "id": "000008346",
+    "name": "Leader",
+    "description_sha256": "491181545c36709570de53c1c28a01a2b26ac347337ff0a4f84966944364ceef",
+    "description_present": true,
+    "legend_sha256": "341b48889f068c6474707875af2eb114da1bd83e430765a85cafd61fa47036cd",
+    "legend_present": true
+  },
+  {
+    "id": "000008350",
+    "name": "Oath of Moment",
+    "faction_id": "CSM",
+    "description_sha256": "b8737ade1eca170ff93073dbf1497a311ca65bcd4db2110a5097d9b63540395a",
+    "description_present": true,
+    "legend_sha256": "2e4483089560f27843970adab99cabce706d1c98351c2f9133bcd60b6d18649e",
+    "legend_present": true
+  },
+  {
+    "id": "000008350",
+    "name": "Oath of Moment",
+    "faction_id": "WE",
+    "description_sha256": "b8737ade1eca170ff93073dbf1497a311ca65bcd4db2110a5097d9b63540395a",
+    "description_present": true,
+    "legend_sha256": "2e4483089560f27843970adab99cabce706d1c98351c2f9133bcd60b6d18649e",
+    "legend_present": true
+  },
+  {
+    "id": "000008350",
+    "name": "Oath of Moment",
+    "faction_id": "DG",
+    "description_sha256": "b8737ade1eca170ff93073dbf1497a311ca65bcd4db2110a5097d9b63540395a",
+    "description_present": true,
+    "legend_sha256": "2e4483089560f27843970adab99cabce706d1c98351c2f9133bcd60b6d18649e",
+    "legend_present": true
+  },
+  {
+    "id": "000008350",
+    "name": "Oath of Moment",
+    "faction_id": "SM",
+    "description_sha256": "b8737ade1eca170ff93073dbf1497a311ca65bcd4db2110a5097d9b63540395a",
+    "description_present": true,
+    "legend_sha256": "2e4483089560f27843970adab99cabce706d1c98351c2f9133bcd60b6d18649e",
+    "legend_present": true
+  },
+  {
+    "id": "000008350",
+    "name": "Oath of Moment",
+    "faction_id": "TS",
+    "description_sha256": "b8737ade1eca170ff93073dbf1497a311ca65bcd4db2110a5097d9b63540395a",
+    "description_present": true,
+    "legend_sha256": "2e4483089560f27843970adab99cabce706d1c98351c2f9133bcd60b6d18649e",
+    "legend_present": true
+  },
+  {
+    "id": "000008351",
+    "name": "Space Marine Chapters",
+    "faction_id": "SM",
+    "description_sha256": "709d09613142711bfee09ec4ae3d464ad10aa1f166cfb909c66a1299507025ab",
+    "description_present": true
+  },
+  {
+    "id": "000008359",
+    "name": "Dark Pacts",
+    "faction_id": "CD",
+    "description_sha256": "6f59f93fe47894429680758edb45e177afcfe684c2cffcf81955d84a0cbbc047",
+    "description_present": true,
+    "legend_sha256": "801b3c6f34a178e85081da45669d4cf3ed5ed78c96cacd8d3d98aa856c5273ad",
+    "legend_present": true
+  },
+  {
+    "id": "000008359",
+    "name": "Dark Pacts",
+    "faction_id": "WE",
+    "description_sha256": "6f59f93fe47894429680758edb45e177afcfe684c2cffcf81955d84a0cbbc047",
+    "description_present": true,
+    "legend_sha256": "801b3c6f34a178e85081da45669d4cf3ed5ed78c96cacd8d3d98aa856c5273ad",
+    "legend_present": true
+  },
+  {
+    "id": "000008359",
+    "name": "Dark Pacts",
+    "faction_id": "DG",
+    "description_sha256": "6f59f93fe47894429680758edb45e177afcfe684c2cffcf81955d84a0cbbc047",
+    "description_present": true,
+    "legend_sha256": "801b3c6f34a178e85081da45669d4cf3ed5ed78c96cacd8d3d98aa856c5273ad",
+    "legend_present": true
+  },
+  {
+    "id": "000008359",
+    "name": "Dark Pacts",
+    "faction_id": "TS",
+    "description_sha256": "6f59f93fe47894429680758edb45e177afcfe684c2cffcf81955d84a0cbbc047",
+    "description_present": true,
+    "legend_sha256": "801b3c6f34a178e85081da45669d4cf3ed5ed78c96cacd8d3d98aa856c5273ad",
+    "legend_present": true
+  },
+  {
+    "id": "000008359",
+    "name": "Dark Pacts",
+    "faction_id": "QT",
+    "description_sha256": "6f59f93fe47894429680758edb45e177afcfe684c2cffcf81955d84a0cbbc047",
+    "description_present": true,
+    "legend_sha256": "801b3c6f34a178e85081da45669d4cf3ed5ed78c96cacd8d3d98aa856c5273ad",
+    "legend_present": true
+  },
+  {
+    "id": "000008359",
+    "name": "Dark Pacts",
+    "faction_id": "CSM",
+    "description_sha256": "6f59f93fe47894429680758edb45e177afcfe684c2cffcf81955d84a0cbbc047",
+    "description_present": true,
+    "legend_sha256": "801b3c6f34a178e85081da45669d4cf3ed5ed78c96cacd8d3d98aa856c5273ad",
+    "legend_present": true
+  },
+  {
+    "id": "000008360",
+    "name": "Cult of the Dark Gods",
+    "faction_id": "CSM",
+    "description_sha256": "4bf48f9f5990bdf3b66e2ace82b6e481c692957a5a486ca4a4ab8d98385f164e",
+    "description_present": true,
+    "legend_sha256": "c804a0a57c62f60ed0721b75d21e4e188942d8258f3280a7258d09f81f1b4cbf",
+    "legend_present": true
+  },
+  {
+    "id": "000008369",
+    "name": "Reanimation Protocols",
+    "faction_id": "NEC",
+    "description_sha256": "cc3b7fefcfc67e369dec4fa1fd897cff51a489a74eda8ecf6decabb3af407fee",
+    "description_present": true,
+    "legend_sha256": "72efbb890219f7ccc823b43ac1b278db9882d7cc56fbcee6ccec950953fe38dc",
+    "legend_present": true
+  },
+  {
+    "id": "000008377",
+    "name": "Voice of Command",
+    "faction_id": "AM",
+    "description_sha256": "298fd95a73bbdb5ab829dec324f1fd38ca68fda6e63bc9465bd534ae2cae77b8",
+    "description_present": true,
+    "legend_sha256": "f98c9526564dd498ab068edba3c91a7fc55cf68f3d5d36de4546f5f71bc46f39",
+    "legend_present": true
+  },
+  {
+    "id": "000008382",
+    "name": "Doctrina Imperatives",
+    "faction_id": "AdM",
+    "description_sha256": "63af805c2d4091ef70b924f24df29c7d6c75473761182ecb5bfa76743a6956c3",
+    "description_present": true,
+    "legend_sha256": "ebcf1b3233e9d36408aeb148354ae494ef8a965ad5b6080394e8713e9ff440d7",
+    "legend_present": true
+  },
+  {
+    "id": "000008382",
+    "name": "Doctrina Imperatives",
+    "faction_id": "QI",
+    "description_sha256": "63af805c2d4091ef70b924f24df29c7d6c75473761182ecb5bfa76743a6956c3",
+    "description_present": true,
+    "legend_sha256": "ebcf1b3233e9d36408aeb148354ae494ef8a965ad5b6080394e8713e9ff440d7",
+    "legend_present": true
+  },
+  {
+    "id": "000008391",
+    "name": "Martial Ka’tah",
+    "faction_id": "AC",
+    "description_sha256": "7218d54f6028912a3c9b88bd1ab9390fcec56e00035e8226f40f310e704a4d16",
+    "description_present": true,
+    "legend_sha256": "b5c6f51623e2ab98ae75c266d6daa9b047f9ba1df8c38ec62e38a7a6d19c1642",
+    "legend_present": true
+  },
+  {
+    "id": "000008396",
+    "name": "Nurgle’s Gift (Aura)",
+    "faction_id": "DG",
+    "description_sha256": "c10816f5cc5b2196dff7c01e1023dded4ae6359279a8a8b8b7cc9337fec792bb",
+    "description_present": true,
+    "legend_sha256": "d7acf9ffaac512da2474a7391b1c06700b5eb76d53bc60274d6fc95bba75c006",
+    "legend_present": true
+  },
+  {
+    "id": "000008396",
+    "name": "Nurgle’s Gift (Aura)",
+    "faction_id": "CSM",
+    "description_sha256": "c10816f5cc5b2196dff7c01e1023dded4ae6359279a8a8b8b7cc9337fec792bb",
+    "description_present": true,
+    "legend_sha256": "d7acf9ffaac512da2474a7391b1c06700b5eb76d53bc60274d6fc95bba75c006",
+    "legend_present": true
+  },
+  {
+    "id": "000008424",
+    "name": "Cabal of Sorcerers",
+    "faction_id": "TS",
+    "description_sha256": "f43baea262cb101da5fe8ed94f0761191ead5c818217ebcd104b2ad4ceedb230",
+    "description_present": true,
+    "legend_sha256": "af08368af56123c0dce8ea6d45cca9a4151dbb5866c50c6f876fbdff248b9b5e",
+    "legend_present": true
+  },
+  {
+    "id": "000008424",
+    "name": "Cabal of Sorcerers",
+    "faction_id": "CSM",
+    "description_sha256": "f43baea262cb101da5fe8ed94f0761191ead5c818217ebcd104b2ad4ceedb230",
+    "description_present": true,
+    "legend_sha256": "af08368af56123c0dce8ea6d45cca9a4151dbb5866c50c6f876fbdff248b9b5e",
+    "legend_present": true
+  },
+  {
+    "id": "000008428",
+    "name": "Blessings of Khorne",
+    "faction_id": "WE",
+    "description_sha256": "4da76937efc37ca672c9a3b404f7b2bb83364e1fc4e9026ed9653dd7f1bb3270",
+    "description_present": true,
+    "legend_sha256": "32b862631035b4b43568e53e91496aec1683c68d4fc8cef4519444e6da9ec465",
+    "legend_present": true
+  },
+  {
+    "id": "000008428",
+    "name": "Blessings of Khorne",
+    "faction_id": "CSM",
+    "description_sha256": "4da76937efc37ca672c9a3b404f7b2bb83364e1fc4e9026ed9653dd7f1bb3270",
+    "description_present": true,
+    "legend_sha256": "32b862631035b4b43568e53e91496aec1683c68d4fc8cef4519444e6da9ec465",
+    "legend_present": true
+  },
+  {
+    "id": "000008433",
+    "name": "The Shadow of Chaos",
+    "faction_id": "CD",
+    "description_sha256": "bbccfe445ddc1d55e8aac13c9f906b1e5c39383dbc30d883ea60111e67125708",
+    "description_present": true,
+    "legend_sha256": "41dc5bf5a5738d4fc499f12b59da4676bc93d20b243f3c1b40fb4e82f04a7b2c",
+    "legend_present": true
+  },
+  {
+    "id": "000008434",
+    "name": "Daemonic Pact",
+    "faction_id": "CD",
+    "description_sha256": "46c91788cc414c2c38154184015ac66f37a09a1c4f2ca7e89189b6c88a503d1c",
+    "description_present": true,
+    "legend_sha256": "08765d33a487170f672598b02fcf147a64b7b87eafd38e83c608a773150c3af1",
+    "legend_present": true
+  },
+  {
+    "id": "000008439",
+    "name": "For the Greater Good",
+    "faction_id": "TAU",
+    "description_sha256": "71b2e17cdbbbcb9491ea411dac510966882fcb9ddd530ab88b5e5e30504c91f3",
+    "description_present": true,
+    "legend_sha256": "5b6a35aab7e50c50114fa2759537f3604e9ff98bacccb29f63790cc5ab961f6b",
+    "legend_present": true
+  },
+  {
+    "id": "000008445",
+    "name": "Strands of Fate",
+    "faction_id": "AE",
+    "description_sha256": "b08bf6a656f2432bc08c5fb66c8864e6d82f949b5e3b4364f6ad36f09e2d71e7",
+    "description_present": true,
+    "legend_sha256": "1413845f0907b30ac454c8afc214a6e59a48d15ac228d3ee047fae8eed99cf4a",
+    "legend_present": true
+  },
+  {
+    "id": "000008452",
+    "name": "Assigned Agents",
+    "faction_id": "SM",
+    "description_sha256": "ce14ee0cb95135c8195cf70c152b73133b4f1237802179f0a6fae6b80d9a2bd1",
+    "description_present": true,
+    "legend_sha256": "20adf92dbed0f84c1d2a80fa64b32f4f7d871349bed96fad1e6d7a34b7212472",
+    "legend_present": true
+  },
+  {
+    "id": "000008452",
+    "name": "Assigned Agents",
+    "faction_id": "AoI",
+    "description_sha256": "ce14ee0cb95135c8195cf70c152b73133b4f1237802179f0a6fae6b80d9a2bd1",
+    "description_present": true,
+    "legend_sha256": "20adf92dbed0f84c1d2a80fa64b32f4f7d871349bed96fad1e6d7a34b7212472",
+    "legend_present": true
+  },
+  {
+    "id": "000008458",
+    "name": "Code Chivalric",
+    "faction_id": "QI",
+    "description_sha256": "185c9b2515f747b8087edb11b008bb8776744e62ada7339d575b4cdbe642eb36",
+    "description_present": true,
+    "legend_sha256": "edf6719b164d6df218a3fce856382fe8289ba856bcdfedd1b78b714b3246adfe",
+    "legend_present": true
+  },
+  {
+    "id": "000008459",
+    "name": "Bondsman",
+    "faction_id": "QI",
+    "description_sha256": "a3bce94f51ae88b75f5a1bfe715b36261eb90a85eda366b4cb992ad627bbda2a",
+    "description_present": true,
+    "legend_sha256": "76f70e0b4bb14e0d5b905524303566d6135ddddb64751b7ed661d99978ed9484",
+    "legend_present": true
+  },
+  {
+    "id": "000008460",
+    "name": "Super-heavy Walker",
+    "faction_id": "QI",
+    "description_sha256": "56244860bbfe355cac9b3a3c5b148fb9b9701ad10e2d84e8219e133f7c4b86c8",
+    "description_present": true,
+    "legend_sha256": "005d224a60a3f211f9569aeb75b827167c17ad8b191b187dd01a4adc47e6ea9e",
+    "legend_present": true
+  },
+  {
+    "id": "000008461",
+    "name": "Freeblades",
+    "faction_id": "QI",
+    "description_sha256": "9e6e8ecaf61f038ad19ef3c4555c71d2584778b80c315ce59fe694d67e0da02f",
+    "description_present": true,
+    "legend_sha256": "4b69d6a3331eec982bac8e67308f82e7bc025a1d48da857bb837fca54e10bf0e",
+    "legend_present": true
+  },
+  {
+    "id": "000008466",
+    "name": "Acts of Faith",
+    "faction_id": "AS",
+    "description_sha256": "bff6af438e65e85893c0cadb67f81704841f16760e991c42cad0fa6c26544ba1",
+    "description_present": true,
+    "legend_sha256": "d87f88e6bd37fb8fdffa5e4feb3db352f8b7f6db129fc36639f10b34a8732661",
+    "legend_present": true
+  },
+  {
+    "id": "000008501",
+    "name": "Cult Ambush",
+    "faction_id": "GC",
+    "description_sha256": "12ff54ba1500840a8d059bba3e9f1034e08ae29fc06ff03bc8db2a0379c86150",
+    "description_present": true,
+    "legend_sha256": "aab6d15b0663ab05f6e0d797e04dba7c67249bcff21d730dee7b4780d1c2ebfa",
+    "legend_present": true
+  },
+  {
+    "id": "000008507",
+    "name": "Power from Pain",
+    "faction_id": "DRU",
+    "description_sha256": "f640ce2799a00922f653498d38418b60ccd05b76068debbf69ab3180f49da612",
+    "description_present": true,
+    "legend_sha256": "7a74f68b1409be09bbbcd91356efc600180ae9569bccd4de1be81285f67b4670",
+    "legend_present": true
+  },
+  {
+    "id": "000008512",
+    "name": "Harbingers of Dread",
+    "faction_id": "QT",
+    "description_sha256": "a416c9daccbacf7482c7e89aaddd401a1f9d0d2cd2874a1f529093b78ac6be36",
+    "description_present": true,
+    "legend_sha256": "40d6f8d96a109588dd2e59d6bcd2f68d3c18eb1e477ad3b09e80f1026c383b38",
+    "legend_present": true
+  },
+  {
+    "id": "000008513",
+    "name": "Super-heavy Walker",
+    "faction_id": "QT",
+    "description_sha256": "8eec273751bb20834f84562228a6c6f96189ba3079df4181d62eca26e55c8900",
+    "description_present": true
+  },
+  {
+    "id": "000008514",
+    "name": "Dreadblades",
+    "faction_id": "QT",
+    "description_sha256": "ad43a0ac7316b34825831af6e321b9715058db881a35abfcadd062d976b6b31b",
+    "description_present": true,
+    "legend_sha256": "1090850f63c0fdaf91e0fa98f4538311881a32f35ae8a19c01c16dd6ec74c132",
+    "legend_present": true
+  },
+  {
+    "id": "000008519",
+    "name": "Kill Team",
+    "faction_id": "AoI",
+    "description_sha256": "babad78222cff4be576ad762ac89bd965a537deeaec0359fb7a813e50968d9eb",
+    "description_present": true
+  },
+  {
+    "id": "000008519",
+    "name": "Kill Team",
+    "faction_id": "SM",
+    "description_sha256": "babad78222cff4be576ad762ac89bd965a537deeaec0359fb7a813e50968d9eb",
+    "description_present": true
+  },
+  {
+    "id": "000008521",
+    "name": "Mission Tactics",
+    "faction_id": "SM",
+    "description_sha256": "f2de3e3fe8d972b386af80f3abde8654c90f235b9bf2b7f1b129c394c54185da",
+    "description_present": true,
+    "legend_sha256": "4b0b8e86f1f8f8848c3421723b95ea0b0ebf4e12ed69851e33ff774952ddf1c2",
+    "legend_present": true
+  },
+  {
+    "id": "000008526",
+    "name": "Templar Vows",
+    "faction_id": "SM",
+    "description_sha256": "8c2f2d0713d591379560da12361503f1c8159afb3fe9d3b0d0d657bc7daeecac",
+    "description_present": true,
+    "legend_sha256": "a584d328b726f7b2e97bf632e905ed3d10378d8105b028f299e12a2ba9ca850d",
+    "legend_present": true
+  },
+  {
+    "id": "000008533",
+    "name": "Towering Example",
+    "faction_id": "TL",
+    "description_sha256": "73d669f422c073b0ad213822fbda1c0534170b120eeeae50c051a28bb8d78b2d",
+    "description_present": true
+  },
+  {
+    "id": "000008534",
+    "name": "Titanic Support",
+    "faction_id": "TL",
+    "description_sha256": "8e76ef4c74ec85cbfe84b51b59ca68459b043d7588536cf9c22bc6e2e1cfb736",
+    "description_present": true
+  },
+  {
+    "id": "000008535",
+    "name": "Titanicus Traitoris",
+    "faction_id": "TL",
+    "description_sha256": "b198b567e4de82fda85324986f6a6ae6696f0d6cf19247e42823526b73181d9d",
+    "description_present": true
+  },
+  {
+    "id": "000008536",
+    "name": "Designer’s Note",
+    "faction_id": "TL",
+    "description_sha256": "d229695b97bd68765112a3dbfbee8ae693687b3cf4a00d14f1c9673999836c81",
+    "description_present": true
+  },
+  {
+    "id": "000008538",
+    "name": "Super-heavy Walker",
+    "faction_id": "TL",
+    "description_sha256": "d3b457f2db0ab1c89403c342ceb955a48dd0326597798a9a6535a2dcb8fb3e83",
+    "description_present": true
+  },
+  {
+    "id": "000008767",
+    "name": "The Unforgiven",
+    "faction_id": "SM",
+    "description_sha256": "240e16ba0544c3aee8642514c749d11739f18cdc04078120788d15f3509d016c",
+    "description_present": true,
+    "legend_sha256": "e54df57c6be43fc4df4270d4d7d2a20c26feba5ee824b608622ced9139b249ac",
+    "legend_present": true
+  },
+  {
+    "id": "000008768",
+    "name": "The Ravenwing",
+    "faction_id": "SM",
+    "description_sha256": "f92b2dfd92317298af73787b467bf711fa72cfacfbfc3efd36b36e4dd3ed9d32",
+    "description_present": true
+  },
+  {
+    "id": "000008808",
+    "name": "The Deathwing",
+    "faction_id": "SM",
+    "description_sha256": "a1725fd939bae3178592fbadba3d2f3cb48469c77e3058ecc4473dbd2e002a32",
+    "description_present": true
+  },
+  {
+    "id": "000009183",
+    "name": "The Sons of Sanguinius",
+    "faction_id": "SM",
+    "description_sha256": "a3b0cf40f63572ef8bd1c8bff5efa4fcadfbc5680f01edec80be0b98bbafbd67",
+    "description_present": true,
+    "legend_sha256": "5b8a5c02cb1b313b040c85bbd8957ca23e1c6af1609208232bda61d88041f41a",
+    "legend_present": true
+  },
+  {
+    "id": "000009792",
+    "name": "Kill Teams",
+    "faction_id": "SM",
+    "description_sha256": "9ff1952e682b33c4d1d40be7b2ec335eb2fb819786b0df7d62d572d135019aec",
+    "description_present": true,
+    "legend_sha256": "9fd69d3f40ee7dba0308b92e9788744df0bbd01017341c018b5ee15339399d6f",
+    "legend_present": true
+  },
+  {
+    "id": "000009853",
+    "name": "Deathwatch",
+    "faction_id": "SM",
+    "description_sha256": "d7640519d781ce61421806a900c9eb754056df79d829d0e51682391da387ee12",
+    "description_present": true
+  },
+  {
+    "id": "000009894",
+    "name": "Battle Focus",
+    "faction_id": "AE",
+    "description_sha256": "6a981fbe1d91c08a323bc7217ea0058e8b9eaf7202669722f7b345f7780834c4",
+    "description_present": true,
+    "legend_sha256": "ce92a1ee43a8c7482107e57bc743bc4e507e84861984cd8430dd742eedbe7eda",
+    "legend_present": true
+  },
+  {
+    "id": "000009894",
+    "name": "Battle Focus",
+    "faction_id": "DRU",
+    "description_sha256": "6a981fbe1d91c08a323bc7217ea0058e8b9eaf7202669722f7b345f7780834c4",
+    "description_present": true,
+    "legend_sha256": "ce92a1ee43a8c7482107e57bc743bc4e507e84861984cd8430dd742eedbe7eda",
+    "legend_present": true
+  },
+  {
+    "id": "000009895",
+    "name": "Agile Manoeuvres",
+    "faction_id": "AE",
+    "description_sha256": "095d3c8283eb55a58c80a127a83bf020cf47311d3f7c5823121c4ac9e3ce5a8d",
+    "description_present": true
+  },
+  {
+    "id": "000009896",
+    "name": "Disparate Paths",
+    "faction_id": "AE",
+    "description_sha256": "ac3e1f4244947bccdfe2d99c7aee1c1c056de683d33278577a5870b24b7fa45c",
+    "description_present": true
+  },
+  {
+    "id": "000009896",
+    "name": "Disparate Paths",
+    "faction_id": "DRU",
+    "description_sha256": "ac3e1f4244947bccdfe2d99c7aee1c1c056de683d33278577a5870b24b7fa45c",
+    "description_present": true
+  },
+  {
+    "id": "000009974",
+    "name": "Corsairs and Travelling Players",
+    "faction_id": "DRU",
+    "description_sha256": "fa4d13e15914685e6d6ff70cd7f90db5097be5b78cba9336ed353cd2e61271cd",
+    "description_present": true
+  },
+  {
+    "id": "000009994",
+    "name": "Thrill Seekers",
+    "faction_id": "CSM",
+    "description_sha256": "7d5aa8ef27cf653bf20febcd0e1e4c092acbcdbf3fb3d3a6bed40c9ad0e2abce",
+    "description_present": true,
+    "legend_sha256": "2b558c1169d9d6ca804adcf501d644f3d6af80d99ca1d001bca8bd1d3b812677",
+    "legend_present": true
+  },
+  {
+    "id": "000009994",
+    "name": "Thrill Seekers",
+    "faction_id": "EC",
+    "description_sha256": "7d5aa8ef27cf653bf20febcd0e1e4c092acbcdbf3fb3d3a6bed40c9ad0e2abce",
+    "description_present": true,
+    "legend_sha256": "2b558c1169d9d6ca804adcf501d644f3d6af80d99ca1d001bca8bd1d3b812677",
+    "legend_present": true
+  },
+  {
+    "id": "000009995",
+    "name": "Pact of Excess",
+    "faction_id": "EC",
+    "description_sha256": "f0d0f1579f4555e428406ff3692e03e1aede635ec030a9de3c0f99c9a6cc7be6",
+    "description_present": true,
+    "legend_sha256": "65fa1ddf4453b44763c1678361d7a2ab18e814ad2ec1c601a8edbdcefba86319",
+    "legend_present": true
+  },
+  {
+    "id": "000010071",
+    "name": "Pact of Blood",
+    "faction_id": "WE",
+    "description_sha256": "2de92097f5dd01154445651395df672b2fca3918de63a37def97af84bcab99e4",
+    "description_present": true,
+    "legend_sha256": "54d2f8fea3e3a2e2753847313e95367d16ed0d436060f3c129a990039c277260",
+    "legend_present": true
+  },
+  {
+    "id": "000010120",
+    "name": "Pact of Decay",
+    "faction_id": "DG",
+    "description_sha256": "c7eb0962bfbd840266c64dc00619df8a47e49924f1666f55b0285f6b7a78d3e2",
+    "description_present": true,
+    "legend_sha256": "af7011926ca436fc16d2a6575b2dc07b5aeeea81604309dc00448eb70004bf71",
+    "legend_present": true
+  },
+  {
+    "id": "000010190",
+    "name": "Pact of Sorcery",
+    "faction_id": "TS",
+    "description_sha256": "96f579313c201d543a4d59336c568729e4f22c06949a3b45e05a43f4c7042c15",
+    "description_present": true,
+    "legend_sha256": "3c9c51bbc64c413cc76864d14179dd2e2248cb63a213d920fad671f24140ad4b",
+    "legend_present": true
+  },
+  {
+    "id": "000010256",
+    "name": "Curse of the Wulfen",
+    "faction_id": "SM",
+    "description_sha256": "48186d4cb0174236f0c7f359d9527eac21a090f681d462f925a11d2a72bf6e62",
+    "description_present": true,
+    "legend_sha256": "bbc5156bbdbde80e0a02095f85597c9ca39fcd4a17c51f54fc81aa115377957b",
+    "legend_present": true
+  },
+  {
+    "id": "000010257",
+    "name": "Sagas",
+    "faction_id": "SM",
+    "description_sha256": "a4f67ad617166e72517e8dc423da40638ab845a74f64d508ed6600fd01f2dbbe",
+    "description_present": true,
+    "legend_sha256": "c0acffde253dded00a837eba9812627bae9d8ff9d34970070e008cc51b0c4461",
+    "legend_present": true
+  },
+  {
+    "id": "000010258",
+    "name": "Sons of Russ",
+    "faction_id": "SM",
+    "description_sha256": "2434b911ed5a25bbb2be5f1e140e94407c54c73d84acc13de9408502e4c9616d",
+    "description_present": true,
+    "legend_sha256": "a03f2ddeca68455b890167f7c26de56d78640cddebe77f08c6a2143f99b3479d",
+    "legend_present": true
+  },
+  {
+    "id": "000010345",
+    "name": "Gate of Infinity",
+    "faction_id": "GK",
+    "description_sha256": "accde059a714979c59c46a8368b33eed489758fbbf70a3e055e364977f6559e5",
+    "description_present": true,
+    "legend_sha256": "f826474aae45fd967c1311ab3d302766d7bd5e99b3b79bfb9476604ed2553291",
+    "legend_present": true
+  },
+  {
+    "id": "000010389",
+    "name": "Heirs of Sigismund",
+    "faction_id": "SM",
+    "description_sha256": "ebc9f6a1fb6bddb64156fe46e0fa8c61d4e312662e129dcf0858f13cbff5c07d",
+    "description_present": true
+  },
+  {
+    "id": "000010432",
+    "name": "Prioritised Efficiency",
+    "faction_id": "LoV",
+    "description_sha256": "da389d70ba2378b7a4fbbd5a3e120d07268f589f07b524cafefc6962ce62c382",
+    "description_present": true,
+    "legend_sha256": "6a8441a56faaf819c37170f83305b29cb0e552c50430ae0a7cc1eb1309b88e84",
+    "legend_present": true
+  },
+  {
+    "id": "000010844",
+    "name": "Super-heavy Walker",
+    "description_sha256": "d8d57eb34c180cb46c824a237bcb4a79fcd563addfcb350858eebef9e8c58bde",
+    "description_present": true,
+    "legend_sha256": "322632f003c8f23cac64f0b659ab2d02823feadc4a98b348f2e948504b118450",
+    "legend_present": true
+  },
+  {
+    "id": "000010857",
+    "name": "Support",
+    "description_sha256": "db5a08941eb8b0dee034838f363d6c26b0dc062249184ac97850697f71d682a3",
+    "description_present": true,
+    "legend_sha256": "341b48889f068c6474707875af2eb114da1bd83e430765a85cafd61fa47036cd",
+    "legend_present": true
+  },
+  {
+    "id": "000011125",
+    "name": "Damaged",
+    "description_sha256": "b29dffcc72d42462451b28f2a40b2b89ef8a522f86aa613cc99502b874f11b43",
+    "description_present": true
+  },
+  {
+    "id": "000011126",
+    "name": "Da Boss",
+    "faction_id": "ORK",
+    "description_sha256": "dadc95aaf240c86c69bcec1f642be457dc9ab5c7aeab239074b300702f70f569",
+    "description_present": true,
+    "legend_sha256": "3b01b64a637184fd504e182160686fab58ee47fbbf498781c330efc08ff94b7e",
+    "legend_present": true
+  },
+  {
+    "id": "000011127",
+    "name": "Unstable Energies",
+    "faction_id": "ORK",
+    "description_sha256": "8ad261856c15778b2909432607875245861738051849c3baf2f60e1fc2b50044",
+    "description_present": true,
+    "legend_sha256": "687e35ec76b849085b535d7d4054bb3b72c5d36bf40b94035b3190e5221bd764",
+    "legend_present": true
+  },
+  {
+    "id": "000011129",
+    "name": "Special Move Types",
+    "faction_id": "ORK",
+    "description_sha256": "ce4e7ce353f89c5b691d431e300d5517e564aac86cdec8dff6084bde5723c413",
+    "description_present": true
+  },
+  {
+    "id": "<div class=\"str11Wrap\">"
+  },
+  {
+    "id": "<div class=\"str11BodyWrap\">"
+  },
+  {
+    "id": "<div class=\"str11HeadBlock str11Name\">PULSE JET MOVE</div>"
+  },
+  {
+    "id": "</div>"
+  },
+  {
+    "id": "<div class=\"str11BodyWrap\">"
+  },
+  {
+    "id": "<div class=\"str11TextWrap\">"
+  },
+  {
+    "id": "<div class=\"str11Text\"><div class=\"strGreyBg\"><b>MAXIMUM DISTANCE:</b> Pulse roll + 18\"</div><div class=\"str11Line\"></div><b>ELIGIBLE IF:</b> As stated in the rule allowing this <b><b><a href=\"/wh40k11ed/the-rules/core-rules/#2.-Move-Units-Step\">move type</a></b></b>.<br><div class=\"str11Line\"></div><b>EFFECT:</b> Your unit moves as described in Moving (Core Rules, <span class=\"kwn\"><a href=\"/wh40k11ed/the-rules/core-rules/#Moving\">03</a></span>).<br><div class=\"str11Line\"></div><b>BEFORE MOVING:</b><br><ul><li>Make a <b>pulse roll</b> by rolling one D6.</li></ul><div class=\"str11Line\"></div><b>WHILE MOVING:</b><br><ul><li>Ignore all vertical distance for the purposes of how far your unit has moved.</li><li>Your unit can move through all types of model.</li><li>Your unit can move horizontally and vertically through all categories of <b><b><a href=\"/wh40k11ed/the-rules/core-rules/#Terrain\">terrain feature</a></b></b>.</li></ul><div class=\"str11Line\"></div><b>AFTER MOVING:</b><br><ul><li>Your unit must be <b><b><span class=\"tooltip00009\" data-tooltip-content=\"#tooltip_content00009\"><span class=\"tt kwbu\">unengaged</span></span></b></b>.</li><li>Until the end of the turn, your unit is <u>not</u> <b><b><a href=\"/wh40k11ed/the-rules/core-rules/#2.-Charge-Step\">eligible to declare a charge</a></b></b> or <b><b><a href=\"/wh40k11ed/the-rules/core-rules/#Starting-an-Action\">start an action</a></b></b>.</li><li>Until the start of your next turn, attacks that target your unit have -1 to <b><b><span class=\"tooltip00026\" data-tooltip-content=\"#tooltip_content00026\"><span class=\"tt kwbu\">hit</span> <span class=\"tt kwbu\">rolls</span></span></b></b>.</li></ul></div>"
+  },
+  {
+    "id": "</div>"
+  },
+  {
+    "id": "<div class=\"str11Bg str11AMoveBg\"><div class=\"str11Icon str11AMove\"></div></div>"
+  },
+  {
+    "id": "</div>"
+  },
+  {
+    "id": "</div></div><br><a id=\"ASSAULT-DISEMBARK-MOVE\" name=\"ASSAULT-DISEMBARK-MOVE\"></a><div class=\" BreakInsideAvoid\">"
+  },
+  {
+    "id": "<div class=\"str11Wrap\">"
+  },
+  {
+    "id": "<div class=\"str11BodyWrap\">"
+  },
+  {
+    "id": "<div class=\"str11HeadBlock str11Name\">ASSAULT DISEMBARK MOVE<span class=\"h_number\">18.06</span></div>"
+  },
+  {
+    "id": "</div>"
+  },
+  {
+    "id": "<div class=\"str11BodyWrap\">"
+  },
+  {
+    "id": "<div class=\"str11TextWrap\">"
+  },
+  {
+    "id": "<div class=\"str11Text\"><div class=\"strGreyBg\"><b>SET-UP DISTANCE:</b> 3\"</div><div class=\"str11Line\"></div><b>ELIGIBLE IF:</b><br><ul><li>Embarked within a <a href=\"/wh40k11ed/the-rules/core-rules/#Transports\"><span class=\"kwb kwbu\">TRANSPORT</span></a> on the battlefield</li><li>Did not embark within that <span class=\"kwb\">TRANSPORT</span> this phase</li><li>That <span class=\"kwb\">TRANSPORT</span> has not made an <b><span class=\"tooltip00022\" data-tooltip-content=\"#tooltip_content00022\"><span class=\"tt kwbu\">advance</span></span></b>/<b><span class=\"tooltip00082\" data-tooltip-content=\"#tooltip_content00082\"><span class=\"tt kwbu\">fall-back</span> <span class=\"tt kwbu\">move</span></span></b> this phase</li></ul><div class=\"str11Line\"></div><b>EFFECT:</b> Set up as described in Set Up (<span class=\"kwn\"><a href=\"/wh40k11ed/the-rules/core-rules/#Set-Up\">03.02</a></span>).<br><div class=\"str11Line\"></div><b>WHILE MOVING:</b> Set up each model wholly within the <b>set-up distance</b> of that <span class=\"kwb\">TRANSPORT</span>.</div>"
+  },
+  {
+    "id": "</div>"
+  },
+  {
+    "id": "<div class=\"str11Bg str11AMoveBg\"><div class=\"str11Icon str11AMove\"></div></div>"
+  },
+  {
+    "id": "</div>"
+  },
+  {
+    "id": "</div></div>"
+  }
+]
