@@ -36,6 +36,38 @@ def copy_repo(src: Path, dst: Path) -> None:
         ignore=shutil.ignore_patterns(".git", ".cache", "__pycache__", "*.pyc"),
     )
 
+VOLATILE_PROJECTION_KEYS = {"snapshot_date", "wahapedia_last_update"}
+
+def normalized_projection(value):
+    if isinstance(value, dict):
+        return {
+            k: normalized_projection(v)
+            for k, v in value.items()
+            if k not in VOLATILE_PROJECTION_KEYS
+        }
+    if isinstance(value, list):
+        return [normalized_projection(x) for x in value]
+    return value
+
+def changed_wahapedia_rosters(workspace: Path, baseline: str, candidate_date: str) -> list[str]:
+    old_root = workspace / "rules" / "11e" / "snapshots" / baseline / "wahapedia" / "roster_views"
+    new_root = workspace / "rules" / "11e" / "snapshots" / candidate_date / "wahapedia" / "roster_views"
+    if not new_root.exists():
+        return []
+    affected = []
+    for p in sorted(new_root.glob("*.json")):
+        if p.name == "index.json":
+            continue
+        old = old_root / p.name
+        if not old.exists():
+            affected.append(p.stem)
+            continue
+        old_obj = normalized_projection(json.loads(old.read_text(encoding="utf-8")))
+        new_obj = normalized_projection(json.loads(p.read_text(encoding="utf-8")))
+        if old_obj != new_obj:
+            affected.append(p.stem)
+    return affected
+
 def inventory_files(root: Path) -> dict[str, tuple[int, int]]:
     out = {}
     for p in root.rglob("*"):
@@ -168,6 +200,11 @@ def main() -> int:
     if forbidden:
         hard_fail = True
 
+    source_affected = plan.get("source_affected_roster_identities", {})
+    affected_rosters = set(source_affected.get("bsdata_wh40k_11e", []))
+    if waha_changed and not hard_fail:
+        affected_rosters.update(changed_wahapedia_rosters(workspace, baseline, candidate_date))
+
     candidate_root = artifact_dir / "candidate"
     candidate_root.mkdir(parents=True, exist_ok=True)
     wanted_prefixes = [
@@ -203,6 +240,7 @@ def main() -> int:
         "status": status,
         "candidate_snapshot_date": candidate_date,
         "changed_sources": plan.get("changed_sources", []),
+        "affected_roster_identities": sorted(affected_rosters),
         "stages": stage_results,
         "changed_files_in_isolated_workspace": changed,
         "artifact_files": copied,
