@@ -107,3 +107,19 @@ Current transition facts remain unchanged:
 - Adeptus Custodes: preview/preorder material remains upcoming-only until release/current-legality evidence exists.
 - Both transitions should use the guarded candidate/reconciliation/promotion control plane once legally current.
 
+## Release-transition readiness v1 — COMPLETE
+
+The repository now has explicit transition manifests and a fail-closed state machine for the pending Space Marines and Adeptus Custodes releases.
+
+At the 2026-09-29 checkpoint:
+
+- Space Marines: `PRE_RELEASE_HOLD`, scheduled release date 2026-10-03, official current-legal confirmation not yet recorded;
+- Adeptus Custodes: `UPCOMING_HOLD_NO_RELEASE_DATE`, current-legal release date intentionally unknown;
+- neither transition is candidate-eligible or promotion-eligible.
+
+A release date, preview or preorder announcement is never sufficient for promotion. Official current-legal evidence must be explicitly recorded, then a real upstream projection change must be detected before the existing guarded re-ingestion candidate path can run.
+
+Active milestone:
+
+`RELEASE_TRANSITION_ACTIVATION_WATCH`
+
