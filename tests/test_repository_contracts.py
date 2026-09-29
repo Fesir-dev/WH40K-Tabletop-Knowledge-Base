@@ -99,7 +99,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(self.coverage["status"], "WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE")
         self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_current")), 35)
         self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
-        self.assertEqual(self.current["status"], "CURRENT_STRUCTURAL_READY_SEMANTIC_PENDING")
+        self.assertEqual(self.current["status"], "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING")
         self.assertEqual(self.current["wave_b_structural"]["roster_identities_complete"], 35)
         self.assertEqual(self.current["wave_b_structural"]["semantic_rule_text"], "CURRENT_SECONDARY_MIRROR_FULL_HASH_VERIFIED")
         self.assertEqual(self.current["wave_b_structural"]["faq_errata"], "SOURCE_CATALOG_CURRENT_OFFICIAL_ASSETS_VERIFIED")
