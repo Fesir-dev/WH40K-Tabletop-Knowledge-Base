@@ -304,7 +304,7 @@ try:
     if "release-transition auto-promotion: DISABLED" not in readiness_workflow:
         errors.append("Release-transition readiness workflow lost explicit no-auto-promotion assertion")
     activation_report = json.loads(
-        (ROOT / "reports" / "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json").read_text(encoding="utf-8")
+        (ROOT / "reports" / "RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json").read_text(encoding="utf-8")
     )
     activation_cfg = release.get("activation_watch", {})
     if activation_cfg.get("state") != "OPERATIONAL_V1":
