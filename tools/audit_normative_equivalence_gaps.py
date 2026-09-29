@@ -61,6 +61,8 @@ def build_audit(root:Path=ROOT)->dict:
     official_assets=load(root/"sources/snapshots/gw_11e_official_assets_2026-09-29.json")
     semantic_audit=load(root/"reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json")
     discovery=load(root/"sources/discoveries/gw_public_rules_surface_2026-09-29.json")
+    official_fp_path=root/"reports"/"OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+    official_fp=load(official_fp_path) if official_fp_path.exists() else None
 
     factions=catalog["factions"]
     cov_rows=coverage["factions"]
@@ -139,6 +141,16 @@ def build_audit(root:Path=ROOT)->dict:
     off=official_assets["official_assets"]
     sem_expected=int(semantic_audit.get("expected_fingerprints",0))
     sem_match=int(semantic_audit.get("counts",{}).get("MATCH",0))
+    fp_pass=bool(
+        official_fp
+        and official_fp.get("status")=="PASS"
+        and official_fp.get("summary",{}).get("documents")==29
+        and official_fp.get("summary",{}).get("failures")==0
+    )
+    fp_core=next(
+        (x for x in (official_fp or {}).get("documents",[]) if x.get("document_type")=="CORE_RULES"),
+        None,
+    )
 
     closed_layers=[
         {
@@ -182,7 +194,7 @@ def build_audit(root:Path=ROOT)->dict:
     gaps=[
         {
             "id":"OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-            "state":"CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE",
+            "state":"FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING" if fp_pass else "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE",
             "blocking_scope":["core_rules_content","system_normative_semantics"],
             "evidence":{
                 "repository_state":current["source_currentness"]["core_rules_content"]["state"],
@@ -190,19 +202,27 @@ def build_audit(root:Path=ROOT)->dict:
                 "official_public_source":core_public,
                 "downloads_source_health":gw_downloads.get("status"),
                 "downloads_gate_state":downloads_gate.get("state"),
+                "official_fingerprint_report":"reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json" if fp_pass else None,
+                "official_fingerprint_state":"PASS" if fp_pass else "PENDING",
+                "core_rules_binary_sha256":fp_core.get("binary_sha256") if fp_core else None,
+                "core_rules_semantic_sha256":fp_core.get("semantic_sha256") if fp_core else None,
             },
-            "next_action":"Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction.",
+            "next_action":"Structurally normalize scoped public Core Rules semantics and compare public official overlap without vendoring long rules prose." if fp_pass else "Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction.",
         },
         {
             "id":"PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
-            "state":"CLOSABLE_WITH_CURRENT_PUBLIC_SOURCES",
+            "state":"FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_EXTRACTION_PENDING" if fp_pass else "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCES",
             "blocking_scope":["public_faction_supplements","faq_errata","public_extra_datasheets","public_extra_detachments"],
             "evidence":{
                 "verified_public_faction_pack_pdfs":off.get("verified_pdf_assets"),
                 "official_scope":pack_scope,
                 "faq_errata_normative_complete":semantic_complete["faq_errata"],
+                "official_fingerprint_report":"reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json" if fp_pass else None,
+                "official_fingerprint_state":"PASS" if fp_pass else "PENDING",
+                "official_fingerprint_documents":official_fp.get("summary",{}).get("documents") if fp_pass else 0,
+                "official_fingerprint_pages":official_fp.get("summary",{}).get("pages") if fp_pass else 0,
             },
-            "next_action":"Fingerprint and structurally extract the public official faction-pack supplement/FAQ semantics without treating them as complete Codex replacements.",
+            "next_action":"Structurally extract public Faction Pack supplement semantics and compare only public official overlap against the current mirror." if fp_pass else "Fingerprint and structurally extract the public official faction-pack supplement/FAQ semantics without treating them as complete Codex replacements.",
         },
         {
             "id":"FULL_FACTION_CODEX_APP_SEMANTICS",
@@ -230,6 +250,8 @@ def build_audit(root:Path=ROOT)->dict:
                     if row.get("semantic_current_mirror",{}).get("normative_equivalence_verified") is True
                 ),
                 "public_official_faction_packs":len(packs),
+                "official_public_fingerprint_state":"PASS" if fp_pass else "PENDING",
+                "official_public_fingerprint_report":"reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json" if fp_pass else None,
             },
             "next_action":"Compare only overlapping public official Core/Faction Pack semantics against the mirror. Never generalize overlap matches into full-faction equivalence where Codex/app-only text is absent.",
         },
@@ -312,6 +334,10 @@ def build_audit(root:Path=ROOT)->dict:
             "faction_pack_scope":"SUPPLEMENTAL_NOT_FULL_CODEX",
             "gw_app_role_confirmed":True,
             "gw_app_repository_ingested":gw_app.get("repository_coverage_state")!="NOT_INGESTED",
+            "official_public_semantic_fingerprints":"PASS" if fp_pass else "PENDING",
+            "official_public_fingerprint_report":"reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json" if fp_pass else None,
+            "official_public_documents_fingerprinted":official_fp.get("summary",{}).get("documents",0) if fp_pass else 0,
+            "core_rules_semantic_fingerprinted":bool(fp_core) and fp_pass,
         },
         "roster_source_mapping":{
             "counts":dict(sorted(mapping_counts.items())),
@@ -323,8 +349,8 @@ def build_audit(root:Path=ROOT)->dict:
         "conclusion":{
             "why_current_normalized_factions_is_zero":"The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
             "publicly_closable_now":[
-                "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-                "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
+                "structured public Core Rules normalization",
+                "structured public Faction Pack supplement extraction",
                 "public-overlap portion of MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE",
                 "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING",
             ],
@@ -332,8 +358,8 @@ def build_audit(root:Path=ROOT)->dict:
                 "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
                 "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS",
             ],
-            "recommended_next_milestone":"OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE",
-            "expected_effect":"Close Core Rules plus public faction supplement/FAQ official semantics and establish official-vs-mirror overlap fingerprints. This should improve normative scoped coverage but must not automatically promote full-faction normalization.",
+            "recommended_next_milestone":"OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT" if fp_pass else "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE",
+            "expected_effect":"Fingerprint evidence is closed for the public Core Rules and 28 Faction Packs. Next compare only public official overlap against the current mirror and begin structured public-official normalization; do not promote full-faction normalization while Codex/app-only semantics remain unavailable." if fp_pass else "Close Core Rules plus public faction supplement/FAQ official semantics and establish official-vs-mirror overlap fingerprints. This should improve normative scoped coverage but must not automatically promote full-faction normalization.",
         },
     }
 
