@@ -167,6 +167,13 @@ High-level remaining work:
 3. optional deeper normative/app equivalence where official/app access permits;
 4. extend collection-aware solver profiles when additional personal faction inventories are normalized.
 
+## Execution reliability rule
+
+- decompose substantial work into 2–4 durable milestones where practical: recovery → audit/design → implementation → validation/closure;
+- commit/handoff after serious phases; never leave the only copy of progress in an unfinished response;
+- High may be replaced by Medium as a practical fallback if a long High run is producing no durable intermediate result; this is not guaranteed to fix transport/runtime failures;
+- on `Stream cache expired`, do not refresh-loop expecting that response stream to recover; resume from the latest validated GitHub state.
+
 ## Resume rule
 
 Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, or guarded reingestion/promotion v1 after a chat/UI failure.
