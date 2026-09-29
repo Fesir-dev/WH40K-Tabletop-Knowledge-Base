@@ -7,7 +7,7 @@
     "mirror_rule": "Wahapedia is the preferred readable current mirror/discovery source, but cannot override official evidence.",
     "implementation_rule": "BSData/wh40k-11e is the preferred machine-readable roster implementation cross-check. Its data can expose constraints and drift but cannot override official rules.",
     "runtime_rule": "New Recruit is a runtime projection of catalogue data. It validates how structured data behaves for players; it is not an independent normative rules authority.",
-    "analytics_rule": "Tournament datasets and expert analysis describe observed play and interpretation. They never mutate normative rules facts.",
+    "analytics_rule": "Tournament datasets, list aggregators, mathematical models and expert analysis provide decision evidence. They never mutate normative rules facts; dependent sources must not be double-counted as independent confirmation.",
     "event_rule": "Event/WTC rulings are scoped overlays and must not be promoted to global 40K rules.",
     "conflict_rule": "Applicable current official evidence wins. Secondary disagreement creates SOURCE_CONFLICT and requires official verification; never guess.",
     "collection_rule": "Direct user-confirmed physical ownership state outranks roster inference."
@@ -167,15 +167,21 @@
       "title": "Stat Check — 40K Meta",
       "publisher": "Stat Check",
       "authority": "empirical_dataset",
-      "source_role": "analytics",
-      "status": "CURRENT_PENDING_RECHECK",
+      "source_role": "meta_aggregator",
+      "status": "CURRENT_VERIFIED",
       "url": "https://www.stat-check.com/the-meta",
       "checked_at": "2026-09-29",
       "use_for": [
         "win_rates",
         "representation",
         "matchups",
-        "meta_trends"
+        "elo",
+        "top_finish_conversion",
+        "meta_windows"
+      ],
+      "analytics_class": "aggregate_statistics",
+      "independence_groups": [
+        "stat_check_aggregation"
       ]
     },
     {
@@ -183,15 +189,20 @@
       "title": "Best Coast Pairings",
       "publisher": "Best Coast Pairings",
       "authority": "empirical_dataset",
-      "source_role": "analytics",
-      "status": "CURRENT_PENDING_RECHECK",
+      "source_role": "tournament_raw",
+      "status": "CURRENT_VERIFIED",
       "url": "https://www.bestcoastpairings.com/",
       "checked_at": "2026-09-29",
       "use_for": [
         "event_results",
+        "pairings",
         "placements",
-        "lists_when_available",
+        "submitted_lists_when_available",
         "raw_tournament_evidence"
+      ],
+      "analytics_class": "raw_event_results",
+      "independence_groups": [
+        "bcp_event_results"
       ]
     },
     {
@@ -199,19 +210,23 @@
       "title": "Goonhammer — Warhammer 40,000",
       "publisher": "Goonhammer",
       "authority": "expert_analysis",
-      "source_role": "analysis",
+      "source_role": "expert_analysis",
       "status": "CURRENT_VERIFIED",
       "url": "https://www.goonhammer.com/category/gaming/warhammer-40k/",
       "checked_at": "2026-09-29",
       "use_for": [
-        "competitive_analysis",
-        "rules_interpretation",
+        "competitive_innovations",
+        "ruleshammer_interpretation",
         "faction_reviews",
         "list_analysis",
         "meta_context"
       ],
       "notes": [
         "Ruleshammer-style interpretation and competitive analysis must remain attributed analysis, never normative rule truth."
+      ],
+      "analytics_class": "expert_editorial",
+      "independence_groups": [
+        "goonhammer_editorial"
       ]
     },
     {
@@ -264,6 +279,412 @@
       "status": "PROVISIONAL",
       "sha256": "6aee2f7bf491f4fe6f254aeecf79dffe84a5579e24a3022aafcea422b9e97f20",
       "checked_at": "2026-07-11"
+    },
+    {
+      "id": "TABLETOP_HERALD_40K",
+      "title": "Tabletop Herald — Warhammer 40,000 tournaments",
+      "publisher": "Tabletop Herald",
+      "authority": "empirical_dataset",
+      "source_role": "tournament_raw",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://www.tabletop-herald.com/en/warhammer-40000/world/tournaments",
+      "checked_at": "2026-09-29",
+      "analytics_class": "raw_event_results",
+      "use_for": [
+        "events",
+        "pairings",
+        "results",
+        "lists",
+        "rankings",
+        "european_event_coverage"
+      ],
+      "independence_groups": [
+        "tabletop_herald_event_results"
+      ]
+    },
+    {
+      "id": "LISTHAMMER_40K",
+      "title": "Listhammer — recent 40K tournament lists and results",
+      "publisher": "Listhammer",
+      "authority": "empirical_dataset",
+      "source_role": "list_meta",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://listhammer.info/",
+      "checked_at": "2026-09-29",
+      "analytics_class": "winning_list_feed",
+      "depends_on": [
+        "BCP_40K",
+        "TABLETOP_HERALD_40K"
+      ],
+      "use_for": [
+        "undefeated_lists",
+        "x_1_lists",
+        "faction_builds",
+        "detachments",
+        "force_dispositions",
+        "recent_list_discovery"
+      ],
+      "independence_groups": [
+        "bcp_event_results",
+        "tabletop_herald_event_results"
+      ],
+      "notes": [
+        "11E feed observed as recent undefeated/X-1 lists from 16+ player non-team events; RTTs can be included separately."
+      ]
+    },
+    {
+      "id": "INFINITE_ARCHIVE_40K",
+      "title": "The Infinite Archive",
+      "publisher": "The Infinite Archive",
+      "authority": "empirical_dataset",
+      "source_role": "meta_aggregator",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://www.infinitearchive.org/",
+      "checked_at": "2026-09-29",
+      "analytics_class": "advanced_statistics",
+      "depends_on": [
+        "BCP_40K"
+      ],
+      "use_for": [
+        "wilson_win_rates",
+        "confidence_intervals",
+        "matchup_matrix",
+        "top_cut_conversion",
+        "vp_differential",
+        "consistency",
+        "round_attrition",
+        "disposition_analysis",
+        "player_elo",
+        "expert_vs_results_comparison"
+      ],
+      "independence_groups": [
+        "bcp_event_results"
+      ],
+      "notes": [
+        "Performance layer reports first-party BCP-derived tournament measurements; expert tier lists are shown as a separate comparison layer."
+      ]
+    },
+    {
+      "id": "META_MERGE_40K",
+      "title": "Meta Merge — Lexmechanic",
+      "publisher": "Lexmechanic",
+      "authority": "empirical_dataset",
+      "source_role": "list_meta",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://lexmechanic.com/metamerge",
+      "checked_at": "2026-09-29",
+      "analytics_class": "winning_list_composition",
+      "depends_on": [
+        "LISTHAMMER_40K",
+        "BSDATA_WH40K_11E"
+      ],
+      "use_for": [
+        "winner_share",
+        "build_momentum",
+        "detachment_mix",
+        "unit_take_rate",
+        "spine_flex_tech",
+        "consensus_roster",
+        "rosz_export"
+      ],
+      "independence_groups": [
+        "bcp_event_results",
+        "tabletop_herald_event_results",
+        "bsdata_catalogue"
+      ],
+      "observed_refresh_cadence": "6h",
+      "notes": [
+        "Winning-list share is not a win rate. Meta Merge explicitly operates on undefeated/one-loss lists from Listhammer."
+      ]
+    },
+    {
+      "id": "TACTICAL_REROLL_40K",
+      "title": "Tactical Reroll",
+      "publisher": "Tactical Reroll",
+      "authority": "analytical_model",
+      "source_role": "mathhammer",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://tacticalreroll.com/",
+      "checked_at": "2026-09-29",
+      "analytics_class": "mathhammer_plus_meta",
+      "depends_on": [
+        "BSDATA_WH40K_11E"
+      ],
+      "external_dependencies": [
+        "grimstat-corpus / MiniHeadQuarters tournament list corpus"
+      ],
+      "use_for": [
+        "unit_value",
+        "damage_per_point",
+        "durability_per_point",
+        "utility_estimate",
+        "meta_pick_rate",
+        "recent_top_lists",
+        "faction_mathhammer"
+      ],
+      "independence_groups": [
+        "bsdata_catalogue",
+        "grimstat_tournament_lists",
+        "tactical_reroll_model"
+      ],
+      "notes": [
+        "Its Value/Offense/Defense scores are model outputs, not observed tournament facts; Utility includes analyst/model judgment."
+      ]
+    },
+    {
+      "id": "HUTBER_STATS_40K",
+      "title": "Hutber Stats",
+      "publisher": "Hutber",
+      "authority": "empirical_dataset",
+      "source_role": "meta_aggregator",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://www.hutber.com/meta",
+      "checked_at": "2026-09-29",
+      "analytics_class": "integrated_meta_platform",
+      "depends_on": [
+        "BCP_40K",
+        "TABLETOP_HERALD_40K",
+        "BSDATA_WH40K_11E"
+      ],
+      "use_for": [
+        "meta_dashboard",
+        "faction_win_rate",
+        "detachment_performance",
+        "unit_presence",
+        "player_elo",
+        "event_wins",
+        "army_lists"
+      ],
+      "independence_groups": [
+        "bcp_event_results",
+        "tabletop_herald_event_results",
+        "bsdata_catalogue"
+      ],
+      "notes": [
+        "Site currently exposes live 11E meta pages; older player pages may still display migration/maintenance messaging."
+      ]
+    },
+    {
+      "id": "WARPFRIENDS_40K",
+      "title": "WarpFriends — 40K meta stats",
+      "publisher": "WarpFriends",
+      "authority": "empirical_dataset",
+      "source_role": "meta_aggregator",
+      "status": "CURRENT_PENDING_RECHECK",
+      "url": "https://warpfriends.wordpress.com/",
+      "checked_at": "2026-09-29",
+      "analytics_class": "weekly_meta_digest",
+      "use_for": [
+        "weekly_win_rates",
+        "x_0_x_1",
+        "event_wins",
+        "force_disposition_breakdown"
+      ],
+      "independence_groups": [
+        "public_tournament_results"
+      ],
+      "notes": [
+        "Useful independent weekly digest; exact ingestion automation and upstream lineage need a dedicated audit."
+      ]
+    },
+    {
+      "id": "META_TRACKER_40K",
+      "title": "40K Meta Tracker",
+      "publisher": "community project",
+      "authority": "empirical_dataset",
+      "source_role": "list_meta",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://flextap3.github.io/metatracker-site/",
+      "checked_at": "2026-09-29",
+      "analytics_class": "curated_top_tables",
+      "use_for": [
+        "top_table_lists",
+        "top4_momentum",
+        "event_wins",
+        "practice_rosters"
+      ],
+      "independence_groups": [
+        "curated_public_top_tables"
+      ],
+      "observed_data_through": "2026-09-12",
+      "notes": [
+        "Curated top-table sample, not community-wide win-rate data."
+      ]
+    },
+    {
+      "id": "UNITCRUNCH_40K",
+      "title": "UnitCrunch",
+      "publisher": "UnitCrunch",
+      "authority": "analytical_model",
+      "source_role": "mathhammer",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://www.unitcrunch.com/",
+      "checked_at": "2026-09-29",
+      "analytics_class": "simulation_tool",
+      "use_for": [
+        "monte_carlo_damage",
+        "probability_distributions",
+        "profile_comparison",
+        "theorycrafting"
+      ],
+      "independence_groups": [
+        "unitcrunch_model"
+      ],
+      "notes": [
+        "Use as an independent mathhammer cross-check, not as evidence of tournament performance."
+      ]
+    },
+    {
+      "id": "ART_OF_WAR_40K",
+      "title": "Art of War 40K",
+      "publisher": "Art of War 40K",
+      "authority": "expert_analysis",
+      "source_role": "expert_analysis",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://theartofwar40k.com/",
+      "checked_at": "2026-09-29",
+      "analytics_class": "elite_competitive_coaching",
+      "use_for": [
+        "faction_masterclasses",
+        "list_construction",
+        "tournament_strategy",
+        "meta_analysis",
+        "tier_opinion"
+      ],
+      "independence_groups": [
+        "art_of_war_experts"
+      ]
+    },
+    {
+      "id": "FORTY_K_FIRESIDE",
+      "title": "40K Fireside / Atlas",
+      "publisher": "40K Fireside",
+      "authority": "expert_analysis",
+      "source_role": "expert_analysis",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://40kfireside.com/",
+      "checked_at": "2026-09-29",
+      "analytics_class": "matchup_coaching",
+      "depends_on": [
+        "STAT_CHECK_40K"
+      ],
+      "use_for": [
+        "matchup_guidance",
+        "deployment_guidance",
+        "player_scouting",
+        "coach_scores",
+        "competitive_courses"
+      ],
+      "independence_groups": [
+        "fireside_coaches",
+        "stat_check_aggregation"
+      ]
+    },
+    {
+      "id": "VANGUARD_TACTICS_40K",
+      "title": "Vanguard Tactics",
+      "publisher": "Vanguard Tactics",
+      "authority": "expert_analysis",
+      "source_role": "expert_analysis",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://www.vanguardtactics.com/vanguard-tactics",
+      "checked_at": "2026-09-29",
+      "analytics_class": "structured_coaching",
+      "use_for": [
+        "11e_training",
+        "faction_guides",
+        "list_building",
+        "competitive_play",
+        "tactical_coaching"
+      ],
+      "independence_groups": [
+        "vanguard_tactics_coaches"
+      ]
+    },
+    {
+      "id": "AUSPEX_TACTICS_40K",
+      "title": "Auspex Tactics",
+      "publisher": "Auspex Tactics",
+      "authority": "expert_analysis",
+      "source_role": "expert_analysis",
+      "status": "CURRENT_VERIFIED",
+      "url": null,
+      "checked_at": "2026-09-29",
+      "analytics_class": "broad_expert_commentary",
+      "use_for": [
+        "unit_reviews",
+        "points_changes",
+        "faction_reviews",
+        "rapid_meta_reaction",
+        "tier_opinion"
+      ],
+      "independence_groups": [
+        "auspex_editorial"
+      ],
+      "notes": [
+        "Current 11E YouTube content verified; canonical channel URL should be pinned during dedicated ingestion setup."
+      ]
+    },
+    {
+      "id": "GRIMDARK_BREAKDOWN_40K",
+      "title": "Grimdark Breakdown",
+      "publisher": "Grimdark Breakdown",
+      "authority": "expert_analysis",
+      "source_role": "expert_analysis",
+      "status": "CURRENT_VERIFIED",
+      "url": null,
+      "checked_at": "2026-09-29",
+      "analytics_class": "weekly_meta_commentary",
+      "use_for": [
+        "meta_monday",
+        "win_rate_commentary",
+        "play_rate",
+        "force_disposition_analysis",
+        "tier_opinion"
+      ],
+      "independence_groups": [
+        "grimdark_breakdown_editorial"
+      ],
+      "notes": [
+        "Current 11E Meta Monday content verified; canonical channel URL should be pinned during dedicated ingestion setup."
+      ]
+    },
+    {
+      "id": "FORTYKDC_DATA",
+      "title": "40kdc-data",
+      "publisher": "community / wn-mitch",
+      "authority": "tooling_reference",
+      "source_role": "architecture_reference",
+      "status": "CURRENT_VERIFIED",
+      "url": "https://github.com/wn-mitch/40kdc-data",
+      "checked_at": "2026-09-29",
+      "analytics_class": "schema_and_tooling_reference",
+      "observed_revision": {
+        "commit_sha": "709ecd9f5bb6c06b7446eda6a6a0eae6b921a1c8",
+        "commit_date": "2026-09-29",
+        "message": "Merge pull request #241 from wn-mitch/wnmitch/sync-threat-matrix"
+      },
+      "use_for": [
+        "schema_comparison",
+        "structured_mechanics",
+        "ability_dsl",
+        "roster_import_export",
+        "damage_cruncher",
+        "conformance_testing",
+        "11e_data_model_reference"
+      ],
+      "independence_groups": [
+        "40kdc_architecture"
+      ],
+      "notes": [
+        "Architectural/reference source, not normative rules authority and not a substitute for our provenance model."
+      ]
     }
-  ]
+  ],
+  "analytics_policy": {
+    "recommendation_model": "analytics/ROSTER_RECOMMENDATION_EVIDENCE_MODEL.md",
+    "source_matrix": "analytics/ANALYTICS_SOURCE_MATRIX.json",
+    "independence_rule": "Count independent underlying evidence lineages, not websites. Aggregators sharing BCP/Tabletop Herald/BSData must not multiply confidence.",
+    "temporal_rule": "Every recommendation must declare a rules snapshot and analytics window; edition-lifetime, current-patch and recent-week evidence are not interchangeable."
+  }
 }
