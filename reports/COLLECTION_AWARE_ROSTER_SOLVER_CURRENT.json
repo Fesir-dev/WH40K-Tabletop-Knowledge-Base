@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "milestone": "COLLECTION_AWARE_ROSTER_SOLVER",
+  "faction": "Adeptus Custodes",
+  "rules_snapshot": "MFM 1.4 / 2026-09-02",
+  "collection_snapshot": "v0.5-provisional-r2 / 2026-07-11",
+  "cases": [
+    {
+      "case": "custodes_feasible_ready.json",
+      "status": "SCOPED_RULES_PASS_PHYSICAL_FEASIBLE",
+      "physical": "FEASIBLE_PROVISIONAL",
+      "points": 740
+    },
+    {
+      "case": "custodes_build_required.json",
+      "status": "SCOPED_RULES_PASS_PHYSICAL_FEASIBLE",
+      "physical": "FEASIBLE_WITH_BUILD_PROVISIONAL",
+      "points": 360
+    },
+    {
+      "case": "custodes_conversion.json",
+      "status": "SCOPED_RULES_PASS_PHYSICAL_FEASIBLE",
+      "physical": "FEASIBLE_WITH_CONVERSION_PROVISIONAL",
+      "points": 645
+    },
+    {
+      "case": "custodes_body_conflict.json",
+      "status": "SCOPED_RULES_PASS_PHYSICAL_INFEASIBLE",
+      "physical": "INFEASIBLE_FROM_SNAPSHOT",
+      "points": 570
+    },
+    {
+      "case": "custodes_component_conflict.json",
+      "status": "SCOPED_RULES_PASS_PHYSICAL_INFEASIBLE",
+      "physical": "INFEASIBLE_FROM_SNAPSHOT",
+      "points": 470
+    },
+    {
+      "case": "custodes_unknown_venatari_lance.json",
+      "status": "SCOPED_RULES_PASS_PHYSICAL_UNKNOWN",
+      "physical": "UNKNOWN_COMPONENT_FEASIBILITY",
+      "points": 165
+    },
+    {
+      "case": "custodes_conversion_disabled",
+      "status": "SCOPED_RULES_PASS_PHYSICAL_INFEASIBLE",
+      "physical": "INFEASIBLE_FROM_SNAPSHOT",
+      "points": 645
+    }
+  ],
+  "coverage": {
+    "mfm_unit_existence": true,
+    "mfm_unit_size_and_copy_tier_points": true,
+    "mfm_detachment_existence": true,
+    "mfm_enhancement_costs": true,
+    "mfm_paid_wargear_costs": true,
+    "mfm_leader_relations_when_declared": true,
+    "physical_shared_body_allocation": true,
+    "ready_vs_build_required_bodies": true,
+    "conversion_gating": true,
+    "declared_component_capacities": true,
+    "unknown_component_fail_closed": true,
+    "full_normative_army_legality": false,
+    "automatic_free_wargear_wysiwyg_inference": false
+  },
+  "authority_boundary": {
+    "full_normative_legality": "UNKNOWN_PENDING_NORMATIVE_APP",
+    "collection_status": "PROVISIONAL",
+    "normative_promotion": false
+  }
+}
