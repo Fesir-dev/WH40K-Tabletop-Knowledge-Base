@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "inventory_id": "adeptus_custodes_personal",
   "checkpoint": "2026-07-11",
   "repository_registered_at": "2026-09-29",
@@ -16,5 +16,12 @@
   "notes": [
     "This pointer intentionally does not duplicate historical roster point values as current collection authority.",
     "Re-audit physical state before promoting to CURRENT_VERIFIED."
-  ]
+  ],
+  "solver": {
+    "state": "OPERATIONAL_PROVISIONAL",
+    "profile": "collection/adeptus_custodes/solver_profile.json",
+    "tool": "tools/solve_collection_roster.py",
+    "validation_report": "reports/COLLECTION_AWARE_ROSTER_SOLVER_CURRENT.json",
+    "authority_boundary": "Solver uses this PROVISIONAL physical snapshot without promoting it to CURRENT_VERIFIED."
+  }
 }
