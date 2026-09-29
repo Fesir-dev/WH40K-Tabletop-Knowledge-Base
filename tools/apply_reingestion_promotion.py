@@ -105,8 +105,9 @@ def check(plan: dict, report: dict, artifact_dir: Path) -> dict:
             x.get("file") for x in plan.get("candidate_revisions", {}).get("wahapedia", {}).get("changed_files_detail", [])
             if x.get("file")
         }
-        # Older plans only expose a count. In that case discover official asset evidence if present.
         official_path = evidence_root / "official_assets.json"
+        if "Source.csv" in waha_changed_files and not official_path.exists():
+            raise SystemExit("Source.csv changed but candidate has no official asset audit")
         if official_path.exists():
             official = load(official_path)
             if official.get("status") != "PASS":
@@ -194,6 +195,24 @@ def apply_promotion(repo_root: Path, artifact_dir: Path, promoted_at: str) -> di
         ]
         complete = int(views["counts"]["structural_complete"])
 
+        conflict_doc = {
+            "schema_version": "1.0",
+            "state": "SOURCE_CONFLICT",
+            "source_pair": ["WAHAPEDIA_11E", "GW_MFM"],
+            "candidate_snapshot": candidate_key,
+            "conflict_count": int(recon.get("conflict_count", 0)),
+            "conflicts": recon.get("conflicts", []),
+            "resolution_policy": {
+                "points": "GW_MFM",
+                "detachment_points": "GW_MFM",
+                "enhancement_costs": "GW_MFM",
+                "wahapedia_role": "secondary current mirror; conflicts retained as drift evidence",
+            },
+            "source_report": recon_path,
+        }
+        conflict_path = f"ingestion/promotions/{plan_id}/wave_b_conflicts.json"
+        dump(repo_root / conflict_path, conflict_doc)
+
         wb = current["wave_b_structural"]
         wb.update({
             "snapshot": view_path,
@@ -201,6 +220,7 @@ def apply_promotion(repo_root: Path, artifact_dir: Path, promoted_at: str) -> di
             "roster_identities_complete": complete,
             "roster_identities_unavailable": unavailable,
             "reconciliation_report": recon_path,
+            "conflict_snapshot": conflict_path,
             "source_conflicts": int(recon.get("conflict_count", 0)),
             "current_mirror_roster_identities_complete": complete,
             "semantic_current_mirror_roster_identities": complete,
