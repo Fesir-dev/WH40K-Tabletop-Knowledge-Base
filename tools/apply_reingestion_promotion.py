@@ -74,6 +74,8 @@ def check(
         raise SystemExit("Candidate mutated forbidden current-authority files")
     if "BSDATA_MFM_11E" in plan.get("changed_sources", []):
         raise SystemExit("MFM-derived extraction changes require the separate official authority gate")
+    if "affected_roster_identities" not in report:
+        raise SystemExit("Candidate lacks affected_roster_identities; regenerate it with the current candidate pipeline")
 
     if release_state is None:
         release_path = ROOT / "sources" / "release_state.json"
