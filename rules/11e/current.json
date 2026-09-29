@@ -279,11 +279,12 @@
     },
     "closure_report": "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CLOSURE_2026-09-29.md",
     "latest_validation": {
-      "head": "cdcb3e2e66635520c8670d60f8e762840e087d8c",
-      "activation_watch_run": 36609958145,
-      "readiness_run": 36609957868,
-      "repository_ci_run": 36609957783,
+      "head": "99fb9bc6d5acbc02fbc459b6a2784d6f93a16bb2",
+      "activation_watch_run": 36610418604,
+      "readiness_run": 36610418400,
+      "repository_ci_run": 36610418377,
       "result": "SUCCESS"
-    }
+    },
+    "merged_commit": "1b01255794c0f83af6e61690887f4a41b1b0952f"
   }
 }
