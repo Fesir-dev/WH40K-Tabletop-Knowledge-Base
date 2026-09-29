@@ -12,6 +12,7 @@ class RepositoryContracts(unittest.TestCase):
         cls.gate = json.loads((ROOT/"sources/currentness_gate.json").read_text(encoding="utf-8"))
         cls.release = json.loads((ROOT/"sources/release_state.json").read_text(encoding="utf-8"))
         cls.release_readiness = json.loads((ROOT/"reports/RELEASE_TRANSITION_READINESS_CURRENT.json").read_text(encoding="utf-8"))
+        cls.release_activation_watch = json.loads((ROOT/"reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json").read_text(encoding="utf-8"))
         cls.space_marines_transition = json.loads((ROOT/"ingestion/release_transitions/space_marines_codex_2026.json").read_text(encoding="utf-8"))
         cls.custodes_transition = json.loads((ROOT/"ingestion/release_transitions/adeptus_custodes_codex_2026.json").read_text(encoding="utf-8"))
         cls.registry = json.loads((ROOT/"sources/registry.json").read_text(encoding="utf-8"))
@@ -74,7 +75,7 @@ class RepositoryContracts(unittest.TestCase):
             self.assertTrue(set(tr["factions"]) <= slugs, tr["id"])
 
     def test_release_transition_readiness_control_plane(self):
-        self.assertEqual(self.release["schema_version"], "1.1")
+        self.assertEqual(self.release["schema_version"], "1.2")
         policy=self.release["transition_policy"]
         self.assertEqual(policy["state"], "OPERATIONAL_READINESS_V1")
         self.assertFalse(policy["auto_promote"])
@@ -118,6 +119,41 @@ class RepositoryContracts(unittest.TestCase):
         workflow=(ROOT/".github/workflows/release-transition-readiness.yml").read_text(encoding="utf-8")
         self.assertIn("contents: read", workflow)
         self.assertIn("release-transition auto-promotion: DISABLED", workflow)
+
+    def test_release_transition_activation_watch_control_plane(self):
+        watch=self.release["activation_watch"]
+        self.assertEqual(watch["state"], "OPERATIONAL_V1")
+        self.assertEqual(watch["current_status"], "NO_ACTION_REQUIRED")
+        self.assertFalse(watch["auto_promote"])
+        self.assertFalse(watch["direct_current_rules_mutation"])
+        self.assertEqual(watch["cadence"], "every 6 hours")
+        self.assertTrue((ROOT/watch["tool"]).exists())
+        self.assertTrue((ROOT/watch["workflow"]).exists())
+        self.assertEqual(watch["report"], "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json")
+
+        report=self.release_activation_watch
+        self.assertEqual(report["status"], "NO_ACTION_REQUIRED")
+        self.assertEqual(report["as_of"], "2026-09-29")
+        self.assertEqual(report["summary"]["transition_count"], 2)
+        self.assertEqual(report["summary"]["no_action"], 2)
+        self.assertEqual(report["summary"]["action_required"], 0)
+        self.assertEqual(report["summary"]["monitoring"], 0)
+        self.assertEqual(report["summary"]["ready_for_candidate"], 0)
+        self.assertFalse(report["safety"]["auto_promote"])
+        self.assertFalse(report["safety"]["direct_current_rules_mutation"])
+        self.assertTrue(all(x["promotion_eligible"] is False for x in report["transitions"]))
+
+        rows={x["transition_id"]:x for x in report["transitions"]}
+        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["watch_state"], "NO_ACTION")
+        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["next_action"], "WAIT_PRE_RELEASE")
+        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["watch_state"], "NO_ACTION")
+        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["next_action"], "WAIT_OFFICIAL_RELEASE_SIGNAL")
+
+        workflow=(ROOT/".github/workflows/release-transition-activation-watch.yml").read_text(encoding="utf-8")
+        self.assertIn("contents: read", workflow)
+        self.assertIn("23 */6 * * *", workflow)
+        self.assertNotIn("contents: write", workflow)
+        self.assertNotIn("pull-requests: write", workflow)
 
     def test_mfm_wave_a_snapshot(self):
         self.assertEqual(self.mfm["official_source"]["version"], "1.4")
@@ -280,6 +316,11 @@ class RepositoryContracts(unittest.TestCase):
         tracked={x["id"]:x for x in layer["tracked_transitions"]}
         self.assertEqual(tracked["SPACE_MARINES_CODEX_2026"]["state"], "PRE_RELEASE_HOLD")
         self.assertEqual(tracked["ADEPTUS_CUSTODES_CODEX_2026"]["state"], "UPCOMING_HOLD_NO_RELEASE_DATE")
+        activation=self.current["release_transition_activation_watch"]
+        self.assertEqual(activation["state"], "OPERATIONAL_V1")
+        self.assertEqual(activation["checkpoint_status"], "NO_ACTION_REQUIRED")
+        self.assertFalse(activation["safety"]["auto_promote"])
+        self.assertFalse(activation["safety"]["direct_current_rules_mutation"])
 
     def test_guarded_reingestion_control_plane(self):
         required=[
