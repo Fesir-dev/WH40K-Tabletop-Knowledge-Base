@@ -28,9 +28,18 @@ Status: **PROVISIONAL**
 
 The old legacy manifest said “5 built boltguns, 5 unbuilt” for Sisters, while the normalized inventory states **0 built / 10 on sprue**. The normalized inventory is treated as the stronger and later internal representation.
 
-## Next target
+## Collection-aware solver
 
-Convert narrative hard constraints into solver-ready predicates so roster validation can answer both:
+The narrative constraints now have a derived solver profile:
 
-- rules legality;
-- physical feasibility from the owned collection.
+`solver_profile.json`
+
+Runtime:
+
+`tools/solve_collection_roster.py`
+
+The solver can allocate shared bodies, distinguish ready vs on-sprue bodies, gate explicit conversions, validate declared component stock, and fail closed when a component constraint is still unknown.
+
+Important boundary: the collection snapshot remains **PROVISIONAL**. Solver feasibility is always feasibility **against this snapshot**; it does not promote the personal inventory to `CURRENT_VERIFIED`.
+
+The solver currently checks the MFM-backed subset of rules legality (unit existence, legal MFM size/copy-tier price, detachment existence, enhancement and paid-wargear costs, and declared Leader relations). Full normative army legality remains `UNKNOWN_PENDING_NORMATIVE_APP` until the repository closes that separate authority gap.
