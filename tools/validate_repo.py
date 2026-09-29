@@ -26,6 +26,7 @@ VALID_AUTHORITIES = {
     "runtime_projection",
     "tooling_reference",
     "empirical_dataset",
+    "analytical_model",
     "expert_analysis",
     "event_overlay",
     "community_intelligence",
@@ -41,6 +42,12 @@ VALID_SOURCE_ROLES = {
     "validation_tooling",
     "analytics",
     "analysis",
+    "tournament_raw",
+    "meta_aggregator",
+    "list_meta",
+    "mathhammer",
+    "expert_analysis",
+    "architecture_reference",
     "event_overlay",
     "community_intelligence",
     "historical_baseline",
@@ -89,6 +96,15 @@ try:
         "GOONHAMMER_40K",
         "STAT_CHECK_40K",
         "BCP_40K",
+        "TABLETOP_HERALD_40K",
+        "LISTHAMMER_40K",
+        "INFINITE_ARCHIVE_40K",
+        "META_MERGE_40K",
+        "TACTICAL_REROLL_40K",
+        "HUTBER_STATS_40K",
+        "UNITCRUNCH_40K",
+        "ART_OF_WAR_40K",
+        "FORTY_K_FIRESIDE",
     }
     missing_sources = required_source_ids - set(source_ids)
     if missing_sources:
@@ -109,11 +125,31 @@ try:
         errors.append("New Recruit runtime must declare BSData WH40K 11E as its upstream source")
     if by_source_id.get("NEW_RECRUIT_WIKI", {}).get("upstream_source_id") != "BSDATA_WH40K_11E":
         errors.append("New Recruit Wiki must declare BSData WH40K 11E as its upstream source")
-    if by_source_id.get("GOONHAMMER_40K", {}).get("source_role") != "analysis":
-        errors.append("Goonhammer must remain in the analysis source role")
-    for analytics_id in {"STAT_CHECK_40K", "BCP_40K"}:
-        if by_source_id.get(analytics_id, {}).get("source_role") != "analytics":
-            errors.append(f"{analytics_id} must remain in the analytics source role")
+    expected_roles = {
+        "BCP_40K": "tournament_raw",
+        "TABLETOP_HERALD_40K": "tournament_raw",
+        "STAT_CHECK_40K": "meta_aggregator",
+        "INFINITE_ARCHIVE_40K": "meta_aggregator",
+        "HUTBER_STATS_40K": "meta_aggregator",
+        "LISTHAMMER_40K": "list_meta",
+        "META_MERGE_40K": "list_meta",
+        "TACTICAL_REROLL_40K": "mathhammer",
+        "UNITCRUNCH_40K": "mathhammer",
+        "GOONHAMMER_40K": "expert_analysis",
+        "ART_OF_WAR_40K": "expert_analysis",
+        "FORTY_K_FIRESIDE": "expert_analysis",
+        "FORTYKDC_DATA": "architecture_reference",
+    }
+    for source_id, expected_role in expected_roles.items():
+        if by_source_id.get(source_id, {}).get("source_role") != expected_role:
+            errors.append(f"{source_id} must remain in source role {expected_role}")
+
+    for source in source_rows:
+        for dependency in source.get("depends_on", []):
+            if dependency not in by_source_id:
+                errors.append(f"Unknown source dependency {source.get('id')} -> {dependency}")
+        if source.get("source_role") in {"meta_aggregator", "list_meta"} and not source.get("independence_groups"):
+            errors.append(f"Analytics source lacks independence_groups: {source.get('id')}")
 except Exception as exc:
     errors.append(f"Source registry failure: {exc}")
 
@@ -157,6 +193,77 @@ try:
         errors.append("BSData observed commit SHA differs between registry and New Recruit profile")
 except Exception as exc:
     errors.append(f"External source contract validation failure: {exc}")
+
+# 3c. Competitive analytics / roster recommendation contracts.
+try:
+    matrix = json.loads(
+        (ROOT / "analytics" / "ANALYTICS_SOURCE_MATRIX.json").read_text(encoding="utf-8")
+    )
+    matrix_rows = matrix.get("sources", [])
+    matrix_ids = [row.get("id") for row in matrix_rows]
+    if len(matrix_ids) != len(set(matrix_ids)):
+        errors.append("Duplicate source IDs in analytics source matrix")
+    for source_id in matrix_ids:
+        if source_id not in by_source_id:
+            errors.append(f"Analytics matrix source missing from registry: {source_id}")
+
+    required_matrix_ids = {
+        "BCP_40K",
+        "TABLETOP_HERALD_40K",
+        "STAT_CHECK_40K",
+        "INFINITE_ARCHIVE_40K",
+        "LISTHAMMER_40K",
+        "META_MERGE_40K",
+        "TACTICAL_REROLL_40K",
+        "UNITCRUNCH_40K",
+        "GOONHAMMER_40K",
+        "ART_OF_WAR_40K",
+        "FORTY_K_FIRESIDE",
+    }
+    missing_matrix = required_matrix_ids - set(matrix_ids)
+    if missing_matrix:
+        errors.append("Missing required analytics matrix IDs: " + ", ".join(sorted(missing_matrix)))
+
+    evidence_model = json.loads(
+        (ROOT / "analytics" / "roster_recommendation_evidence_model.json").read_text(encoding="utf-8")
+    )
+    competitive_weights = evidence_model.get("competitive_support_weights", {})
+    personal_weights = evidence_model.get("personal_fit_weights", {})
+    if sum(competitive_weights.values()) != 100:
+        errors.append("Competitive support weights must sum to 100")
+    if sum(personal_weights.values()) != 100:
+        errors.append("Personal fit weights must sum to 100")
+
+    required_states = {
+        "CORE_SUPPORTED",
+        "STRONG_OPTION",
+        "CONTEXTUAL_OPTION",
+        "TECH_CHOICE",
+        "EXPERIMENTAL",
+        "CONFLICTED_EVIDENCE",
+        "INSUFFICIENT_DATA",
+        "ILLEGAL_OR_UNVERIFIED",
+        "NOT_CURRENTLY_BUILDABLE",
+    }
+    missing_rec_states = required_states - set(evidence_model.get("recommendation_states", []))
+    if missing_rec_states:
+        errors.append("Missing roster recommendation states: " + ", ".join(sorted(missing_rec_states)))
+
+    if not (ROOT / "schemas" / "roster_recommendation_evidence.schema.json").exists():
+        errors.append("Missing roster recommendation evidence schema")
+
+    # Derived analytics must expose their shared upstream lineage.
+    for source_id in {"INFINITE_ARCHIVE_40K", "LISTHAMMER_40K", "META_MERGE_40K", "HUTBER_STATS_40K"}:
+        src = by_source_id.get(source_id, {})
+        if not src.get("independence_groups"):
+            errors.append(f"Derived analytics source missing lineage groups: {source_id}")
+
+    if "LISTHAMMER_40K" not in by_source_id.get("META_MERGE_40K", {}).get("depends_on", []):
+        errors.append("Meta Merge must declare Listhammer as an upstream dependency")
+    if "BCP_40K" not in by_source_id.get("INFINITE_ARCHIVE_40K", {}).get("depends_on", []):
+        errors.append("Infinite Archive performance layer must retain BCP dependency")
+except Exception as exc:
+    errors.append(f"Analytics evidence contract validation failure: {exc}")
 
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (
@@ -273,5 +380,5 @@ if errors:
 
 print(
     "PASS: repository JSON, baselines, source statuses, Custodes collection, "
-    "semantic-core index, external source contracts, and historical repricing invariants validated."
+    "semantic-core index, external/analytics source contracts, roster evidence model, and historical repricing invariants validated."
 )
