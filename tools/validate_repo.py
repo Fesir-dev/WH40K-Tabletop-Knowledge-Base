@@ -675,8 +675,8 @@ try:
         errors.append("Current rules contains unclassified New Recruit runtime drift")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "COLLECTION_AWARE_ROSTER_SOLVER":
-        errors.append("Current milestone must remain COLLECTION_AWARE_ROSTER_SOLVER")
+    if current_rules.get("next_milestone") != "AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION":
+        errors.append("Current milestone must be AUTOMATED_REINGESTION_RECONCILIATION_PROMOTION")
 except Exception as exc:
     errors.append(f"Automated upstream/runtime monitoring validation failure: {exc}")
 
@@ -721,6 +721,11 @@ try:
     solver_ptr = current_collection.get("solver", {})
     if solver_ptr.get("state") != "OPERATIONAL_PROVISIONAL":
         errors.append("Custodes current collection solver state must remain OPERATIONAL_PROVISIONAL")
+    rules_solver = current_rules.get("collection_aware_roster_solver", {})
+    if rules_solver.get("state") != "OPERATIONAL_V1_CUSTODES":
+        errors.append("Current rules must record collection solver v1 as operational")
+    if rules_solver.get("full_normative_legality") != "UNKNOWN_PENDING_NORMATIVE_APP":
+        errors.append("Collection solver must preserve the normative/app legality boundary")
     for required in [
         ROOT / "tools" / "solve_collection_roster.py",
         ROOT / "tools" / "validate_collection_solver.py",
