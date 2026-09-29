@@ -947,8 +947,8 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT":
-        errors.append("Current milestone must be NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT")
+    if current_rules.get("next_milestone") != "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE":
+        errors.append("Current milestone must be OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release transition readiness v1 as operational")
@@ -968,6 +968,19 @@ try:
         errors.append("Current release activation watch must keep auto_promote=false")
     if activation_layer.get("safety", {}).get("direct_current_rules_mutation") is not False:
         errors.append("Current release activation watch must remain read-only")
+    gap_layer = current_rules.get("normative_equivalence_gap_audit", {})
+    if gap_layer.get("state") != "PASS_GAPS_CLASSIFIED":
+        errors.append("Current rules must record normative equivalence gap audit as PASS_GAPS_CLASSIFIED")
+    if gap_layer.get("current_normalized_factions") != 0:
+        errors.append("Normative gap audit layer must preserve current_normalized_factions=0")
+    if gap_layer.get("public_core_rules_source_discovered") is not True:
+        errors.append("Normative gap audit layer lost public Core Rules discovery")
+    if gap_layer.get("verified_public_faction_pack_pdfs") != 28:
+        errors.append("Normative gap audit layer official faction-pack verification count drifted")
+    if gap_layer.get("public_faction_pack_scope") != "SUPPLEMENTAL_NOT_FULL_CODEX":
+        errors.append("Normative gap audit layer faction-pack scope drifted")
+    if gap_layer.get("gw_app_wording") != "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE":
+        errors.append("Normative gap audit layer GW App blocker drifted")
 except Exception as exc:
     errors.append(f"Automated upstream/runtime monitoring validation failure: {exc}")
 
