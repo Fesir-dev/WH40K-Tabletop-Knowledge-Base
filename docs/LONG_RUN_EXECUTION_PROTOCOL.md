@@ -24,7 +24,7 @@ Each phase may itself be substantial. The important rule is that a completed pha
 
 ## Milestone size
 
-Prefer roughly **3–6 meaningful durable milestones** for a large task.
+Prefer roughly **2–4 meaningful durable milestones** for a large task when the work decomposes cleanly; use more only when the task genuinely needs them.
 
 Avoid both extremes:
 
@@ -33,7 +33,7 @@ Avoid both extremes:
 
 ## Stream failure policy
 
-A ChatGPT delivery failure such as `Resume stream unavailable` is treated as a UI/transport failure, not as repository state.
+A ChatGPT delivery failure such as `Resume stream unavailable` or `Stream cache expired` is treated as a UI/transport failure, not as repository state.
 
 Recovery sequence:
 
@@ -80,3 +80,28 @@ Closure requires, where applicable:
 5. currentness/coverage updated honestly;
 6. documentation/handoff updated;
 7. no known unstable transition left unlabelled.
+
+## Chat/runtime resilience rules
+
+For substantial work, prefer **2–4 durable milestones** rather than one giant pass when the task can be decomposed cleanly. A default shape is:
+
+```text
+recovery
+   ↓
+audit / design
+   ↓
+implementation
+   ↓
+validation / closure
+```
+
+Each serious phase should leave durable GitHub evidence before the next phase depends on it. The repository/handoff is the recovery authority; an unfinished assistant response is never the only copy of meaningful progress.
+
+Model-effort reliability note:
+
+- High effort remains appropriate for difficult reasoning;
+- if a High run starts spending a long time without producing a durable intermediate result, Medium may be used as a practical reliability fallback;
+- this is an operator workaround, not a guaranteed fix.
+
+`Stream cache expired` is treated as a non-resumable delivery-stream failure for that specific response. Do not rely on repeated refreshes to reconstruct it. Recovery should start from the latest committed/validated GitHub state and continue forward without replaying already closed milestones.
+
