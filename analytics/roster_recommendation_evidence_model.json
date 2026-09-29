@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-29",
+  "goal": "Produce explainable, collection-aware roster recommendations without confusing legality, popularity, mathematical efficiency, tournament performance and expert opinion.",
+  "hard_gates": {
+    "normative_legality": {
+      "required": true,
+      "requirement": "Candidate roster/build must be legal under the declared current rules/points snapshot.",
+      "failure": "ILLEGAL_OR_UNVERIFIED"
+    },
+    "physical_feasibility": {
+      "required_when": "recommendation is constrained to the user's owned collection",
+      "requirement": "Candidate must be buildable from the declared collection snapshot or explicitly identify missing purchases/build changes.",
+      "failure": "NOT_CURRENTLY_BUILDABLE"
+    },
+    "patch_alignment": {
+      "required": true,
+      "requirement": "Primary analytics evidence must belong to the same rules/points patch or be explicitly normalized across the change.",
+      "failure": "CROSS_PATCH_EVIDENCE"
+    }
+  },
+  "competitive_support_weights": {
+    "tournament_performance": 30,
+    "winning_list_composition": 20,
+    "matchup_and_disposition": 15,
+    "mathematical_efficiency": 15,
+    "expert_consensus": 10,
+    "role_and_mission_fit": 10
+  },
+  "personal_fit_weights": {
+    "owned_model_coverage": 35,
+    "legal_loadout_and_bits_fit": 20,
+    "role_coverage_in_roster": 20,
+    "purchase_build_friction": 15,
+    "explicit_user_preference_or_familiarity": 10
+  },
+  "evidence_dimensions": {
+    "tournament_performance": {
+      "preferred_sources": [
+        "STAT_CHECK_40K",
+        "INFINITE_ARCHIVE_40K",
+        "BCP_40K",
+        "TABLETOP_HERALD_40K",
+        "HUTBER_STATS_40K"
+      ],
+      "examples": [
+        "win_rate",
+        "top_cut_conversion",
+        "event_wins",
+        "VP differential",
+        "consistency"
+      ]
+    },
+    "winning_list_composition": {
+      "preferred_sources": [
+        "LISTHAMMER_40K",
+        "META_MERGE_40K",
+        "BCP_40K",
+        "TABLETOP_HERALD_40K",
+        "TACTICAL_REROLL_40K"
+      ],
+      "examples": [
+        "take_rate",
+        "copy_count",
+        "detachment prevalence",
+        "winning-list share",
+        "spine/flex/tech"
+      ]
+    },
+    "matchup_and_disposition": {
+      "preferred_sources": [
+        "INFINITE_ARCHIVE_40K",
+        "STAT_CHECK_40K",
+        "FORTY_K_FIRESIDE",
+        "HUTBER_STATS_40K"
+      ],
+      "examples": [
+        "matchup matrix",
+        "disposition performance",
+        "coach matchup guidance"
+      ]
+    },
+    "mathematical_efficiency": {
+      "preferred_sources": [
+        "TACTICAL_REROLL_40K",
+        "UNITCRUNCH_40K"
+      ],
+      "examples": [
+        "damage_per_point",
+        "durability_per_point",
+        "probability distributions"
+      ]
+    },
+    "expert_consensus": {
+      "preferred_sources": [
+        "GOONHAMMER_40K",
+        "ART_OF_WAR_40K",
+        "FORTY_K_FIRESIDE",
+        "VANGUARD_TACTICS_40K",
+        "AUSPEX_TACTICS_40K",
+        "GRIMDARK_BREAKDOWN_40K"
+      ],
+      "examples": [
+        "role assessment",
+        "list rationale",
+        "deployment plan",
+        "meta interpretation"
+      ]
+    },
+    "role_and_mission_fit": {
+      "preferred_sources": [
+        "FORTY_K_FIRESIDE",
+        "GOONHAMMER_40K",
+        "ART_OF_WAR_40K",
+        "META_MERGE_40K"
+      ],
+      "examples": [
+        "primary role",
+        "secondary scoring",
+        "screening",
+        "mobility",
+        "anti_tank",
+        "mission/disposition fit"
+      ]
+    }
+  },
+  "sample_quality": {
+    "faction_games": {
+      "robust": 100,
+      "directional": 30,
+      "weak_below": 30
+    },
+    "matchup_games": {
+      "robust": 100,
+      "directional": 30,
+      "weak_below": 30
+    },
+    "readable_winning_lists": {
+      "robust": 10,
+      "directional": 5,
+      "weak_below": 5
+    },
+    "expert_consensus": {
+      "strong_independent_experts": 3,
+      "moderate_independent_experts": 2
+    }
+  },
+  "temporal_policy": {
+    "patch_boundary": "Do not pool pre-update and post-update evidence as one sample when rules, points, datasheets or detachment access changed materially.",
+    "recent_window_days": 21,
+    "context_window_days": 42,
+    "older_evidence": "historical_context_only unless no newer evidence exists",
+    "requirement": "Every recommendation records analytics_window_start/end and rules_snapshot_id."
+  },
+  "independence_policy": {
+    "key": "independence_group",
+    "rule": "Aggregate confidence once per underlying evidence lineage before combining lineages.",
+    "max_same_lineage_multiplier": 1,
+    "unresolved_lineage": "Do not claim independent confirmation until upstream provenance is known."
+  },
+  "recommendation_states": [
+    "CORE_SUPPORTED",
+    "STRONG_OPTION",
+    "CONTEXTUAL_OPTION",
+    "TECH_CHOICE",
+    "EXPERIMENTAL",
+    "CONFLICTED_EVIDENCE",
+    "INSUFFICIENT_DATA",
+    "ILLEGAL_OR_UNVERIFIED",
+    "NOT_CURRENTLY_BUILDABLE"
+  ],
+  "confidence_rules": {
+    "HIGH": "Legal/current + at least 3 independent evidence lineages + no material contradiction + adequate sample.",
+    "MEDIUM": "Legal/current + at least 2 independent lineages or one strong empirical lineage plus independent expert/math support.",
+    "LOW": "Sparse sample, one lineage, cross-source disagreement, or significant modelling assumptions."
+  },
+  "output_contract": [
+    "State the declared rules/points snapshot.",
+    "State the analytics time window and patch.",
+    "State the roster role the candidate is intended to fill.",
+    "Separate observed tournament evidence from derived models and expert opinion.",
+    "List supporting and counter-evidence.",
+    "Deduplicate dependent sources by lineage.",
+    "State collection/build feasibility separately from competitive strength.",
+    "Expose uncertainty and sample size.",
+    "Never label popularity as effectiveness without performance evidence.",
+    "Never label mathhammer efficiency as table strength without role/mission evidence."
+  ]
+}
