@@ -351,6 +351,90 @@ try:
 except Exception as exc:
     errors.append(f"Release-transition readiness validation failure: {exc}")
 
+# 3b3. Normative/app equivalence gap audit contracts.
+try:
+    audit = json.loads(
+        (ROOT / "reports" / "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json").read_text(encoding="utf-8")
+    )
+    public_rules = json.loads(
+        (ROOT / "sources" / "discoveries" / "gw_public_rules_surface_2026-09-29.json").read_text(encoding="utf-8")
+    )
+    if audit.get("status") != "PASS":
+        errors.append("Normative/app equivalence gap audit must PASS")
+    if audit.get("milestone") != "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT":
+        errors.append("Normative/app equivalence gap audit milestone id drifted")
+
+    boundary = audit.get("authority_boundary", {})
+    if boundary.get("normative_authority") != "GAMES_WORKSHOP":
+        errors.append("Normative gap audit lost Games Workshop authority")
+    if boundary.get("mirror_hash_match_is_normative_equivalence") is not False:
+        errors.append("Normative gap audit must not equate mirror hashes with normative equivalence")
+    if boundary.get("faction_pack_is_full_codex_replacement") is not False:
+        errors.append("Faction packs must not be treated as full Codex replacements")
+    if boundary.get("app_wording_inference_allowed") is not False:
+        errors.append("App-only wording inference must remain prohibited")
+
+    summary = audit.get("coverage_summary", {})
+    if summary.get("roster_universe") != 37:
+        errors.append("Normative gap audit roster universe drifted")
+    if summary.get("current_normalized_factions") != 0:
+        errors.append("Normative gap audit must preserve current_normalized_factions=0 at this checkpoint")
+    if summary.get("full_normative_semantic_factions") != 0:
+        errors.append("Normative gap audit must preserve full_normative_semantic_factions=0")
+    if summary.get("secondary_semantic_current_roster_identities") != 35:
+        errors.append("Normative gap audit secondary semantic roster count drifted")
+    if any(v != 0 for v in summary.get("normative_semantic_complete_by_dimension", {}).values()):
+        errors.append("Normative semantic dimensions must remain unpromoted at audit checkpoint")
+    if any(v != 37 for v in summary.get("normative_semantic_zero_by_dimension", {}).values()):
+        errors.append("Normative semantic zero-count accounting drifted")
+
+    mapping = audit.get("roster_source_mapping", {}).get("counts", {})
+    expected_mapping = {
+        "DIRECT_NAME_MATCH": 25,
+        "NAMING_ALIAS_CANDIDATE": 3,
+        "NO_PUBLIC_FACTION_PACK_MAPPING": 2,
+        "PARENT_SOURCE_CANDIDATE": 7,
+    }
+    if mapping != expected_mapping:
+        errors.append(f"Normative source-to-roster mapping baseline drifted: {mapping}")
+
+    gaps = {x.get("id"): x for x in audit.get("gaps", [])}
+    expected_states = {
+        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE",
+        "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCES",
+        "FULL_FACTION_CODEX_APP_SEMANTICS": "BLOCKED_OR_CONDITIONAL_ON_AUTHORIZED_CODEX_APP_EVIDENCE",
+        "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PARTIALLY_CLOSABLE_PUBLIC_OVERLAP_ONLY",
+        "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK": "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE",
+        "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING": "CLOSABLE_WITH_METADATA_AND_CONTENT_REVIEW",
+        "NORMATIVE_COVERAGE_ACCOUNTING": "INTENTIONAL_ZERO_NOT_MIRROR_DATA_LOSS",
+    }
+    for gap_id, state in expected_states.items():
+        if gaps.get(gap_id, {}).get("state") != state:
+            errors.append(f"Normative gap state drifted: {gap_id}")
+
+    findings = {x.get("id"): x for x in public_rules.get("findings", [])}
+    core = findings.get("GW_11E_CORE_RULES_PUBLIC", {})
+    if core.get("state") != "PUBLIC_OFFICIAL_SOURCE_DISCOVERED_NOT_INGESTED":
+        errors.append("Official public Core Rules discovery state drifted")
+    if not str(core.get("asset_url", "")).startswith("https://assets.warhammer-community.com/"):
+        errors.append("Official public Core Rules asset URL is not an official asset URL")
+    if public_rules.get("policy", {}).get("no_full_faction_equivalence_from_faction_packs_alone") is not True:
+        errors.append("Public-rules discovery lost faction-pack scope boundary")
+
+    if audit.get("conclusion", {}).get("recommended_next_milestone") != "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE":
+        errors.append("Normative gap audit recommended next milestone drifted")
+
+    for required in [
+        ROOT / "tools" / "audit_normative_equivalence_gaps.py",
+        ROOT / "tests" / "test_normative_equivalence_gap_audit.py",
+        ROOT / "schemas" / "normative_equivalence_gap_audit.schema.json",
+        ROOT / ".github" / "workflows" / "normative-equivalence-gap-audit.yml",
+    ]:
+        if not required.exists():
+            errors.append(f"Missing normative gap audit artifact: {required.relative_to(ROOT)}")
+except Exception as exc:
+    errors.append(f"Normative/app equivalence gap audit validation failure: {exc}")
+
 # 3c. Competitive analytics / roster recommendation contracts.
 try:
     matrix = json.loads(
@@ -863,8 +947,8 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT":
-        errors.append("Current milestone must be NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT")
+    if current_rules.get("next_milestone") != "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE":
+        errors.append("Current milestone must be OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release transition readiness v1 as operational")
@@ -884,6 +968,19 @@ try:
         errors.append("Current release activation watch must keep auto_promote=false")
     if activation_layer.get("safety", {}).get("direct_current_rules_mutation") is not False:
         errors.append("Current release activation watch must remain read-only")
+    gap_layer = current_rules.get("normative_equivalence_gap_audit", {})
+    if gap_layer.get("state") != "PASS_GAPS_CLASSIFIED":
+        errors.append("Current rules must record normative equivalence gap audit as PASS_GAPS_CLASSIFIED")
+    if gap_layer.get("current_normalized_factions") != 0:
+        errors.append("Normative gap audit layer must preserve current_normalized_factions=0")
+    if gap_layer.get("public_core_rules_source_discovered") is not True:
+        errors.append("Normative gap audit layer lost public Core Rules discovery")
+    if gap_layer.get("verified_public_faction_pack_pdfs") != 28:
+        errors.append("Normative gap audit layer official faction-pack verification count drifted")
+    if gap_layer.get("public_faction_pack_scope") != "SUPPLEMENTAL_NOT_FULL_CODEX":
+        errors.append("Normative gap audit layer faction-pack scope drifted")
+    if gap_layer.get("gw_app_wording") != "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE":
+        errors.append("Normative gap audit layer GW App blocker drifted")
 except Exception as exc:
     errors.append(f"Automated upstream/runtime monitoring validation failure: {exc}")
 

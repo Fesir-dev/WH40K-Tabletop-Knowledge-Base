@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/normative_equivalence_gap_audit.schema.json",
+  "title": "Normative/App Equivalence Gap Audit",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "as_of",
+    "milestone",
+    "authority_boundary",
+    "coverage_summary",
+    "official_public_surface",
+    "roster_source_mapping",
+    "closed_layers",
+    "gaps",
+    "conclusion"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "as_of": {
+      "type": "string"
+    },
+    "milestone": {
+      "const": "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT"
+    },
+    "authority_boundary": {
+      "type": "object"
+    },
+    "coverage_summary": {
+      "type": "object"
+    },
+    "official_public_surface": {
+      "type": "object"
+    },
+    "roster_source_mapping": {
+      "type": "object"
+    },
+    "closed_layers": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "state",
+          "blocking_scope",
+          "evidence",
+          "next_action"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "blocking_scope": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "type": "object"
+          },
+          "next_action": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "conclusion": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

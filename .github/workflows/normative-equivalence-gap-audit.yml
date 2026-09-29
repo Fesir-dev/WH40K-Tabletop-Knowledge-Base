@@ -1,0 +1,59 @@
+name: Normative/app equivalence gap audit
+
+on:
+  push:
+    paths:
+      - "rules/11e/current.json"
+      - "coverage/current.json"
+      - "sources/currentness_gate.json"
+      - "sources/registry.json"
+      - "factions/catalog.json"
+      - "rules/11e/snapshots/**/wahapedia/source_catalog.json"
+      - "sources/snapshots/gw_11e_official_assets_*.json"
+      - "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_*.json"
+      - "sources/discoveries/gw_public_rules_surface_2026-09-29.json"
+      - "tools/audit_normative_equivalence_gaps.py"
+      - "tests/test_normative_equivalence_gap_audit.py"
+      - "reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json"
+  pull_request:
+    paths:
+      - "rules/11e/current.json"
+      - "coverage/current.json"
+      - "sources/currentness_gate.json"
+      - "sources/registry.json"
+      - "factions/catalog.json"
+      - "rules/11e/snapshots/**/wahapedia/source_catalog.json"
+      - "sources/snapshots/gw_11e_official_assets_*.json"
+      - "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_*.json"
+      - "sources/discoveries/gw_public_rules_surface_2026-09-29.json"
+      - "tools/audit_normative_equivalence_gaps.py"
+      - "tests/test_normative_equivalence_gap_audit.py"
+      - "reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile audit tooling
+        run: python -m compileall -q tools/audit_normative_equivalence_gaps.py tests/test_normative_equivalence_gap_audit.py
+      - name: Run audit contract tests
+        run: python -m unittest tests.test_normative_equivalence_gap_audit -v
+      - name: Reproduce committed audit
+        run: |
+          mkdir -p .cache/normative-gap-audit
+          python tools/audit_normative_equivalence_gaps.py --output .cache/normative-gap-audit/current.json
+          python - <<'PY'
+          import json
+          a=json.load(open('.cache/normative-gap-audit/current.json',encoding='utf-8'))
+          b=json.load(open('reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json',encoding='utf-8'))
+          assert a==b, 'generated normative gap audit differs from committed report'
+          print('normative/app equivalence gap audit: reproducible PASS')
+          PY

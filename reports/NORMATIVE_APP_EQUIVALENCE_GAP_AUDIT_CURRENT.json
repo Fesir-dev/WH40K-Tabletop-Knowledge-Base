@@ -1,0 +1,924 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "as_of": "2026-09-29",
+  "milestone": "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT",
+  "authority_boundary": {
+    "normative_authority": "GAMES_WORKSHOP",
+    "secondary_mirror": "WAHAPEDIA_11E",
+    "structured_implementation": "BSDATA_WH40K_11E",
+    "runtime_projection": "NEW_RECRUIT_RUNTIME",
+    "mirror_hash_match_is_normative_equivalence": false,
+    "faction_pack_is_full_codex_replacement": false,
+    "app_wording_inference_allowed": false
+  },
+  "coverage_summary": {
+    "roster_universe": 37,
+    "current_normalized_factions": 0,
+    "full_normative_semantic_factions": 0,
+    "secondary_semantic_current_roster_identities": 35,
+    "mfm_dimensions": [
+      "points",
+      "unit_sizes",
+      "leader_relations",
+      "detachment_catalog",
+      "detachment_points",
+      "force_dispositions",
+      "enhancement_costs",
+      "wargear_costs",
+      "legends_pricing"
+    ],
+    "mfm_complete_roster_identities_by_dimension": {
+      "points": 36,
+      "unit_sizes": 36,
+      "leader_relations": 36,
+      "detachment_catalog": 36,
+      "detachment_points": 36,
+      "force_dispositions": 36,
+      "enhancement_costs": 36,
+      "wargear_costs": 36,
+      "legends_pricing": 36
+    },
+    "normative_semantic_dimensions": [
+      "datasheets",
+      "wargear_constraints",
+      "keywords",
+      "detachments",
+      "enhancements",
+      "stratagems",
+      "faq_errata"
+    ],
+    "normative_semantic_complete_by_dimension": {
+      "datasheets": 0,
+      "wargear_constraints": 0,
+      "keywords": 0,
+      "detachments": 0,
+      "enhancements": 0,
+      "stratagems": 0,
+      "faq_errata": 0
+    },
+    "normative_semantic_zero_by_dimension": {
+      "datasheets": 37,
+      "wargear_constraints": 37,
+      "keywords": 37,
+      "detachments": 37,
+      "enhancements": 37,
+      "stratagems": 37,
+      "faq_errata": 37
+    }
+  },
+  "official_public_surface": {
+    "core_rules_public_source_discovered": true,
+    "core_rules_asset_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+    "edition_11_source_catalog_rows": 29,
+    "verified_public_faction_pack_pdfs": 28,
+    "faction_pack_scope": "SUPPLEMENTAL_NOT_FULL_CODEX",
+    "gw_app_role_confirmed": true,
+    "gw_app_repository_ingested": false
+  },
+  "roster_source_mapping": {
+    "counts": {
+      "DIRECT_NAME_MATCH": 25,
+      "NAMING_ALIAS_CANDIDATE": 3,
+      "NO_PUBLIC_FACTION_PACK_MAPPING": 2,
+      "PARENT_SOURCE_CANDIDATE": 7
+    },
+    "rows": [
+      {
+        "slug": "aeldari_craftworlds",
+        "name": "Aeldari — Craftworlds",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "NAMING_ALIAS_CANDIDATE",
+        "candidate_official_pack": "Aeldari",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "drukhari",
+        "name": "Drukhari",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Drukhari",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "chaos_daemons",
+        "name": "Chaos Daemons",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Chaos Daemons",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "chaos_knights",
+        "name": "Chaos Knights",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Chaos Knights",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "chaos_space_marines",
+        "name": "Chaos Space Marines",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Chaos Space Marines",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "death_guard",
+        "name": "Death Guard",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Death Guard",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "emperors_children",
+        "name": "Emperor's Children",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Emperor’s Children",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "thousand_sons",
+        "name": "Thousand Sons",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Thousand Sons",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "titanicus_traitoris",
+        "name": "Titanicus Traitoris",
+        "roster_kind": "titan_force",
+        "parent_slug": null,
+        "mapping_state": "NO_PUBLIC_FACTION_PACK_MAPPING",
+        "candidate_official_pack": null,
+        "structural_current": false,
+        "secondary_semantic_current": false,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "world_eaters",
+        "name": "World Eaters",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "World Eaters",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "genestealer_cults",
+        "name": "Genestealer Cults",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Genestealer Cults",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "adepta_sororitas",
+        "name": "Adepta Sororitas",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Adepta Sororitas",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "adeptus_custodes",
+        "name": "Adeptus Custodes",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Adeptus Custodes",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "adeptus_mechanicus",
+        "name": "Adeptus Mechanicus",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Adeptus Mechanicus",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "adeptus_titanicus",
+        "name": "Adeptus Titanicus",
+        "roster_kind": "titan_force",
+        "parent_slug": null,
+        "mapping_state": "NAMING_ALIAS_CANDIDATE",
+        "candidate_official_pack": "Adeptus Titanicus (Forge World)",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "agents_of_the_imperium",
+        "name": "Agents of the Imperium",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "NAMING_ALIAS_CANDIDATE",
+        "candidate_official_pack": "Imperial Agents",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "astra_militarum",
+        "name": "Astra Militarum",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Astra Militarum",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "black_templars",
+        "name": "Black Templars",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Black Templars",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "blood_angels",
+        "name": "Blood Angels",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Blood Angels",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "dark_angels",
+        "name": "Dark Angels",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Dark Angels",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "deathwatch",
+        "name": "Deathwatch",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "PARENT_SOURCE_CANDIDATE",
+        "candidate_official_pack": "Space Marines",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "grey_knights",
+        "name": "Grey Knights",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Grey Knights",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "imperial_fists",
+        "name": "Imperial Fists",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "PARENT_SOURCE_CANDIDATE",
+        "candidate_official_pack": "Space Marines",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "imperial_knights",
+        "name": "Imperial Knights",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Imperial Knights",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "iron_hands",
+        "name": "Iron Hands",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "PARENT_SOURCE_CANDIDATE",
+        "candidate_official_pack": "Space Marines",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "raven_guard",
+        "name": "Raven Guard",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "PARENT_SOURCE_CANDIDATE",
+        "candidate_official_pack": "Space Marines",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "salamanders",
+        "name": "Salamanders",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "PARENT_SOURCE_CANDIDATE",
+        "candidate_official_pack": "Space Marines",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "space_marines",
+        "name": "Space Marines",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Space Marines",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "space_wolves",
+        "name": "Space Wolves",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Space Wolves",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "ultramarines",
+        "name": "Ultramarines",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "PARENT_SOURCE_CANDIDATE",
+        "candidate_official_pack": "Space Marines",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "white_scars",
+        "name": "White Scars",
+        "roster_kind": "astartes_supplement",
+        "parent_slug": "space_marines",
+        "mapping_state": "PARENT_SOURCE_CANDIDATE",
+        "candidate_official_pack": "Space Marines",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "leagues_of_votann",
+        "name": "Leagues of Votann",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Leagues of Votann",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "necrons",
+        "name": "Necrons",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Necrons",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "orks",
+        "name": "Orks",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Orks",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "tau_empire",
+        "name": "T'au Empire",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "T’au Empire",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "tyranids",
+        "name": "Tyranids",
+        "roster_kind": "primary_faction",
+        "parent_slug": null,
+        "mapping_state": "DIRECT_NAME_MATCH",
+        "candidate_official_pack": "Tyranids",
+        "structural_current": true,
+        "secondary_semantic_current": true,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      },
+      {
+        "slug": "unaligned_forces",
+        "name": "Unaligned Forces",
+        "roster_kind": "auxiliary_force",
+        "parent_slug": null,
+        "mapping_state": "NO_PUBLIC_FACTION_PACK_MAPPING",
+        "candidate_official_pack": null,
+        "structural_current": false,
+        "secondary_semantic_current": false,
+        "normative_equivalence_verified": false,
+        "current_normalized": false
+      }
+    ],
+    "policy": "Direct/alias/parent rows are provenance candidates only. No candidate mapping grants normative semantic equivalence without official content-scope review."
+  },
+  "closed_layers": [
+    {
+      "id": "MFM_NORMATIVE_DIMENSIONS",
+      "state": "CLOSED_CURRENT_NORMATIVE",
+      "authority": "GW_MFM",
+      "evidence": {
+        "version": "1.4",
+        "last_updated": "2026-09-02",
+        "dimensions": [
+          "points",
+          "unit_sizes",
+          "leader_relations",
+          "detachment_catalog",
+          "detachment_points",
+          "force_dispositions",
+          "enhancement_costs",
+          "wargear_costs",
+          "legends_pricing"
+        ],
+        "complete_roster_identities_by_dimension": {
+          "points": 36,
+          "unit_sizes": 36,
+          "leader_relations": 36,
+          "detachment_catalog": 36,
+          "detachment_points": 36,
+          "force_dispositions": 36,
+          "enhancement_costs": 36,
+          "wargear_costs": 36,
+          "legends_pricing": 36
+        },
+        "gate_state": "PASS"
+      }
+    },
+    {
+      "id": "OFFICIAL_FACTION_ASSET_PROVENANCE",
+      "state": "CLOSED_ASSET_LEVEL",
+      "authority": "GW_40K_DOWNLOADS",
+      "evidence": {
+        "edition_11_sources": 29,
+        "faction_pack_pdf_assets": 28,
+        "verified_pdf_assets": 28,
+        "failures": 0,
+        "source_catalog_drift": 0
+      }
+    },
+    {
+      "id": "SECONDARY_MIRROR_SEMANTIC_CURRENTNESS",
+      "state": "CLOSED_SECONDARY_ONLY",
+      "authority": "WAHAPEDIA_11E",
+      "evidence": {
+        "expected_fingerprints": 16506,
+        "matched_fingerprints": 16506,
+        "problems": 0,
+        "current_mirror_roster_identities": 35,
+        "normative_equivalence_claimed": false
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "id": "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
+      "state": "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE",
+      "blocking_scope": [
+        "core_rules_content",
+        "system_normative_semantics"
+      ],
+      "evidence": {
+        "repository_state": "PENDING",
+        "currentness_profile": {
+          "required_sources": [
+            "GW_40K_DOWNLOADS"
+          ],
+          "content_state": "PENDING",
+          "repository_dimension": null
+        },
+        "official_public_source": {
+          "id": "GW_11E_CORE_RULES_PUBLIC",
+          "state": "PUBLIC_OFFICIAL_SOURCE_DISCOVERED_NOT_INGESTED",
+          "article_url": "https://www.warhammer-community.com/en-gb/articles/nhqt9wx3/new40k-rules-download-the-free-core-rules-now/",
+          "article_published_at": "2026-06-01",
+          "asset_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+          "conclusion": "11th-edition Core Rules are publicly available from Games Workshop. The repository core-rules gap is an ingestion/registration gap, not a source-availability blocker.",
+          "normative_use": "Eligible for copyright-safe official semantic fingerprint/structured ingestion."
+        },
+        "downloads_source_health": "CURRENT_VERIFIED",
+        "downloads_gate_state": "PASS"
+      },
+      "next_action": "Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction."
+    },
+    {
+      "id": "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
+      "state": "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCES",
+      "blocking_scope": [
+        "public_faction_supplements",
+        "faq_errata",
+        "public_extra_datasheets",
+        "public_extra_detachments"
+      ],
+      "evidence": {
+        "verified_public_faction_pack_pdfs": 28,
+        "official_scope": {
+          "id": "GW_FACTION_PACK_SCOPE",
+          "state": "PUBLIC_OFFICIAL_SCOPE_CONFIRMED",
+          "article_url": "https://www.warhammer-community.com/en-gb/articles/9767rbsk/your-downloadable-warhammer-40000-faction-rules-are-changing-find-out-how/",
+          "article_published_at": "2025-10-08",
+          "conclusion": "Faction Packs consolidate supplemental faction rules and clarifications: extra Detachments, datasheets, FAQs and errata. They supplement Codex content; MFM, core rules updates and other products remain separate.",
+          "normative_use": "Eligible for public official supplement/FAQ semantic ingestion, but not sufficient by itself to prove full Codex/app faction equivalence."
+        },
+        "faq_errata_normative_complete": 0
+      },
+      "next_action": "Fingerprint and structurally extract the public official faction-pack supplement/FAQ semantics without treating them as complete Codex replacements."
+    },
+    {
+      "id": "FULL_FACTION_CODEX_APP_SEMANTICS",
+      "state": "BLOCKED_OR_CONDITIONAL_ON_AUTHORIZED_CODEX_APP_EVIDENCE",
+      "blocking_scope": [
+        "full_normative_faction",
+        "datasheets",
+        "wargear_constraints",
+        "keywords",
+        "detachments",
+        "enhancements",
+        "stratagems"
+      ],
+      "evidence": {
+        "faction_rules_profile": {
+          "required_sources": [
+            "GW_40K_DOWNLOADS"
+          ],
+          "content_state": "PENDING",
+          "repository_dimension": "datasheets"
+        },
+        "app_profile": {
+          "required_sources": [
+            "GW_40K_APP"
+          ],
+          "content_state": "PENDING",
+          "repository_dimension": null
+        },
+        "public_faction_pack_scope": "SUPPLEMENTS_CODEX_NOT_FULL_CODEX",
+        "gw_app_status": "CURRENT_PENDING_RECHECK",
+        "gw_app_repository_coverage_state": "NOT_INGESTED",
+        "gw_app_gate_state": "PENDING"
+      },
+      "next_action": "Do not infer missing Codex/app-only text from Wahapedia, BSData or New Recruit. Close per-faction only when official public content is complete or authorized app/Codex evidence is captured."
+    },
+    {
+      "id": "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE",
+      "state": "PARTIALLY_CLOSABLE_PUBLIC_OVERLAP_ONLY",
+      "blocking_scope": [
+        "normative_semantic_equivalence",
+        "full_normative_faction"
+      ],
+      "evidence": {
+        "secondary_mirror_fingerprints_expected": 16506,
+        "secondary_mirror_fingerprints_matched": 16506,
+        "factions_with_normative_equivalence_verified": 0,
+        "public_official_faction_packs": 28
+      },
+      "next_action": "Compare only overlapping public official Core/Faction Pack semantics against the mirror. Never generalize overlap matches into full-faction equivalence where Codex/app-only text is absent."
+    },
+    {
+      "id": "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
+      "state": "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE",
+      "blocking_scope": [
+        "app_wording",
+        "app_locked_datasheet_crosscheck"
+      ],
+      "evidence": {
+        "source_status": "CURRENT_PENDING_RECHECK",
+        "checked_at": null,
+        "repository_coverage_state": "NOT_INGESTED",
+        "gate_state": "PENDING",
+        "required_for": [
+          "app_wording",
+          "app_locked_datasheet_crosscheck"
+        ],
+        "official_role_discovered": true
+      },
+      "next_action": "Keep PENDING until authorized, versioned app evidence can be captured. Do not assign a polling cadence or infer app-only wording."
+    },
+    {
+      "id": "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING",
+      "state": "CLOSABLE_WITH_METADATA_AND_CONTENT_REVIEW",
+      "blocking_scope": [
+        "per_roster_normative_provenance"
+      ],
+      "evidence": {
+        "roster_identities": 37,
+        "direct_name_matches": 25,
+        "naming_alias_candidates": 3,
+        "parent_source_candidates": 7,
+        "no_public_faction_pack_mapping": 2,
+        "candidate_rows": [
+          {
+            "slug": "aeldari_craftworlds",
+            "name": "Aeldari — Craftworlds",
+            "roster_kind": "primary_faction",
+            "parent_slug": null,
+            "mapping_state": "NAMING_ALIAS_CANDIDATE",
+            "candidate_official_pack": "Aeldari",
+            "structural_current": true,
+            "secondary_semantic_current": true,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "titanicus_traitoris",
+            "name": "Titanicus Traitoris",
+            "roster_kind": "titan_force",
+            "parent_slug": null,
+            "mapping_state": "NO_PUBLIC_FACTION_PACK_MAPPING",
+            "candidate_official_pack": null,
+            "structural_current": false,
+            "secondary_semantic_current": false,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "adeptus_titanicus",
+            "name": "Adeptus Titanicus",
+            "roster_kind": "titan_force",
+            "parent_slug": null,
+            "mapping_state": "NAMING_ALIAS_CANDIDATE",
+            "candidate_official_pack": "Adeptus Titanicus (Forge World)",
+            "structural_current": true,
+            "secondary_semantic_current": true,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "agents_of_the_imperium",
+            "name": "Agents of the Imperium",
+            "roster_kind": "primary_faction",
+            "parent_slug": null,
+            "mapping_state": "NAMING_ALIAS_CANDIDATE",
+            "candidate_official_pack": "Imperial Agents",
+            "structural_current": true,
+            "secondary_semantic_current": true,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "deathwatch",
+            "name": "Deathwatch",
+            "roster_kind": "astartes_supplement",
+            "parent_slug": "space_marines",
+            "mapping_state": "PARENT_SOURCE_CANDIDATE",
+            "candidate_official_pack": "Space Marines",
+            "structural_current": true,
+            "secondary_semantic_current": true,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "imperial_fists",
+            "name": "Imperial Fists",
+            "roster_kind": "astartes_supplement",
+            "parent_slug": "space_marines",
+            "mapping_state": "PARENT_SOURCE_CANDIDATE",
+            "candidate_official_pack": "Space Marines",
+            "structural_current": true,
+            "secondary_semantic_current": true,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "iron_hands",
+            "name": "Iron Hands",
+            "roster_kind": "astartes_supplement",
+            "parent_slug": "space_marines",
+            "mapping_state": "PARENT_SOURCE_CANDIDATE",
+            "candidate_official_pack": "Space Marines",
+            "structural_current": true,
+            "secondary_semantic_current": true,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "raven_guard",
+            "name": "Raven Guard",
+            "roster_kind": "astartes_supplement",
+            "parent_slug": "space_marines",
+            "mapping_state": "PARENT_SOURCE_CANDIDATE",
+            "candidate_official_pack": "Space Marines",
+            "structural_current": true,
+            "secondary_semantic_current": true,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "salamanders",
+            "name": "Salamanders",
+            "roster_kind": "astartes_supplement",
+            "parent_slug": "space_marines",
+            "mapping_state": "PARENT_SOURCE_CANDIDATE",
+            "candidate_official_pack": "Space Marines",
+            "structural_current": true,
+            "secondary_semantic_current": true,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "ultramarines",
+            "name": "Ultramarines",
+            "roster_kind": "astartes_supplement",
+            "parent_slug": "space_marines",
+            "mapping_state": "PARENT_SOURCE_CANDIDATE",
+            "candidate_official_pack": "Space Marines",
+            "structural_current": true,
+            "secondary_semantic_current": true,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "white_scars",
+            "name": "White Scars",
+            "roster_kind": "astartes_supplement",
+            "parent_slug": "space_marines",
+            "mapping_state": "PARENT_SOURCE_CANDIDATE",
+            "candidate_official_pack": "Space Marines",
+            "structural_current": true,
+            "secondary_semantic_current": true,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          },
+          {
+            "slug": "unaligned_forces",
+            "name": "Unaligned Forces",
+            "roster_kind": "auxiliary_force",
+            "parent_slug": null,
+            "mapping_state": "NO_PUBLIC_FACTION_PACK_MAPPING",
+            "candidate_official_pack": null,
+            "structural_current": false,
+            "secondary_semantic_current": false,
+            "normative_equivalence_verified": false,
+            "current_normalized": false
+          }
+        ]
+      },
+      "next_action": "Create an explicit reviewed source-to-roster mapping contract. Alias/parent mappings are candidates only until official content scope confirms them."
+    },
+    {
+      "id": "NORMATIVE_COVERAGE_ACCOUNTING",
+      "state": "INTENTIONAL_ZERO_NOT_MIRROR_DATA_LOSS",
+      "blocking_scope": [
+        "current_normalized_factions",
+        "full_normative_semantic_factions"
+      ],
+      "evidence": {
+        "current_normalized_factions": 0,
+        "full_normative_semantic_factions": 0,
+        "secondary_semantic_roster_identities": 35,
+        "semantic_dimensions_complete": {
+          "datasheets": 0,
+          "wargear_constraints": 0,
+          "keywords": 0,
+          "detachments": 0,
+          "enhancements": 0,
+          "stratagems": 0,
+          "faq_errata": 0
+        },
+        "semantic_dimensions_zero": {
+          "datasheets": 37,
+          "wargear_constraints": 37,
+          "keywords": 37,
+          "detachments": 37,
+          "enhancements": 37,
+          "stratagems": 37,
+          "faq_errata": 37
+        }
+      },
+      "next_action": "Preserve separate normative and secondary-mirror coverage. Do not convert mirror completeness into normative coverage percentages."
+    }
+  ],
+  "conclusion": {
+    "why_current_normalized_factions_is_zero": "The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
+    "publicly_closable_now": [
+      "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
+      "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
+      "public-overlap portion of MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE",
+      "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING"
+    ],
+    "must_remain_pending_without_new_authorized_evidence": [
+      "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
+      "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS"
+    ],
+    "recommended_next_milestone": "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE",
+    "expected_effect": "Close Core Rules plus public faction supplement/FAQ official semantics and establish official-vs-mirror overlap fingerprints. This should improve normative scoped coverage but must not automatically promote full-faction normalization."
+  }
+}

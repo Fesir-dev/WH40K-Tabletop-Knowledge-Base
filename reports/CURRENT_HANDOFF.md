@@ -6,16 +6,18 @@ Updated: **2026-09-29**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest validated release-transition activation-watch evidence:
+Latest validated normative/app gap-audit evidence:
 
-- merged milestone commit: `1b01255794c0f83af6e61690887f4a41b1b0952f`
-- validated PR head: `99fb9bc6d5acbc02fbc459b6a2784d6f93a16bb2`
-- activation-watch run: `36610418604` — **SUCCESS**
-- release-readiness run: `36610418400` — **SUCCESS**
-- generic repository validation run: `36610418377` — **SUCCESS**
-- activation-watch checkpoint: `NO_ACTION_REQUIRED`
-- auto-promotion / direct current mutation: **disabled**
-- closure report: `reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CLOSURE_2026-09-29.md`
+- audit baseline report: `reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json`
+- reproducible audit tool: `tools/audit_normative_equivalence_gaps.py`
+- audit workflow: `.github/workflows/normative-equivalence-gap-audit.yml`
+- pre-closure validated audit head: `436a053786fbdf6acd4f9c5040dc423f7c1c76a1`
+- normative/app audit run: `36611731432` — **SUCCESS**
+- generic repository validation run: `36611731596` — **SUCCESS**
+- public Core Rules source: **DISCOVERED / NOT YET INGESTED**
+- verified public Faction Pack PDFs: **28 / 28**
+- full Codex/app equivalence: **NOT CLAIMED**
+- closure report: `reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CLOSURE_2026-09-29.md`
 
 ## Completed major layers
 
@@ -114,6 +116,22 @@ Checkpoint 2026-09-29:
 
 The watch remains operational while other development continues.
 
+
+### Normative/app equivalence gap audit
+**CLOSED AS CLASSIFICATION LAYER**
+- `current_normalized_factions = 0`: intentional normative threshold;
+- public 11E Core Rules: official source discovered, ingestion pending;
+- public 11E Faction Pack PDFs: **28 / 28** verified;
+- faction-pack role: supplemental to Codex, not full Codex replacement;
+- Wahapedia semantic mirror: **16,506 / 16,506** current hash matches, secondary only;
+- full normative semantic factions: **0**;
+- source→roster mapping: **25 direct + 3 alias candidates + 7 parent candidates + 2 no-pack mappings**;
+- GW App wording: `BLOCKED_ON_AUTHORIZED_APP_EVIDENCE`;
+- mirror→official full equivalence: not claimed;
+- recommended public next step: official Core/Faction-Pack semantic fingerprint pipeline.
+
+Authority boundary remains unchanged: public official overlap can be normalized, but missing Codex/app-only text cannot be inferred from Wahapedia, BSData or New Recruit.
+
 ### New Recruit runtime projection
 **CLOSED AS VALIDATION LAYER — LINEAGE HARDENED**
 - roster identities resolved: **37 / 37**;
@@ -193,14 +211,14 @@ Closure report:
 
 ## Current active milestone
 
-`NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT`
+`OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE`
 
 High-level remaining work:
 
-1. inventory the exact normative/app gaps that keep `current_normalized_factions = 0`;
-2. separate app-only wording, unavailable official text, mirror-to-official equivalence, and genuinely unresolved rules dimensions;
-3. define which gaps can be closed with current repository capabilities and which must remain explicit UNKNOWN;
-4. release-transition watch continues in parallel and must not be restarted or bypassed.
+1. register and fingerprint the official 2026 11E Core Rules source;
+2. fingerprint/structure public official Faction Pack supplement + FAQ/errata semantics without treating packs as full Codex replacements;
+3. build reviewed official-source→roster provenance mapping and compare only public official overlap against the current mirror;
+4. keep Codex/app-only wording explicit `PENDING/UNKNOWN`; release-transition watch continues in parallel.
 
 ## Execution reliability rule
 
@@ -211,6 +229,6 @@ High-level remaining work:
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, or activation-watch v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, or the normative/app gap audit after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.

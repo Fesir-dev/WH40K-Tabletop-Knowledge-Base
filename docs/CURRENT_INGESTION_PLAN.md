@@ -140,3 +140,22 @@ The release watch remains operational while development proceeds to:
 
 `NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT`
 
+## Normative/app equivalence gap audit — COMPLETE
+
+The authority gap is now machine-classified.
+
+Key result:
+
+- `current_normalized_factions = 0` is an intentional normative threshold, not evidence that the current mirror is empty;
+- 11E Core Rules are an official public source and can be ingested now;
+- all 28 registered 11E public Faction Pack PDFs are verified, but Games Workshop defines them as supplemental to Codex content rather than full Codex replacements;
+- current Wahapedia semantics are hash-current for 35 roster identities, but mirror currentness is not normative equivalence;
+- GW App/Codex-only wording remains explicitly blocked on authorized/versioned evidence;
+- official source→roster provenance currently resolves as 25 direct matches + 3 naming-alias candidates + 7 parent-source candidates + 2 no-public-pack identities.
+
+Active milestone:
+
+`OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE`
+
+This next pipeline may close public Core Rules and public Faction Pack supplement/FAQ semantics plus official-vs-mirror overlap. It must not automatically promote full-faction normalization or infer app-only text.
+
