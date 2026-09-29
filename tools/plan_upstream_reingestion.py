@@ -124,6 +124,7 @@ def build_plan(watch: dict, candidate_snapshot_date: str) -> dict:
             "baseline_last_update": waha.get("snapshot_last_update"),
             "candidate_last_update": waha.get("live_last_update"),
             "changed_files": len(waha.get("changed_files", [])),
+            "changed_files_detail": waha.get("changed_files", []),
         },
         "bsdata_wh40k_11e": {
             "pinned": bs.get("pinned"),
