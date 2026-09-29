@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/upstream_reingestion_plan.schema.json",
+  "title": "Upstream Reingestion Plan",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "plan_id",
+    "plan_fingerprint",
+    "state",
+    "candidate_snapshot_date",
+    "changed_sources",
+    "stages",
+    "blockers",
+    "promotion"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "plan_id": {
+      "type": "string"
+    },
+    "plan_fingerprint": {
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "NO_ACTION",
+        "CANDIDATE_REQUIRED"
+      ]
+    },
+    "baseline_snapshot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "candidate_snapshot_date": {
+      "type": "string"
+    },
+    "changed_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "candidate_revisions": {
+      "type": "object"
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "automation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "automation": {
+            "enum": [
+              "AUTOMATED_CANDIDATE",
+              "MANUAL_AUTHORITY_GATE"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "promotion": {
+      "type": "object",
+      "required": [
+        "auto_promote",
+        "state"
+      ],
+      "properties": {
+        "auto_promote": {
+          "const": false
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
