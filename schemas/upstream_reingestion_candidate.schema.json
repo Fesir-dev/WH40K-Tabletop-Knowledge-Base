@@ -71,6 +71,13 @@
     },
     "auto_promote": {
       "const": false
+    },
+    "affected_roster_identities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
     }
   },
   "additionalProperties": true
