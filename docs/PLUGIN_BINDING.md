@@ -5,8 +5,8 @@
 - Display name: **WH40K Tabletop Platform**
 - Plugin package name: `wh40k-tabletop-platform`
 - Plugin ID: `plugins_6abb8bb6fa408191adc7d026078a6310`
-- Version: `0.1.0`
-- Release ID: `pluginrel_6abb8bb83a38819186c8994218f7e81a`
+- Version: `0.2.0`
+- Release ID: `pluginrel_6abb9106a710819188b1bd87744fe098`
 - Created: 2026-09-29
 
 ## Authority boundary
@@ -25,7 +25,7 @@ Before substantive work, plugin skills are required to refresh current repositor
 - `wh40k-knowledge-retrieval` — reuse promoted repository knowledge before reopening research.
 - `wh40k-rules-research` — current rules/source revalidation, diff and promotion.
 - `wh40k-roster-analytics` — patch-scoped competitive/meta + collection-aware roster analysis.
-- `wh40k-repo-governance` — schemas, provenance, migrations, CI and repository integrity.
+- `wh40k-repo-governance` — schemas, provenance, migrations, CI and repository integrity.\n- `wh40k-hobby-painting` — painting inventory, 540-recipe catalogue, substitutions, army pipelines and active painting projects.
 
 ## Update policy
 
