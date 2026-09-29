@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/roster_recommendation_evidence.schema.json",
+  "title": "WH40K Roster Recommendation Evidence",
+  "type": "object",
+  "required": [
+    "recommendation_id",
+    "rules_snapshot_id",
+    "analytics_window",
+    "candidate",
+    "recommendation_state",
+    "confidence",
+    "evidence"
+  ],
+  "properties": {
+    "recommendation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rules_snapshot_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "points_snapshot_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "collection_snapshot_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "analytics_window": {
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        },
+        "patch_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "candidate": {
+      "type": "object",
+      "required": [
+        "faction",
+        "name",
+        "kind",
+        "intended_role"
+      ],
+      "properties": {
+        "faction": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "unit",
+            "loadout",
+            "detachment",
+            "roster_core",
+            "roster",
+            "combo"
+          ]
+        },
+        "intended_role": {
+          "type": "string"
+        },
+        "force_disposition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "gates": {
+      "type": "object",
+      "properties": {
+        "legality": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "PENDING"
+          ]
+        },
+        "patch_alignment": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "PENDING"
+          ]
+        },
+        "physical_feasibility": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_APPLICABLE",
+            "PENDING"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "recommendation_state": {
+      "enum": [
+        "CORE_SUPPORTED",
+        "STRONG_OPTION",
+        "CONTEXTUAL_OPTION",
+        "TECH_CHOICE",
+        "EXPERIMENTAL",
+        "CONFLICTED_EVIDENCE",
+        "INSUFFICIENT_DATA",
+        "ILLEGAL_OR_UNVERIFIED",
+        "NOT_CURRENTLY_BUILDABLE"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "dimension",
+          "direction",
+          "lineage_ids"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "dimension": {
+            "enum": [
+              "tournament_performance",
+              "winning_list_composition",
+              "matchup_and_disposition",
+              "mathematical_efficiency",
+              "expert_consensus",
+              "role_and_mission_fit",
+              "collection_fit",
+              "legality"
+            ]
+          },
+          "direction": {
+            "enum": [
+              "supports",
+              "opposes",
+              "mixed",
+              "context_only"
+            ]
+          },
+          "lineage_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "metric": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "value": {
+            "type": [
+              "number",
+              "string",
+              "null"
+            ]
+          },
+          "sample_size": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "observed_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "counter_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "collection_fit": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "explanation": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
