@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
-from apply_reingestion_promotion import check  # noqa: E402
+from apply_reingestion_promotion import apply_promotion, check  # noqa: E402
 from plan_upstream_reingestion import build_plan  # noqa: E402
 
 
@@ -51,7 +51,12 @@ class ReingestionPromotionContracts(unittest.TestCase):
         snap=root/"candidate"/"rules"/"11e"/"snapshots"/"candidate-test"/"wahapedia"
         (snap/"roster_views").mkdir(parents=True)
         shutil.copy2(paths["manifest"], snap/"manifest.json")
-        shutil.copy2(paths["views"], snap/"roster_views"/"index.json")
+        views=json.loads(paths["views"].read_text(encoding="utf-8"))
+        views["snapshot_date"]="candidate-test"
+        for row in views.get("views",[]):
+            if row.get("file"):
+                row["file"]=row["file"].replace("/2026-09-29/","/candidate-test/")
+        (snap/"roster_views"/"index.json").write_text(json.dumps(views,indent=2)+"\n",encoding="utf-8")
         evidence=root/"candidate"/"ingestion"/"candidates"/plan["plan_id"]
         evidence.mkdir(parents=True)
         shutil.copy2(paths["recon"], evidence/"reconciliation.json")
@@ -101,6 +106,38 @@ class ReingestionPromotionContracts(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             with self.assertRaises(SystemExit):
                 check(plan,report,Path(td))
+
+    def test_apply_wahapedia_promotion_updates_only_mirror_currentness(self):
+        td,artifact,plan,report=self.make_artifact("wahapedia_change.json")
+        try:
+            with tempfile.TemporaryDirectory() as repo_td:
+                repo=Path(repo_td)
+                for rel in [
+                    "rules/11e/current.json",
+                    "coverage/current.json",
+                    "sources/registry.json",
+                    "sources/currentness_gate.json",
+                ]:
+                    src=ROOT/rel
+                    dst=repo/rel
+                    dst.parent.mkdir(parents=True,exist_ok=True)
+                    shutil.copy2(src,dst)
+                before=json.loads((repo/"rules/11e/current.json").read_text(encoding="utf-8"))
+                mfm_before=before["wave_a_mfm"]["snapshot"]
+
+                meta=apply_promotion(repo,artifact,"2026-09-30")
+
+                current=json.loads((repo/"rules/11e/current.json").read_text(encoding="utf-8"))
+                coverage=json.loads((repo/"coverage/current.json").read_text(encoding="utf-8"))
+                self.assertEqual(current["wave_b_structural"]["snapshot"],"rules/11e/snapshots/candidate-test/wahapedia/roster_views/index.json")
+                self.assertEqual(current["wave_a_mfm"]["snapshot"],mfm_before)
+                self.assertEqual(coverage["global"]["current_normalized_factions"],0)
+                self.assertFalse(meta["auto_promote"])
+                self.assertFalse(meta["normative_mfm_changed"])
+                self.assertTrue((repo/"ingestion"/"promotions"/plan["plan_id"]/"promotion.json").exists())
+                self.assertTrue((repo/"ingestion"/"promotions"/plan["plan_id"]/"wave_b_conflicts.json").exists())
+        finally:
+            td.cleanup()
 
     def test_source_catalog_change_requires_official_asset_evidence(self):
         td,root,plan,report=self.make_artifact("wahapedia_source_change.json",include_official=False)
