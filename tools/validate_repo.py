@@ -451,14 +451,14 @@ try:
         errors.append("Wave B conflict snapshot count differs from reconciliation report")
 
     global_cov = cov.get("global", {})
-    if cov.get("status") != "WAVE_B_STRUCTURAL_COMPLETE":
-        errors.append("coverage/current.json must retain WAVE_B_STRUCTURAL_COMPLETE")
+    if cov.get("status") != "WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE":
+        errors.append("coverage/current.json must retain WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE")
     if global_cov.get("wave_b_structural_roster_identities_complete") != 35:
         errors.append("Wave B structural coverage must contain 35 complete roster identities")
     if global_cov.get("wave_b_structural_roster_identities_unavailable") != 2:
         errors.append("Wave B structural coverage must contain exactly 2 unavailable roster identities")
     if global_cov.get("current_normalized_factions") != 0:
-        errors.append("Full semantic current_normalized_factions must remain 0 until semantic/FAQ promotion")
+        errors.append("Full normative current_normalized_factions must remain 0 until normative/app equivalence is established")
 
     structural_rows = [x for x in cov.get("factions", []) if x.get("structural_current")]
     if len(structural_rows) != 35:
@@ -473,12 +473,16 @@ try:
                 errors.append(f"Incomplete Wave B structural dimension {row.get('slug')}.{dim}")
 
     wb_current = current_rules.get("wave_b_structural", {})
-    if current_rules.get("status") != "CURRENT_STRUCTURAL_READY_SEMANTIC_PENDING":
-        errors.append("rules/11e/current.json Wave B status drifted")
+    if current_rules.get("status") != "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING":
+        errors.append("rules/11e/current.json operational-currentness status drifted")
     if wb_current.get("roster_identities_complete") != 35:
         errors.append("rules/11e/current.json Wave B complete count drifted")
-    if wb_current.get("semantic_rule_text") != "PENDING" or wb_current.get("faq_errata") != "PENDING":
-        errors.append("Wave B must not claim semantic/FAQ completion")
+    if wb_current.get("semantic_rule_text") != "CURRENT_SECONDARY_MIRROR_FULL_HASH_VERIFIED":
+        errors.append("Wave B semantic mirror promotion drifted")
+    if wb_current.get("faq_errata") != "SOURCE_CATALOG_CURRENT_OFFICIAL_ASSETS_VERIFIED":
+        errors.append("Wave B FAQ/errata source promotion drifted")
+    if wb_current.get("normative_semantic_equivalence") != "NOT_CLAIMED":
+        errors.append("Wave B must not claim normative semantic equivalence")
 
     waha_registry = by_source_id.get("WAHAPEDIA_11E", {})
     if waha_registry.get("repository_coverage_state") != "STRUCTURAL_INGESTED":
