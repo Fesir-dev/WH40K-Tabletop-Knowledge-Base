@@ -1,0 +1,83 @@
+name: Release transition readiness
+
+on:
+  push:
+    paths:
+      - "sources/release_state.json"
+      - "ingestion/release_transitions/**"
+      - "tools/evaluate_release_transitions.py"
+      - "tools/record_release_activation.py"
+      - "tests/test_release_transition_readiness.py"
+      - "reports/RELEASE_TRANSITION_READINESS_CURRENT.json"
+  pull_request:
+    paths:
+      - "sources/release_state.json"
+      - "ingestion/release_transitions/**"
+      - "tools/evaluate_release_transitions.py"
+      - "tools/record_release_activation.py"
+      - "tests/test_release_transition_readiness.py"
+      - "reports/RELEASE_TRANSITION_READINESS_CURRENT.json"
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+    inputs:
+      as_of:
+        description: "Optional YYYY-MM-DD override; defaults to current UTC date"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile readiness tooling
+        run: python -m compileall -q tools/evaluate_release_transitions.py tools/record_release_activation.py tests/test_release_transition_readiness.py
+
+      - name: Run release-transition unit tests
+        run: python -m unittest tests.test_release_transition_readiness -v
+
+      - name: Reproduce committed checkpoint on PR/push
+        if: github.event_name == 'pull_request' || github.event_name == 'push'
+        run: |
+          python tools/evaluate_release_transitions.py \
+            --as-of 2026-09-29 \
+            --output reports/RELEASE_TRANSITION_READINESS_CURRENT.json
+          git diff --exit-code -- reports/RELEASE_TRANSITION_READINESS_CURRENT.json
+
+      - name: Evaluate live calendar readiness
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        shell: bash
+        run: |
+          as_of="${{ inputs.as_of }}"
+          if [ -z "$as_of" ]; then as_of="$(date -u +%F)"; fi
+          mkdir -p .cache/release-transition
+          python tools/evaluate_release_transitions.py \
+            --as-of "$as_of" \
+            --output .cache/release-transition/readiness.json
+          cat .cache/release-transition/readiness.json
+
+      - name: Assert no direct promotion
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('.cache/release-transition/readiness.json',encoding='utf-8'))
+          assert r['global_policy']['auto_promote'] is False
+          assert all(x['promotion_eligible'] is False for x in r['transitions'])
+          print('release-transition auto-promotion: DISABLED')
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        with:
+          name: release-transition-readiness-${{ github.run_id }}
+          path: .cache/release-transition/readiness.json
+          if-no-files-found: error

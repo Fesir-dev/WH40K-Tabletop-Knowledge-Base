@@ -6,16 +6,15 @@ Updated: **2026-09-29**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest validated guarded-reingestion milestone evidence:
+Latest validated release-transition readiness evidence:
 
-- merged milestone commit: `f9d3a5c462e06bf809307a329c50b54de9e66561`
-- validated PR head: `d00d9a66213a6d58698d2da3d9108d18e6b2a70a`
-- generic repository validation run: `36604067969` — **SUCCESS**
-- upstream reingestion candidate run: `36604068116` — **SUCCESS**
-- synthetic candidate path: **PASS**
-- reviewed promotion safety tests: **PASS**
-- auto-promotion: **disabled**
-- closure report: `reports/AUTOMATED_REINGESTION_PROMOTION_CLOSURE_2026-09-29.md`
+- validated implementation head: `22814f3bcc6a5f45cdb0746ffeb7c2dcc6a35eab`
+- release-transition readiness run: `36609106222` — **SUCCESS**
+- generic repository validation run: `36609106327` — **SUCCESS**
+- deterministic checkpoint reproduction: **PASS**
+- release-transition unit tests: **PASS**
+- direct promotion eligibility: **false for all tracked transitions**
+- closure report: `reports/RELEASE_TRANSITION_READINESS_CLOSURE_2026-09-29.md`
 
 ## Completed major layers
 
@@ -78,6 +77,25 @@ Current-promotion consumers are pointer-aware:
 - watcher follows current Wahapedia/registry baselines;
 - New Recruit validator follows current MFM/Wahapedia/BSData revisions;
 - repository validation distinguishes immutable bootstrap regression from mutable current projection.
+
+
+### Release-transition ingestion readiness
+**CLOSED AT OPERATIONAL V1**
+- transition manifests: Space Marines 2026 + Adeptus Custodes 2026;
+- evaluator: fail-closed state machine;
+- explicit official activation-evidence recorder: active;
+- daily/manual read-only readiness workflow: active;
+- preview/preorder never promotes;
+- release date alone never promotes;
+- official current-legal evidence required;
+- upstream projection change required before candidate generation;
+- route after activation: guarded re-ingestion candidate → reviewed promotion PR;
+- auto-promotion: **disabled**.
+
+Checkpoint 2026-09-29:
+- Space Marines: `PRE_RELEASE_HOLD`, scheduled release date **2026-10-03**, current-legal confirmation **false**;
+- Adeptus Custodes: `UPCOMING_HOLD_NO_RELEASE_DATE`, retail/current-legal release date **UNKNOWN**, current-legal confirmation **false**;
+- no future rules promoted.
 
 ### New Recruit runtime projection
 **CLOSED AS VALIDATION LAYER — LINEAGE HARDENED**
@@ -158,14 +176,14 @@ Closure report:
 
 ## Current active milestone
 
-`RELEASE_TRANSITION_INGESTION_READINESS`
+`RELEASE_TRANSITION_ACTIVATION_WATCH`
 
 High-level remaining work:
 
-1. prepare release-transition ingestion for the Space Marines ecosystem scheduled for 2026-10-03 without replacing current legal data early;
-2. preserve Adeptus Custodes preview/preorder material as upcoming-only until legally current, then route it through candidate → reconciliation → reviewed promotion;
-3. optional deeper normative/app equivalence where official/app access permits;
-4. extend collection-aware solver profiles when additional personal faction inventories are normalized.
+1. watch for explicit official Space Marines current-legal activation evidence around 2026-10-03;
+2. watch for explicit Adeptus Custodes current-legal activation evidence without inventing a release date;
+3. after activation, require actual upstream projection change and route through guarded candidate → reconciliation → reviewed promotion;
+4. optional deeper normative/app equivalence and additional collection solver profiles remain later work.
 
 ## Execution reliability rule
 
@@ -176,6 +194,6 @@ High-level remaining work:
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, or guarded reingestion/promotion v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, or release-transition readiness v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.

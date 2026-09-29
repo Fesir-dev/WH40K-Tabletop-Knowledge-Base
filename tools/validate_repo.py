@@ -198,6 +198,114 @@ try:
 except Exception as exc:
     errors.append(f"External source contract validation failure: {exc}")
 
+# 3b2. Release-transition readiness contracts.
+try:
+    release = json.loads((ROOT / "sources" / "release_state.json").read_text(encoding="utf-8"))
+    readiness = json.loads((ROOT / "reports" / "RELEASE_TRANSITION_READINESS_CURRENT.json").read_text(encoding="utf-8"))
+    manifests = {
+        "SPACE_MARINES_CODEX_2026": json.loads(
+            (ROOT / "ingestion" / "release_transitions" / "space_marines_codex_2026.json").read_text(encoding="utf-8")
+        ),
+        "ADEPTUS_CUSTODES_CODEX_2026": json.loads(
+            (ROOT / "ingestion" / "release_transitions" / "adeptus_custodes_codex_2026.json").read_text(encoding="utf-8")
+        ),
+    }
+    catalog = json.loads((ROOT / "factions" / "catalog.json").read_text(encoding="utf-8"))
+    catalog_slugs = {x.get("slug") for x in catalog.get("factions", [])}
+
+    if release.get("schema_version") != "1.1":
+        errors.append("release_state.json must be schema 1.1 for readiness v1")
+    transition_policy = release.get("transition_policy", {})
+    if transition_policy.get("state") != "OPERATIONAL_READINESS_V1":
+        errors.append("Release transition policy must be OPERATIONAL_READINESS_V1")
+    if transition_policy.get("auto_promote") is not False:
+        errors.append("Release transition policy must keep auto_promote=false")
+    if transition_policy.get("report") != "reports/RELEASE_TRANSITION_READINESS_CURRENT.json":
+        errors.append("Release transition policy report pointer drifted")
+
+    if readiness.get("status") != "PASS":
+        errors.append("Release transition readiness report must PASS")
+    if readiness.get("milestone") != "RELEASE_TRANSITION_INGESTION_READINESS":
+        errors.append("Release transition readiness milestone id drifted")
+    if readiness.get("as_of") != "2026-09-29":
+        errors.append("Committed release transition readiness checkpoint must remain 2026-09-29")
+    if readiness.get("global_policy", {}).get("auto_promote") is not False:
+        errors.append("Release transition readiness must never auto-promote")
+    if readiness.get("global_policy", {}).get("calendar_date_is_not_currentness_evidence") is not True:
+        errors.append("Release date alone must not become currentness evidence")
+
+    readiness_rows = {x.get("transition_id"): x for x in readiness.get("transitions", [])}
+    if set(readiness_rows) != set(manifests):
+        errors.append("Release transition readiness rows differ from tracked manifests")
+    if readiness_rows.get("SPACE_MARINES_CODEX_2026", {}).get("state") != "PRE_RELEASE_HOLD":
+        errors.append("Space Marines transition must remain PRE_RELEASE_HOLD at 2026-09-29 checkpoint")
+    if readiness_rows.get("ADEPTUS_CUSTODES_CODEX_2026", {}).get("state") != "UPCOMING_HOLD_NO_RELEASE_DATE":
+        errors.append("Custodes transition must remain UPCOMING_HOLD_NO_RELEASE_DATE at 2026-09-29 checkpoint")
+    if any(x.get("promotion_eligible") is not False for x in readiness_rows.values()):
+        errors.append("No release transition may be directly promotion-eligible")
+
+    transition_rows = {x.get("id"): x for x in release.get("transitions", [])}
+    for tid, manifest in manifests.items():
+        if manifest.get("transition_id") != tid:
+            errors.append(f"Release manifest id mismatch: {tid}")
+        if not set(manifest.get("factions", [])) <= catalog_slugs:
+            errors.append(f"Release manifest references unknown factions: {tid}")
+        if manifest.get("baseline_current_state") != "CURRENT_LEGAL":
+            errors.append(f"Release manifest baseline must remain CURRENT_LEGAL: {tid}")
+        activation = manifest.get("activation_evidence", {})
+        if activation.get("current_legal_confirmed") is not False:
+            errors.append(f"Pre-release manifest prematurely confirmed current legality: {tid}")
+        policy = manifest.get("policy", {})
+        if policy.get("preview_never_promotes") is not True:
+            errors.append(f"Release manifest lost preview fail-closed policy: {tid}")
+        if policy.get("date_alone_never_promotes") is not True:
+            errors.append(f"Release manifest lost date fail-closed policy: {tid}")
+        if policy.get("require_official_current_legal_evidence") is not True:
+            errors.append(f"Release manifest must require official current-legal evidence: {tid}")
+        if policy.get("require_upstream_change") is not True:
+            errors.append(f"Release manifest must require upstream projection change: {tid}")
+        if policy.get("promotion_route") != "GUARDED_REINGESTION_CANDIDATE_REVIEWED_PROMOTION":
+            errors.append(f"Release manifest promotion route drifted: {tid}")
+
+        row = transition_rows.get(tid, {})
+        expected_manifest = {
+            "SPACE_MARINES_CODEX_2026": "ingestion/release_transitions/space_marines_codex_2026.json",
+            "ADEPTUS_CUSTODES_CODEX_2026": "ingestion/release_transitions/adeptus_custodes_codex_2026.json",
+        }[tid]
+        if row.get("manifest") != expected_manifest:
+            errors.append(f"release_state manifest pointer drifted: {tid}")
+        if row.get("current_legal_state") != "CURRENT_LEGAL":
+            errors.append(f"Preview/release-pending transition replaced current legal state: {tid}")
+        if row.get("current_legal_confirmation") is not False:
+            errors.append(f"release_state prematurely confirmed future current legality: {tid}")
+
+    if manifests["SPACE_MARINES_CODEX_2026"].get("scheduled_release_date") != "2026-10-03":
+        errors.append("Space Marines release-readiness date drifted")
+    if manifests["ADEPTUS_CUSTODES_CODEX_2026"].get("scheduled_release_date") is not None:
+        errors.append("Custodes retail release date must remain UNKNOWN until official evidence exists")
+
+    required_release_files = [
+        ROOT / "schemas" / "release_transition_manifest.schema.json",
+        ROOT / "tools" / "evaluate_release_transitions.py",
+        ROOT / "tools" / "record_release_activation.py",
+        ROOT / ".github" / "workflows" / "release-transition-readiness.yml",
+        ROOT / "tests" / "test_release_transition_readiness.py",
+    ]
+    for path in required_release_files:
+        if not path.exists():
+            errors.append(f"Missing release-transition readiness artifact: {path.relative_to(ROOT)}")
+
+    recorder = (ROOT / "tools" / "record_release_activation.py").read_text(encoding="utf-8")
+    if 'ROOT/"rules"/"11e"/"current.json"' in recorder:
+        errors.append("Release activation recorder must not directly mutate rules/11e/current.json")
+    readiness_workflow = (ROOT / ".github" / "workflows" / "release-transition-readiness.yml").read_text(encoding="utf-8")
+    if "contents: read" not in readiness_workflow:
+        errors.append("Release-transition readiness workflow must remain repository read-only")
+    if "release-transition auto-promotion: DISABLED" not in readiness_workflow:
+        errors.append("Release-transition readiness workflow lost explicit no-auto-promotion assertion")
+except Exception as exc:
+    errors.append(f"Release-transition readiness validation failure: {exc}")
+
 # 3c. Competitive analytics / roster recommendation contracts.
 try:
     matrix = json.loads(
@@ -710,8 +818,18 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "RELEASE_TRANSITION_INGESTION_READINESS":
-        errors.append("Current milestone must be RELEASE_TRANSITION_INGESTION_READINESS")
+    if current_rules.get("next_milestone") != "RELEASE_TRANSITION_ACTIVATION_WATCH":
+        errors.append("Current milestone must be RELEASE_TRANSITION_ACTIVATION_WATCH")
+    readiness_layer = current_rules.get("release_transition_readiness", {})
+    if readiness_layer.get("state") != "OPERATIONAL_V1":
+        errors.append("Current rules must record release transition readiness v1 as operational")
+    if readiness_layer.get("policy", {}).get("auto_promote") is not False:
+        errors.append("Current release transition layer must keep auto_promote=false")
+    tracked = {x.get("id"): x for x in readiness_layer.get("tracked_transitions", [])}
+    if tracked.get("SPACE_MARINES_CODEX_2026", {}).get("state") != "PRE_RELEASE_HOLD":
+        errors.append("Current Space Marines transition state drifted")
+    if tracked.get("ADEPTUS_CUSTODES_CODEX_2026", {}).get("state") != "UPCOMING_HOLD_NO_RELEASE_DATE":
+        errors.append("Current Custodes transition state drifted")
 except Exception as exc:
     errors.append(f"Automated upstream/runtime monitoring validation failure: {exc}")
 

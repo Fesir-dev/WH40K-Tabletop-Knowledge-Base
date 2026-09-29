@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "transition_id": "ADEPTUS_CUSTODES_CODEX_2026",
+  "title": "Codex: Adeptus Custodes 2026 release transition",
+  "factions": [
+    "adeptus_custodes"
+  ],
+  "baseline_current_state": "CURRENT_LEGAL",
+  "upcoming_state": "UPCOMING_PREVIEW_PARTIAL",
+  "scheduled_release_date": null,
+  "date_confidence": null,
+  "official_evidence": [
+    {
+      "url": "https://www.warhammer-community.com/en-gb/articles/2xxurx9j/first-look-adeptus-custodes-datasheets/",
+      "published_at": "2026-09-24",
+      "note": "Official partial datasheet preview; preview content is not current legal data."
+    },
+    {
+      "url": "https://www.warhammer-community.com/en-gb/articles/joz5iubm/your-first-look-at-13-new-adeptus-custodes-detachments/",
+      "published_at": "2026-09-28",
+      "note": "Official preview of 13 new detachments; still preview material."
+    },
+    {
+      "url": "https://www.warhammer-community.com/en-gb/articles/zuwukdba/sunday-preview-might-of-the-ten-thousand/",
+      "published_at": "2026-09-27",
+      "note": "Official Sunday Preview announces Codex: Adeptus Custodes for the next preorder window but does not by itself establish current legality."
+    }
+  ],
+  "activation_evidence": {
+    "current_legal_confirmed": false,
+    "confirmed_at": null,
+    "evidence": []
+  },
+  "policy": {
+    "preview_never_promotes": true,
+    "date_alone_never_promotes": true,
+    "require_official_current_legal_evidence": true,
+    "require_upstream_change": true,
+    "promotion_route": "GUARDED_REINGESTION_CANDIDATE_REVIEWED_PROMOTION",
+    "mfm_change_requires_official_mfm_revalidation": true
+  },
+  "reingestion_scope": {
+    "factions": [
+      "adeptus_custodes"
+    ],
+    "source_classes": [
+      "GW_OFFICIAL_RELEASE",
+      "WAHAPEDIA_11E",
+      "BSDATA_WH40K_11E",
+      "BSDATA_MFM_11E",
+      "NEW_RECRUIT_RUNTIME"
+    ]
+  }
+}

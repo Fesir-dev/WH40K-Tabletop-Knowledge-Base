@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "as_of": "2026-09-29",
+  "milestone": "RELEASE_TRANSITION_INGESTION_READINESS",
+  "watch_status": "NO_CHANGE",
+  "transitions": [
+    {
+      "transition_id": "ADEPTUS_CUSTODES_CODEX_2026",
+      "title": "Codex: Adeptus Custodes 2026 release transition",
+      "factions": [
+        "adeptus_custodes"
+      ],
+      "as_of": "2026-09-29",
+      "baseline_current_state": "CURRENT_LEGAL",
+      "upcoming_state": "UPCOMING_PREVIEW_PARTIAL",
+      "scheduled_release_date": null,
+      "date_confidence": null,
+      "current_legal_confirmed": false,
+      "upstream_changed": false,
+      "state": "UPCOMING_HOLD_NO_RELEASE_DATE",
+      "next_action": "WAIT_FOR_OFFICIAL_CURRENT_LEGAL_EVIDENCE",
+      "candidate_eligible": false,
+      "promotion_eligible": false,
+      "authority_boundary": {
+        "date_alone_never_promotes": true,
+        "preview_never_promotes": true,
+        "requires_official_current_legal_evidence": true,
+        "requires_upstream_change_before_candidate": true,
+        "candidate_route": "GUARDED_REINGESTION_CANDIDATE_REVIEWED_PROMOTION",
+        "direct_current_mutation": false
+      }
+    },
+    {
+      "transition_id": "SPACE_MARINES_CODEX_2026",
+      "title": "Codex: Space Marines 2026 release transition",
+      "factions": [
+        "black_templars",
+        "blood_angels",
+        "dark_angels",
+        "deathwatch",
+        "imperial_fists",
+        "iron_hands",
+        "raven_guard",
+        "salamanders",
+        "space_marines",
+        "space_wolves",
+        "ultramarines",
+        "white_scars"
+      ],
+      "as_of": "2026-09-29",
+      "baseline_current_state": "CURRENT_LEGAL",
+      "upcoming_state": "RELEASE_PENDING",
+      "scheduled_release_date": "2026-10-03",
+      "date_confidence": "INFERRED_FROM_OFFICIAL_RELATIVE_DATE",
+      "current_legal_confirmed": false,
+      "upstream_changed": false,
+      "state": "PRE_RELEASE_HOLD",
+      "next_action": "WAIT_UNTIL_RELEASE_DATE_THEN_RECHECK_OFFICIAL_CURRENTNESS",
+      "candidate_eligible": false,
+      "promotion_eligible": false,
+      "authority_boundary": {
+        "date_alone_never_promotes": true,
+        "preview_never_promotes": true,
+        "requires_official_current_legal_evidence": true,
+        "requires_upstream_change_before_candidate": true,
+        "candidate_route": "GUARDED_REINGESTION_CANDIDATE_REVIEWED_PROMOTION",
+        "direct_current_mutation": false
+      }
+    }
+  ],
+  "summary": {
+    "transition_count": 2,
+    "pre_release_hold": 1,
+    "no_release_date_hold": 1,
+    "awaiting_official_currentness": 0,
+    "candidate_ready": 0
+  },
+  "global_policy": {
+    "calendar_date_is_not_currentness_evidence": true,
+    "preview_or_preorder_is_not_currentness_evidence": true,
+    "official_current_legal_confirmation_required": true,
+    "upstream_projection_change_required_for_candidate": true,
+    "auto_promote": false
+  }
+}

@@ -11,6 +11,9 @@ class RepositoryContracts(unittest.TestCase):
         cls.coverage = json.loads((ROOT/"coverage/current.json").read_text(encoding="utf-8"))
         cls.gate = json.loads((ROOT/"sources/currentness_gate.json").read_text(encoding="utf-8"))
         cls.release = json.loads((ROOT/"sources/release_state.json").read_text(encoding="utf-8"))
+        cls.release_readiness = json.loads((ROOT/"reports/RELEASE_TRANSITION_READINESS_CURRENT.json").read_text(encoding="utf-8"))
+        cls.space_marines_transition = json.loads((ROOT/"ingestion/release_transitions/space_marines_codex_2026.json").read_text(encoding="utf-8"))
+        cls.custodes_transition = json.loads((ROOT/"ingestion/release_transitions/adeptus_custodes_codex_2026.json").read_text(encoding="utf-8"))
         cls.registry = json.loads((ROOT/"sources/registry.json").read_text(encoding="utf-8"))
         cls.bsdata = json.loads((ROOT/"ingestion/source_snapshots/bsdata_wh40k_11e_2026-09-29.json").read_text(encoding="utf-8"))
         cls.current = json.loads((ROOT/"rules/11e/current.json").read_text(encoding="utf-8"))
@@ -69,6 +72,52 @@ class RepositoryContracts(unittest.TestCase):
         slugs={x["slug"] for x in self.catalog["factions"]}
         for tr in self.release["transitions"]:
             self.assertTrue(set(tr["factions"]) <= slugs, tr["id"])
+
+    def test_release_transition_readiness_control_plane(self):
+        self.assertEqual(self.release["schema_version"], "1.1")
+        policy=self.release["transition_policy"]
+        self.assertEqual(policy["state"], "OPERATIONAL_READINESS_V1")
+        self.assertFalse(policy["auto_promote"])
+        self.assertEqual(policy["report"], "reports/RELEASE_TRANSITION_READINESS_CURRENT.json")
+        self.assertTrue((ROOT/policy["evaluator"]).exists())
+        self.assertTrue((ROOT/policy["workflow"]).exists())
+        self.assertTrue((ROOT/"tools/record_release_activation.py").exists())
+        self.assertTrue((ROOT/"schemas/release_transition_manifest.schema.json").exists())
+
+        report=self.release_readiness
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["milestone"], "RELEASE_TRANSITION_INGESTION_READINESS")
+        self.assertEqual(report["as_of"], "2026-09-29")
+        self.assertFalse(report["global_policy"]["auto_promote"])
+        rows={x["transition_id"]:x for x in report["transitions"]}
+        self.assertEqual(set(rows), {"SPACE_MARINES_CODEX_2026","ADEPTUS_CUSTODES_CODEX_2026"})
+        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["state"], "PRE_RELEASE_HOLD")
+        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["state"], "UPCOMING_HOLD_NO_RELEASE_DATE")
+        self.assertTrue(all(x["promotion_eligible"] is False for x in rows.values()))
+
+        manifests={
+            "SPACE_MARINES_CODEX_2026": self.space_marines_transition,
+            "ADEPTUS_CUSTODES_CODEX_2026": self.custodes_transition,
+        }
+        catalog_slugs={x["slug"] for x in self.catalog["factions"]}
+        for tid,manifest in manifests.items():
+            self.assertEqual(manifest["transition_id"], tid)
+            self.assertTrue(set(manifest["factions"]) <= catalog_slugs)
+            self.assertEqual(manifest["baseline_current_state"], "CURRENT_LEGAL")
+            self.assertFalse(manifest["activation_evidence"]["current_legal_confirmed"])
+            self.assertTrue(manifest["policy"]["preview_never_promotes"])
+            self.assertTrue(manifest["policy"]["date_alone_never_promotes"])
+            self.assertTrue(manifest["policy"]["require_official_current_legal_evidence"])
+            self.assertEqual(manifest["policy"]["promotion_route"], "GUARDED_REINGESTION_CANDIDATE_REVIEWED_PROMOTION")
+
+        self.assertEqual(self.space_marines_transition["scheduled_release_date"], "2026-10-03")
+        self.assertIsNone(self.custodes_transition["scheduled_release_date"])
+
+        recorder=(ROOT/"tools/record_release_activation.py").read_text(encoding="utf-8")
+        self.assertNotIn('ROOT/"rules"/"11e"/"current.json"', recorder)
+        workflow=(ROOT/".github/workflows/release-transition-readiness.yml").read_text(encoding="utf-8")
+        self.assertIn("contents: read", workflow)
+        self.assertIn("release-transition auto-promotion: DISABLED", workflow)
 
     def test_mfm_wave_a_snapshot(self):
         self.assertEqual(self.mfm["official_source"]["version"], "1.4")
@@ -224,7 +273,13 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["known_runtime_drifts"], points["known_drift_count"]+surfaces["known_drift_count"])
         self.assertEqual(nr["new_runtime_drifts"], 0)
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "RELEASE_TRANSITION_INGESTION_READINESS")
+        self.assertEqual(self.current["next_milestone"], "RELEASE_TRANSITION_ACTIVATION_WATCH")
+        layer=self.current["release_transition_readiness"]
+        self.assertEqual(layer["state"], "OPERATIONAL_V1")
+        self.assertFalse(layer["policy"]["auto_promote"])
+        tracked={x["id"]:x for x in layer["tracked_transitions"]}
+        self.assertEqual(tracked["SPACE_MARINES_CODEX_2026"]["state"], "PRE_RELEASE_HOLD")
+        self.assertEqual(tracked["ADEPTUS_CUSTODES_CODEX_2026"]["state"], "UPCOMING_HOLD_NO_RELEASE_DATE")
 
     def test_guarded_reingestion_control_plane(self):
         required=[

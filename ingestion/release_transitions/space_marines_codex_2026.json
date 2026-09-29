@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "transition_id": "SPACE_MARINES_CODEX_2026",
+  "title": "Codex: Space Marines 2026 release transition",
+  "factions": [
+    "black_templars",
+    "blood_angels",
+    "dark_angels",
+    "deathwatch",
+    "imperial_fists",
+    "iron_hands",
+    "raven_guard",
+    "salamanders",
+    "space_marines",
+    "space_wolves",
+    "ultramarines",
+    "white_scars"
+  ],
+  "baseline_current_state": "CURRENT_LEGAL",
+  "upcoming_state": "RELEASE_PENDING",
+  "scheduled_release_date": "2026-10-03",
+  "date_confidence": "INFERRED_FROM_OFFICIAL_RELATIVE_DATE",
+  "official_evidence": [
+    {
+      "url": "https://www.warhammer-community.com/en-gb/articles/zuwukdba/sunday-preview-might-of-the-ten-thousand/",
+      "published_at": "2026-09-27",
+      "note": "Official Sunday Preview says Warhammer Community is gearing up for the release of Codex: Space Marines on Saturday."
+    },
+    {
+      "url": "https://www.warhammer-community.com/en-gb/articles/voakmnny/space-marines-detachments-blood-angels-and-dark-angels/",
+      "published_at": "2026-09-15",
+      "note": "Official preview says Blood Angels, Dark Angels, Space Wolves, Black Templars and Deathwatch are updated when Codex: Space Marines releases."
+    }
+  ],
+  "activation_evidence": {
+    "current_legal_confirmed": false,
+    "confirmed_at": null,
+    "evidence": []
+  },
+  "policy": {
+    "preview_never_promotes": true,
+    "date_alone_never_promotes": true,
+    "require_official_current_legal_evidence": true,
+    "require_upstream_change": true,
+    "promotion_route": "GUARDED_REINGESTION_CANDIDATE_REVIEWED_PROMOTION",
+    "mfm_change_requires_official_mfm_revalidation": true
+  },
+  "reingestion_scope": {
+    "factions": [
+      "black_templars",
+      "blood_angels",
+      "dark_angels",
+      "deathwatch",
+      "imperial_fists",
+      "iron_hands",
+      "raven_guard",
+      "salamanders",
+      "space_marines",
+      "space_wolves",
+      "ultramarines",
+      "white_scars"
+    ],
+    "source_classes": [
+      "GW_OFFICIAL_RELEASE",
+      "WAHAPEDIA_11E",
+      "BSDATA_WH40K_11E",
+      "BSDATA_MFM_11E",
+      "NEW_RECRUIT_RUNTIME"
+    ]
+  }
+}
