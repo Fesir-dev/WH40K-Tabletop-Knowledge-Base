@@ -244,10 +244,11 @@
     },
     "closure_report": "reports/RELEASE_TRANSITION_READINESS_CLOSURE_2026-09-29.md",
     "latest_validation": {
-      "head": "22814f3bcc6a5f45cdb0746ffeb7c2dcc6a35eab",
-      "readiness_workflow_run": 36609106222,
-      "repository_ci_run": 36609106327,
+      "head": "83e91886e467b7b154895adbb1216866ac460a7c",
+      "readiness_workflow_run": 36609275591,
+      "repository_ci_run": 36609275318,
       "result": "SUCCESS"
-    }
+    },
+    "merged_commit": "67e5493486de247be2646c555c9dbd16c90542dc"
   }
 }
