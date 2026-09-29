@@ -8,8 +8,9 @@ Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
 Latest validated runtime-monitor hardening evidence:
 
-- validated branch head: `ecb6e756624dacb09c889e56d110dcfd1498ba95`
-- GitHub Actions validation run: `36596361579`
+- merged hardening commit: `9523a7285cfe731e527ca6ba3529b43598981ea9`
+- validated PR head: `372ac072c9507eed78376e04f018f66a8a77b9e0`
+- GitHub Actions validation run: `36596463123`
 - result: **SUCCESS**
 - runtime report: `reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json` schema **2.0**
 - runtime report state: **PASS_WITH_KNOWN_RUNTIME_DRIFT**
