@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "MFM_1_4_TITAN_LEGIONS",
+  "edition": "11e",
+  "mfm_version": "1.4",
+  "official_last_updated": "2026-09-02",
+  "content_first_seen": "2026-09-02",
+  "faction": {
+    "slug": "titan-legions",
+    "name": "Titan Legions",
+    "parent": null
+  },
+  "provenance": {
+    "normative_source_id": "GW_MFM",
+    "extraction_source_id": "BSDATA_MFM_11E",
+    "extraction_repository": "BSData/wh40k-11e-mfm",
+    "extraction_commit": "61a687e858c00a4ad205d564959c622a5605ef3d",
+    "extraction_path": "data/titan-legions.yaml",
+    "extraction_blob_sha": "be408de3a06fdbfa2362a6fe2048ceeaf5e20c17",
+    "normalized_at": "2026-09-29"
+  },
+  "summary": {
+    "units": 4,
+    "detachments": 0,
+    "pricing_rows": 4,
+    "leader_relations": 0,
+    "support_relations": 0,
+    "wargear_cost_entries": 0,
+    "enhancement_cost_entries": 0,
+    "legends_units": 0
+  },
+  "detachments": [],
+  "units": [
+    {
+      "name": "Reaver Titan",
+      "pricing": [
+        {
+          "range": "[1,)",
+          "label": "Your Unit Costs",
+          "costs": [
+            {
+              "models": 1,
+              "points": 2200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Warbringer Nemesis Titan",
+      "pricing": [
+        {
+          "range": "[1,)",
+          "label": "Your Unit Costs",
+          "costs": [
+            {
+              "models": 1,
+              "points": 2600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Warhound Titan",
+      "pricing": [
+        {
+          "range": "[1,)",
+          "label": "Your Unit Costs",
+          "costs": [
+            {
+              "models": 1,
+              "points": 1100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Warlord Titan",
+      "pricing": [
+        {
+          "range": "[1,)",
+          "label": "Your Unit Costs",
+          "costs": [
+            {
+              "models": 1,
+              "points": 3500
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
