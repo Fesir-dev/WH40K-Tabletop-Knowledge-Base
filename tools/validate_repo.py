@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import collections
 import json
 import pathlib
 import sys
@@ -77,10 +78,68 @@ try:
 except Exception as exc:
     errors.append(f"Custodes baseline validation failure: {exc}")
 
+# 5. Legacy semantic-core index and Custodes historical rules snapshot.
+try:
+    semantic_index = json.loads(
+        (ROOT / "legacy" / "rules_assistant_v0_9" / "SEMANTIC_CORE_FILE_INDEX.json").read_text(encoding="utf-8")
+    )
+    if semantic_index.get("selected_semantic_core_files") != 69:
+        errors.append("Expected 69 indexed legacy semantic-core files")
+    if semantic_index.get("total_uncompressed_bytes") != 959003:
+        errors.append("Unexpected legacy semantic-core byte count")
+
+    points = json.loads(
+        (ROOT / "legacy" / "rules_assistant_v0_9" / "factions" / "adeptus_custodes" / "mfm_v1_2_points.json").read_text(encoding="utf-8")
+    )
+    detachments = json.loads(
+        (ROOT / "legacy" / "rules_assistant_v0_9" / "factions" / "adeptus_custodes" / "mfm_v1_2_detachments.json").read_text(encoding="utf-8")
+    )
+    leader_graph = json.loads(
+        (ROOT / "legacy" / "rules_assistant_v0_9" / "factions" / "adeptus_custodes" / "leader_support_graph_v1_2.json").read_text(encoding="utf-8")
+    )
+    if len(points.get("units", [])) != 31:
+        errors.append(f"Expected 31 Custodes historical point entries, got {len(points.get('units', []))}")
+    if len(detachments.get("detachments", [])) != 9:
+        errors.append(f"Expected 9 Custodes historical detachments, got {len(detachments.get('detachments', []))}")
+    if len(leader_graph.get("links", [])) != 8:
+        errors.append(f"Expected 8 Custodes historical Leader links, got {len(leader_graph.get('links', []))}")
+except Exception as exc:
+    errors.append(f"Custodes historical rules snapshot failure: {exc}")
+
+# 6. Historical collection repricing regression:
+# v0.5 roster Custodes rows = 4000 old points; MFM 1.2 repricing = 3970.
+try:
+    points_by_name = {u["name_en"]: u for u in points["units"]}
+    copies: collections.Counter[str] = collections.Counter()
+    historical_custodes = 0
+    repriced_custodes = 0
+    for row in inv["roster_snapshot"]:
+        name = row["unit"]
+        if name not in points_by_name:
+            continue
+        historical_custodes += int(row["points_snapshot"])
+        copies[name] += 1
+        unit = points_by_name[name]
+        band = next(
+            b
+            for b in unit["cost_bands"]
+            if copies[name] >= b["min_copy"] and (b["max_copy"] is None or copies[name] <= b["max_copy"])
+        )
+        repriced_custodes += int(band["sizes"][str(row["displayed_models"])])
+    if historical_custodes != 4000:
+        errors.append(f"Expected historical Custodes roster subtotal 4000, got {historical_custodes}")
+    if repriced_custodes != 3970:
+        errors.append(f"Expected MFM v1.2 repriced Custodes subtotal 3970, got {repriced_custodes}")
+except Exception as exc:
+    errors.append(f"Custodes historical repricing regression failure: {exc}")
+
 if errors:
     print("FAIL")
     for error in errors:
         print("-", error)
     sys.exit(1)
 
-print("PASS: repository JSON, baseline registry, source statuses and Custodes bootstrap invariants validated.")
+print(
+    "PASS: repository JSON, baselines, source statuses, Custodes collection, "
+    "semantic-core index and historical repricing invariants validated."
+)
