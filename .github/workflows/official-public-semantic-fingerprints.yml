@@ -17,6 +17,8 @@ on:
       - "sources/discoveries/gw_public_rules_surface_2026-09-29.json"
       - "sources/snapshots/gw_11e_official_assets_2026-09-29.json"
       - ".github/workflows/official-public-semantic-fingerprints.yml"
+  schedule:
+    - cron: "31 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -71,6 +73,10 @@ jobs:
           assert all(d['verification']=='PASS' for d in r['documents'])
           print(json.dumps(s,indent=2))
           PY
+
+      - name: Assert committed fingerprint reproducibility
+        if: github.event_name == 'pull_request' || github.event_name == 'schedule'
+        run: git diff --exit-code -- reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json
 
       - uses: actions/upload-artifact@v4
         with:
