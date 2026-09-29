@@ -123,6 +123,12 @@
       "READY_FOR_GUARDED_CANDIDATE"
     ],
     "direct_current_rules_mutation": false,
-    "auto_promote": false
+    "auto_promote": false,
+    "closure_report": "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CLOSURE_2026-09-29.md",
+    "latest_validation": {
+      "head": "cdcb3e2e66635520c8670d60f8e762840e087d8c",
+      "workflow_run": 36609958145,
+      "result": "SUCCESS"
+    }
   }
 }
