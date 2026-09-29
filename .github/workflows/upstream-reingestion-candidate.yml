@@ -69,6 +69,27 @@ jobs:
           pathlib.Path(".cache/reingestion-artifact/candidate_report.json").write_text(json.dumps(out,indent=2)+"\n",encoding="utf-8")
           PY
 
+      - name: Synthetic end-to-end candidate smoke
+        if: github.event_name == 'pull_request'
+        run: |
+          smoke_key="candidate-smoke-${GITHUB_RUN_ID}"
+          python tools/plan_upstream_reingestion.py \
+            --watch-report tests/fixtures/reingestion/wahapedia_change.json \
+            --candidate-snapshot-date "$smoke_key" \
+            --output .cache/reingestion-smoke-plan.json
+          python tools/run_upstream_reingestion_candidate.py \
+            --plan .cache/reingestion-smoke-plan.json \
+            --workspace .cache/reingestion-smoke-workspace \
+            --artifact-dir .cache/reingestion-smoke-artifact
+          python - <<'PY'
+          import json
+          r=json.load(open(".cache/reingestion-smoke-artifact/candidate_report.json",encoding="utf-8"))
+          assert r["status"]=="PASS", r
+          assert r["promotion_gate"]=="ELIGIBLE_FOR_REVIEWED_PROMOTION", r
+          assert not r["forbidden_current_authority_mutations"], r
+          assert all(x["status"]=="PASS" for x in r["stages"]), r
+          print("synthetic candidate smoke: PASS")
+          PY
       - name: Upload reviewable candidate evidence
         uses: actions/upload-artifact@v4
         with:
