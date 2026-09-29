@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "as_of": "2026-09-29",
-  "rule": "Current legal rules and announced future rules are distinct states. Preview material never replaces current legal data before release.",
+  "rule": "Current legal rules and announced future rules are distinct states. Preview material never replaces current legal data before release. A scheduled calendar date is a recheck trigger, not authority for promotion.",
   "states": [
     "CURRENT_LEGAL",
     "UPCOMING_PREVIEW_PARTIAL",
@@ -25,7 +25,13 @@
           "published_at": "2026-09-02",
           "note": "GW states Codex: Orks points and detachments/Force Dispositions are live in MFM/app."
         }
-      ]
+      ],
+      "ingestion_gate": {
+        "state": "NO_PENDING_TRANSITION",
+        "candidate_authorization": true,
+        "auto_promote": false,
+        "rule": "No upcoming transition is pending for this record."
+      }
     },
     {
       "id": "SPACE_MARINES_CODEX_2026",
@@ -59,7 +65,15 @@
           "published_at": "2026-09-15",
           "note": "GW states Blood Angels, Dark Angels, Space Wolves, Black Templars and Deathwatch will be updated when Codex: Space Marines releases."
         }
-      ]
+      ],
+      "ingestion_gate": {
+        "state": "HOLD_CURRENT_PRE_RELEASE",
+        "candidate_authorization": false,
+        "auto_promote": false,
+        "release_date_is_not_authority": true,
+        "authorization_requirement": "Applicable official Games Workshop evidence must confirm the new release is legally current before candidate promotion can be authorized.",
+        "post_authorization_route": "GUARDED_REINGESTION_CANDIDATE_TO_REVIEWED_PROMOTION"
+      }
     },
     {
       "id": "ADEPTUS_CUSTODES_CODEX_2026",
@@ -86,7 +100,15 @@
           "published_at": "2026-09-27",
           "note": "GW announces new Codex: Adeptus Custodes for the following preorder window."
         }
-      ]
+      ],
+      "ingestion_gate": {
+        "state": "HOLD_CURRENT_RELEASE_DATE_UNKNOWN",
+        "candidate_authorization": false,
+        "auto_promote": false,
+        "release_date_is_not_authority": true,
+        "authorization_requirement": "Previews/preorder announcement are insufficient. Applicable official Games Workshop evidence must confirm legal currentness before candidate promotion can be authorized.",
+        "post_authorization_route": "GUARDED_REINGESTION_CANDIDATE_TO_REVIEWED_PROMOTION"
+      }
     }
   ]
 }
