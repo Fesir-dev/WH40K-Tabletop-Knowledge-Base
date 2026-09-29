@@ -11,6 +11,7 @@ class RepositoryContracts(unittest.TestCase):
         cls.coverage = json.loads((ROOT/"coverage/current.json").read_text(encoding="utf-8"))
         cls.gate = json.loads((ROOT/"sources/currentness_gate.json").read_text(encoding="utf-8"))
         cls.release = json.loads((ROOT/"sources/release_state.json").read_text(encoding="utf-8"))
+        cls.release_readiness = json.loads((ROOT/"reports/RELEASE_TRANSITION_READINESS_CURRENT.json").read_text(encoding="utf-8"))
         cls.registry = json.loads((ROOT/"sources/registry.json").read_text(encoding="utf-8"))
         cls.bsdata = json.loads((ROOT/"ingestion/source_snapshots/bsdata_wh40k_11e_2026-09-29.json").read_text(encoding="utf-8"))
         cls.current = json.loads((ROOT/"rules/11e/current.json").read_text(encoding="utf-8"))
@@ -275,6 +276,23 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(self.current["collection_aware_roster_solver"]["full_normative_legality"], "UNKNOWN_PENDING_NORMATIVE_APP")
         self.assertTrue((ROOT/"tools/solve_collection_roster.py").exists())
         self.assertTrue((ROOT/".github/workflows/collection-roster-solver.yml").exists())
+
+    def test_release_transition_ingestion_readiness(self):
+        rows={x["id"]:x for x in self.release["transitions"]}
+        self.assertEqual(self.release["schema_version"], "1.1")
+        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["scheduled_release_date"], "2026-10-03")
+        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["ingestion_gate"]["state"], "HOLD_CURRENT_PRE_RELEASE")
+        self.assertFalse(rows["SPACE_MARINES_CODEX_2026"]["ingestion_gate"]["candidate_authorization"])
+        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["ingestion_gate"]["state"], "HOLD_CURRENT_RELEASE_DATE_UNKNOWN")
+        self.assertFalse(rows["ADEPTUS_CUSTODES_CODEX_2026"]["ingestion_gate"]["candidate_authorization"])
+        self.assertEqual(self.release_readiness["status"], "HOLD_OR_STABLE")
+        self.assertEqual(self.release_readiness["official_rechecks_due"], 0)
+        self.assertFalse(self.release_readiness["auto_promote"])
+        self.assertIn("space_marines", self.release_readiness["blocked_factions"])
+        self.assertIn("adeptus_custodes", self.release_readiness["blocked_factions"])
+        self.assertTrue((ROOT/".github/workflows/release-transition-readiness.yml").exists())
+        candidate_schema=json.loads((ROOT/"schemas/upstream_reingestion_candidate.schema.json").read_text(encoding="utf-8"))
+        self.assertIn("affected_roster_identities", candidate_schema["required"])
 
     def test_preview_never_replaces_current(self):
         for tr in self.release["transitions"]:
