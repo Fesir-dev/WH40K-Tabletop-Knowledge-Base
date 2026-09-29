@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.0",
+  "status": "RUNTIME_PROJECTION_DRIFT",
+  "system": {
+    "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40,000-11th-edition",
+    "http_status": 200,
+    "catalogues_reported": 36,
+    "libraries_reported": 11
+  },
+  "universe": {
+    "expected_roster_identities": 37,
+    "resolved_runtime_identities": 37,
+    "missing": [],
+    "page_checks": [
+      {
+        "slug": "adepta_sororitas",
+        "label": "Imperium - Adepta Sororitas",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adepta-sororitas",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "adeptus_custodes",
+        "label": "Imperium - Adeptus Custodes",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-custodes",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "adeptus_mechanicus",
+        "label": "Imperium - Adeptus Mechanicus",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-mechanicus",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "adeptus_titanicus",
+        "label": "Imperium - Adeptus Titanicus",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-titanicus",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "aeldari_craftworlds",
+        "label": "Xenos - Aeldari",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---aeldari",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "agents_of_the_imperium",
+        "label": "Imperium - Agents of the Imperium",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---agents-of-the-imperium",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "astra_militarum",
+        "label": "Imperium - Astra Militarum",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---astra-militarum",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "black_templars",
+        "label": "Imperium - Adeptus Astartes - Black Templars",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---black-templars",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "blood_angels",
+        "label": "Imperium - Adeptus Astartes - Blood Angels",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---blood-angels",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "chaos_daemons",
+        "label": "Chaos - Chaos Daemons",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-daemons",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "chaos_knights",
+        "label": "Chaos - Chaos Knights",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-knights",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "chaos_space_marines",
+        "label": "Chaos - Chaos Space Marines",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-space-marines",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "dark_angels",
+        "label": "Imperium - Adeptus Astartes - Dark Angels",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---dark-angels",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "death_guard",
+        "label": "Chaos - Death Guard",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---death-guard",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "deathwatch",
+        "label": "Imperium - Adeptus Astartes - Deathwatch",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---deathwatch",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "drukhari",
+        "label": "Xenos - Drukhari",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---drukhari",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "emperors_children",
+        "label": "Chaos - Emperor's Children",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---emperor's-children",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "genestealer_cults",
+        "label": "Xenos - Genestealer Cults",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---genestealer-cults",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "grey_knights",
+        "label": "Imperium - Grey Knights",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---grey-knights",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "imperial_fists",
+        "label": "Imperium - Adeptus Astartes - Imperial Fists",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---imperial-fists",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "imperial_knights",
+        "label": "Imperium - Imperial Knights",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---imperial-knights",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "iron_hands",
+        "label": "Imperium - Adeptus Astartes - Iron Hands",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---iron-hands",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "leagues_of_votann",
+        "label": "Xenos - Leagues of Votann",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---leagues-of-votann",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "necrons",
+        "label": "Xenos - Necrons",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "orks",
+        "label": "Xenos - Orks",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "raven_guard",
+        "label": "Imperium - Adeptus Astartes - Raven Guard",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---raven-guard",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "salamanders",
+        "label": "Imperium - Adeptus Astartes - Salamanders",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---salamanders",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "space_marines",
+        "label": "Imperium - Adeptus Astartes - Space Marines",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---space-marines",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "space_wolves",
+        "label": "Imperium - Adeptus Astartes - Space Wolves",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---space-wolves",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "tau_empire",
+        "label": "Xenos - T'au Empire",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---t'au-empire",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "thousand_sons",
+        "label": "Chaos - Thousand Sons",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---thousand-sons",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "titanicus_traitoris",
+        "label": "Chaos - Titanicus Traitoris",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---titanicus-traitoris",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "tyranids",
+        "label": "Xenos - Tyranids",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---tyranids",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "ultramarines",
+        "label": "Imperium - Adeptus Astartes - Ultramarines",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---ultramarines",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "unaligned_forces",
+        "label": "Unaligned Forces",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/unaligned-forces",
+        "http_status": 200,
+        "page_type_marker": "(Library)",
+        "marker_present": false
+      },
+      {
+        "slug": "white_scars",
+        "label": "Imperium - Adeptus Astartes - White Scars",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---white-scars",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      },
+      {
+        "slug": "world_eaters",
+        "label": "Chaos - World Eaters",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---world-eaters",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_present": true
+      }
+    ]
+  },
+  "representative_points": {
+    "checks": 10,
+    "matched": 9,
+    "failures": [
+      {
+        "slug": "orks",
+        "unit": "Ghazghkull Thraka",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
+        "http_status": 200,
+        "expected_points": 300,
+        "runtime_points": 235,
+        "status": "MISMATCH"
+      }
+    ],
+    "rows": [
+      {
+        "slug": "adeptus_custodes",
+        "unit": "Trajann Valoris",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-custodes/87ec-de53-6df9-9c22/trajann-valoris",
+        "http_status": 200,
+        "expected_points": 135,
+        "runtime_points": 135,
+        "status": "MATCH"
+      },
+      {
+        "slug": "orks",
+        "unit": "Ghazghkull Thraka",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
+        "http_status": 200,
+        "expected_points": 300,
+        "runtime_points": 235,
+        "status": "MISMATCH"
+      },
+      {
+        "slug": "necrons",
+        "unit": "Imotekh The Stormlord",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons/572d-e094-2f28-92df/imotekh-the-stormlord",
+        "http_status": 200,
+        "expected_points": 100,
+        "runtime_points": 100,
+        "status": "MATCH"
+      },
+      {
+        "slug": "tau_empire",
+        "unit": "Commander Farsight",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---t'au-empire/b3a8-4106-40fb-3b68/commander-farsight",
+        "http_status": 200,
+        "expected_points": 70,
+        "runtime_points": 70,
+        "status": "MATCH"
+      },
+      {
+        "slug": "astra_militarum",
+        "unit": "Lord Solar Leontus",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---astra-militarum/d2de-6903-46a-f02c/lord-solar-leontus",
+        "http_status": 200,
+        "expected_points": 130,
+        "runtime_points": 130,
+        "status": "MATCH"
+      },
+      {
+        "slug": "chaos_space_marines",
+        "unit": "Abaddon The Despoiler",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-space-marines/2e42-8d21-37fe-1de9/abaddon-the-despoiler",
+        "http_status": 200,
+        "expected_points": 295,
+        "runtime_points": 295,
+        "status": "MATCH"
+      },
+      {
+        "slug": "tyranids",
+        "unit": "The Swarmlord",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---tyranids/fece-50fa-e019-b6c2/the-swarmlord",
+        "http_status": 200,
+        "expected_points": 210,
+        "runtime_points": 210,
+        "status": "MATCH"
+      },
+      {
+        "slug": "aeldari_craftworlds",
+        "unit": "Avatar Of Khaine",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---aeldari/115d-8239-dc6c-9e5d/avatar-of-khaine",
+        "http_status": 200,
+        "expected_points": 250,
+        "runtime_points": 250,
+        "status": "MATCH"
+      },
+      {
+        "slug": "imperial_knights",
+        "unit": "Canis Rex",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---imperial-knights---library/ef2c-2932-39f4-7228/canis-rex",
+        "http_status": 200,
+        "expected_points": 415,
+        "runtime_points": 415,
+        "status": "MATCH"
+      },
+      {
+        "slug": "leagues_of_votann",
+        "unit": "ûthar The Destined",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---leagues-of-votann/95dc-990b-2a93-5e83/%C3%BBthar-the-destined",
+        "http_status": 200,
+        "expected_points": 90,
+        "runtime_points": 90,
+        "status": "MATCH"
+      }
+    ]
+  },
+  "lineage": {
+    "runtime_source": "NEW_RECRUIT_WIKI",
+    "expected_upstream": "BSDATA_WH40K_11E",
+    "pinned_bsdata_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+    "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+  },
+  "policy": {
+    "meaning": "Validates public New Recruit runtime/wiki projection, roster-universe presence and representative current MFM points.",
+    "not_claimed": "Does not prove every builder constraint or the undocumented BSData-to-New-Recruit synchronization interval."
+  }
+}
