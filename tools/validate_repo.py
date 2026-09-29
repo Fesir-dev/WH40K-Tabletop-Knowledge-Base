@@ -774,6 +774,62 @@ try:
 except Exception as exc:
     errors.append(f"Collection-aware roster solver validation failure: {exc}")
 
+# 3j. Release-transition ingestion readiness.
+try:
+    release = json.loads((ROOT / "sources" / "release_state.json").read_text(encoding="utf-8"))
+    readiness = json.loads((ROOT / "reports" / "RELEASE_TRANSITION_READINESS_CURRENT.json").read_text(encoding="utf-8"))
+    if release.get("schema_version") != "1.1":
+        errors.append("release_state.json must use fail-closed ingestion gate schema 1.1")
+    rows = {x.get("id"): x for x in release.get("transitions", [])}
+    if set(rows) != {"ORKS_CODEX_2026", "SPACE_MARINES_CODEX_2026", "ADEPTUS_CUSTODES_CODEX_2026"}:
+        errors.append("Unexpected release transition registry")
+    for tid, tr in rows.items():
+        gate = tr.get("ingestion_gate", {})
+        if gate.get("auto_promote") is not False:
+            errors.append(f"{tid} release ingestion gate must keep auto_promote=false")
+        if tr.get("upcoming_state") and gate.get("candidate_authorization") is not False:
+            errors.append(f"{tid} pending transition must remain unauthorized until explicit official recheck")
+        if tr.get("upcoming_state") and gate.get("release_date_is_not_authority") is not True:
+            errors.append(f"{tid} must state that release date alone is not promotion authority")
+    sm = rows.get("SPACE_MARINES_CODEX_2026", {})
+    if sm.get("scheduled_release_date") != "2026-10-03":
+        errors.append("Space Marines release-transition recheck date drifted")
+    if sm.get("ingestion_gate", {}).get("state") != "HOLD_CURRENT_PRE_RELEASE":
+        errors.append("Space Marines current rules must remain held before official release recheck")
+    cust = rows.get("ADEPTUS_CUSTODES_CODEX_2026", {})
+    if cust.get("ingestion_gate", {}).get("state") != "HOLD_CURRENT_RELEASE_DATE_UNKNOWN":
+        errors.append("Custodes preview/preorder transition must remain held with unknown legal release date")
+
+    if readiness.get("status") != "HOLD_OR_STABLE" or readiness.get("as_of") != "2026-09-29":
+        errors.append("Committed release-transition readiness checkpoint drifted")
+    if readiness.get("official_rechecks_due") != 0:
+        errors.append("No official release recheck should be due at the 2026-09-29 checkpoint")
+    if readiness.get("auto_promote") is not False:
+        errors.append("Release-transition readiness must never enable auto promotion")
+    blocked = set(readiness.get("blocked_factions", []))
+    expected_blocked = {
+        faction
+        for tr in release.get("transitions", [])
+        if tr.get("upcoming_state") and tr.get("ingestion_gate", {}).get("candidate_authorization") is not True
+        for faction in tr.get("factions", [])
+    }
+    if blocked != expected_blocked:
+        errors.append("Release-transition readiness blocked faction set differs from pending transition gates")
+
+    for rel in [
+        "tools/release_transition_gate.py",
+        "tools/evaluate_release_transition_readiness.py",
+        ".github/workflows/release-transition-readiness.yml",
+        "schemas/release_transition_readiness.schema.json",
+    ]:
+        if not (ROOT / rel).exists():
+            errors.append(f"Missing release-transition readiness artifact: {rel}")
+    candidate_schema = json.loads((ROOT / "schemas" / "upstream_reingestion_candidate.schema.json").read_text(encoding="utf-8"))
+    if "affected_roster_identities" not in candidate_schema.get("required", []):
+        errors.append("Upstream candidate contract must require affected_roster_identities for release gating")
+except Exception as exc:
+    errors.append(f"Release-transition readiness validation failure: {exc}")
+
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (
     ROOT
