@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-29",
+  "roster_slug": "adeptus_titanicus",
+  "wahapedia_source_slug": "adeptus_titanicus",
+  "wahapedia_last_update": "2026-09-28 02:38:04",
+  "mfm_source_slug": "titan-legions",
+  "mfm_version": "1.4",
+  "mfm_view_mode": "full_page",
+  "mfm_group_title": null,
+  "status": "STRUCTURAL_COMPLETE",
+  "authority": {
+    "points_and_costs": "GW_MFM",
+    "rules_structure": "WAHAPEDIA_11E_CSV_SECONDARY_MIRROR",
+    "bsdata": "DIAGNOSTIC_IMPLEMENTATION_ONLY"
+  },
+  "datasheets": [
+    {
+      "datasheet_id": "000000868",
+      "name": "Reaver Titan",
+      "mfm_name": "Reaver Titan",
+      "legends": false,
+      "source_id": "000000270",
+      "source_name": "Adeptus Titanicus (Forge World)",
+      "source_edition": "11",
+      "source_version": "1.1"
+    },
+    {
+      "datasheet_id": "000002077",
+      "name": "Warbringer Nemesis Titan",
+      "mfm_name": "Warbringer Nemesis Titan",
+      "legends": false,
+      "source_id": "000000270",
+      "source_name": "Adeptus Titanicus (Forge World)",
+      "source_edition": "11",
+      "source_version": "1.1"
+    },
+    {
+      "datasheet_id": "000000867",
+      "name": "Warhound Titan",
+      "mfm_name": "Warhound Titan",
+      "legends": false,
+      "source_id": "000000270",
+      "source_name": "Adeptus Titanicus (Forge World)",
+      "source_edition": "11",
+      "source_version": "1.1"
+    },
+    {
+      "datasheet_id": "000000869",
+      "name": "Warlord Titan",
+      "mfm_name": "Warlord Titan",
+      "legends": false,
+      "source_id": "000000270",
+      "source_name": "Adeptus Titanicus (Forge World)",
+      "source_edition": "11",
+      "source_version": "1.1"
+    }
+  ],
+  "detachment_ids": [],
+  "enhancement_ids": [],
+  "stratagem_ids": [],
+  "unresolved_mfm_units": [],
+  "counts": {
+    "datasheets": 4,
+    "mfm_units": 4,
+    "unresolved_mfm_units": 0,
+    "current_edition_11_datasheets": 4,
+    "legends_datasheets": 0,
+    "model_profiles": 4,
+    "weapon_profiles": 36,
+    "keyword_rows": 32,
+    "datasheet_ability_rows": 16,
+    "option_rows": 10,
+    "unit_composition_rows": 4,
+    "leader_links": 0,
+    "detachments": 0,
+    "enhancements": 0,
+    "stratagems": 0
+  },
+  "semantic_policy": {
+    "full_rule_text_embedded": false,
+    "description_fingerprints_available": true,
+    "semantic_rule_text_current_verified": false,
+    "faq_errata_current_verified": false
+  }
+}
