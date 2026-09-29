@@ -1,0 +1,53 @@
+name: BSData structural fallback rebuild
+
+on:
+  push:
+    paths:
+      - "tools/build_bsdata_fallback_views.py"
+      - ".github/workflows/bsdata-fallback.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build pinned BSData fallback views
+        run: python tools/build_bsdata_fallback_views.py
+      - name: Validate fallback source roles
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("rules/11e/snapshots/2026-09-29/bsdata_fallback")
+          idx=json.loads((root/"index.json").read_text(encoding="utf-8"))
+          assert idx["commit_sha"]=="951d5900d1b4a952a4ba560a30c43788e622ccfc"
+          assert idx["source_role"]=="structured_implementation"
+          assert {x["slug"] for x in idx["views"]}=={"titanicus_traitoris","unaligned_forces"}
+          titan=json.loads((root/"titanicus_traitoris.json").read_text(encoding="utf-8"))
+          un=json.loads((root/"unaligned_forces.json").read_text(encoding="utf-8"))
+          assert titan["counts"]["units"]==4
+          assert titan["authority"]["points"]=="GW_MFM_1_4"
+          assert un["authority"]["points"]=="BSDATA_IMPLEMENTATION_ONLY_NO_MFM_PROJECTION"
+          assert un["counts"]["units"]>=20
+          print("BSData fallback contracts: PASS")
+          PY
+      - name: Commit fallback views
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rules/11e/snapshots/2026-09-29/bsdata_fallback
+          if git diff --cached --quiet; then
+            echo "No fallback changes"
+          else
+            git commit -m "Generate BSData structural fallback views"
+            git push
+          fi
