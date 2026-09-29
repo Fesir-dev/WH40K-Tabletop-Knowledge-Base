@@ -1,0 +1,21 @@
+{
+  "schema": "w40k11.source_conflicts.v0.7",
+  "as_of": "2026-08-15",
+  "authority_policy": "Official Games Workshop exact rules text > official summary/article > current secondary structured source > historical local snapshot.",
+  "items": [
+    {
+      "id": "revived_character_attachment_scope",
+      "status": "RESOLVED_BY_NEWER_OFFICIAL_SOURCE",
+      "engine_policy": "USE_JULY_22_CURRENT_RULE",
+      "official_summary": "The July 22 official update article states that slain Characters returning to battle return on their own as a unit of one.",
+      "secondary_observation": "The current structured core page contains attachment-return wording whose scope can appear narrower/different for Leader/Support models.",
+      "reason": "The two statements may apply to different destruction/return states. Exact official Universal Rules Update wording is required before a universal executable rule is certified.",
+      "sources": [
+        "https://www.warhammer-community.com/en-gb/articles/rgqanids/warhammer-40000-july-update-what-you-need-to-know/",
+        "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/"
+      ],
+      "resolution": "The June Core Rules wording is older. The official July 22 update explicitly changes revived slain Characters to return separately as a unit of one. Newer official update overrides June core wording.",
+      "effective_from": "2026-07-22"
+    }
+  ]
+}
