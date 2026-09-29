@@ -2,9 +2,9 @@
 
 ## Result
 
-**PASS — monitoring milestone complete**
+**PASS — monitoring milestone complete and lineage-hardened**
 
-This milestone establishes continuous change detection and runtime-projection validation. It deliberately does **not** auto-promote changed upstream data.
+This layer remains closed operationally. The 2026-09-29 hardening pass does not reopen Wave A or Wave B and does not move the active milestone backwards. It strengthens mismatch classification and runtime sampling after recovery from the actual Git/CI state.
 
 ## Upstream revision/hash watcher
 
@@ -28,7 +28,7 @@ Workflow:
 
 Cadence: every 6 hours.
 
-Policy: any upstream revision/hash change persists a classified report and fails the watcher. Re-ingestion, reconciliation and promotion are required; automatic rule promotion is forbidden.
+Policy: an upstream revision/hash change is classified and blocks the baseline until ingestion/reconciliation/promotion is performed. Automatic normative promotion remains forbidden.
 
 ## New Recruit runtime projection validator
 
@@ -36,30 +36,57 @@ Current report:
 
 `reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json`
 
-Workflow run: `36591100159`
-
-Result: **SUCCESS**
+Current report schema: **2.0**
 
 Runtime state:
 
 - system page: HTTP 200
 - catalogues reported: **36**
-- expected roster identities: **37**
-- resolved identities: **37 / 37**
+- libraries reported: **11**
+- roster identities resolved: **37 / 37**
 - missing identities: **0**
-- page failures: **0**
-- representative point checks: **10**
-- matches: **9**
-- known drifts: **1**
-- new drifts: **0**
+- catalogue/page failures: **0**
+- representative point checks: **15**
+- point matches: **10**
+- classified known point drifts: **5**
+- new/unclassified point drifts: **0**
+- representative structural surface checks: **5**
+- structural matches: **4**
+- classified known structural drifts: **1**
+- new/unclassified structural drifts: **0**
+- overall: **PASS_WITH_KNOWN_RUNTIME_DRIFT**
 
-The validator now reads expected points from the canonical repository MFM snapshot rather than hardcoding them.
+The point sample now covers named characters, infantry, vehicles/monsters, a Leader and multi-size units. Structural probes cover selected detachment existence, Leader/bodyguard relation, enhancement presence, wargear presence and constraint behavior.
 
-## Classified runtime drift
+## Classification contract
 
-Registry:
+Mismatch classification is separate from registry state.
 
-`sources/runtime_drift_registry.json`
+Allowed base classifications:
+
+- `NORMATIVE_MATCH`
+- `IMPLEMENTATION_DRIFT`
+- `RUNTIME_PROJECTION_DRIFT`
+- `UPSTREAM_REVISION_DRIFT`
+- `UNKNOWN_RUNTIME_DRIFT`
+
+A known registered mismatch keeps its base classification and additionally receives registry state `KNOWN_ACTIVE`.
+
+Every classified point mismatch stores:
+
+- GW/MFM value;
+- Wahapedia value;
+- pinned BSData value;
+- live BSData value;
+- New Recruit runtime value;
+- source revisions;
+- classification;
+- recommended action;
+- `normative_kb_change_required`.
+
+Runtime mismatches never automatically rewrite normative data.
+
+## Exact Ghazghkull lineage
 
 Active record:
 
@@ -67,32 +94,82 @@ Active record:
 
 Observed chain:
 
-- official/current MFM: **Ghazghkull Thraka = 300 pts**
-- current Wahapedia mirror: **300 pts**
-- New Recruit runtime/wiki: **235 pts**
-- BSData historical upstream evidence: commit `5ca1013537f539995acdac2caafb93c879163f00` on 2026-09-05 changed Ghazghkull root points from **235 → 175**
+| Layer | Value |
+| --- | ---: |
+| GW/MFM 1.4 | **300 pts** |
+| Wahapedia current mirror | **300 pts** |
+| pinned `BSData/wh40k-11e@951d590...` | **300 pts** |
+| live `BSData/wh40k-11e` HEAD | **300 pts** |
+| New Recruit runtime/wiki | **235 pts** |
 
 Classification:
 
-`KNOWN_RUNTIME_PROJECTION_DRIFT`
+`RUNTIME_PROJECTION_DRIFT`
 
-The New Recruit value matches the pre-change BSData value and is evidence of a stale/lagging runtime projection relative to at least that known upstream mutation. We do not infer New Recruit's undocumented synchronization cadence and do not assert an unverified exact current BSData field value from that historical patch alone.
+Recommended action:
 
-Normative resolution remains:
+Investigate New Recruit projection/cache synchronization. **No normative KB change is required.**
 
-**MFM 300 pts**
+Exact New Recruit synchronization cadence remains:
+
+`UNKNOWN_NOT_INFERRED`
+
+### Correction of earlier evidence
+
+The earlier closure text attributed the `235 → 175` hunk in BSData commit
+`5ca1013537f539995acdac2caafb93c879163f00` to Ghazghkull Thraka.
+
+That attribution is withdrawn. The hunk alone did not identify Ghazghkull and therefore was not valid Ghaz-specific lineage evidence. The hardened validator now extracts the exact Ghazghkull value from pinned and live BSData directly; both are **300**.
+
+## Additional classified runtime drift discovered by stronger sampling
+
+The stronger representative sample exposed four additional point mismatches where current MFM, current Wahapedia and pinned/live BSData agree while New Recruit differs:
+
+| Unit | MFM / Wahapedia / pinned+live BSData | New Recruit | Classification |
+| --- | ---: | ---: | --- |
+| Boyz | 90 | 75 | `RUNTIME_PROJECTION_DRIFT` |
+| Battlewagon | 150 | 145 | `RUNTIME_PROJECTION_DRIFT` |
+| Warboss | 100 | 85 | `RUNTIME_PROJECTION_DRIFT` |
+| Necron Warriors | 85 | 80 | `RUNTIME_PROJECTION_DRIFT` |
+
+These are retained as runtime evidence only. They do not change normative points.
+
+## Structural projection sampling
+
+Selected runtime checks:
+
+- Warboss → BOYZ / BREAKA BOYZ / NOBZ Leader-bodyguard relation: **MATCH**
+- Targetin' Gizmos enhancement presence: **MATCH**
+- Battlewagon Wreckin' ball + Grabbin' klaw presence: **MATCH**
+- Boyz `max(force): 6` constraint marker: **MATCH**
+- current Orks `Shoota Boyz` detachment: **RUNTIME_PROJECTION_DRIFT**
+
+For `Shoota Boyz`:
+
+- current MFM: present;
+- current Wahapedia snapshot: present;
+- pinned BSData: present;
+- live BSData: present;
+- sampled New Recruit Orks detachment selector: absent.
+
+Registry record:
+
+`NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29`
 
 ## Monitoring behavior
 
 - exact registered known drift → report it, workflow remains green;
-- new drift → workflow fails;
-- changed known-drift value → workflow fails;
+- new/unclassified drift → workflow fails;
+- changed known-drift value/classification → workflow fails;
 - missing catalogue/page → workflow fails;
 - known drift disappears → report `RESOLVED_CANDIDATE` for registry review;
+- full five-source lineage is fetched for point mismatches rather than for every matching sample, keeping runtime cost bounded;
 - runtime values never overwrite normative rules.
 
-## Next milestone
+## Active milestone
+
+The active milestone remains:
 
 `COLLECTION_AWARE_ROSTER_SOLVER`
 
-The remaining automation gap is no longer detection. It is automated **re-ingestion/reconciliation/promotion** after a detected upstream change; that remains intentionally separate from this monitoring milestone.
+The separate automation gap also remains automated re-ingestion/reconciliation/promotion after an upstream change. This hardening pass does not change that roadmap.

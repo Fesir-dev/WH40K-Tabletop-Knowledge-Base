@@ -153,29 +153,56 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(self.upstream_watch["change_summary"]["wahapedia_files_changed"], 0)
         self.assertFalse(self.upstream_watch["change_summary"]["wahapedia_last_update_changed"])
 
+        self.assertEqual(self.nr_runtime["schema_version"], "2.0")
         self.assertEqual(self.nr_runtime["status"], "PASS_WITH_KNOWN_RUNTIME_DRIFT")
         self.assertEqual(self.nr_runtime["universe"]["resolved_runtime_identities"], 37)
         self.assertEqual(self.nr_runtime["universe"]["missing"], [])
         self.assertTrue(all(x["status"] == "PASS" for x in self.nr_runtime["universe"]["page_checks"]))
+        self.assertEqual(self.nr_runtime["lineage"]["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
+
         points = self.nr_runtime["representative_points"]
-        self.assertEqual(points["checks"], 10)
-        self.assertEqual(points["matched"], 9)
-        self.assertEqual(points["known_drift_count"], 1)
+        self.assertEqual(points["checks"], 15)
+        self.assertEqual(points["matched"], 10)
+        self.assertEqual(points["known_drift_count"], 5)
         self.assertEqual(points["new_drift_count"], 0)
-        self.assertEqual(points["known_drifts"][0]["known_drift_id"], "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29")
-        self.assertEqual(points["known_drifts"][0]["expected_points"], 300)
-        self.assertEqual(points["known_drifts"][0]["runtime_points"], 235)
+        self.assertTrue(all(x["classification"] == "RUNTIME_PROJECTION_DRIFT" for x in points["known_drifts"]))
+        ghaz = next(x for x in points["known_drifts"] if x["unit"] == "Ghazghkull Thraka")
+        self.assertEqual(ghaz["gw_mfm_value"], 300)
+        self.assertEqual(ghaz["wahapedia_value"], 300)
+        self.assertEqual(ghaz["pinned_bsdata_value"], 300)
+        self.assertEqual(ghaz["live_bsdata_value"], 300)
+        self.assertEqual(ghaz["new_recruit_runtime_value"], 235)
+        self.assertFalse(ghaz["normative_kb_change_required"])
+
+        surfaces = self.nr_runtime["representative_surfaces"]
+        self.assertEqual(surfaces["checks"], 5)
+        self.assertEqual(surfaces["matched"], 4)
+        self.assertEqual(surfaces["known_drift_count"], 1)
+        self.assertEqual(surfaces["new_drift_count"], 0)
+        det = surfaces["known_drifts"][0]
+        self.assertEqual(det["check_id"], "ORKS_CURRENT_DETACHMENT_SHOOTA_BOYZ")
+        self.assertEqual(det["classification"], "RUNTIME_PROJECTION_DRIFT")
+        self.assertTrue(det["lineage"]["gw_mfm_present"])
+        self.assertTrue(det["lineage"]["wahapedia_present"])
+        self.assertTrue(det["lineage"]["pinned_bsdata_present"])
+        self.assertTrue(det["lineage"]["live_bsdata_present"])
+        self.assertFalse(det["lineage"]["new_recruit_runtime_present"])
+        self.assertFalse(det["normative_kb_change_required"])
 
         active = [x for x in self.runtime_drifts["active"] if x["state"] == "ACTIVE"]
-        self.assertEqual(len(active), 1)
-        self.assertEqual(active[0]["id"], "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29")
-        self.assertEqual(active[0]["normative"]["points"], 300)
-        self.assertEqual(active[0]["runtime"]["points"], 235)
+        self.assertEqual(len(active), 6)
+        self.assertTrue(all(x["classification"] == "RUNTIME_PROJECTION_DRIFT" for x in active))
+        self.assertTrue(all(x["normative_kb_change_required"] is False for x in active))
+        self.assertTrue(any(x["id"] == "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29" for x in active))
+        self.assertTrue(any(x["id"] == "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29" for x in active))
 
         automation = self.current["automation"]
         self.assertEqual(automation["upstream_change_watch"]["state"], "ACTIVE_NO_CHANGE")
         self.assertEqual(automation["new_recruit_runtime"]["state"], "PASS_WITH_KNOWN_RUNTIME_DRIFT")
+        self.assertEqual(automation["new_recruit_runtime"]["representative_point_checks"], 15)
+        self.assertEqual(automation["new_recruit_runtime"]["known_runtime_drifts"], 6)
         self.assertEqual(automation["new_recruit_runtime"]["new_runtime_drifts"], 0)
+        self.assertEqual(automation["new_recruit_runtime"]["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
         self.assertEqual(self.current["next_milestone"], "COLLECTION_AWARE_ROSTER_SOLVER")
 
     def test_preview_never_replaces_current(self):

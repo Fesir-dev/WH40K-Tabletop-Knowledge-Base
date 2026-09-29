@@ -6,11 +6,13 @@ Updated: **2026-09-29**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest validated runtime-monitor milestone evidence:
+Latest validated runtime-monitor hardening evidence:
 
-- runtime workflow run: `36591100159`
+- validated branch head: `ecb6e756624dacb09c889e56d110dcfd1498ba95`
+- GitHub Actions validation run: `36596361579`
 - result: **SUCCESS**
-- generated runtime report commit: `4ff07c7c5aeba03d18cd7c0abb8a84c1602824f1`
+- runtime report: `reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json` schema **2.0**
+- runtime report state: **PASS_WITH_KNOWN_RUNTIME_DRIFT**
 
 ## Completed major layers
 
@@ -52,18 +54,35 @@ Latest validated runtime-monitor milestone evidence:
 - auto-promotion: **disabled by design**.
 
 ### New Recruit runtime projection
-**CLOSED AS VALIDATION LAYER**
+**CLOSED AS VALIDATION LAYER — LINEAGE HARDENED**
 - roster identities resolved: **37 / 37**;
-- representative MFM point checks: **10**;
-- matches: **9**;
-- known runtime drifts: **1**;
-- new runtime drifts: **0**;
+- representative point checks: **15**;
+- point matches: **10**;
+- classified known point drifts: **5**;
+- representative structural surface checks: **5**;
+- structural matches: **4**;
+- classified known structural drifts: **1**;
+- new/unclassified runtime drifts: **0**;
+- report schema: **2.0**;
 - workflow result: **PASS_WITH_KNOWN_RUNTIME_DRIFT**.
 
-Known drift:
-- Ghazghkull Thraka: MFM/Wahapedia **300**, New Recruit **235**;
-- classified as `KNOWN_RUNTIME_PROJECTION_DRIFT`;
-- normative resolution remains MFM **300**.
+Exact Ghazghkull chain:
+- GW/MFM **300**;
+- Wahapedia **300**;
+- pinned BSData `951d590...` **300**;
+- live BSData HEAD **300**;
+- New Recruit **235**;
+- classification: `RUNTIME_PROJECTION_DRIFT`;
+- normative KB change required: **false**.
+
+Additional sampled runtime projection drift:
+- Orks Boyz **90 → 75**;
+- Orks Battlewagon **150 → 145**;
+- Orks Warboss **100 → 85**;
+- Necron Warriors **85 → 80**;
+- current Orks `Shoota Boyz` detachment present in MFM/Wahapedia/pinned+live BSData but absent from sampled New Recruit selector.
+
+Exact New Recruit synchronization cadence remains `UNKNOWN_NOT_INFERRED`.
 
 ### Painting
 - workbook v25 preserved;
@@ -84,7 +103,7 @@ Known drift:
 - Wahapedia remains current readable mirror.
 - BSData remains structured implementation.
 - New Recruit remains runtime projection.
-- Known runtime drift never rewrites normative data.
+- Runtime drift never rewrites normative data; registry state is separate from the base drift classification.
 - app-only wording and full mirror-to-official semantic equivalence remain unresolved.
 - `current_normalized_factions = 0` remains intentional for full normative normalization.
 
