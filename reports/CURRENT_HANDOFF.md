@@ -6,74 +6,87 @@ Updated: **2026-09-29**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Last verified HEAD before this handoff update:
+Last verified milestone HEAD:
 
-`deeae1387a2e32cc6cf6165308fd8833e925e0a3`
+`2f737eb5291e8e37aa6bd4706d408a9d921725f2`
 
 Validation run:
 
-- GitHub Actions: `36579692566`
+- GitHub Actions: `36585942055`
 - result: **SUCCESS**
 
 ## Completed major layers
 
 ### Repository/governance
-- source authority, freshness, conflicts and provenance;
-- scoped currentness vs repository coverage;
+- explicit authority/freshness/conflict/provenance model;
 - 37 roster identities;
-- CI and repository contract tests;
-- release-transition tracking.
+- scoped currentness vs repository coverage;
+- CI + repository contract tests;
+- resilient long-run execution/handoff protocol.
 
 ### Wave A — MFM
 **CLOSED**
 
-- MFM 1.4;
-- official update 2026-09-02;
+- MFM 1.4 / official update 2026-09-02;
 - 30 MFM faction pages;
-- 36 roster identities with MFM coverage;
-- points, unit sizes, Leader/Support relations, DP, Force Dispositions, enhancement/wargear costs and Legends pricing.
+- 36 MFM-mapped roster identities;
+- points, unit sizes, copy-tier pricing, Leader/Support relations, DP, Force Dispositions, enhancement/wargear costs and Legends pricing.
 
 ### Wave B — structural
-**CLOSED STRUCTURALLY / SEMANTICS STILL PENDING**
-
-Current machine state:
+**CLOSED**
 
 - Wahapedia current-mirror structural views: **35 / 37**;
 - BSData structured-implementation fallbacks: **2 / 37**;
 - total structural source availability: **37 / 37**;
-- retained MFM/Wahapedia source conflicts: **11**;
-- semantic resolver: **LIVE_HASH_VERIFIED**;
-- semantic smoke workflow: **SUCCESS**.
+- retained MFM/Wahapedia conflicts: **11**.
 
-Important boundary:
+### Wave B — semantic / FAQ operational currentness
+**CLOSED**
 
-- `current_normalized_factions = 0` remains intentional;
-- long rule semantics and FAQ/errata are not yet promoted as fully normalized current data.
+- full semantic fingerprint audit: **16,506 / 16,506 MATCH**;
+- semantic drift/missing: **0**;
+- live 11E source-catalog drift: **0**;
+- edition-11 sources indexed: **29**;
+- official faction-pack PDFs verified: **28 / 28**;
+- failed official assets: **0**;
+- on-demand hash-verified semantic resolver: active;
+- fast semantic smoke + full semantic audit workflows: active.
+
+Authority boundary:
+
+- Games Workshop remains normative;
+- Wahapedia semantic mirror currentness is verified, not promoted over GW;
+- app-only wording remains unresolved;
+- mirror-to-official paragraph-level equivalence is not claimed;
+- `current_normalized_factions = 0` remains intentional for full normative normalization.
 
 ### Painting
 - workbook v25 preserved;
-- normalized painting inventory, 540 recipes and active project state;
+- 217 containers/materials;
+- 212 unique products;
+- 540 recipes;
+- active Demon Prince project normalized;
 - painting plugin skill active.
 
 ### Analytics
-- source lineage matrix;
-- roster recommendation evidence model;
-- meta/analytics sources separated from normative rules.
+- lineage-aware competitive source matrix;
+- raw events / aggregators / list meta / mathhammer / expert evidence separated;
+- roster recommendation evidence model active.
 
 ## Current active milestone
 
-`WAVE_B_SEMANTIC_AND_FAQ_CURRENTNESS`
+`AUTOMATED_DIFF_AND_NEW_RECRUIT_RUNTIME`
 
-Remaining high-level work:
+High-level remaining work:
 
-1. complete semantic rules/FAQ currentness without vendoring long copyrighted prose;
-2. finish automated GW ↔ Wahapedia ↔ BSData normalization/diff workers;
-3. add New Recruit runtime projection validation;
-4. build collection-aware roster legality/physical-feasibility solver;
-5. handle upcoming Space Marines/Custodes release transitions when they become legally current.
+1. automated GW ↔ Wahapedia ↔ BSData revision/diff workers;
+2. New Recruit runtime/projection validation;
+3. collection-aware roster legality/physical-feasibility solver;
+4. upcoming Space Marines/Custodes release-transition ingestion when legally current;
+5. optional deeper normative/app equivalence work where official/app access permits.
 
 ## Resume rule
 
-If a chat or stream fails, do **not** restart Wave A or Wave B structural ingestion.
+Do not restart preservation, Wave A, Wave B structural, or Wave B semantic/FAQ audits after a chat/UI failure.
 
-Resume from the current repository HEAD and the active milestone above.
+Resume from the latest validated Git HEAD and the active milestone above.
