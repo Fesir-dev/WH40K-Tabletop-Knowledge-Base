@@ -7,24 +7,48 @@ Build one durable Warhammer 40,000 tabletop knowledge system rather than separat
 ## Data flow
 
 ```text
-external authority / personal observation
+external authority / implementation / analytics / personal observation
         ↓
-source registry + provenance
+source registry + role + provenance + freshness
+        ↓
+snapshot / diff / conflict detection
         ↓
 normalized domain data
         ↓
 derived runtime/indexes
         ↓
-validation + regression
+validation + regression + runtime projection checks
         ↓
-queries / roster analysis / hobby planning
+queries / roster analysis / competitive analytics / hobby planning
 ```
+
+## External-source planes
+
+### Normative plane
+
+Official Games Workshop sources define current rules/points within their scope.
+
+### Mirror plane
+
+Wahapedia provides a readable, fast-moving secondary projection used for discovery, cross-checking and drift detection.
+
+### Structured implementation plane
+
+BSData/wh40k-11e provides machine-readable catalogue semantics: unit structures, options, constraints, categories and roster validation logic.
+
+### Runtime projection plane
+
+New Recruit consumes catalogue data and shows how those semantics behave for players. Runtime disagreement with BSData is tracked as implementation/projection drift, not as a rules change.
+
+### Analytics plane
+
+Tournament results, statistical aggregations and expert analysis are stored separately from normative rules. They answer what is played, what performs and how experts interpret the environment — not what the rulebook says.
 
 ## Layering
 
 ### 1. Sources
 
-Describes where a fact came from, source authority, version/date, retrieval/check date, checksum when available and whether the source is current or historical.
+Describes where a fact came from, source authority/role, version/date, retrieval/check date, checksum/commit when available and whether the source is current or historical.
 
 ### 2. Normalized knowledge
 
@@ -63,9 +87,10 @@ The target system therefore answers them in order:
 2. Can the user's physical collection instantiate it?
 3. Which model/bit allocations are required?
 4. Which purchases/build changes would make an infeasible roster possible?
+5. Separately: how does the roster/faction perform in the dated competitive environment?
 
 ## Current bootstrap boundaries
 
-The rules baseline is from 2026-08-15 and must be revalidated before receiving `CURRENT_VERIFIED`.
+The preserved rules baseline is from 2026-08-15 and remains historical until the current official-source refresh is complete.
 
-The Custodes inventory baseline is from 2026-07-11 and is treated as `PROVISIONAL` until the remaining physical uncertainty is resolved.
+The Custodes inventory baseline is from 2026-07-11 and is treated as `PROVISIONAL` until remaining physical uncertainty is resolved.
