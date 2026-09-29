@@ -23,6 +23,9 @@ class RepositoryContracts(unittest.TestCase):
         cls.upstream_watch = json.loads((ROOT/"reports/UPSTREAM_CHANGE_WATCH_CURRENT.json").read_text(encoding="utf-8"))
         cls.nr_runtime = json.loads((ROOT/"reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json").read_text(encoding="utf-8"))
         cls.runtime_drifts = json.loads((ROOT/"sources/runtime_drift_registry.json").read_text(encoding="utf-8"))
+        cls.collection_solver = json.loads((ROOT/"reports/COLLECTION_AWARE_ROSTER_SOLVER_CURRENT.json").read_text(encoding="utf-8"))
+        cls.custodes_solver_profile = json.loads((ROOT/"collection/adeptus_custodes/solver_profile.json").read_text(encoding="utf-8"))
+        cls.custodes_current_collection = json.loads((ROOT/"collection/adeptus_custodes/current.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -204,6 +207,28 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(automation["new_recruit_runtime"]["new_runtime_drifts"], 0)
         self.assertEqual(automation["new_recruit_runtime"]["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
         self.assertEqual(self.current["next_milestone"], "COLLECTION_AWARE_ROSTER_SOLVER")
+
+    def test_collection_aware_roster_solver(self):
+        self.assertEqual(self.collection_solver["status"], "PASS")
+        self.assertEqual(self.collection_solver["milestone"], "COLLECTION_AWARE_ROSTER_SOLVER")
+        self.assertEqual(len(self.collection_solver["cases"]), 7)
+        self.assertEqual(self.collection_solver["authority_boundary"]["full_normative_legality"], "UNKNOWN_PENDING_NORMATIVE_APP")
+        self.assertEqual(self.collection_solver["authority_boundary"]["collection_status"], "PROVISIONAL")
+        self.assertFalse(self.collection_solver["authority_boundary"]["normative_promotion"])
+
+        profile = self.custodes_solver_profile
+        self.assertEqual(profile["collection_status"], "PROVISIONAL")
+        self.assertEqual(sum(x["physical_bodies"] for x in profile["body_pools"]), 70)
+        self.assertEqual(len(profile["body_pools"]), 15)
+        self.assertEqual(len(profile["component_pools"]), 12)
+        self.assertTrue(any(x["mode"] == "CONVERSION_REQUIRED" for p in profile["body_pools"] for x in p["roles"]))
+        self.assertTrue(any(x["id"] == "CUSTODES_VENATARI_GUARD_SPEAR_SHARING" for x in profile["unknown_constraints"]))
+
+        solver = self.custodes_current_collection["solver"]
+        self.assertEqual(solver["state"], "OPERATIONAL_PROVISIONAL")
+        self.assertEqual(solver["profile"], "collection/adeptus_custodes/solver_profile.json")
+        self.assertTrue((ROOT/"tools/solve_collection_roster.py").exists())
+        self.assertTrue((ROOT/".github/workflows/collection-roster-solver.yml").exists())
 
     def test_preview_never_replaces_current(self):
         for tr in self.release["transitions"]:
