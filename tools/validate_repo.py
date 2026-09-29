@@ -304,7 +304,7 @@ try:
     if "release-transition auto-promotion: DISABLED" not in readiness_workflow:
         errors.append("Release-transition readiness workflow lost explicit no-auto-promotion assertion")
     activation_report = json.loads(
-        (ROOT / "reports" / "RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json").read_text(encoding="utf-8")
+        (ROOT / "reports" / "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json").read_text(encoding="utf-8")
     )
     activation_cfg = release.get("activation_watch", {})
     if activation_cfg.get("state") != "OPERATIONAL_V1":
@@ -317,7 +317,7 @@ try:
         errors.append("Release transition activation watch must remain read-only")
     if activation_cfg.get("cadence") != "every 6 hours":
         errors.append("Release transition activation watch cadence drifted")
-    if activation_cfg.get("report") != "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json":
+    if activation_cfg.get("report") != "reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json":
         errors.append("Release transition activation watch report pointer drifted")
 
     if activation_report.get("status") != "NO_ACTION_REQUIRED":
@@ -863,8 +863,8 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "RELEASE_TRANSITION_ACTIVATION_WATCH":
-        errors.append("Current milestone must be RELEASE_TRANSITION_ACTIVATION_WATCH")
+    if current_rules.get("next_milestone") != "NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT":
+        errors.append("Current milestone must be NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release transition readiness v1 as operational")
