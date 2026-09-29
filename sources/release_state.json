@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "as_of": "2026-09-29",
   "rule": "Current legal rules and announced future rules are distinct states. Preview material never replaces current legal data before release.",
   "states": [
@@ -108,6 +108,21 @@
       "UPSTREAM_PROJECTION_CHANGE_REQUIRED_BEFORE_CANDIDATE",
       "GUARDED_REINGESTION_AND_REVIEWED_PROMOTION_ONLY"
     ],
+    "auto_promote": false
+  },
+  "activation_watch": {
+    "state": "OPERATIONAL_V1",
+    "report": "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json",
+    "tool": "tools/watch_release_transition_activation.py",
+    "workflow": ".github/workflows/release-transition-activation-watch.yml",
+    "cadence": "every 6 hours",
+    "current_status": "NO_ACTION_REQUIRED",
+    "action_states": [
+      "ACTION_REQUIRED",
+      "MONITORING_UPSTREAM_PROJECTION",
+      "READY_FOR_GUARDED_CANDIDATE"
+    ],
+    "direct_current_rules_mutation": false,
     "auto_promote": false
   }
 }
