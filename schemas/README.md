@@ -38,3 +38,4 @@ Re-ingestion automation contracts:
 - `upstream_reingestion_plan.schema.json` — deterministic classification of detected source changes and required candidate stages.
 - `upstream_reingestion_candidate.schema.json` — isolated candidate execution result and promotion eligibility.
 - `upstream_reingestion_promotion.schema.json` — reviewed promotion metadata; `auto_promote=false` and `normative_mfm_changed=false` are invariant.
+- `release_transition_manifest.schema.json` — fail-closed future-release transition state, activation evidence and guarded re-ingestion routing contract.
