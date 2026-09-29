@@ -5,7 +5,11 @@
     "Freshness is evaluated per source and per fact domain; a recent analytics article cannot refresh rules data.",
     "Current official source claims must be rechecked after a known publication/update event.",
     "Git-backed structured sources are tracked by commit SHA, not by a vague checked date alone.",
-    "Runtime projections are checked against their upstream structured source when a discrepancy appears."
+    "Runtime projections are checked against their upstream structured source when a discrepancy appears.",
+    "Competitive analytics must carry a declared time window and rules/points patch identity.",
+    "Evidence from materially different patches is not pooled unless an explicit normalization/delta analysis justifies it.",
+    "Dependent analytics sources retain their upstream lineage; freshness of a derived dashboard does not make its underlying tournament sample newer.",
+    "Expert analysis freshness is publication-date scoped and cannot refresh empirical tournament data."
   ],
   "triggers": [
     {
@@ -36,12 +40,57 @@
     {
       "source_id": "GOONHAMMER_40K",
       "trigger": "new relevant analysis",
-      "action": "store as attributed analysis with publication date and rules snapshot context"
+      "action": "store attributed conclusion with publication date, patch and topic"
     },
     {
       "source_id": "STAT_CHECK_40K",
       "trigger": "new tournament period/data window",
-      "action": "store dated empirical snapshot; never overwrite prior period"
+      "action": "store dated aggregate snapshot with filters/sample; never overwrite prior period"
+    },
+    {
+      "source_id": "BCP_40K",
+      "trigger": "new completed event/results/list publication",
+      "action": "ingest dated raw event snapshot; retain event and rules-patch identity"
+    },
+    {
+      "source_id": "TABLETOP_HERALD_40K",
+      "trigger": "new completed event/results/list publication",
+      "action": "ingest dated raw event snapshot; retain platform lineage"
+    },
+    {
+      "source_id": "INFINITE_ARCHIVE_40K",
+      "trigger": "new weekly/patch dashboard data",
+      "action": "store metrics and sample metadata; mark BCP-derived lineage"
+    },
+    {
+      "source_id": "LISTHAMMER_40K",
+      "trigger": "new X-0/X-1 list feed entries",
+      "action": "snapshot list metadata and upstream event references"
+    },
+    {
+      "source_id": "META_MERGE_40K",
+      "trigger": "new six-hour refresh or material build change",
+      "action": "snapshot build composition; preserve Listhammer/BCP/Tabletop Herald lineage"
+    },
+    {
+      "source_id": "TACTICAL_REROLL_40K",
+      "trigger": "new BSData or tournament corpus/model refresh",
+      "action": "snapshot model/data version; keep mathhammer separate from observed performance"
+    },
+    {
+      "source_id": "HUTBER_STATS_40K",
+      "trigger": "new meta window/dataslate snapshot",
+      "action": "capture aggregate metrics with BCP/Tabletop Herald lineage"
+    },
+    {
+      "source_id": "ART_OF_WAR_40K",
+      "trigger": "new public relevant analysis/tier/list guidance",
+      "action": "store attributed conclusion only from accessible material; record patch/date"
+    },
+    {
+      "source_id": "FORTY_K_FIRESIDE",
+      "trigger": "new accessible matchup/deployment guidance",
+      "action": "store attributed coaching evidence; distinguish Stat Check-derived metrics from coach opinion"
     }
   ]
 }
