@@ -30,3 +30,20 @@ python tools/query_mfm.py imperial_fists --summary
 ```
 
 `query_mfm.py` resolves repository roster identities to their MFM source page. For derived Codex-compliant Space Marine chapter views it applies `base_plus_group` unit filtering.
+
+
+## Collection-aware roster solver
+
+```bash
+python tools/solve_collection_roster.py --input rosters/examples/custodes_feasible_ready.json
+python tools/validate_collection_solver.py
+```
+
+Exit codes from `solve_collection_roster.py`:
+
+- `0` — scoped rules checks pass and physical feasibility is known feasible;
+- `2` — scoped MFM-backed legality failed;
+- `3` — physical allocation is infeasible against the collection snapshot;
+- `4` — physical feasibility is unknown because a required component constraint is unresolved.
+
+The solver never upgrades runtime/BSData facts into normative rules and never upgrades a provisional personal collection snapshot into current verified inventory.
