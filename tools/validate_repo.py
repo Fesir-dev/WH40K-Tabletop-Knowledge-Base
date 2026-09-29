@@ -225,7 +225,7 @@ try:
 
     if readiness.get("status") != "PASS":
         errors.append("Release transition readiness report must PASS")
-    if readiness.get("milestone") != "RELEASE_TRANSITION_ACTIVATION_WATCH":
+    if readiness.get("milestone") != "RELEASE_TRANSITION_INGESTION_READINESS":
         errors.append("Release transition readiness milestone id drifted")
     if readiness.get("as_of") != "2026-09-29":
         errors.append("Committed release transition readiness checkpoint must remain 2026-09-29")
