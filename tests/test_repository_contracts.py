@@ -12,7 +12,7 @@ class RepositoryContracts(unittest.TestCase):
         cls.gate = json.loads((ROOT/"sources/currentness_gate.json").read_text(encoding="utf-8"))
         cls.release = json.loads((ROOT/"sources/release_state.json").read_text(encoding="utf-8"))
         cls.release_readiness = json.loads((ROOT/"reports/RELEASE_TRANSITION_READINESS_CURRENT.json").read_text(encoding="utf-8"))
-        cls.release_activation_watch = json.loads((ROOT/"reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json").read_text(encoding="utf-8"))
+        cls.release_activation_watch = json.loads((ROOT/"reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json").read_text(encoding="utf-8"))
         cls.space_marines_transition = json.loads((ROOT/"ingestion/release_transitions/space_marines_codex_2026.json").read_text(encoding="utf-8"))
         cls.custodes_transition = json.loads((ROOT/"ingestion/release_transitions/adeptus_custodes_codex_2026.json").read_text(encoding="utf-8"))
         cls.registry = json.loads((ROOT/"sources/registry.json").read_text(encoding="utf-8"))
@@ -129,7 +129,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(watch["cadence"], "every 6 hours")
         self.assertTrue((ROOT/watch["tool"]).exists())
         self.assertTrue((ROOT/watch["workflow"]).exists())
-        self.assertEqual(watch["report"], "reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json")
+        self.assertEqual(watch["report"], "reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json")
 
         report=self.release_activation_watch
         self.assertEqual(report["status"], "NO_ACTION_REQUIRED")
