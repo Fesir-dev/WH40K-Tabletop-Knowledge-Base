@@ -13,6 +13,10 @@ class RepositoryContracts(unittest.TestCase):
         cls.release = json.loads((ROOT/"sources/release_state.json").read_text(encoding="utf-8"))
         cls.bsdata = json.loads((ROOT/"ingestion/source_snapshots/bsdata_wh40k_11e_2026-09-29.json").read_text(encoding="utf-8"))
         cls.mfm = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/mfm/index.json").read_text(encoding="utf-8"))
+        cls.wave_b = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/wahapedia/roster_views/index.json").read_text(encoding="utf-8"))
+        cls.wave_b_manifest = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/wahapedia/manifest.json").read_text(encoding="utf-8"))
+        cls.wave_b_recon = json.loads((ROOT/"reports/WAVE_B_RECONCILIATION_2026-09-29.json").read_text(encoding="utf-8"))
+        cls.current = json.loads((ROOT/"rules/11e/current.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -68,6 +72,34 @@ class RepositoryContracts(unittest.TestCase):
             for dim in wave_dims:
                 self.assertEqual(cov[row["slug"]]["coverage"][dim], 100, (row["slug"], dim))
 
+
+
+    def test_wave_b_structural_views(self):
+        self.assertEqual(
+            self.wave_b["counts"],
+            {"roster_identities":37,"structural_complete":35,"structural_partial":0,"unavailable":2},
+        )
+        unavailable={
+            x["slug"] for x in self.wave_b["views"]
+            if x["status"].startswith("UNAVAILABLE")
+        }
+        self.assertEqual(unavailable, {"titanicus_traitoris","unaligned_forces"})
+        self.assertEqual(self.wave_b_manifest["source"]["last_update"], "2026-09-28 02:38:04")
+        self.assertEqual(self.wave_b_manifest["counts"]["datasheets"], 1660)
+        self.assertEqual(self.wave_b_manifest["counts"]["ability_catalog"], 95)
+
+    def test_wave_b_reconciliation_and_promotion(self):
+        self.assertEqual(self.wave_b_recon["status"], "PASS_WITH_CONFLICTS")
+        self.assertEqual(self.wave_b_recon["conflict_count"], 11)
+        self.assertEqual(self.wave_b_recon["totals"]["points_compared"], 1202)
+        self.assertEqual(self.wave_b_recon["totals"]["unit_name_matches"], 1242)
+        self.assertEqual(self.coverage["status"], "WAVE_B_STRUCTURAL_COMPLETE")
+        self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_current")), 35)
+        self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
+        self.assertEqual(self.current["status"], "CURRENT_STRUCTURAL_READY_SEMANTIC_PENDING")
+        self.assertEqual(self.current["wave_b_structural"]["roster_identities_complete"], 35)
+        self.assertEqual(self.current["wave_b_structural"]["semantic_rule_text"], "PENDING")
+        self.assertEqual(self.current["wave_b_structural"]["faq_errata"], "PENDING")
 
     def test_preview_never_replaces_current(self):
         for tr in self.release["transitions"]:
