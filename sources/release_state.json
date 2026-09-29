@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "as_of": "2026-09-29",
   "rule": "Current legal rules and announced future rules are distinct states. Preview material never replaces current legal data before release.",
   "states": [
@@ -59,7 +59,10 @@
           "published_at": "2026-09-15",
           "note": "GW states Blood Angels, Dark Angels, Space Wolves, Black Templars and Deathwatch will be updated when Codex: Space Marines releases."
         }
-      ]
+      ],
+      "manifest": "ingestion/release_transitions/space_marines_codex_2026.json",
+      "readiness_state": "PRE_RELEASE_HOLD",
+      "current_legal_confirmation": false
     },
     {
       "id": "ADEPTUS_CUSTODES_CODEX_2026",
@@ -86,7 +89,25 @@
           "published_at": "2026-09-27",
           "note": "GW announces new Codex: Adeptus Custodes for the following preorder window."
         }
-      ]
+      ],
+      "manifest": "ingestion/release_transitions/adeptus_custodes_codex_2026.json",
+      "readiness_state": "UPCOMING_HOLD_NO_RELEASE_DATE",
+      "current_legal_confirmation": false
     }
-  ]
+  ],
+  "transition_policy": {
+    "state": "OPERATIONAL_READINESS_V1",
+    "report": "reports/RELEASE_TRANSITION_READINESS_CURRENT.json",
+    "evaluator": "tools/evaluate_release_transitions.py",
+    "workflow": ".github/workflows/release-transition-readiness.yml",
+    "rules": [
+      "PREVIEW_NEVER_PROMOTES",
+      "PREORDER_NEVER_PROMOTES",
+      "DATE_ALONE_NEVER_PROMOTES",
+      "OFFICIAL_CURRENT_LEGAL_EVIDENCE_REQUIRED",
+      "UPSTREAM_PROJECTION_CHANGE_REQUIRED_BEFORE_CANDIDATE",
+      "GUARDED_REINGESTION_AND_REVIEWED_PROMOTION_ONLY"
+    ],
+    "auto_promote": false
+  }
 }
