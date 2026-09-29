@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import csv, hashlib, io, json, urllib.request
+import argparse, csv, hashlib, io, json, urllib.request
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -101,6 +101,13 @@ def expected_records():
     return out
 
 def main():
+    global DATE, WROOT
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--snapshot-date",default=DATE)
+    ap.add_argument("--report-path")
+    a=ap.parse_args()
+    DATE=a.snapshot_date
+    WROOT=ROOT/"rules"/"11e"/"snapshots"/DATE/"wahapedia"
     live={}
     file_meta={}
     for kind,filename in sorted(FILES.items()):
