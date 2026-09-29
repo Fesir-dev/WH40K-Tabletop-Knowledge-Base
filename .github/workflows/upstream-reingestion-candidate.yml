@@ -5,6 +5,18 @@ on:
     workflows: ["Upstream change watch"]
     types: [completed]
   workflow_dispatch:
+  pull_request:
+    paths:
+      - "tools/plan_upstream_reingestion.py"
+      - "tools/run_upstream_reingestion_candidate.py"
+      - "tools/crosscheck_wave_b.py"
+      - "tools/build_wave_b_roster_views.py"
+      - "tools/audit_wave_b_views.py"
+      - "tools/audit_semantic_fingerprints.py"
+      - "tools/build_bsdata_fallback_views.py"
+      - ".github/workflows/upstream-reingestion-candidate.yml"
+      - "schemas/upstream_reingestion_plan.schema.json"
+      - "schemas/upstream_reingestion_candidate.schema.json"
 
 permissions:
   contents: read
