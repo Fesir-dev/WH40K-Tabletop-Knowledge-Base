@@ -204,6 +204,7 @@ def main() -> int:
     ability_catalog = [
         clean_row(r, prose_hash_fields=("description","legend"), keep=("id","name","faction_id"))
         for r in tables["Abilities.csv"]
+        if re.fullmatch(r"\d+", r.get("id", ""))
     ]
 
     faction_index = []
@@ -363,9 +364,10 @@ def main() -> int:
             "minimum_factions": 20,
             "minimum_datasheets": 1000,
             "copyright_reduced_snapshot": True,
+            "ability_catalog_numeric_ids_only": True,
         },
         "files": file_manifest,
-        "counts": {"factions": len(factions), **dict(totals)},
+        "counts": {"factions": len(factions), "ability_catalog": len(ability_catalog), **dict(totals)},
         "factions": faction_index,
     }
     (snap_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
