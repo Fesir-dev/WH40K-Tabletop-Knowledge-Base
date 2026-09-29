@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/official_public_mirror_overlap_audit.schema.json",
+  "title": "Official public Games Workshop to current mirror semantic overlap audit",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "as_of",
+    "authority_boundary",
+    "source_integrity",
+    "core_rules",
+    "summary",
+    "documents",
+    "interpretation"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "as_of": {
+      "type": "string"
+    },
+    "authority_boundary": {
+      "type": "object"
+    },
+    "source_integrity": {
+      "type": "object"
+    },
+    "core_rules": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "interpretation": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}
