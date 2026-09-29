@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"tools"))
 from evaluate_release_transitions import build_report, evaluate_transition  # noqa: E402
+from record_release_activation import is_official_https  # noqa: E402
 
 
 class ReleaseTransitionReadinessContracts(unittest.TestCase):
@@ -52,6 +53,12 @@ class ReleaseTransitionReadinessContracts(unittest.TestCase):
         self.assertTrue(row["candidate_eligible"])
         self.assertFalse(row["promotion_eligible"])
         self.assertEqual(row["next_action"],"BUILD_ISOLATED_CANDIDATE")
+
+    def test_activation_evidence_requires_official_https_domain(self):
+        self.assertTrue(is_official_https("https://www.warhammer-community.com/en-gb/articles/example/"))
+        self.assertTrue(is_official_https("https://www.warhammer.com/en-GB/example"))
+        self.assertFalse(is_official_https("http://www.warhammer-community.com/example"))
+        self.assertFalse(is_official_https("https://example.com/warhammer-community.com"))
 
     def test_custodes_can_activate_from_official_evidence_without_guessed_date(self):
         cust=copy.deepcopy(self.cust)
