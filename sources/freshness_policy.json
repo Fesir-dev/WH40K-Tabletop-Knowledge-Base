@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-09-29",
+  "principles": [
+    "Freshness is evaluated per source and per fact domain; a recent analytics article cannot refresh rules data.",
+    "Current official source claims must be rechecked after a known publication/update event.",
+    "Git-backed structured sources are tracked by commit SHA, not by a vague checked date alone.",
+    "Runtime projections are checked against their upstream structured source when a discrepancy appears."
+  ],
+  "triggers": [
+    {
+      "source_id": "GW_40K_DOWNLOADS",
+      "trigger": "known new FAQ/rules/faction/event publication",
+      "action": "re-ingest affected official domain and diff"
+    },
+    {
+      "source_id": "GW_MFM",
+      "trigger": "new MFM version/update",
+      "action": "snapshot points state and diff all affected factions"
+    },
+    {
+      "source_id": "BSDATA_WH40K_11E",
+      "trigger": "new main commit",
+      "action": "record SHA; classify affected files/factions; run structured diff"
+    },
+    {
+      "source_id": "WAHAPEDIA_11E",
+      "trigger": "page/version/content drift",
+      "action": "cross-check affected facts against official and BSData"
+    },
+    {
+      "source_id": "NEW_RECRUIT_RUNTIME",
+      "trigger": "runtime validation differs from expected catalogue semantics",
+      "action": "open runtime projection audit"
+    },
+    {
+      "source_id": "GOONHAMMER_40K",
+      "trigger": "new relevant analysis",
+      "action": "store as attributed analysis with publication date and rules snapshot context"
+    },
+    {
+      "source_id": "STAT_CHECK_40K",
+      "trigger": "new tournament period/data window",
+      "action": "store dated empirical snapshot; never overwrite prior period"
+    }
+  ]
+}
