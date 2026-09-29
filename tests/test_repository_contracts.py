@@ -18,6 +18,8 @@ class RepositoryContracts(unittest.TestCase):
         cls.wave_b_recon = json.loads((ROOT/"reports/WAVE_B_RECONCILIATION_2026-09-29.json").read_text(encoding="utf-8"))
         cls.current = json.loads((ROOT/"rules/11e/current.json").read_text(encoding="utf-8"))
         cls.bsdata_fallback = json.loads((ROOT/"rules/11e/snapshots/2026-09-29/bsdata_fallback/index.json").read_text(encoding="utf-8"))
+        cls.semantic_audit = json.loads((ROOT/"reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json").read_text(encoding="utf-8"))
+        cls.official_assets = json.loads((ROOT/"sources/snapshots/gw_11e_official_assets_2026-09-29.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -99,8 +101,8 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
         self.assertEqual(self.current["status"], "CURRENT_STRUCTURAL_READY_SEMANTIC_PENDING")
         self.assertEqual(self.current["wave_b_structural"]["roster_identities_complete"], 35)
-        self.assertEqual(self.current["wave_b_structural"]["semantic_rule_text"], "PENDING")
-        self.assertEqual(self.current["wave_b_structural"]["faq_errata"], "PENDING")
+        self.assertEqual(self.current["wave_b_structural"]["semantic_rule_text"], "CURRENT_SECONDARY_MIRROR_FULL_HASH_VERIFIED")
+        self.assertEqual(self.current["wave_b_structural"]["faq_errata"], "SOURCE_CATALOG_CURRENT_OFFICIAL_ASSETS_VERIFIED")
 
 
     def test_structural_source_availability_37_of_37(self):
@@ -126,7 +128,21 @@ class RepositoryContracts(unittest.TestCase):
         self.assertTrue((ROOT/"tools/query_current_semantics.py").exists())
         self.assertTrue((ROOT/".github/workflows/semantic-smoke.yml").exists())
         self.assertEqual(self.current["wave_b_structural"]["total_structural_source_available"], 37)
-        self.assertEqual(self.current["wave_b_structural"]["semantic_rule_text"], "PENDING")
+        self.assertEqual(self.current["wave_b_structural"]["semantic_rule_text"], "CURRENT_SECONDARY_MIRROR_FULL_HASH_VERIFIED")
+
+    def test_wave_b_semantic_and_official_asset_audits(self):
+        self.assertEqual(self.semantic_audit["status"], "PASS")
+        self.assertEqual(self.semantic_audit["expected_fingerprints"], 16506)
+        self.assertEqual(self.semantic_audit["counts"], {"MATCH":16506})
+        self.assertEqual(len(self.semantic_audit["problems"]), 0)
+        self.assertEqual(self.official_assets["status"], "PASS")
+        self.assertEqual(self.official_assets["live_source_csv"]["catalog_drift_count"], 0)
+        self.assertEqual(self.official_assets["official_assets"]["edition_11_sources"], 29)
+        self.assertEqual(self.official_assets["official_assets"]["verified_pdf_assets"], 28)
+        self.assertEqual(self.official_assets["official_assets"]["failures"], 0)
+        self.assertEqual(self.coverage["global"]["wave_b_current_mirror_semantic_roster_identities"], 35)
+        self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
+        self.assertEqual(self.current["status"], "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING")
 
     def test_preview_never_replaces_current(self):
         for tr in self.release["transitions"]:

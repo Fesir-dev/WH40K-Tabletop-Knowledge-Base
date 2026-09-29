@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.1",
+  "schema_version": "3.2",
   "as_of": "2026-09-29",
-  "status": "CURRENT_PENDING_RECHECK",
+  "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
     "source_state": "Whether the external source/revision was checked and is reachable/current within the stated scope.",
     "scope_state": "Whether the applicable current source for a rules domain was verified.",
@@ -15,10 +15,19 @@
       "required_for": [
         "core_rules",
         "universal_updates",
-        "faction_updates"
+        "faction_updates",
+        "faq_errata_assets"
       ],
       "state": "PASS",
-      "checked_at": "2026-09-29"
+      "checked_at": "2026-09-29",
+      "asset_audit": {
+        "state": "PASS",
+        "checked_at": "2026-09-29",
+        "report": "sources/snapshots/gw_11e_official_assets_2026-09-29.json",
+        "edition_11_sources": 29,
+        "verified_pdf_assets": 28,
+        "failures": 0
+      }
     },
     {
       "id": "GW_MFM",
@@ -51,9 +60,18 @@
       "required_for": [
         "readable_crosscheck",
         "drift_detection",
-        "navigation"
+        "navigation",
+        "semantic_mirror_currentness"
       ],
-      "state": "PASS"
+      "state": "PASS",
+      "semantic_fingerprint_audit": {
+        "state": "PASS",
+        "checked_at": "2026-09-29",
+        "report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "expected": 16506,
+        "matched": 16506,
+        "problems": 0
+      }
     },
     {
       "id": "BSDATA_WH40K_11E",
@@ -188,6 +206,24 @@
       ],
       "content_state": "PASS",
       "repository_dimension": "legends_pricing"
+    },
+    "semantic_mirror_current": {
+      "required_sources": [
+        "WAHAPEDIA_11E"
+      ],
+      "content_state": "PASS",
+      "repository_dimension": null,
+      "report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+      "authority_boundary": "Secondary mirror semantic currentness only; Games Workshop remains normative."
+    },
+    "faq_errata_assets": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS"
+      ],
+      "content_state": "PASS",
+      "repository_dimension": null,
+      "report": "sources/snapshots/gw_11e_official_assets_2026-09-29.json",
+      "authority_boundary": "Verifies live source catalog plus exact official GW asset availability/hashes; does not claim mirror prose equals official text."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."

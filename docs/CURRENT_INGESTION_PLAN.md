@@ -31,7 +31,7 @@ Coverage is complete for 36/37 roster identities (Unaligned Forces has no MFM pa
 - enhancement costs;
 - Legends pricing.
 
-### Wave B — stable faction rules
+### Wave B — stable faction rules — **STRUCTURAL + OPERATIONAL SEMANTICS COMPLETE 2026-09-29**
 
 For each faction not in an active release transition:
 
@@ -79,3 +79,12 @@ A normalized object can become current only when:
 4. conflicts are resolved or explicitly scoped;
 5. repository validation and unit tests pass;
 6. release-state logic confirms it is CURRENT_LEGAL rather than preview-only.
+
+
+### Wave B semantic/FAQ closure
+
+- 16,506 / 16,506 stored semantic fingerprints match the live Wahapedia 11E CSV projection.
+- Live Wahapedia `Source.csv` matches the committed edition-11 source catalog with zero drift.
+- 29 edition-11 sources are indexed; one is MFM and 28 faction-pack PDF assets were fetched from the official Games Workshop asset domain and SHA-256 recorded.
+- No long copyrighted rule prose is vendored.
+- This closes **operational currentness**, not normative prose equivalence. Games Workshop remains authoritative and app-only wording remains a separate unresolved scope.

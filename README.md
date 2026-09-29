@@ -66,7 +66,7 @@ legacy/                  Metadata for superseded project baselines
 - [x] Complete Wave A MFM v1.4 normalization: 30 faction pages / 36 roster identities / points, sizes, Leaders, DP, Force Dispositions and costs.
 - [x] Complete Wave B structural faction ingestion: Wahapedia 11E CSV snapshot, MFM/BSData reconciliation and 35/37 roster-specific structural views.
 - [x] Add a hash-verified on-demand semantic resolver with daily drift smoke checks.
-- [ ] Complete Wave B semantic rules/FAQ normalization without vendoring long copyrighted prose.
+- [x] Complete Wave B operational semantic/FAQ currentness: 16,506/16,506 mirror fingerprints match live data; 28/28 official faction-pack PDF assets verified; normative text equivalence remains explicitly unclaimed.
 - [ ] Build automated GW ↔ Wahapedia ↔ BSData normalization/diff workers.
 - [ ] Add New Recruit runtime validation/projection checks after normalized faction imports.
 - [ ] Add collection-aware roster legality/physical-feasibility solver.
@@ -98,7 +98,7 @@ Checkpoint: **2026-09-29**.
 - Total structural source availability: **37 / 37**.
 - Reconciliation: 1,242 MFM/Wahapedia unit-name matches; 1,202 point signatures compared.
 - Retained source conflicts: **11**. MFM remains normative for cost-bearing conflicts.
-- Full semantic rules text and FAQ/errata normalization remain pending; therefore `current_normalized_factions` intentionally remains 0.
+- Operational semantic/FAQ currentness is complete: all 16,506 stored semantic fingerprints match live Wahapedia, the live 11E source catalog has zero drift, and 28/28 referenced official faction-pack PDFs are reachable and hash-verified. `current_normalized_factions` intentionally remains 0 because mirror-to-official semantic equivalence and app-only wording are not claimed.
 
 See `reports/WAVE_B_STRUCTURAL_CLOSURE_2026-09-29.md`.
 
@@ -107,6 +107,6 @@ See `reports/WAVE_B_STRUCTURAL_CLOSURE_2026-09-29.md`.
 
 `tools/query_current_semantics.py` can retrieve exact current Wahapedia semantic text on demand and compare it with the SHA-256 fingerprint stored in the snapshot.
 
-The 2026-09-29 smoke run passed eight representative semantic surfaces. A mismatch returns `SOURCE_DRIFT`; changed text is never silently accepted as snapshot-matched.
+The fast smoke run remains available, and the full 2026-09-29 audit matched all 16,506 stored semantic fingerprints. A mismatch returns `SOURCE_DRIFT`; changed text is never silently accepted as snapshot-matched.
 
 This is an operational semantic access layer, not a claim that the whole rules corpus has already been normalized or that Wahapedia overrides Games Workshop.

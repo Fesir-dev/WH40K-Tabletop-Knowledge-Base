@@ -1,8 +1,8 @@
 {
-  "schema_version": "2.3",
+  "schema_version": "2.4",
   "edition": "11e",
   "repository_checkpoint": "2026-09-29",
-  "status": "CURRENT_STRUCTURAL_READY_SEMANTIC_PENDING",
+  "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
   "source_currentness": {
     "mfm": {
       "state": "PASS",
@@ -17,19 +17,32 @@
       "state": "PENDING"
     },
     "faction_rules_content": {
-      "state": "STRUCTURAL_PASS_SEMANTIC_RESOLVER_AVAILABLE",
+      "state": "SECONDARY_MIRROR_SEMANTICS_FULL_HASH_MATCH",
       "verified_at": "2026-09-29",
       "secondary_mirror_last_update": "2026-09-28 02:38:04",
-      "full_normalized_semantics": "PENDING"
+      "fingerprint_audit": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+      "expected_fingerprints": 16506,
+      "matched_fingerprints": 16506,
+      "problems": 0,
+      "normative_equivalence": "NOT_CLAIMED"
     },
     "app_wording": {
       "state": "PENDING"
+    },
+    "faq_errata_assets": {
+      "state": "OFFICIAL_ASSETS_VERIFIED",
+      "verified_at": "2026-09-29",
+      "report": "sources/snapshots/gw_11e_official_assets_2026-09-29.json",
+      "edition_11_sources": 29,
+      "verified_pdf_assets": 28,
+      "failures": 0,
+      "source_catalog_drift": 0
     }
   },
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "WAVE_B_SEMANTIC_AND_FAQ_CURRENTNESS",
+  "next_milestone": "AUTOMATED_DIFF_AND_NEW_RECRUIT_RUNTIME",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -62,16 +75,18 @@
     "reconciliation_report": "reports/WAVE_B_RECONCILIATION_2026-09-29.json",
     "source_conflicts": 11,
     "authority_rule": "GW MFM remains normative for points, detachment points and enhancement costs when Wahapedia differs.",
-    "semantic_rule_text": "PENDING",
-    "faq_errata": "PENDING",
+    "semantic_rule_text": "CURRENT_SECONDARY_MIRROR_FULL_HASH_VERIFIED",
+    "faq_errata": "SOURCE_CATALOG_CURRENT_OFFICIAL_ASSETS_VERIFIED",
     "current_mirror_roster_identities_complete": 35,
     "implementation_fallback_roster_identities_complete": 2,
     "total_structural_source_available": 37,
     "implementation_fallback_snapshot": "rules/11e/snapshots/2026-09-29/bsdata_fallback/index.json",
-    "implementation_fallback_policy": "Fallback provides structured implementation evidence only; it does not promote BSData to normative or current-mirror authority."
+    "implementation_fallback_policy": "Fallback provides structured implementation evidence only; it does not promote BSData to normative or current-mirror authority.",
+    "semantic_current_mirror_roster_identities": 35,
+    "normative_semantic_equivalence": "NOT_CLAIMED"
   },
   "semantic_resolver": {
-    "state": "LIVE_HASH_VERIFIED",
+    "state": "LIVE_FULL_AUDIT_HASH_VERIFIED",
     "tool": "tools/query_current_semantics.py",
     "workflow": ".github/workflows/semantic-smoke.yml",
     "last_smoke_at": "2026-09-29",
@@ -89,6 +104,13 @@
     ],
     "behavior": "Fetch current Wahapedia CSV text on demand, compare SHA-256 with the committed snapshot fingerprint, return SNAPSHOT_MATCH or SOURCE_DRIFT.",
     "copyright_policy": "Long rule prose is retrieved on demand and is not vendored in the repository.",
-    "authority_policy": "Hash match verifies the secondary mirror projection only; it does not make Wahapedia normative over Games Workshop."
+    "authority_policy": "Hash match verifies the secondary mirror projection only; it does not make Wahapedia normative over Games Workshop.",
+    "full_audit": {
+      "workflow": ".github/workflows/semantic-full-audit.yml",
+      "report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+      "expected_fingerprints": 16506,
+      "matched_fingerprints": 16506,
+      "problems": 0
+    }
   }
 }

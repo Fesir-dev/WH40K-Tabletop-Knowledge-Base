@@ -542,6 +542,47 @@ try:
 except Exception as exc:
     errors.append(f"BSData fallback / semantic resolver validation failure: {exc}")
 
+# 3g. Wave B semantic and official-asset currentness.
+try:
+    semantic_audit = json.loads(
+        (ROOT / "reports" / "WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json").read_text(encoding="utf-8")
+    )
+    official_assets = json.loads(
+        (ROOT / "sources" / "snapshots" / "gw_11e_official_assets_2026-09-29.json").read_text(encoding="utf-8")
+    )
+    current_rules = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+
+    if semantic_audit.get("status") != "PASS":
+        errors.append("Wave B full semantic fingerprint audit is not PASS")
+    if semantic_audit.get("expected_fingerprints") != 16506:
+        errors.append("Wave B semantic fingerprint count drifted")
+    if semantic_audit.get("counts", {}).get("MATCH") != 16506:
+        errors.append("Wave B semantic fingerprint matches are incomplete")
+    if semantic_audit.get("problems"):
+        errors.append("Wave B semantic audit contains unresolved problems")
+
+    if official_assets.get("status") != "PASS":
+        errors.append("Official 11E asset audit is not PASS")
+    if official_assets.get("live_source_csv", {}).get("catalog_drift_count") != 0:
+        errors.append("Live Source.csv differs from committed 11E source catalog")
+    off = official_assets.get("official_assets", {})
+    if off.get("edition_11_sources") != 29:
+        errors.append("Official asset audit edition-11 source count drifted")
+    if off.get("verified_pdf_assets") != 28 or off.get("failures") != 0:
+        errors.append("Official faction-pack PDF asset verification is incomplete")
+
+    if cov.get("global", {}).get("wave_b_current_mirror_semantic_roster_identities") != 35:
+        errors.append("Expected 35 current-mirror semantic roster identities")
+    if cov.get("global", {}).get("current_normalized_factions") != 0:
+        errors.append("Full normative faction normalization must remain 0 until normative/app equivalence is established")
+    if current_rules.get("wave_b_structural", {}).get("semantic_rule_text") != "CURRENT_SECONDARY_MIRROR_FULL_HASH_VERIFIED":
+        errors.append("Current rules semantic mirror status drifted")
+    if current_rules.get("wave_b_structural", {}).get("faq_errata") != "SOURCE_CATALOG_CURRENT_OFFICIAL_ASSETS_VERIFIED":
+        errors.append("Current rules FAQ/errata asset status drifted")
+except Exception as exc:
+    errors.append(f"Wave B semantic/asset validation failure: {exc}")
+
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (
     ROOT
