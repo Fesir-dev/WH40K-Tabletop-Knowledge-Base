@@ -1,0 +1,45 @@
+name: Collection-aware roster solver
+
+on:
+  push:
+    paths:
+      - "tools/solve_collection_roster.py"
+      - "tools/validate_collection_solver.py"
+      - "collection/adeptus_custodes/solver_profile.json"
+      - "collection/adeptus_custodes/current.json"
+      - "rosters/examples/**"
+      - "schemas/collection_solver_profile.schema.json"
+      - "schemas/roster_request.schema.json"
+      - "schemas/roster_solver_result.schema.json"
+      - "tests/test_collection_solver.py"
+      - "reports/COLLECTION_AWARE_ROSTER_SOLVER_CURRENT.json"
+  pull_request:
+    paths:
+      - "tools/solve_collection_roster.py"
+      - "tools/validate_collection_solver.py"
+      - "collection/adeptus_custodes/solver_profile.json"
+      - "collection/adeptus_custodes/current.json"
+      - "rosters/examples/**"
+      - "schemas/collection_solver_profile.schema.json"
+      - "schemas/roster_request.schema.json"
+      - "schemas/roster_solver_result.schema.json"
+      - "tests/test_collection_solver.py"
+      - "reports/COLLECTION_AWARE_ROSTER_SOLVER_CURRENT.json"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile solver
+        run: python -m compileall -q tools/solve_collection_roster.py tools/validate_collection_solver.py tests/test_collection_solver.py
+      - name: Run solver smoke matrix
+        run: python tools/validate_collection_solver.py
+      - name: Verify committed solver report is reproducible
+        run: git diff --exit-code -- reports/COLLECTION_AWARE_ROSTER_SOLVER_CURRENT.json
+      - name: Run solver unit tests
+        run: python -m unittest tests.test_collection_solver -v
