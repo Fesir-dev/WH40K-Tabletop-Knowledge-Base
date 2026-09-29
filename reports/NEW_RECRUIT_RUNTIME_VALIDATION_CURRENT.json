@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "status": "RUNTIME_PROJECTION_DRIFT",
+  "schema_version": "1.1",
+  "status": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
   "system": {
     "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40,000-11th-edition",
     "http_status": 200,
@@ -18,7 +18,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adepta-sororitas",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "adeptus_custodes",
@@ -26,7 +28,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-custodes",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "adeptus_mechanicus",
@@ -34,7 +38,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-mechanicus",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "adeptus_titanicus",
@@ -42,7 +48,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-titanicus",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "aeldari_craftworlds",
@@ -50,7 +58,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---aeldari",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "agents_of_the_imperium",
@@ -58,7 +68,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---agents-of-the-imperium",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "astra_militarum",
@@ -66,7 +78,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---astra-militarum",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "black_templars",
@@ -74,7 +88,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---black-templars",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "blood_angels",
@@ -82,7 +98,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---blood-angels",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "chaos_daemons",
@@ -90,7 +108,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-daemons",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "chaos_knights",
@@ -98,7 +118,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-knights",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "chaos_space_marines",
@@ -106,7 +128,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-space-marines",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "dark_angels",
@@ -114,7 +138,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---dark-angels",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "death_guard",
@@ -122,7 +148,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---death-guard",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "deathwatch",
@@ -130,7 +158,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---deathwatch",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "drukhari",
@@ -138,7 +168,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---drukhari",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "emperors_children",
@@ -146,7 +178,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---emperor's-children",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "genestealer_cults",
@@ -154,7 +188,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---genestealer-cults",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "grey_knights",
@@ -162,7 +198,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---grey-knights",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "imperial_fists",
@@ -170,7 +208,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---imperial-fists",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "imperial_knights",
@@ -178,7 +218,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---imperial-knights",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "iron_hands",
@@ -186,7 +228,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---iron-hands",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "leagues_of_votann",
@@ -194,7 +238,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---leagues-of-votann",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "necrons",
@@ -202,7 +248,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "orks",
@@ -210,7 +258,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "raven_guard",
@@ -218,7 +268,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---raven-guard",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "salamanders",
@@ -226,7 +278,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---salamanders",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "space_marines",
@@ -234,7 +288,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---space-marines",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "space_wolves",
@@ -242,7 +298,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---space-wolves",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "tau_empire",
@@ -250,7 +308,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---t'au-empire",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "thousand_sons",
@@ -258,7 +318,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---thousand-sons",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "titanicus_traitoris",
@@ -266,7 +328,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---titanicus-traitoris",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "tyranids",
@@ -274,7 +338,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---tyranids",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "ultramarines",
@@ -282,7 +348,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---ultramarines",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "unaligned_forces",
@@ -290,7 +358,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/unaligned-forces",
         "http_status": 200,
         "page_type_marker": "(Library)",
-        "marker_present": false
+        "marker_required": false,
+        "marker_present": false,
+        "status": "PASS"
       },
       {
         "slug": "white_scars",
@@ -298,7 +368,9 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---white-scars",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       },
       {
         "slug": "world_eaters",
@@ -306,14 +378,18 @@
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---world-eaters",
         "http_status": 200,
         "page_type_marker": "(Catalogue)",
-        "marker_present": true
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
       }
     ]
   },
   "representative_points": {
     "checks": 10,
     "matched": 9,
-    "failures": [
+    "known_drift_count": 1,
+    "new_drift_count": 0,
+    "known_drifts": [
       {
         "slug": "orks",
         "unit": "Ghazghkull Thraka",
@@ -321,9 +397,12 @@
         "http_status": 200,
         "expected_points": 300,
         "runtime_points": 235,
-        "status": "MISMATCH"
+        "status": "MISMATCH",
+        "classification": "KNOWN_RUNTIME_PROJECTION_DRIFT",
+        "known_drift_id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29"
       }
     ],
+    "new_drifts": [],
     "rows": [
       {
         "slug": "adeptus_custodes",
@@ -341,7 +420,9 @@
         "http_status": 200,
         "expected_points": 300,
         "runtime_points": 235,
-        "status": "MISMATCH"
+        "status": "MISMATCH",
+        "classification": "KNOWN_RUNTIME_PROJECTION_DRIFT",
+        "known_drift_id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29"
       },
       {
         "slug": "necrons",
@@ -417,6 +498,11 @@
       }
     ]
   },
+  "known_drift_registry": {
+    "path": "sources/runtime_drift_registry.json",
+    "active": 1,
+    "resolved_candidates": []
+  },
   "lineage": {
     "runtime_source": "NEW_RECRUIT_WIKI",
     "expected_upstream": "BSDATA_WH40K_11E",
@@ -424,7 +510,9 @@
     "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
   },
   "policy": {
-    "meaning": "Validates public New Recruit runtime/wiki projection, roster-universe presence and representative current MFM points.",
+    "meaning": "Validates New Recruit public runtime/wiki projection against the canonical repository MFM layer and the known runtime drift registry.",
+    "known_drift_behavior": "Known exact drifts are reported but do not fail the scheduled workflow.",
+    "new_drift_behavior": "New or changed runtime projection drift fails the workflow and requires classification.",
     "not_claimed": "Does not prove every builder constraint or the undocumented BSData-to-New-Recruit synchronization interval."
   }
 }
