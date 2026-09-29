@@ -1,17 +1,19 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "as_of": "2026-09-29",
   "policy": {
     "purpose": "Known runtime projection drifts are retained as evidence and monitored without making scheduled validation permanently red.",
-    "fail_rule": "Fail runtime validation only for new/unclassified drift, changed known-drift values, missing runtime identities, or runtime access failures.",
+    "classification_contract": "Base classification is independent of registry state: NORMATIVE_MATCH, IMPLEMENTATION_DRIFT, RUNTIME_PROJECTION_DRIFT, UPSTREAM_REVISION_DRIFT, or UNKNOWN_RUNTIME_DRIFT.",
+    "fail_rule": "Fail runtime validation for new/unclassified drift, changed known-drift lineage or values, missing runtime identities, or runtime access failures.",
     "resolve_rule": "If a known drift disappears, report it as RESOLVED_CANDIDATE and require registry review before deletion.",
-    "authority": "Known runtime drift never changes normative Games Workshop/MFM facts."
+    "authority": "Runtime drift never changes normative Games Workshop/MFM facts."
   },
   "active": [
     {
       "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
+      "surface": "points",
       "parent_state": "RUNTIME_PROJECTION_DRIFT",
-      "classification": "KNOWN_RUNTIME_PROJECTION_DRIFT",
+      "classification": "RUNTIME_PROJECTION_DRIFT",
       "roster_slug": "orks",
       "unit": "Ghazghkull Thraka",
       "normative": {
@@ -23,26 +25,235 @@
       },
       "current_mirror_crosscheck": {
         "source_id": "WAHAPEDIA_11E",
+        "last_update": "2026-09-28 02:38:04",
         "points": 300,
         "url": "https://wahapedia.ru/wh40k11ed/factions/orks/Ghazghkull-Thraka"
+      },
+      "structured_upstream": {
+        "source_id": "BSDATA_WH40K_11E",
+        "repository": "BSData/wh40k-11e",
+        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "pinned_points": 300,
+        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "live_points": 300,
+        "file": "Orks.json"
       },
       "runtime": {
         "source_id": "NEW_RECRUIT_WIKI",
         "observed_at": "2026-09-29",
         "points": 235,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka"
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
       },
-      "structured_upstream_evidence": {
+      "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
+      "normative_kb_change_required": false,
+      "state": "ACTIVE"
+    },
+    {
+      "id": "NR_ORKS_BOYZ_POINTS_2026_09_29",
+      "surface": "points",
+      "parent_state": "RUNTIME_PROJECTION_DRIFT",
+      "classification": "RUNTIME_PROJECTION_DRIFT",
+      "roster_slug": "orks",
+      "unit": "Boyz",
+      "normative": {
+        "source_id": "GW_MFM",
+        "mfm_version": "1.4",
+        "official_last_updated": "2026-09-02",
+        "points": 90,
+        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json"
+      },
+      "current_mirror_crosscheck": {
+        "source_id": "WAHAPEDIA_11E",
+        "last_update": "2026-09-28 02:38:04",
+        "points": 90,
+        "url": "https://wahapedia.ru/wh40k11ed/factions/orks/Boyz"
+      },
+      "structured_upstream": {
         "source_id": "BSDATA_WH40K_11E",
         "repository": "BSData/wh40k-11e",
-        "pinned_head": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "evidence_commit": "5ca1013537f539995acdac2caafb93c879163f00",
-        "evidence_commit_date": "2026-09-05",
-        "evidence": "Orks.json patch changed Ghazghkull Thraka root pts from 235 to 175.",
-        "interpretation": "Runtime value 235 matches the pre-change BSData value and is evidence of a lagging/stale runtime projection relative to at least that known upstream mutation. This record does not assert the exact current BSData-head value unless independently extracted."
+        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "pinned_points": 90,
+        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "live_points": 90,
+        "file": "Orks.json"
       },
-      "resolution": "Use current MFM 300 as normative points. Keep New Recruit 235 only as runtime drift evidence.",
+      "runtime": {
+        "source_id": "NEW_RECRUIT_WIKI",
+        "observed_at": "2026-09-29",
+        "points": 75,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/187-93d6-1ac7-dbde/boyz",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+      },
+      "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
+      "normative_kb_change_required": false,
       "state": "ACTIVE"
+    },
+    {
+      "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
+      "surface": "points",
+      "parent_state": "RUNTIME_PROJECTION_DRIFT",
+      "classification": "RUNTIME_PROJECTION_DRIFT",
+      "roster_slug": "orks",
+      "unit": "Battlewagon",
+      "normative": {
+        "source_id": "GW_MFM",
+        "mfm_version": "1.4",
+        "official_last_updated": "2026-09-02",
+        "points": 150,
+        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json"
+      },
+      "current_mirror_crosscheck": {
+        "source_id": "WAHAPEDIA_11E",
+        "last_update": "2026-09-28 02:38:04",
+        "points": 150,
+        "url": "https://wahapedia.ru/wh40k11ed/factions/orks/Battlewagon"
+      },
+      "structured_upstream": {
+        "source_id": "BSDATA_WH40K_11E",
+        "repository": "BSData/wh40k-11e",
+        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "pinned_points": 150,
+        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "live_points": 150,
+        "file": "Orks.json"
+      },
+      "runtime": {
+        "source_id": "NEW_RECRUIT_WIKI",
+        "observed_at": "2026-09-29",
+        "points": 145,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9af5-6820-1ff2-6c01/battlewagon",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+      },
+      "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
+      "normative_kb_change_required": false,
+      "state": "ACTIVE"
+    },
+    {
+      "id": "NR_ORKS_WARBOSS_POINTS_2026_09_29",
+      "surface": "points",
+      "parent_state": "RUNTIME_PROJECTION_DRIFT",
+      "classification": "RUNTIME_PROJECTION_DRIFT",
+      "roster_slug": "orks",
+      "unit": "Warboss",
+      "normative": {
+        "source_id": "GW_MFM",
+        "mfm_version": "1.4",
+        "official_last_updated": "2026-09-02",
+        "points": 100,
+        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json"
+      },
+      "current_mirror_crosscheck": {
+        "source_id": "WAHAPEDIA_11E",
+        "last_update": "2026-09-28 02:38:04",
+        "points": 100,
+        "url": "https://wahapedia.ru/wh40k11ed/factions/orks/Warboss"
+      },
+      "structured_upstream": {
+        "source_id": "BSDATA_WH40K_11E",
+        "repository": "BSData/wh40k-11e",
+        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "pinned_points": 100,
+        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "live_points": 100,
+        "file": "Orks.json"
+      },
+      "runtime": {
+        "source_id": "NEW_RECRUIT_WIKI",
+        "observed_at": "2026-09-29",
+        "points": 85,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9189-6889-492c-a43e/warboss",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+      },
+      "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
+      "normative_kb_change_required": false,
+      "state": "ACTIVE"
+    },
+    {
+      "id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29",
+      "surface": "points",
+      "parent_state": "RUNTIME_PROJECTION_DRIFT",
+      "classification": "RUNTIME_PROJECTION_DRIFT",
+      "roster_slug": "necrons",
+      "unit": "Necron Warriors",
+      "normative": {
+        "source_id": "GW_MFM",
+        "mfm_version": "1.4",
+        "official_last_updated": "2026-09-02",
+        "points": 85,
+        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/necrons.json"
+      },
+      "current_mirror_crosscheck": {
+        "source_id": "WAHAPEDIA_11E",
+        "last_update": "2026-09-28 02:38:04",
+        "points": 85,
+        "url": "https://wahapedia.ru/wh40k11ed/factions/necrons/Necron-Warriors"
+      },
+      "structured_upstream": {
+        "source_id": "BSDATA_WH40K_11E",
+        "repository": "BSData/wh40k-11e",
+        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "pinned_points": 85,
+        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "live_points": 85,
+        "file": "Necrons.json"
+      },
+      "runtime": {
+        "source_id": "NEW_RECRUIT_WIKI",
+        "observed_at": "2026-09-29",
+        "points": 80,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons/5c25-2188-d5fe-ef0d/necron-warriors",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+      },
+      "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
+      "normative_kb_change_required": false,
+      "state": "ACTIVE"
+    },
+    {
+      "id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29",
+      "surface": "runtime_surface",
+      "check_id": "ORKS_CURRENT_DETACHMENT_SHOOTA_BOYZ",
+      "parent_state": "RUNTIME_PROJECTION_DRIFT",
+      "classification": "RUNTIME_PROJECTION_DRIFT",
+      "roster_slug": "orks",
+      "object_kind": "detachment",
+      "object_name": "Shoota Boyz",
+      "normative": {
+        "source_id": "GW_MFM",
+        "present": true,
+        "mfm_version": "1.4",
+        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json"
+      },
+      "current_mirror_crosscheck": {
+        "source_id": "WAHAPEDIA_11E",
+        "last_update": "2026-09-28 02:38:04",
+        "present": true,
+        "repository_snapshot": "rules/11e/snapshots/2026-09-29/wahapedia/factions/orks.json"
+      },
+      "structured_upstream": {
+        "source_id": "BSDATA_WH40K_11E",
+        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "pinned_present": true,
+        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "live_present": true,
+        "file": "Orks.json"
+      },
+      "runtime": {
+        "source_id": "NEW_RECRUIT_WIKI",
+        "observed_at": "2026-09-29",
+        "present": false,
+        "selector_url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/dc5b-07db-415b-a1da/detachment",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+      },
+      "recommended_action": "Investigate New Recruit runtime projection/cache synchronization for current Orks detachment content. Do not modify normative MFM data.",
+      "normative_kb_change_required": false,
+      "state": "ACTIVE"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "REMOVE_MISATTRIBUTED_GHAZ_5CA1013",
+      "correction": "The prior closure record incorrectly attributed BSData commit 5ca1013537f539995acdac2caafb93c879163f00 (235→175 hunk) to Ghazghkull Thraka. Exact extraction at pinned/live 951d590... shows Ghazghkull = 300; the historical hunk is not used as Ghaz lineage evidence."
     }
   ]
 }
