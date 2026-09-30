@@ -25,7 +25,7 @@ class CoreRulesStructureTests(unittest.TestCase):
         self.assertFalse(mod.is_heading_candidate("This is a normal sentence ending with a period."))
 
     def test_clean_label_is_bounded(self):
-        value = mod.clean_short_label("  A   B  ")
+        value = mod.clean_short_label("  A\b  B\ufffd  ")
         self.assertEqual(value, "A B")
 
     def test_assign_ranges_and_children(self):
@@ -45,6 +45,18 @@ class CoreRulesStructureTests(unittest.TestCase):
         pages = ["HEADER\nUNIQUE ONE\n" for _ in range(5)]
         result = mod.heading_candidates(pages)
         self.assertTrue(all("HEADER" not in rows for rows in result.values()))
+
+    def test_rule_reference_families_use_heading_refs(self):
+        candidates = {
+            2:["CORE 01.01"],
+            4:["MOVE 01.04"],
+            7:["ATTACK 02.01"],
+        }
+        rows = mod.build_rule_reference_families(candidates, 10, [str(i) for i in range(10)])
+        self.assertEqual([x["family_id"] for x in rows], ["01","02"])
+        self.assertEqual(rows[0]["page_start"], 2)
+        self.assertEqual(rows[0]["page_end"], 6)
+        self.assertEqual(rows[1]["page_end"], 10)
 
 
 if __name__ == "__main__":
