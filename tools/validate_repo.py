@@ -854,8 +854,8 @@ try:
             errors.append("Wave B conflict snapshot count differs from reconciliation report")
 
     global_cov = cov.get("global", {})
-    if cov.get("status") != "WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE":
-        errors.append("coverage/current.json must retain WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE")
+    if cov.get("status") != "OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE":
+        errors.append("coverage/current.json must record OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE after overlap closure")
     if global_cov.get("wave_b_structural_roster_identities_complete") != counts.get("structural_complete"):
         errors.append("Coverage structural-complete count differs from current roster-view index")
     if global_cov.get("wave_b_structural_roster_identities_unavailable") != counts.get("unavailable"):
@@ -1089,8 +1089,8 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT":
-        errors.append("Current milestone must be OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT")
+    if current_rules.get("next_milestone") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION":
+        errors.append("Current milestone must advance to OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release transition readiness v1 as operational")
