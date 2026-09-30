@@ -6,9 +6,11 @@ Updated: **2026-09-30**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest Core rule-reference atomization candidate:
+Latest closed Core rule-reference atomization milestone:
 
-- branch: `core-rule-reference-atomization-v1`;
+- merged PR: **#13**;
+- merge commit: `ca30daaf0ced6b305e7e4d10b6b0716ab49cea92`;
+- validated PR head: `a953b2640600a330c0a00e9f5e2aecb6f0b146d8`;
 - generated atom snapshot: `rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json`;
 - compact report: `reports/CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json`;
 - rule atoms: **141 / 141**;
@@ -18,9 +20,10 @@ Latest Core rule-reference atomization candidate:
 - repeated-heading atoms: **5** (`15.07–15.11`, pages 55 + 57);
 - heading-recovery gaps: **0**;
 - atoms with cross-reference pages: **40**;
-- atomization workflow run: `36694945932` — **SUCCESS**;
-- normative/app gap reproducibility run: `36695667215` — **SUCCESS**;
-- generic repository validation run: `36695740466` — **SUCCESS**;
+- final generic repository validation: `36695977658` — **SUCCESS**;
+- final normative/app gap reproducibility: `36695977608` — **SUCCESS**;
+- final Core atomization revalidation: `36695977620` — **SUCCESS**;
+- final official-public overlap regression: `36695977631` — **SUCCESS**;
 - closure report: `reports/CORE_RULE_REFERENCE_ATOMIZATION_CLOSURE_2026-09-30.md`;
 - full faction/app equivalence: **NOT CLAIMED**;
 - next milestone: `CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1`.
