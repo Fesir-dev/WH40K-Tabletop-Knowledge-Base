@@ -1,5 +1,5 @@
 {
-  "schema_version": "4.3",
+  "schema_version": "4.4",
   "as_of": "2026-09-30",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
@@ -182,11 +182,11 @@
       "required_sources": [
         "GW_40K_DOWNLOADS"
       ],
-      "content_state": "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1",
+      "content_state": "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1",
       "repository_dimension": null,
       "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-      "authority_boundary": "One readiness-approved Core paragraph (rule 13.07) now has a structural DIRECT_MODAL_CLAUSE node with opaque subject/action spans and verified range/hash provenance. This is one-paragraph pilot evidence only; semantic typing, condition/effect completeness, interactions and Codex/app equivalence remain pending.",
+      "authority_boundary": "The sole direct-modal AST pilot node has been semantically validated against its verified official source range. Both subject and action/predicate refinements remain opaque by closed-lexicon policy; AST mutation, second-paragraph admission and interaction edges remain forbidden.",
       "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
       "rule_reference_families": 24,
       "rule_reference_count": 141,
@@ -269,6 +269,21 @@
         "modal_operator": "PERMISSION",
         "action_predicate_tokens": 15,
         "interaction_edges_created": 0
+      },
+      "direct_modal_ast_semantic_validation": {
+        "state": "PASS_OPAQUE_PRESERVED",
+        "report": "reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json",
+        "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_semantic_validation/index.json",
+        "decision": "OPAQUE_PRESERVED",
+        "subject_types_resolved": 0,
+        "predicate_heads_resolved": 0,
+        "predicate_blockers": [
+          "COORDINATION_CUE",
+          "UNRECOGNIZED_ACTION_HEAD"
+        ],
+        "ast_mutated": false,
+        "interaction_edges_created": 0,
+        "additional_paragraphs_admitted": 0
       }
     },
     "faction_rules": {
@@ -552,6 +567,19 @@
       "interaction_edges_created": 0,
       "additional_paragraphs_admitted": 0,
       "authority_boundary": "One structural AST pilot node only. Subject/action spans are opaque and no entity/action semantic type, interaction edge, full condition/effect AST or Codex/app equivalence is claimed."
+    },
+    "core_rule_direct_modal_ast_semantic_validation": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS"
+      ],
+      "content_state": "PASS_OPAQUE_PRESERVED",
+      "repository_dimension": null,
+      "report": "reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json",
+      "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_semantic_validation/index.json",
+      "nodes_validated": 1,
+      "paragraphs_validated": 1,
+      "decision": "OPAQUE_PRESERVED",
+      "authority_boundary": "Semantic validation only. Opaque spans are intentionally preserved; no AST refinement or normative-faction promotion is implied."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."

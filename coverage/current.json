@@ -1,7 +1,7 @@
 {
-  "schema_version": "2.4",
+  "schema_version": "2.5",
   "as_of": "2026-09-30",
-  "status": "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE",
+  "status": "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
   "global": {
     "catalogued_roster_universe": 37,
@@ -168,7 +168,17 @@
     "official_public_core_direct_modal_ast_additional_paragraphs_admitted": 0,
     "official_public_core_direct_modal_ast_subject_semantic_type_resolved": false,
     "official_public_core_direct_modal_ast_action_semantic_type_resolved": false,
-    "official_public_core_direct_modal_ast_current_normalized_factions_change": 0
+    "official_public_core_direct_modal_ast_current_normalized_factions_change": 0,
+    "official_public_core_direct_modal_ast_semantic_validation_status": "PASS_OPAQUE_PRESERVED",
+    "official_public_core_direct_modal_ast_nodes_validated": 1,
+    "official_public_core_direct_modal_ast_paragraphs_validated": 1,
+    "official_public_core_direct_modal_ast_subject_types_resolved": 0,
+    "official_public_core_direct_modal_ast_predicate_heads_resolved": 0,
+    "official_public_core_direct_modal_ast_opaque_preserved": 1,
+    "official_public_core_direct_modal_ast_mutations": 0,
+    "official_public_core_direct_modal_ast_semantic_validation_interaction_edges_created": 0,
+    "official_public_core_direct_modal_ast_semantic_validation_additional_paragraphs_admitted": 0,
+    "official_public_core_direct_modal_ast_semantic_validation_current_normalized_factions_change": 0
   },
   "dimensions": [
     "points",
