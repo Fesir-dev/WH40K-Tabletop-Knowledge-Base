@@ -1,0 +1,139 @@
+name: Core rule direct-modal AST pilot
+
+on:
+  push:
+    paths:
+      - "tools/build_core_rule_direct_modal_ast_pilot.py"
+      - "tests/test_core_rule_direct_modal_ast_pilot.py"
+      - "schemas/core_rule_direct_modal_ast_pilot.schema.json"
+      - "docs/CORE_RULE_DIRECT_MODAL_AST_PILOT_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json"
+      - ".github/workflows/core-rule-direct-modal-ast-pilot.yml"
+  pull_request:
+    paths:
+      - "tools/build_core_rule_direct_modal_ast_pilot.py"
+      - "tests/test_core_rule_direct_modal_ast_pilot.py"
+      - "schemas/core_rule_direct_modal_ast_pilot.schema.json"
+      - "docs/CORE_RULE_DIRECT_MODAL_AST_PILOT_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json"
+      - ".github/workflows/core-rule-direct-modal-ast-pilot.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned PDF extractor
+        run: python -m pip install --disable-pip-version-check pypdf==5.9.0
+
+      - name: Compile and run pilot contracts
+        run: |
+          python -m compileall -q tools/build_core_rule_direct_modal_ast_pilot.py tests/test_core_rule_direct_modal_ast_pilot.py
+          python -m unittest tests.test_core_rule_direct_modal_ast_pilot -v
+
+      - uses: actions/cache@v4
+        with:
+          path: .cache/official-public-rules
+          key: official-public-rules-${{ hashFiles('sources/discoveries/gw_public_rules_surface_2026-09-29.json', 'sources/snapshots/gw_11e_official_assets_2026-09-29.json') }}
+
+      - name: Build verified one-paragraph AST pilot
+        run: |
+          python tools/build_core_rule_direct_modal_ast_pilot.py \
+            --as-of 2026-09-30 \
+            --output rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json \
+            --summary-output reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json
+
+      - name: Validate pilot authority boundary
+        run: |
+          python - <<'PY'
+          import json
+          p='rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json'
+          r=json.load(open(p,encoding='utf-8'))
+          assert r['status']=='PASS'
+          assert r['authority']=='GAMES_WORKSHOP_OFFICIAL'
+          assert r['pilot_version']=='CORE_RULE_DIRECT_MODAL_AST_PILOT_V1'
+          assert len(r['nodes'])==1
+          n=r['nodes'][0]
+          assert n['node_type']=='DIRECT_MODAL_CLAUSE'
+          assert n['rule_ref']=='13.07'
+          assert n['paragraph_key']=='core-rule-13-07--p50--l1--para-p50-o1'
+          assert n['modal_operator']['operator']=='PERMISSION'
+          assert n['modal_operator']['lexical_signal']=='PERMISSION_CAN'
+          assert n['validation']['token_partition_complete'] is True
+          assert n['validation']['interaction_edges_created']==0
+          s=r['summary']
+          assert s=={
+              'ast_nodes':1,
+              'unique_node_keys':1,
+              'paragraphs_parsed':1,
+              'direct_modal_nodes':1,
+              'permission_nodes':1,
+              'conditional_nodes':0,
+              'subject_spans':1,
+              'action_predicate_spans':1,
+              'source_hashes_reproduced':1,
+              'token_partitions_complete':1,
+              'interaction_edges_created':0,
+              'additional_paragraphs_admitted':0,
+          }
+          b=r['authority_boundary']
+          assert b['direct_modal_ast_pilot_complete'] is True
+          assert b['ast_scope']=='ONE_PARAGRAPH_ONLY'
+          assert b['paragraph_prose_committed'] is False
+          assert b['subject_semantic_type_resolved'] is False
+          assert b['action_semantic_type_resolved'] is False
+          assert b['condition_effect_ast_complete'] is False
+          assert b['rule_interaction_graph_complete'] is False
+          assert b['current_normalized_factions_change']==0
+          forbidden={
+              'text','description','rules_text','official_text','mirror_text','page_text',
+              'prose','paragraph_text','body_text','matched_phrase','subject_text',
+              'predicate_text','action_text','sentence_text'
+          }
+          def walk(v):
+              if isinstance(v,dict):
+                  for k,x in v.items():
+                      assert k not in forbidden, k
+                      walk(x)
+              elif isinstance(v,list):
+                  for x in v: walk(x)
+          walk(r)
+          print(json.dumps(s,indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-rule-direct-modal-ast-pilot-${{ github.run_id }}
+          path: |
+            reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json
+            rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json
+          if-no-files-found: error
+
+      - name: Checkpoint generated pilot on source branch
+        if: github.event_name == 'push' && github.ref_name != 'main' && github.actor != 'github-actions[bot]'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json)" ]; then
+            echo "Direct-modal AST pilot already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json
+          git add rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json
+          git commit -m "Checkpoint generated direct-modal AST pilot"
+          git push origin HEAD:${GITHUB_REF_NAME}
