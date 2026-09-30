@@ -3,7 +3,7 @@
   "status": "NO_ACTION_REQUIRED",
   "as_of": "2026-09-29",
   "readiness_milestone": "RELEASE_TRANSITION_INGESTION_READINESS",
-  "watch_status": "NO_CHANGE",
+  "watch_status": "CHANGE_DETECTED",
   "transitions": [
     {
       "transition_id": "ADEPTUS_CUSTODES_CODEX_2026",
