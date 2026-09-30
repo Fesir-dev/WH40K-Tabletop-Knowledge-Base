@@ -5,16 +5,16 @@
   "checkpoint": "2026-09-30",
   "repository_registered_at": "2026-09-30",
   "status": "PROVISIONAL",
-  "revision_state": "SKITARII_AND_SICARIAN_PHYSICAL_RECONCILIATION_CLOSED",
+  "revision_state": "ADMECH_REMAINING_POOLS_PHYSICAL_PASS1",
   "physical_pools": [
     {
       "pool_id": "belisarius_cawl",
       "name": "Belisarius Cawl",
       "physical_bodies": 1,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "NO_USER_FLAGGED_COUNT_DISCREPANCY",
+        "NO_MATERIAL_LOADOUT_RECONCILIATION_REQUIRED"
       ],
       "roles": [
         {
@@ -22,6 +22,11 @@
           "source_unit_instances": 1,
           "source_id": "NR_ADMECH_2026_09_30"
         }
+      ],
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30",
+      "build_state": "ASSEMBLED_BASED",
+      "notes": [
+        "User explicitly confirmed Belisarius Cawl is the single assembled model on its base; no meaningful alternate physical loadout needs collection tracking."
       ]
     },
     {
@@ -29,9 +34,9 @@
       "name": "Cybernetica Datasmith",
       "physical_bodies": 2,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "NO_USER_FLAGGED_COUNT_DISCREPANCY",
+        "NO_MATERIAL_LOADOUT_RECONCILIATION_REQUIRED"
       ],
       "roles": [
         {
@@ -39,16 +44,17 @@
           "source_unit_instances": 2,
           "source_id": "NR_ADMECH_2026_09_30"
         }
-      ]
+      ],
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30"
     },
     {
       "pool_id": "skitarii_marshal",
       "name": "Skitarii Marshal",
       "physical_bodies": 1,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "NO_USER_FLAGGED_COUNT_DISCREPANCY",
+        "NO_MATERIAL_LOADOUT_RECONCILIATION_REQUIRED"
       ],
       "roles": [
         {
@@ -56,16 +62,18 @@
           "source_unit_instances": 1,
           "source_id": "NR_ADMECH_2026_09_30"
         }
-      ]
+      ],
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30"
     },
     {
       "pool_id": "tech_priest_dominus",
       "name": "Tech-Priest Dominus",
       "physical_bodies": 2,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "TWO_DISTINCT_BUILDS_USER_RECALL",
+        "SPARE_WEAPON_BITS_RETAINED",
+        "EXACT_LOADOUT_MAPPING_NOT_VISUALLY_RECHECKED"
       ],
       "roles": [
         {
@@ -73,6 +81,17 @@
           "source_unit_instances": 2,
           "source_id": "NR_ADMECH_2026_09_30"
         }
+      ],
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30",
+      "physical_configuration": {
+        "bodies": 2,
+        "build_relationship": "User recalls the two Dominus models were assembled in two different weapon configurations.",
+        "exact_model_to_weapon_mapping": "NOT_VISUALLY_RECHECKED",
+        "spare_weapon_components": "Retained in parts bags; user says future magnetization/reconfiguration would be possible if needed."
+      },
+      "notes": [
+        "Do not invent an exact current weapon mapping from memory alone.",
+        "Current 11E datasheet has alternative ranged-weapon choices, but this collection record preserves only what the user physically recalls until a visual recheck is needed."
       ]
     },
     {
@@ -80,9 +99,9 @@
       "name": "Tech-Priest Enginseer",
       "physical_bodies": 2,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "NO_USER_FLAGGED_COUNT_DISCREPANCY",
+        "NO_MATERIAL_LOADOUT_RECONCILIATION_REQUIRED"
       ],
       "roles": [
         {
@@ -90,16 +109,17 @@
           "source_unit_instances": 2,
           "source_id": "NR_ADMECH_2026_09_30"
         }
-      ]
+      ],
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30"
     },
     {
       "pool_id": "tech_priest_manipulus",
       "name": "Tech-Priest Manipulus",
       "physical_bodies": 1,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "MAGNETIZED_WEAPON_SYSTEM",
+        "BOTH_MAIN_WEAPON_OPTIONS_AVAILABLE"
       ],
       "roles": [
         {
@@ -107,6 +127,19 @@
           "source_unit_instances": 1,
           "source_id": "NR_ADMECH_2026_09_30"
         }
+      ],
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30",
+      "physical_configuration": {
+        "bodies": 1,
+        "weapon_mounting": "MAGNETIZED",
+        "available_current_11e_options": [
+          "Magnarail lance",
+          "Transonic cannon"
+        ],
+        "evidence_scope": "DIRECT_USER_CONFIRMATION_PLUS_CURRENT_11E_OPTION_NAME_NORMALIZATION"
+      },
+      "notes": [
+        "The single Tech-Priest Manipulus is magnetized and can use either of its two main weapon options."
       ]
     },
     {
@@ -114,9 +147,9 @@
       "name": "Technoarcheologist",
       "physical_bodies": 2,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "NO_USER_FLAGGED_COUNT_DISCREPANCY",
+        "NO_MATERIAL_LOADOUT_RECONCILIATION_REQUIRED"
       ],
       "roles": [
         {
@@ -124,7 +157,8 @@
           "source_unit_instances": 2,
           "source_id": "NR_ADMECH_2026_09_30"
         }
-      ]
+      ],
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30"
     },
     {
       "pool_id": "skitarii_rangers",
@@ -388,9 +422,9 @@
       "name": "Kataphron Destroyers",
       "physical_bodies": 3,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_PARTIALLY_REPRESENTED_BY_SOURCE",
-        "WARGEAR_RECHECK_REQUIRED"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "MAGNETIZED_WEAPON_SYSTEM",
+        "LOADOUT_FLEXIBILITY_USER_CONFIRMED"
       ],
       "roles": [
         {
@@ -399,12 +433,29 @@
           "source_id": "NR_ADMECH_2026_09_30"
         }
       ],
-      "body_variants": [
-        {
-          "name": "Kataphron Destroyer (Heavy grav-cannon & phosphor blaster)",
-          "physical_bodies": 3,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        }
+      "source_configuration_snapshot": {
+        "source_id": "NR_ADMECH_2026_09_30",
+        "non_physical_inventory": true,
+        "selected_model_variants": [
+          {
+            "name": "Kataphron Destroyer (Heavy grav-cannon & phosphor blaster)",
+            "physical_bodies": 3,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          }
+        ],
+        "note": "Preserved only as New Recruit configuration evidence; direct physical clarification supersedes this for physical loadout/component availability."
+      },
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30",
+      "physical_configuration": {
+        "chassis": 3,
+        "weapon_mounting": "MAGNETIZED",
+        "available_loadout_scope": "User confirms the weapon options are magnetized and the models can be reconfigured between the retained weapon choices.",
+        "exact_component_counts": "NOT_INDIVIDUALLY_AUDITED"
+      },
+      "notes": [
+        "Three Kataphron Destroyer bodies are accepted as the physical count from the source export.",
+        "Weapon systems are magnetized; the source Heavy grav-cannon & phosphor blaster selection is only one roster configuration, not a fixed physical build.",
+        "Do not treat the New Recruit loadout as the only available physical configuration."
       ]
     },
     {
@@ -551,8 +602,9 @@
       "name": "Ironstrider Ballistarii",
       "physical_bodies": 6,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "WARGEAR_RECHECK_REQUIRED"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "FIXED_CURRENT_LOADOUT",
+        "LOOSE_ALTERNATE_BITS_PRESENT"
       ],
       "roles": [
         {
@@ -561,12 +613,37 @@
           "source_id": "NR_ADMECH_2026_09_30"
         }
       ],
-      "body_variants": [
-        {
-          "name": "Ironstrider Ballistarius (Twin cognis lascannon)",
-          "physical_bodies": 6,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        }
+      "source_configuration_snapshot": {
+        "source_id": "NR_ADMECH_2026_09_30",
+        "non_physical_inventory": true,
+        "selected_model_variants": [
+          {
+            "name": "Ironstrider Ballistarius (Twin cognis lascannon)",
+            "physical_bodies": 6,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          }
+        ],
+        "note": "Preserved only as New Recruit configuration evidence; direct physical clarification supersedes this for physical loadout/component availability."
+      },
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30",
+      "physical_configuration": {
+        "chassis": 6,
+        "current_weapon": "Twin cognis lascannon",
+        "current_weapon_bodies": 6,
+        "weapon_mounting": "FIXED_CURRENT_ASSEMBLY",
+        "alternate_bits": [
+          {
+            "name": "autocannon weapon parts",
+            "state": "LOOSE_UNPAINTED_BITS",
+            "installed": false,
+            "exact_count": "NOT_AUDITED"
+          }
+        ]
+      },
+      "notes": [
+        "All six Ironstrider Ballistarii are physically assembled with lascannons.",
+        "Autocannon parts still exist loose/unpainted but are not part of the current assembled configuration.",
+        "User has historically not used the autocannon configuration."
       ]
     },
     {
@@ -574,8 +651,9 @@
       "name": "Kastelan Robots",
       "physical_bodies": 4,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "WARGEAR_RECHECK_REQUIRED"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "PARTIALLY_MAGNETIZED",
+        "ARM_DISTRIBUTION_NEEDS_ONE_FINAL_CLARIFICATION"
       ],
       "roles": [
         {
@@ -584,12 +662,38 @@
           "source_id": "NR_ADMECH_2026_09_30"
         }
       ],
-      "body_variants": [
-        {
-          "name": "Kastelan Robot",
-          "physical_bodies": 4,
-          "evidence": "SOURCE_MODEL_SELECTION"
+      "source_configuration_snapshot": {
+        "source_id": "NR_ADMECH_2026_09_30",
+        "non_physical_inventory": true,
+        "selected_model_variants": [
+          {
+            "name": "Kastelan Robot",
+            "physical_bodies": 4,
+            "evidence": "SOURCE_MODEL_SELECTION"
+          }
+        ],
+        "note": "Preserved only as New Recruit configuration evidence; direct physical clarification supersedes this for physical loadout/component availability."
+      },
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30",
+      "physical_configuration": {
+        "chassis": 4,
+        "hand_arm_components": {
+          "magnetized_fists_available": 4,
+          "phosphor_arm_guns_glued": 2,
+          "exact_distribution_across_four_robots": "UNRESOLVED"
+        },
+        "dorsal_weapon": {
+          "current": "phosphor weapon",
+          "current_mounting": "FIXED_OR_NOT_YET_MAGNETIZED",
+          "alternative": "flamer",
+          "conversion_state": "User says it could be magnetized/converted if needed; not currently documented as an available swap."
         }
+      },
+      "notes": [
+        "Four Kastelan Robot bodies are accepted as the physical count.",
+        "Four fists are on magnets; two phosphor arm guns are glued in place.",
+        "Exact allocation of all eight arm positions across the four robots is still the only material Kastelan detail requiring clarification.",
+        "Top-mounted phosphor weapon is currently installed; flamer conversion is theoretically possible but not recorded as an immediately swappable component."
       ]
     },
     {
@@ -597,8 +701,9 @@
       "name": "Onager Dunecrawler",
       "physical_bodies": 2,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "WARGEAR_RECHECK_REQUIRED"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "MAGNETIZED_WEAPON_SYSTEM",
+        "ALL_MAJOR_OPTIONS_USER_CONFIRMED_WITH_ONE_MISSING_DUPLICATE"
       ],
       "roles": [
         {
@@ -606,6 +711,37 @@
           "source_unit_instances": 2,
           "source_id": "NR_ADMECH_2026_09_30"
         }
+      ],
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30",
+      "physical_configuration": {
+        "chassis": 2,
+        "weapon_mounting": "MAGNETIZED",
+        "current_mounts": [
+          {
+            "chassis_index": 1,
+            "weapon": "Neutron laser"
+          },
+          {
+            "chassis_index": 2,
+            "weapon": "User-described beam weapon",
+            "likely_identity": "Eradication beamer",
+            "identity_state": "LIKELY_NOT_VISUALLY_RECONFIRMED"
+          }
+        ],
+        "component_availability": {
+          "general": "User confirms the weapon options for both Onagers are magnetized and retained.",
+          "neutron_laser": {
+            "available_complete_mounts": 1,
+            "missing_complete_mounts": 1,
+            "note": "One neutron laser was lost; replacement can be sourced if needed."
+          },
+          "other_weapon_options": "AVAILABLE_FOR_BOTH_PER_USER_RECOLLECTION"
+        }
+      },
+      "notes": [
+        "Both Onager Dunecrawlers are fully magnetized for weapon changes.",
+        "One neutron laser component is lost, leaving only one current neutron-laser mount for two chassis.",
+        "The second currently mounted weapon was described by the user as the beam-type gun; current 11E option naming suggests Eradication beamer, but that exact identity is not promoted beyond likely without visual recheck."
       ]
     },
     {
@@ -613,8 +749,9 @@
       "name": "Sydonian Dragoons with taser lances",
       "physical_bodies": 4,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "WARGEAR_RECHECK_REQUIRED"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "FIXED_CURRENT_LOADOUT",
+        "NO_ALTERNATE_BUILD_USER_REPORTED"
       ],
       "roles": [
         {
@@ -623,12 +760,30 @@
           "source_id": "NR_ADMECH_2026_09_30"
         }
       ],
-      "body_variants": [
-        {
-          "name": "Sydonian Dragoon with taser lance",
-          "physical_bodies": 4,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        }
+      "source_configuration_snapshot": {
+        "source_id": "NR_ADMECH_2026_09_30",
+        "non_physical_inventory": true,
+        "selected_model_variants": [
+          {
+            "name": "Sydonian Dragoon with taser lance",
+            "physical_bodies": 4,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          }
+        ],
+        "note": "Preserved only as New Recruit configuration evidence; direct physical clarification supersedes this for physical loadout/component availability."
+      },
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30",
+      "physical_configuration": {
+        "chassis": 4,
+        "current_weapon": "Taser lance",
+        "current_weapon_bodies": 4,
+        "weapon_mounting": "FIXED",
+        "alternate_weapon_options_available": false,
+        "raw_user_weapon_description": "Scyther Lance"
+      },
+      "notes": [
+        "All four Sydonian Dragoons are fixed lance builds; no alternate weapon configuration is available.",
+        "User's spoken 'Scyther Lance' is preserved as raw wording and normalized here to the roster/datasheet Taser lance identity."
       ]
     },
     {
@@ -636,8 +791,9 @@
       "name": "Skorpius Dunerider",
       "physical_bodies": 1,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "WARGEAR_RECHECK_REQUIRED"
+        "SOURCE_COUNT_ACCEPTED_AS_PHYSICAL",
+        "FIXED_DUNERIDER_BUILD",
+        "NOT_CONVERTIBLE_TO_DISINTEGRATOR"
       ],
       "roles": [
         {
@@ -645,6 +801,16 @@
           "source_unit_instances": 1,
           "source_id": "NR_ADMECH_2026_09_30"
         }
+      ],
+      "count_basis": "USER_ACCEPTED_SOURCE_COUNT_2026_09_30",
+      "physical_configuration": {
+        "chassis": 1,
+        "build": "Skorpius Dunerider",
+        "conversion_to_disintegrator": false,
+        "mounting": "FIXED_TRANSPORT_CONFIGURATION"
+      },
+      "notes": [
+        "The single Skorpius chassis is physically fixed as a Dunerider transport and cannot be converted into a Skorpius Disintegrator."
       ]
     }
   ],
@@ -667,22 +833,22 @@
       "effect": "The New Recruit export remains provenance/configuration evidence, not physical ground truth. Direct user counts supersede its Ranger/Vanguard quantities: Rangers 24 vs source 30; Vanguard 14 vs source 20."
     },
     {
-      "id": "ADMECH_WARGEAR_NOT_VERIFIED",
+      "id": "ADMECH_PHYSICAL_CONFIGURATION_AUTHORITY",
       "type": "configuration_boundary",
-      "effect": "Source-selected weapons/loadouts are retained only as a configuration snapshot. Do not use them as verified physical wargear/component availability until the dedicated loadout audit is completed."
+      "effect": "For reconciled pools, direct user physical observations override New Recruit roster selections. Loose spare bits, magnetized options, fixed current builds and theoretical future conversions must remain separate states."
     }
   ],
   "open_questions": [
     {
-      "id": "ADMECH_WARGEAR_PHYSICAL_AUDIT",
-      "question": "For every pool, which loadouts are actually assembled, magnetized, interchangeable, or available as loose components?",
-      "state": "PENDING_NEXT_REVISION_STAGE"
+      "id": "KASTELAN_ARM_DISTRIBUTION",
+      "question": "Across the four Kastelan Robots (8 arm positions total), how are the currently installed/magnetized fists and phosphor arm guns distributed by robot? Four magnetized fists and two glued phosphor arm guns are confirmed, but the remaining two arm positions are not yet described.",
+      "state": "ONE_FINAL_CLARIFICATION_REQUIRED"
     }
   ],
   "notes": [
-    "This is the first Adeptus Mechanicus baseline import and intentionally preserves known uncertainty instead of guessing the final collection size.",
-    "Roster points, detachment and legality data from the New Recruit export are not physical collection authority.",
-    "Skitarii Ranger/Vanguard physical reconciliation is closed. Sicarian Princeps counts/loadouts are now verified; only ordinary Infiltrator/Ruststalker body counts remain to close those pools."
+    "Skitarii Ranger/Vanguard and Sicarian Infiltrator/Ruststalker reconciliation is closed.",
+    "Counts for the remaining pools are accepted from the user's original export because the user explicitly identified the count discrepancies as limited to the already-reconciled Skitarii/Sicarian cases.",
+    "Remaining loadout/component audit is materially closed except for the exact Kastelan arm-position distribution."
   ],
   "provenance": {
     "source_files": [
@@ -779,6 +945,20 @@
           "Ordinary Sicarian Ruststalkers: 27 bodies.",
           "Ordinary Sicarian Infiltrators: 17 bodies.",
           "Combined with the previously confirmed 4 Princeps bodies in each pool, exact totals are 31 Ruststalkers and 21 Infiltrators."
+        ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_REMAINING_POOL_CONFIGURATION_AUDIT",
+        "facts": [
+          "Kataphron Destroyers: 3 bodies; weapon systems magnetized, allowing retained weapon options to be swapped.",
+          "Ironstrider Ballistarii: 6 bodies, all currently fixed with lascannons; autocannon parts exist loose/unpainted.",
+          "Sydonian Dragoons: 4 bodies, all fixed lance builds with no alternate current configuration.",
+          "Kastelan Robots: 4 bodies; four fists are magnetized, two phosphor arm guns are glued, top phosphor weapon installed; flamer conversion could be created later. Exact arm-position distribution remains unresolved.",
+          "Onager Dunecrawlers: 2 bodies; weapons magnetized; one current neutron laser mount, second current beam-type weapon; one neutron laser component has been lost; other weapon options retained per user recollection.",
+          "Skorpius Dunerider: 1 body, fixed transport build, cannot convert to Disintegrator.",
+          "Tech-Priest Dominus: 2 bodies; user recalls two different builds, spare weapon parts retained, exact weapon mapping not visually rechecked.",
+          "Tech-Priest Manipulus: 1 body; magnetized for both main weapon options."
         ]
       }
     ]
