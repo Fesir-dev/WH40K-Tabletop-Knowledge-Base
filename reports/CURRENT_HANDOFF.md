@@ -6,7 +6,31 @@ Updated: **2026-09-30**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest closed Core paragraph-atomization milestone:
+Latest closed Core direct-modal AST pilot milestone:
+
+- merged PR: **#27**;
+- merge commit: `f61f4579bd1879396e541cb4816b3297e1743325`;
+- validated PR head: `15f50f7967ffb01e8e1756ed14a075d7c702f195`;
+- node: `core-ast-direct-modal--13-07--p50-o1`;
+- rule / paragraph: `13.07` / `core-rule-13-07--p50--l1--para-p50-o1`;
+- node type: `DIRECT_MODAL_CLAUSE`;
+- token partition: **17 / 17 complete**;
+- subject / modal / action-predicate tokens: **1 / 1 / 15**;
+- modal: **PERMISSION / PERMISSION_CAN**;
+- subject semantic type: **UNRESOLVED / opaque**;
+- action semantic type: **UNRESOLVED / opaque**;
+- interaction edges: **0**;
+- additional paragraphs admitted: **0**;
+- final AST pilot workflow: `36728365759` — **SUCCESS**;
+- final generic validation: `36728365795` — **SUCCESS**;
+- final normative/app gap audit: `36728365713` — **SUCCESS**;
+- final overlap regression: `36728365792` — **SUCCESS**;
+- release readiness / activation watch: `36728365815` / `36728365724` — **SUCCESS**;
+- closure: `reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CLOSURE_2026-09-30.md`;
+- whole-faction normative counters: unchanged at **0**;
+- next milestone: `CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1`.
+
+Previous closed Core paragraph-atomization milestone:
 
 - merged PR: **#21**;
 - merge commit: `839c7702ad8bc7b1971f5549260305632f4c459b`;
@@ -19,19 +43,7 @@ Latest closed Core paragraph-atomization milestone:
 - repeated variant refs: `15.07–15.11`;
 - range validation failures: **0**;
 - paragraph hashes reproduced from verified PDF ranges: **310 / 310**;
-- final PR generic validation: `36703707399` — **SUCCESS**;
-- final PR normative/app gap reproducibility: `36703707811` — **SUCCESS**;
-- final PR paragraph atomization: `36703707466` — **SUCCESS**;
-- final PR official-public overlap regression: `36703707372` — **SUCCESS**;
-- post-merge generic validation: `36703827596` — **SUCCESS**;
-- post-merge normative/app gap audit: `36703827446` — **SUCCESS**;
-- post-merge paragraph atomization: `36703827440` — **SUCCESS**;
-- post-merge official-public overlap regression: `36703827550` — **SUCCESS**;
-- closure: `reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CLOSURE_2026-09-30.md`;
-- paragraph prose: **not committed**;
-- semantic AST / condition-effect parsing / interaction graph: **PENDING**;
-- whole-faction normative counters: unchanged at **0**;
-- next milestone: `CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1`.
+- closure: `reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CLOSURE_2026-09-30.md`.
 
 Previous closed Core paragraph-boundary milestone:
 
@@ -118,7 +130,7 @@ Previous closed official-public ↔ mirror overlap:
 - BSData head watcher: active;
 - MFM-extractor head watcher: active;
 - 20 Wahapedia CSV hash watcher: active;
-- current upstream state: **NO_CHANGE**;
+- current upstream state: **CHANGE_DETECTED** (`BSData/wh40k-11e` and `BSData/wh40k-11e-mfm` repository heads moved; auto-promotion remains disabled);
 - auto-promotion: **disabled by design**.
 
 
