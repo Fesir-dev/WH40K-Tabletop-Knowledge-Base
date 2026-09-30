@@ -340,7 +340,7 @@
         "ASSEMBLED",
         "DARK_VENGEANCE_PROVENANCE",
         "CONVERTED_RANGED_ARM",
-        "MELEE_ARM_PENDING_RECHECK"
+        "FIXED_MELEE_FIST"
       ],
       "roles": [
         {
@@ -354,9 +354,9 @@
       ],
       "notes": [
         "This World Eaters Helbrute is one of the two Dark Vengeance Helbrute bodies owned by the user.",
-        "It was moved into/converted for the World Eaters collection.",
-        "User confirmed plasma was fitted instead of the original melta-type ranged weapon.",
-        "The melee arm was not explicitly reconfirmed in this clarification and remains open rather than inferred."
+        "It was converted for the World Eaters collection.",
+        "Plasma replaced the original melta-type ranged weapon.",
+        "The melee arm remains the original Dark Vengeance fist."
       ],
       "physical_configuration": {
         "provenance": "Dark Vengeance starter",
@@ -366,7 +366,8 @@
           "current_ranged_weapon_raw": "plasma",
           "change": "plasma fitted in place of the original melta-type ranged weapon"
         },
-        "melee_arm": "UNKNOWN_NOT_RECONFIRMED"
+        "melee_arm": "original Dark Vengeance fist",
+        "magnetized": false
       }
     }
   ],
