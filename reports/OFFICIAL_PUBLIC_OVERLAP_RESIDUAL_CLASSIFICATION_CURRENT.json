@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "as_of": "2026-09-30",
+  "milestone": "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION",
+  "authority_boundary": {
+    "normative_authority": "GAMES_WORKSHOP",
+    "no_exact_is_conflict": false,
+    "unscoped_exact_is_promotable": false,
+    "legends_or_non_11_reuse_promotes_current_rules": false,
+    "app_codex_inference_allowed": false,
+    "current_normalized_factions_change": 0
+  },
+  "source_state": {
+    "overlap_report": "reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json",
+    "mirror_verification": {
+      "snapshot_date": "2026-09-29",
+      "last_update": "2026-09-28 02:38:04",
+      "files_verified": 11,
+      "files": [
+        {
+          "file": "Last_update.csv",
+          "sha256": "4b3a7e63006be965073bdc34022bdd17f6f7b063602b46a4640a11ac641b20a9",
+          "rows": 1,
+          "verification": "PASS"
+        },
+        {
+          "file": "Source.csv",
+          "sha256": "e6f74afb7b43f6779ec9a03ad0699ff11dd27b9d2f08243d5c04dd07fd99f6e0",
+          "rows": 66,
+          "verification": "PASS"
+        },
+        {
+          "file": "Factions.csv",
+          "sha256": "d5038518059e5deeafa8d74e814a51598929a45c2864d3056c92c8629e7d4608",
+          "rows": 25,
+          "verification": "PASS"
+        },
+        {
+          "file": "Datasheets.csv",
+          "sha256": "ba363e9a68e6d7ee19f93a32abc06ba3f6a5f1efd0da5aaab32701a130a15623",
+          "rows": 1660,
+          "verification": "PASS"
+        },
+        {
+          "file": "Datasheets_abilities.csv",
+          "sha256": "5aba5ff1d7a2353904fac32d2b2b234c03573bef418f1bf4afabca1001cc2109",
+          "rows": 6935,
+          "verification": "PASS"
+        },
+        {
+          "file": "Datasheets_options.csv",
+          "sha256": "4b729297fe68b3c7cfc2c99205610a1741f838e29ae7150501d84365882e8d13",
+          "rows": 2745,
+          "verification": "PASS"
+        },
+        {
+          "file": "Datasheets_unit_composition.csv",
+          "sha256": "fca0b694f146a13f56c828d78f2aaa0dbe79341273173c68f534b8985494b03f",
+          "rows": 2107,
+          "verification": "PASS"
+        },
+        {
+          "file": "Abilities.csv",
+          "sha256": "f3fc44a0fd91b7b45b38ae477632517e732bda64b4a0c548033a9f874664c7f3",
+          "rows": 128,
+          "verification": "PASS"
+        },
+        {
+          "file": "Detachment_abilities.csv",
+          "sha256": "d7e4966e2b094d43feaa88a66e10608301ff817d92393b9c7f04ec2ac1ed6a44",
+          "rows": 350,
+          "verification": "PASS"
+        },
+        {
+          "file": "Enhancements.csv",
+          "sha256": "7e7fa39c9e1f9d268bda75affa8cd647c72b5511726631a8ee4110c8e86bc212",
+          "rows": 1024,
+          "verification": "PASS"
+        },
+        {
+          "file": "Stratagems.csv",
+          "sha256": "2ed24cacbe826c4eccea0920385669ac2fea5ebf3aca8822169d15d03f5814cb",
+          "rows": 1645,
+          "verification": "PASS"
+        }
+      ]
+    },
+    "source_catalog": "rules/11e/snapshots/2026-09-29/wahapedia/source_catalog.json"
+  },
+  "unscoped_exact": {
+    "total": 1566,
+    "classes": {
+      "CORE_PUBLIC_GLOBAL": 21,
+      "EDITION_11_SOURCE_MATCH_OUTSIDE_OWN_PACK": 426,
+      "FACTION_ONLY_MATCH_OUTSIDE_OWN_PACK": 124,
+      "NON_11_OR_LEGENDS_SOURCE": 995
+    },
+    "by_kind": {
+      "ability": {
+        "CORE_PUBLIC_GLOBAL": 7,
+        "FACTION_ONLY_MATCH_OUTSIDE_OWN_PACK": 3
+      },
+      "datasheet-ability": {
+        "EDITION_11_SOURCE_MATCH_OUTSIDE_OWN_PACK": 274,
+        "NON_11_OR_LEGENDS_SOURCE": 342
+      },
+      "datasheet-damaged-description": {
+        "EDITION_11_SOURCE_MATCH_OUTSIDE_OWN_PACK": 50
+      },
+      "datasheet-loadout": {
+        "EDITION_11_SOURCE_MATCH_OUTSIDE_OWN_PACK": 37,
+        "NON_11_OR_LEGENDS_SOURCE": 217
+      },
+      "datasheet-option": {
+        "EDITION_11_SOURCE_MATCH_OUTSIDE_OWN_PACK": 64,
+        "NON_11_OR_LEGENDS_SOURCE": 404
+      },
+      "datasheet-transport": {
+        "EDITION_11_SOURCE_MATCH_OUTSIDE_OWN_PACK": 1,
+        "NON_11_OR_LEGENDS_SOURCE": 5
+      },
+      "detachment-ability": {
+        "FACTION_ONLY_MATCH_OUTSIDE_OWN_PACK": 14
+      },
+      "enhancement": {
+        "FACTION_ONLY_MATCH_OUTSIDE_OWN_PACK": 47
+      },
+      "stratagem": {
+        "CORE_PUBLIC_GLOBAL": 14,
+        "FACTION_ONLY_MATCH_OUTSIDE_OWN_PACK": 60
+      },
+      "unit-composition": {
+        "NON_11_OR_LEGENDS_SOURCE": 27
+      }
+    }
+  },
+  "no_exact_public_overlap": {
+    "total": 7936,
+    "classes": {
+      "EDITION_11_SOURCE_NO_EXACT_PUBLIC_OVERLAP": 3467,
+      "FACTION_ONLY_NO_EXACT_PUBLIC_OVERLAP": 1868,
+      "NON_11_OR_LEGENDS_SOURCE_NO_EXACT": 227,
+      "NO_SOURCE_OR_FACTION_NO_EXACT": 61,
+      "TOO_SHORT_FOR_SAFE_AUTO_MATCH": 2313
+    },
+    "by_kind": {
+      "ability": {
+        "FACTION_ONLY_NO_EXACT_PUBLIC_OVERLAP": 66,
+        "NO_SOURCE_OR_FACTION_NO_EXACT": 7
+      },
+      "datasheet-ability": {
+        "EDITION_11_SOURCE_NO_EXACT_PUBLIC_OVERLAP": 1328,
+        "NON_11_OR_LEGENDS_SOURCE_NO_EXACT": 107,
+        "TOO_SHORT_FOR_SAFE_AUTO_MATCH": 20
+      },
+      "datasheet-damaged-description": {
+        "EDITION_11_SOURCE_NO_EXACT_PUBLIC_OVERLAP": 8
+      },
+      "datasheet-loadout": {
+        "EDITION_11_SOURCE_NO_EXACT_PUBLIC_OVERLAP": 877,
+        "NON_11_OR_LEGENDS_SOURCE_NO_EXACT": 20,
+        "TOO_SHORT_FOR_SAFE_AUTO_MATCH": 19
+      },
+      "datasheet-option": {
+        "EDITION_11_SOURCE_NO_EXACT_PUBLIC_OVERLAP": 1172,
+        "NON_11_OR_LEGENDS_SOURCE_NO_EXACT": 54,
+        "TOO_SHORT_FOR_SAFE_AUTO_MATCH": 281
+      },
+      "datasheet-transport": {
+        "EDITION_11_SOURCE_NO_EXACT_PUBLIC_OVERLAP": 62,
+        "NON_11_OR_LEGENDS_SOURCE_NO_EXACT": 36
+      },
+      "detachment-ability": {
+        "FACTION_ONLY_NO_EXACT_PUBLIC_OVERLAP": 207
+      },
+      "enhancement": {
+        "FACTION_ONLY_NO_EXACT_PUBLIC_OVERLAP": 607,
+        "TOO_SHORT_FOR_SAFE_AUTO_MATCH": 2
+      },
+      "stratagem": {
+        "FACTION_ONLY_NO_EXACT_PUBLIC_OVERLAP": 988,
+        "NO_SOURCE_OR_FACTION_NO_EXACT": 54
+      },
+      "unit-composition": {
+        "EDITION_11_SOURCE_NO_EXACT_PUBLIC_OVERLAP": 20,
+        "NON_11_OR_LEGENDS_SOURCE_NO_EXACT": 10,
+        "TOO_SHORT_FOR_SAFE_AUTO_MATCH": 1991
+      }
+    }
+  },
+  "summary": {
+    "unscoped_exact_total": 1566,
+    "no_exact_total": 7936,
+    "promoted_units": 0,
+    "semantic_conflicts_created": 0,
+    "interpretation": "Residual classes explain evidence/scope limitations only. They do not assert that unmatched mirror semantics disagree with Games Workshop."
+  }
+}
