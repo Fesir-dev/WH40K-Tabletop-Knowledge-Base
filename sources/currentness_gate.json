@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.8",
+  "schema_version": "3.9",
   "as_of": "2026-09-30",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
@@ -182,11 +182,11 @@
       "required_sources": [
         "GW_40K_DOWNLOADS"
       ],
-      "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1",
+      "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
       "repository_dimension": null,
       "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-      "authority_boundary": "All 141 Core rule atoms have deterministic rule-body boundaries across 146 occurrences and 310 page-local paragraph candidates; semantic paragraph AST and rule interactions remain pending.",
+      "authority_boundary": "All 310 page-local Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities; semantic paragraph classification, AST and rule interactions remain pending.",
       "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
       "rule_reference_families": 24,
       "rule_reference_count": 141,
@@ -206,6 +206,14 @@
         "paragraph_candidates": 310,
         "heading_line_recovery_gaps": 0,
         "empty_body_boundaries": 0
+      },
+      "paragraph_atomization": {
+        "state": "PASS_310_PARAGRAPH_ATOMS",
+        "report": "reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json",
+        "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json",
+        "paragraph_atoms": 310,
+        "unique_paragraph_keys": 310,
+        "range_validation_failures": 0
       }
     },
     "faction_rules": {
@@ -364,6 +372,21 @@
       "heading_line_recovery_gaps": 0,
       "empty_body_boundaries": 0,
       "authority_boundary": "Offsets/ranges/counts/hashes only; paragraph candidates are extraction structure, not semantic AST or app/Codex equivalence."
+    },
+    "core_rule_paragraph_atoms": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS"
+      ],
+      "content_state": "PASS_310_PARAGRAPH_ATOMS",
+      "repository_dimension": null,
+      "report": "reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json",
+      "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json",
+      "paragraph_atoms": 310,
+      "rules_represented": 141,
+      "occurrences_represented": 146,
+      "repeated_occurrence_paragraph_variants": 10,
+      "range_validation_failures": 0,
+      "authority_boundary": "Stable structural paragraph identities only; paragraph prose is external, repeated variants are not semantic conflicts, and semantic AST/app/Codex equivalence remain pending."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."
