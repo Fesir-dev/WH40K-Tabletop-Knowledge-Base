@@ -6,19 +6,42 @@ Updated: **2026-09-30**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest Core paragraph-boundary candidate:
+Latest closed Core paragraph-atomization milestone:
 
-- branch: `core-rule-paragraph-boundary-extraction-v1`;
+- merged PR: **#21**;
+- merge commit: `839c7702ad8bc7b1971f5549260305632f4c459b`;
+- validated PR head: `0522f307539ca55d402bf30ce872e999dafb4aef`;
+- generated snapshot: `rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json`;
+- compact report: `reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json`;
+- paragraph atoms / unique keys: **310 / 310**;
+- parent rules / occurrences: **141 / 146**;
+- classification split: **300** single-occurrence + **10** repeated-occurrence variants;
+- repeated variant refs: `15.07–15.11`;
+- range validation failures: **0**;
+- paragraph hashes reproduced from verified PDF ranges: **310 / 310**;
+- final PR generic validation: `36703707399` — **SUCCESS**;
+- final PR normative/app gap reproducibility: `36703707811` — **SUCCESS**;
+- final PR paragraph atomization: `36703707466` — **SUCCESS**;
+- final PR official-public overlap regression: `36703707372` — **SUCCESS**;
+- post-merge generic validation: `36703827596` — **SUCCESS**;
+- post-merge normative/app gap audit: `36703827446` — **SUCCESS**;
+- post-merge paragraph atomization: `36703827440` — **SUCCESS**;
+- post-merge official-public overlap regression: `36703827550` — **SUCCESS**;
+- closure: `reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CLOSURE_2026-09-30.md`;
+- paragraph prose: **not committed**;
+- semantic AST / condition-effect parsing / interaction graph: **PENDING**;
+- whole-faction normative counters: unchanged at **0**;
+- next milestone: `CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1`.
+
+Previous closed Core paragraph-boundary milestone:
+
+- merged PR: **#14**;
+- merge commit: `e7a3f960e8ae43dd679c7c418b410fb03fdfb214`;
 - boundary snapshot: `rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json`;
-- report: `reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json`;
 - rules / occurrences / paragraph candidates: **141 / 146 / 310**;
 - single / repeated-variant rules: **136 / 5**;
 - heading-line gaps / empty bodies: **0 / 0**;
-- boundary workflow: `36696663834` — **SUCCESS**;
-- gap reproducibility: `36696967737` — **SUCCESS**;
-- repository validation: `36697099240` — **SUCCESS**;
-- closure: `reports/CORE_RULE_PARAGRAPH_BOUNDARY_CLOSURE_2026-09-30.md`;
-- next milestone: `CORE_RULE_PARAGRAPH_ATOMIZATION_V1`.
+- closure: `reports/CORE_RULE_PARAGRAPH_BOUNDARY_CLOSURE_2026-09-30.md`.
 
 Previous closed Core rule-reference atomization milestone:
 
@@ -336,10 +359,13 @@ Authority boundary remains:
 Closure:
 `reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CLOSURE_2026-09-30.md`
 
-Validated implementation head `c35e9604f61f14e3f3db3a3c39a3144f3306dad6`:
-- paragraph atomization workflow `36703546953` — **SUCCESS**;
-- normative/app gap audit `36703546973` — **SUCCESS**;
-- generic repository validation `36703546698` — **SUCCESS**.
+Validated final PR head `0522f307539ca55d402bf30ce872e999dafb4aef`:
+- paragraph atomization workflow `36703707466` — **SUCCESS**;
+- normative/app gap audit `36703707811` — **SUCCESS**;
+- generic repository validation `36703707399` — **SUCCESS**;
+- official-public overlap regression `36703707372` — **SUCCESS**.
+
+Merged as PR **#21**, commit `839c7702ad8bc7b1971f5549260305632f4c459b`. Post-merge revalidation also passed on all four layers.
 
 ## Current active milestone
 
