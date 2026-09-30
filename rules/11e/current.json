@@ -1,5 +1,5 @@
 {
-  "schema_version": "4.0",
+  "schema_version": "4.1",
   "edition": "11e",
   "repository_checkpoint": "2026-09-30",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,14 +14,14 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+      "state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
       "verified_at": "2026-09-30",
       "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "PARAGRAPH_SEMANTIC_ROLES_CLASSIFIED_SEMANTIC_REVIEW_PENDING",
+      "normative_structured_normalization": "PARAGRAPH_SEMANTIC_REVIEW_COMPLETE_AST_READINESS_PENDING",
       "public_overlap": {
         "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
         "exact_core_mirror_units": 21,
@@ -111,6 +111,25 @@
           "condition_effect_ast_complete": false,
           "rule_interaction_graph_complete": false,
           "ast_readiness_pending": true
+        },
+        "paragraph_semantic_review": {
+          "state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
+          "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json",
+          "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json",
+          "review_version": "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1",
+          "profiles": 310,
+          "axis_profile_ready": 156,
+          "review_required": 154,
+          "multi_modal_review_required": 42,
+          "no_strong_signal_review_required": 112,
+          "mixed_axis_profile_ready": 92,
+          "unclassified_signal_free": 110,
+          "unclassified_weak_only": 2,
+          "repeated_axis_profile_ready": 4,
+          "repeated_multi_modal_review_required": 6,
+          "ast_readiness_complete": false,
+          "condition_effect_ast_complete": false,
+          "rule_interaction_graph_complete": false
         }
       }
     },
@@ -155,7 +174,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1",
+  "next_milestone": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -653,7 +672,7 @@
       "MIXED": 8
     },
     "paragraph_hashes_reproduced_from_verified_pdf": 310,
-    "semantic_review_pending": true,
+    "semantic_review_pending": false,
     "condition_effect_ast_complete": false,
     "rule_interaction_graph_complete": false,
     "current_normalized_factions_change": 0,
@@ -665,6 +684,52 @@
       "normative_gap_audit_run": 36706607636,
       "overlap_workflow_run": 36706342065,
       "result": "SPECIALIZED_AND_GAP_GATES_SUCCESS"
-    }
+    },
+    "semantic_review_complete": true
+  },
+  "core_rule_paragraph_semantic_review": {
+    "state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
+    "as_of": "2026-09-30",
+    "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json",
+    "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json",
+    "model": "docs/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_MODEL.md",
+    "schema": "schemas/core_rule_paragraph_semantic_review.schema.json",
+    "tool": "tools/review_core_rule_paragraph_semantics.py",
+    "workflow": ".github/workflows/core-rule-paragraph-semantic-review.yml",
+    "profiles": 310,
+    "review_state_counts": {
+      "AXIS_PROFILE_READY": 156,
+      "MULTI_MODAL_REVIEW_REQUIRED": 42,
+      "NO_STRONG_SIGNAL_REVIEW_REQUIRED": 112
+    },
+    "modal_axis_counts": {
+      "MULTI_MODAL": 42,
+      "NONE": 173,
+      "OBLIGATION": 17,
+      "PERMISSION": 67,
+      "PROHIBITION": 11
+    },
+    "axis_profile_ready": 156,
+    "review_required": 154,
+    "mixed_decomposition": {
+      "axis_profile_ready": 92,
+      "multi_modal_review_required": 42,
+      "no_strong_signal_review_required": 0
+    },
+    "unclassified_decomposition": {
+      "signal_free": 110,
+      "weak_only": 2,
+      "review_required": 112
+    },
+    "repeated_variant_review_state_counts": {
+      "AXIS_PROFILE_READY": 4,
+      "MULTI_MODAL_REVIEW_REQUIRED": 6
+    },
+    "axis_profile_ready_is_ast_ready": false,
+    "ast_readiness_pending": true,
+    "condition_effect_ast_complete": false,
+    "rule_interaction_graph_complete": false,
+    "current_normalized_factions_change": 0,
+    "authority_rule": "The review decomposes verified lexical/structural evidence into orthogonal axes. AXIS_PROFILE_READY means no modal conflict, not AST readiness. MULTI_MODAL and no-strong-signal rows remain unresolved; no prose or semantic interaction is inferred."
   }
 }
