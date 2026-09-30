@@ -7178,7 +7178,8 @@
     ],
     "range_validation_failures": 0,
     "range_validation_failure_samples": [],
-    "all_parent_candidates_atomized": true
+    "all_parent_candidates_atomized": true,
+    "paragraph_hashes_reproduced_from_verified_pdf": 310
   },
   "authority_boundary": {
     "stable_paragraph_identity_complete": true,
