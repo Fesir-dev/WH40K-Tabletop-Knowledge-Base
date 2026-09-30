@@ -1,0 +1,109 @@
+name: Core Rules structured normalization
+
+on:
+  push:
+    paths:
+      - "tools/build_core_rules_structure.py"
+      - "tests/test_core_rules_structure.py"
+      - "schemas/core_rules_structure_snapshot.schema.json"
+      - "docs/OFFICIAL_CORE_RULES_STRUCTURE_MODEL.md"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - ".github/workflows/core-rules-structured-normalization.yml"
+  pull_request:
+    paths:
+      - "tools/build_core_rules_structure.py"
+      - "tests/test_core_rules_structure.py"
+      - "schemas/core_rules_structure_snapshot.schema.json"
+      - "docs/OFFICIAL_CORE_RULES_STRUCTURE_MODEL.md"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - ".github/workflows/core-rules-structured-normalization.yml"
+  schedule:
+    - cron: "13 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned PDF extractor
+        run: python -m pip install --disable-pip-version-check pypdf==5.9.0
+
+      - name: Compile and run structure contracts
+        run: |
+          python -m compileall -q tools/build_core_rules_structure.py tests/test_core_rules_structure.py
+          python -m unittest tests.test_core_rules_structure -v
+
+      - uses: actions/cache@v4
+        with:
+          path: .cache/official-public-rules
+          key: official-public-rules-${{ hashFiles('sources/discoveries/gw_public_rules_surface_2026-09-29.json', 'sources/snapshots/gw_11e_official_assets_2026-09-29.json') }}
+
+      - name: Build verified Core Rules structure
+        run: |
+          python tools/build_core_rules_structure.py \
+            --as-of 2026-09-30 \
+            --output rules/11e/snapshots/2026-09-30/core_rules_structure/index.json \
+            --summary-output reports/CORE_RULES_STRUCTURE_CURRENT.json
+
+      - name: Validate authority boundary
+        run: |
+          python - <<'PY'
+          import json
+          p='rules/11e/snapshots/2026-09-30/core_rules_structure/index.json'
+          r=json.load(open(p,encoding='utf-8'))
+          assert r['status']=='PASS'
+          assert r['authority']=='GAMES_WORKSHOP_OFFICIAL'
+          assert r['document']['document_id']=='GW_11E_CORE_RULES_PUBLIC'
+          assert r['document']['page_count']==88
+          assert r['summary']['sections']>0
+          assert r['summary']['pages_represented']==88
+          assert r['authority_boundary']['paragraph_level_rules_ast_complete'] is False
+          assert r['authority_boundary']['current_normalized_factions_change']==0
+          forbidden={'text','description','rules_text','page_text','prose'}
+          def walk(v):
+              if isinstance(v,dict):
+                  for k,x in v.items():
+                      assert k not in forbidden, k
+                      walk(x)
+              elif isinstance(v,list):
+                  for x in v: walk(x)
+          walk(r)
+          print(json.dumps(r['summary'],indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-rules-structure-${{ github.run_id }}
+          path: |
+            reports/CORE_RULES_STRUCTURE_CURRENT.json
+            rules/11e/snapshots/2026-09-30/core_rules_structure/index.json
+          if-no-files-found: error
+
+      - name: Commit generated structure on development branch
+        if: github.event_name == 'push' && github.ref_name != 'main' && github.actor != 'github-actions[bot]'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/CORE_RULES_STRUCTURE_CURRENT.json rules/11e/snapshots/2026-09-30/core_rules_structure/index.json)" ]; then
+            echo "Core Rules structure already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/CORE_RULES_STRUCTURE_CURRENT.json
+          git add rules/11e/snapshots/2026-09-30/core_rules_structure/index.json
+          git commit -m "Checkpoint generated Core Rules structure"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Assert scheduled committed reproducibility
+        if: github.event_name == 'schedule'
+        run: git diff --exit-code -- reports/CORE_RULES_STRUCTURE_CURRENT.json rules/11e/snapshots/2026-09-30/core_rules_structure/index.json
