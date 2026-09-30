@@ -56,11 +56,11 @@ Direct visual recount confirms so far:
 
 Arc-rifle, transuranic-arquebus, Alpha and remaining Vanguard bodies are still pending direct classification.
 
-## Current 11E interpretation boundary
+## Current 11E implementation context
 
-Current rules allow each 10-model Ranger/Vanguard unit to contain one Alpha plus nine ordinary Skitarii, with at most one arc rifle, one plasma caliver and one transuranic arquebus; one ordinary rifle/carbine model may additionally carry either an enhanced data-tether or omnispex.
+The current 11E roster implementation represented by the imported New Recruit data, cross-checked against the current Wahapedia mirror, uses 10-model Ranger/Vanguard units with one Alpha plus nine ordinary Skitarii; the modeled options permit at most one arc rifle, one plasma caliver and one transuranic arquebus, plus either an enhanced data-tether or omnispex on an ordinary rifle/carbine bearer.
 
-This rules fact is used only to explain why spare physical bodies/configurations are useful. It does not redefine the physical inventory.
+This is contextual implementation/mirror evidence used only to explain why spare physical bodies/configurations are useful. It does not redefine the physical inventory or promote mirror evidence to normative rules authority.
 
 ## Open reconciliation questions
 
