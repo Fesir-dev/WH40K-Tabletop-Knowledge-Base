@@ -28,8 +28,8 @@ DISALLOWED_SIGNAL_IDS={
     "REPLACEMENT_INSTEAD","MODIFIER_ADD_SUBTRACT",
     "DEFINITION_MEANS","DEFINITION_KNOWN_AS","DEFINITION_REFERRED_TO_AS",
 }
-SENTENCE_BOUNDARY_RE=re.compile(r"""[.!?](?=(?:["'”’)]]*)?(?:\s|$))""")
-TERMINAL_PUNCTUATION_RE=re.compile(r"""[.!?]["'”’)]]*$""")
+SENTENCE_BOUNDARY_RE=re.compile(r"[.!?](?=(?:[\\\"'”’)\\]]*)?(?:\\s|$))")
+TERMINAL_PUNCTUATION_RE=re.compile(r"[.!?][\\\"'”’)\\]]*$")
 
 PRE_SHAPE_BLOCKERS={
     "BLOCKED_PARENT_REVIEW",
