@@ -1090,7 +1090,7 @@ try:
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
     if current_rules.get("next_milestone") != "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1":
-        errors.append("Current milestone must advance to CORE_RULE_REFERENCE_ATOMIZATION_V1")
+        errors.append("Current milestone must advance to CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release transition readiness v1 as operational")
