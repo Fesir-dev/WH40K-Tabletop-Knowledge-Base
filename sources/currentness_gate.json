@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.10",
+  "schema_version": "4.0",
   "as_of": "2026-09-30",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
@@ -186,7 +186,7 @@
       "repository_dimension": null,
       "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-      "authority_boundary": "All 310 stable Core paragraph identities have deterministic lexical/structural semantic-role classifications. 138 MIXED and 110 UNCLASSIFIED remain explicit fail-closed states; semantic AST and interactions remain pending.",
+      "authority_boundary": "All 310 stable Core paragraph identities have deterministic lexical/structural role classifications. 134 MIXED and 112 UNCLASSIFIED remain explicit fail-closed states; semantic review, condition/effect AST and interactions remain pending.",
       "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
       "rule_reference_families": 24,
       "rule_reference_count": 141,
@@ -220,9 +220,13 @@
         "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
         "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
         "paragraphs": 310,
-        "mixed": 138,
-        "unclassified": 110,
-        "high_confidence": 62
+        "high_confidence": 64,
+        "mixed": 134,
+        "unclassified": 112,
+        "paragraphs_with_signals": 200,
+        "paragraphs_without_signals": 110,
+        "repeated_variant_paragraphs": 10,
+        "paragraph_hashes_reproduced_from_verified_pdf": 310
       }
     },
     "faction_rules": {
@@ -407,21 +411,25 @@
       "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
       "paragraphs": 310,
       "role_counts": {
-        "CONDITION_OR_TRIGGER": 27,
-        "MIXED": 138,
+        "CONDITION_OR_TRIGGER": 31,
+        "MIXED": 134,
         "MODIFICATION_OR_REPLACEMENT": 1,
         "OBLIGATION": 1,
         "PERMISSION": 20,
-        "PROCEDURE_OR_SEQUENCE": 9,
+        "PROCEDURE_OR_SEQUENCE": 7,
         "PROHIBITION": 4,
-        "UNCLASSIFIED": 110
+        "UNCLASSIFIED": 112
       },
       "confidence_counts": {
-        "HIGH": 62,
-        "MIXED": 138,
-        "NONE": 110
+        "HIGH": 64,
+        "MIXED": 134,
+        "NONE": 112
       },
-      "authority_boundary": "Lexical/structural role evidence only. MIXED/UNCLASSIFIED are intentional; no paragraph prose, semantic AST, interaction graph, repeated-variant equivalence or app/Codex inference."
+      "paragraphs_with_signals": 200,
+      "paragraphs_without_signals": 110,
+      "repeated_variant_paragraphs": 10,
+      "paragraph_hashes_reproduced_from_verified_pdf": 310,
+      "authority_boundary": "Conservative lexical/structural role labels only. MIXED/UNCLASSIFIED are valid fail-closed states; condition/effect AST, interaction graph and Codex/app equivalence are not claimed."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."
