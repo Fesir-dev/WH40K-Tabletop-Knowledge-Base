@@ -82,8 +82,6 @@
     "core_rules_section_structure": "PASS_RULE_REFERENCE_FAMILIES_01_24",
     "core_rules_rule_reference_families": 24,
     "core_rules_rule_reference_count": 141,
-    "official_public_exact_overlap": "PASS_EXACT_PUBLIC_OVERLAP_V1",
-    "official_public_residual_classification": "PASS_FAIL_CLOSED_CLASSIFICATION_V1",
     "core_rule_reference_atomization": "PASS_141_RULE_ATOMS",
     "core_rule_atoms": 141,
     "core_rule_heading_recovery_gaps": 0,
@@ -112,7 +110,9 @@
     "core_rule_paragraph_semantic_hashes_reproduced": 310,
     "core_rule_paragraph_semantic_high_confidence": 64,
     "core_rule_paragraph_semantic_mixed": 134,
-    "core_rule_paragraph_semantic_unclassified": 112
+    "core_rule_paragraph_semantic_unclassified": 112,
+    "official_public_exact_overlap": "PASS_EXACT_PUBLIC_OVERLAP_V1",
+    "official_public_residual_classification": "PASS_FAIL_CLOSED_CLASSIFICATION_V1"
   },
   "roster_source_mapping": {
     "counts": {
@@ -730,8 +730,8 @@
           "SINGLE_OCCURRENCE_PARAGRAPH": 300
         },
         "paragraph_range_validation_failures": 0,
-        "paragraph_semantic_report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
-        "paragraph_semantic_state": "PASS_310_PARAGRAPHS_CLASSIFIED",
+        "paragraph_semantic_classification_report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
+        "paragraph_semantic_classification_state": "PASS_310_PARAGRAPHS_CLASSIFIED",
         "paragraph_semantic_role_counts": {
           "CONDITION_OR_TRIGGER": 31,
           "MIXED": 134,
@@ -747,13 +747,9 @@
           "MIXED": 134,
           "NONE": 112
         },
-        "paragraphs_with_signals": 200,
-        "paragraphs_without_signals": 110,
-        "paragraph_semantic_hashes_reproduced": 310,
-        "paragraph_semantic_classification_report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
-        "paragraph_semantic_classification_state": "PASS_310_PARAGRAPHS_CLASSIFIED",
         "paragraphs_with_semantic_signals": 200,
-        "paragraphs_without_semantic_signals": 110
+        "paragraphs_without_semantic_signals": 110,
+        "paragraph_semantic_hashes_reproduced": 310
       },
       "next_action": "Review the 134 MIXED and 112 UNCLASSIFIED paragraphs plus the 64 HIGH classifications against deterministic signal evidence, refining only demonstrably safe lexical rules before any AST-readiness gate."
     },
