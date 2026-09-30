@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/core_rule_paragraph_semantic_classification.schema.json",
+  "title": "Core Rules paragraph semantic classification v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "snapshot_date",
+    "authority",
+    "classifier_version",
+    "source",
+    "source_verification",
+    "parent_paragraph_atoms",
+    "classifications",
+    "summary",
+    "authority_boundary"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "status": {"enum": ["PASS", "SOURCE_DRIFT", "FAIL"]},
+    "snapshot_date": {"type": "string"},
+    "authority": {"const": "GAMES_WORKSHOP_OFFICIAL"},
+    "classifier_version": {"const": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1"},
+    "source": {"type": "object"},
+    "source_verification": {"type": "object"},
+    "parent_paragraph_atoms": {"type": "object"},
+    "classifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "paragraph_key",
+          "rule_ref",
+          "occurrence_key",
+          "page",
+          "semantic_sha256",
+          "signals",
+          "signal_family_counts",
+          "primary_role",
+          "classification_confidence",
+          "classifier_version"
+        ],
+        "properties": {
+          "paragraph_key": {"type": "string"},
+          "rule_ref": {"type": "string"},
+          "occurrence_key": {"type": "string"},
+          "page": {"type": "integer", "minimum": 1, "maximum": 88},
+          "semantic_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "signals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "count"],
+              "properties": {
+                "id": {"type": "string"},
+                "count": {"type": "integer", "minimum": 1}
+              },
+              "additionalProperties": false
+            }
+          },
+          "signal_family_counts": {"type": "object"},
+          "primary_role": {
+            "enum": [
+              "PROHIBITION",
+              "OBLIGATION",
+              "PERMISSION",
+              "DEFINITION",
+              "PROCEDURE_OR_SEQUENCE",
+              "CONDITION_OR_TRIGGER",
+              "REFERENCE_OR_CROSS_REFERENCE",
+              "MIXED",
+              "UNCLASSIFIED"
+            ]
+          },
+          "classification_confidence": {
+            "enum": ["HIGH", "MIXED", "NONE"]
+          },
+          "classifier_version": {"const": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "summary": {"type": "object"},
+    "authority_boundary": {"type": "object"}
+  },
+  "additionalProperties": true
+}
