@@ -169,7 +169,9 @@
       "status": [
         "SOURCE_EXPORT_DECLARED",
         "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "MAGNETIZATION_UNKNOWN",
+        "SLAANESH_SOURCE_EXPORT_REFERENCE_PRESENT",
+        "SAME_PHYSICAL_BODY_CONFIRMED_ACROSS_EXPORTS"
       ],
       "roles": [
         {
@@ -179,10 +181,19 @@
           "source_primary_categories": [
             "Allies: Legiones Daemonica"
           ]
+        },
+        {
+          "source_datasheet_name": "Be'lakor",
+          "source_unit_instances": 1,
+          "source_id": "NR_SLAANESH_2026_09_30",
+          "source_primary_categories": [
+            "Epic Hero"
+          ]
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied.",
+        "User confirmed on 2026-09-30 that the Be'lakor entry in the Slaanesh export is the same single physical miniature already recorded in this inventory."
       ],
       "alignment": "Undivided"
     },
@@ -615,6 +626,288 @@
         "evidence_type": "USER_CONFIRMATION",
         "confirmed_at": "2026-09-30"
       }
+    },
+    {
+      "pool_id": "syllesske",
+      "name": "Syll'esske",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Syll'esske",
+          "source_unit_instances": 1,
+          "source_id": "NR_SLAANESH_2026_09_30"
+        }
+      ],
+      "alignment": "Slaanesh",
+      "notes": [
+        "User confirmed on 2026-09-30 that the source count is the complete physical count for this pool and all listed models are assembled."
+      ],
+      "build_state": "ASSEMBLED"
+    },
+    {
+      "pool_id": "the_masque_of_slaanesh",
+      "name": "The Masque of Slaanesh",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "The Masque of Slaanesh",
+          "source_unit_instances": 1,
+          "source_id": "NR_SLAANESH_2026_09_30"
+        }
+      ],
+      "alignment": "Slaanesh",
+      "notes": [
+        "User confirmed on 2026-09-30 that the source count is the complete physical count for this pool and all listed models are assembled."
+      ],
+      "build_state": "ASSEMBLED"
+    },
+    {
+      "pool_id": "contorted_epitome",
+      "name": "Contorted Epitome",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Contorted Epitome",
+          "source_unit_instances": 1,
+          "source_id": "NR_SLAANESH_2026_09_30"
+        }
+      ],
+      "alignment": "Slaanesh",
+      "notes": [
+        "User confirmed on 2026-09-30 that the source count is the complete physical count for this pool and all listed models are assembled."
+      ],
+      "build_state": "ASSEMBLED"
+    },
+    {
+      "pool_id": "infernal_enrapturess",
+      "name": "Infernal Enrapturess",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Infernal Enrapturess",
+          "source_unit_instances": 2,
+          "source_id": "NR_SLAANESH_2026_09_30"
+        }
+      ],
+      "alignment": "Slaanesh",
+      "notes": [
+        "Two physical entries are represented in the source export.",
+        "User confirmed on 2026-09-30 that the source count is the complete physical count for this pool and all listed models are assembled."
+      ],
+      "build_state": "ASSEMBLED"
+    },
+    {
+      "pool_id": "keeper_of_secrets_shared_shalaxi",
+      "name": "Keeper of Secrets / Shalaxi Helbane shared bodies",
+      "physical_bodies": 2,
+      "status": [
+        "USER_CONFIRMED_EXACT_TOTAL_2",
+        "ONE_BODY_MAGNETIZED_KEEPER_SHALAXI_SHARED_ROLE",
+        "ONE_BODY_FIXED_KEEPER_BUILD",
+        "PHYSICAL_ROLE_RECONCILIATION_CLOSED"
+      ],
+      "roles": [
+        {
+          "role": "Keeper of Secrets",
+          "simultaneous_capacity": 2,
+          "note": "Both physical bodies can represent Keeper of Secrets."
+        },
+        {
+          "role": "Shalaxi Helbane",
+          "simultaneous_capacity": 1,
+          "shares_body_with": "Keeper body A",
+          "note": "Only the magnetized Keeper body can be reconfigured as Shalaxi Helbane; this does not create a third physical body."
+        }
+      ],
+      "alignment": "Slaanesh",
+      "physical_configuration": {
+        "body_a": {
+          "current_identity": "Keeper of Secrets",
+          "role_interchangeability": [
+            "Keeper of Secrets",
+            "Shalaxi Helbane"
+          ],
+          "magnetized": true,
+          "immediate_weapon_options_raw": [
+            "whip",
+            "shield",
+            "claw"
+          ],
+          "notes": [
+            "Arms are magnetized and the body can be reconfigured between Keeper and Shalaxi roles."
+          ]
+        },
+        "body_b": {
+          "current_identity": "Keeper of Secrets",
+          "magnetized": false,
+          "current_build_raw": [
+            "sword",
+            "hand/arm"
+          ],
+          "immediate_weapon_options_raw": [],
+          "future_conversion_raw": [
+            "shield"
+          ],
+          "notes": [
+            "Second Greater Daemon is currently a fixed Keeper build. Shield magnetization is possible later but is not a current swap capability."
+          ]
+        }
+      },
+      "source_configuration_snapshot": {
+        "source_id": "NR_SLAANESH_2026_09_30",
+        "source_declared_keeper_bodies": 2,
+        "note": "The source export represented both bodies as Keeper of Secrets. Direct user confirmation adds the shared Shalaxi role for one magnetized body."
+      }
+    },
+    {
+      "pool_id": "tormentbringer",
+      "name": "Tormentbringer",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Tormentbringer",
+          "source_unit_instances": 1,
+          "source_id": "NR_SLAANESH_2026_09_30"
+        }
+      ],
+      "alignment": "Slaanesh",
+      "build_state": "ASSEMBLED",
+      "notes": [
+        "User confirmed on 2026-09-30 that the source count is the complete physical count for this pool and all listed models are assembled."
+      ]
+    },
+    {
+      "pool_id": "tranceweaver",
+      "name": "Tranceweaver",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Tranceweaver",
+          "source_unit_instances": 1,
+          "source_id": "NR_SLAANESH_2026_09_30"
+        }
+      ],
+      "alignment": "Slaanesh",
+      "build_state": "ASSEMBLED",
+      "notes": [
+        "User confirmed on 2026-09-30 that the source count is the complete physical count for this pool and all listed models are assembled."
+      ]
+    },
+    {
+      "pool_id": "daemonettes",
+      "name": "Daemonettes",
+      "physical_bodies": 110,
+      "status": [
+        "USER_CONFIRMED_EXACT_TOTAL_110",
+        "ASSEMBLED_MINIMUM_90",
+        "SOURCE_EXPORT_UNDERCOUNT"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Daemonettes",
+          "source_unit_instances": 6,
+          "source_declared_bodies": 60,
+          "source_id": "NR_SLAANESH_2026_09_30"
+        }
+      ],
+      "alignment": "Slaanesh",
+      "physical_configuration": {
+        "total_owned": 110,
+        "assembled_minimum": 90,
+        "remaining_build_state_count": 20,
+        "remaining_build_state": "NOT_EXACTLY_CLASSIFIED",
+        "note": "User fixed the physical ownership total at exactly 110. Earlier wording established at least 90 assembled, but did not establish an exact assembled/on-sprue split."
+      },
+      "notes": [
+        "Exact physical ownership: 110 Daemonette bodies/models.",
+        "At least 90 are assembled.",
+        "The remaining 20 are owned but their exact assembled/on-sprue classification is intentionally left unspecified.",
+        "The New Recruit export contains only 60 Daemonettes and is not physical collection authority for this pool.",
+        "Current roster limits do not reduce the physical collection count; excess models are legacy 40K/Age of Sigmar ownership."
+      ]
+    },
+    {
+      "pool_id": "seekers",
+      "name": "Seekers",
+      "physical_bodies": 30,
+      "status": [
+        "USER_CONFIRMED_EXACT_TOTAL_30",
+        "USER_CONFIRMED_ASSEMBLED_15",
+        "USER_CONFIRMED_UNASSEMBLED_15",
+        "SOURCE_EXPORT_UNDERCOUNT"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Seekers",
+          "source_unit_instances": 2,
+          "source_declared_bodies": 15,
+          "source_id": "NR_SLAANESH_2026_09_30"
+        }
+      ],
+      "alignment": "Slaanesh",
+      "physical_configuration": {
+        "assembled": 15,
+        "on_sprue_or_unassembled": 15,
+        "total_owned": 30
+      },
+      "notes": [
+        "Fifteen Seekers are currently assembled.",
+        "A further fifteen can be assembled from retained sprue stock, giving thirty owned bodies total."
+      ]
+    },
+    {
+      "pool_id": "fiends",
+      "name": "Fiends",
+      "physical_bodies": 6,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Fiends",
+          "source_unit_instances": 1,
+          "source_declared_bodies": 6,
+          "source_id": "NR_SLAANESH_2026_09_30"
+        }
+      ],
+      "alignment": "Slaanesh",
+      "notes": [
+        "Six Fiend bodies are represented in the uploaded collection export.",
+        "User confirmed on 2026-09-30 that the source count is the complete physical count for this pool and all listed models are assembled."
+      ],
+      "build_state": "ASSEMBLED"
     }
   ],
   "confirmed_totals": {
@@ -623,9 +916,17 @@
     "tzeentch_aligned_source_bodies": 117,
     "undivided_source_bodies": 1,
     "user_confirmed_supplemental_model_bodies": 3,
-    "normalized_physical_bodies": 161,
+    "normalized_physical_bodies": 316,
     "daemon_prince_models_in_this_inventory": 4,
-    "daemon_prince_models_across_world_eaters_and_daemons": 5
+    "daemon_prince_models_across_world_eaters_and_daemons": 5,
+    "source_declared_model_entries_across_exports": 249,
+    "slaanesh_source_declared_model_entries": 91,
+    "slaanesh_direct_total_owned_including_sprues_excluding_belakor_overlap": 155,
+    "actual_normalized_physical_bodies": 316,
+    "slaanesh_unique_physical_bodies": 155,
+    "daemonette_owned_total": 110,
+    "seeker_owned_total": 30,
+    "slaanesh_keeper_scale_bodies": 2
   },
   "constraints": [],
   "open_questions": [
@@ -645,7 +946,9 @@
     "Raw New Recruit exports are not committed because they contain extensive copyrighted rules text; SHA-256 hashes and normalized physical facts are retained instead.",
     "The Tzeentch daemon export was classified by actual model/faction tags, not by its Titanicus Traitoris host catalogue.",
     "Daemon Prince identity overlap is resolved: five distinct physical Daemon Prince miniatures are confirmed across the World Eaters and Chaos Daemons collection domains.",
-    "Physical styling and current rules alignment are separate facts. In particular, the winged Tzeentch-styled model was selected as Khorne in the source roster export."
+    "Physical styling and current rules alignment are separate facts. In particular, the winged Tzeentch-styled model was selected as Khorne in the source roster export.",
+    "Slaanesh collection import added on 2026-09-30. Source roster limits are not used to cap physical ownership; legacy and Age of Sigmar surplus remains part of the collection.",
+    "Slaanesh physical-count reconciliation is closed at 155 unique Slaanesh-aligned bodies beyond the shared Be'lakor, bringing the normalized Chaos Daemons inventory to 316 physical bodies/models."
   ],
   "provenance": {
     "source_files": [
@@ -678,6 +981,44 @@
         "extracted_scope": "Legiones Daemonica physical selections only",
         "source_reported_points": 3815,
         "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
+      },
+      {
+        "source_id": "NR_SLAANESH_2026_09_30",
+        "uploaded_name": "Коллекция Слаанеш.json",
+        "sha256": "f964fa8284a13f45a8072e4fdf5fdeb74e3cac87a58094a089ad63d09a539971",
+        "roster_name": "Коллекция Слаанеш",
+        "generator": "https://newrecruit.eu",
+        "battle_scribe_version": "2.03",
+        "game_system_name": "Warhammer 40,000 11th Edition",
+        "game_system_revision": 15,
+        "catalogue_name": "Chaos - Chaos Daemons",
+        "catalogue_revision": 2,
+        "extracted_scope": "Slaanesh daemon physical selections plus Be'lakor overlap candidate",
+        "source_reported_points": 2595,
+        "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
+      }
+    ],
+    "user_clarifications": [
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_SLAANESH_COLLECTION_CLARIFICATION",
+        "facts": [
+          "Daemonettes: at least 90 assembled; 110 total owned when sprue stock is included.",
+          "Seekers: 15 assembled; enough retained sprue stock to reach 30 total owned.",
+          "Two Greater Daemon/Keeper bodies exist.",
+          "Keeper body A is magnetized and can be reconfigured as Shalaxi Helbane; arms support whip, shield and claw options.",
+          "Keeper body B is not magnetized and is currently a fixed sword + hand/arm build; shield magnetization would be future work only."
+        ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_SLAANESH_RECONCILIATION_CLOSEOUT",
+        "facts": [
+          "The Be'lakor in the Slaanesh export is the same single physical Be'lakor already present in the Chaos Daemons inventory.",
+          "Syll'esske 1, Masque 1, Contorted Epitome 1, Infernal Enrapturess 2, Tormentbringer 1, Tranceweaver 1 and Fiends 6 are exact physical counts, and all of those models are assembled.",
+          "Daemonette ownership is fixed at exactly 110 total models/bodies.",
+          "The previous statement of at least 90 assembled Daemonettes remains the strongest exact build-state evidence; no artificial 90/20 assembled/on-sprue split is inferred."
+        ]
       }
     ]
   },
@@ -688,6 +1029,25 @@
       "resolved_at": "2026-09-30",
       "evidence": "USER_CONFIRMATION",
       "details": "Confirmed distinct models: wingless Khorne; winged Tzeentch; winged Black Legion; wingless Nurgle; one unbuilt Daemon Prince kit on sprue."
+    },
+    {
+      "id": "SLAANESH_BELAKOR_IDENTITY",
+      "resolution": "SAME_SINGLE_PHYSICAL_BELAKOR_AS_ALREADY_RECORDED",
+      "resolved_at": "2026-09-30",
+      "evidence": "USER_CONFIRMATION"
+    },
+    {
+      "id": "SLAANESH_REMAINING_SOURCE_COUNTS",
+      "resolution": "SOURCE_COUNTS_ACCEPTED_AS_EXACT_AND_ASSEMBLED_FOR_LISTED_POOLS",
+      "resolved_at": "2026-09-30",
+      "evidence": "USER_CONFIRMATION",
+      "details": "Syll'esske 1; Masque 1; Contorted Epitome 1; Infernal Enrapturess 2; Tormentbringer 1; Tranceweaver 1; Fiends 6."
+    },
+    {
+      "id": "SLAANESH_DAEMONETTE_TOTAL",
+      "resolution": "EXACT_OWNED_TOTAL_110_ASSEMBLED_MINIMUM_90_BUILD_SPLIT_NOT_FORCED",
+      "resolved_at": "2026-09-30",
+      "evidence": "USER_CONFIRMATION"
     }
   ]
 }
