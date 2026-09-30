@@ -133,7 +133,7 @@ def dedupe_outline(rows: list[dict], page_count: int) -> list[dict]:
     return out
 
 
-def assign_ranges(rows: list[dict], page_count: int, page_semantic_sha: list[str], candidates: dict[int, list[str]]) -> list[dict]:
+def assign_ranges(rows: list[dict], page_count: int, page_semantic_sha: list[str], candidates: dict[int, list[str]], outline_source: bool = True) -> list[dict]:
     sections = []
     for idx, row in enumerate(rows):
         depth = row["depth"]
@@ -156,7 +156,7 @@ def assign_ranges(rows: list[dict], page_count: int, page_semantic_sha: list[str
             "page_end": end,
             "page_range_sha256": sha256_text("\n".join(page_semantic_sha[start - 1:end])),
             "children": [],
-            "outline_source": True,
+            "outline_source": outline_source,
             "heading_evidence": evidence[:4],
         })
 
@@ -182,7 +182,7 @@ def fallback_sections(page_count: int, page_semantic_sha: list[str], candidates:
         raise RuntimeError("No PDF outline and no conservative heading candidates")
     rows = [{"title": label, "depth": 0, "page_start": page} for page, label in anchors]
     rows.sort(key=lambda x: x["page_start"])
-    return assign_ranges(rows, page_count, page_semantic_sha, candidates)
+    return assign_ranges(rows, page_count, page_semantic_sha, candidates, outline_source=False)
 
 
 def build_snapshot(as_of: str, cache_dir: Path, root: Path = ROOT) -> dict:
@@ -236,12 +236,14 @@ def build_snapshot(as_of: str, cache_dir: Path, root: Path = ROOT) -> dict:
 
     candidates = heading_candidates(page_texts)
     outline = dedupe_outline(flatten_outline(reader), len(page_texts))
-    if outline:
-        sections = assign_ranges(outline, len(page_texts), page_sha, candidates)
+    if len(outline) > 1:
+        sections = assign_ranges(outline, len(page_texts), page_sha, candidates, outline_source=True)
         mode = "PDF_OUTLINE_PRIMARY"
+        hierarchy_complete = True
     else:
         sections = fallback_sections(len(page_texts), page_sha, candidates)
-        mode = "HEADING_CANDIDATE_FALLBACK"
+        mode = "HEADING_CANDIDATE_PRIMARY_TRIVIAL_OUTLINE"
+        hierarchy_complete = False
 
     depth_counts = Counter(str(x["depth"]) for x in sections)
     pages_represented = sorted({p for s in sections for p in range(s["page_start"], s["page_end"] + 1)})
@@ -279,7 +281,9 @@ def build_snapshot(as_of: str, cache_dir: Path, root: Path = ROOT) -> dict:
             "heading_candidate_count": sum(len(v) for v in candidates.values()),
         },
         "authority_boundary": {
-            "section_level_structure_complete_for_public_pdf": True,
+            "section_level_structure_complete_for_public_pdf": hierarchy_complete,
+            "flat_heading_map_complete_for_public_pdf": True,
+            "hierarchical_structure_complete": hierarchy_complete,
             "paragraph_level_rules_ast_complete": False,
             "app_codex_equivalence": "NOT_CLAIMED",
             "full_faction_promotion": False,
