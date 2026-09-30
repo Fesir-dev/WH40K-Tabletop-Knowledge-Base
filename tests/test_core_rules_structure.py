@@ -58,6 +58,18 @@ class CoreRulesStructureTests(unittest.TestCase):
         self.assertEqual(rows[0]["page_end"], 6)
         self.assertEqual(rows[1]["page_end"], 10)
 
+    def test_distant_cross_reference_does_not_move_family_start(self):
+        candidates = {
+            17:["SEE 24.07","SEE 24.11"],
+            78:["ABILITIES 24.01"],
+            82:["HEAVY 24.16","HOVER 24.17","LEADER 24.22"],
+        }
+        rows = mod.build_rule_reference_families(candidates, 88, [str(i) for i in range(88)])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["canonical_anchor_page"], 82)
+        self.assertEqual(rows[0]["page_start"], 78)
+        self.assertEqual(rows[0]["page_end"], 88)
+
 
 if __name__ == "__main__":
     unittest.main()
