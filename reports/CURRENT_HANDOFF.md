@@ -6,19 +6,35 @@ Updated: **2026-09-30**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest Core paragraph-boundary candidate:
+Latest validated Core paragraph-atomization candidate:
 
-- branch: `core-rule-paragraph-boundary-extraction-v1`;
+- PR: **#21** (`core-rule-paragraph-atomization-v1`);
+- generated snapshot: `rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json`;
+- compact report: `reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json`;
+- paragraph atoms / unique keys: **310 / 310**;
+- parent rules / occurrences: **141 / 146**;
+- classification split: **300** single-occurrence + **10** repeated-occurrence variants;
+- repeated variant refs: `15.07–15.11`;
+- range validation failures: **0**;
+- paragraph hashes reproduced from verified PDF ranges: **310 / 310**;
+- implementation validation: paragraph atomization `36703546953` — **SUCCESS**;
+- implementation validation: normative/app gap `36703546973` — **SUCCESS**;
+- implementation validation: repository contracts `36703546698` — **SUCCESS**;
+- closure: `reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CLOSURE_2026-09-30.md`;
+- paragraph prose: **not committed**;
+- semantic AST / condition-effect parsing / interaction graph: **PENDING**;
+- whole-faction normative counters: unchanged at **0**;
+- next milestone: `CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1`.
+
+Previous closed Core paragraph-boundary milestone:
+
+- merged PR: **#14**;
+- merge commit: `e7a3f960e8ae43dd679c7c418b410fb03fdfb214`;
 - boundary snapshot: `rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json`;
-- report: `reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json`;
 - rules / occurrences / paragraph candidates: **141 / 146 / 310**;
 - single / repeated-variant rules: **136 / 5**;
 - heading-line gaps / empty bodies: **0 / 0**;
-- boundary workflow: `36696663834` — **SUCCESS**;
-- gap reproducibility: `36696967737` — **SUCCESS**;
-- repository validation: `36697099240` — **SUCCESS**;
-- closure: `reports/CORE_RULE_PARAGRAPH_BOUNDARY_CLOSURE_2026-09-30.md`;
-- next milestone: `CORE_RULE_PARAGRAPH_ATOMIZATION_V1`.
+- closure: `reports/CORE_RULE_PARAGRAPH_BOUNDARY_CLOSURE_2026-09-30.md`.
 
 Previous closed Core rule-reference atomization milestone:
 
