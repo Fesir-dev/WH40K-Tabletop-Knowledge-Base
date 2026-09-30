@@ -1,0 +1,47 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"schemas/core_rules_structure_snapshot.schema.json",
+  "title":"Official public Core Rules section structure snapshot",
+  "type":"object",
+  "required":["schema_version","status","snapshot_date","authority","document","source_verification","sections","summary","authority_boundary"],
+  "properties":{
+    "schema_version":{"type":"string"},
+    "status":{"enum":["PASS","SOURCE_DRIFT","FAIL"]},
+    "snapshot_date":{"type":"string"},
+    "authority":{"const":"GAMES_WORKSHOP_OFFICIAL"},
+    "document":{
+      "type":"object",
+      "required":["document_id","binary_sha256","semantic_sha256","page_count"],
+      "properties":{
+        "document_id":{"const":"GW_11E_CORE_RULES_PUBLIC"},
+        "binary_sha256":{"type":"string"},
+        "semantic_sha256":{"type":"string"},
+        "page_count":{"type":"integer","minimum":1}
+      },
+      "additionalProperties":true
+    },
+    "source_verification":{"type":"object"},
+    "sections":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["section_key","title","depth","page_start","page_end","page_range_sha256","children"],
+        "properties":{
+          "section_key":{"type":"string"},
+          "title":{"type":"string","maxLength":160},
+          "depth":{"type":"integer","minimum":0},
+          "page_start":{"type":"integer","minimum":1},
+          "page_end":{"type":"integer","minimum":1},
+          "page_range_sha256":{"type":"string"},
+          "children":{"type":"array","items":{"type":"string"}},
+          "outline_source":{"type":"boolean"},
+          "heading_evidence":{"type":"array","items":{"type":"object"}}
+        },
+        "additionalProperties":true
+      }
+    },
+    "summary":{"type":"object"},
+    "authority_boundary":{"type":"object"}
+  },
+  "additionalProperties":true
+}
