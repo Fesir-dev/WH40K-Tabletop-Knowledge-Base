@@ -654,16 +654,16 @@
         "system_normative_semantics"
       ],
       "evidence": {
-        "repository_state": "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1",
+        "repository_state": "OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1",
         "currentness_profile": {
           "required_sources": [
             "GW_40K_DOWNLOADS"
           ],
-          "content_state": "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1",
+          "content_state": "OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1",
           "repository_dimension": null,
           "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
           "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-          "authority_boundary": "The sole direct-modal AST pilot node has been semantically validated against its verified official source range. Both subject and action/predicate refinements remain opaque by closed-lexicon policy; AST mutation, second-paragraph admission and interaction edges remain forbidden.",
+          "authority_boundary": "The 33 closed source-shape blockers were re-audited from verified Core Rules source ranges. Eleven single-modal sentence candidates are identified as readiness evidence only; no AST node/edge is created and the validated 13.07 AST remains opaque.",
           "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
           "rule_reference_families": 24,
           "rule_reference_count": 141,
@@ -761,6 +761,17 @@
             "ast_mutated": false,
             "interaction_edges_created": 0,
             "additional_paragraphs_admitted": 0
+          },
+          "ast_readiness_expansion": {
+            "state": "PASS_11_MODAL_SENTENCE_CANDIDATES",
+            "report": "reports/CORE_RULE_AST_READINESS_EXPANSION_CURRENT.json",
+            "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_ast_readiness_expansion/index.json",
+            "rows_audited": 33,
+            "source_hashes_reproduced": 33,
+            "sentence_candidates": 11,
+            "new_ast_nodes_created": 0,
+            "interaction_edges_created": 0,
+            "existing_ast_nodes_mutated": 0
           }
         },
         "official_public_source": {
