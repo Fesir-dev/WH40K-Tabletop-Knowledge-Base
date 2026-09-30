@@ -235,13 +235,25 @@ Closure report:
 
 `OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT`
 
-High-level remaining work:
+### C1 — comparison contract — COMPLETE ON DEVELOPMENT BRANCH
 
-1. define exact comparable semantic units between the 29-document official public corpus and current Wahapedia projection;
-2. classify public overlap as exact match, normalization/extraction mismatch, semantic drift, or unmappable;
-3. preserve provenance at document/page/source-object level and begin structured official-public normalization only where mappings are exact;
-4. do not generalize public overlap matches into full Codex/app equivalence; app-only wording remains `PENDING/UNKNOWN`;
-5. release-transition activation watch continues independently.
+- model: `docs/OFFICIAL_PUBLIC_MIRROR_OVERLAP_MODEL.md`;
+- audit schema: `schemas/official_public_mirror_overlap.schema.json`;
+- normalized overlap snapshot schema: `schemas/official_public_overlap_snapshot.schema.json`;
+- only exact normalized public-official containment can become structured official-public overlap evidence;
+- only direct source/faction-scoped mappings are promotable;
+- unscoped exact overlap remains evidence-only;
+- full Codex/app equivalence and `current_normalized_factions` remain unchanged.
+
+### Next unresolved gate — C2 executable overlap audit
+
+1. implement hash-gated live Wahapedia + official PDF overlap audit;
+2. classify exact scoped, exact unscoped and no-exact-public-overlap units;
+3. generate document/page/source-object provenance without storing long rules prose;
+4. C3: generate immutable structured official-public overlap snapshot from promotable exact mappings only;
+5. C4: validate, update current pointers/coverage semantics and close the milestone without generalizing to Codex/app-only text.
+
+Release-transition activation watch continues independently.
 
 ## Execution reliability rule
 
