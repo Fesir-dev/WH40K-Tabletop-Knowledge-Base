@@ -646,7 +646,7 @@
         "system_normative_semantics"
       ],
       "evidence": {
-        "repository_state": "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1",
+        "repository_state": "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1",
         "currentness_profile": {
           "required_sources": [
             "GW_40K_DOWNLOADS"
