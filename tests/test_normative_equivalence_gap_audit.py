@@ -44,7 +44,7 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
     def test_public_core_rules_fingerprint_and_section_structure_are_closed(self):
         gaps={x["id"]:x for x in self.generated["gaps"]}
         core=gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]
-        self.assertEqual(core["state"],"PARAGRAPH_BOUNDARIES_CLOSED_PARAGRAPH_ATOMIZATION_PENDING")
+        self.assertEqual(core["state"],"PARAGRAPH_ATOMIZATION_CLOSED_SEMANTIC_CLASSIFICATION_PENDING")
         self.assertEqual(core["evidence"]["official_fingerprint_state"],"PASS")
         self.assertEqual(core["evidence"]["section_structure_state"],"PASS_RULE_REFERENCE_FAMILIES_01_24")
         self.assertEqual(core["evidence"]["rule_reference_families"],24)
@@ -61,6 +61,13 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
         self.assertEqual(core["evidence"]["boundary_occurrences"],146)
         self.assertEqual(core["evidence"]["paragraph_candidates"],310)
         self.assertEqual(core["evidence"]["repeated_boundary_variants"],5)
+        self.assertEqual(core["evidence"]["paragraph_atomization_state"],"PASS_310_PARAGRAPH_ATOMS")
+        self.assertEqual(core["evidence"]["paragraph_atoms"],310)
+        self.assertEqual(core["evidence"]["paragraph_atom_classification_counts"],{
+            "REPEATED_OCCURRENCE_PARAGRAPH_VARIANT":10,
+            "SINGLE_OCCURRENCE_PARAGRAPH":300,
+        })
+        self.assertEqual(core["evidence"]["paragraph_range_validation_failures"],0)
         self.assertEqual(len(core["evidence"]["core_rules_binary_sha256"]),64)
         self.assertEqual(len(core["evidence"]["core_rules_semantic_sha256"]),64)
         self.assertTrue(core["evidence"]["official_public_source"]["asset_url"].startswith("https://assets.warhammer-community.com/"))
@@ -102,7 +109,7 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
 
     def test_next_pipeline_does_not_promise_full_normalization(self):
         conclusion=self.generated["conclusion"]
-        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_PARAGRAPH_ATOMIZATION_V1")
+        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1")
         self.assertIn("semantic AST",conclusion["expected_effect"])
 
 
