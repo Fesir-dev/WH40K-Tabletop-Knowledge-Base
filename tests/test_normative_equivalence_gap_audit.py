@@ -44,7 +44,7 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
     def test_public_core_rules_fingerprint_and_section_structure_are_closed(self):
         gaps={x["id"]:x for x in self.generated["gaps"]}
         core=gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]
-        self.assertEqual(core["state"],"PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSED_AST_READINESS_PENDING")
+        self.assertEqual(core["state"],"PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSED_SEMANTIC_REVIEW_PENDING")
         self.assertEqual(core["evidence"]["official_fingerprint_state"],"PASS")
         self.assertEqual(core["evidence"]["section_structure_state"],"PASS_RULE_REFERENCE_FAMILIES_01_24")
         self.assertEqual(core["evidence"]["rule_reference_families"],24)
@@ -67,7 +67,7 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
             "SINGLE_OCCURRENCE_PARAGRAPH":300,
         })
         self.assertEqual(core["evidence"]["paragraph_range_validation_failures"],0)
-        self.assertEqual(core["evidence"]["paragraph_semantic_state"],"PASS_310_PARAGRAPHS_CLASSIFIED")
+        self.assertEqual(core["evidence"]["paragraph_semantic_classification_state"],"PASS_310_PARAGRAPHS_CLASSIFIED")
         self.assertEqual(core["evidence"]["paragraph_semantic_role_counts"],{
             "CONDITION_OR_TRIGGER":31,
             "MIXED":134,
@@ -83,8 +83,8 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
             "MIXED":134,
             "NONE":112,
         })
-        self.assertEqual(core["evidence"]["paragraphs_with_signals"],200)
-        self.assertEqual(core["evidence"]["paragraphs_without_signals"],110)
+        self.assertEqual(core["evidence"]["paragraphs_with_semantic_signals"],200)
+        self.assertEqual(core["evidence"]["paragraphs_without_semantic_signals"],110)
         self.assertEqual(core["evidence"]["paragraph_semantic_hashes_reproduced"],310)
         self.assertEqual(core["evidence"]["repeated_boundary_variants"],5)
         self.assertEqual(core["evidence"]["paragraph_atomization_state"],"PASS_310_PARAGRAPH_ATOMS")
@@ -135,8 +135,8 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
 
     def test_next_pipeline_does_not_promise_full_normalization(self):
         conclusion=self.generated["conclusion"]
-        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_SEMANTIC_AST_READINESS_V1")
-        self.assertIn("safe parse subset",conclusion["expected_effect"])
+        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1")
+        self.assertIn("64 HIGH",conclusion["expected_effect"])
 
 
 if __name__=="__main__":
