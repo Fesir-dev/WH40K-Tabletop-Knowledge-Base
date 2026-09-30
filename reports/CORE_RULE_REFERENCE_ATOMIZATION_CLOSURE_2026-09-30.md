@@ -132,7 +132,15 @@ The workflow also provides scheduled source revalidation and committed-output re
 - normative/app gap reproducibility run `36695667215` — **SUCCESS**;
 - repository validator + full test suite run `36695740466` — **SUCCESS**.
 
-Final PR-head validation is recorded in the recovery handoff before merge.
+Final PR-head validation:
+
+- PR: **#13**;
+- validated PR head: `a953b2640600a330c0a00e9f5e2aecb6f0b146d8`;
+- merge commit: `ca30daaf0ced6b305e7e4d10b6b0716ab49cea92`;
+- generic repository validation: `36695977658` — **SUCCESS**;
+- normative/app gap reproducibility: `36695977608` — **SUCCESS**;
+- Core atomization revalidation: `36695977620` — **SUCCESS**;
+- official-public overlap regression: `36695977631` — **SUCCESS**.
 
 ## Next milestone
 
