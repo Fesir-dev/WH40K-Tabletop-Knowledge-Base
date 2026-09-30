@@ -169,6 +169,7 @@ def main()->int:
     ap=argparse.ArgumentParser()
     ap.add_argument("--as-of",default="2026-09-29")
     ap.add_argument("--output",type=Path,required=True)
+    ap.add_argument("--detail-output",type=Path)
     ap.add_argument("--cache-dir",type=Path,default=ROOT/".cache"/"official-public-rules")
     args=ap.parse_args()
 
@@ -213,6 +214,8 @@ def main()->int:
 
     documents=[]
     aggregate=Counter()
+    aggregate_by_kind=defaultdict(Counter)
+    aggregate_by_provenance=defaultdict(Counter)
     official_docs=[x for x in fp["documents"] if x.get("document_type")=="FACTION_PACK"]
     for doc in official_docs:
         sid=doc["document_id"].removeprefix("GW_11E_FACTION_PACK_")
@@ -290,6 +293,8 @@ def main()->int:
             by_kind[row["kind"]][state]+=1
             by_prov[row["provenance"]][state]+=1
             aggregate[state]+=1
+            aggregate_by_kind[row["kind"]][state]+=1
+            aggregate_by_provenance[row["provenance"]][state]+=1
 
         documents.append({
             "document_id":doc["document_id"],
@@ -316,8 +321,8 @@ def main()->int:
         if state in {"PARTIAL_OVERLAP_REVIEW","REVIEW_REQUIRED_POSSIBLE_DRIFT_OR_LAYOUT","UNMAPPED_EXACT_SOURCE_REVIEW"}
     )
 
-    report={
-        "schema_version":"1.0",
+    common={
+        "schema_version":"1.1",
         "status":"PASS",
         "as_of":args.as_of,
         "authority_boundary":{
@@ -344,10 +349,11 @@ def main()->int:
             "faction_pack_documents":len(documents),
             "candidate_fields":sum(x["candidate_fields"] for x in documents),
             "strong_public_overlap":exact_strong,
-            "review_required_exact_source_or_partial":review,
+            "review_required_or_partial":review,
             "counts":dict(sorted(aggregate.items())),
+            "by_kind":{k:dict(sorted(v.items())) for k,v in sorted(aggregate_by_kind.items())},
+            "by_provenance":{k:dict(sorted(v.items())) for k,v in sorted(aggregate_by_provenance.items())},
         },
-        "documents":documents,
         "interpretation":{
             "EXACT_TOKEN_SEQUENCE_MATCH":"Strong public overlap after conservative HTML/punctuation/whitespace canonicalization.",
             "HIGH_OVERLAP_NORMALIZATION_MATCH":"High shingle overlap with exact anchor; likely PDF layout/normalization differences.",
@@ -361,10 +367,39 @@ def main()->int:
         },
     }
 
+    detail_report={**common,"documents":documents}
+
+    compact_documents=[]
+    for doc in documents:
+        samples=defaultdict(list)
+        for row in doc["results"]:
+            state=row["result"]
+            if len(samples[state])<3:
+                samples[state].append(row)
+        compact_documents.append({
+            **{k:v for k,v in doc.items() if k!="results"},
+            "review_samples":dict(sorted(samples.items())),
+        })
+    compact_report={
+        **common,
+        "documents":compact_documents,
+        "detail_storage":{
+            "repository_committed":False,
+            "workflow_artifact":"official-public-mirror-overlap-<run-id>",
+            "copyright_policy":"No long Games Workshop or mirror prose is stored; detail contains identities, hashes, overlap metrics and result classes only.",
+        },
+    }
+
     out=args.output if args.output.is_absolute() else ROOT/args.output
     out.parent.mkdir(parents=True,exist_ok=True)
-    out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print(json.dumps({"status":report["status"],"summary":report["summary"],"source_integrity":report["source_integrity"]},ensure_ascii=False,indent=2))
+    out.write_text(json.dumps(compact_report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+
+    if args.detail_output:
+        detail=args.detail_output if args.detail_output.is_absolute() else ROOT/args.detail_output
+        detail.parent.mkdir(parents=True,exist_ok=True)
+        detail.write_text(json.dumps(detail_report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+
+    print(json.dumps({"status":compact_report["status"],"summary":compact_report["summary"],"source_integrity":compact_report["source_integrity"]},ensure_ascii=False,indent=2))
     return 0
 
 if __name__=="__main__":
