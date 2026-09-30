@@ -5,7 +5,7 @@
   "checkpoint": "2026-09-30",
   "repository_registered_at": "2026-09-30",
   "status": "PROVISIONAL",
-  "revision_state": "WAVE2_STARTER_PROVENANCE_RECONCILED_PARTIAL",
+  "revision_state": "WAVE2_STARTER_PROVENANCE_RECONCILED_WITH_OPEN_KILL_TEAM_COUNT",
   "physical_pools": [
     {
       "pool_id": "abaddon",
@@ -66,10 +66,11 @@
       "name": "Chaos Lord",
       "physical_bodies": 2,
       "status": [
-        "USER_CONFIRMED_MINIMUM_2",
+        "USER_CONFIRMED_EXACT_COUNT_2",
         "DARK_VENGEANCE_OLD_SCULPTS",
-        "BUILD_STATE_UNRECONCILED",
-        "SOURCE_ROSTER_ROLE_OVERLAP_UNRESOLVED"
+        "ASSEMBLED",
+        "ONE_MODEL_DAMAGED",
+        "PHYSICAL_LOADOUT_STARTER_STANDARD"
       ],
       "roles": [
         {
@@ -85,15 +86,23 @@
         ]
       },
       "notes": [
-        "User confirmed ownership of two old Dark Vengeance Chaos Lord sculpts from two starter boxes.",
-        "The Wave 1 roster contains one generic Chaos Lord selection; whether that roster selection maps to one of these two bodies or to another physical Lord remains unresolved.",
-        "Physical loadouts/build state of the two Dark Vengeance Lords have not yet been individually audited."
+        "Exactly two generic Chaos Lord bodies are confirmed; both are the old Dark Vengeance sculpt.",
+        "One of the two is damaged.",
+        "The Wave 1 generic Chaos Lord roster selection maps to this two-body physical pool; no third generic Chaos Lord body is currently established.",
+        "Both retain the Dark Vengeance starter build/loadout identity."
       ],
       "body_variants": [
         {
-          "name": "Dark Vengeance Chaos Lord",
-          "physical_bodies": 2,
-          "evidence": "DIRECT_USER_CONFIRMATION"
+          "name": "Dark Vengeance Chaos Lord A",
+          "physical_bodies": 1,
+          "state": "INTACT",
+          "loadout_state": "AS_DARK_VENGEANCE_STARTER"
+        },
+        {
+          "name": "Dark Vengeance Chaos Lord B",
+          "physical_bodies": 1,
+          "state": "DAMAGED",
+          "loadout_state": "AS_DARK_VENGEANCE_STARTER"
         }
       ]
     },
@@ -217,11 +226,11 @@
     {
       "pool_id": "daemon_prince_winged_csm",
       "name": "Heretic Astartes Daemon Prince with wings",
-      "physical_bodies": 1,
+      "physical_bodies": 0,
       "status": [
-        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
-        "BUILD_STATE_UNRECONCILED",
-        "PHYSICAL_LOADOUT_UNRECONCILED"
+        "CROSS_DOMAIN_SHARED_PHYSICAL_IDENTITY",
+        "USER_CONFIRMED_SAME_AS_BLACK_LEGION_WINGED_DAEMON_PRINCE",
+        "ROLE_REFERENCE_ONLY_NOT_ADDITIONAL_BODY"
       ],
       "roles": [
         {
@@ -230,7 +239,7 @@
           "source_id": "NR_CSM_WAVE1_2026_09_30"
         }
       ],
-      "physical_identity_state": "CROSS_DOMAIN_OVERLAP_CANDIDATE",
+      "physical_identity_state": "RESOLVED_SHARED_BODY",
       "source_configuration_snapshot": {
         "loadout": [
           "Hellforged weapons",
@@ -238,10 +247,11 @@
         ]
       },
       "notes": [
-        "Potential overlap with the already-recorded winged Black Legion-styled Daemon Prince in collection/chaos_daemons; direct identity confirmation is required before any global collection total deduplication.",
-        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
-        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
-      ]
+        "User confirmed this CSM roster selection is the same physical winged Black Legion-styled Daemon Prince already stored canonically in collection/chaos_daemons.",
+        "This CSM pool is retained as a role/reference projection only and contributes zero additional physical bodies to the CSM unique-body total.",
+        "Do not double-count this model across collection domains."
+      ],
+      "shared_physical_identity_id": "daemon_prince_black_legion_winged_01"
     },
     {
       "pool_id": "lord_discordant",
@@ -409,11 +419,12 @@
     {
       "pool_id": "legionaries",
       "name": "Legionaries",
-      "physical_bodies": 17,
+      "physical_bodies": 20,
       "status": [
-        "DIRECTLY_OBSERVED_MINIMUM_17",
+        "USER_CONFIRMED_SHADOWSPEAR_TOTAL_20",
         "SHADOWSPEAR_MONOPOSE_PROVENANCE",
-        "ADDITIONAL_KILL_TEAM_GROUP_EXISTS_COUNT_PENDING",
+        "BUILD_STATE_PARTIALLY_RECONCILED",
+        "KILL_TEAM_ALLOCATION_PARTIAL",
         "LOADOUT_RECONCILIATION_REQUIRED"
       ],
       "roles": [
@@ -425,14 +436,23 @@
       ],
       "body_variants": [
         {
-          "name": "Shadowspear CSM — assembled, unpainted",
+          "name": "Shadowspear CSM — full sprue, unassembled",
+          "physical_bodies": 10,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        },
+        {
+          "name": "Shadowspear CSM — assembled, unpainted, outside Kill Team",
           "physical_bodies": 7,
           "evidence": "DIRECT_USER_CONFIRMATION"
         },
         {
-          "name": "Shadowspear CSM — full sprue, unassembled",
-          "physical_bodies": 10,
-          "evidence": "DIRECT_USER_CONFIRMATION_APPROX_PRODUCT_IDENTIFICATION"
+          "name": "Shadowspear CSM — transferred into Word Bearers Legionaries Kill Team",
+          "physical_bodies": 3,
+          "evidence": "DIRECT_USER_CONFIRMATION",
+          "known_loadouts_raw": [
+            "2x bolter",
+            "1x heavy bolter"
+          ]
         }
       ],
       "source_configuration_snapshot": {
@@ -451,22 +471,22 @@
         ]
       },
       "notes": [
-        "Wave 1 roster's 15 Legionaries are treated as a roster projection over part of the physical collection, not as an additional 15 bodies.",
-        "User directly located 10 Shadowspear CSM still on a complete sprue and 7 assembled but unpainted Shadowspear CSM.",
-        "Two Shadowspear boxes historically contained 20 CSM bodies total; three of those original bodies remain to be located/reconciled before promoting the acquisition total to exact current ownership.",
-        "A separate Word Bearers Legionaries Kill Team exists and is not yet included in the physical body count because its exact body count was not stated."
+        "The full twenty CSM bodies originating from the two Shadowspear boxes are now reconciled.",
+        "Ten remain on a complete sprue, seven are assembled/unpainted outside the Kill Team, and three were transferred into the Word Bearers Legionaries Kill Team.",
+        "Of the three Shadowspear bodies in the Kill Team, the user recalls two with bolters and one with a heavy bolter.",
+        "A further observed autocannon-armed model may also be a Shadowspear body, but its identity is not yet resolved and it is not counted as an extra body.",
+        "The Word Bearers Kill Team also uses newer Chosen bodies; exact count remains open."
       ],
       "acquisition_context": {
         "shadowspear_boxes_owned": 2,
         "expected_shadowspear_csm_bodies_from_complete_box_contents": 20,
-        "currently_directly_located_from_shadowspear": 17,
-        "unresolved_remainder_from_original_two_boxes": 3,
-        "additional_group": {
-          "name": "Kill Team Legionaries — Word Bearers",
-          "physical_bodies": "UNKNOWN_PENDING_USER_COUNT",
-          "build_state": "ASSEMBLED_TEAM_CONFIRMED",
-          "notes": "User states a Legionaries Kill Team was built and themed as Word Bearers; exact physical count is not yet recorded."
-        }
+        "reconciled_physical_total": 20,
+        "current_allocation": {
+          "on_sprue_unassembled": 10,
+          "assembled_unpainted_outside_kill_team": 7,
+          "transferred_into_word_bearers_kill_team": 3
+        },
+        "kill_team_constituent_note": "The full Kill Team also contains bodies built from newer Chosen models; exact additional body count is not yet confirmed."
       }
     },
     {
@@ -782,9 +802,11 @@
       "name": "Chosen — Dark Vengeance old sculpts",
       "physical_bodies": 12,
       "status": [
-        "USER_CONFIRMED_TWO_DARK_VENGEANCE_CHOSEN_SETS",
-        "PRODUCT_CONTENT_DERIVED_12",
-        "BUILD_STATE_UNRECONCILED"
+        "USER_CONFIRMED_EXACT_COUNT_12",
+        "ASSEMBLED",
+        "DARK_VENGEANCE_OLD_SCULPTS",
+        "FIXED_STARTER_LOADOUTS",
+        "PAINT_STATE_NOT_STATED"
       ],
       "roles": [
         {
@@ -798,10 +820,17 @@
         "derivation": "2 boxes x 6 Chosen"
       },
       "notes": [
-        "User confirmed possession of two complete Dark Vengeance Chosen groups using the old sculpts.",
-        "Public product references identify six Chosen per Dark Vengeance set, giving twelve bodies across two sets.",
-        "Exact current build/paint state and modern 11E loadout mapping remain to be audited."
-      ]
+        "User confirmed all twelve old-sculpt Dark Vengeance Chosen are still present.",
+        "All twelve are assembled with the fixed loadouts represented by the starter sculpts.",
+        "Paint state was not explicitly reconfirmed."
+      ],
+      "physical_configuration": {
+        "total": 12,
+        "assembled": 12,
+        "loadout_reference": "Exactly as supplied/built from the Dark Vengeance starter sculpts",
+        "magnetized": false,
+        "paint_state": "UNKNOWN_NOT_STATED"
+      }
     },
     {
       "pool_id": "greater_possessed_legacy",
@@ -810,7 +839,8 @@
       "status": [
         "USER_CONFIRMED_EXACT_COUNT_6",
         "LEGACY_DATASHEET_MODEL",
-        "BUILD_STATE_UNRECONCILED",
+        "ASSEMBLED_PAINTED_2",
+        "ON_SPRUE_4",
         "CURRENT_ROLE_MAPPING_POSSESSED_CANDIDATE"
       ],
       "roles": [
@@ -829,10 +859,16 @@
         "total": 6
       },
       "notes": [
-        "User counted six Greater Possessed physical models.",
-        "Two Shadowspear boxes account for four bodies; two more were acquired separately from the same release lineage.",
-        "Current CSM roster universe has Possessed but no separate Greater Possessed datasheet; preserve the physical identity while mapping them as Possessed-role candidates."
-      ]
+        "Exactly six legacy Greater Possessed are owned.",
+        "Two are assembled and painted.",
+        "Four remain on sprues.",
+        "Physical identity remains Greater Possessed; current-role candidate is Possessed because no separate current Greater Possessed datasheet exists."
+      ],
+      "physical_configuration": {
+        "total": 6,
+        "assembled_painted": 2,
+        "on_sprue_unassembled": 4
+      }
     },
     {
       "pool_id": "gal_vorbak",
@@ -841,8 +877,10 @@
       "status": [
         "USER_CONFIRMED_EXACT_COUNT_10",
         "HORUS_HERESY_MODEL_POOL",
-        "PROXY_ROLE_POSSESSED",
-        "BUILD_STATE_UNRECONCILED"
+        "ASSEMBLED_OR_BUILD_COMPLETE_ENOUGH_FOR_PRIMER",
+        "PRIMED_BASECOATED",
+        "UNBASED",
+        "PROXY_ROLE_POSSESSED"
       ],
       "roles": [
         {
@@ -852,9 +890,15 @@
       ],
       "notes": [
         "Ten Gal Vorbak physical models are owned.",
-        "They remain Horus Heresy Gal Vorbak in physical identity but can be used by the user to represent CSM Possessed.",
-        "Build/paint/base-state reconciliation remains open."
-      ]
+        "User confirmed the models are sprayed/primed in a base coat and currently have no bases attached.",
+        "They remain Horus Heresy physical identities and can represent CSM Possessed."
+      ],
+      "physical_configuration": {
+        "primed_or_basecoated": true,
+        "bases_attached": false,
+        "paint_state": "PRIMER_BASECOAT_ONLY",
+        "proxy_role": "Possessed"
+      }
     },
     {
       "pool_id": "argel_tal",
@@ -863,8 +907,10 @@
       "status": [
         "USER_CONFIRMED_EXACT_COUNT_1",
         "HORUS_HERESY_CHARACTER_MODEL",
-        "PROXY_ROLE_POSSESSED",
-        "BUILD_STATE_UNRECONCILED"
+        "ASSEMBLED_OR_BUILD_COMPLETE_ENOUGH_FOR_PRIMER",
+        "PRIMED_BASECOATED",
+        "UNBASED",
+        "PROXY_ROLE_POSSESSED"
       ],
       "roles": [
         {
@@ -874,16 +920,22 @@
       ],
       "notes": [
         "One Argel Tal physical model is owned.",
-        "Physical identity remains Argel Tal; user states it can represent a Possessed model in the CSM collection.",
-        "Build/paint/base-state reconciliation remains open."
-      ]
+        "User confirmed the models are sprayed/primed in a base coat and currently have no bases attached.",
+        "They remain Horus Heresy physical identities and can represent CSM Possessed."
+      ],
+      "physical_configuration": {
+        "primed_or_basecoated": true,
+        "bases_attached": false,
+        "paint_state": "PRIMER_BASECOAT_ONLY",
+        "proxy_role": "Possessed"
+      }
     }
   ],
   "confirmed_totals": {
     "wave1_source_declared_top_level_unit_entries": 34,
     "wave1_source_declared_physical_bodies": 117,
-    "normalized_physical_bodies_lower_bound": 149,
-    "actual_total_owned": "UNKNOWN_EXPLICITLY_LARGER_THAN_RECONCILED_LOWER_BOUND",
+    "normalized_physical_bodies_lower_bound": 151,
+    "actual_total_owned": "UNKNOWN_EXPLICITLY_LARGER_THAN_RECONCILED_LOWER_BOUND_DUE_KILL_TEAM_CHOSEN_AND_FURTHER_WAVES",
     "character_or_single_model_top_level_entries": 15,
     "source_declared_cultist_bodies": 40,
     "source_declared_legionary_bodies": 15,
@@ -897,7 +949,16 @@
     "obliterators_assembled": 3,
     "obliterators_on_sprue": 1,
     "current_possessed_on_sprue": 5,
-    "shadowspear_legionaries_directly_located": 17
+    "shadowspear_legionaries_directly_located": 17,
+    "wave2_reconciled_unique_body_lower_bound": 151,
+    "shadowspear_legionaries_total": 20,
+    "shadowspear_legionaries_on_sprue": 10,
+    "shadowspear_legionaries_assembled_unpainted_outside_kill_team": 7,
+    "shadowspear_legionaries_in_kill_team": 3,
+    "dark_vengeance_chaos_lord_bodies": 2,
+    "greater_possessed_assembled_painted": 2,
+    "greater_possessed_on_sprue": 4,
+    "shared_winged_daemon_prince_additional_csm_bodies": 0
   },
   "constraints": [
     {
@@ -918,18 +979,13 @@
   ],
   "open_questions": [
     {
-      "id": "CSM_DARK_VENGEANCE_LORD_IDENTITY",
-      "question": "Does the generic Chaos Lord selected in the Wave 1 roster correspond to one of the two Dark Vengeance Chaos Lords, or is there an additional third generic Chaos Lord body?",
+      "id": "CSM_KILL_TEAM_LEGIONARIES_COUNT",
+      "question": "What is the full physical body count of the Word Bearers Legionaries Kill Team, and how many of its bodies came from the newer Chosen kit/body pool beyond the three Shadowspear bodies?",
       "state": "USER_CONFIRMATION_REQUIRED"
     },
     {
-      "id": "CSM_DARK_VENGEANCE_CHOSEN_BUILD_STATE",
-      "question": "Are all 12 Dark Vengeance Chosen still present, and what is their current assembled/painted state?",
-      "state": "USER_CONFIRMATION_REQUIRED"
-    },
-    {
-      "id": "CSM_SHADOWSPEAR_LEGIONARY_REMAINDER",
-      "question": "Two Shadowspear boxes originally supplied 20 monopose CSM. Ten are directly observed on sprue and seven are assembled/unpainted. What happened to the remaining three bodies?",
+      "id": "CSM_AUTOCANNON_MODEL_IDENTITY",
+      "question": "The user observed an additional autocannon-armed model that appears to be from Shadowspear. Is it one of the already-counted 20 Shadowspear bodies, or a distinct additional CSM/Chosen/Havoc body?",
       "state": "USER_CONFIRMATION_REQUIRED"
     },
     {
@@ -938,29 +994,9 @@
       "state": "USER_CONFIRMATION_REQUIRED"
     },
     {
-      "id": "CSM_GREATER_POSSESSED_BUILD_STATE",
-      "question": "What is the current assembled/painted state of the six legacy Greater Possessed?",
-      "state": "OPEN"
-    },
-    {
-      "id": "CSM_GAL_VORBAK_ARGEL_TAL_BUILD_STATE",
-      "question": "Are the ten Gal Vorbak and Argel Tal assembled/painted, and are their bases already suitable for the intended Possessed proxy role?",
-      "state": "OPEN"
-    },
-    {
-      "id": "CSM_WORLD_EATERS_HELBRUTE_MELEE_ARM",
-      "question": "For the converted Dark Vengeance Helbrute moved to World Eaters, is the melee arm still the original fist, or was that side also converted?",
-      "state": "USER_CONFIRMATION_REQUIRED"
-    },
-    {
       "id": "CSM_FURTHER_MODELS",
       "question": "Continue enumerating additional CSM models, kits, sprues and historical bodies outside the reconciled starter pools.",
       "state": "OPEN_EXPECTED_MULTIWAVE_RECONCILIATION"
-    },
-    {
-      "id": "CSM_WINGED_DAEMON_PRINCE_IDENTITY",
-      "question": "Is the Heretic Astartes Daemon Prince with wings in this CSM roster the same physical model already recorded as the winged Black Legion-styled Daemon Prince in the Chaos Daemons collection?",
-      "state": "USER_CONFIRMATION_REQUIRED"
     }
   ],
   "provenance": {
@@ -1010,6 +1046,20 @@
           "Ten Shadowspear CSM are directly observed on a complete sprue and seven more are assembled but unpainted.",
           "A separate Legionaries Kill Team themed as Word Bearers was built; exact body count remains to be recorded."
         ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_WAVE2_CLOSEOUT_CLARIFICATION",
+        "facts": [
+          "Both generic Chaos Lords are Dark Vengeance sculpts; one is damaged.",
+          "All 12 Dark Vengeance Chosen are present and retain starter loadouts.",
+          "The previously unresolved three Shadowspear CSM bodies were transferred into the Word Bearers Legionaries Kill Team; user recalls two bolter bodies and one heavy-bolter body.",
+          "The Word Bearers Kill Team was built from newer Chosen bodies plus some Shadowspear Legionaries.",
+          "Six Greater Possessed split as two assembled/painted and four on sprue.",
+          "Ten Gal Vorbak and one Argel Tal are primed/base-coated and currently unbased.",
+          "The World Eaters Dark Vengeance Helbrute retains the original fist as its melee arm.",
+          "The winged CSM Daemon Prince is the same physical Black Legion-styled winged Daemon Prince already recorded in chaos_daemons."
+        ]
       }
     ],
     "product_references": [
@@ -1029,7 +1079,8 @@
     "Raw New Recruit export is not vendored because it contains extensive copyrighted rules text; checksum and normalized collection facts are retained.",
     "The collection must be reconciled by physical body first, then build state, then current-role mapping. Current 11E squad legality must not be used to erase historical physical builds.",
     "This file is intentionally a durable Wave 1 checkpoint, not a claim of collection completeness.",
-    "Wave 2 established Dark Vengeance and Shadowspear acquisition provenance, added legacy/proxy Possessed-role bodies, and promoted several build-state facts while retaining unresolved overlap and missing-body gates."
+    "Wave 2 established Dark Vengeance and Shadowspear acquisition provenance, added legacy/proxy Possessed-role bodies, and promoted several build-state facts while retaining unresolved overlap and missing-body gates.",
+    "Wave 2 closeout resolved the two Dark Vengeance Lords, all 20 Shadowspear CSM acquisition bodies, Greater Possessed build state, Gal Vorbak/Argel Tal state, World Eaters Helbrute fist, and winged Daemon Prince cross-domain identity. Current unique CSM-domain lower bound: 151."
   ],
   "acquisition_groups": [
     {
@@ -1078,6 +1129,81 @@
         "Current physical observation directly located 10 CSM on a complete sprue and 7 assembled/unpainted; three bodies from the nominal twenty remain to be reconciled.",
         "The user's third Master of Possession is consistent with additional purchases but its exact acquisition source is not yet recorded."
       ]
+    }
+  ],
+  "usage_groups": [
+    {
+      "usage_group_id": "word_bearers_legionaries_kill_team",
+      "name": "Legionaries Kill Team — Word Bearers",
+      "status": "PARTIALLY_RECONCILED",
+      "known_constituents": [
+        {
+          "source_pool": "legionaries",
+          "physical_bodies": 3,
+          "origin": "Shadowspear",
+          "known_loadouts_raw": [
+            "2x bolter",
+            "1x heavy bolter"
+          ]
+        },
+        {
+          "source_pool": "newer_chosen_bodies",
+          "physical_bodies": "UNKNOWN",
+          "origin": "newer Chosen kit/body pool"
+        }
+      ],
+      "total_physical_bodies": "UNKNOWN_PENDING_USER_COUNT",
+      "notes": [
+        "This is a usage/configuration group, not a separate ownership pool.",
+        "Three constituent bodies are already counted in the twenty-body Shadowspear Legionaries acquisition pool.",
+        "Additional constituent bodies came from newer Chosen models; exact count remains open and those bodies are not yet included in the unique-body total."
+      ]
+    }
+  ],
+  "resolved_questions": [
+    {
+      "id": "CSM_DARK_VENGEANCE_LORD_IDENTITY",
+      "resolution": "EXACTLY_TWO_DARK_VENGEANCE_CHAOS_LORD_BODIES_NO_THIRD_BODY_ESTABLISHED",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_CONFIRMATION",
+      "details": "Both generic Chaos Lords are Dark Vengeance sculpts; one is damaged."
+    },
+    {
+      "id": "CSM_DARK_VENGEANCE_CHOSEN",
+      "resolution": "TWELVE_PRESENT_ASSEMBLED_FIXED_STARTER_LOADOUTS",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_CONFIRMATION"
+    },
+    {
+      "id": "CSM_SHADOWSPEAR_LEGIONARIES",
+      "resolution": "ALL_TWENTY_ACQUISITION_BODIES_RECONCILED",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_CONFIRMATION",
+      "details": "10 on sprue + 7 assembled/unpainted + 3 transferred into Word Bearers Kill Team."
+    },
+    {
+      "id": "CSM_GREATER_POSSESSED_BUILD_STATE",
+      "resolution": "SIX_TOTAL_TWO_ASSEMBLED_PAINTED_FOUR_ON_SPRUE",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_CONFIRMATION"
+    },
+    {
+      "id": "CSM_GAL_VORBAK_ARGEL_TAL_BUILD_STATE",
+      "resolution": "PRIMED_BASECOATED_AND_UNBASED",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_CONFIRMATION"
+    },
+    {
+      "id": "CSM_WORLD_EATERS_HELBRUTE_MELEE_ARM",
+      "resolution": "ORIGINAL_DARK_VENGEANCE_FIST",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_CONFIRMATION"
+    },
+    {
+      "id": "CSM_WINGED_DAEMON_PRINCE_IDENTITY",
+      "resolution": "SAME_PHYSICAL_BODY_AS_BLACK_LEGION_WINGED_DAEMON_PRINCE_IN_CHAOS_DAEMONS",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_CONFIRMATION"
     }
   ]
 }
