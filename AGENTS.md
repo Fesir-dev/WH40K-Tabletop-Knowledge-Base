@@ -83,3 +83,4 @@ Read before external-source work:
 36. Avoid repeated polling of the same workflow when no new state is expected. Prefer one status check at natural milestone boundaries.
 37. Avoid loading entire large JSON files when a targeted summary/range/query is sufficient.
 38. Do not continue far beyond a newly created unstable checkpoint. If a later phase depends on it, require passing validation first.
+39. Exact official-public ↔ mirror overlap promotes only the matched, provenance-scoped semantic object. Never infer full-faction/Codex/app equivalence from overlap coverage, and never classify `NO_EXACT_PUBLIC_OVERLAP` as a rules conflict without direct official evidence.
