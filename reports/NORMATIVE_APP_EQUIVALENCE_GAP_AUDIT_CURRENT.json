@@ -83,7 +83,10 @@
     "core_rules_rule_reference_families": 24,
     "core_rules_rule_reference_count": 141,
     "official_public_exact_overlap": "PASS_EXACT_PUBLIC_OVERLAP_V1",
-    "official_public_residual_classification": "PASS_FAIL_CLOSED_CLASSIFICATION_V1"
+    "official_public_residual_classification": "PASS_FAIL_CLOSED_CLASSIFICATION_V1",
+    "core_rule_reference_atomization": "PASS_141_RULE_ATOMS",
+    "core_rule_atoms": 141,
+    "core_rule_heading_recovery_gaps": 0
   },
   "roster_source_mapping": {
     "counts": {
@@ -601,25 +604,32 @@
   "gaps": [
     {
       "id": "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-      "state": "SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING",
+      "state": "RULE_REFERENCE_ATOMIZATION_CLOSED_PARAGRAPH_BOUNDARIES_PENDING",
       "blocking_scope": [
         "core_rules_content",
         "system_normative_semantics"
       ],
       "evidence": {
-        "repository_state": "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1",
+        "repository_state": "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1",
         "currentness_profile": {
           "required_sources": [
             "GW_40K_DOWNLOADS"
           ],
-          "content_state": "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1",
+          "content_state": "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1",
           "repository_dimension": null,
           "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
           "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-          "authority_boundary": "Public Core Rules top-level numbered families 01-24 are structurally normalized; nested/paragraph AST remains pending.",
+          "authority_boundary": "Public Core Rules families 01-24 and all 141 numbered references have stable short-heading/page-hash identities; paragraph/rule-body boundaries and paragraph AST remain pending.",
           "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
           "rule_reference_families": 24,
-          "rule_reference_count": 141
+          "rule_reference_count": 141,
+          "rule_reference_atomization": {
+            "state": "PASS_141_RULE_ATOMS",
+            "report": "reports/CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json",
+            "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json",
+            "atoms": 141,
+            "heading_recovery_gaps": 0
+          }
         },
         "official_public_source": {
           "id": "GW_11E_CORE_RULES_PUBLIC",
@@ -640,9 +650,17 @@
         "section_structure_state": "PASS_RULE_REFERENCE_FAMILIES_01_24",
         "rule_reference_families": 24,
         "rule_reference_count": 141,
-        "paragraph_level_rules_ast_complete": false
+        "paragraph_level_rules_ast_complete": false,
+        "rule_atomization_report": "reports/CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json",
+        "rule_atomization_state": "PASS_141_RULE_ATOMS",
+        "rule_atoms": 141,
+        "rule_atom_classification_counts": {
+          "REPEATED_IN_FAMILY_HEADING": 5,
+          "UNIQUE_IN_FAMILY_HEADING": 136
+        },
+        "atoms_with_cross_references": 40
       },
-      "next_action": "Atomize the verified Core Rules numbered references into stable per-rule structural objects without vendoring paragraph prose."
+      "next_action": "Extract copyright-safe paragraph/rule-body boundaries for the 141 stable Core rule atoms using page/range hashes; keep paragraph prose external."
     },
     {
       "id": "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
@@ -951,7 +969,7 @@
   "conclusion": {
     "why_current_normalized_factions_is_zero": "The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
     "publicly_closable_now": [
-      "Core Rules per-reference structural atomization",
+      "Core Rules per-reference paragraph boundary extraction",
       "deeper public Faction Pack structured extraction inside proven public scope",
       "review of edition-11 residual provenance without automatic promotion",
       "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING"
@@ -960,7 +978,7 @@
       "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
       "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS"
     ],
-    "recommended_next_milestone": "CORE_RULE_REFERENCE_ATOMIZATION_V1",
-    "expected_effect": "Top-level Core Rules structure is closed at families 01-24, 4,070 exact scoped public-overlap units are structured, and all 1,566 unscoped plus 7,936 no-exact residuals are fail-closed classified. Next atomize Core rule references without changing whole-faction normative coverage; app/Codex-only semantics remain pending."
+    "recommended_next_milestone": "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1",
+    "expected_effect": "All 141 numbered Core rule references now have stable structural identities with verified heading/page-hash provenance and zero recovery gaps. Next extract rule-body boundaries without storing paragraph prose; full faction/app equivalence and whole-faction normative coverage remain unchanged."
   }
 }
