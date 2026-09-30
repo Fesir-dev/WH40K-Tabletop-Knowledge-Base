@@ -46,9 +46,11 @@ jobs:
           key: official-public-rules-${{ hashFiles('sources/discoveries/gw_public_rules_surface_2026-09-29.json', 'sources/snapshots/gw_11e_official_assets_2026-09-29.json') }}
       - name: Run full public official mirror overlap audit
         run: |
+          mkdir -p .cache/official-public-mirror-overlap
           python tools/audit_official_public_mirror_overlap.py \
             --as-of 2026-09-29 \
-            --output reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json
+            --output reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json \
+            --detail-output .cache/official-public-mirror-overlap/detail.json
       - name: Enforce authority boundary
         run: |
           python - <<'PY'
@@ -61,13 +63,17 @@ jobs:
           assert r['authority_boundary']['public_overlap_match_promotes_full_faction'] is False
           assert r['interpretation']['normative_promotion'] is False
           assert r['core_rules']['state']=='NO_COMPARABLE_WAVE_B_GLOBAL_RULES_CORPUS'
-          assert all('_text' not in x for d in r['documents'] for x in d['results'])
+          assert r['detail_storage']['repository_committed'] is False
+          assert all('results' not in d for d in r['documents'])
+          assert all('_text' not in x for d in r['documents'] for rows in d.get('review_samples',{}).values() for x in rows)
           print(json.dumps(r['summary'],indent=2))
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: official-public-mirror-overlap-${{ github.run_id }}
-          path: reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json
+          path: |
+            reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json
+            .cache/official-public-mirror-overlap/detail.json
           if-no-files-found: error
       - name: Commit generated overlap report on push
         if: github.event_name == 'push' && github.ref_name != 'main'
