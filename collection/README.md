@@ -32,6 +32,7 @@ Historical roster point values may be retained only as explicitly dated snapshot
 - `chaos_daemons/` — Khorne, Tzeentch, Slaanesh, Nurgle and Undivided daemon physical collection pools, normalized/reconciled incrementally on 2026-09-30.
 - `adeptus_mechanicus/` — reconciled 121-model physical collection, closed 2026-09-30 with magnetization/loadout constraints recorded.
 - `imperial_knights/` — 4-model direct-confirmation baseline: 2 fully magnetized Armiger chassis + 2 magnetized Questoris-scale chassis with shared component pools.
+- `chaos_space_marines/` — Wave 1 lower-bound import from a 3600-point New Recruit collection snapshot: 117 represented physical bodies, explicitly incomplete and pending multi-edition build/loadout reconciliation.
 
 All newly imported Chaos-side inventories are `PROVISIONAL` until remaining build state, magnetization and loose component pools are physically reconciled. The previously suspected Daemon Prince shared-body overlap was resolved by user confirmation on 2026-09-30: five distinct Daemon Prince physical models are confirmed across the World Eaters and Chaos Daemons domains.
 
