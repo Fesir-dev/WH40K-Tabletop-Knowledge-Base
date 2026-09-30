@@ -6,6 +6,18 @@ Updated: **2026-09-29**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
+Latest closed official-public ↔ mirror overlap milestone:
+
+- merged PR: **#9**;
+- merge commit: `a933e69856753d4a97b1537d77eb599c7b2b6dbd`;
+- validated PR head: `aadd558093a25bbd56e54724ff97624aeca4f0ca`;
+- final generic repository validation: `36688560039` — **SUCCESS**;
+- final normative/app gap reproducibility: `36688560359` — **SUCCESS**;
+- final full official-public mirror overlap audit: `36688560258` — **SUCCESS**;
+- structured exact scoped official-public units: **4,070**;
+- next milestone: `OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION`.
+
+
 Latest validated official-public fingerprint evidence:
 
 - merged milestone commit: `1eaa07e137c72ebc5087c3306a3eaa0752356c80`
