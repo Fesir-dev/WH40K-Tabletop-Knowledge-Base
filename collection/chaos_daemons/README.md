@@ -3,51 +3,88 @@
 Checkpoint: **2026-09-30**  
 Status: **PROVISIONAL**
 
-Normalized from three user-supplied New Recruit exports plus direct user confirmation of additional physical models, now including the Slaanesh collection.
+Canonical physical inventory: `current.json`.
 
-- Original Khorne/Tzeentch source-declared daemon physical bodies: **158**.
-- Additional pre-Slaanesh user-confirmed daemon bodies not present in those exports: **3**.
-- Slaanesh import adds **155 unique physical bodies/models** beyond the already-recorded shared Be'lakor.
-- Current normalized Chaos Daemons physical bodies/models in this domain: **316**.
-- The Tzeentch-labelled export used a Titanicus Traitoris catalogue only as a host/container; no Titanicus physical collection is inferred.
-- Daemon Prince identity overlap is resolved.
+The domain remains `PROVISIONAL` because some older Tzeentch/Nurgle build-state and magnetization details have not yet been physically reconciled. Physical counts for Slaanesh and Khorne are closed.
 
-## Confirmed Daemon Prince miniatures
+## Current physical total
 
-Across `world_eaters/` and `chaos_daemons/`, **5 distinct physical Daemon Prince models** are confirmed:
+**340 physical bodies/models** inside `collection/chaos_daemons`.
 
-1. wingless, Khorne-styled;
-2. winged, Tzeentch-styled;
-3. winged, Black Legion-styled;
-4. wingless, Nurgle-styled;
-5. one unbuilt Daemon Prince kit still on sprue, with future configuration/theme unspecified.
+This total deliberately excludes the separate wingless Khorne-styled Daemon Prince tracked in `collection/world_eaters`.
 
-Important: physical styling is recorded separately from source roster rules alignment. The winged Tzeentch-styled model was selected with a Khorne rules alignment in the imported New Recruit export; the physical model is still recorded as Tzeentch-styled.
+Across the two domains, **5 distinct Daemon Prince physical models** are confirmed:
 
-Raw exports are not vendored because they include extensive rules text.
+1. wingless Khorne-styled — tracked in `world_eaters`;
+2. winged Tzeentch-styled;
+3. winged Black Legion-styled;
+4. wingless Nurgle-styled;
+5. one unbuilt Daemon Prince kit on sprue.
 
-The canonical normalized inventory is `current.json`.
+Physical styling and current rules alignment remain separate facts.
 
+## Khorne — physical reconciliation closed
 
-## Slaanesh collection — physical-count reconciliation closed
+Khorne-aligned bodies inside this domain: **46**.
 
-The uploaded Slaanesh roster is retained as configuration/provenance evidence. Direct user confirmation supersedes its incomplete bulk-unit counts.
+Including the separately tracked wingless Khorne Daemon Prince: **47 Khorne-styled physical models across collection domains**.
+
+Exact/confirmed Khorne pools:
+
+- Skarbrand — **1**, assembled;
+- Bloodthirsters — **2**, assembled fixed non-magnetized builds:
+  - one two-handed weapon build;
+  - one axe + whip build;
+- Bloodletters — **20**, all assembled;
+- Bloodcrushers — **6**, all assembled;
+- Flesh Hounds — **10**, all assembled;
+- Bloodmasters — **2**;
+- Karanak — **1**;
+- Rendmaster on Blood Throne / Skull Cannon — **1 shared magnetized chariot chassis**;
+- Skullmaster — **1**;
+- Skulltaker — **1**;
+- Skull Altar — **1**.
+
+The Rendmaster/Skull Cannon chassis can instantiate either role, never both simultaneously.
+
+The separate Khorne-styled Daemon Prince is an assembled fixed foot build and is not magnetized.
+
+No further Khorne daemon/Age of Sigmar models are currently recalled outside the recorded collection.
+
+### Current roster-role coverage
+
+The physical collection can instantiate all **12 current non-Legends Khorne-specific Chaos Daemons datasheet roles** represented in the current roster universe:
+
+- Bloodcrushers
+- Bloodletters
+- Bloodmaster
+- Bloodthirster
+- Flesh Hounds
+- Karanak
+- Rendmaster on Blood Throne
+- Skarbrand
+- Skull Altar
+- Skull Cannon
+- Skullmaster
+- Skulltaker
+
+This is role coverage, not simultaneous-fielding capacity: Rendmaster and Skull Cannon share one body.
+
+## Slaanesh — physical-count reconciliation closed
 
 ### Daemonettes
 
 - **110 owned total — exact**
 - **at least 90 assembled**
 - the remaining 20 are owned, but their exact assembled/on-sprue split is intentionally not invented
-- source roster represented only 60
 
-Current roster limits do not cap physical ownership. Legacy 40K/Age of Sigmar surplus remains part of the collection.
+The source roster represented only 60. Current roster limits do not cap physical ownership.
 
 ### Seekers
 
 - **30 owned total — exact**
 - 15 assembled
 - 15 unassembled/on sprue
-- source roster represented only 15
 
 ### Keeper of Secrets / Shalaxi Helbane
 
@@ -55,17 +92,17 @@ There are **2 physical Keeper-scale bodies total**.
 
 Body A:
 - magnetized;
-- can represent **Keeper of Secrets or Shalaxi Helbane**;
-- magnetized arm options include the user's whip, shield and claw configurations.
+- can represent Keeper of Secrets or Shalaxi Helbane;
+- magnetized arm options include whip, shield and claw configurations.
 
 Body B:
 - fixed/non-magnetized Keeper build;
 - current build: sword + hand/arm;
 - shield magnetization would be future conversion work only.
 
-Shalaxi therefore does **not** create a third physical model.
+Shalaxi does not create a third physical model.
 
-### Other Slaanesh models — exact assembled counts
+### Other exact assembled Slaanesh models
 
 - Syll'esske — 1
 - The Masque of Slaanesh — 1
@@ -75,57 +112,42 @@ Shalaxi therefore does **not** create a third physical model.
 - Tranceweaver — 1
 - Fiends — 6
 
-The user confirmed all of the above source counts are complete and all of those models are assembled.
+The Be'lakor selected in the Slaanesh export is the same single physical Be'lakor already represented in this inventory.
 
-### Be'lakor overlap
+Slaanesh contributes **155 unique physical bodies/models** beyond that shared Be'lakor.
 
-The Be'lakor selected in the Slaanesh export is the **same single physical Be'lakor** already represented in this inventory. It is not double-counted.
+## Nurgle — count layer recorded
 
-### Slaanesh reconciliation result
-
-The Slaanesh import contributes **155 unique physical bodies/models** beyond the already-counted Be'lakor.
-
-Current normalized Chaos Daemons collection total: **316 physical bodies/models**.
-
-The Slaanesh physical-count reconciliation is closed. The overall Chaos Daemons domain remains provisional only because build state/magnetization for older Khorne/Tzeentch pools has not yet been fully reconciled.
-
-
-## Nurgle collection — 2026-09-30
-
-Direct user-confirmed physical counts:
+Direct user-confirmed counts:
 
 - Poxbringer — **1**
 - Beasts of Nurgle — **4**
 - Nurglings — **12**
 
-These 17 models are additional to the already-recorded **1 wingless Nurgle-styled Daemon Prince**.
+These are additional to the already-recorded **1 wingless Nurgle-styled Daemon Prince**.
 
 Current Nurgle-aligned physical count in this domain: **18**.
 
-Current normalized Chaos Daemons collection total: **340 physical bodies/models**.
+Build-state/magnetization for Poxbringer, Beasts and Nurglings was not separately stated and is therefore not inferred.
 
-Build state/magnetization for these three newly enumerated Nurgle pools was not separately stated and is therefore not inferred.
+## Tzeentch
 
+The Tzeentch physical pools remain normalized from the supplied collection export plus direct Daemon Prince identity correction.
 
-## Khorne collection expansion — 2026-09-30
+Current recorded Tzeentch-aligned total: **118**.
 
-Direct user-confirmed additional physical models:
+The old export used a Titanicus Traitoris catalogue only as a host/container; no Titanicus physical models are inferred.
 
-- Bloodmaster — **2**
-- Karanak — **1**
-- Rendmaster on Blood Throne / Skull Cannon — **1 shared magnetized chariot chassis**
-- Skullmaster — **1**
-- Skulltaker — **1**
-- Skull Altar — **1**
+Tzeentch body counts are recorded, but detailed build-state/magnetization reconciliation remains open.
 
-The Rendmaster/Skull Cannon chassis is one physical model with mutually exclusive magnetized roles and is counted only once.
+## Undivided / other physical bodies
 
-These additions contribute **7 unique physical models** beyond the original New Recruit-derived Khorne layer.
+- Be'lakor — **1**
+- winged Black Legion-styled Daemon Prince — **1**
+- unbuilt Daemon Prince kit — **1**
 
-Current Khorne-aligned total inside `chaos_daemons`: **46**.
+## Provenance boundary
 
-Including the separately tracked wingless Khorne-styled Daemon Prince in `world_eaters`, the cross-domain Khorne-styled physical total is **47**.
+Raw New Recruit exports are not vendored because they contain extensive copyrighted rules text. The repository stores hashes, normalized physical facts and direct user corrections.
 
-Current normalized `chaos_daemons` total: **340 physical bodies/models**.
-
-Khorne reconciliation is not yet closed: the original Bloodletters/Bloodcrushers/Flesh Hounds totals and Bloodthirster build/magnetization state still require direct confirmation, and any further legacy/Age of Sigmar Khorne bodies must be checked.
+Roster selections and historical points are configuration evidence only; they are not physical collection authority where direct user inspection or confirmation exists.

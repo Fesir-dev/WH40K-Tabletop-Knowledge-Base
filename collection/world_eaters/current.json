@@ -59,8 +59,8 @@
       "status": [
         "SOURCE_EXPORT_DECLARED",
         "USER_CONFIRMED_DISTINCT_PHYSICAL_MODEL",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "ASSEMBLED",
+        "FIXED_NON_MAGNETIZED_BUILD"
       ],
       "roles": [
         {
@@ -75,13 +75,16 @@
       "notes": [
         "Physical body is present in the source export.",
         "User confirmed on 2026-09-30 that this is a distinct wingless/foot Daemon Prince miniature styled for Khorne.",
-        "This model is not the winged Tzeentch Daemon Prince and is not shared with the other confirmed Daemon Prince miniatures."
+        "This model is not the winged Tzeentch Daemon Prince and is not shared with the other confirmed Daemon Prince miniatures.",
+        "User confirmed on 2026-09-30 that this Khorne-styled Daemon Prince is an assembled fixed foot build and is not magnetized."
       ],
       "physical_identity_id": "daemon_prince_khorne_foot_01",
       "physical_configuration": {
         "wings": false,
         "physical_theme": "Khorne",
-        "build_state": "UNKNOWN_NOT_STATED"
+        "build_state": "ASSEMBLED",
+        "magnetized": false,
+        "configuration": "FIXED_FOOT"
       }
     },
     {

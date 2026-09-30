@@ -12,8 +12,8 @@
       "physical_bodies": 1,
       "status": [
         "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
       ],
       "roles": [
         {
@@ -26,9 +26,10 @@
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+        "User confirmed the Khorne collection is complete to the best of current physical recollection; Skarbrand remains the single assembled physical model already represented by the source snapshot."
       ],
-      "alignment": "Khorne"
+      "alignment": "Khorne",
+      "build_state": "ASSEMBLED"
     },
     {
       "pool_id": "bloodthirster",
@@ -36,8 +37,9 @@
       "physical_bodies": 2,
       "status": [
         "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED",
+        "FIXED_NON_MAGNETIZED_BUILDS"
       ],
       "roles": [
         {
@@ -50,9 +52,29 @@
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+        "User confirmed both Bloodthirsters are assembled fixed builds and are not magnetized."
       ],
-      "alignment": "Khorne"
+      "alignment": "Khorne",
+      "build_state": "ASSEMBLED",
+      "physical_configuration": {
+        "body_count": 2,
+        "magnetized": false,
+        "bodies": [
+          {
+            "body": "Bloodthirster A",
+            "build": "fixed",
+            "raw_user_description": "двуручник",
+            "normalized_description": "two-handed weapon build"
+          },
+          {
+            "body": "Bloodthirster B",
+            "build": "fixed",
+            "raw_user_description": "обычный топор и кнут",
+            "normalized_description": "axe and whip build"
+          }
+        ],
+        "rules_note": "Physical loadouts are recorded here without asserting whether current 40K rules distinguish these builds."
+      }
     },
     {
       "pool_id": "bloodletters",
@@ -60,8 +82,8 @@
       "physical_bodies": 20,
       "status": [
         "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
       ],
       "roles": [
         {
@@ -74,7 +96,7 @@
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+        "User confirmed on 2026-09-30 that 20 is the complete physical total for this pool and all models are assembled."
       ],
       "body_variants": [
         {
@@ -88,7 +110,8 @@
           "evidence": "SOURCE_MODEL_SELECTION"
         }
       ],
-      "alignment": "Khorne"
+      "alignment": "Khorne",
+      "build_state": "ASSEMBLED"
     },
     {
       "pool_id": "bloodcrushers",
@@ -96,8 +119,8 @@
       "physical_bodies": 6,
       "status": [
         "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
       ],
       "roles": [
         {
@@ -110,7 +133,7 @@
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+        "User confirmed on 2026-09-30 that 6 is the complete physical total for this pool and all models are assembled."
       ],
       "body_variants": [
         {
@@ -124,7 +147,8 @@
           "evidence": "SOURCE_MODEL_SELECTION"
         }
       ],
-      "alignment": "Khorne"
+      "alignment": "Khorne",
+      "build_state": "ASSEMBLED"
     },
     {
       "pool_id": "flesh_hounds",
@@ -132,8 +156,8 @@
       "physical_bodies": 10,
       "status": [
         "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "USER_CONFIRMED_EXACT_COUNT",
+        "ASSEMBLED"
       ],
       "roles": [
         {
@@ -146,7 +170,7 @@
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+        "User confirmed on 2026-09-30 that 10 is the complete physical total for this pool and all models are assembled."
       ],
       "body_variants": [
         {
@@ -160,7 +184,8 @@
           "evidence": "SOURCE_MODEL_SELECTION"
         }
       ],
-      "alignment": "Khorne"
+      "alignment": "Khorne",
+      "build_state": "ASSEMBLED"
     },
     {
       "pool_id": "belakor",
@@ -1129,7 +1154,10 @@
     "nurgle_aligned_bodies_including_existing_daemon_prince": 18,
     "khorne_newly_confirmed_bodies_2026_09_30": 7,
     "khorne_aligned_bodies_in_chaos_daemons_inventory": 46,
-    "khorne_styled_bodies_across_world_eaters_and_chaos_daemons": 47
+    "khorne_styled_bodies_across_world_eaters_and_chaos_daemons": 47,
+    "khorne_physical_reconciliation_state": "CLOSED",
+    "khorne_current_non_legends_datasheet_roles_representable": 12,
+    "khorne_shared_role_constraint_count": 1
   },
   "constraints": [
     {
@@ -1148,11 +1176,6 @@
       "id": "TITANICUS_CONTAINER_ONLY",
       "question": "The Tzeentch daemon export used the Titanicus Traitoris catalogue as a container. No Titanicus physical models are inferred from that catalogue choice.",
       "state": "RESOLVED_BY_IMPORT_POLICY"
-    },
-    {
-      "id": "KHORNE_PHYSICAL_RECONCILIATION_REMAINDER",
-      "question": "Confirm whether Bloodletters 20, Bloodcrushers 6 and Flesh Hounds 10 are complete physical totals; record Bloodthirster build/magnetization state; record the separate Khorne Daemon Prince build state in world_eaters; confirm whether any further Khorne daemon bodies/legacy-AoS models remain outside the current inventory.",
-      "state": "USER_CONFIRMATION_REQUIRED"
     }
   ],
   "notes": [
@@ -1164,7 +1187,8 @@
     "Slaanesh collection import added on 2026-09-30. Source roster limits are not used to cap physical ownership; legacy and Age of Sigmar surplus remains part of the collection.",
     "Slaanesh physical-count reconciliation is closed at 155 unique Slaanesh-aligned bodies beyond the shared Be'lakor, bringing the normalized Chaos Daemons inventory to 316 physical bodies/models.",
     "Nurgle count layer added: 17 newly enumerated Nurgle models plus the already-recorded Nurgle-styled Daemon Prince, bringing the Chaos Daemons normalized physical total to 333.",
-    "Khorne direct-confirmation expansion added 7 unique physical bodies/models beyond the original New Recruit-derived Khorne pools. The magnetized Rendmaster/Skull Cannon chassis is counted once."
+    "Khorne direct-confirmation expansion added 7 unique physical bodies/models beyond the original New Recruit-derived Khorne pools. The magnetized Rendmaster/Skull Cannon chassis is counted once.",
+    "Khorne physical reconciliation is closed. The recorded Khorne-specific current datasheet roles are fully represented by owned bodies/configurations, with Rendmaster/Skull Cannon sharing one magnetized chassis."
   ],
   "provenance": {
     "source_files": [
@@ -1257,6 +1281,17 @@
           "Skulltaker: 1 physical model.",
           "Skull Altar: 1 physical model."
         ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_KHORNE_RECONCILIATION_CLOSEOUT",
+        "facts": [
+          "Bloodletters: exactly 20 physical models, all assembled.",
+          "Bloodcrushers: exactly 6 physical models, all assembled.",
+          "Flesh Hounds: exactly 10 physical models, all assembled.",
+          "Bloodthirsters: exactly 2 physical models, both assembled fixed non-magnetized builds; one uses the user's two-handed build, the other axe + whip.",
+          "No further Khorne daemon/Age of Sigmar models are currently recalled outside the recorded inventory."
+        ]
       }
     ]
   },
@@ -1286,6 +1321,13 @@
       "resolution": "EXACT_OWNED_TOTAL_110_ASSEMBLED_MINIMUM_90_BUILD_SPLIT_NOT_FORCED",
       "resolved_at": "2026-09-30",
       "evidence": "USER_CONFIRMATION"
+    },
+    {
+      "id": "KHORNE_PHYSICAL_RECONCILIATION",
+      "resolution": "CLOSED",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_CONFIRMATION",
+      "details": "Bloodletters 20, Bloodcrushers 6 and Flesh Hounds 10 are complete assembled totals. Two Bloodthirsters are fixed non-magnetized builds (one two-handed, one axe+whip). The separate Khorne Daemon Prince is a fixed foot build. No further Khorne daemon/AoS models are recalled outside the recorded inventory."
     }
   ]
 }
