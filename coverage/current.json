@@ -1,7 +1,7 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "as_of": "2026-09-30",
-  "status": "CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE",
+  "status": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
   "global": {
     "catalogued_roster_universe": 37,
@@ -95,7 +95,33 @@
     "official_public_core_paragraph_range_validation_failures": 0,
     "official_public_core_paragraph_semantic_classification_complete": false,
     "official_public_core_paragraph_semantic_ast_complete": false,
-    "official_public_core_paragraph_atomization_current_normalized_factions_change": 0
+    "official_public_core_paragraph_atomization_current_normalized_factions_change": 0,
+    "official_public_core_paragraph_semantic_classification_status": "PASS_310_PARAGRAPHS_CLASSIFIED",
+    "official_public_core_paragraph_semantic_classified": 310,
+    "official_public_core_paragraphs_with_signals": 200,
+    "official_public_core_paragraphs_without_signals": 110,
+    "official_public_core_paragraph_high_confidence": 62,
+    "official_public_core_paragraph_mixed": 138,
+    "official_public_core_paragraph_unclassified": 110,
+    "official_public_core_paragraph_repeated_variants": 10,
+    "official_public_core_paragraph_role_counts": {
+      "CONDITION_OR_TRIGGER": 27,
+      "MIXED": 138,
+      "MODIFICATION_OR_REPLACEMENT": 1,
+      "OBLIGATION": 1,
+      "PERMISSION": 20,
+      "PROCEDURE_OR_SEQUENCE": 9,
+      "PROHIBITION": 4,
+      "UNCLASSIFIED": 110
+    },
+    "official_public_core_paragraph_confidence_counts": {
+      "HIGH": 62,
+      "MIXED": 138,
+      "NONE": 110
+    },
+    "official_public_core_condition_effect_ast_complete": false,
+    "official_public_core_rule_interaction_graph_complete": false,
+    "official_public_core_paragraph_semantic_classification_current_normalized_factions_change": 0
   },
   "dimensions": [
     "points",
