@@ -578,6 +578,14 @@
     "source_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
     "paragraph_semantic_ast_complete": false,
     "current_normalized_factions_change": 0,
-    "authority_rule": "Stable paragraph identities preserve parent rule/occurrence/page/range/hash provenance only. Repeated variants are structural, not semantic conflicts; no paragraph prose, semantic AST, interaction graph or Codex/app equivalence is claimed."
+    "authority_rule": "Stable paragraph identities preserve parent rule/occurrence/page/range/hash provenance only. Repeated variants are structural, not semantic conflicts; no paragraph prose, semantic AST, interaction graph or Codex/app equivalence is claimed.",
+    "closure_report": "reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CLOSURE_2026-09-30.md",
+    "latest_validation": {
+      "head": "c35e9604f61f14e3f3db3a3c39a3144f3306dad6",
+      "paragraph_atomization_workflow_run": 36703546953,
+      "normative_gap_audit_run": 36703546973,
+      "repository_ci_run": 36703546698,
+      "result": "SUCCESS"
+    }
   }
 }
