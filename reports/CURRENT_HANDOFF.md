@@ -8,6 +8,9 @@ Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
 Latest closed Core direct-modal AST semantic-validation milestone:
 
+- merged PR: **#29**;
+- merge commit: `005e040f1d1393f9cfd369a9b300c03bb99364ba`;
+- validated PR head: `3c5a708abaa3e88b3f62005f5b7090b82378e8ed`;
 - target node: `core-ast-direct-modal--13-07--p50-o1`;
 - rule / paragraph: `13.07` / `core-rule-13-07--p50--l1--para-p50-o1`;
 - validation decision: **OPAQUE_PRESERVED**;
@@ -18,9 +21,10 @@ Latest closed Core direct-modal AST semantic-validation milestone:
 - AST mutated: **false**;
 - interaction edges created: **0**;
 - additional paragraphs admitted: **0**;
-- semantic-validation workflow: `36729536267` — **SUCCESS**;
-- normative/app gap audit: `36733041159` — **SUCCESS**;
-- generic repository validation: `36733049749` — **SUCCESS**;
+- semantic-validation workflow: `36733351388` — **SUCCESS**;
+- normative/app gap audit: `36733351608` — **SUCCESS**;
+- generic repository validation: `36733351431` — **SUCCESS**;
+- overlap regression: `36733351472` — **SUCCESS**;
 - closure: `reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSURE_2026-09-30.md`;
 - whole-faction normative counters: unchanged at **0**;
 - next milestone: `CORE_RULE_AST_READINESS_EXPANSION_V1`.
