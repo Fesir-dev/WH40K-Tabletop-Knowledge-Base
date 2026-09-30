@@ -114,3 +114,12 @@ The target system therefore answers them in order:
 The preserved rules baseline is from 2026-08-15 and remains historical until the current official-source refresh is complete.
 
 The Custodes inventory baseline is from 2026-07-11 and is treated as `PROVISIONAL` until remaining physical uncertainty is resolved.
+
+
+## Shared physical pools across factions
+
+When the same physical miniatures are routinely used by multiple faction collections, ownership is normalized into one canonical shared collection pool rather than duplicated into every faction inventory.
+
+A faction inventory may reference the shared pool for roster feasibility, but the reference contributes zero local physical bodies. Simultaneous roster allocation must still respect the finite global body count.
+
+Current example: `collection/chaos_shared` stores the user's ten Chaos Spawn once for allocation across CSM, World Eaters, Thousand Sons and other eligible Chaos armies.
