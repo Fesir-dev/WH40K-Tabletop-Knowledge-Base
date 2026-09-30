@@ -184,3 +184,53 @@ Active milestone:
 
 Next compare only semantic units that can be mapped with exact provenance between the public official corpus and the current mirror. Do not infer Codex/app-only text from overlap matches.
 
+## Official public overlap + structured expansion — COMPLETE 2026-09-30
+
+The public Games Workshop ↔ current-mirror comparison and scoped structured expansion are closed:
+
+- mirror semantic units audited: **13,572**;
+- exact public overlap: **5,636**;
+- exact scoped structured units: **4,070**;
+- exact-but-unscoped residuals: **1,566**, classified with **0** promotions;
+- no-exact residuals: **7,936**, classified with **0** semantic conflicts;
+- Core Rules section structure: families **01–24**, **141** numbered references, all **88** pages verified.
+
+Public exact overlap does not imply full Codex/app equivalence.
+
+## Core rule-reference atomization v1 — COMPLETE
+
+The verified **141** numbered Core Rules references are now stable structural identities.
+
+Result:
+
+- rule atoms: **141 / 141**;
+- unique rule refs / keys: **141 / 141**;
+- families: **24** (`01–24`);
+- unique in-family heading atoms: **136**;
+- repeated in-family heading atoms: **5**;
+- heading-recovery gaps: **0**;
+- atoms with cross-reference pages outside their parent family range: **40**.
+
+The five repeated-heading references are `15.07–15.11`; each appears as valid in-family heading evidence on pages **55** and **57**. They are retained as repeated structural evidence rather than collapsed into a semantic claim.
+
+Every atom retains official page/range hash provenance and bounded short headings. Paragraph rule prose is not committed.
+
+This milestone does **not** claim:
+
+- paragraph/rule-body boundaries are complete;
+- paragraph-level rules AST is complete;
+- rule interaction graph is complete;
+- full Codex/app equivalence;
+- any increase in whole-faction normative coverage.
+
+Strict counters remain:
+
+- `current_normalized_factions = 0`;
+- `full_normative_semantic_factions = 0`.
+
+Active milestone:
+
+`CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1`
+
+Next derive deterministic rule-body/paragraph boundaries for each stable atom using verified official page text transiently while committing only offsets/ranges/hashes and structural metadata, not paragraph prose.
+
