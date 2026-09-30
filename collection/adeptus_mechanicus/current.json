@@ -5,7 +5,7 @@
   "checkpoint": "2026-09-30",
   "repository_registered_at": "2026-09-30",
   "status": "PROVISIONAL",
-  "revision_state": "BASELINE_IMPORT_WITH_CONFIRMED_UNDERCOUNT",
+  "revision_state": "SKITARII_PHYSICAL_RECONCILIATION_PASS1",
   "physical_pools": [
     {
       "pool_id": "belisarius_cawl",
@@ -132,9 +132,10 @@
       "physical_bodies": 30,
       "status": [
         "SOURCE_EXPORT_DECLARED",
-        "KNOWN_UNDERCOUNT_CANDIDATE",
-        "BUILD_STATE_PARTIALLY_REPRESENTED_BY_SOURCE",
-        "WARGEAR_RECHECK_REQUIRED"
+        "USER_PHYSICAL_RECOUNT_IN_PROGRESS",
+        "DIRECTLY_OBSERVED_VARIANTS_PARTIAL",
+        "TOTAL_BODY_COUNT_UNRESOLVED",
+        "WARGEAR_PARTIALLY_VERIFIED"
       ],
       "roles": [
         {
@@ -176,9 +177,45 @@
         }
       ],
       "notes": [
-        "User states the actual physical Ranger count is likely higher than the 30 bodies represented in this export. Exact extra count is pending physical recheck.",
-        "Source-selected weapon variants are a roster/export snapshot only and are not yet promoted to verified physical loadout inventory."
-      ]
+        "The source export represents three 10-model Ranger units but is not a faithful physical-loadout inventory.",
+        "Direct physical recount on 2026-09-30 confirms 3 transuranic arquebus, 3 plasma caliver, 3 arc rifle, 1 enhanced data-tether, 1 omnispex and 13 galvanic-rifle-only Ranger bodies.",
+        "The directly observed variants account for 24 Ranger bodies before Alpha models and any still-unclassified bodies are counted.",
+        "Do not replace the physical collection with the New Recruit unit configurations: the export used only 2 arc rifles, 2 plasma calivers, 2 transuranic arquebuses and 2 data-tethers across its three Ranger units."
+      ],
+      "count_basis": "SOURCE_EXPORT_LOWER_BOUND_PENDING_PHYSICAL_RECOUNT",
+      "user_observed_physical_variants": [
+        {
+          "name": "Skitarii Ranger w/ transuranic arquebus",
+          "physical_bodies": 3,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+        },
+        {
+          "name": "Skitarii Ranger w/ plasma caliver",
+          "physical_bodies": 3,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+        },
+        {
+          "name": "Skitarii Ranger w/ arc rifle",
+          "physical_bodies": 3,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+        },
+        {
+          "name": "Skitarii Ranger w/ enhanced data-tether",
+          "physical_bodies": 1,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+        },
+        {
+          "name": "Skitarii Ranger w/ omnispex",
+          "physical_bodies": 1,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+        },
+        {
+          "name": "Skitarii Ranger w/ galvanic rifle only",
+          "physical_bodies": 13,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+        }
+      ],
+      "user_observed_partial_total_excluding_alpha_and_unclassified": 24
     },
     {
       "pool_id": "skitarii_vanguard",
@@ -186,9 +223,10 @@
       "physical_bodies": 20,
       "status": [
         "SOURCE_EXPORT_DECLARED",
-        "KNOWN_UNDERCOUNT_CANDIDATE",
-        "BUILD_STATE_PARTIALLY_REPRESENTED_BY_SOURCE",
-        "WARGEAR_RECHECK_REQUIRED"
+        "USER_PHYSICAL_RECOUNT_IN_PROGRESS",
+        "DIRECTLY_OBSERVED_VARIANTS_PARTIAL",
+        "TOTAL_BODY_COUNT_UNRESOLVED",
+        "WARGEAR_PARTIALLY_VERIFIED"
       ],
       "roles": [
         {
@@ -225,9 +263,35 @@
         }
       ],
       "notes": [
-        "User states the actual physical Vanguard count is likely higher than the 20 bodies represented in this export. Exact extra count is pending physical recheck.",
-        "Source-selected weapon variants are a roster/export snapshot only and are not yet promoted to verified physical loadout inventory."
-      ]
+        "The source export represents two 10-model Vanguard units but is not a faithful physical-loadout inventory.",
+        "Direct physical recount on 2026-09-30 confirms 3 plasma-caliver bodies, 1 enhanced data-tether body, 1 omnispex body and 7 radium-carbine-only Vanguard bodies.",
+        "The directly observed variants account for 12 Vanguard bodies before Alpha, arc-rifle, transuranic-arquebus and any still-unclassified bodies are counted.",
+        "The source export selected only 1 plasma caliver, 1 transuranic arquebus and 1 data-tether across its two Vanguard units; therefore the physical pool already exceeds that selected configuration in at least plasma and omnispex bodies."
+      ],
+      "count_basis": "SOURCE_EXPORT_LOWER_BOUND_PENDING_PHYSICAL_RECOUNT",
+      "user_observed_physical_variants": [
+        {
+          "name": "Skitarii Vanguard w/ plasma caliver",
+          "physical_bodies": 3,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+        },
+        {
+          "name": "Skitarii Vanguard w/ enhanced data-tether",
+          "physical_bodies": 1,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+        },
+        {
+          "name": "Skitarii Vanguard w/ omnispex",
+          "physical_bodies": 1,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+        },
+        {
+          "name": "Skitarii Vanguard w/ radium carbine only",
+          "physical_bodies": 7,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+        }
+      ],
+      "user_observed_partial_total_excluding_alpha_arc_arquebus_and_unclassified": 12
     },
     {
       "pool_id": "kataphron_destroyers",
@@ -443,14 +507,39 @@
   ],
   "open_questions": [
     {
-      "id": "RANGER_EXTRA_BODY_COUNT",
-      "question": "How many Skitarii Ranger bodies exist beyond the 30 represented in the source export?",
-      "state": "LIKELY_UNDERCOUNT_USER_FLAGGED"
+      "id": "RANGER_ALPHA_COUNT_AND_LOADOUT",
+      "question": "How many distinct Skitarii Ranger Alpha bodies are physically present, and what is each Alpha carrying?",
+      "state": "PENDING_DIRECT_COUNT"
     },
     {
-      "id": "VANGUARD_EXTRA_BODY_COUNT",
-      "question": "How many Skitarii Vanguard bodies exist beyond the 20 represented in the source export?",
-      "state": "LIKELY_UNDERCOUNT_USER_FLAGGED"
+      "id": "RANGER_REMAINING_UNCLASSIFIED_BODIES",
+      "question": "Beyond 3 arquebus, 3 plasma, 3 arc, 1 data-tether, 1 omnispex and 13 rifle-only Rangers, what additional Ranger bodies exist and what are they carrying?",
+      "state": "PENDING_DIRECT_COUNT"
+    },
+    {
+      "id": "VANGUARD_ALPHA_COUNT_AND_LOADOUT",
+      "question": "How many distinct Skitarii Vanguard Alpha bodies are physically present, and what is each Alpha carrying?",
+      "state": "PENDING_DIRECT_COUNT"
+    },
+    {
+      "id": "VANGUARD_ARC_RIFLE_COUNT",
+      "question": "How many physical Vanguard models with arc rifles are present?",
+      "state": "PENDING_DIRECT_COUNT"
+    },
+    {
+      "id": "VANGUARD_ARQUEBUS_COUNT",
+      "question": "How many physical Vanguard models with transuranic arquebuses are present?",
+      "state": "PENDING_DIRECT_COUNT"
+    },
+    {
+      "id": "VANGUARD_REMAINING_UNCLASSIFIED_BODIES",
+      "question": "Beyond 3 plasma, 1 data-tether, 1 omnispex and 7 carbine-only Vanguard, what additional Vanguard bodies exist and what are they carrying?",
+      "state": "PENDING_DIRECT_COUNT"
+    },
+    {
+      "id": "SKITARII_SUPPORT_GEAR_BODY_IDENTITY",
+      "question": "Are the Ranger/Vanguard data-tether and omnispex pieces permanently built on distinct bodies, magnetized/interchangeable, or loose accessories?",
+      "state": "PENDING_PHYSICAL_CONFIGURATION_CHECK"
     },
     {
       "id": "INFILTRATOR_EXTRA_PRINCEPS_COUNT",
@@ -501,6 +590,23 @@
           "Additional Sicarian Infiltrator leader/Princeps bodies exist outside the export count.",
           "Additional Sicarian Ruststalker leader/Princeps bodies exist outside the export count.",
           "Physical loadout/wargear revision will be performed separately after the baseline import."
+        ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_VISUAL_COUNT",
+        "facts": [
+          "Rangers: 3 transuranic arquebus bodies.",
+          "Rangers: 3 plasma-caliver bodies, described as one per intended squad.",
+          "Rangers: 3 arc-rifle bodies, described as one per intended squad.",
+          "Rangers: 1 enhanced data-tether body.",
+          "Rangers: 1 omnispex body.",
+          "Rangers: 13 galvanic-rifle-only bodies.",
+          "Vanguard: 3 plasma-caliver bodies.",
+          "Vanguard: 1 enhanced data-tether body.",
+          "Vanguard: 1 omnispex body.",
+          "Vanguard: 7 standard-ranged-weapon-only bodies, normalized as radium-carbine-only pending confirmation.",
+          "These are partial direct visual counts; Alpha and other remaining bodies are not yet fully reconciled."
         ]
       }
     ]
