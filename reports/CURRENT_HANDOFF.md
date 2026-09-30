@@ -453,18 +453,47 @@ Validated pre-closure checkpoints:
 - normative/app gap audit `36712053275` — **SUCCESS**;
 - semantic AST-readiness workflow `36712053380` — build/authority gates **SUCCESS**.
 
+## Latest Core Rules milestone
+
+`CORE_RULE_DIRECT_MODAL_AST_PILOT_V1` — **CLOSED 2026-09-30**
+
+Exactly one readiness-approved paragraph was parsed:
+
+- rule: `13.07`;
+- paragraph: `core-rule-13-07--p50--l1--para-p50-o1`;
+- node: `core-ast-direct-modal--13-07--p50-o1`;
+- node type: `DIRECT_MODAL_CLAUSE`;
+- paragraph tokens: **17**;
+- opaque subject span: **1 token**;
+- modal operator: **PERMISSION / PERMISSION_CAN / 1 token**;
+- opaque action/predicate span: **15 tokens**;
+- token partition: **17 / 17 complete**;
+- source hash reproduced: **true**;
+- interaction edges: **0**;
+- additional paragraphs admitted: **0**;
+- full condition/effect AST: **incomplete**;
+- `current_normalized_factions = 0` and `full_normative_semantic_factions = 0` unchanged.
+
+Closure:
+`reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CLOSURE_2026-09-30.md`
+
+Validated pre-closure checkpoints:
+- direct-modal pilot workflow `36713380722` — **SUCCESS**;
+- repository validation `36713380314` — **SUCCESS**;
+- normative/app gap audit `36713380431` — **SUCCESS**.
+
 ## Current active milestone
 
-`CORE_RULE_DIRECT_MODAL_AST_PILOT_V1`
+`CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1`
 
 Next unresolved work:
 
-1. parse only `core-rule-13-07--p50--l1--para-p50-o1`;
-2. build the smallest copyright-safe direct-modal AST with source-range/hash provenance;
-3. validate subject/modal/action extraction against the verified official source range;
-4. create **no** interaction edges in the pilot;
-5. do **not** admit a second paragraph until the first pilot closes;
-6. keep repeated variants, Codex/app-only semantics and whole-faction normative counters fail-closed.
+1. semantically validate only node `core-ast-direct-modal--13-07--p50-o1`;
+2. inspect the verified source range and decide whether the **1-token subject** can be deterministically typed;
+3. decide whether the **15-token action/predicate** can be decomposed without speculative inference;
+4. retain source offsets/hashes and zero interaction edges;
+5. do **not** admit a second paragraph;
+6. if typing remains ambiguous, preserve opaque spans and close fail-closed rather than guessing.
 
 ## Execution reliability rule
 
@@ -475,6 +504,6 @@ Next unresolved work:
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, Core paragraph-boundary extraction v1, Core paragraph atomization v1, Core paragraph semantic classification v1, Core paragraph semantic review v1, or Core semantic AST readiness v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, Core paragraph-boundary extraction v1, Core paragraph atomization v1, Core paragraph semantic classification v1, Core paragraph semantic review v1, or Core semantic AST readiness v1, or Core direct-modal AST pilot v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.
