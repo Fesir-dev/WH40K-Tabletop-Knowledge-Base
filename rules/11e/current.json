@@ -299,26 +299,33 @@
   },
   "automation": {
     "upstream_change_watch": {
-      "state": "ACTIVE_NO_CHANGE",
+      "state": "ACTIVE_CHANGE_DETECTED",
       "report": "reports/UPSTREAM_CHANGE_WATCH_CURRENT.json",
       "workflow": ".github/workflows/upstream-change-watch.yml",
       "cadence": "every 6 hours",
       "bsdata_wh40k_11e": {
         "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "live": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "changed": false
+        "live": "374f50544f0274296ab53c2103766ae3945e8799",
+        "changed": true
       },
       "bsdata_mfm_11e": {
         "pinned": "61a687e858c00a4ad205d564959c622a5605ef3d",
-        "live": "61a687e858c00a4ad205d564959c622a5605ef3d",
-        "changed": false
+        "live": "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390",
+        "changed": true,
+        "changed_file_classes": [
+          "CI",
+          "DOCUMENTATION",
+          "OTHER"
+        ],
+        "normative_mfm_data_change_not_inferred": true
       },
       "wahapedia": {
         "manifest_files_checked": 20,
         "changed_files": 0,
         "last_update_changed": false
       },
-      "auto_promote": false
+      "auto_promote": false,
+      "action": "REVIEW_GUARDED_REINGESTION_PLAN_WITHOUT_NORMATIVE_AUTO_PROMOTION"
     },
     "new_recruit_runtime": {
       "state": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
