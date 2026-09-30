@@ -268,3 +268,38 @@ Active milestone:
 
 Next assign stable identities to the **310** page-local paragraph candidates, retain parent rule/occurrence provenance and hashes, and keep semantic parsing as a later layer.
 
+
+## Core paragraph atomization v1 — COMPLETE
+
+All **310** verified page-local Core paragraph-boundary candidates now have stable structural identities.
+
+Result:
+
+- paragraph atoms / unique keys: **310 / 310**;
+- parent rules represented: **141**;
+- parent occurrences represented: **146**;
+- Core families represented: **24**;
+- single-occurrence paragraph atoms: **300**;
+- repeated-occurrence paragraph variants: **10** across `15.07–15.11`;
+- range validation failures: **0**;
+- paragraph semantic hashes reproduced from the verified PDF ranges: **310 / 310**.
+
+Each paragraph atom preserves its parent rule, parent occurrence, page, line/character range, counts, verified page hash, paragraph semantic hash and parent body hash. Paragraph prose is not committed.
+
+The ten repeated-occurrence paragraph atoms remain independent structural variants. They are not paired as semantic equivalents, do not select a canonical occurrence and do not create semantic conflicts automatically.
+
+This milestone does **not** claim:
+
+- semantic paragraph-role completeness;
+- condition/effect AST completeness;
+- rule-interaction graph completeness;
+- Codex/app equivalence;
+- any increase in whole-faction normative coverage.
+
+Strict faction counters remain zero.
+
+Active milestone:
+
+`CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1`
+
+Next classify the **310** stable paragraph identities into conservative semantic roles, preserving ambiguous/mixed cases explicitly and keeping semantic AST construction as a later layer.
