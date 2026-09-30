@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.4",
+  "schema_version": "3.5",
   "edition": "11e",
-  "repository_checkpoint": "2026-09-29",
+  "repository_checkpoint": "2026-09-30",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
   "source_currentness": {
     "mfm": {
@@ -21,7 +21,13 @@
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "PENDING"
+      "normative_structured_normalization": "PENDING",
+      "public_overlap": {
+        "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
+        "exact_core_mirror_units": 21,
+        "structured_core_ast_complete": false,
+        "report": "reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json"
+      }
     },
     "faction_rules_content": {
       "state": "SECONDARY_MIRROR_SEMANTICS_FULL_HASH_MATCH",
@@ -38,7 +44,13 @@
         "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
         "faction_pack_pdfs": 28,
         "scope": "SUPPLEMENTAL_NOT_FULL_CODEX",
-        "full_codex_equivalence": "NOT_CLAIMED"
+        "full_codex_equivalence": "NOT_CLAIMED",
+        "structured_overlap": {
+          "state": "PASS_EXACT_SCOPED_OVERLAP_V1",
+          "units": 4070,
+          "snapshot": "rules/11e/snapshots/2026-09-30/official_public_overlap/index.json",
+          "full_codex_equivalence": "NOT_CLAIMED"
+        }
       }
     },
     "app_wording": {
@@ -58,7 +70,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT",
+  "next_milestone": "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -354,5 +366,26 @@
       "result": "SUCCESS"
     },
     "merged_commit": "1eaa07e137c72ebc5087c3306a3eaa0752356c80"
+  },
+  "official_public_mirror_overlap": {
+    "state": "PASS_EXACT_PUBLIC_OVERLAP_V1",
+    "audited_at": "2026-09-30",
+    "report": "reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json",
+    "recovery_summary": "reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json",
+    "snapshot": "rules/11e/snapshots/2026-09-30/official_public_overlap/index.json",
+    "model": "docs/OFFICIAL_PUBLIC_MIRROR_OVERLAP_MODEL.md",
+    "tool": "tools/audit_official_public_mirror_overlap.py",
+    "workflow": ".github/workflows/official-public-mirror-overlap.yml",
+    "mirror_units": 13572,
+    "exact_public_overlap_units": 5636,
+    "promotable_scoped_units": 4070,
+    "unscoped_exact_units": 1566,
+    "no_exact_overlap_units": 7936,
+    "authority": "GAMES_WORKSHOP_OFFICIAL_PUBLIC_OVERLAP",
+    "scope": "EXACT_PUBLIC_OVERLAP_ONLY",
+    "current_normalized_factions_change": 0,
+    "full_codex_app_equivalence": "NOT_CLAIMED",
+    "core_rules_full_structured_normalization": "PENDING",
+    "authority_rule": "Only exact source/faction-scoped mirror semantic units independently present in verified public Games Workshop material enter the structured overlap snapshot. Unmatched or unscoped mirror text is not promoted and is not assumed wrong."
   }
 }
