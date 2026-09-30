@@ -82,7 +82,7 @@
           "rule_interaction_graph_complete": false
         },
         "paragraph_semantic_classification": {
-          "state": "PASS_310_PARAGRAPH_ROLE_CLASSIFICATIONS",
+          "state": "PASS_310_PARAGRAPHS_CLASSIFIED",
           "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
           "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
           "classifier_version": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
@@ -619,7 +619,7 @@
     }
   },
   "core_rule_paragraph_semantic_classification": {
-    "state": "PASS_310_PARAGRAPH_ROLE_CLASSIFICATIONS",
+    "state": "PASS_310_PARAGRAPHS_CLASSIFIED",
     "as_of": "2026-09-30",
     "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
     "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
