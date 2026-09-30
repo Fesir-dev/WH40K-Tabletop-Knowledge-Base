@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.1",
+  "inventory_id": "world_eaters_personal",
+  "faction": "World Eaters",
+  "checkpoint": "2026-09-30",
+  "repository_registered_at": "2026-09-30",
+  "status": "PROVISIONAL",
+  "physical_pools": [
+    {
+      "pool_id": "angron",
+      "name": "Angron",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Angron",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Epic Hero"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "lord_invocatus",
+      "name": "Lord Invocatus",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Lord Invocatus",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Epic Hero"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "daemon_prince_of_khorne",
+      "name": "Daemon Prince of Khorne",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Daemon Prince of Khorne",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "lord_on_juggernaut",
+      "name": "Lord on Juggernaut",
+      "physical_bodies": 3,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Lord on Juggernaut",
+          "source_unit_instances": 3,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "master_of_executions",
+      "name": "Master of Executions",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Master of Executions",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "slaughterbound",
+      "name": "Slaughterbound",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Slaughterbound",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "khorne_berzerkers",
+      "name": "Khorne Berzerkers",
+      "physical_bodies": 20,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Khorne Berzerkers",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Battleline"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Khorne Berzerker Champion",
+          "physical_bodies": 1,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Khorne Berzerker",
+          "physical_bodies": 19,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "eightbound",
+      "name": "Eightbound",
+      "physical_bodies": 3,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Eightbound",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Infantry"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Eightbound Champion",
+          "physical_bodies": 1,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Eightbound",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "exalted_eightbound",
+      "name": "Exalted Eightbound",
+      "physical_bodies": 6,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Exalted Eightbound",
+          "source_unit_instances": 2,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Infantry"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Exalted Eightbound Champion",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Exalted Eightbound",
+          "physical_bodies": 4,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "jakhals",
+      "name": "Jakhals",
+      "physical_bodies": 10,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Jakhals",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Infantry"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Jakhal Pack Leader",
+          "physical_bodies": 1,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Dishonoured w/ paired manglers",
+          "physical_bodies": 1,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Jakhal",
+          "physical_bodies": 8,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "chaos_spawn",
+      "name": "Chaos Spawn",
+      "physical_bodies": 6,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Chaos Spawn",
+          "source_unit_instances": 3,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Beast"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Chaos Spawn",
+          "physical_bodies": 6,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "helbrute",
+      "name": "Helbrute",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Helbrute",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Vehicle"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    }
+  ],
+  "confirmed_totals": {
+    "source_declared_model_bodies": 54
+  },
+  "constraints": [
+    {
+      "id": "DAEMON_PRINCE_CROSS_FACTION_IDENTITY_UNRESOLVED",
+      "type": "possible_shared_physical_model",
+      "related_inventory": "chaos_daemons_personal",
+      "source_aliases": [
+        "Daemon Prince of Khorne",
+        "Daemon Prince of Chaos with wings (Khorne)"
+      ],
+      "effect": "Do not assume both entries are simultaneously available until physical identity is reconciled."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "WE_BUILD_STATE",
+      "question": "Which models are built, on sprue, magnetized, converted or proxyable?",
+      "state": "UNKNOWN"
+    },
+    {
+      "id": "DAEMON_PRINCE_IDENTITY",
+      "question": "Is the World Eaters Daemon Prince of Khorne the same physical miniature as the winged Khorne Daemon Prince listed in the daemon export?",
+      "state": "UNKNOWN"
+    }
+  ],
+  "notes": [
+    "This inventory records physical collection evidence only; roster points, legality and detachment choices in the source export are not collection authority.",
+    "Raw New Recruit exports are not committed because they contain extensive copyrighted rules text; SHA-256 hashes and normalized physical facts are retained instead.",
+    "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED."
+  ],
+  "provenance": {
+    "source_files": [
+      {
+        "source_id": "NR_WE_KHORNE_2026_09_30",
+        "uploaded_name": "Unnamed list (4).json",
+        "sha256": "668b9228ff8e37f15af36c1bdabf22cdc2a04adbfdaa87b2b4ada7bcf5537109",
+        "roster_name": "Unnamed list",
+        "generator": "https://newrecruit.eu",
+        "battle_scribe_version": "2.03",
+        "game_system_name": "Warhammer 40,000 11th Edition",
+        "game_system_revision": 14,
+        "catalogue_name": "Chaos - World Eaters",
+        "catalogue_revision": 11,
+        "extracted_scope": "World Eaters faction-tagged physical selections only",
+        "source_reported_points": 3725,
+        "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
+      }
+    ]
+  }
+}

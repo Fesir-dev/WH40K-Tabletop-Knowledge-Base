@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.1",
+  "inventory_id": "thousand_sons_personal",
+  "faction": "Thousand Sons",
+  "checkpoint": "2026-09-30",
+  "repository_registered_at": "2026-09-30",
+  "status": "PROVISIONAL",
+  "physical_pools": [
+    {
+      "pool_id": "ahriman",
+      "name": "Ahriman",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Ahriman",
+          "source_unit_instances": 1,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Epic Hero"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "magnus_the_red",
+      "name": "Magnus the Red",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Magnus the Red",
+          "source_unit_instances": 1,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Epic Hero"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "exalted_sorcerer",
+      "name": "Exalted Sorcerer",
+      "physical_bodies": 3,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Exalted Sorcerer",
+          "source_unit_instances": 3,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "exalted_sorcerer_on_disc_of_tzeentch",
+      "name": "Exalted Sorcerer on Disc of Tzeentch",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Exalted Sorcerer on Disc of Tzeentch",
+          "source_unit_instances": 1,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "infernal_master",
+      "name": "Infernal Master",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Infernal Master",
+          "source_unit_instances": 1,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "sorcerer",
+      "name": "Sorcerer",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Sorcerer",
+          "source_unit_instances": 1,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "sorcerer_in_terminator_armour",
+      "name": "Sorcerer in Terminator Armour",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Sorcerer in Terminator Armour",
+          "source_unit_instances": 2,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "tzaangor_shaman",
+      "name": "Tzaangor Shaman",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Tzaangor Shaman",
+          "source_unit_instances": 2,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    },
+    {
+      "pool_id": "rubric_marines",
+      "name": "Rubric Marines",
+      "physical_bodies": 15,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Rubric Marines",
+          "source_unit_instances": 3,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Battleline"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Aspiring Sorcerer",
+          "physical_bodies": 3,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Rubric Marine w/ inferno boltgun",
+          "physical_bodies": 12,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "scarab_occult_terminators",
+      "name": "Scarab Occult Terminators",
+      "physical_bodies": 10,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Scarab Occult Terminators",
+          "source_unit_instances": 2,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Infantry"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Scarab Occult Sorcerer",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Scarab Occult Terminator",
+          "physical_bodies": 8,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "tzaangors",
+      "name": "Tzaangors",
+      "physical_bodies": 56,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Tzaangors",
+          "source_unit_instances": 5,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Infantry"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Twistbray",
+          "physical_bodies": 5,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Tzaangor w/ Tzaangor blades",
+          "physical_bodies": 45,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Tzaangor w/ pistol and chainsword",
+          "physical_bodies": 6,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "tzaangor_enlightened",
+      "name": "Tzaangor Enlightened",
+      "physical_bodies": 6,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Tzaangor Enlightened",
+          "source_unit_instances": 2,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Mounted"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Aviarch",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Divining spear Enlightened",
+          "physical_bodies": 4,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "tzaangor_enlightened_with_fatecaster_greatbows",
+      "name": "Tzaangor Enlightened with Fatecaster greatbows",
+      "physical_bodies": 9,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Tzaangor Enlightened with Fatecaster greatbows",
+          "source_unit_instances": 3,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Mounted"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Aviarch",
+          "physical_bodies": 3,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Enlightened",
+          "physical_bodies": 6,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "mutalith_vortex_beast",
+      "name": "Mutalith Vortex Beast",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Mutalith Vortex Beast",
+          "source_unit_instances": 1,
+          "source_id": "NR_TS_2026_09_30",
+          "source_primary_categories": [
+            "Monster"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ]
+    }
+  ],
+  "confirmed_totals": {
+    "source_declared_model_bodies": 109
+  },
+  "constraints": [],
+  "open_questions": [
+    {
+      "id": "TS_BUILD_STATE",
+      "question": "Which models are built, on sprue, magnetized, converted or proxyable?",
+      "state": "UNKNOWN"
+    },
+    {
+      "id": "TS_LOOSE_COMPONENTS",
+      "question": "What spare weapon/arm/bit pools are physically available?",
+      "state": "UNKNOWN"
+    }
+  ],
+  "notes": [
+    "This inventory records physical collection evidence only; roster points, legality and detachment choices in the source export are not collection authority.",
+    "Raw New Recruit exports are not committed because they contain extensive copyrighted rules text; SHA-256 hashes and normalized physical facts are retained instead.",
+    "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED."
+  ],
+  "provenance": {
+    "source_files": [
+      {
+        "source_id": "NR_TS_2026_09_30",
+        "uploaded_name": "колекция тысяча сынов (1).json",
+        "sha256": "fa80cbbb1430db124c5df319a9b3cdeaddfe853e355c119242d36550c1381f77",
+        "roster_name": "колекция тысяча сынов",
+        "generator": "https://newrecruit.eu",
+        "battle_scribe_version": "2.03",
+        "game_system_name": "Warhammer 40,000 11th Edition",
+        "game_system_revision": 14,
+        "catalogue_name": "Chaos - Thousand Sons",
+        "catalogue_revision": 14,
+        "extracted_scope": "all physical model/unit selections",
+        "source_reported_points": 2995,
+        "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
+      }
+    ]
+  }
+}
