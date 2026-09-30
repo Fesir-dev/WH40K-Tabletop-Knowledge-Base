@@ -28,7 +28,9 @@
     },
     "pages_represented": 88,
     "heading_candidate_pages": 80,
-    "heading_candidate_count": 603
+    "heading_candidate_count": 602,
+    "rule_reference_families": 24,
+    "rule_reference_count": 141
   },
   "root_sections": [
     {
@@ -40,7 +42,7 @@
     },
     {
       "section_key": "introduction-pg-4-5--d0--p2--n2",
-      "title": "INTRODUCTION\b�����������������������������������������������������������������pg 4-5",
+      "title": "INTRODUCTION pg 4-5",
       "page_start": 2,
       "page_end": 3,
       "children": 0
@@ -54,7 +56,7 @@
     },
     {
       "section_key": "warhammer--d0--p5--n4",
-      "title": "WARHAMMER\b",
+      "title": "WARHAMMER",
       "page_start": 5,
       "page_end": 6,
       "children": 0
@@ -75,7 +77,7 @@
     },
     {
       "section_key": "measuring-distances-01-04--d0--p9--n7",
-      "title": "MEASURING\bDISTANCES\b01.04\b",
+      "title": "MEASURING DISTANCES 01.04",
       "page_start": 9,
       "page_end": 9,
       "children": 0
@@ -110,7 +112,7 @@
     },
     {
       "section_key": "set-up-03-02--d0--p14--n12",
-      "title": "SET\bUP\b03.02",
+      "title": "SET UP 03.02",
       "page_start": 14,
       "page_end": 14,
       "children": 0
@@ -124,14 +126,14 @@
     },
     {
       "section_key": "models-without--d0--p16--n14",
-      "title": "MODELS\bWITHOUT\b",
+      "title": "MODELS WITHOUT",
       "page_start": 16,
       "page_end": 16,
       "children": 0
     },
     {
       "section_key": "3-resolve-attacks-04-03--d0--p17--n15",
-      "title": "3�\bRESOLVE\bATTACKS\b04.03",
+      "title": "3 RESOLVE ATTACKS 04.03",
       "page_start": 17,
       "page_end": 17,
       "children": 0
@@ -145,7 +147,7 @@
     },
     {
       "section_key": "current-allocation--d0--p19--n17",
-      "title": "CURRENT\bALLOCATION\b",
+      "title": "CURRENT ALLOCATION",
       "page_start": 19,
       "page_end": 19,
       "children": 0
@@ -166,7 +168,7 @@
     },
     {
       "section_key": "attack-sequence-examples--d0--p22--n20",
-      "title": "ATTACK\bSEQUENCE\bEXAMPLES",
+      "title": "ATTACK SEQUENCE EXAMPLES",
       "page_start": 22,
       "page_end": 22,
       "children": 0
@@ -208,7 +210,7 @@
     },
     {
       "section_key": "start-of-turn-step--d0--p29--n26",
-      "title": "START\bOF\bTURN\bSTEP",
+      "title": "START OF TURN STEP",
       "page_start": 29,
       "page_end": 29,
       "children": 0
@@ -222,7 +224,7 @@
     },
     {
       "section_key": "battle-shock--d0--p31--n28",
-      "title": "BATTLE-SHOCK\b",
+      "title": "BATTLE-SHOCK",
       "page_start": 31,
       "page_end": 31,
       "children": 0
@@ -348,7 +350,7 @@
     },
     {
       "section_key": "terrain-and-visibility-13-07--d0--p50--n46",
-      "title": "TERRAIN\bAND\bVISIBILITY\b13.07",
+      "title": "TERRAIN AND VISIBILITY 13.07",
       "page_start": 50,
       "page_end": 50,
       "children": 0
@@ -362,7 +364,7 @@
     },
     {
       "section_key": "terrain-objectives-14-01--d0--p52--n48",
-      "title": "TERRAIN\bOBJECTIVES\b14.01",
+      "title": "TERRAIN OBJECTIVES 14.01",
       "page_start": 52,
       "page_end": 52,
       "children": 0
@@ -376,7 +378,7 @@
     },
     {
       "section_key": "using-stratagems-15-01--d0--p54--n50",
-      "title": "USING\bSTRATAGEMS\b15.01",
+      "title": "USING STRATAGEMS 15.01",
       "page_start": 54,
       "page_end": 54,
       "children": 0
@@ -432,7 +434,7 @@
     },
     {
       "section_key": "transport-capacity-18-01--d0--p64--n58",
-      "title": "TRANSPORT\bCAPACITY\b18.01",
+      "title": "TRANSPORT CAPACITY 18.01",
       "page_start": 64,
       "page_end": 64,
       "children": 0
@@ -453,7 +455,7 @@
     },
     {
       "section_key": "keywords-in-attached-units-19-03--d0--p67--n61",
-      "title": "KEYWORDS\bIN\bATTACHED\bUNITS\b19.03",
+      "title": "KEYWORDS IN ATTACHED UNITS 19.03",
       "page_start": 67,
       "page_end": 67,
       "children": 0
@@ -467,35 +469,35 @@
     },
     {
       "section_key": "arriving-from--d0--p69--n63",
-      "title": "ARRIVING\bFROM\b",
+      "title": "ARRIVING FROM",
       "page_start": 69,
       "page_end": 69,
       "children": 0
     },
     {
       "section_key": "surge-moves-21-01--d0--p70--n64",
-      "title": "SURGE\bMOVES\b21.01",
+      "title": "SURGE MOVES 21.01",
       "page_start": 70,
       "page_end": 70,
       "children": 0
     },
     {
       "section_key": "surge-moves--d0--p71--n65",
-      "title": "SURGE\bMOVES",
+      "title": "SURGE MOVES",
       "page_start": 71,
       "page_end": 71,
       "children": 0
     },
     {
       "section_key": "aura-abilities-22-01--d0--p72--n66",
-      "title": "AURA\bABILITIES\b22.01",
+      "title": "AURA ABILITIES 22.01",
       "page_start": 72,
       "page_end": 72,
       "children": 0
     },
     {
       "section_key": "plunging-fire-22-05--d0--p73--n67",
-      "title": "PLUNGING\bFIRE\b22.05",
+      "title": "PLUNGING FIRE 22.05",
       "page_start": 73,
       "page_end": 73,
       "children": 0
@@ -579,22 +581,447 @@
     },
     {
       "section_key": "adding-a-new-unit-to-your-army--d0--p87--n79",
-      "title": "ADDING\bA\bNEW\bUNIT\bTO\bYOUR\bARMY",
+      "title": "ADDING A NEW UNIT TO YOUR ARMY",
       "page_start": 87,
       "page_end": 87,
       "children": 0
     },
     {
       "section_key": "rules-appendixobjectives-not-within--d0--p88--n80",
-      "title": "RULES APPENDIXOBJECTIVES\bNOT\bWITHIN\b",
+      "title": "RULES APPENDIXOBJECTIVES NOT WITHIN",
       "page_start": 88,
       "page_end": 88,
       "children": 0
     }
   ],
+  "rule_reference_families": [
+    {
+      "family_id": "01",
+      "page_start": 8,
+      "page_end": 9,
+      "rule_refs": 6,
+      "anchor_labels": [
+        {
+          "page": 8,
+          "label": "ARMIES 01.01",
+          "label_sha256": "64a454ef2b8f8a4ba1ba276b67f3e9939fffae71ea0c952e05500cca6f6336e2"
+        },
+        {
+          "page": 8,
+          "label": "UNITS AND MODELS 01.02",
+          "label_sha256": "3583777a51ec9bb98b3283bb5635b9943e3b17d1fdb709d5e5f6367c685d0973"
+        }
+      ]
+    },
+    {
+      "family_id": "02",
+      "page_start": 10,
+      "page_end": 11,
+      "rule_refs": 5,
+      "anchor_labels": [
+        {
+          "page": 10,
+          "label": "1 DATASHEET NAME 02.01",
+          "label_sha256": "96e97f63cae1ac08d1b3b751d36ec7843d22637fed7e38ffe8ea3fbd5fcb03f7"
+        },
+        {
+          "page": 10,
+          "label": "2 PROFILES 02.02",
+          "label_sha256": "65ca94682567db9dc4e55153698bea2fa9d270ed1e1050d1239ee7e927c9b6bc"
+        }
+      ]
+    },
+    {
+      "family_id": "03",
+      "page_start": 12,
+      "page_end": 15,
+      "rule_refs": 4,
+      "anchor_labels": [
+        {
+          "page": 12,
+          "label": "MOVING UNITS 03.01",
+          "label_sha256": "56ee3f8ed8c70c10987bc87af4bbf185da89ddcced5c6aba4827a610485e4f3d"
+        },
+        {
+          "page": 14,
+          "label": "SET UP 03.02",
+          "label_sha256": "8698bc7e82c647c3ec12788dc6b7183fa6ec0d88fff0bb1aa11bf04e276bc488"
+        }
+      ]
+    },
+    {
+      "family_id": "04",
+      "page_start": 16,
+      "page_end": 16,
+      "rule_refs": 2,
+      "anchor_labels": [
+        {
+          "page": 16,
+          "label": "1 SELECT WEAPONS 04.01",
+          "label_sha256": "7eb15db73c9bf63ac420e0954ea5745e62aefa2b6c6aaf514a7c33655e5d38b6"
+        },
+        {
+          "page": 17,
+          "label": "3 RESOLVE ATTACKS 04.03",
+          "label_sha256": "d5b7534ab09e92d4b1cbdadfdb67ec8710b0b4ebd4a47708838dd83a64126b02"
+        }
+      ]
+    },
+    {
+      "family_id": "24",
+      "page_start": 17,
+      "page_end": 17,
+      "rule_refs": 37,
+      "anchor_labels": [
+        {
+          "page": 17,
+          "label": "▪ [CLOSE - QUARTERS] 24.07",
+          "label_sha256": "94770aee84d3ae00027507912065eb0cb40b5b3d92af6705c3e14048048a4ab7"
+        },
+        {
+          "page": 17,
+          "label": "▪ [EXTRA ATTACKS] 24.11",
+          "label_sha256": "4f1e20354424147e120e316ae1354a25468707d7e26e63a010953516ba6528da"
+        }
+      ]
+    },
+    {
+      "family_id": "05",
+      "page_start": 18,
+      "page_end": 23,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 18,
+          "label": "1 HIT ROLLS 05.01",
+          "label_sha256": "459910561e71860ef683618de953a1caff245f2676968fd39e8f9c2dcab365c3"
+        },
+        {
+          "page": 18,
+          "label": "2 WOUND ROLLS 05.02",
+          "label_sha256": "3fa30d783fb30a8922fc0de4814ec86a6a135961474b561b43bb1b437baef7d1"
+        }
+      ]
+    },
+    {
+      "family_id": "06",
+      "page_start": 24,
+      "page_end": 27,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 24,
+          "label": "VISIBILITY 06.01",
+          "label_sha256": "cc8579c50a6a27041f0fa0420ec05daa643920a56691feef9b9801cca1ec7764"
+        },
+        {
+          "page": 24,
+          "label": "MORTAL WOUNDS 06.02",
+          "label_sha256": "09b82eebfb04de714667fa31e04b755c08950615fc4d3015a8b4dabdc4e60cc8"
+        }
+      ]
+    },
+    {
+      "family_id": "07",
+      "page_start": 28,
+      "page_end": 29,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 28,
+          "label": "1 START OF BATTLE ROUND 07.01",
+          "label_sha256": "9e5674b61bed99c7d0dfc16d859fc81ed526e48ee1eef9c3f9e87fffe96bba8c"
+        },
+        {
+          "page": 28,
+          "label": "2 PLAYER TURNS 07.02",
+          "label_sha256": "f947aab198789011611fbbe4797fb61033465c2fbfb738d33c1c8aa94358cd5c"
+        }
+      ]
+    },
+    {
+      "family_id": "08",
+      "page_start": 30,
+      "page_end": 31,
+      "rule_refs": 5,
+      "anchor_labels": [
+        {
+          "page": 30,
+          "label": "1 START OF COMMAND PHASE 08.01",
+          "label_sha256": "b7d3d1fd9f56d18ebf803b21f54c11eecf022d729a0a5179d6e50babca61730e"
+        },
+        {
+          "page": 30,
+          "label": "2 GAIN CORE CP 08.02",
+          "label_sha256": "e46bc00beff1378838570360b0c8098bc8dcc6ac245e6fa84ad69705023af75e"
+        }
+      ]
+    },
+    {
+      "family_id": "09",
+      "page_start": 32,
+      "page_end": 32,
+      "rule_refs": 7,
+      "anchor_labels": [
+        {
+          "page": 32,
+          "label": "1 START OF MOVEMENT PHASE 09.01",
+          "label_sha256": "d764b8a65d7843811f72bd24e9d7c18e3d4c4d8344ea196991e6d1fd2a11b705"
+        },
+        {
+          "page": 32,
+          "label": "2 MOVE UNITS 09.02",
+          "label_sha256": "f51572f7c80266770142b789d6fed702db7d9a3ae8788f66d1e85d025e69da90"
+        }
+      ]
+    },
+    {
+      "family_id": "21",
+      "page_start": 33,
+      "page_end": 33,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 33,
+          "label": "Models 21.03",
+          "label_sha256": "fa73cb9ac739d96f9c290be97dbd69340c49885f69d3bcabfd050495da9cef89"
+        },
+        {
+          "page": 70,
+          "label": "SURGE MOVES 21.01",
+          "label_sha256": "3789b751fba0b46f405834b8f929353395f48d43bc63411aa162faf512d2605a"
+        }
+      ]
+    },
+    {
+      "family_id": "10",
+      "page_start": 34,
+      "page_end": 35,
+      "rule_refs": 6,
+      "anchor_labels": [
+        {
+          "page": 34,
+          "label": "1 START OF SHOOTING PHASE 10.01",
+          "label_sha256": "6d27b89fd2533c8936f1f0016cd7412d151157c3567a55ad5af3da60872daec2"
+        },
+        {
+          "page": 34,
+          "label": "2 SHOOT 10.02",
+          "label_sha256": "71f2e656e7b36a8ae0b954d822415b1842b95fcbd688eb1205efd63825390094"
+        }
+      ]
+    },
+    {
+      "family_id": "11",
+      "page_start": 36,
+      "page_end": 37,
+      "rule_refs": 4,
+      "anchor_labels": [
+        {
+          "page": 36,
+          "label": "1 START OF CHARGE PHASE 11.01",
+          "label_sha256": "fe4664c7607919a55299407fe1f853c2a2ca9adbe7c88b2a104cc099a42138cf"
+        },
+        {
+          "page": 36,
+          "label": "2 CHARGE 11.02",
+          "label_sha256": "670f491639b45e42f65af3ee06f99925ba05278d8952bd067572f757de1dbf46"
+        }
+      ]
+    },
+    {
+      "family_id": "12",
+      "page_start": 38,
+      "page_end": 45,
+      "rule_refs": 9,
+      "anchor_labels": [
+        {
+          "page": 38,
+          "label": "1 START OF FIGHT PHASE 12.01",
+          "label_sha256": "c9c2fe33c8a3d44d82876af9537d9a8ee726b94b519a03d8935e5c96ec11748f"
+        },
+        {
+          "page": 38,
+          "label": "2 PILE IN 12.02",
+          "label_sha256": "00f61d9248eee924f9419bdba2faa83eb7c6b0386913b4b19148b3605639e3b4"
+        }
+      ]
+    },
+    {
+      "family_id": "13",
+      "page_start": 46,
+      "page_end": 51,
+      "rule_refs": 11,
+      "anchor_labels": [
+        {
+          "page": 46,
+          "label": "PLACING TERRAIN 13.01",
+          "label_sha256": "e6527bbab3cbae40245c8d49281a1f9bec76cf0be688c684f4191b48b7c5a377"
+        },
+        {
+          "page": 46,
+          "label": "TERRAIN CATEGORIES 13.02",
+          "label_sha256": "a1282bfb3a86707ad2822cf7a1145ecc4683a3ea5e772dafd0883c92ea02d318"
+        }
+      ]
+    },
+    {
+      "family_id": "14",
+      "page_start": 52,
+      "page_end": 53,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 52,
+          "label": "TERRAIN OBJECTIVES 14.01",
+          "label_sha256": "a163b09225fea51c6c7ecf40662223f78034c949cbe0eac7b7e1f3bd474b28ac"
+        },
+        {
+          "page": 52,
+          "label": "LEVEL OF CONTROL 14.02",
+          "label_sha256": "01ba67dd19197584495935b43a2da51097c39b35ed63becea8a95ea94c5adb4c"
+        }
+      ]
+    },
+    {
+      "family_id": "15",
+      "page_start": 54,
+      "page_end": 57,
+      "rule_refs": 8,
+      "anchor_labels": [
+        {
+          "page": 54,
+          "label": "USING STRATAGEMS 15.01",
+          "label_sha256": "0e89312942ada4e6fcdc4011f5d54cd2769f11a46b9e0df5bf2547f1c6a919fd"
+        },
+        {
+          "page": 55,
+          "label": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
+          "label_sha256": "ff184dfabf47a6b011932cdc27925152d2a42eea91cf7b96401be44372133bbc"
+        }
+      ]
+    },
+    {
+      "family_id": "16",
+      "page_start": 58,
+      "page_end": 61,
+      "rule_refs": 1,
+      "anchor_labels": [
+        {
+          "page": 58,
+          "label": "PERFORMING ACTIONS 16.01",
+          "label_sha256": "caabe4570d0f1d12cdae9a06fafa556e655fca458e688d522d9ee2c92bdd61f1"
+        }
+      ]
+    },
+    {
+      "family_id": "17",
+      "page_start": 62,
+      "page_end": 63,
+      "rule_refs": 1,
+      "anchor_labels": [
+        {
+          "page": 62,
+          "label": "FRAME 17.02",
+          "label_sha256": "7ca78d4e084413b1dad7c0919ab85ca82356746c909d79dddc590834a6fdcbd1"
+        }
+      ]
+    },
+    {
+      "family_id": "18",
+      "page_start": 64,
+      "page_end": 65,
+      "rule_refs": 5,
+      "anchor_labels": [
+        {
+          "page": 64,
+          "label": "TRANSPORT CAPACITY 18.01",
+          "label_sha256": "29861a878336b59d4aa1258dcb7b198754c00641236fd359a950d102774f98a4"
+        },
+        {
+          "page": 64,
+          "label": "EMBARKING 18.02",
+          "label_sha256": "c30b56db8c6ab55f0e782006924d739c88da8317bd5130ecde7549d5d522784e"
+        }
+      ]
+    },
+    {
+      "family_id": "19",
+      "page_start": 66,
+      "page_end": 67,
+      "rule_refs": 4,
+      "anchor_labels": [
+        {
+          "page": 66,
+          "label": "FORMING ATTACHED UNITS 19.01",
+          "label_sha256": "8c5c19085cdbe133fa48b98948a943585284662ade1020ac05ddd79da7d644d8"
+        },
+        {
+          "page": 66,
+          "label": "ATTACKING ATTACHED UNITS 19.02",
+          "label_sha256": "3a65453a62dad444c8fb9ce87619cfaa4abb56788da32234195cfe3bba4ae044"
+        }
+      ]
+    },
+    {
+      "family_id": "20",
+      "page_start": 68,
+      "page_end": 71,
+      "rule_refs": 2,
+      "anchor_labels": [
+        {
+          "page": 68,
+          "label": "REPOSITIONED UNITS 20.02",
+          "label_sha256": "7089ad8613311e8f0994b4029763748ab091c301992514a29b87baf693afbd25"
+        },
+        {
+          "page": 69,
+          "label": "INGRESS MOVE 20.04",
+          "label_sha256": "572960cf06ee67e74fadeebcabf389b322227ed2c89ee877e76ed7b674d42977"
+        }
+      ]
+    },
+    {
+      "family_id": "22",
+      "page_start": 72,
+      "page_end": 73,
+      "rule_refs": 5,
+      "anchor_labels": [
+        {
+          "page": 72,
+          "label": "AURA ABILITIES 22.01",
+          "label_sha256": "d579f7c134fc9f7a7151fdaf531aaf2b6a6e9c01cdc94ac66ff448f73c0eb18e"
+        },
+        {
+          "page": 72,
+          "label": "FACTION ABILITIES 22.02",
+          "label_sha256": "cf31c0880dd356b2cbb9d120f2e77e7a443bc82d70414b9737b86432bd85ca3e"
+        }
+      ]
+    },
+    {
+      "family_id": "23",
+      "page_start": 74,
+      "page_end": 88,
+      "rule_refs": 4,
+      "anchor_labels": [
+        {
+          "page": 74,
+          "label": "DEPLOYMENT 23.01",
+          "label_sha256": "d21e23b006e1c7a7eae36a71cde1e63ba6f0d93371ce0f19709ed33458c836f8"
+        },
+        {
+          "page": 74,
+          "label": "MOVEMENT 23.02",
+          "label_sha256": "3b58c537976c4a630ea78f5d4495dd3ac9df1ccee154585d00f1a2db33419471"
+        }
+      ]
+    }
+  ],
   "authority_boundary": {
     "section_level_structure_complete_for_public_pdf": false,
     "flat_heading_map_complete_for_public_pdf": true,
+    "rule_reference_family_map_complete_for_detected_headings": true,
     "hierarchical_structure_complete": false,
     "paragraph_level_rules_ast_complete": false,
     "app_codex_equivalence": "NOT_CLAIMED",
