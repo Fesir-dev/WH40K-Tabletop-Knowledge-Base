@@ -1619,11 +1619,12 @@
   "rule_reference_families": [
     {
       "family_id": "01",
-      "section_key": "rule-family-01--p9",
-      "page_start": 9,
+      "section_key": "rule-family-01--p8",
+      "page_start": 8,
       "page_end": 9,
-      "page_range_sha256": "5197f208418809e1da3413fa16a3a03c784fdaecbe2890cb57974be142aecc3e",
+      "page_range_sha256": "6c6375ce09b2d5d91e13b7d77c8be158cf54640b6d800e350350b4579d80b724",
       "canonical_anchor_page": 9,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         8,
         9
@@ -1675,9 +1676,10 @@
       "family_id": "02",
       "section_key": "rule-family-02--p10",
       "page_start": 10,
-      "page_end": 13,
-      "page_range_sha256": "e03b3231799959adf32f4fbb62f7411d37ee7779b02b70b390079dbde3f4538d",
+      "page_end": 11,
+      "page_range_sha256": "ac41ad2b6bb27a5dca129957476f355440c45ef130a2cce505bc4c97a3e76de0",
       "canonical_anchor_page": 10,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         10
       ],
@@ -1727,11 +1729,12 @@
     },
     {
       "family_id": "03",
-      "section_key": "rule-family-03--p14",
-      "page_start": 14,
+      "section_key": "rule-family-03--p12",
+      "page_start": 12,
       "page_end": 15,
-      "page_range_sha256": "6de29539624bcd807505a84fd0fad38f0f2e1ce1668672433621a0705c3a181f",
+      "page_range_sha256": "f06efbbb0db9835389610b301c4d0794e5657f949a413482a06e9af112e50173",
       "canonical_anchor_page": 14,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         12,
         14
@@ -1777,6 +1780,7 @@
       "page_end": 17,
       "page_range_sha256": "8e80195fda6ffb9f5f176b376f6f2d57afc51985f348c0add71fd50a74b609c9",
       "canonical_anchor_page": 16,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         16,
         17,
@@ -1812,6 +1816,7 @@
       "page_end": 23,
       "page_range_sha256": "a4b7212f7e5e02fe963d57f04f2c8d29d8cea89132ba85a5cf0ea6f5dc58d57d",
       "canonical_anchor_page": 18,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         18,
         19
@@ -1850,6 +1855,7 @@
       "page_end": 27,
       "page_range_sha256": "4eec1c34712f3aaf043fd93a6032189617eb828c4d7db584ec6005c907a97519",
       "canonical_anchor_page": 24,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         24,
         81
@@ -1894,6 +1900,7 @@
       "page_end": 29,
       "page_range_sha256": "0828b41867dde2422b53650e9ea323d4f26a425251ca7121c0eb3833881483f8",
       "canonical_anchor_page": 28,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         28
       ],
@@ -1931,9 +1938,10 @@
       "family_id": "08",
       "section_key": "rule-family-08--p30",
       "page_start": 30,
-      "page_end": 32,
-      "page_range_sha256": "5e5a38507421f66c5b92b0bb1c38d8124e99fb85288d652de3cc5f87d51dbd96",
+      "page_end": 31,
+      "page_range_sha256": "b1e883a038137fd18c1e412ee603bd5a8572e804d4eb233d48620f7af2a78c9d",
       "canonical_anchor_page": 30,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         30
       ],
@@ -1983,11 +1991,12 @@
     },
     {
       "family_id": "09",
-      "section_key": "rule-family-09--p33",
-      "page_start": 33,
+      "section_key": "rule-family-09--p32",
+      "page_start": 32,
       "page_end": 33,
-      "page_range_sha256": "8a6abf6391328700ec6b19e93f0b519e9bcdb09c5f4c5466877def535e19e5d1",
+      "page_range_sha256": "e18871ff86fc579a05166f894f4b0f7a6514e4937e335b5790963504b5a4e5b5",
       "canonical_anchor_page": 33,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         32,
         33
@@ -2044,6 +2053,7 @@
       "page_end": 35,
       "page_range_sha256": "a3f7732f1b02a0d24d8677502aa29e21c73f4f6a6c28d5c584e5f1c4472028d2",
       "canonical_anchor_page": 34,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         34,
         35
@@ -2098,6 +2108,7 @@
       "page_end": 37,
       "page_range_sha256": "286266160d57c38f55b9741b4acdf804fcd7fdb7b37fa085bd2db5d48f139156",
       "canonical_anchor_page": 36,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         36,
         37
@@ -2143,6 +2154,7 @@
       "page_end": 45,
       "page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
       "canonical_anchor_page": 38,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         38,
         40,
@@ -2201,6 +2213,7 @@
       "page_end": 51,
       "page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
       "canonical_anchor_page": 46,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         46,
         48,
@@ -2278,9 +2291,10 @@
       "family_id": "14",
       "section_key": "rule-family-14--p52",
       "page_start": 52,
-      "page_end": 54,
-      "page_range_sha256": "bd4234dc0f882886b90e48d4d8f589362562143bb2537e466f21cbd1c81290c4",
+      "page_end": 53,
+      "page_range_sha256": "8c4af6fb26aa33015de6b9efd97b608b342bdb0b4ee4dd4718048957e15dbf2d",
       "canonical_anchor_page": 52,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         52
       ],
@@ -2316,11 +2330,12 @@
     },
     {
       "family_id": "15",
-      "section_key": "rule-family-15--p55",
-      "page_start": 55,
+      "section_key": "rule-family-15--p54",
+      "page_start": 54,
       "page_end": 57,
-      "page_range_sha256": "7db1ea8d4ae03afadf607afb7df0f4351772d37237c847bcab664a3c12bb2080",
+      "page_range_sha256": "f33a6d2caf5bafa65bf2a49b167e12428ed144d00c50554bba5cd6a89c6d3766",
       "canonical_anchor_page": 55,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         54,
         55,
@@ -2400,6 +2415,7 @@
       "page_end": 61,
       "page_range_sha256": "bb442cbd11310d8369b1698f173848d117c849179d48078fbc5316961386a96b",
       "canonical_anchor_page": 58,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         58
       ],
@@ -2426,6 +2442,7 @@
       "page_end": 63,
       "page_range_sha256": "48d95a611d6452deda6de4c59ab9a6c07f0eed8395e8bff6f21cc0c154cefc16",
       "canonical_anchor_page": 62,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         62
       ],
@@ -2452,6 +2469,7 @@
       "page_end": 65,
       "page_range_sha256": "5a137c18b17dd208b0333a076575e40544fc0da6dfec991f4ff3d98282c62c7b",
       "canonical_anchor_page": 64,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         64,
         65
@@ -2499,6 +2517,7 @@
       "page_end": 67,
       "page_range_sha256": "e17c99f0181e5dc03cfb81b512860e2929cfc3753c0ff0e6042ee58c9ee43093",
       "canonical_anchor_page": 66,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         66,
         67
@@ -2539,6 +2558,7 @@
       "page_end": 69,
       "page_range_sha256": "30aebe5beede45f2b10203ec527d57c82cf569da0d2cc8e09696b046b1923525",
       "canonical_anchor_page": 68,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         68,
         69,
@@ -2574,6 +2594,7 @@
       "page_end": 71,
       "page_range_sha256": "7c84970f95c2a97326b71a788ab9c7821536dc38c6b527d8d9f3c5b6f95c5cbe",
       "canonical_anchor_page": 70,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         33,
         70,
@@ -2620,6 +2641,7 @@
       "page_end": 73,
       "page_range_sha256": "430abf7fd9849b3d7a18e62bcf9073b0ea4a3edeaa6a934b72da46d6921ae3b8",
       "canonical_anchor_page": 72,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         72,
         73
@@ -2669,9 +2691,10 @@
       "family_id": "23",
       "section_key": "rule-family-23--p74",
       "page_start": 74,
-      "page_end": 81,
-      "page_range_sha256": "db33c655fc34d74979cbc7aedf55c0cd365a118468db8cb21745a92d1d2b7e43",
+      "page_end": 77,
+      "page_range_sha256": "9ed021311bbbac7cf0b80c4e435a713b6ee327151162c29d7384bf3eaf57efc5",
       "canonical_anchor_page": 74,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         74
       ],
@@ -2714,11 +2737,12 @@
     },
     {
       "family_id": "24",
-      "section_key": "rule-family-24--p82",
-      "page_start": 82,
+      "section_key": "rule-family-24--p78",
+      "page_start": 78,
       "page_end": 88,
-      "page_range_sha256": "3444f32fb945224d0cf93d5520a06d7eeb80c69cc1de4bf1022aecc69a75478f",
+      "page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
       "canonical_anchor_page": 82,
+      "definition_start_window_pages": 4,
       "observed_heading_pages": [
         17,
         66,
