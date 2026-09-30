@@ -1016,6 +1016,6 @@
       "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS"
     ],
     "recommended_next_milestone": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
-    "expected_effect": "All 310 Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities with zero range failures. Next classify paragraph semantics conservatively before AST construction; full faction/app equivalence and whole-faction normative coverage remain unchanged."
+    "expected_effect": "All 310 Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities with zero range failures. Next classify paragraph semantics conservatively before semantic AST construction; full faction/app equivalence and whole-faction normative coverage remain unchanged."
   }
 }
