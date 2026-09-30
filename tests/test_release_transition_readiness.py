@@ -18,6 +18,14 @@ class ReleaseTransitionReadinessContracts(unittest.TestCase):
         cls.cust=json.loads((ROOT/"ingestion/release_transitions/adeptus_custodes_codex_2026.json").read_text(encoding="utf-8"))
         cls.watch=json.loads((ROOT/"reports/UPSTREAM_CHANGE_WATCH_CURRENT.json").read_text(encoding="utf-8"))
 
+    def no_change_watch(self):
+        watch=copy.deepcopy(self.watch)
+        watch["status"]="NO_CHANGE"
+        watch["change_summary"]["github_sources_changed"]=[]
+        watch["change_summary"]["wahapedia_files_changed"]=0
+        watch["change_summary"]["wahapedia_last_update_changed"]=False
+        return watch
+
     def test_current_checkpoint_is_fail_closed(self):
         r=build_report([self.sm,self.cust],self.watch,date(2026,9,29))
         rows={x["transition_id"]:x for x in r["transitions"]}
@@ -37,7 +45,7 @@ class ReleaseTransitionReadinessContracts(unittest.TestCase):
         sm=copy.deepcopy(self.sm)
         sm["activation_evidence"]["current_legal_confirmed"]=True
         sm["activation_evidence"]["confirmed_at"]="2026-10-03"
-        row=evaluate_transition(sm,self.watch,date(2026,10,3))
+        row=evaluate_transition(sm,self.no_change_watch(),date(2026,10,3))
         self.assertEqual(row["state"],"CURRENT_LEGAL_CONFIRMED_WAITING_UPSTREAM_PROJECTION")
         self.assertFalse(row["candidate_eligible"])
 
@@ -45,7 +53,7 @@ class ReleaseTransitionReadinessContracts(unittest.TestCase):
         sm=copy.deepcopy(self.sm)
         sm["activation_evidence"]["current_legal_confirmed"]=True
         sm["activation_evidence"]["confirmed_at"]="2026-10-03"
-        watch=copy.deepcopy(self.watch)
+        watch=self.no_change_watch()
         watch["status"]="CHANGE_DETECTED"
         watch["change_summary"]["wahapedia_files_changed"]=1
         row=evaluate_transition(sm,watch,date(2026,10,3))
@@ -64,7 +72,7 @@ class ReleaseTransitionReadinessContracts(unittest.TestCase):
         cust=copy.deepcopy(self.cust)
         cust["activation_evidence"]["current_legal_confirmed"]=True
         cust["activation_evidence"]["confirmed_at"]="2026-10-10"
-        row=evaluate_transition(cust,self.watch,date(2026,10,10))
+        row=evaluate_transition(cust,self.no_change_watch(),date(2026,10,10))
         self.assertEqual(row["state"],"CURRENT_LEGAL_CONFIRMED_WAITING_UPSTREAM_PROJECTION")
         self.assertIsNone(row["scheduled_release_date"])
 
