@@ -2152,8 +2152,10 @@ try:
         errors.append("Current rules Core paragraph review ready/blocked counts drifted")
     if current_layer.get("axis_profile_ready_is_ast_ready") is not False:
         errors.append("Current rules must not equate AXIS_PROFILE_READY with AST readiness")
-    if current_layer.get("ast_readiness_pending") is not True:
-        errors.append("Core paragraph AST readiness must remain pending after semantic review")
+    if current_layer.get("ast_readiness_pending") is not False:
+        errors.append("Core paragraph semantic review AST readiness pending flag must be cleared")
+    if current_layer.get("ast_readiness_complete") is not True:
+        errors.append("Core paragraph semantic review must record completed AST readiness audit")
     if current_layer.get("condition_effect_ast_complete") is not False:
         errors.append("Current rules Core paragraph condition/effect AST must remain incomplete")
     if review_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
