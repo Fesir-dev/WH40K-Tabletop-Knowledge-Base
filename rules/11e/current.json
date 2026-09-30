@@ -1,5 +1,5 @@
 {
-  "schema_version": "4.4",
+  "schema_version": "4.5",
   "edition": "11e",
   "repository_checkpoint": "2026-09-30",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,14 +14,14 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1",
+      "state": "OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1",
       "verified_at": "2026-09-30",
       "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING",
+      "normative_structured_normalization": "AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION",
       "public_overlap": {
         "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
         "exact_core_mirror_units": 21,
@@ -203,6 +203,21 @@
           "interaction_edges_created": 0,
           "additional_paragraphs_admitted": 0,
           "current_normalized_factions_change": 0
+        },
+        "ast_readiness_expansion": {
+          "state": "PASS_11_MODAL_SENTENCE_CANDIDATES",
+          "report": "reports/CORE_RULE_AST_READINESS_EXPANSION_CURRENT.json",
+          "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_ast_readiness_expansion/index.json",
+          "rows_audited": 33,
+          "source_hashes_reproduced": 33,
+          "sentence_candidates": 11,
+          "permission_candidates": 9,
+          "prohibition_candidates": 2,
+          "conditional_candidates": 0,
+          "new_ast_nodes_created": 0,
+          "interaction_edges_created": 0,
+          "existing_ast_nodes_mutated": 0,
+          "additional_paragraphs_admitted": 0
         }
       }
     },
@@ -247,7 +262,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "CORE_RULE_AST_READINESS_EXPANSION_V1",
+  "next_milestone": "CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -961,5 +976,48 @@
       "overlap_regression_run": 36733351472,
       "result": "SUCCESS"
     }
+  },
+  "core_rule_ast_readiness_expansion": {
+    "state": "PASS_11_MODAL_SENTENCE_CANDIDATES",
+    "as_of": "2026-09-30",
+    "report": "reports/CORE_RULE_AST_READINESS_EXPANSION_CURRENT.json",
+    "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_ast_readiness_expansion/index.json",
+    "model": "docs/CORE_RULE_AST_READINESS_EXPANSION_MODEL.md",
+    "schema": "schemas/core_rule_ast_readiness_expansion.schema.json",
+    "tool": "tools/audit_core_rule_ast_readiness_expansion.py",
+    "workflow": ".github/workflows/core-rule-ast-readiness-expansion.yml",
+    "rows_audited": 33,
+    "parent_state_counts": {
+      "BLOCKED_COMPLEX_DELIMITERS": 4,
+      "BLOCKED_PARENTHETICAL_SCOPE": 1,
+      "BLOCKED_SENTENCE_SHAPE": 28
+    },
+    "expansion_state_counts": {
+      "BLOCKED_CONDITION_OUTSIDE_MODAL_SENTENCE": 5,
+      "BLOCKED_DELIMITER_SCOPE": 4,
+      "BLOCKED_MODAL_SENTENCE_COMPLEX_DELIMITERS": 2,
+      "BLOCKED_MODAL_SENTENCE_NONTERMINAL": 2,
+      "BLOCKED_MODAL_SENTENCE_PARENTHETICAL_SCOPE": 7,
+      "BLOCKED_PARENTHETICAL_SCOPE": 1,
+      "BLOCKED_SENTENCE_SEGMENTATION": 1,
+      "CANDIDATE_SINGLE_MODAL_SENTENCE": 11
+    },
+    "source_hashes_reproduced": 33,
+    "sentence_candidates": 11,
+    "candidate_modal_axis_counts": {
+      "PERMISSION": 9,
+      "PROHIBITION": 2
+    },
+    "candidate_condition_counts": {
+      "0": 11
+    },
+    "existing_ast_node_key": "core-ast-direct-modal--13-07--p50-o1",
+    "existing_ast_decision": "OPAQUE_PRESERVED",
+    "new_ast_nodes_created": 0,
+    "interaction_edges_created": 0,
+    "existing_ast_nodes_mutated": 0,
+    "additional_paragraphs_admitted": 0,
+    "current_normalized_factions_change": 0,
+    "authority_rule": "The 11 sentence candidates are source-shape readiness evidence only. They are not AST nodes and do not authorize bulk parser admission; the existing 13.07 AST node remains unchanged and opaque."
   }
 }
