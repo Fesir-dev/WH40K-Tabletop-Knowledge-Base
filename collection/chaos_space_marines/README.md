@@ -313,18 +313,9 @@ Still unresolved:
 - fifth newer-Chosen-derived model:
   - exact specialist identity not yet described.
 
-### Alternate 40K character-role candidates
+### 40K collection identity
 
-Some Kill Team bodies are visually strong enough to act as character representations in ordinary 40K.
-
-These are stored only as **candidate/proxy roles**, never as additional physical models:
-
-- magnetized leader -> Chaos Lord-like candidate;
-- executioner-looking operative -> Master of Executions-like candidate;
-- dagger psyker-looking operative -> Sorcerer-like candidate;
-- staff-bearing operative -> Sorcerer-like/custom character candidate.
-
-Current 40K base/loadout legality must be audited separately before promoting any of these from visual proxy to a current WYSIWYG role.
+All eight Word Bearers Kill Team bodies are counted as **Legionaries** for the CSM collection. No Chaos Lord, Master of Executions, Sorcerer or other hero proxy roles are assigned to these models; the user explicitly rejected that mapping because the bases do not match the intended character use.
 
 ### Autocannon body
 
@@ -341,3 +332,17 @@ Current unique CSM-domain lower bound:
 **156 physical bodies/models**.
 
 The collection remains explicitly incomplete.
+
+
+## Kill Team normalization — 2026-09-30
+
+The Word Bearers Kill Team has been simplified for the main 40K collection model:
+
+- all **8 physical bodies count as Legionaries**;
+- 3 are Shadowspear-derived bodies already included in the 20-body Shadowspear pool;
+- 5 are newer-Chosen-derived bodies but are still counted as Legionaries by user instruction;
+- all 8 are on 32 mm bases;
+- exact Kill Team specialist identity is optional detail and no longer blocks the CSM physical inventory;
+- no hero-proxy roles are assigned.
+
+This does not change the current unique CSM lower bound of **156 physical bodies/models**.
