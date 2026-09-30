@@ -144,38 +144,6 @@
           "source_id": "NR_ADMECH_2026_09_30"
         }
       ],
-      "body_variants": [
-        {
-          "name": "Skitarii Ranger Alpha",
-          "physical_bodies": 3,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Skitarii Ranger w/ arc rifle",
-          "physical_bodies": 2,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Skitarii Ranger w/ plasma caliver",
-          "physical_bodies": 2,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Skitarii Ranger w/ transuranic arquebus",
-          "physical_bodies": 2,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Skitarii Ranger w/ data-tether",
-          "physical_bodies": 2,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Skitarii Ranger w/ galvanic rifle",
-          "physical_bodies": 19,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        }
-      ],
       "notes": [
         "User confirmed exact physical total: 24 Ranger miniatures.",
         "Two distinct Ranger Alpha bodies are confirmed: one with arc pistol + user-described taser sword, one with arc pistol + user-described mace.",
@@ -259,6 +227,43 @@
         "complete_10_model_units_max_by_total_bodies_and_alpha_count": 2,
         "spare_bodies_after_two_complete_units": 4,
         "note": "This is a physical-capacity interpretation only; legality remains governed by the current rules layer."
+      },
+      "source_configuration_snapshot": {
+        "source_id": "NR_ADMECH_2026_09_30",
+        "non_physical_inventory": true,
+        "selected_model_variants": [
+          {
+            "name": "Skitarii Ranger Alpha",
+            "physical_bodies": 3,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Skitarii Ranger w/ arc rifle",
+            "physical_bodies": 2,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Skitarii Ranger w/ plasma caliver",
+            "physical_bodies": 2,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Skitarii Ranger w/ transuranic arquebus",
+            "physical_bodies": 2,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Skitarii Ranger w/ data-tether",
+            "physical_bodies": 2,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Skitarii Ranger w/ galvanic rifle",
+            "physical_bodies": 19,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          }
+        ],
+        "note": "Preserved only to explain the imported roster configuration; superseded by direct visual counts for physical inventory."
       }
     },
     {
@@ -277,33 +282,6 @@
           "source_datasheet_name": "Skitarii Vanguard",
           "source_unit_instances": 2,
           "source_id": "NR_ADMECH_2026_09_30"
-        }
-      ],
-      "body_variants": [
-        {
-          "name": "Skitarii Vanguard Alpha",
-          "physical_bodies": 2,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Skitarii Vanguard w/ plasma caliver",
-          "physical_bodies": 1,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Skitarii Vanguard w/ transuranic arquebus",
-          "physical_bodies": 1,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Skitarii Vanguard w/ data-tether",
-          "physical_bodies": 1,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Skitarii Vanguard w/ radium carbine",
-          "physical_bodies": 15,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
         }
       ],
       "notes": [
@@ -393,6 +371,38 @@
         "spare_bodies_after_one_complete_unit": 4,
         "physical_arc_rifle_available": false,
         "note": "A current 10-model Vanguard unit can still be physically fielded without an arc rifle because the special-weapon replacements are optional."
+      },
+      "source_configuration_snapshot": {
+        "source_id": "NR_ADMECH_2026_09_30",
+        "non_physical_inventory": true,
+        "selected_model_variants": [
+          {
+            "name": "Skitarii Vanguard Alpha",
+            "physical_bodies": 2,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Skitarii Vanguard w/ plasma caliver",
+            "physical_bodies": 1,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Skitarii Vanguard w/ transuranic arquebus",
+            "physical_bodies": 1,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Skitarii Vanguard w/ data-tether",
+            "physical_bodies": 1,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Skitarii Vanguard w/ radium carbine",
+            "physical_bodies": 15,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          }
+        ],
+        "note": "Preserved only to explain the imported roster configuration; superseded by direct visual counts for physical inventory."
       }
     },
     {
