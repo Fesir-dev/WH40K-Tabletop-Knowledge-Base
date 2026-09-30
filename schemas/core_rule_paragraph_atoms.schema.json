@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/core_rule_paragraph_atoms.schema.json",
+  "title": "Core Rules stable paragraph atom index",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "snapshot_date",
+    "authority",
+    "atomization_version",
+    "source",
+    "source_verification",
+    "parent_boundaries",
+    "paragraph_atoms",
+    "summary",
+    "authority_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "SOURCE_DRIFT",
+        "FAIL"
+      ]
+    },
+    "snapshot_date": {
+      "type": "string"
+    },
+    "authority": {
+      "const": "GAMES_WORKSHOP_OFFICIAL"
+    },
+    "atomization_version": {
+      "const": "CORE_RULE_PARAGRAPH_ATOMIZATION_V1"
+    },
+    "source": {
+      "type": "object"
+    },
+    "source_verification": {
+      "type": "object"
+    },
+    "parent_boundaries": {
+      "type": "object"
+    },
+    "paragraph_atoms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "paragraph_key",
+          "rule_ref",
+          "rule_key",
+          "family_id",
+          "occurrence_key",
+          "occurrence_ordinal",
+          "paragraph_ordinal_in_occurrence",
+          "classification",
+          "page",
+          "ordinal_on_page",
+          "line_start",
+          "line_end",
+          "char_start",
+          "char_end",
+          "line_count",
+          "char_count",
+          "token_count",
+          "semantic_sha256",
+          "page_semantic_sha256",
+          "parent_body_semantic_sha256"
+        ],
+        "properties": {
+          "paragraph_key": {
+            "type": "string"
+          },
+          "rule_ref": {
+            "type": "string",
+            "pattern": "^[0-9]{2}\\\\.[0-9]{2}$"
+          },
+          "rule_key": {
+            "type": "string"
+          },
+          "family_id": {
+            "type": "string",
+            "pattern": "^[0-9]{2}$"
+          },
+          "occurrence_key": {
+            "type": "string"
+          },
+          "occurrence_ordinal": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "paragraph_ordinal_in_occurrence": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "classification": {
+            "enum": [
+              "SINGLE_OCCURRENCE_PARAGRAPH",
+              "REPEATED_OCCURRENCE_PARAGRAPH_VARIANT"
+            ]
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 88
+          },
+          "ordinal_on_page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "line_start": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "line_end": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "char_start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "char_end": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "line_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "char_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "token_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "semantic_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "page_semantic_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "parent_body_semantic_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "summary": {
+      "type": "object"
+    },
+    "authority_boundary": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}
