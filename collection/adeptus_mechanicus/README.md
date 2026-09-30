@@ -1,36 +1,29 @@
 # Adeptus Mechanicus collection
 
 Checkpoint: **2026-09-30**  
-Status: **PROVISIONAL — Skitarii reconciled; Sicarian extras still unresolved**
+Status: **RECONCILED — physical collection audit closed**
 
-This domain starts from the user-supplied New Recruit export `Коллекция мехов.json`, but direct physical inspection supersedes that export wherever the two disagree.
+The domain started from the user-supplied New Recruit export `Коллекция мехов.json`. Direct physical inspection and user clarification supersede that export wherever the two disagree.
 
-## Source-export baseline
+## Final physical total
 
-The New Recruit export contained **131 roster model entries**. It is preserved as roster/configuration provenance, not as physical collection ground truth.
+**121 physical models/bodies**
 
-The largest confirmed source-vs-physical differences are:
+The original New Recruit snapshot contained 131 roster entries. The net physical reconciliation is:
 
-- source Rangers: 30 -> direct physical total: **24**;
-- source Vanguard: 20 -> direct physical total: **14**.
+- Rangers: source 30 -> physical **24**;
+- Vanguard: source 20 -> physical **14**;
+- Infiltrators: source 20 -> physical **21**;
+- Ruststalkers: source 30 -> physical **31**;
+- all other source counts accepted as physical counts because no count discrepancy was identified for those pools.
 
-## Current normalized collection floor
+The New Recruit file remains roster/configuration provenance, not physical collection authority.
 
-After replacing the source Ranger/Vanguard quantities with direct physical counts, the currently normalized known pools total **119 physical models**.
+## Skitarii Rangers
 
-At least one additional Infiltrator Princeps/leader body and at least one additional Ruststalker Princeps/leader body were separately user-confirmed, so the current Adeptus Mechanicus collection floor is **121 physical models**.
+Exact total: **24**
 
-The final collection total remains open until those extra Sicarian bodies are counted exactly.
-
-## Skitarii Rangers — physically reconciled
-
-Exact total: **24 models**.
-
-Confirmed fixed bodies:
-
-- 2 × Ranger Alpha:
-  - 1 × arc pistol + user-described taser sword;
-  - 1 × arc pistol + user-described mace;
+- 2 × Ranger Alpha;
 - 3 × transuranic arquebus;
 - 2 × plasma caliver;
 - 2 × arc rifle;
@@ -38,23 +31,18 @@ Confirmed fixed bodies:
 - 1 × omnispex;
 - 13 × galvanic-rifle-only.
 
-Arithmetic closure:
+Alpha builds:
 
-`2 + 3 + 2 + 2 + 1 + 1 + 13 = 24`.
+- 1 × arc pistol + user-described taser sword;
+- 1 × arc pistol + user-described mace.
 
 The data-tether and omnispex bodies are glued/fixed and not magnetized.
 
-Under the current 11E mirror structure, the pool can physically support at most **two complete 10-model Ranger units simultaneously**, leaving four alternate WYSIWYG bodies.
+## Skitarii Vanguard
 
-## Skitarii Vanguard — physically reconciled
+Exact total: **14**
 
-Exact total: **14 models**.
-
-Confirmed fixed bodies:
-
-- 1 × current Vanguard Alpha:
-  - radium pistol + power sword;
-  - radium carbine visibly carried on the backpack as a WYSIWYG conversion;
+- 1 × current Vanguard Alpha: radium pistol + power sword, with radium carbine visibly carried on the backpack;
 - 3 × plasma caliver;
 - 1 × transuranic arquebus;
 - 0 × arc rifle;
@@ -62,69 +50,95 @@ Confirmed fixed bodies:
 - 1 × omnispex;
 - 7 × radium-carbine-only ordinary troopers.
 
-One of the seven ordinary carbine troopers wears an Alpha-style helmet. The user currently treats it as a normal Vanguard model; it was likely used as an Alpha in an older edition when smaller Skitarii units were available.
-
-Arithmetic closure:
-
-`1 + 3 + 1 + 0 + 1 + 1 + 7 = 14`.
+One of the seven ordinary carbine troopers wears an Alpha-style helmet. It is currently treated as a normal Vanguard and was likely used as an Alpha in an older edition.
 
 The data-tether and omnispex bodies are glued/fixed and not magnetized.
 
-Under the current 11E mirror structure, the pool can physically support **one complete 10-model Vanguard unit simultaneously**, leaving four alternate WYSIWYG bodies.
+## Sicarians
 
-## Historical build logic
-
-The Skitarii collection was built across multiple editions, beginning around 7th edition, with fixed alternate bodies intended to satisfy changing WYSIWYG tournament requirements.
-
-The user recalls approximately two plastic Skitarii kits plus additional cast-copy bodies fitted with remaining plastic bits and arms. This is retained as construction-history recollection, not verified body-by-body provenance.
-
-The collection should therefore be modeled as:
-
-`physical body pool + fixed loadout variants + historical role variants`
-
-rather than as permanently assigned squad 1 / squad 2 / squad 3.
-
-## Remaining open physical questions
-
-- exact number and loadouts of additional Sicarian Infiltrator Princeps/leader bodies;
-- exact number and loadouts of additional Sicarian Ruststalker Princeps/leader bodies;
-- later physical-loadout audit for the remaining Mechanicus pools.
-
-The canonical normalized inventory is `current.json`.
-
-## Sicarian physical reconciliation — closed
-
-### Sicarian Infiltrators
-
-Exact physical total: **21 bodies**.
+### Infiltrators — 21
 
 - 17 × ordinary Infiltrators;
 - 3 × Princeps on bases;
-- 1 × additional Princeps body without a base, kept as a future spare.
+- 1 × unbased spare Princeps body.
 
-All Infiltrators, including Princeps, are permanently assembled with **Taser goad & flechette blaster**. No weapon interchangeability is available.
+All are permanently assembled with **Taser goad & flechette blaster**.
 
-### Sicarian Ruststalkers
-
-Exact physical total: **31 bodies**.
+### Ruststalkers — 31
 
 - 27 × ordinary Ruststalkers;
 - 3 × Princeps on bases;
-- 1 × additional Princeps body without a base, kept as a future spare.
+- 1 × unbased spare Princeps body.
 
-Ordinary Ruststalkers are permanently assembled with **Transonic blades**.
+Ordinary Ruststalkers are permanently assembled with **Transonic blades**.  
+Princeps are permanently assembled with **Transonic blades & chordclaw**.
 
-All Princeps are permanently assembled with **Transonic blades & chordclaw**.
+## Remaining unit and vehicle configurations
 
-### Sicarian closure consequence
+### Kataphron Destroyers — 3
 
-The old source-export counts of 20 Infiltrators and 30 Ruststalkers were each short by one unbased spare Princeps body.
+Weapon systems are magnetized. The New Recruit `Heavy grav-cannon + phosphor blaster` selection is only one roster configuration, not a fixed physical build. The retained magnetized options can be swapped without a new body.
 
-The physical Sicarian pools are now closed:
+### Ironstrider Ballistarii — 6
 
-- Infiltrators: **21**
-- Ruststalkers: **31**
+All six are currently assembled with **lascannons**. Autocannon parts remain loose and unpainted, but are not part of the current assembled configuration.
 
-Together with the already reconciled Skitarii pools, the normalized known Adeptus Mechanicus body count is now **121**.
+### Sydonian Dragoons — 4
 
-This is the current known physical floor, not yet a final full-collection audit result, because several remaining Mechanicus pools still inherit their quantities from the source export rather than from a direct hand count.
+All four are fixed lance builds. No alternate current weapon configuration is available.
+
+### Kastelan Robots — 4
+
+Arm configuration:
+
+- 2 robots: both arm positions have **phosphor arm guns glued in place**;
+  - four unpainted fist arms for these two robots remain loose;
+  - those fists could be magnetized later, but are not an immediate swap today.
+- 2 robots: both arm positions are already **magnetized**;
+  - they can immediately swap between **phosphor arm guns** and **fists**.
+
+Top/dorsal weapon:
+
+- all 4 currently have the **phosphor weapon glued in place**;
+- a flamer option could be enabled by future magnetization, but it is not currently an immediate swap.
+
+### Onager Dunecrawlers — 2
+
+Both are magnetized for weapon changes.
+
+- one currently carries a **neutron laser**;
+- the other currently carries the user-described beam-type weapon;
+- one neutron-laser component has been lost, so only one complete neutron-laser mount is presently available;
+- the other retained weapon options are available per the user's physical inventory recollection.
+
+The exact identity of the currently mounted beam weapon is intentionally left at the user's description rather than guessed from rules terminology.
+
+### Skorpius Dunerider — 1
+
+Fixed transport build. It **cannot** be converted into a Skorpius Disintegrator with the current model.
+
+## Characters
+
+Counts from the source inventory are accepted as physical counts.
+
+- Belisarius Cawl — 1;
+- Cybernetica Datasmith — 2;
+- Skitarii Marshal — 1;
+- Tech-Priest Dominus — 2;
+- Tech-Priest Enginseer — 2;
+- Tech-Priest Manipulus — 1;
+- Technoarcheologist — 2.
+
+Material configuration notes:
+
+- the two Dominus models are remembered as two different weapon builds; spare weapon parts are retained, but the exact model-to-weapon mapping was not visually rechecked and is not invented here;
+- the Manipulus is magnetized and can use either retained main weapon option;
+- fixed characters without a materially relevant collection configuration are not subjected to redundant loadout auditing.
+
+## Historical build logic
+
+The collection was built across multiple editions. Some bodies were deliberately created as alternate WYSIWYG configurations for changing tournament and edition requirements.
+
+The user recalls approximately two plastic Skitarii kits plus additional cast-copy bodies fitted with remaining plastic bits and arms. This is retained as construction-history recollection, not verified body-by-body provenance.
+
+The canonical normalized inventory is `current.json`.
