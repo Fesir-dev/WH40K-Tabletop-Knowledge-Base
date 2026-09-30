@@ -7,6 +7,7 @@ from collections import Counter
 from pathlib import Path
 
 from build_core_rule_reference_atoms import verified_core_pages
+from build_core_rules_structure import fingerprint_normalize, sha256_text
 
 ROOT=Path(__file__).resolve().parents[1]
 ATOMIZATION_VERSION="CORE_RULE_PARAGRAPH_ATOMIZATION_V1"
@@ -64,7 +65,7 @@ def build_snapshot(as_of:str,cache_dir:Path,root:Path=ROOT)->dict:
     if ps.get("all_rules_have_nonempty_boundaries") is not True:
         raise RuntimeError("Parent boundary snapshot contains unresolved/empty rules")
 
-    _page_texts,page_sha,source,verification=verified_core_pages(cache_dir,root)
+    page_texts,page_sha,source,verification=verified_core_pages(cache_dir,root)
 
     parent_source=parent.get("source",{})
     for key in ("document_id","binary_sha256","semantic_sha256","page_count"):
@@ -129,6 +130,14 @@ def build_snapshot(as_of:str,cache_dir:Path,root:Path=ROOT)->dict:
                 parent_body_sha=str(occ.get("body_semantic_sha256",""))
                 if len(semantic_sha)!=64 or len(parent_body_sha)!=64:
                     raise RuntimeError(f"Missing paragraph/body semantic hash for {occurrence_key}")
+
+                raw=page_texts[page-1][int(candidate["char_start"]):int(candidate["char_end"])]
+                reproduced_sha=sha256_text(fingerprint_normalize(raw))
+                if reproduced_sha!=semantic_sha:
+                    raise RuntimeError(
+                        f"Paragraph semantic SHA does not reproduce from verified PDF range: "
+                        f"{occurrence_key} page {page} ordinal {candidate['ordinal_on_page']}"
+                    )
 
                 atom={
                     "paragraph_key":make_paragraph_key(
@@ -209,6 +218,7 @@ def build_snapshot(as_of:str,cache_dir:Path,root:Path=ROOT)->dict:
             "range_validation_failures":len(range_failures),
             "range_validation_failure_samples":range_failures[:20],
             "all_parent_candidates_atomized":parent_candidate_count==len(atoms)==310,
+            "paragraph_hashes_reproduced_from_verified_pdf":len(atoms),
         },
         "authority_boundary":{
             "stable_paragraph_identity_complete":complete,
