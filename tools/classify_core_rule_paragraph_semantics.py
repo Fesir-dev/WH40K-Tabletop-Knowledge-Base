@@ -38,7 +38,7 @@ SIGNAL_FAMILIES={
     "REPLACEMENT_INSTEAD":"MODIFICATION_OR_REPLACEMENT",
     "MODIFIER_ADD_SUBTRACT":"MODIFICATION_OR_REPLACEMENT",
     "ORDERED_STEP":"PROCEDURE_OR_SEQUENCE",
-    "BULLET_LIKE":"PROCEDURE_OR_SEQUENCE",
+    "BULLET_LIKE":"STRUCTURAL_LIST",
     "SEQUENCE_BEFORE":"PROCEDURE_OR_SEQUENCE",
     "SEQUENCE_AFTER":"PROCEDURE_OR_SEQUENCE",
     "SEQUENCE_THEN":"PROCEDURE_OR_SEQUENCE",
@@ -258,6 +258,7 @@ def build_snapshot(as_of:str,cache_dir:Path,root:Path=ROOT)->dict:
         "classification_contract":{
             "role_vocabulary":ROLE_ORDER+["MIXED","UNCLASSIFIED"],
             "signal_vocabulary":sorted(SIGNAL_FAMILIES),
+            "weak_signal_families":["STRUCTURAL_LIST","REFERENCE_OR_CROSS_REFERENCE"],
             "reference_signals_are_weak":True,
             "mixed_is_preferred_over_forced_single_role":True,
             "unclassified_is_allowed":True,
