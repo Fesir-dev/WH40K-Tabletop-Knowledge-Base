@@ -526,6 +526,13 @@
     "source_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
     "paragraph_level_rules_ast_complete": false,
     "current_normalized_factions_change": 0,
-    "authority_rule": "Rule-body and paragraph candidates are deterministic pypdf extraction boundaries with offsets/counts/hashes only. No paragraph prose, semantic AST, interaction graph or Codex/app equivalence is claimed."
+    "authority_rule": "Rule-body and paragraph candidates are deterministic pypdf extraction boundaries with offsets/counts/hashes only. No paragraph prose, semantic AST, interaction graph or Codex/app equivalence is claimed.",
+    "closure_report": "reports/CORE_RULE_PARAGRAPH_BOUNDARY_CLOSURE_2026-09-30.md",
+    "pre_pr_validation": {
+      "boundary_workflow_run": 36696663834,
+      "normative_gap_audit_run": 36696967737,
+      "repository_ci_run": 36697099240,
+      "result": "SUCCESS"
+    }
   }
 }
