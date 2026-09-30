@@ -240,19 +240,30 @@ def build_rule_reference_families(candidates: dict[int, list[str]], page_count: 
 
     ordered = sorted(prepared, key=lambda x: (x["canonical_page"], int(x["family_id"])))
 
+    # A dense page is a strong canonical anchor, but a numbered rule family can
+    # begin a few pages earlier. Nearby pre-anchor sightings are treated as part
+    # of the definition block; distant sightings remain cross-reference evidence.
+    for row in ordered:
+        eligible = [
+            page for page in row["observed_pages"]
+            if row["canonical_page"] - 4 <= page <= row["canonical_page"]
+        ]
+        row["definition_start_page"] = min(eligible) if eligible else row["canonical_page"]
+
     out = []
     for idx, row in enumerate(ordered):
-        start = row["canonical_page"]
+        start = row["definition_start_page"]
         end = page_count
         if idx + 1 < len(ordered):
-            end = max(start, ordered[idx + 1]["canonical_page"] - 1)
+            end = max(start, ordered[idx + 1]["definition_start_page"] - 1)
         out.append({
             "family_id": row["family_id"],
             "section_key": f"rule-family-{row['family_id']}--p{start}",
             "page_start": start,
             "page_end": end,
             "page_range_sha256": sha256_text("\n".join(page_semantic_sha[start - 1:end])),
-            "canonical_anchor_page": start,
+            "canonical_anchor_page": row["canonical_page"],
+            "definition_start_window_pages": 4,
             "observed_heading_pages": row["observed_pages"],
             "rule_refs": row["refs"],
             "refs_by_page": row["refs_by_page"],
