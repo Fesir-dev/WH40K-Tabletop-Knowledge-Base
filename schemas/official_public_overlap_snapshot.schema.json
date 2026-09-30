@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/official_public_overlap_snapshot.schema.json",
+  "title": "Structured official-public overlap snapshot",
+  "type": "object",
+  "required": ["schema_version","status","snapshot_date","authority","scope","source_report","units","summary","authority_boundary"],
+  "properties": {
+    "schema_version":{"type":"string"},
+    "status":{"const":"PASS"},
+    "snapshot_date":{"type":"string"},
+    "authority":{"const":"GAMES_WORKSHOP_OFFICIAL_PUBLIC_OVERLAP"},
+    "scope":{"const":"EXACT_PUBLIC_OVERLAP_ONLY"},
+    "source_report":{"type":"string"},
+    "units":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["unit_key","kind","identity","classification","provenance_scope","mirror_text_sha256","comparison_sha256","official_evidence"],
+        "properties":{
+          "unit_key":{"type":"string"},
+          "kind":{"type":"string"},
+          "identity":{"type":"object"},
+          "classification":{"enum":["EXACT_NORMALIZED_TEXT_MATCH","EXACT_NORMALIZED_TEXT_MATCH_MULTI_OFFICIAL"]},
+          "provenance_scope":{"enum":["DIRECT_SOURCE_SCOPED","DIRECT_FACTION_SCOPED"]},
+          "mirror_text_sha256":{"type":"string"},
+          "comparison_sha256":{"type":"string"},
+          "official_evidence":{"type":"array","minItems":1,"items":{"type":"object"}}
+        },
+        "additionalProperties":true
+      }
+    },
+    "summary":{
+      "type":"object",
+      "required":["units","by_kind"],
+      "properties":{
+        "units":{"type":"integer","minimum":0},
+        "by_kind":{"type":"object"}
+      },
+      "additionalProperties":true
+    },
+    "authority_boundary":{"type":"object"}
+  },
+  "additionalProperties":true
+}
