@@ -73,3 +73,44 @@ These account for **24 Ranger bodies before Alpha models and any remaining uncla
 These account for **12 Vanguard bodies before Alpha, arc-rifle, transuranic-arquebus and any remaining unclassified bodies**.
 
 The total Ranger/Vanguard body counts remain unresolved until the remaining miniatures are classified.
+
+## Skitarii physical reconciliation pass 2
+
+The user physically re-counted the miniatures and confirmed exact totals:
+
+- **Skitarii Rangers: 24 bodies total**
+- **Skitarii Vanguard: 14 bodies total**
+
+These direct physical totals supersede the New Recruit quantities of 30 Rangers and 20 Vanguard for collection authority. The New Recruit selections remain preserved only as roster/configuration evidence.
+
+### Rangers — confirmed fixed builds
+
+- 2 Ranger Alpha bodies:
+  - 1 × arc pistol + user-described taser sword;
+  - 1 × arc pistol + user-described mace.
+- 3 × transuranic arquebus;
+- 3 × plasma caliver;
+- 3 × arc rifle;
+- 1 × enhanced data-tether, glued/fixed;
+- 1 × omnispex, glued/fixed.
+
+The previously reported **13 rifle-only Rangers** does not arithmetically fit the later exact 24-body total if all listed categories are exclusive: the exact total would imply 11 ordinary rifle-only non-Alpha bodies. This remains an explicit unresolved subcount instead of being auto-corrected.
+
+### Vanguard — confirmed fixed builds
+
+- 2 Vanguard Alpha bodies:
+  - 1 × Alpha visibly carrying a radium carbine;
+  - 1 × Alpha with radium pistol + power sword, with a radium carbine visibly carried on the backpack as a WYSIWYG conversion.
+- 3 × plasma caliver;
+- 1 × transuranic arquebus;
+- 0 × arc rifle;
+- 1 × enhanced data-tether, glued/fixed;
+- 1 × omnispex, glued/fixed.
+
+The previously reported **7 ordinary carbine-only Vanguard** does not arithmetically fit the exact 14-body total if treated as a separate category; the total would imply 6 ordinary non-Alpha carbine-only bodies. The most plausible reconciliation is that the earlier count included the Alpha carrying a carbine, but this is not assumed until confirmed.
+
+### Collection history
+
+The user recalls that this Skitarii collection began around 7th edition and was deliberately expanded with alternate fixed WYSIWYG bodies for changing tournament/edition requirements. Approximately two plastic kits were used, with additional cast-copy bodies fitted with remaining plastic bits/arms. That construction history is useful context but is not treated as verified body-by-body provenance.
+
+Under the current 11E mirror structure, 24 Rangers with two Alpha bodies can populate at most two complete 10-model Ranger units simultaneously, leaving four alternate bodies; 14 Vanguard can populate one complete 10-model Vanguard unit, leaving four alternate bodies. This is a physical-capacity interpretation, not a replacement for normative legality data.
