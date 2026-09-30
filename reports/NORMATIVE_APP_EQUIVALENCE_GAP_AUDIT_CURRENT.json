@@ -129,6 +129,10 @@
     "core_rule_direct_modal_ast_semantic_validation_decision": "OPAQUE_PRESERVED",
     "core_rule_direct_modal_ast_subject_types_resolved": 0,
     "core_rule_direct_modal_ast_predicate_heads_resolved": 0,
+    "core_rule_ast_readiness_expansion": "PASS_11_MODAL_SENTENCE_CANDIDATES",
+    "core_rule_ast_readiness_expansion_rows": 33,
+    "core_rule_ast_readiness_expansion_candidates": 11,
+    "core_rule_ast_readiness_expansion_new_ast_nodes": 0,
     "official_public_exact_overlap": "PASS_EXACT_PUBLIC_OVERLAP_V1",
     "official_public_residual_classification": "PASS_FAIL_CLOSED_CLASSIFICATION_V1"
   },
@@ -648,7 +652,7 @@
   "gaps": [
     {
       "id": "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-      "state": "DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING",
+      "state": "AST_READINESS_EXPANSION_CLOSED_11_MODAL_SENTENCE_CANDIDATES_PENDING_SELECTION",
       "blocking_scope": [
         "core_rules_content",
         "system_normative_semantics"
@@ -904,9 +908,31 @@
           "COORDINATION_CUE",
           "UNRECOGNIZED_ACTION_HEAD"
         ],
-        "direct_modal_ast_semantic_validation_ast_mutated": false
+        "direct_modal_ast_semantic_validation_ast_mutated": false,
+        "ast_readiness_expansion_report": "reports/CORE_RULE_AST_READINESS_EXPANSION_CURRENT.json",
+        "ast_readiness_expansion_state": "PASS_11_MODAL_SENTENCE_CANDIDATES",
+        "ast_readiness_expansion_rows_audited": 33,
+        "ast_readiness_expansion_source_hashes_reproduced": 33,
+        "ast_readiness_expansion_sentence_candidates": 11,
+        "ast_readiness_expansion_candidate_modal_axes": {
+          "PERMISSION": 9,
+          "PROHIBITION": 2
+        },
+        "ast_readiness_expansion_state_counts": {
+          "BLOCKED_CONDITION_OUTSIDE_MODAL_SENTENCE": 5,
+          "BLOCKED_DELIMITER_SCOPE": 4,
+          "BLOCKED_MODAL_SENTENCE_COMPLEX_DELIMITERS": 2,
+          "BLOCKED_MODAL_SENTENCE_NONTERMINAL": 2,
+          "BLOCKED_MODAL_SENTENCE_PARENTHETICAL_SCOPE": 7,
+          "BLOCKED_PARENTHETICAL_SCOPE": 1,
+          "BLOCKED_SENTENCE_SEGMENTATION": 1,
+          "CANDIDATE_SINGLE_MODAL_SENTENCE": 11
+        },
+        "ast_readiness_expansion_new_ast_nodes": 0,
+        "ast_readiness_expansion_interaction_edges": 0,
+        "ast_readiness_expansion_existing_ast_mutations": 0
       },
-      "next_action": "Preserve the sole validated AST node unchanged and opaque. Expand readiness analysis only across the 33 source-shape-blocked candidates with stricter deterministic shape rules; do not admit new AST nodes in the audit itself."
+      "next_action": "Select at most one of the 11 source-hash-verified modal-sentence candidates for a separately reviewed parser pilot. Candidate status is not AST admission; preserve the existing 13.07 node unchanged and opaque."
     },
     {
       "id": "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
@@ -1215,7 +1241,7 @@
   "conclusion": {
     "why_current_normalized_factions_is_zero": "The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
     "publicly_closable_now": [
-      "Core Rules AST-readiness expansion over source-shape blockers",
+      "Core Rules modal-sentence candidate selection",
       "deeper public Faction Pack structured extraction inside proven public scope",
       "review of edition-11 residual provenance without automatic promotion",
       "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING"
@@ -1224,7 +1250,7 @@
       "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
       "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS"
     ],
-    "recommended_next_milestone": "CORE_RULE_AST_READINESS_EXPANSION_V1",
-    "expected_effect": "The sole direct-modal AST node was semantically validated against verified source evidence and correctly remained opaque: subject type unresolved, predicate action head unresolved, coordination blocker retained, zero AST mutation, zero interaction edges and zero additional paragraphs. Next expand readiness analysis over the 33 shape-blocked candidates without changing this node or admitting new AST nodes during the audit."
+    "recommended_next_milestone": "CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1",
+    "expected_effect": "The 33 source-shape blockers were re-audited from verified official source ranges. Eleven single-modal sentence candidates were isolated with reproducible hashes (9 permission, 2 prohibition), while 22 remain blocked under more specific fail-closed states. No AST node, interaction edge or existing-node mutation was created. Next select at most one candidate for a separate parser pilot."
   }
 }
