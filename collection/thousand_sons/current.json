@@ -397,7 +397,9 @@
   "confirmed_totals": {
     "source_declared_model_bodies": 109,
     "shared_chaos_spawn_available": 10,
-    "tzeentch_styled_shared_spawn": 2
+    "tzeentch_styled_shared_spawn": 2,
+    "external_tzeentch_daemon_bodies_directly_available": 110,
+    "terminator_sorcerer_bodies_cross_role_candidate_for_csm": 2
   },
   "constraints": [],
   "open_questions": [
@@ -416,7 +418,8 @@
     "This inventory records physical collection evidence only; roster points, legality and detachment choices in the source export are not collection authority.",
     "Raw New Recruit exports are not committed because they contain extensive copyrighted rules text; SHA-256 hashes and normalized physical facts are retained instead.",
     "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED.",
-    "Two Tzeentch-styled Chaos Spawn exist in the cross-faction shared Chaos pool; they are not duplicated into the Thousand Sons physical-body count."
+    "Two Tzeentch-styled Chaos Spawn exist in the cross-faction shared Chaos pool; they are not duplicated into the Thousand Sons physical-body count.",
+    "Cross-faction audit records 110 owned Tzeentch daemon bodies directly represented in the current Thousand Sons faction pack and two Terminator Sorcerers as high-confidence physical candidates for the CSM datasheet of the same role."
   ],
   "provenance": {
     "source_files": [
@@ -446,5 +449,62 @@
       "styling_note": "Two of the ten shared Spawn are Tzeentch-styled.",
       "count_in_this_inventory": 0
     }
-  ]
+  ],
+  "cross_faction_access": {
+    "checkpoint": "2026-09-30",
+    "direct_faction_pack_daemon_roles": [
+      {
+        "unit": "Blue Horrors",
+        "collection_ref": "collection/chaos_daemons/current.json#blue_horrors",
+        "owned_bodies": 40
+      },
+      {
+        "unit": "Pink Horrors",
+        "collection_ref": "collection/chaos_daemons/current.json#pink_horrors",
+        "owned_bodies": 40
+      },
+      {
+        "unit": "Flamers",
+        "collection_ref": "collection/chaos_daemons/current.json#flamers",
+        "owned_bodies": 12
+      },
+      {
+        "unit": "Screamers",
+        "collection_ref": "collection/chaos_daemons/current.json#screamers",
+        "owned_bodies": 15
+      },
+      {
+        "unit": "Kairos Fateweaver",
+        "collection_ref": "collection/chaos_daemons/current.json#kairos_fateweaver",
+        "owned_bodies": 1
+      },
+      {
+        "unit": "Lord Of Change",
+        "collection_ref": "collection/chaos_daemons/current.json#lord_of_change",
+        "owned_bodies": 2
+      }
+    ],
+    "shared_pools": [
+      {
+        "unit": "Chaos Spawn",
+        "collection_ref": "collection/chaos_shared/current.json#chaos_spawn_shared",
+        "owned_bodies": 10,
+        "styling_note": "2 are Tzeentch-styled"
+      }
+    ],
+    "csm_overlap": [
+      {
+        "unit": "Rubric Marines",
+        "relation": "CSM can import this Thousand Sons unit via Cult of the Dark Gods",
+        "owned_bodies": 15
+      },
+      {
+        "unit": "Sorcerer In Terminator Armour",
+        "relation": "Two Thousand Sons bodies are high-confidence physical-role candidates for the separate CSM Sorcerer In Terminator Armour datasheet.",
+        "owned_bodies": 2,
+        "state": "PHYSICAL_ROLE_CANDIDATE_NOT_DATASHEET_IMPORT",
+        "compatibility": "Both current profiles use 40 mm bases and force weapon plus combi-bolter/combi-weapon physical weapon families."
+      }
+    ]
+  }
 }
