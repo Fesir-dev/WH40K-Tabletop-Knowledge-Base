@@ -1,0 +1,4100 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "snapshot_date": "2026-09-30",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "atomization_version": "CORE_RULE_REFERENCE_ATOMIZATION_V1",
+  "source": {
+    "document_id": "GW_11E_CORE_RULES_PUBLIC",
+    "source_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+    "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+    "page_count": 88,
+    "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+  },
+  "source_verification": {
+    "binary_sha256_match": true,
+    "page_semantic_fingerprints_match": 88,
+    "document_semantic_sha256_match": true
+  },
+  "parent_structure": {
+    "path": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
+    "structure_version": "CORE_RULES_SECTION_STRUCTURE_V1",
+    "rule_reference_families": 24,
+    "rule_reference_count": 141
+  },
+  "atoms": [
+    {
+      "rule_ref": "01.01",
+      "rule_key": "core-rule-01-01",
+      "family_id": "01",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 8,
+      "family_page_end": 9,
+      "family_page_range_sha256": "6c6375ce09b2d5d91e13b7d77c8be158cf54640b6d800e350350b4579d80b724",
+      "in_family_heading_pages": [
+        8
+      ],
+      "primary_heading_page": 8,
+      "heading_labels": [
+        {
+          "page": 8,
+          "label": "ARMIES 01.01",
+          "label_sha256": "64a454ef2b8f8a4ba1ba276b67f3e9939fffae71ea0c952e05500cca6f6336e2"
+        }
+      ],
+      "page_semantic_sha256": {
+        "8": "6aee87d26130351de488278f1aa8c694503ab5f02e6a7f0390f978df95092969"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        8
+      ]
+    },
+    {
+      "rule_ref": "01.02",
+      "rule_key": "core-rule-01-02",
+      "family_id": "01",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 8,
+      "family_page_end": 9,
+      "family_page_range_sha256": "6c6375ce09b2d5d91e13b7d77c8be158cf54640b6d800e350350b4579d80b724",
+      "in_family_heading_pages": [
+        8
+      ],
+      "primary_heading_page": 8,
+      "heading_labels": [
+        {
+          "page": 8,
+          "label": "UNITS AND MODELS 01.02",
+          "label_sha256": "3583777a51ec9bb98b3283bb5635b9943e3b17d1fdb709d5e5f6367c685d0973"
+        }
+      ],
+      "page_semantic_sha256": {
+        "8": "6aee87d26130351de488278f1aa8c694503ab5f02e6a7f0390f978df95092969"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        8
+      ]
+    },
+    {
+      "rule_ref": "01.04",
+      "rule_key": "core-rule-01-04",
+      "family_id": "01",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 8,
+      "family_page_end": 9,
+      "family_page_range_sha256": "6c6375ce09b2d5d91e13b7d77c8be158cf54640b6d800e350350b4579d80b724",
+      "in_family_heading_pages": [
+        9
+      ],
+      "primary_heading_page": 9,
+      "heading_labels": [
+        {
+          "page": 9,
+          "label": "MEASURING DISTANCES 01.04",
+          "label_sha256": "563691e7a6f36f0f9e830e6e4cf98af562a69b4243a9ee8289bd7b3a126d5ba2"
+        }
+      ],
+      "page_semantic_sha256": {
+        "9": "b571ae53254e2c6c56b6af66e0ac7cc46c11685120e52212858d910581565e2d"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        9
+      ]
+    },
+    {
+      "rule_ref": "01.05",
+      "rule_key": "core-rule-01-05",
+      "family_id": "01",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 8,
+      "family_page_end": 9,
+      "family_page_range_sha256": "6c6375ce09b2d5d91e13b7d77c8be158cf54640b6d800e350350b4579d80b724",
+      "in_family_heading_pages": [
+        9
+      ],
+      "primary_heading_page": 9,
+      "heading_labels": [
+        {
+          "page": 9,
+          "label": "DICE 01.05",
+          "label_sha256": "a8795731e463874259468984d4d5b2ab8279b45e3a3571e5710d7fbf8b98d58d"
+        }
+      ],
+      "page_semantic_sha256": {
+        "9": "b571ae53254e2c6c56b6af66e0ac7cc46c11685120e52212858d910581565e2d"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        9
+      ]
+    },
+    {
+      "rule_ref": "01.06",
+      "rule_key": "core-rule-01-06",
+      "family_id": "01",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 8,
+      "family_page_end": 9,
+      "family_page_range_sha256": "6c6375ce09b2d5d91e13b7d77c8be158cf54640b6d800e350350b4579d80b724",
+      "in_family_heading_pages": [
+        9
+      ],
+      "primary_heading_page": 9,
+      "heading_labels": [
+        {
+          "page": 9,
+          "label": "LEADERSHIP ROLLS 01.06",
+          "label_sha256": "9eac90b0e42e09e2318858635023a6fa93f54ed8c9e8df9c7b7312b1e513479b"
+        }
+      ],
+      "page_semantic_sha256": {
+        "9": "b571ae53254e2c6c56b6af66e0ac7cc46c11685120e52212858d910581565e2d"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        9
+      ]
+    },
+    {
+      "rule_ref": "01.07",
+      "rule_key": "core-rule-01-07",
+      "family_id": "01",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 8,
+      "family_page_end": 9,
+      "family_page_range_sha256": "6c6375ce09b2d5d91e13b7d77c8be158cf54640b6d800e350350b4579d80b724",
+      "in_family_heading_pages": [
+        9
+      ],
+      "primary_heading_page": 9,
+      "heading_labels": [
+        {
+          "page": 9,
+          "label": "BATTLE-SHOCK ROLLS 01.07",
+          "label_sha256": "551e63025d133fbb994fa65dafec68f66a7631fc9cc270407f8ceb8b8aa19ba4"
+        }
+      ],
+      "page_semantic_sha256": {
+        "9": "b571ae53254e2c6c56b6af66e0ac7cc46c11685120e52212858d910581565e2d"
+      },
+      "cross_reference_pages": [
+        30,
+        31,
+        33
+      ],
+      "all_reference_pages": [
+        9,
+        30,
+        31,
+        33
+      ]
+    },
+    {
+      "rule_ref": "02.01",
+      "rule_key": "core-rule-02-01",
+      "family_id": "02",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 10,
+      "family_page_end": 11,
+      "family_page_range_sha256": "ac41ad2b6bb27a5dca129957476f355440c45ef130a2cce505bc4c97a3e76de0",
+      "in_family_heading_pages": [
+        10
+      ],
+      "primary_heading_page": 10,
+      "heading_labels": [
+        {
+          "page": 10,
+          "label": "1 DATASHEET NAME 02.01",
+          "label_sha256": "96e97f63cae1ac08d1b3b751d36ec7843d22637fed7e38ffe8ea3fbd5fcb03f7"
+        }
+      ],
+      "page_semantic_sha256": {
+        "10": "7e43b35ccb61b7e50665fd242a6b0e1d1ddcfaaae006a1fdb8f37f329b8663df"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        10
+      ]
+    },
+    {
+      "rule_ref": "02.02",
+      "rule_key": "core-rule-02-02",
+      "family_id": "02",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 10,
+      "family_page_end": 11,
+      "family_page_range_sha256": "ac41ad2b6bb27a5dca129957476f355440c45ef130a2cce505bc4c97a3e76de0",
+      "in_family_heading_pages": [
+        10
+      ],
+      "primary_heading_page": 10,
+      "heading_labels": [
+        {
+          "page": 10,
+          "label": "2 PROFILES 02.02",
+          "label_sha256": "65ca94682567db9dc4e55153698bea2fa9d270ed1e1050d1239ee7e927c9b6bc"
+        }
+      ],
+      "page_semantic_sha256": {
+        "10": "7e43b35ccb61b7e50665fd242a6b0e1d1ddcfaaae006a1fdb8f37f329b8663df"
+      },
+      "cross_reference_pages": [
+        9
+      ],
+      "all_reference_pages": [
+        9,
+        10
+      ]
+    },
+    {
+      "rule_ref": "02.03",
+      "rule_key": "core-rule-02-03",
+      "family_id": "02",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 10,
+      "family_page_end": 11,
+      "family_page_range_sha256": "ac41ad2b6bb27a5dca129957476f355440c45ef130a2cce505bc4c97a3e76de0",
+      "in_family_heading_pages": [
+        10
+      ],
+      "primary_heading_page": 10,
+      "heading_labels": [
+        {
+          "page": 10,
+          "label": "3 ABILITIES 02.03",
+          "label_sha256": "43bdd9db0ad4c5597063bb24ed527e3843c341db747589a68e377065b59ad1c4"
+        }
+      ],
+      "page_semantic_sha256": {
+        "10": "7e43b35ccb61b7e50665fd242a6b0e1d1ddcfaaae006a1fdb8f37f329b8663df"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        10
+      ]
+    },
+    {
+      "rule_ref": "02.04",
+      "rule_key": "core-rule-02-04",
+      "family_id": "02",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 10,
+      "family_page_end": 11,
+      "family_page_range_sha256": "ac41ad2b6bb27a5dca129957476f355440c45ef130a2cce505bc4c97a3e76de0",
+      "in_family_heading_pages": [
+        10
+      ],
+      "primary_heading_page": 10,
+      "heading_labels": [
+        {
+          "page": 10,
+          "label": "4 WEAPONS 02.04",
+          "label_sha256": "1749166f7c6828212330ed1d7054a3322bc7d8549bc24ec83bf57b80a74f9211"
+        }
+      ],
+      "page_semantic_sha256": {
+        "10": "7e43b35ccb61b7e50665fd242a6b0e1d1ddcfaaae006a1fdb8f37f329b8663df"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        10
+      ]
+    },
+    {
+      "rule_ref": "02.05",
+      "rule_key": "core-rule-02-05",
+      "family_id": "02",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 10,
+      "family_page_end": 11,
+      "family_page_range_sha256": "ac41ad2b6bb27a5dca129957476f355440c45ef130a2cce505bc4c97a3e76de0",
+      "in_family_heading_pages": [
+        10
+      ],
+      "primary_heading_page": 10,
+      "heading_labels": [
+        {
+          "page": 10,
+          "label": "5 KEYWORDS 02.05",
+          "label_sha256": "12e5077cd2bd06d4af9b09cca59f18c97c88cfa8142ddabf7d784ff3bd0467b9"
+        }
+      ],
+      "page_semantic_sha256": {
+        "10": "7e43b35ccb61b7e50665fd242a6b0e1d1ddcfaaae006a1fdb8f37f329b8663df"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        10
+      ]
+    },
+    {
+      "rule_ref": "03.01",
+      "rule_key": "core-rule-03-01",
+      "family_id": "03",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 12,
+      "family_page_end": 15,
+      "family_page_range_sha256": "f06efbbb0db9835389610b301c4d0794e5657f949a413482a06e9af112e50173",
+      "in_family_heading_pages": [
+        12
+      ],
+      "primary_heading_page": 12,
+      "heading_labels": [
+        {
+          "page": 12,
+          "label": "MOVING UNITS 03.01",
+          "label_sha256": "56ee3f8ed8c70c10987bc87af4bbf185da89ddcced5c6aba4827a610485e4f3d"
+        }
+      ],
+      "page_semantic_sha256": {
+        "12": "6a29ebe8ceeedad2903934e4c71fbe431c512b85f736467dcfcebc9f2fe00243"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        12
+      ]
+    },
+    {
+      "rule_ref": "03.02",
+      "rule_key": "core-rule-03-02",
+      "family_id": "03",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 12,
+      "family_page_end": 15,
+      "family_page_range_sha256": "f06efbbb0db9835389610b301c4d0794e5657f949a413482a06e9af112e50173",
+      "in_family_heading_pages": [
+        14
+      ],
+      "primary_heading_page": 14,
+      "heading_labels": [
+        {
+          "page": 14,
+          "label": "SET UP 03.02",
+          "label_sha256": "8698bc7e82c647c3ec12788dc6b7183fa6ec0d88fff0bb1aa11bf04e276bc488"
+        }
+      ],
+      "page_semantic_sha256": {
+        "14": "b92939800ff3dfe09348db2102dc3aaa2431828e51a2cf384ca494b7d4b17b1d"
+      },
+      "cross_reference_pages": [
+        65,
+        69
+      ],
+      "all_reference_pages": [
+        14,
+        65,
+        69
+      ]
+    },
+    {
+      "rule_ref": "03.03",
+      "rule_key": "core-rule-03-03",
+      "family_id": "03",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 12,
+      "family_page_end": 15,
+      "family_page_range_sha256": "f06efbbb0db9835389610b301c4d0794e5657f949a413482a06e9af112e50173",
+      "in_family_heading_pages": [
+        14
+      ],
+      "primary_heading_page": 14,
+      "heading_labels": [
+        {
+          "page": 14,
+          "label": "COHERENCY 03.03",
+          "label_sha256": "e96860ae56620a8510e33b78dd76d82c73c6af0e8438de4b556120ea1fcfa5bd"
+        }
+      ],
+      "page_semantic_sha256": {
+        "14": "b92939800ff3dfe09348db2102dc3aaa2431828e51a2cf384ca494b7d4b17b1d"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        12,
+        14
+      ]
+    },
+    {
+      "rule_ref": "03.04",
+      "rule_key": "core-rule-03-04",
+      "family_id": "03",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 12,
+      "family_page_end": 15,
+      "family_page_range_sha256": "f06efbbb0db9835389610b301c4d0794e5657f949a413482a06e9af112e50173",
+      "in_family_heading_pages": [
+        14
+      ],
+      "primary_heading_page": 14,
+      "heading_labels": [
+        {
+          "page": 14,
+          "label": "ENGAGEMENT 03.04",
+          "label_sha256": "35af4de55ec8ca55c223b4abbed6c435ad91c7932062070be712be8a71ddc83a"
+        }
+      ],
+      "page_semantic_sha256": {
+        "14": "b92939800ff3dfe09348db2102dc3aaa2431828e51a2cf384ca494b7d4b17b1d"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        14
+      ]
+    },
+    {
+      "rule_ref": "04.01",
+      "rule_key": "core-rule-04-01",
+      "family_id": "04",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 16,
+      "family_page_end": 17,
+      "family_page_range_sha256": "8e80195fda6ffb9f5f176b376f6f2d57afc51985f348c0add71fd50a74b609c9",
+      "in_family_heading_pages": [
+        16
+      ],
+      "primary_heading_page": 16,
+      "heading_labels": [
+        {
+          "page": 16,
+          "label": "1 SELECT WEAPONS 04.01",
+          "label_sha256": "7eb15db73c9bf63ac420e0954ea5745e62aefa2b6c6aaf514a7c33655e5d38b6"
+        }
+      ],
+      "page_semantic_sha256": {
+        "16": "9e08f23daafef656aa1ac8ee12391e8caf6da6f15e2d176aa1fb9310dbad0e41"
+      },
+      "cross_reference_pages": [
+        81
+      ],
+      "all_reference_pages": [
+        16,
+        81
+      ]
+    },
+    {
+      "rule_ref": "04.03",
+      "rule_key": "core-rule-04-03",
+      "family_id": "04",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 16,
+      "family_page_end": 17,
+      "family_page_range_sha256": "8e80195fda6ffb9f5f176b376f6f2d57afc51985f348c0add71fd50a74b609c9",
+      "in_family_heading_pages": [
+        17
+      ],
+      "primary_heading_page": 17,
+      "heading_labels": [
+        {
+          "page": 17,
+          "label": "3 RESOLVE ATTACKS 04.03",
+          "label_sha256": "d5b7534ab09e92d4b1cbdadfdb67ec8710b0b4ebd4a47708838dd83a64126b02"
+        }
+      ],
+      "page_semantic_sha256": {
+        "17": "27fd501e2f8066073da7194eb70f69d640116ebe64b83839a0f8cf43b827e44b"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        17
+      ]
+    },
+    {
+      "rule_ref": "05.01",
+      "rule_key": "core-rule-05-01",
+      "family_id": "05",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 18,
+      "family_page_end": 23,
+      "family_page_range_sha256": "a4b7212f7e5e02fe963d57f04f2c8d29d8cea89132ba85a5cf0ea6f5dc58d57d",
+      "in_family_heading_pages": [
+        18
+      ],
+      "primary_heading_page": 18,
+      "heading_labels": [
+        {
+          "page": 18,
+          "label": "1 HIT ROLLS 05.01",
+          "label_sha256": "459910561e71860ef683618de953a1caff245f2676968fd39e8f9c2dcab365c3"
+        }
+      ],
+      "page_semantic_sha256": {
+        "18": "b950b5b19e50d02e84769c4c9e79d955814ea12e7520ae9429d3fb79f2680057"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        18
+      ]
+    },
+    {
+      "rule_ref": "05.02",
+      "rule_key": "core-rule-05-02",
+      "family_id": "05",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 18,
+      "family_page_end": 23,
+      "family_page_range_sha256": "a4b7212f7e5e02fe963d57f04f2c8d29d8cea89132ba85a5cf0ea6f5dc58d57d",
+      "in_family_heading_pages": [
+        18
+      ],
+      "primary_heading_page": 18,
+      "heading_labels": [
+        {
+          "page": 18,
+          "label": "2 WOUND ROLLS 05.02",
+          "label_sha256": "3fa30d783fb30a8922fc0de4814ec86a6a135961474b561b43bb1b437baef7d1"
+        }
+      ],
+      "page_semantic_sha256": {
+        "18": "b950b5b19e50d02e84769c4c9e79d955814ea12e7520ae9429d3fb79f2680057"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        18
+      ]
+    },
+    {
+      "rule_ref": "05.03",
+      "rule_key": "core-rule-05-03",
+      "family_id": "05",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 18,
+      "family_page_end": 23,
+      "family_page_range_sha256": "a4b7212f7e5e02fe963d57f04f2c8d29d8cea89132ba85a5cf0ea6f5dc58d57d",
+      "in_family_heading_pages": [
+        19
+      ],
+      "primary_heading_page": 19,
+      "heading_labels": [
+        {
+          "page": 19,
+          "label": "3 SAVE ROLLS 05.03",
+          "label_sha256": "b327ad5ad563d2980a9d324959b55bdfd9fb157c1d4941bc4545ee77f8e7a1e0"
+        }
+      ],
+      "page_semantic_sha256": {
+        "19": "359a6602f74cad5451301e8582f9b2b509be22fc5f4ab2cf97d6d1737a990d51"
+      },
+      "cross_reference_pages": [
+        84
+      ],
+      "all_reference_pages": [
+        19,
+        84
+      ]
+    },
+    {
+      "rule_ref": "06.01",
+      "rule_key": "core-rule-06-01",
+      "family_id": "06",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 24,
+      "family_page_end": 27,
+      "family_page_range_sha256": "4eec1c34712f3aaf043fd93a6032189617eb828c4d7db584ec6005c907a97519",
+      "in_family_heading_pages": [
+        24
+      ],
+      "primary_heading_page": 24,
+      "heading_labels": [
+        {
+          "page": 24,
+          "label": "VISIBILITY 06.01",
+          "label_sha256": "cc8579c50a6a27041f0fa0420ec05daa643920a56691feef9b9801cca1ec7764"
+        }
+      ],
+      "page_semantic_sha256": {
+        "24": "4a88272beaeb9aac25d2812bc1cf260ec7176f635d320b5216f83923acd056ac"
+      },
+      "cross_reference_pages": [
+        16
+      ],
+      "all_reference_pages": [
+        16,
+        24
+      ]
+    },
+    {
+      "rule_ref": "06.02",
+      "rule_key": "core-rule-06-02",
+      "family_id": "06",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 24,
+      "family_page_end": 27,
+      "family_page_range_sha256": "4eec1c34712f3aaf043fd93a6032189617eb828c4d7db584ec6005c907a97519",
+      "in_family_heading_pages": [
+        24
+      ],
+      "primary_heading_page": 24,
+      "heading_labels": [
+        {
+          "page": 24,
+          "label": "MORTAL WOUNDS 06.02",
+          "label_sha256": "09b82eebfb04de714667fa31e04b755c08950615fc4d3015a8b4dabdc4e60cc8"
+        }
+      ],
+      "page_semantic_sha256": {
+        "24": "4a88272beaeb9aac25d2812bc1cf260ec7176f635d320b5216f83923acd056ac"
+      },
+      "cross_reference_pages": [
+        56
+      ],
+      "all_reference_pages": [
+        24,
+        56
+      ]
+    },
+    {
+      "rule_ref": "06.03",
+      "rule_key": "core-rule-06-03",
+      "family_id": "06",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 24,
+      "family_page_end": 27,
+      "family_page_range_sha256": "4eec1c34712f3aaf043fd93a6032189617eb828c4d7db584ec6005c907a97519",
+      "in_family_heading_pages": [
+        24
+      ],
+      "primary_heading_page": 24,
+      "heading_labels": [
+        {
+          "page": 24,
+          "label": "HAZARD ROLLS 06.03",
+          "label_sha256": "15bd2ecb1b9234d19ec7fe4fe9f778ef0001c81faf0fd7c8334ba5e99d60e360"
+        }
+      ],
+      "page_semantic_sha256": {
+        "24": "4a88272beaeb9aac25d2812bc1cf260ec7176f635d320b5216f83923acd056ac"
+      },
+      "cross_reference_pages": [
+        33,
+        65,
+        81
+      ],
+      "all_reference_pages": [
+        24,
+        33,
+        65,
+        81
+      ]
+    },
+    {
+      "rule_ref": "07.01",
+      "rule_key": "core-rule-07-01",
+      "family_id": "07",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 28,
+      "family_page_end": 29,
+      "family_page_range_sha256": "0828b41867dde2422b53650e9ea323d4f26a425251ca7121c0eb3833881483f8",
+      "in_family_heading_pages": [
+        28
+      ],
+      "primary_heading_page": 28,
+      "heading_labels": [
+        {
+          "page": 28,
+          "label": "1 START OF BATTLE ROUND 07.01",
+          "label_sha256": "9e5674b61bed99c7d0dfc16d859fc81ed526e48ee1eef9c3f9e87fffe96bba8c"
+        }
+      ],
+      "page_semantic_sha256": {
+        "28": "5ed9c7d308063da7c80b6b05636813238f3a5be239402922e169151aa8b0fe4c"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        28
+      ]
+    },
+    {
+      "rule_ref": "07.02",
+      "rule_key": "core-rule-07-02",
+      "family_id": "07",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 28,
+      "family_page_end": 29,
+      "family_page_range_sha256": "0828b41867dde2422b53650e9ea323d4f26a425251ca7121c0eb3833881483f8",
+      "in_family_heading_pages": [
+        28
+      ],
+      "primary_heading_page": 28,
+      "heading_labels": [
+        {
+          "page": 28,
+          "label": "2 PLAYER TURNS 07.02",
+          "label_sha256": "f947aab198789011611fbbe4797fb61033465c2fbfb738d33c1c8aa94358cd5c"
+        }
+      ],
+      "page_semantic_sha256": {
+        "28": "5ed9c7d308063da7c80b6b05636813238f3a5be239402922e169151aa8b0fe4c"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        28
+      ]
+    },
+    {
+      "rule_ref": "07.03",
+      "rule_key": "core-rule-07-03",
+      "family_id": "07",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 28,
+      "family_page_end": 29,
+      "family_page_range_sha256": "0828b41867dde2422b53650e9ea323d4f26a425251ca7121c0eb3833881483f8",
+      "in_family_heading_pages": [
+        28
+      ],
+      "primary_heading_page": 28,
+      "heading_labels": [
+        {
+          "page": 28,
+          "label": "3 END OF BATTLE ROUND 07.03",
+          "label_sha256": "012d184b80bbed781b9987745735b16460466db841ca572957e3f908a1b62035"
+        }
+      ],
+      "page_semantic_sha256": {
+        "28": "5ed9c7d308063da7c80b6b05636813238f3a5be239402922e169151aa8b0fe4c"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        28
+      ]
+    },
+    {
+      "rule_ref": "08.01",
+      "rule_key": "core-rule-08-01",
+      "family_id": "08",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 30,
+      "family_page_end": 31,
+      "family_page_range_sha256": "b1e883a038137fd18c1e412ee603bd5a8572e804d4eb233d48620f7af2a78c9d",
+      "in_family_heading_pages": [
+        30
+      ],
+      "primary_heading_page": 30,
+      "heading_labels": [
+        {
+          "page": 30,
+          "label": "1 START OF COMMAND PHASE 08.01",
+          "label_sha256": "b7d3d1fd9f56d18ebf803b21f54c11eecf022d729a0a5179d6e50babca61730e"
+        }
+      ],
+      "page_semantic_sha256": {
+        "30": "e7fd815c07965c8edae277b709ada8208b78fe8bef116c7335689aead77ca93a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        30
+      ]
+    },
+    {
+      "rule_ref": "08.02",
+      "rule_key": "core-rule-08-02",
+      "family_id": "08",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 30,
+      "family_page_end": 31,
+      "family_page_range_sha256": "b1e883a038137fd18c1e412ee603bd5a8572e804d4eb233d48620f7af2a78c9d",
+      "in_family_heading_pages": [
+        30
+      ],
+      "primary_heading_page": 30,
+      "heading_labels": [
+        {
+          "page": 30,
+          "label": "2 GAIN CORE CP 08.02",
+          "label_sha256": "e46bc00beff1378838570360b0c8098bc8dcc6ac245e6fa84ad69705023af75e"
+        }
+      ],
+      "page_semantic_sha256": {
+        "30": "e7fd815c07965c8edae277b709ada8208b78fe8bef116c7335689aead77ca93a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        30
+      ]
+    },
+    {
+      "rule_ref": "08.03",
+      "rule_key": "core-rule-08-03",
+      "family_id": "08",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 30,
+      "family_page_end": 31,
+      "family_page_range_sha256": "b1e883a038137fd18c1e412ee603bd5a8572e804d4eb233d48620f7af2a78c9d",
+      "in_family_heading_pages": [
+        30
+      ],
+      "primary_heading_page": 30,
+      "heading_labels": [
+        {
+          "page": 30,
+          "label": "3 BATTLE-SHOCK 08.03",
+          "label_sha256": "598122f41220383c9b2f41fcfbab512e5d3ac2b39ad93639ecaf4987a5ead852"
+        }
+      ],
+      "page_semantic_sha256": {
+        "30": "e7fd815c07965c8edae277b709ada8208b78fe8bef116c7335689aead77ca93a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        30
+      ]
+    },
+    {
+      "rule_ref": "08.04",
+      "rule_key": "core-rule-08-04",
+      "family_id": "08",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 30,
+      "family_page_end": 31,
+      "family_page_range_sha256": "b1e883a038137fd18c1e412ee603bd5a8572e804d4eb233d48620f7af2a78c9d",
+      "in_family_heading_pages": [
+        30
+      ],
+      "primary_heading_page": 30,
+      "heading_labels": [
+        {
+          "page": 30,
+          "label": "4 COMMAND ABILITIES 08.04",
+          "label_sha256": "46d6afd0cec64e53008b3cd44d524ab8b117ded0a09b9e61fc026b4b989b6d45"
+        }
+      ],
+      "page_semantic_sha256": {
+        "30": "e7fd815c07965c8edae277b709ada8208b78fe8bef116c7335689aead77ca93a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        30
+      ]
+    },
+    {
+      "rule_ref": "08.05",
+      "rule_key": "core-rule-08-05",
+      "family_id": "08",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 30,
+      "family_page_end": 31,
+      "family_page_range_sha256": "b1e883a038137fd18c1e412ee603bd5a8572e804d4eb233d48620f7af2a78c9d",
+      "in_family_heading_pages": [
+        30
+      ],
+      "primary_heading_page": 30,
+      "heading_labels": [
+        {
+          "page": 30,
+          "label": "5 END OF COMMAND PHASE 08.05",
+          "label_sha256": "ba7dfa4a54060d6c6a32dcfa4bd9477f18f77b81275a82d42dc193f0f759cb44"
+        }
+      ],
+      "page_semantic_sha256": {
+        "30": "e7fd815c07965c8edae277b709ada8208b78fe8bef116c7335689aead77ca93a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        30
+      ]
+    },
+    {
+      "rule_ref": "09.01",
+      "rule_key": "core-rule-09-01",
+      "family_id": "09",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 32,
+      "family_page_end": 33,
+      "family_page_range_sha256": "e18871ff86fc579a05166f894f4b0f7a6514e4937e335b5790963504b5a4e5b5",
+      "in_family_heading_pages": [
+        32
+      ],
+      "primary_heading_page": 32,
+      "heading_labels": [
+        {
+          "page": 32,
+          "label": "1 START OF MOVEMENT PHASE 09.01",
+          "label_sha256": "d764b8a65d7843811f72bd24e9d7c18e3d4c4d8344ea196991e6d1fd2a11b705"
+        }
+      ],
+      "page_semantic_sha256": {
+        "32": "57801899a8e812583fca31c05b7216a5a5671c7d90b0d97b2c6cbcffde9e538e"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        32
+      ]
+    },
+    {
+      "rule_ref": "09.02",
+      "rule_key": "core-rule-09-02",
+      "family_id": "09",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 32,
+      "family_page_end": 33,
+      "family_page_range_sha256": "e18871ff86fc579a05166f894f4b0f7a6514e4937e335b5790963504b5a4e5b5",
+      "in_family_heading_pages": [
+        32
+      ],
+      "primary_heading_page": 32,
+      "heading_labels": [
+        {
+          "page": 32,
+          "label": "2 MOVE UNITS 09.02",
+          "label_sha256": "f51572f7c80266770142b789d6fed702db7d9a3ae8788f66d1e85d025e69da90"
+        }
+      ],
+      "page_semantic_sha256": {
+        "32": "57801899a8e812583fca31c05b7216a5a5671c7d90b0d97b2c6cbcffde9e538e"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        32
+      ]
+    },
+    {
+      "rule_ref": "09.03",
+      "rule_key": "core-rule-09-03",
+      "family_id": "09",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 32,
+      "family_page_end": 33,
+      "family_page_range_sha256": "e18871ff86fc579a05166f894f4b0f7a6514e4937e335b5790963504b5a4e5b5",
+      "in_family_heading_pages": [
+        32
+      ],
+      "primary_heading_page": 32,
+      "heading_labels": [
+        {
+          "page": 32,
+          "label": "3 END OF MOVEMENT PHASE 09.03",
+          "label_sha256": "d31951a1ad0550d94cd6f32d7fd194c68c7349bbd8ebd9432177d71a76e94cb9"
+        }
+      ],
+      "page_semantic_sha256": {
+        "32": "57801899a8e812583fca31c05b7216a5a5671c7d90b0d97b2c6cbcffde9e538e"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        32
+      ]
+    },
+    {
+      "rule_ref": "09.04",
+      "rule_key": "core-rule-09-04",
+      "family_id": "09",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 32,
+      "family_page_end": 33,
+      "family_page_range_sha256": "e18871ff86fc579a05166f894f4b0f7a6514e4937e335b5790963504b5a4e5b5",
+      "in_family_heading_pages": [
+        33
+      ],
+      "primary_heading_page": 33,
+      "heading_labels": [
+        {
+          "page": 33,
+          "label": "REMAIN STATIONARY 09.04",
+          "label_sha256": "b5d8b7ed494554824b61a5e47e90634445e9c2d4a233f885f7c6d92564b3b3c6"
+        }
+      ],
+      "page_semantic_sha256": {
+        "33": "a5fdbb209badf601c48049aa6cfac9d97cb51c6a541b4e04487516ee13cca5d7"
+      },
+      "cross_reference_pages": [
+        14
+      ],
+      "all_reference_pages": [
+        14,
+        33
+      ]
+    },
+    {
+      "rule_ref": "09.05",
+      "rule_key": "core-rule-09-05",
+      "family_id": "09",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 32,
+      "family_page_end": 33,
+      "family_page_range_sha256": "e18871ff86fc579a05166f894f4b0f7a6514e4937e335b5790963504b5a4e5b5",
+      "in_family_heading_pages": [
+        33
+      ],
+      "primary_heading_page": 33,
+      "heading_labels": [
+        {
+          "page": 33,
+          "label": "NORMAL MOVE 09.05",
+          "label_sha256": "e1f37ac970f42275e4d8878d5bd6423cd8a472a82d971bcd4a0a3b69a8bd3e3a"
+        }
+      ],
+      "page_semantic_sha256": {
+        "33": "a5fdbb209badf601c48049aa6cfac9d97cb51c6a541b4e04487516ee13cca5d7"
+      },
+      "cross_reference_pages": [
+        13
+      ],
+      "all_reference_pages": [
+        13,
+        33
+      ]
+    },
+    {
+      "rule_ref": "09.06",
+      "rule_key": "core-rule-09-06",
+      "family_id": "09",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 32,
+      "family_page_end": 33,
+      "family_page_range_sha256": "e18871ff86fc579a05166f894f4b0f7a6514e4937e335b5790963504b5a4e5b5",
+      "in_family_heading_pages": [
+        33
+      ],
+      "primary_heading_page": 33,
+      "heading_labels": [
+        {
+          "page": 33,
+          "label": "ADVANCE MOVE 09.06",
+          "label_sha256": "4f49871432f04256757ba388aad4f01fee43841610bc5dc410f5940ed7a57c72"
+        }
+      ],
+      "page_semantic_sha256": {
+        "33": "a5fdbb209badf601c48049aa6cfac9d97cb51c6a541b4e04487516ee13cca5d7"
+      },
+      "cross_reference_pages": [
+        13
+      ],
+      "all_reference_pages": [
+        13,
+        33
+      ]
+    },
+    {
+      "rule_ref": "09.07",
+      "rule_key": "core-rule-09-07",
+      "family_id": "09",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 32,
+      "family_page_end": 33,
+      "family_page_range_sha256": "e18871ff86fc579a05166f894f4b0f7a6514e4937e335b5790963504b5a4e5b5",
+      "in_family_heading_pages": [
+        33
+      ],
+      "primary_heading_page": 33,
+      "heading_labels": [
+        {
+          "page": 33,
+          "label": "FALL-BACK MOVE 09.07",
+          "label_sha256": "65cefd04cafd017a5dc9a095689d876b996158b90e13be454c0539662aec6269"
+        }
+      ],
+      "page_semantic_sha256": {
+        "33": "a5fdbb209badf601c48049aa6cfac9d97cb51c6a541b4e04487516ee13cca5d7"
+      },
+      "cross_reference_pages": [
+        13
+      ],
+      "all_reference_pages": [
+        13,
+        33
+      ]
+    },
+    {
+      "rule_ref": "10.01",
+      "rule_key": "core-rule-10-01",
+      "family_id": "10",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 34,
+      "family_page_end": 35,
+      "family_page_range_sha256": "a3f7732f1b02a0d24d8677502aa29e21c73f4f6a6c28d5c584e5f1c4472028d2",
+      "in_family_heading_pages": [
+        34
+      ],
+      "primary_heading_page": 34,
+      "heading_labels": [
+        {
+          "page": 34,
+          "label": "1 START OF SHOOTING PHASE 10.01",
+          "label_sha256": "6d27b89fd2533c8936f1f0016cd7412d151157c3567a55ad5af3da60872daec2"
+        }
+      ],
+      "page_semantic_sha256": {
+        "34": "0c6bc869414e2c86cacd5d7c89209585a8e08e7d8850b0a1b58854b4ffc3c85e"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        34
+      ]
+    },
+    {
+      "rule_ref": "10.02",
+      "rule_key": "core-rule-10-02",
+      "family_id": "10",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 34,
+      "family_page_end": 35,
+      "family_page_range_sha256": "a3f7732f1b02a0d24d8677502aa29e21c73f4f6a6c28d5c584e5f1c4472028d2",
+      "in_family_heading_pages": [
+        34
+      ],
+      "primary_heading_page": 34,
+      "heading_labels": [
+        {
+          "page": 34,
+          "label": "2 SHOOT 10.02",
+          "label_sha256": "71f2e656e7b36a8ae0b954d822415b1842b95fcbd688eb1205efd63825390094"
+        }
+      ],
+      "page_semantic_sha256": {
+        "34": "0c6bc869414e2c86cacd5d7c89209585a8e08e7d8850b0a1b58854b4ffc3c85e"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        34
+      ]
+    },
+    {
+      "rule_ref": "10.03",
+      "rule_key": "core-rule-10-03",
+      "family_id": "10",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 34,
+      "family_page_end": 35,
+      "family_page_range_sha256": "a3f7732f1b02a0d24d8677502aa29e21c73f4f6a6c28d5c584e5f1c4472028d2",
+      "in_family_heading_pages": [
+        34
+      ],
+      "primary_heading_page": 34,
+      "heading_labels": [
+        {
+          "page": 34,
+          "label": "3 END OF SHOOTING PHASE 10.03",
+          "label_sha256": "2151352a09b24fd9529f9800bda9570d855cc587bcf124d11a3fe008f414efb8"
+        }
+      ],
+      "page_semantic_sha256": {
+        "34": "0c6bc869414e2c86cacd5d7c89209585a8e08e7d8850b0a1b58854b4ffc3c85e"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        34
+      ]
+    },
+    {
+      "rule_ref": "10.04",
+      "rule_key": "core-rule-10-04",
+      "family_id": "10",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 34,
+      "family_page_end": 35,
+      "family_page_range_sha256": "a3f7732f1b02a0d24d8677502aa29e21c73f4f6a6c28d5c584e5f1c4472028d2",
+      "in_family_heading_pages": [
+        34
+      ],
+      "primary_heading_page": 34,
+      "heading_labels": [
+        {
+          "page": 34,
+          "label": "NORMAL SHOOTING 10.04",
+          "label_sha256": "7c3cb7e87d172809e00bc095bf96a62fccaa23bb9a9a771778194d51c03d1965"
+        }
+      ],
+      "page_semantic_sha256": {
+        "34": "0c6bc869414e2c86cacd5d7c89209585a8e08e7d8850b0a1b58854b4ffc3c85e"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        34
+      ]
+    },
+    {
+      "rule_ref": "10.05",
+      "rule_key": "core-rule-10-05",
+      "family_id": "10",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 34,
+      "family_page_end": 35,
+      "family_page_range_sha256": "a3f7732f1b02a0d24d8677502aa29e21c73f4f6a6c28d5c584e5f1c4472028d2",
+      "in_family_heading_pages": [
+        35
+      ],
+      "primary_heading_page": 35,
+      "heading_labels": [
+        {
+          "page": 35,
+          "label": "ASSAULT SHOOTING 10.05",
+          "label_sha256": "e33078bb69f895fbe1b26dbbe705728b673f3b27802ffa11cd916e83de78772f"
+        }
+      ],
+      "page_semantic_sha256": {
+        "35": "372493bba07a624ebf62ab0459b43fb28ca3a3cae8b97c77243cdaba283688fd"
+      },
+      "cross_reference_pages": [
+        79
+      ],
+      "all_reference_pages": [
+        35,
+        79
+      ]
+    },
+    {
+      "rule_ref": "10.06",
+      "rule_key": "core-rule-10-06",
+      "family_id": "10",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 34,
+      "family_page_end": 35,
+      "family_page_range_sha256": "a3f7732f1b02a0d24d8677502aa29e21c73f4f6a6c28d5c584e5f1c4472028d2",
+      "in_family_heading_pages": [
+        35
+      ],
+      "primary_heading_page": 35,
+      "heading_labels": [
+        {
+          "page": 35,
+          "label": "CLOSE-QUARTERS SHOOTING 10.06",
+          "label_sha256": "e8f3cdd2d7b3fea8bd543884fc5252bff91591ef268640062e694bee3b363d5c"
+        }
+      ],
+      "page_semantic_sha256": {
+        "35": "372493bba07a624ebf62ab0459b43fb28ca3a3cae8b97c77243cdaba283688fd"
+      },
+      "cross_reference_pages": [
+        80
+      ],
+      "all_reference_pages": [
+        35,
+        80
+      ]
+    },
+    {
+      "rule_ref": "11.01",
+      "rule_key": "core-rule-11-01",
+      "family_id": "11",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 36,
+      "family_page_end": 37,
+      "family_page_range_sha256": "286266160d57c38f55b9741b4acdf804fcd7fdb7b37fa085bd2db5d48f139156",
+      "in_family_heading_pages": [
+        36
+      ],
+      "primary_heading_page": 36,
+      "heading_labels": [
+        {
+          "page": 36,
+          "label": "1 START OF CHARGE PHASE 11.01",
+          "label_sha256": "fe4664c7607919a55299407fe1f853c2a2ca9adbe7c88b2a104cc099a42138cf"
+        }
+      ],
+      "page_semantic_sha256": {
+        "36": "6b9742f152ea8bb7abc5b43ef64373212ea6470aa7ae5fd8a35189fd33b28c59"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        36
+      ]
+    },
+    {
+      "rule_ref": "11.02",
+      "rule_key": "core-rule-11-02",
+      "family_id": "11",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 36,
+      "family_page_end": 37,
+      "family_page_range_sha256": "286266160d57c38f55b9741b4acdf804fcd7fdb7b37fa085bd2db5d48f139156",
+      "in_family_heading_pages": [
+        36
+      ],
+      "primary_heading_page": 36,
+      "heading_labels": [
+        {
+          "page": 36,
+          "label": "2 CHARGE 11.02",
+          "label_sha256": "670f491639b45e42f65af3ee06f99925ba05278d8952bd067572f757de1dbf46"
+        }
+      ],
+      "page_semantic_sha256": {
+        "36": "6b9742f152ea8bb7abc5b43ef64373212ea6470aa7ae5fd8a35189fd33b28c59"
+      },
+      "cross_reference_pages": [
+        55,
+        57
+      ],
+      "all_reference_pages": [
+        36,
+        55,
+        57
+      ]
+    },
+    {
+      "rule_ref": "11.03",
+      "rule_key": "core-rule-11-03",
+      "family_id": "11",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 36,
+      "family_page_end": 37,
+      "family_page_range_sha256": "286266160d57c38f55b9741b4acdf804fcd7fdb7b37fa085bd2db5d48f139156",
+      "in_family_heading_pages": [
+        36
+      ],
+      "primary_heading_page": 36,
+      "heading_labels": [
+        {
+          "page": 36,
+          "label": "3 END OF CHARGE PHASE 11.03",
+          "label_sha256": "1bc7394f66c006f169577b9134b486194f078bcbe0c0071f0ae79c46f5fff21f"
+        }
+      ],
+      "page_semantic_sha256": {
+        "36": "6b9742f152ea8bb7abc5b43ef64373212ea6470aa7ae5fd8a35189fd33b28c59"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        36
+      ]
+    },
+    {
+      "rule_ref": "11.04",
+      "rule_key": "core-rule-11-04",
+      "family_id": "11",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 36,
+      "family_page_end": 37,
+      "family_page_range_sha256": "286266160d57c38f55b9741b4acdf804fcd7fdb7b37fa085bd2db5d48f139156",
+      "in_family_heading_pages": [
+        37
+      ],
+      "primary_heading_page": 37,
+      "heading_labels": [
+        {
+          "page": 37,
+          "label": "CHARGE MOVE 11.04",
+          "label_sha256": "fe1a39a7fe25f4df80a77fa9f0ce11c0595f8d1c6a549a5bae677437704aeed2"
+        }
+      ],
+      "page_semantic_sha256": {
+        "37": "ceeeabc0fda5536160f947d567781ca17405b7a2d803171715cbc0b483536161"
+      },
+      "cross_reference_pages": [
+        13
+      ],
+      "all_reference_pages": [
+        13,
+        37
+      ]
+    },
+    {
+      "rule_ref": "12.01",
+      "rule_key": "core-rule-12-01",
+      "family_id": "12",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 38,
+      "family_page_end": 45,
+      "family_page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
+      "in_family_heading_pages": [
+        38
+      ],
+      "primary_heading_page": 38,
+      "heading_labels": [
+        {
+          "page": 38,
+          "label": "1 START OF FIGHT PHASE 12.01",
+          "label_sha256": "c9c2fe33c8a3d44d82876af9537d9a8ee726b94b519a03d8935e5c96ec11748f"
+        }
+      ],
+      "page_semantic_sha256": {
+        "38": "867be8b040829324a7d6aea0758e67d3047036c47d56a4941a2554468b05c21f"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        38
+      ]
+    },
+    {
+      "rule_ref": "12.02",
+      "rule_key": "core-rule-12-02",
+      "family_id": "12",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 38,
+      "family_page_end": 45,
+      "family_page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
+      "in_family_heading_pages": [
+        38
+      ],
+      "primary_heading_page": 38,
+      "heading_labels": [
+        {
+          "page": 38,
+          "label": "2 PILE IN 12.02",
+          "label_sha256": "00f61d9248eee924f9419bdba2faa83eb7c6b0386913b4b19148b3605639e3b4"
+        }
+      ],
+      "page_semantic_sha256": {
+        "38": "867be8b040829324a7d6aea0758e67d3047036c47d56a4941a2554468b05c21f"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        38
+      ]
+    },
+    {
+      "rule_ref": "12.03",
+      "rule_key": "core-rule-12-03",
+      "family_id": "12",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 38,
+      "family_page_end": 45,
+      "family_page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
+      "in_family_heading_pages": [
+        38
+      ],
+      "primary_heading_page": 38,
+      "heading_labels": [
+        {
+          "page": 38,
+          "label": "PILE-IN MOVE 12.03",
+          "label_sha256": "70368ca5a9aff6e5c7c411f86a7c572db4b6b04877a62432a197fddc3ae0f2fc"
+        }
+      ],
+      "page_semantic_sha256": {
+        "38": "867be8b040829324a7d6aea0758e67d3047036c47d56a4941a2554468b05c21f"
+      },
+      "cross_reference_pages": [
+        13
+      ],
+      "all_reference_pages": [
+        13,
+        38
+      ]
+    },
+    {
+      "rule_ref": "12.04",
+      "rule_key": "core-rule-12-04",
+      "family_id": "12",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 38,
+      "family_page_end": 45,
+      "family_page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
+      "in_family_heading_pages": [
+        40
+      ],
+      "primary_heading_page": 40,
+      "heading_labels": [
+        {
+          "page": 40,
+          "label": "3 FIGHT 12.04",
+          "label_sha256": "01f51156cd4b45923e580967eb68cb20149b792fc54d2104389bbbe7d7272006"
+        }
+      ],
+      "page_semantic_sha256": {
+        "40": "67e0bb2351ac65eb6c48a9cfb6847d2cda20725b0f53d9b5059b29bb9f49233a"
+      },
+      "cross_reference_pages": [
+        55,
+        57,
+        81
+      ],
+      "all_reference_pages": [
+        40,
+        42,
+        55,
+        57,
+        81
+      ]
+    },
+    {
+      "rule_ref": "12.05",
+      "rule_key": "core-rule-12-05",
+      "family_id": "12",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 38,
+      "family_page_end": 45,
+      "family_page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
+      "in_family_heading_pages": [
+        40
+      ],
+      "primary_heading_page": 40,
+      "heading_labels": [
+        {
+          "page": 40,
+          "label": "NORMAL FIGHT 12.05",
+          "label_sha256": "486e59a1317ed8ea3c253516d56dad94b3913150cf44307095dcf324f9b02d89"
+        }
+      ],
+      "page_semantic_sha256": {
+        "40": "67e0bb2351ac65eb6c48a9cfb6847d2cda20725b0f53d9b5059b29bb9f49233a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        40
+      ]
+    },
+    {
+      "rule_ref": "12.06",
+      "rule_key": "core-rule-12-06",
+      "family_id": "12",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 38,
+      "family_page_end": 45,
+      "family_page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
+      "in_family_heading_pages": [
+        40
+      ],
+      "primary_heading_page": 40,
+      "heading_labels": [
+        {
+          "page": 40,
+          "label": "OVERRUN FIGHT 12.06",
+          "label_sha256": "df9a2bf5f07cff4452e00fa815fb7f9c0b92f5876b63d74dfd0729b2f001d1ad"
+        }
+      ],
+      "page_semantic_sha256": {
+        "40": "67e0bb2351ac65eb6c48a9cfb6847d2cda20725b0f53d9b5059b29bb9f49233a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        38,
+        40
+      ]
+    },
+    {
+      "rule_ref": "12.07",
+      "rule_key": "core-rule-12-07",
+      "family_id": "12",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 38,
+      "family_page_end": 45,
+      "family_page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
+      "in_family_heading_pages": [
+        42
+      ],
+      "primary_heading_page": 42,
+      "heading_labels": [
+        {
+          "page": 42,
+          "label": "4 CONSOLIDATE 12.07",
+          "label_sha256": "9a8bbbd97118bc006b6843d05a60754953c6754aa93819e71f42915b15599737"
+        }
+      ],
+      "page_semantic_sha256": {
+        "42": "1784cb9a0ea544c8369bdbb3af5250ba79a5958766d64c2fea3ad0a16ff1c0d2"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        42
+      ]
+    },
+    {
+      "rule_ref": "12.08",
+      "rule_key": "core-rule-12-08",
+      "family_id": "12",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 38,
+      "family_page_end": 45,
+      "family_page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
+      "in_family_heading_pages": [
+        42
+      ],
+      "primary_heading_page": 42,
+      "heading_labels": [
+        {
+          "page": 42,
+          "label": "CONSOLIDATION MOVE 12.08",
+          "label_sha256": "90a0434ba9231ddd36ba68ebb7f3cfe4bd3bbd2780cbdb31e2ee5a5d29290cf7"
+        }
+      ],
+      "page_semantic_sha256": {
+        "42": "1784cb9a0ea544c8369bdbb3af5250ba79a5958766d64c2fea3ad0a16ff1c0d2"
+      },
+      "cross_reference_pages": [
+        13,
+        33
+      ],
+      "all_reference_pages": [
+        13,
+        33,
+        42
+      ]
+    },
+    {
+      "rule_ref": "12.09",
+      "rule_key": "core-rule-12-09",
+      "family_id": "12",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 38,
+      "family_page_end": 45,
+      "family_page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
+      "in_family_heading_pages": [
+        42
+      ],
+      "primary_heading_page": 42,
+      "heading_labels": [
+        {
+          "page": 42,
+          "label": "5 END OF FIGHT PHASE 12.09",
+          "label_sha256": "0f6554a30f3f12221340060f58b9bdf488b5d8b393a918b4a85c3ab1e608feb5"
+        }
+      ],
+      "page_semantic_sha256": {
+        "42": "1784cb9a0ea544c8369bdbb3af5250ba79a5958766d64c2fea3ad0a16ff1c0d2"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        42
+      ]
+    },
+    {
+      "rule_ref": "13.01",
+      "rule_key": "core-rule-13-01",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        46
+      ],
+      "primary_heading_page": 46,
+      "heading_labels": [
+        {
+          "page": 46,
+          "label": "PLACING TERRAIN 13.01",
+          "label_sha256": "e6527bbab3cbae40245c8d49281a1f9bec76cf0be688c684f4191b48b7c5a377"
+        }
+      ],
+      "page_semantic_sha256": {
+        "46": "03cb954dbde980da5aeec698f77284eddc39fd27c58f39f37f9cfe8146c41828"
+      },
+      "cross_reference_pages": [
+        52
+      ],
+      "all_reference_pages": [
+        46,
+        52
+      ]
+    },
+    {
+      "rule_ref": "13.02",
+      "rule_key": "core-rule-13-02",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        46
+      ],
+      "primary_heading_page": 46,
+      "heading_labels": [
+        {
+          "page": 46,
+          "label": "TERRAIN CATEGORIES 13.02",
+          "label_sha256": "a1282bfb3a86707ad2822cf7a1145ecc4683a3ea5e772dafd0883c92ea02d318"
+        }
+      ],
+      "page_semantic_sha256": {
+        "46": "03cb954dbde980da5aeec698f77284eddc39fd27c58f39f37f9cfe8146c41828"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        46
+      ]
+    },
+    {
+      "rule_ref": "13.03",
+      "rule_key": "core-rule-13-03",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        46
+      ],
+      "primary_heading_page": 46,
+      "heading_labels": [
+        {
+          "page": 46,
+          "label": "EXPOSED 13.03",
+          "label_sha256": "3db9630b7e7f7759565ac11f17bc84c5e4734295c1755825e35eb90856ead628"
+        }
+      ],
+      "page_semantic_sha256": {
+        "46": "03cb954dbde980da5aeec698f77284eddc39fd27c58f39f37f9cfe8146c41828"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        46
+      ]
+    },
+    {
+      "rule_ref": "13.04",
+      "rule_key": "core-rule-13-04",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        46
+      ],
+      "primary_heading_page": 46,
+      "heading_labels": [
+        {
+          "page": 46,
+          "label": "LIGHT 13.04",
+          "label_sha256": "ffdcfe9649dad20be40f87ceaff5970170dd0b80ae91838f72bcef2869a9814b"
+        }
+      ],
+      "page_semantic_sha256": {
+        "46": "03cb954dbde980da5aeec698f77284eddc39fd27c58f39f37f9cfe8146c41828"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        46
+      ]
+    },
+    {
+      "rule_ref": "13.05",
+      "rule_key": "core-rule-13-05",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        46
+      ],
+      "primary_heading_page": 46,
+      "heading_labels": [
+        {
+          "page": 46,
+          "label": "DENSE 13.05",
+          "label_sha256": "af3ff5cad7dafaafd1552229fa166fd242f572a5f11c632e81fa0e4c3cb2084c"
+        }
+      ],
+      "page_semantic_sha256": {
+        "46": "03cb954dbde980da5aeec698f77284eddc39fd27c58f39f37f9cfe8146c41828"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        46
+      ]
+    },
+    {
+      "rule_ref": "13.06",
+      "rule_key": "core-rule-13-06",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        48
+      ],
+      "primary_heading_page": 48,
+      "heading_labels": [
+        {
+          "page": 48,
+          "label": "TERRAIN AND MOVEMENT 13.06",
+          "label_sha256": "a1fc09fe033ba3f52acea666549d5bfd2842a5c689f4c6871dee51e9821080f7"
+        }
+      ],
+      "page_semantic_sha256": {
+        "48": "7bbe97f0c6d60ed3c2ef6ad27d6f65dfebd9ed33b0c193f94251865ec3267c75"
+      },
+      "cross_reference_pages": [
+        13,
+        85
+      ],
+      "all_reference_pages": [
+        13,
+        48,
+        85
+      ]
+    },
+    {
+      "rule_ref": "13.07",
+      "rule_key": "core-rule-13-07",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        50
+      ],
+      "primary_heading_page": 50,
+      "heading_labels": [
+        {
+          "page": 50,
+          "label": "TERRAIN AND VISIBILITY 13.07",
+          "label_sha256": "8c41e8b1b9640c3632bdb0c1c2a90260f2c9e4fa6e45e728db77e36bfeeef585"
+        }
+      ],
+      "page_semantic_sha256": {
+        "50": "ce8c5db2b4bfe0cb9fe1b77878f9e43b61081cedac50ab2c5d21492bea6e2ed4"
+      },
+      "cross_reference_pages": [
+        24,
+        35
+      ],
+      "all_reference_pages": [
+        24,
+        35,
+        50
+      ]
+    },
+    {
+      "rule_ref": "13.08",
+      "rule_key": "core-rule-13-08",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        50
+      ],
+      "primary_heading_page": 50,
+      "heading_labels": [
+        {
+          "page": 50,
+          "label": "BENEFIT OF COVER 13.08",
+          "label_sha256": "98babbabf6578fb1645ee836e1195efa6f4b413665d19475300175da79645582"
+        }
+      ],
+      "page_semantic_sha256": {
+        "50": "ce8c5db2b4bfe0cb9fe1b77878f9e43b61081cedac50ab2c5d21492bea6e2ed4"
+      },
+      "cross_reference_pages": [
+        35,
+        55,
+        57,
+        82,
+        85
+      ],
+      "all_reference_pages": [
+        35,
+        50,
+        55,
+        57,
+        82,
+        85
+      ]
+    },
+    {
+      "rule_ref": "13.09",
+      "rule_key": "core-rule-13-09",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        50
+      ],
+      "primary_heading_page": 50,
+      "heading_labels": [
+        {
+          "page": 50,
+          "label": "HIDDEN 13.09",
+          "label_sha256": "c2a0b05750af58ab6d588497854dda4b9bbd56a96a686cabbf372df741b372ad"
+        }
+      ],
+      "page_semantic_sha256": {
+        "50": "ce8c5db2b4bfe0cb9fe1b77878f9e43b61081cedac50ab2c5d21492bea6e2ed4"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        50
+      ]
+    },
+    {
+      "rule_ref": "13.10",
+      "rule_key": "core-rule-13-10",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        50
+      ],
+      "primary_heading_page": 50,
+      "heading_labels": [
+        {
+          "page": 50,
+          "label": "OBSCURING 13.10",
+          "label_sha256": "ee86511ea5ae8d33cb554223dca3890ad761b4dbfc7f54e9785050dca6af90c8"
+        }
+      ],
+      "page_semantic_sha256": {
+        "50": "ce8c5db2b4bfe0cb9fe1b77878f9e43b61081cedac50ab2c5d21492bea6e2ed4"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        50
+      ]
+    },
+    {
+      "rule_ref": "13.11",
+      "rule_key": "core-rule-13-11",
+      "family_id": "13",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 46,
+      "family_page_end": 51,
+      "family_page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "in_family_heading_pages": [
+        50
+      ],
+      "primary_heading_page": 50,
+      "heading_labels": [
+        {
+          "page": 50,
+          "label": "SOLID 13.11",
+          "label_sha256": "2101125a33400d03d05c17d5d534c38bf113e761b3bc6a8873dcf7f781ea48bc"
+        }
+      ],
+      "page_semantic_sha256": {
+        "50": "ce8c5db2b4bfe0cb9fe1b77878f9e43b61081cedac50ab2c5d21492bea6e2ed4"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        48,
+        50
+      ]
+    },
+    {
+      "rule_ref": "14.01",
+      "rule_key": "core-rule-14-01",
+      "family_id": "14",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 52,
+      "family_page_end": 53,
+      "family_page_range_sha256": "8c4af6fb26aa33015de6b9efd97b608b342bdb0b4ee4dd4718048957e15dbf2d",
+      "in_family_heading_pages": [
+        52
+      ],
+      "primary_heading_page": 52,
+      "heading_labels": [
+        {
+          "page": 52,
+          "label": "TERRAIN OBJECTIVES 14.01",
+          "label_sha256": "a163b09225fea51c6c7ecf40662223f78034c949cbe0eac7b7e1f3bd474b28ac"
+        }
+      ],
+      "page_semantic_sha256": {
+        "52": "7cbf18616b49448714ac95018eafa1ed978cf7a15f0bf55852b49097eaba69e5"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        52
+      ]
+    },
+    {
+      "rule_ref": "14.02",
+      "rule_key": "core-rule-14-02",
+      "family_id": "14",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 52,
+      "family_page_end": 53,
+      "family_page_range_sha256": "8c4af6fb26aa33015de6b9efd97b608b342bdb0b4ee4dd4718048957e15dbf2d",
+      "in_family_heading_pages": [
+        52
+      ],
+      "primary_heading_page": 52,
+      "heading_labels": [
+        {
+          "page": 52,
+          "label": "LEVEL OF CONTROL 14.02",
+          "label_sha256": "01ba67dd19197584495935b43a2da51097c39b35ed63becea8a95ea94c5adb4c"
+        }
+      ],
+      "page_semantic_sha256": {
+        "52": "7cbf18616b49448714ac95018eafa1ed978cf7a15f0bf55852b49097eaba69e5"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        52
+      ]
+    },
+    {
+      "rule_ref": "14.03",
+      "rule_key": "core-rule-14-03",
+      "family_id": "14",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 52,
+      "family_page_end": 53,
+      "family_page_range_sha256": "8c4af6fb26aa33015de6b9efd97b608b342bdb0b4ee4dd4718048957e15dbf2d",
+      "in_family_heading_pages": [
+        52
+      ],
+      "primary_heading_page": 52,
+      "heading_labels": [
+        {
+          "page": 52,
+          "label": "SECURED OBJECTIVES 14.03",
+          "label_sha256": "4274e7538fea23141106dcbde62adcfb397f67e51eee934213ca2515b19f88a4"
+        }
+      ],
+      "page_semantic_sha256": {
+        "52": "7cbf18616b49448714ac95018eafa1ed978cf7a15f0bf55852b49097eaba69e5"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        52
+      ]
+    },
+    {
+      "rule_ref": "15.01",
+      "rule_key": "core-rule-15-01",
+      "family_id": "15",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 54,
+      "family_page_end": 57,
+      "family_page_range_sha256": "f33a6d2caf5bafa65bf2a49b167e12428ed144d00c50554bba5cd6a89c6d3766",
+      "in_family_heading_pages": [
+        54
+      ],
+      "primary_heading_page": 54,
+      "heading_labels": [
+        {
+          "page": 54,
+          "label": "USING STRATAGEMS 15.01",
+          "label_sha256": "0e89312942ada4e6fcdc4011f5d54cd2769f11a46b9e0df5bf2547f1c6a919fd"
+        }
+      ],
+      "page_semantic_sha256": {
+        "54": "a94e978fcfc122ba48ff1da6a602331a29f377a3fbcb0026cd331eab1e6221c9"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        54
+      ]
+    },
+    {
+      "rule_ref": "15.02",
+      "rule_key": "core-rule-15-02",
+      "family_id": "15",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 54,
+      "family_page_end": 57,
+      "family_page_range_sha256": "f33a6d2caf5bafa65bf2a49b167e12428ed144d00c50554bba5cd6a89c6d3766",
+      "in_family_heading_pages": [
+        56
+      ],
+      "primary_heading_page": 56,
+      "heading_labels": [
+        {
+          "page": 56,
+          "label": "COMMAND RE-ROLL 15.02 1CP",
+          "label_sha256": "b8a66f06ca9120bc97e3d50444274158f29a480db98260a1ecd1b5889377ecc9"
+        }
+      ],
+      "page_semantic_sha256": {
+        "56": "74028d5c1b95e8a9dc90d67b687393c04848484e226cbc3888b25b5fce390afe"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        56
+      ]
+    },
+    {
+      "rule_ref": "15.07",
+      "rule_key": "core-rule-15-07",
+      "family_id": "15",
+      "classification": "REPEATED_IN_FAMILY_HEADING",
+      "family_page_start": 54,
+      "family_page_end": 57,
+      "family_page_range_sha256": "f33a6d2caf5bafa65bf2a49b167e12428ed144d00c50554bba5cd6a89c6d3766",
+      "in_family_heading_pages": [
+        55,
+        57
+      ],
+      "primary_heading_page": 55,
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
+          "label_sha256": "ff184dfabf47a6b011932cdc27925152d2a42eea91cf7b96401be44372133bbc"
+        },
+        {
+          "page": 57,
+          "label": "RAPID INGRESS 15.07 1CP",
+          "label_sha256": "3b684d57a5797ab4df90930bad9db2de3679b2fbb6140f4d41040eaa69956870"
+        }
+      ],
+      "page_semantic_sha256": {
+        "55": "84094a13d4fcdba1c8fb42f7e186350ee418ad448fa9595ac8693524122cc6dd",
+        "57": "5c41845c10b238cb7edd1339ded4e70a90a2f1440ef6b271e1cbc1554c3f3c47"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        55,
+        57
+      ]
+    },
+    {
+      "rule_ref": "15.08",
+      "rule_key": "core-rule-15-08",
+      "family_id": "15",
+      "classification": "REPEATED_IN_FAMILY_HEADING",
+      "family_page_start": 54,
+      "family_page_end": 57,
+      "family_page_range_sha256": "f33a6d2caf5bafa65bf2a49b167e12428ed144d00c50554bba5cd6a89c6d3766",
+      "in_family_heading_pages": [
+        55,
+        57
+      ],
+      "primary_heading_page": 55,
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "FIRE OVERWATCH 15.08 1CPCORE STRATAGEM",
+          "label_sha256": "a35a5279d4d913a43885a5be035130d62c2ca2c867449fda1e114b68ec73ce99"
+        },
+        {
+          "page": 57,
+          "label": "FIRE OVERWATCH 15.08 1CP",
+          "label_sha256": "6e9d936b11cafff4e328d1d9f7b47b7a35d1945d44243d0339a41e53a0b3ba51"
+        }
+      ],
+      "page_semantic_sha256": {
+        "55": "84094a13d4fcdba1c8fb42f7e186350ee418ad448fa9595ac8693524122cc6dd",
+        "57": "5c41845c10b238cb7edd1339ded4e70a90a2f1440ef6b271e1cbc1554c3f3c47"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        55,
+        57
+      ]
+    },
+    {
+      "rule_ref": "15.09",
+      "rule_key": "core-rule-15-09",
+      "family_id": "15",
+      "classification": "REPEATED_IN_FAMILY_HEADING",
+      "family_page_start": 54,
+      "family_page_end": 57,
+      "family_page_range_sha256": "f33a6d2caf5bafa65bf2a49b167e12428ed144d00c50554bba5cd6a89c6d3766",
+      "in_family_heading_pages": [
+        55,
+        57
+      ],
+      "primary_heading_page": 55,
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "SNAP SHOOTING 15.09",
+          "label_sha256": "dd45701712f31d1ca2c46390708f510557aed9f8039618cef7083738c4a84ba3"
+        },
+        {
+          "page": 57,
+          "label": "SNAP SHOOTING 15.09",
+          "label_sha256": "dd45701712f31d1ca2c46390708f510557aed9f8039618cef7083738c4a84ba3"
+        }
+      ],
+      "page_semantic_sha256": {
+        "55": "84094a13d4fcdba1c8fb42f7e186350ee418ad448fa9595ac8693524122cc6dd",
+        "57": "5c41845c10b238cb7edd1339ded4e70a90a2f1440ef6b271e1cbc1554c3f3c47"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        55,
+        57
+      ]
+    },
+    {
+      "rule_ref": "15.10",
+      "rule_key": "core-rule-15-10",
+      "family_id": "15",
+      "classification": "REPEATED_IN_FAMILY_HEADING",
+      "family_page_start": 54,
+      "family_page_end": 57,
+      "family_page_range_sha256": "f33a6d2caf5bafa65bf2a49b167e12428ed144d00c50554bba5cd6a89c6d3766",
+      "in_family_heading_pages": [
+        55,
+        57
+      ],
+      "primary_heading_page": 55,
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "SMOKESCREEN 15.10 1CPCORE STRATAGEM",
+          "label_sha256": "e70545f35f381cc20f0007047507a7b01273d3900f64998fd55adb269f349d1a"
+        },
+        {
+          "page": 57,
+          "label": "SMOKESCREEN 15.10 1CP",
+          "label_sha256": "2936fa89d15ec68b86fffebd18f113748f214d5827f4efa633b8d7ea843daf05"
+        }
+      ],
+      "page_semantic_sha256": {
+        "55": "84094a13d4fcdba1c8fb42f7e186350ee418ad448fa9595ac8693524122cc6dd",
+        "57": "5c41845c10b238cb7edd1339ded4e70a90a2f1440ef6b271e1cbc1554c3f3c47"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        55,
+        57
+      ]
+    },
+    {
+      "rule_ref": "15.11",
+      "rule_key": "core-rule-15-11",
+      "family_id": "15",
+      "classification": "REPEATED_IN_FAMILY_HEADING",
+      "family_page_start": 54,
+      "family_page_end": 57,
+      "family_page_range_sha256": "f33a6d2caf5bafa65bf2a49b167e12428ed144d00c50554bba5cd6a89c6d3766",
+      "in_family_heading_pages": [
+        55,
+        57
+      ],
+      "primary_heading_page": 55,
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "HEROIC INTERVENTION 15.11 1CPCORE STRATAGEM",
+          "label_sha256": "f8edd7774573c1bbff937e07dab83cc3f064417894d28ab5677604918e7c7f23"
+        },
+        {
+          "page": 57,
+          "label": "HEROIC INTERVENTION 15.11 1CP",
+          "label_sha256": "1b527f07486ae248ad010df47be9785fd4733bb97319f2833fc09bc1a328b538"
+        }
+      ],
+      "page_semantic_sha256": {
+        "55": "84094a13d4fcdba1c8fb42f7e186350ee418ad448fa9595ac8693524122cc6dd",
+        "57": "5c41845c10b238cb7edd1339ded4e70a90a2f1440ef6b271e1cbc1554c3f3c47"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        55,
+        57
+      ]
+    },
+    {
+      "rule_ref": "15.12",
+      "rule_key": "core-rule-15-12",
+      "family_id": "15",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 54,
+      "family_page_end": 57,
+      "family_page_range_sha256": "f33a6d2caf5bafa65bf2a49b167e12428ed144d00c50554bba5cd6a89c6d3766",
+      "in_family_heading_pages": [
+        55
+      ],
+      "primary_heading_page": 55,
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "COUNTEROFFENSIVE 15.12 2CPCORE STRATAGEM",
+          "label_sha256": "3052b74762ab918108f49e78c993ccc100093f3881e7da6b3178daf84a1f8856"
+        }
+      ],
+      "page_semantic_sha256": {
+        "55": "84094a13d4fcdba1c8fb42f7e186350ee418ad448fa9595ac8693524122cc6dd"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        55,
+        57
+      ]
+    },
+    {
+      "rule_ref": "16.01",
+      "rule_key": "core-rule-16-01",
+      "family_id": "16",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 58,
+      "family_page_end": 61,
+      "family_page_range_sha256": "bb442cbd11310d8369b1698f173848d117c849179d48078fbc5316961386a96b",
+      "in_family_heading_pages": [
+        58
+      ],
+      "primary_heading_page": 58,
+      "heading_labels": [
+        {
+          "page": 58,
+          "label": "PERFORMING ACTIONS 16.01",
+          "label_sha256": "caabe4570d0f1d12cdae9a06fafa556e655fca458e688d522d9ee2c92bdd61f1"
+        }
+      ],
+      "page_semantic_sha256": {
+        "58": "12e7c1c82ddceb319792851a18b040f566d6851a12490378ba74a7f70075d4f9"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        58
+      ]
+    },
+    {
+      "rule_ref": "17.02",
+      "rule_key": "core-rule-17-02",
+      "family_id": "17",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 62,
+      "family_page_end": 63,
+      "family_page_range_sha256": "48d95a611d6452deda6de4c59ab9a6c07f0eed8395e8bff6f21cc0c154cefc16",
+      "in_family_heading_pages": [
+        62
+      ],
+      "primary_heading_page": 62,
+      "heading_labels": [
+        {
+          "page": 62,
+          "label": "FRAME 17.02",
+          "label_sha256": "7ca78d4e084413b1dad7c0919ab85ca82356746c909d79dddc590834a6fdcbd1"
+        }
+      ],
+      "page_semantic_sha256": {
+        "62": "21f113e9bcf3ae1e7149a123e207908b7cc27a504096d72a9562c43c3a5ffc1d"
+      },
+      "cross_reference_pages": [
+        9,
+        13,
+        17
+      ],
+      "all_reference_pages": [
+        9,
+        13,
+        17,
+        62
+      ]
+    },
+    {
+      "rule_ref": "18.01",
+      "rule_key": "core-rule-18-01",
+      "family_id": "18",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 64,
+      "family_page_end": 65,
+      "family_page_range_sha256": "5a137c18b17dd208b0333a076575e40544fc0da6dfec991f4ff3d98282c62c7b",
+      "in_family_heading_pages": [
+        64
+      ],
+      "primary_heading_page": 64,
+      "heading_labels": [
+        {
+          "page": 64,
+          "label": "TRANSPORT CAPACITY 18.01",
+          "label_sha256": "29861a878336b59d4aa1258dcb7b198754c00641236fd359a950d102774f98a4"
+        }
+      ],
+      "page_semantic_sha256": {
+        "64": "57426e31a1ca342460b54d9b91a25fe8e96eff3d9ec377b1f243e5697be66096"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        64
+      ]
+    },
+    {
+      "rule_ref": "18.02",
+      "rule_key": "core-rule-18-02",
+      "family_id": "18",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 64,
+      "family_page_end": 65,
+      "family_page_range_sha256": "5a137c18b17dd208b0333a076575e40544fc0da6dfec991f4ff3d98282c62c7b",
+      "in_family_heading_pages": [
+        64
+      ],
+      "primary_heading_page": 64,
+      "heading_labels": [
+        {
+          "page": 64,
+          "label": "EMBARKING 18.02",
+          "label_sha256": "c30b56db8c6ab55f0e782006924d739c88da8317bd5130ecde7549d5d522784e"
+        }
+      ],
+      "page_semantic_sha256": {
+        "64": "57426e31a1ca342460b54d9b91a25fe8e96eff3d9ec377b1f243e5697be66096"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        64
+      ]
+    },
+    {
+      "rule_ref": "18.03",
+      "rule_key": "core-rule-18-03",
+      "family_id": "18",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 64,
+      "family_page_end": 65,
+      "family_page_range_sha256": "5a137c18b17dd208b0333a076575e40544fc0da6dfec991f4ff3d98282c62c7b",
+      "in_family_heading_pages": [
+        64
+      ],
+      "primary_heading_page": 64,
+      "heading_labels": [
+        {
+          "page": 64,
+          "label": "DISEMBARKING 18.03",
+          "label_sha256": "ec71d93addb89db7b48cb195911dca1b140cbacc4bca41b041fc52a39afee568"
+        }
+      ],
+      "page_semantic_sha256": {
+        "64": "57426e31a1ca342460b54d9b91a25fe8e96eff3d9ec377b1f243e5697be66096"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        64
+      ]
+    },
+    {
+      "rule_ref": "18.04",
+      "rule_key": "core-rule-18-04",
+      "family_id": "18",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 64,
+      "family_page_end": 65,
+      "family_page_range_sha256": "5a137c18b17dd208b0333a076575e40544fc0da6dfec991f4ff3d98282c62c7b",
+      "in_family_heading_pages": [
+        65
+      ],
+      "primary_heading_page": 65,
+      "heading_labels": [
+        {
+          "page": 65,
+          "label": "DISEMBARK MOVE 18.04",
+          "label_sha256": "cf92bb05d0183cab0fd92118fd42659127415602edd92ecf2fa14e03c8a79f9f"
+        }
+      ],
+      "page_semantic_sha256": {
+        "65": "47d0852af36a175c57579f0d24926e9527dbc3c004025cfae7a2bbbbc61c70eb"
+      },
+      "cross_reference_pages": [
+        13,
+        32
+      ],
+      "all_reference_pages": [
+        13,
+        32,
+        65
+      ]
+    },
+    {
+      "rule_ref": "18.05",
+      "rule_key": "core-rule-18-05",
+      "family_id": "18",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 64,
+      "family_page_end": 65,
+      "family_page_range_sha256": "5a137c18b17dd208b0333a076575e40544fc0da6dfec991f4ff3d98282c62c7b",
+      "in_family_heading_pages": [
+        65
+      ],
+      "primary_heading_page": 65,
+      "heading_labels": [
+        {
+          "page": 65,
+          "label": "EMERGENCY DISEMBARK MOVE 18.05",
+          "label_sha256": "e98f0fbe6c08f6796a973dadb15a7b98a08a4221ccdd9f77064ec5c4c61f66f6"
+        }
+      ],
+      "page_semantic_sha256": {
+        "65": "47d0852af36a175c57579f0d24926e9527dbc3c004025cfae7a2bbbbc61c70eb"
+      },
+      "cross_reference_pages": [
+        13
+      ],
+      "all_reference_pages": [
+        13,
+        65
+      ]
+    },
+    {
+      "rule_ref": "19.01",
+      "rule_key": "core-rule-19-01",
+      "family_id": "19",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 66,
+      "family_page_end": 67,
+      "family_page_range_sha256": "e17c99f0181e5dc03cfb81b512860e2929cfc3753c0ff0e6042ee58c9ee43093",
+      "in_family_heading_pages": [
+        66
+      ],
+      "primary_heading_page": 66,
+      "heading_labels": [
+        {
+          "page": 66,
+          "label": "FORMING ATTACHED UNITS 19.01",
+          "label_sha256": "8c5c19085cdbe133fa48b98948a943585284662ade1020ac05ddd79da7d644d8"
+        }
+      ],
+      "page_semantic_sha256": {
+        "66": "58a15ce76a7b42a7e1b40defd38ccf29b35388ab4051644fed0eb763e3409940"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        66
+      ]
+    },
+    {
+      "rule_ref": "19.02",
+      "rule_key": "core-rule-19-02",
+      "family_id": "19",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 66,
+      "family_page_end": 67,
+      "family_page_range_sha256": "e17c99f0181e5dc03cfb81b512860e2929cfc3753c0ff0e6042ee58c9ee43093",
+      "in_family_heading_pages": [
+        66
+      ],
+      "primary_heading_page": 66,
+      "heading_labels": [
+        {
+          "page": 66,
+          "label": "ATTACKING ATTACHED UNITS 19.02",
+          "label_sha256": "3a65453a62dad444c8fb9ce87619cfaa4abb56788da32234195cfe3bba4ae044"
+        }
+      ],
+      "page_semantic_sha256": {
+        "66": "58a15ce76a7b42a7e1b40defd38ccf29b35388ab4051644fed0eb763e3409940"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        66
+      ]
+    },
+    {
+      "rule_ref": "19.03",
+      "rule_key": "core-rule-19-03",
+      "family_id": "19",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 66,
+      "family_page_end": 67,
+      "family_page_range_sha256": "e17c99f0181e5dc03cfb81b512860e2929cfc3753c0ff0e6042ee58c9ee43093",
+      "in_family_heading_pages": [
+        67
+      ],
+      "primary_heading_page": 67,
+      "heading_labels": [
+        {
+          "page": 67,
+          "label": "KEYWORDS IN ATTACHED UNITS 19.03",
+          "label_sha256": "3090ec8fbec17c5c8a013fd32ed110b321d879059c162557e3570f3b6c17ae21"
+        }
+      ],
+      "page_semantic_sha256": {
+        "67": "5a3666de6eab7e05e0ff567c9345230693cdc14db03479c2b99c40a3233a308c"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        67
+      ]
+    },
+    {
+      "rule_ref": "19.04",
+      "rule_key": "core-rule-19-04",
+      "family_id": "19",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 66,
+      "family_page_end": 67,
+      "family_page_range_sha256": "e17c99f0181e5dc03cfb81b512860e2929cfc3753c0ff0e6042ee58c9ee43093",
+      "in_family_heading_pages": [
+        67
+      ],
+      "primary_heading_page": 67,
+      "heading_labels": [
+        {
+          "page": 67,
+          "label": "ABILITIES IN ATTACHED UNITS 19.04",
+          "label_sha256": "8760e29793d6a6a8b339cc17182325a15ff63036ddd7885094307b5022e7f6e5"
+        }
+      ],
+      "page_semantic_sha256": {
+        "67": "5a3666de6eab7e05e0ff567c9345230693cdc14db03479c2b99c40a3233a308c"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        67
+      ]
+    },
+    {
+      "rule_ref": "20.02",
+      "rule_key": "core-rule-20-02",
+      "family_id": "20",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 68,
+      "family_page_end": 69,
+      "family_page_range_sha256": "30aebe5beede45f2b10203ec527d57c82cf569da0d2cc8e09696b046b1923525",
+      "in_family_heading_pages": [
+        68
+      ],
+      "primary_heading_page": 68,
+      "heading_labels": [
+        {
+          "page": 68,
+          "label": "REPOSITIONED UNITS 20.02",
+          "label_sha256": "7089ad8613311e8f0994b4029763748ab091c301992514a29b87baf693afbd25"
+        }
+      ],
+      "page_semantic_sha256": {
+        "68": "0afea7b6ac84e1ce7a5fad524611696d9a1ada0dbfb0bf2dc86a241209977daa"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        68
+      ]
+    },
+    {
+      "rule_ref": "20.04",
+      "rule_key": "core-rule-20-04",
+      "family_id": "20",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 68,
+      "family_page_end": 69,
+      "family_page_range_sha256": "30aebe5beede45f2b10203ec527d57c82cf569da0d2cc8e09696b046b1923525",
+      "in_family_heading_pages": [
+        69
+      ],
+      "primary_heading_page": 69,
+      "heading_labels": [
+        {
+          "page": 69,
+          "label": "INGRESS MOVE 20.04",
+          "label_sha256": "572960cf06ee67e74fadeebcabf389b322227ed2c89ee877e76ed7b674d42977"
+        }
+      ],
+      "page_semantic_sha256": {
+        "69": "7d54f7236c1ef6311bf848cf5d97ed730ceb2238221c23e27121234f05835a37"
+      },
+      "cross_reference_pages": [
+        13,
+        32,
+        55,
+        57,
+        74,
+        80
+      ],
+      "all_reference_pages": [
+        13,
+        32,
+        55,
+        57,
+        69,
+        74,
+        80
+      ]
+    },
+    {
+      "rule_ref": "21.01",
+      "rule_key": "core-rule-21-01",
+      "family_id": "21",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 70,
+      "family_page_end": 71,
+      "family_page_range_sha256": "7c84970f95c2a97326b71a788ab9c7821536dc38c6b527d8d9f3c5b6f95c5cbe",
+      "in_family_heading_pages": [
+        70
+      ],
+      "primary_heading_page": 70,
+      "heading_labels": [
+        {
+          "page": 70,
+          "label": "SURGE MOVES 21.01",
+          "label_sha256": "3789b751fba0b46f405834b8f929353395f48d43bc63411aa162faf512d2605a"
+        }
+      ],
+      "page_semantic_sha256": {
+        "70": "2672ca029726146430b251aace27d683a0d3159f1de181052329e107940b1dec"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        70
+      ]
+    },
+    {
+      "rule_ref": "21.02",
+      "rule_key": "core-rule-21-02",
+      "family_id": "21",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 70,
+      "family_page_end": 71,
+      "family_page_range_sha256": "7c84970f95c2a97326b71a788ab9c7821536dc38c6b527d8d9f3c5b6f95c5cbe",
+      "in_family_heading_pages": [
+        70
+      ],
+      "primary_heading_page": 70,
+      "heading_labels": [
+        {
+          "page": 70,
+          "label": "SURGE MOVE 21.02",
+          "label_sha256": "46ace89af25067006635fe0ffd50eb26a816834d68163dc237e2df770c5da393"
+        }
+      ],
+      "page_semantic_sha256": {
+        "70": "2672ca029726146430b251aace27d683a0d3159f1de181052329e107940b1dec"
+      },
+      "cross_reference_pages": [
+        13
+      ],
+      "all_reference_pages": [
+        13,
+        70
+      ]
+    },
+    {
+      "rule_ref": "21.03",
+      "rule_key": "core-rule-21-03",
+      "family_id": "21",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 70,
+      "family_page_end": 71,
+      "family_page_range_sha256": "7c84970f95c2a97326b71a788ab9c7821536dc38c6b527d8d9f3c5b6f95c5cbe",
+      "in_family_heading_pages": [
+        71
+      ],
+      "primary_heading_page": 71,
+      "heading_labels": [
+        {
+          "page": 71,
+          "label": "FLYING MODELS 21.03",
+          "label_sha256": "f2744eaaa90050ceb4315e0a58f0f9ceb140bb2dbbe86d4baadd6a20bdfbb4c3"
+        }
+      ],
+      "page_semantic_sha256": {
+        "71": "184ea8e4e7182dfa6b8236ca53cc4d4b2d0db41c4a06f2043e63743ae4f2033f"
+      },
+      "cross_reference_pages": [
+        33,
+        82
+      ],
+      "all_reference_pages": [
+        33,
+        71,
+        82
+      ]
+    },
+    {
+      "rule_ref": "22.01",
+      "rule_key": "core-rule-22-01",
+      "family_id": "22",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 72,
+      "family_page_end": 73,
+      "family_page_range_sha256": "430abf7fd9849b3d7a18e62bcf9073b0ea4a3edeaa6a934b72da46d6921ae3b8",
+      "in_family_heading_pages": [
+        72
+      ],
+      "primary_heading_page": 72,
+      "heading_labels": [
+        {
+          "page": 72,
+          "label": "AURA ABILITIES 22.01",
+          "label_sha256": "d579f7c134fc9f7a7151fdaf531aaf2b6a6e9c01cdc94ac66ff448f73c0eb18e"
+        }
+      ],
+      "page_semantic_sha256": {
+        "72": "f4db796dbe04ae75fc68a8bb63192fe967015ae44c716cad593b890f86ab27f5"
+      },
+      "cross_reference_pages": [
+        11
+      ],
+      "all_reference_pages": [
+        11,
+        72
+      ]
+    },
+    {
+      "rule_ref": "22.02",
+      "rule_key": "core-rule-22-02",
+      "family_id": "22",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 72,
+      "family_page_end": 73,
+      "family_page_range_sha256": "430abf7fd9849b3d7a18e62bcf9073b0ea4a3edeaa6a934b72da46d6921ae3b8",
+      "in_family_heading_pages": [
+        72
+      ],
+      "primary_heading_page": 72,
+      "heading_labels": [
+        {
+          "page": 72,
+          "label": "FACTION ABILITIES 22.02",
+          "label_sha256": "cf31c0880dd356b2cbb9d120f2e77e7a443bc82d70414b9737b86432bd85ca3e"
+        }
+      ],
+      "page_semantic_sha256": {
+        "72": "f4db796dbe04ae75fc68a8bb63192fe967015ae44c716cad593b890f86ab27f5"
+      },
+      "cross_reference_pages": [
+        11
+      ],
+      "all_reference_pages": [
+        11,
+        72
+      ]
+    },
+    {
+      "rule_ref": "22.03",
+      "rule_key": "core-rule-22-03",
+      "family_id": "22",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 72,
+      "family_page_end": 73,
+      "family_page_range_sha256": "430abf7fd9849b3d7a18e62bcf9073b0ea4a3edeaa6a934b72da46d6921ae3b8",
+      "in_family_heading_pages": [
+        72
+      ],
+      "primary_heading_page": 72,
+      "heading_labels": [
+        {
+          "page": 72,
+          "label": "PSYCHIC ABILITIES 22.03",
+          "label_sha256": "3e4db3cb9b7d2c74ec23eef919e4d047034293656fd28610e0b5bc64fe716d5f"
+        }
+      ],
+      "page_semantic_sha256": {
+        "72": "f4db796dbe04ae75fc68a8bb63192fe967015ae44c716cad593b890f86ab27f5"
+      },
+      "cross_reference_pages": [
+        11
+      ],
+      "all_reference_pages": [
+        11,
+        72
+      ]
+    },
+    {
+      "rule_ref": "22.04",
+      "rule_key": "core-rule-22-04",
+      "family_id": "22",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 72,
+      "family_page_end": 73,
+      "family_page_range_sha256": "430abf7fd9849b3d7a18e62bcf9073b0ea4a3edeaa6a934b72da46d6921ae3b8",
+      "in_family_heading_pages": [
+        72
+      ],
+      "primary_heading_page": 72,
+      "heading_labels": [
+        {
+          "page": 72,
+          "label": "WARGEAR ABILITIES 22.04",
+          "label_sha256": "a18d57eb32b4f3f4bd5cf22fe7c3fa4a3a4fb5956cc1849077b646866a5f81f8"
+        }
+      ],
+      "page_semantic_sha256": {
+        "72": "f4db796dbe04ae75fc68a8bb63192fe967015ae44c716cad593b890f86ab27f5"
+      },
+      "cross_reference_pages": [
+        11
+      ],
+      "all_reference_pages": [
+        11,
+        72
+      ]
+    },
+    {
+      "rule_ref": "22.05",
+      "rule_key": "core-rule-22-05",
+      "family_id": "22",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 72,
+      "family_page_end": 73,
+      "family_page_range_sha256": "430abf7fd9849b3d7a18e62bcf9073b0ea4a3edeaa6a934b72da46d6921ae3b8",
+      "in_family_heading_pages": [
+        73
+      ],
+      "primary_heading_page": 73,
+      "heading_labels": [
+        {
+          "page": 73,
+          "label": "PLUNGING FIRE 22.05",
+          "label_sha256": "f1aff5191b07b33cbabdf8516dbb96c309ef443d197bbb9ada248901f39f5103"
+        }
+      ],
+      "page_semantic_sha256": {
+        "73": "23c20c0c03c15f48f1591fb3b61280d5331ae9de2286a45a266748259c96358d"
+      },
+      "cross_reference_pages": [
+        48,
+        74
+      ],
+      "all_reference_pages": [
+        48,
+        73,
+        74
+      ]
+    },
+    {
+      "rule_ref": "23.01",
+      "rule_key": "core-rule-23-01",
+      "family_id": "23",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 74,
+      "family_page_end": 77,
+      "family_page_range_sha256": "9ed021311bbbac7cf0b80c4e435a713b6ee327151162c29d7384bf3eaf57efc5",
+      "in_family_heading_pages": [
+        74
+      ],
+      "primary_heading_page": 74,
+      "heading_labels": [
+        {
+          "page": 74,
+          "label": "DEPLOYMENT 23.01",
+          "label_sha256": "d21e23b006e1c7a7eae36a71cde1e63ba6f0d93371ce0f19709ed33458c836f8"
+        }
+      ],
+      "page_semantic_sha256": {
+        "74": "e9728f9db465456dba677abf1a0af175730526039cf4207094b6352a80d9893f"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        74
+      ]
+    },
+    {
+      "rule_ref": "23.02",
+      "rule_key": "core-rule-23-02",
+      "family_id": "23",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 74,
+      "family_page_end": 77,
+      "family_page_range_sha256": "9ed021311bbbac7cf0b80c4e435a713b6ee327151162c29d7384bf3eaf57efc5",
+      "in_family_heading_pages": [
+        74
+      ],
+      "primary_heading_page": 74,
+      "heading_labels": [
+        {
+          "page": 74,
+          "label": "MOVEMENT 23.02",
+          "label_sha256": "3b58c537976c4a630ea78f5d4495dd3ac9df1ccee154585d00f1a2db33419471"
+        }
+      ],
+      "page_semantic_sha256": {
+        "74": "e9728f9db465456dba677abf1a0af175730526039cf4207094b6352a80d9893f"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        74
+      ]
+    },
+    {
+      "rule_ref": "23.03",
+      "rule_key": "core-rule-23-03",
+      "family_id": "23",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 74,
+      "family_page_end": 77,
+      "family_page_range_sha256": "9ed021311bbbac7cf0b80c4e435a713b6ee327151162c29d7384bf3eaf57efc5",
+      "in_family_heading_pages": [
+        74
+      ],
+      "primary_heading_page": 74,
+      "heading_labels": [
+        {
+          "page": 74,
+          "label": "SHOOTING 23.03",
+          "label_sha256": "1e10a2259dfabea76ae0c3a6e0289a882715b40c0e18e08a470fbc9e5b934e66"
+        }
+      ],
+      "page_semantic_sha256": {
+        "74": "e9728f9db465456dba677abf1a0af175730526039cf4207094b6352a80d9893f"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        74
+      ]
+    },
+    {
+      "rule_ref": "23.04",
+      "rule_key": "core-rule-23-04",
+      "family_id": "23",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 74,
+      "family_page_end": 77,
+      "family_page_range_sha256": "9ed021311bbbac7cf0b80c4e435a713b6ee327151162c29d7384bf3eaf57efc5",
+      "in_family_heading_pages": [
+        74
+      ],
+      "primary_heading_page": 74,
+      "heading_labels": [
+        {
+          "page": 74,
+          "label": "CHARGING AND FIGHTING 23.04",
+          "label_sha256": "966840478d8d92e4add528e4205f05dd74946f57760e9636b23ca463eb0cfc51"
+        }
+      ],
+      "page_semantic_sha256": {
+        "74": "e9728f9db465456dba677abf1a0af175730526039cf4207094b6352a80d9893f"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        74
+      ]
+    },
+    {
+      "rule_ref": "24.01",
+      "rule_key": "core-rule-24-01",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        78
+      ],
+      "primary_heading_page": 78,
+      "heading_labels": [
+        {
+          "page": 78,
+          "label": "ABILITIES 24.01",
+          "label_sha256": "544c01e6c3e2e43769f3496ee2d524499fe42c75efae185f47872a53b0858e3f"
+        }
+      ],
+      "page_semantic_sha256": {
+        "78": "6d9dbdc5ced6cd5907be1a33835596936eddc576e0db63ffbf9d5d590d75e5de"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        78
+      ]
+    },
+    {
+      "rule_ref": "24.02",
+      "rule_key": "core-rule-24-02",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        78
+      ],
+      "primary_heading_page": 78,
+      "heading_labels": [
+        {
+          "page": 78,
+          "label": "DUPLICATED ABILITIES 24.02",
+          "label_sha256": "d24e1e2074cde486177a995a64e991a57b3712016a5a49770548d3fbae41b0d4"
+        }
+      ],
+      "page_semantic_sha256": {
+        "78": "6d9dbdc5ced6cd5907be1a33835596936eddc576e0db63ffbf9d5d590d75e5de"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        78
+      ]
+    },
+    {
+      "rule_ref": "24.03",
+      "rule_key": "core-rule-24-03",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        79
+      ],
+      "primary_heading_page": 79,
+      "heading_labels": [
+        {
+          "page": 79,
+          "label": "[ANTI] 24.03",
+          "label_sha256": "4b50a6eaee35dcca3bb2b8cb7872c036c6f3181eb315715784875994ae55f9e1"
+        }
+      ],
+      "page_semantic_sha256": {
+        "79": "36ba432d70bde76341f11d68f7a68368d0e6c2d3d25ea41a38b25c06f328f63a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        79
+      ]
+    },
+    {
+      "rule_ref": "24.04",
+      "rule_key": "core-rule-24-04",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        79
+      ],
+      "primary_heading_page": 79,
+      "heading_labels": [
+        {
+          "page": 79,
+          "label": "[ASSAULT] 24.04",
+          "label_sha256": "fa133b1bcc3d42e9abc8781f919edad65c0e4e267bc6dad9462eb41253618360"
+        }
+      ],
+      "page_semantic_sha256": {
+        "79": "36ba432d70bde76341f11d68f7a68368d0e6c2d3d25ea41a38b25c06f328f63a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        79
+      ]
+    },
+    {
+      "rule_ref": "24.05",
+      "rule_key": "core-rule-24-05",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        79
+      ],
+      "primary_heading_page": 79,
+      "heading_labels": [
+        {
+          "page": 79,
+          "label": "[BLAST] 24.05",
+          "label_sha256": "5708a31f9e9fceecabe1b736ae178100b81b4c9b7e27d37cc5723b254ba629d5"
+        }
+      ],
+      "page_semantic_sha256": {
+        "79": "36ba432d70bde76341f11d68f7a68368d0e6c2d3d25ea41a38b25c06f328f63a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        79
+      ]
+    },
+    {
+      "rule_ref": "24.06",
+      "rule_key": "core-rule-24-06",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        79
+      ],
+      "primary_heading_page": 79,
+      "heading_labels": [
+        {
+          "page": 79,
+          "label": "[CLEAVE] 24.06",
+          "label_sha256": "a1a9cc413e3be080974645f59b9101d52afce93e988da042889c4137521a1501"
+        }
+      ],
+      "page_semantic_sha256": {
+        "79": "36ba432d70bde76341f11d68f7a68368d0e6c2d3d25ea41a38b25c06f328f63a"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        79
+      ]
+    },
+    {
+      "rule_ref": "24.07",
+      "rule_key": "core-rule-24-07",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        80
+      ],
+      "primary_heading_page": 80,
+      "heading_labels": [
+        {
+          "page": 80,
+          "label": "[CLOSE-QUARTERS] 24.07",
+          "label_sha256": "04a0644f58e3cc36a15e408e38a40c582d21b60e65ee1db553dc20fb5967f6a9"
+        }
+      ],
+      "page_semantic_sha256": {
+        "80": "3c6398c02af3d311930873fbef256f314e8e09e60a6cbf00f86a16aebdec9429"
+      },
+      "cross_reference_pages": [
+        17
+      ],
+      "all_reference_pages": [
+        17,
+        80
+      ]
+    },
+    {
+      "rule_ref": "24.08",
+      "rule_key": "core-rule-24-08",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        80
+      ],
+      "primary_heading_page": 80,
+      "heading_labels": [
+        {
+          "page": 80,
+          "label": "DEADLY DEMISE 24.08",
+          "label_sha256": "81e78a829a00a19c4bc5303337b757725ee8ae038baa1428008fbfdcc5ce7e40"
+        }
+      ],
+      "page_semantic_sha256": {
+        "80": "3c6398c02af3d311930873fbef256f314e8e09e60a6cbf00f86a16aebdec9429"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        80
+      ]
+    },
+    {
+      "rule_ref": "24.09",
+      "rule_key": "core-rule-24-09",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        80
+      ],
+      "primary_heading_page": 80,
+      "heading_labels": [
+        {
+          "page": 80,
+          "label": "DEEP STRIKE 24.09",
+          "label_sha256": "2b410e2fbfa5ac89f12a111e56c4a5f0ac8ff54305d52dd5701afea4d61179ff"
+        }
+      ],
+      "page_semantic_sha256": {
+        "80": "3c6398c02af3d311930873fbef256f314e8e09e60a6cbf00f86a16aebdec9429"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        80
+      ]
+    },
+    {
+      "rule_ref": "24.10",
+      "rule_key": "core-rule-24-10",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        80
+      ],
+      "primary_heading_page": 80,
+      "heading_labels": [
+        {
+          "page": 80,
+          "label": "[DEVASTATING WOUNDS] 24.10",
+          "label_sha256": "4f80ff9e6b4d7da6540c4f387525b05c57115423672b5a9c5e034d64f82f4724"
+        }
+      ],
+      "page_semantic_sha256": {
+        "80": "3c6398c02af3d311930873fbef256f314e8e09e60a6cbf00f86a16aebdec9429"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        80
+      ]
+    },
+    {
+      "rule_ref": "24.11",
+      "rule_key": "core-rule-24-11",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        81
+      ],
+      "primary_heading_page": 81,
+      "heading_labels": [
+        {
+          "page": 81,
+          "label": "[EXTRA ATTACKS] 24.11",
+          "label_sha256": "d2d72cd991a1d3d695025f4068e8189f27024f5a451ef8cb694b76d27dfe71f2"
+        }
+      ],
+      "page_semantic_sha256": {
+        "81": "bf701659a9aa151636e4d7a33381d9f1c66aeefdc52d2765ca081a865d97d328"
+      },
+      "cross_reference_pages": [
+        17
+      ],
+      "all_reference_pages": [
+        17,
+        81
+      ]
+    },
+    {
+      "rule_ref": "24.12",
+      "rule_key": "core-rule-24-12",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        81
+      ],
+      "primary_heading_page": 81,
+      "heading_labels": [
+        {
+          "page": 81,
+          "label": "FEEL NO PAIN 24.12",
+          "label_sha256": "9cc76e2d9268514873286de803ab29720148e1c121540dc229eb2845f3d3a96d"
+        }
+      ],
+      "page_semantic_sha256": {
+        "81": "bf701659a9aa151636e4d7a33381d9f1c66aeefdc52d2765ca081a865d97d328"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        81
+      ]
+    },
+    {
+      "rule_ref": "24.13",
+      "rule_key": "core-rule-24-13",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        81
+      ],
+      "primary_heading_page": 81,
+      "heading_labels": [
+        {
+          "page": 81,
+          "label": "FIGHTS FIRST 24.13",
+          "label_sha256": "074d540f00fca9a1733dee1fb52360b139f141e659f4f11572607b81d2b4c34f"
+        }
+      ],
+      "page_semantic_sha256": {
+        "81": "bf701659a9aa151636e4d7a33381d9f1c66aeefdc52d2765ca081a865d97d328"
+      },
+      "cross_reference_pages": [
+        37
+      ],
+      "all_reference_pages": [
+        37,
+        81
+      ]
+    },
+    {
+      "rule_ref": "24.14",
+      "rule_key": "core-rule-24-14",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        81
+      ],
+      "primary_heading_page": 81,
+      "heading_labels": [
+        {
+          "page": 81,
+          "label": "FIRING DECK 24.14",
+          "label_sha256": "18119a3ce69b47570a7f16c792154b7f098fbaad6cbba0fb8a1c2396a624d999"
+        }
+      ],
+      "page_semantic_sha256": {
+        "81": "bf701659a9aa151636e4d7a33381d9f1c66aeefdc52d2765ca081a865d97d328"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        81
+      ]
+    },
+    {
+      "rule_ref": "24.15",
+      "rule_key": "core-rule-24-15",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        81
+      ],
+      "primary_heading_page": 81,
+      "heading_labels": [
+        {
+          "page": 81,
+          "label": "[HAZARDOUS] 24.15",
+          "label_sha256": "0f0ceb672a07718fe0249c211e34fcc67df501db6acd6037000790be8c40a233"
+        }
+      ],
+      "page_semantic_sha256": {
+        "81": "bf701659a9aa151636e4d7a33381d9f1c66aeefdc52d2765ca081a865d97d328"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        81
+      ]
+    },
+    {
+      "rule_ref": "24.16",
+      "rule_key": "core-rule-24-16",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        82
+      ],
+      "primary_heading_page": 82,
+      "heading_labels": [
+        {
+          "page": 82,
+          "label": "[HEAVY] 24.16",
+          "label_sha256": "7478cbd48ce60e14387b08d15be1e9ae9f04c5886a5a192fbd12244adef02e42"
+        }
+      ],
+      "page_semantic_sha256": {
+        "82": "850a3ccea7fc0fca0fcdc19575485d408a2231594f859b327e0075f9ae6a3173"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        82
+      ]
+    },
+    {
+      "rule_ref": "24.17",
+      "rule_key": "core-rule-24-17",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        82
+      ],
+      "primary_heading_page": 82,
+      "heading_labels": [
+        {
+          "page": 82,
+          "label": "HOVER 24.17",
+          "label_sha256": "993bd5e9ef64f9e6fbeb88738561a3f0b5d62690ec7dfeec9e21174102e6e800"
+        }
+      ],
+      "page_semantic_sha256": {
+        "82": "850a3ccea7fc0fca0fcdc19575485d408a2231594f859b327e0075f9ae6a3173"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        82
+      ]
+    },
+    {
+      "rule_ref": "24.18",
+      "rule_key": "core-rule-24-18",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        82
+      ],
+      "primary_heading_page": 82,
+      "heading_labels": [
+        {
+          "page": 82,
+          "label": "[IGNORES COVER] 24.18",
+          "label_sha256": "29e38d70fe2c5f0b243f07c3efeae4eeab2041fcce6af7ad48de1865a77ca85c"
+        }
+      ],
+      "page_semantic_sha256": {
+        "82": "850a3ccea7fc0fca0fcdc19575485d408a2231594f859b327e0075f9ae6a3173"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        82
+      ]
+    },
+    {
+      "rule_ref": "24.19",
+      "rule_key": "core-rule-24-19",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        82
+      ],
+      "primary_heading_page": 82,
+      "heading_labels": [
+        {
+          "page": 82,
+          "label": "[INDIRECT FIRE] 24.19",
+          "label_sha256": "ba626a8301e7282dd661e2f43d4c5732826122634b8a9775c947342e2e792b3c"
+        }
+      ],
+      "page_semantic_sha256": {
+        "82": "850a3ccea7fc0fca0fcdc19575485d408a2231594f859b327e0075f9ae6a3173"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        82
+      ]
+    },
+    {
+      "rule_ref": "24.20",
+      "rule_key": "core-rule-24-20",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        82
+      ],
+      "primary_heading_page": 82,
+      "heading_labels": [
+        {
+          "page": 82,
+          "label": "INFILTRATORS 24.20",
+          "label_sha256": "22d2e6160781ce912fa29d555154b173483137d09d60bfc3b3a5e3c8fb4a3614"
+        }
+      ],
+      "page_semantic_sha256": {
+        "82": "850a3ccea7fc0fca0fcdc19575485d408a2231594f859b327e0075f9ae6a3173"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        82
+      ]
+    },
+    {
+      "rule_ref": "24.21",
+      "rule_key": "core-rule-24-21",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        82
+      ],
+      "primary_heading_page": 82,
+      "heading_labels": [
+        {
+          "page": 82,
+          "label": "[LANCE] 24.21",
+          "label_sha256": "8a1c56e0c0f4a5236948d431d46345e220b1fbf6eb6e2c8837367e4ef101002f"
+        }
+      ],
+      "page_semantic_sha256": {
+        "82": "850a3ccea7fc0fca0fcdc19575485d408a2231594f859b327e0075f9ae6a3173"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        82
+      ]
+    },
+    {
+      "rule_ref": "24.22",
+      "rule_key": "core-rule-24-22",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        82
+      ],
+      "primary_heading_page": 82,
+      "heading_labels": [
+        {
+          "page": 82,
+          "label": "LEADER 24.22",
+          "label_sha256": "18fdce47c62bf9d18581245c0780e0bfb33c9d02e5c93a479449900fa95bc047"
+        }
+      ],
+      "page_semantic_sha256": {
+        "82": "850a3ccea7fc0fca0fcdc19575485d408a2231594f859b327e0075f9ae6a3173"
+      },
+      "cross_reference_pages": [
+        66
+      ],
+      "all_reference_pages": [
+        66,
+        82
+      ]
+    },
+    {
+      "rule_ref": "24.24",
+      "rule_key": "core-rule-24-24",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        83
+      ],
+      "primary_heading_page": 83,
+      "heading_labels": [
+        {
+          "page": 83,
+          "label": "LONE OPERATIVE 24.24",
+          "label_sha256": "6562a9d78f6affe71c80172b5fac071f97a26a463db9e84c6284a8a7c602dff9"
+        }
+      ],
+      "page_semantic_sha256": {
+        "83": "89f7d64a4c4f1644cff038010c8a688047bfc13b3921e5ab31c2c94044f1e6af"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        83
+      ]
+    },
+    {
+      "rule_ref": "24.25",
+      "rule_key": "core-rule-24-25",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        83
+      ],
+      "primary_heading_page": 83,
+      "heading_labels": [
+        {
+          "page": 83,
+          "label": "[MELTA] 24.25",
+          "label_sha256": "3b76df91496f0ffb90d0d2be4de1fb7ee5da52bedd3666ad696985d8f299c9e5"
+        }
+      ],
+      "page_semantic_sha256": {
+        "83": "89f7d64a4c4f1644cff038010c8a688047bfc13b3921e5ab31c2c94044f1e6af"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        83
+      ]
+    },
+    {
+      "rule_ref": "24.26",
+      "rule_key": "core-rule-24-26",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        83
+      ],
+      "primary_heading_page": 83,
+      "heading_labels": [
+        {
+          "page": 83,
+          "label": "[ONE SHOT] 24.26",
+          "label_sha256": "15ee0e11e680cb9173f444add3c0ff0bd9adc9187e807aa8d6ddfaa8654b4e92"
+        }
+      ],
+      "page_semantic_sha256": {
+        "83": "89f7d64a4c4f1644cff038010c8a688047bfc13b3921e5ab31c2c94044f1e6af"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        83
+      ]
+    },
+    {
+      "rule_ref": "24.27",
+      "rule_key": "core-rule-24-27",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        83
+      ],
+      "primary_heading_page": 83,
+      "heading_labels": [
+        {
+          "page": 83,
+          "label": "[PISTOL] 24.27",
+          "label_sha256": "bf12db2186a00fc7a5b10adf08e25918a8ba4e6dd6610d52b09efc1ecf4f52ba"
+        }
+      ],
+      "page_semantic_sha256": {
+        "83": "89f7d64a4c4f1644cff038010c8a688047bfc13b3921e5ab31c2c94044f1e6af"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        83
+      ]
+    },
+    {
+      "rule_ref": "24.28",
+      "rule_key": "core-rule-24-28",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        84
+      ],
+      "primary_heading_page": 84,
+      "heading_labels": [
+        {
+          "page": 84,
+          "label": "[PRECISION] 24.28",
+          "label_sha256": "9489e1d796cc6dc49ed3af96ae5352aff9b50ab9892d83331d8b2208161c6c54"
+        }
+      ],
+      "page_semantic_sha256": {
+        "84": "e82d8f756d69d41faf2a21a1470583098f04fe6b6649d5ee9ea43fa75e4b27a9"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        84
+      ]
+    },
+    {
+      "rule_ref": "24.29",
+      "rule_key": "core-rule-24-29",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        84
+      ],
+      "primary_heading_page": 84,
+      "heading_labels": [
+        {
+          "page": 84,
+          "label": "[PSYCHIC] 24.29",
+          "label_sha256": "cae86aad9f48f932d1325e8125bc8fb6ddd338388b5597e36b33f8e3c80b8b8d"
+        }
+      ],
+      "page_semantic_sha256": {
+        "84": "e82d8f756d69d41faf2a21a1470583098f04fe6b6649d5ee9ea43fa75e4b27a9"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        84
+      ]
+    },
+    {
+      "rule_ref": "24.30",
+      "rule_key": "core-rule-24-30",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        84
+      ],
+      "primary_heading_page": 84,
+      "heading_labels": [
+        {
+          "page": 84,
+          "label": "[RAPID FIRE] 24.30",
+          "label_sha256": "7a9667fd6d5ee3e2a0b1f084976f8bc54703cbc941a36c78afe942a69d6d2498"
+        }
+      ],
+      "page_semantic_sha256": {
+        "84": "e82d8f756d69d41faf2a21a1470583098f04fe6b6649d5ee9ea43fa75e4b27a9"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        84
+      ]
+    },
+    {
+      "rule_ref": "24.31",
+      "rule_key": "core-rule-24-31",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        84
+      ],
+      "primary_heading_page": 84,
+      "heading_labels": [
+        {
+          "page": 84,
+          "label": "SCOUTS 24.31",
+          "label_sha256": "117eb1e52e0711c9eaec63b332e83883ce114d90b122352c19e07d103461fc97"
+        }
+      ],
+      "page_semantic_sha256": {
+        "84": "e82d8f756d69d41faf2a21a1470583098f04fe6b6649d5ee9ea43fa75e4b27a9"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        84
+      ]
+    },
+    {
+      "rule_ref": "24.32",
+      "rule_key": "core-rule-24-32",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        84
+      ],
+      "primary_heading_page": 84,
+      "heading_labels": [
+        {
+          "page": 84,
+          "label": "SCOUT MOVE 24.32",
+          "label_sha256": "bbce072a7ea79411b0d12cccfc086b396d95c64d465bfab3e6c6463dce80b739"
+        }
+      ],
+      "page_semantic_sha256": {
+        "84": "e82d8f756d69d41faf2a21a1470583098f04fe6b6649d5ee9ea43fa75e4b27a9"
+      },
+      "cross_reference_pages": [
+        13
+      ],
+      "all_reference_pages": [
+        13,
+        84
+      ]
+    },
+    {
+      "rule_ref": "24.33",
+      "rule_key": "core-rule-24-33",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        85
+      ],
+      "primary_heading_page": 85,
+      "heading_labels": [
+        {
+          "page": 85,
+          "label": "STEALTH 24.33",
+          "label_sha256": "188d0588ea431d2b9d4939d6b9bb079f6c2284f53d8186d1e4435c7b85836a0d"
+        }
+      ],
+      "page_semantic_sha256": {
+        "85": "e4a96f7758a7e6b41aac5fdfec9e01acb53b1809ef58d13e4552cace84bdd29b"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        85
+      ]
+    },
+    {
+      "rule_ref": "24.34",
+      "rule_key": "core-rule-24-34",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        85
+      ],
+      "primary_heading_page": 85,
+      "heading_labels": [
+        {
+          "page": 85,
+          "label": "SUPPORT 24.34",
+          "label_sha256": "6f145d3b86deef3919525e27d4f32f20826e72576eaeaa7244a78c4d6a5a0072"
+        }
+      ],
+      "page_semantic_sha256": {
+        "85": "e4a96f7758a7e6b41aac5fdfec9e01acb53b1809ef58d13e4552cace84bdd29b"
+      },
+      "cross_reference_pages": [
+        66
+      ],
+      "all_reference_pages": [
+        66,
+        85
+      ]
+    },
+    {
+      "rule_ref": "24.35",
+      "rule_key": "core-rule-24-35",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        85
+      ],
+      "primary_heading_page": 85,
+      "heading_labels": [
+        {
+          "page": 85,
+          "label": "SUPER-HEAVY WALKER 24.35",
+          "label_sha256": "57cb2c44b43244b2e883a5bc474d3a86d54d719a16cc7a81f64f59fb28431dca"
+        }
+      ],
+      "page_semantic_sha256": {
+        "85": "e4a96f7758a7e6b41aac5fdfec9e01acb53b1809ef58d13e4552cace84bdd29b"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        85
+      ]
+    },
+    {
+      "rule_ref": "24.36",
+      "rule_key": "core-rule-24-36",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        85
+      ],
+      "primary_heading_page": 85,
+      "heading_labels": [
+        {
+          "page": 85,
+          "label": "[SUSTAINED HITS] 24.36",
+          "label_sha256": "444d98dfb57bdbd541a5740eb5d906435ed7aa991011de9ad3f39554bf26e0d9"
+        }
+      ],
+      "page_semantic_sha256": {
+        "85": "e4a96f7758a7e6b41aac5fdfec9e01acb53b1809ef58d13e4552cace84bdd29b"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        85
+      ]
+    },
+    {
+      "rule_ref": "24.37",
+      "rule_key": "core-rule-24-37",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        85
+      ],
+      "primary_heading_page": 85,
+      "heading_labels": [
+        {
+          "page": 85,
+          "label": "[TORRENT] 24.37",
+          "label_sha256": "b30597afc07658c34306d8980e2eda97547e1433d3d0c733f3a28c4d663e8b90"
+        }
+      ],
+      "page_semantic_sha256": {
+        "85": "e4a96f7758a7e6b41aac5fdfec9e01acb53b1809ef58d13e4552cace84bdd29b"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        85
+      ]
+    },
+    {
+      "rule_ref": "24.38",
+      "rule_key": "core-rule-24-38",
+      "family_id": "24",
+      "classification": "UNIQUE_IN_FAMILY_HEADING",
+      "family_page_start": 78,
+      "family_page_end": 88,
+      "family_page_range_sha256": "d95b146159132a7f5ed36540cc17d4accffa0a4e338dcb5a6601ff7099b2e3e7",
+      "in_family_heading_pages": [
+        85
+      ],
+      "primary_heading_page": 85,
+      "heading_labels": [
+        {
+          "page": 85,
+          "label": "[TWIN-LINKED] 24.38",
+          "label_sha256": "c923a32f2d45b4b0b2673ff95dadb1ac677a997c12ac19f478542a7e8b329ea9"
+        }
+      ],
+      "page_semantic_sha256": {
+        "85": "e4a96f7758a7e6b41aac5fdfec9e01acb53b1809ef58d13e4552cace84bdd29b"
+      },
+      "cross_reference_pages": [],
+      "all_reference_pages": [
+        85
+      ]
+    }
+  ],
+  "summary": {
+    "atoms": 141,
+    "unique_rule_refs": 141,
+    "unique_rule_keys": 141,
+    "families": 24,
+    "family_ids": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+    ],
+    "classification_counts": {
+      "REPEATED_IN_FAMILY_HEADING": 5,
+      "UNIQUE_IN_FAMILY_HEADING": 136
+    },
+    "heading_recovery_gaps": 0,
+    "heading_recovery_gap_refs": [],
+    "atoms_with_cross_references": 40,
+    "all_atoms_have_in_family_heading": true
+  },
+  "authority_boundary": {
+    "numbered_reference_identity_complete": true,
+    "definition_evidence_heading_only": true,
+    "paragraph_level_rules_ast_complete": false,
+    "rule_interaction_graph_complete": false,
+    "app_codex_equivalence": "NOT_CLAIMED",
+    "full_faction_promotion": false,
+    "current_normalized_factions_change": 0,
+    "copyright_policy": "Numbered IDs, short headings <=160 chars, page/range hashes and structural evidence only; no paragraph rule prose committed."
+  }
+}

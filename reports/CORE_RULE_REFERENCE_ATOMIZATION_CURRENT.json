@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "snapshot_date": "2026-09-30",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "atomization_version": "CORE_RULE_REFERENCE_ATOMIZATION_V1",
+  "source": {
+    "document_id": "GW_11E_CORE_RULES_PUBLIC",
+    "source_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+    "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+    "page_count": 88,
+    "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+  },
+  "source_verification": {
+    "binary_sha256_match": true,
+    "page_semantic_fingerprints_match": 88,
+    "document_semantic_sha256_match": true
+  },
+  "parent_structure": {
+    "path": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
+    "structure_version": "CORE_RULES_SECTION_STRUCTURE_V1",
+    "rule_reference_families": 24,
+    "rule_reference_count": 141
+  },
+  "summary": {
+    "atoms": 141,
+    "unique_rule_refs": 141,
+    "unique_rule_keys": 141,
+    "families": 24,
+    "family_ids": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+    ],
+    "classification_counts": {
+      "REPEATED_IN_FAMILY_HEADING": 5,
+      "UNIQUE_IN_FAMILY_HEADING": 136
+    },
+    "heading_recovery_gaps": 0,
+    "heading_recovery_gap_refs": [],
+    "atoms_with_cross_references": 40,
+    "all_atoms_have_in_family_heading": true
+  },
+  "non_unique_atoms": [
+    {
+      "rule_ref": "15.07",
+      "family_id": "15",
+      "classification": "REPEATED_IN_FAMILY_HEADING",
+      "in_family_heading_pages": [
+        55,
+        57
+      ],
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
+          "label_sha256": "ff184dfabf47a6b011932cdc27925152d2a42eea91cf7b96401be44372133bbc"
+        },
+        {
+          "page": 57,
+          "label": "RAPID INGRESS 15.07 1CP",
+          "label_sha256": "3b684d57a5797ab4df90930bad9db2de3679b2fbb6140f4d41040eaa69956870"
+        }
+      ]
+    },
+    {
+      "rule_ref": "15.08",
+      "family_id": "15",
+      "classification": "REPEATED_IN_FAMILY_HEADING",
+      "in_family_heading_pages": [
+        55,
+        57
+      ],
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "FIRE OVERWATCH 15.08 1CPCORE STRATAGEM",
+          "label_sha256": "a35a5279d4d913a43885a5be035130d62c2ca2c867449fda1e114b68ec73ce99"
+        },
+        {
+          "page": 57,
+          "label": "FIRE OVERWATCH 15.08 1CP",
+          "label_sha256": "6e9d936b11cafff4e328d1d9f7b47b7a35d1945d44243d0339a41e53a0b3ba51"
+        }
+      ]
+    },
+    {
+      "rule_ref": "15.09",
+      "family_id": "15",
+      "classification": "REPEATED_IN_FAMILY_HEADING",
+      "in_family_heading_pages": [
+        55,
+        57
+      ],
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "SNAP SHOOTING 15.09",
+          "label_sha256": "dd45701712f31d1ca2c46390708f510557aed9f8039618cef7083738c4a84ba3"
+        },
+        {
+          "page": 57,
+          "label": "SNAP SHOOTING 15.09",
+          "label_sha256": "dd45701712f31d1ca2c46390708f510557aed9f8039618cef7083738c4a84ba3"
+        }
+      ]
+    },
+    {
+      "rule_ref": "15.10",
+      "family_id": "15",
+      "classification": "REPEATED_IN_FAMILY_HEADING",
+      "in_family_heading_pages": [
+        55,
+        57
+      ],
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "SMOKESCREEN 15.10 1CPCORE STRATAGEM",
+          "label_sha256": "e70545f35f381cc20f0007047507a7b01273d3900f64998fd55adb269f349d1a"
+        },
+        {
+          "page": 57,
+          "label": "SMOKESCREEN 15.10 1CP",
+          "label_sha256": "2936fa89d15ec68b86fffebd18f113748f214d5827f4efa633b8d7ea843daf05"
+        }
+      ]
+    },
+    {
+      "rule_ref": "15.11",
+      "family_id": "15",
+      "classification": "REPEATED_IN_FAMILY_HEADING",
+      "in_family_heading_pages": [
+        55,
+        57
+      ],
+      "heading_labels": [
+        {
+          "page": 55,
+          "label": "HEROIC INTERVENTION 15.11 1CPCORE STRATAGEM",
+          "label_sha256": "f8edd7774573c1bbff937e07dab83cc3f064417894d28ab5677604918e7c7f23"
+        },
+        {
+          "page": 57,
+          "label": "HEROIC INTERVENTION 15.11 1CP",
+          "label_sha256": "1b527f07486ae248ad010df47be9785fd4733bb97319f2833fc09bc1a328b538"
+        }
+      ]
+    }
+  ],
+  "authority_boundary": {
+    "numbered_reference_identity_complete": true,
+    "definition_evidence_heading_only": true,
+    "paragraph_level_rules_ast_complete": false,
+    "rule_interaction_graph_complete": false,
+    "app_codex_equivalence": "NOT_CLAIMED",
+    "full_faction_promotion": false,
+    "current_normalized_factions_change": 0,
+    "copyright_policy": "Numbered IDs, short headings <=160 chars, page/range hashes and structural evidence only; no paragraph rule prose committed."
+  }
+}
