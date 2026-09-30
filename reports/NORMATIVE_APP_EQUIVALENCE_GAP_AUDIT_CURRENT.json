@@ -89,7 +89,10 @@
     "core_rule_heading_recovery_gaps": 0,
     "core_rule_paragraph_boundaries": "PASS_141_RULE_BOUNDARIES",
     "core_rule_boundary_occurrences": 146,
-    "core_rule_paragraph_candidates": 310
+    "core_rule_paragraph_candidates": 310,
+    "core_rule_paragraph_atomization": "PASS_310_PARAGRAPH_ATOMS",
+    "core_rule_paragraph_atoms": 310,
+    "core_rule_paragraph_range_validation_failures": 0
   },
   "roster_source_mapping": {
     "counts": {
@@ -607,22 +610,22 @@
   "gaps": [
     {
       "id": "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-      "state": "PARAGRAPH_BOUNDARIES_CLOSED_PARAGRAPH_ATOMIZATION_PENDING",
+      "state": "PARAGRAPH_ATOMIZATION_CLOSED_SEMANTIC_CLASSIFICATION_PENDING",
       "blocking_scope": [
         "core_rules_content",
         "system_normative_semantics"
       ],
       "evidence": {
-        "repository_state": "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1",
+        "repository_state": "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
         "currentness_profile": {
           "required_sources": [
             "GW_40K_DOWNLOADS"
           ],
-          "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1",
+          "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
           "repository_dimension": null,
           "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
           "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-          "authority_boundary": "All 141 Core rule atoms have deterministic rule-body boundaries across 146 occurrences and 310 page-local paragraph candidates; semantic paragraph AST and rule interactions remain pending.",
+          "authority_boundary": "All 310 page-local Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities; semantic paragraph classification, AST and rule interactions remain pending.",
           "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
           "rule_reference_families": 24,
           "rule_reference_count": 141,
@@ -642,6 +645,14 @@
             "paragraph_candidates": 310,
             "heading_line_recovery_gaps": 0,
             "empty_body_boundaries": 0
+          },
+          "paragraph_atomization": {
+            "state": "PASS_310_PARAGRAPH_ATOMS",
+            "report": "reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json",
+            "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json",
+            "paragraph_atoms": 310,
+            "unique_paragraph_keys": 310,
+            "range_validation_failures": 0
           }
         },
         "official_public_source": {
@@ -676,9 +687,17 @@
         "paragraph_boundary_state": "PASS_141_RULE_BOUNDARIES",
         "boundary_occurrences": 146,
         "paragraph_candidates": 310,
-        "repeated_boundary_variants": 5
+        "repeated_boundary_variants": 5,
+        "paragraph_atomization_report": "reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json",
+        "paragraph_atomization_state": "PASS_310_PARAGRAPH_ATOMS",
+        "paragraph_atoms": 310,
+        "paragraph_atom_classification_counts": {
+          "REPEATED_OCCURRENCE_PARAGRAPH_VARIANT": 10,
+          "SINGLE_OCCURRENCE_PARAGRAPH": 300
+        },
+        "paragraph_range_validation_failures": 0
       },
-      "next_action": "Atomize the 310 copyright-safe paragraph boundary candidates into stable paragraph identities before any semantic AST parsing."
+      "next_action": "Classify the 310 stable paragraph identities into conservative semantic roles before building any paragraph AST; keep prose external and repeated variants non-conflicting by default."
     },
     {
       "id": "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
@@ -987,7 +1006,7 @@
   "conclusion": {
     "why_current_normalized_factions_is_zero": "The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
     "publicly_closable_now": [
-      "Core Rules paragraph-boundary candidate atomization",
+      "Core Rules paragraph semantic classification",
       "deeper public Faction Pack structured extraction inside proven public scope",
       "review of edition-11 residual provenance without automatic promotion",
       "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING"
@@ -996,7 +1015,7 @@
       "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
       "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS"
     ],
-    "recommended_next_milestone": "CORE_RULE_PARAGRAPH_ATOMIZATION_V1",
-    "expected_effect": "All 141 Core rule atoms now have deterministic rule-body boundaries across 146 occurrences and 310 page-local paragraph candidates, with zero heading-line gaps or empty bodies. Next assign stable paragraph identities before semantic AST work; full faction/app equivalence remains unchanged."
+    "recommended_next_milestone": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+    "expected_effect": "All 310 Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities with zero range failures. Next classify paragraph semantics conservatively before AST construction; full faction/app equivalence and whole-faction normative coverage remain unchanged."
   }
 }
