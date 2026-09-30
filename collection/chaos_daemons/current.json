@@ -1164,7 +1164,10 @@
     "khorne_styled_bodies_across_world_eaters_and_chaos_daemons": 47,
     "khorne_physical_reconciliation_state": "CLOSED",
     "khorne_current_non_legends_datasheet_roles_representable": 12,
-    "khorne_shared_role_constraint_count": 1
+    "khorne_shared_role_constraint_count": 1,
+    "shadow_legion_direct_owned_role_categories": 13,
+    "shadow_legion_cross_role_candidate_categories": 1,
+    "shadow_legion_missing_role_categories": 1
   },
   "constraints": [
     {
@@ -1195,7 +1198,8 @@
     "Slaanesh physical-count reconciliation is closed at 155 unique Slaanesh-aligned bodies beyond the shared Be'lakor, bringing the normalized Chaos Daemons inventory to 316 physical bodies/models.",
     "Nurgle count layer added: 17 newly enumerated Nurgle models plus the already-recorded Nurgle-styled Daemon Prince, bringing the Chaos Daemons normalized physical total to 333.",
     "Khorne direct-confirmation expansion added 7 unique physical bodies/models beyond the original New Recruit-derived Khorne pools. The magnetized Rendmaster/Skull Cannon chassis is counted once.",
-    "Khorne physical reconciliation is closed. The recorded Khorne-specific current datasheet roles are fully represented by owned bodies/configurations, with Rendmaster/Skull Cannon sharing one magnetized chassis."
+    "Khorne physical reconciliation is closed. The recorded Khorne-specific current datasheet roles are fully represented by owned bodies/configurations, with Rendmaster/Skull Cannon sharing one magnetized chassis.",
+    "Shadow Legion physical audit: 13 of 15 listed HERETIC ASTARTES role categories are directly represented in the CSM inventory, Sorcerer In Terminator Armour is represented by two high-confidence Thousand Sons physical-role candidates, and Raptors are not currently recorded."
   ],
   "provenance": {
     "source_files": [
@@ -1336,5 +1340,63 @@
       "evidence": "DIRECT_USER_CONFIRMATION",
       "details": "Bloodletters 20, Bloodcrushers 6 and Flesh Hounds 10 are complete assembled totals. Two Bloodthirsters are fixed non-magnetized builds (one two-handed, one axe+whip). The separate Khorne Daemon Prince is a fixed foot build. No further Khorne daemon/AoS models are recalled outside the recorded inventory."
     }
-  ]
+  ],
+  "cross_faction_access": {
+    "checkpoint": "2026-09-30",
+    "formal_bridges": [
+      {
+        "rule": "Shadow Legion — Thralls of the First Prince",
+        "strike_force_heretic_astartes_points_cap": 1000,
+        "restrictions": [
+          "No DAEMON PRINCE, DAEMON PRINCE WITH WINGS or EPIC HERO units except Be'lakor.",
+          "Only listed HERETIC ASTARTES roles are admitted."
+        ],
+        "listed_roles": [
+          "Chaos Lord",
+          "Chaos Lord In Terminator Armour",
+          "Chaos Lord With Jump Pack",
+          "Chaos Terminator Squad",
+          "Chosen",
+          "DAMNED units",
+          "Dark Apostle",
+          "Havocs",
+          "Legionaries",
+          "Master Of Possession",
+          "Possessed",
+          "Raptors",
+          "Sorcerer",
+          "Sorcerer In Terminator Armour",
+          "Warp Talons"
+        ],
+        "owned_role_coverage": {
+          "direct_csm_domain": [
+            "Chaos Lord",
+            "Chaos Lord In Terminator Armour",
+            "Chaos Lord With Jump Pack",
+            "Chaos Terminator Squad",
+            "Chosen",
+            "DAMNED units",
+            "Dark Apostle",
+            "Havocs",
+            "Legionaries",
+            "Master Of Possession",
+            "Possessed",
+            "Sorcerer",
+            "Warp Talons"
+          ],
+          "cross_role_candidate": [
+            {
+              "role": "Sorcerer In Terminator Armour",
+              "collection_ref": "collection/thousand_sons/current.json#sorcerer_in_terminator_armour",
+              "physical_bodies": 2,
+              "state": "HIGH_CONFIDENCE_PHYSICAL_ROLE_CANDIDATE"
+            }
+          ],
+          "not_currently_recorded": [
+            "Raptors"
+          ]
+        }
+      }
+    ]
+  }
 }
