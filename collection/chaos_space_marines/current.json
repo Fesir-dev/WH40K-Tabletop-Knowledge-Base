@@ -1024,7 +1024,7 @@
     "probable_legionary_bodies_if_box_reconfirmed": 35,
     "probable_physical_bodies_if_legionary_box_reconfirmed": 165,
     "external_khorne_berzerker_bodies_available_via_cult_rule": 20,
-    "external_rubric_marine_bodies_available_via_cult_rule": 15,
+    "external_rubric_marine_bodies_available_via_cult_rule": 20,
     "external_chaos_daemon_bodies_in_global_pool": 340,
     "external_ts_terminator_sorcerer_role_candidate_bodies": 2
   },
@@ -1207,7 +1207,8 @@
     "Word Bearers Kill Team 40K role policy simplified: all eight bodies count as Legionaries; hero proxy candidates removed.",
     "Haarken / Chaos Lord with Jump Pack identity reconciled as one magnetized shared body. CSM unique-body lower bound corrected to 155.",
     "Legionary accounting now distinguishes 25 confirmed physical bodies from a probable 35-body acquisition universe pending recheck of one separate 10-model Legionaries box.",
-    "Cross-faction Chaos audit added formal CSM access to owned Khorne Berzerkers, Rubric Marines, Daemonic Pact pools, shared Spawn, the shared Black Legion Daemon Prince and two Thousand Sons Terminator Sorcerers as CSM physical-role candidates."
+    "Cross-faction Chaos audit added formal CSM access to owned Khorne Berzerkers, Rubric Marines, Daemonic Pact pools, shared Spawn, the shared Black Legion Daemon Prince and two Thousand Sons Terminator Sorcerers as CSM physical-role candidates.",
+    "Cross-faction Rubric access corrected to 20 user-confirmed Thousand Sons bodies."
   ],
   "acquisition_groups": [
     {
@@ -1430,7 +1431,7 @@
           {
             "unit": "Rubric Marines",
             "collection_ref": "collection/thousand_sons/current.json#rubric_marines",
-            "owned_bodies": 15,
+            "owned_bodies": 20,
             "state": "CONFIRMED_PHYSICAL_POOL"
           },
           {
