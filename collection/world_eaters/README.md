@@ -12,3 +12,15 @@ Imported from the World Eaters portion of a user-supplied New Recruit collection
 - Points and roster legality from the export are not collection authority.
 
 The canonical normalized inventory is `current.json`.
+
+
+## Dark Vengeance Helbrute clarification
+
+The World Eaters Helbrute is directly identified as one of the user's two Dark Vengeance Helbrute bodies.
+
+- assembled;
+- converted into the World Eaters collection;
+- the original melta-type ranged weapon was replaced with plasma;
+- the current melee arm still requires explicit re-confirmation and is not inferred.
+
+The second Dark Vengeance Helbrute is stored under the Chaos Space Marines collection and is painted as Alpha Legion with fist + melta-style starter loadout.
