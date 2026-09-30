@@ -12,7 +12,7 @@
     "source",
     "source_verification",
     "parent_boundaries",
-    "paragraphs",
+    "paragraph_atoms",
     "summary",
     "authority_boundary"
   ],
@@ -25,7 +25,7 @@
     "source": {"type": "object"},
     "source_verification": {"type": "object"},
     "parent_boundaries": {"type": "object"},
-    "paragraphs": {
+    "paragraph_atoms": {
       "type": "array",
       "items": {
         "type": "object",
