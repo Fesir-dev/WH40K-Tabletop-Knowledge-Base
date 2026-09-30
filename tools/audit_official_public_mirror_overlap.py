@@ -507,8 +507,10 @@ def build_outputs(as_of: str, cache_dir: Path, root: Path = ROOT) -> tuple[dict,
             "semantic_sha256": doc["semantic_sha256"],
             "pages": doc["page_count"],
             "pages_with_overlap": set(),
-            "exact_units": 0,
-            "promotable_units": 0,
+            "exact_evidence_refs": 0,
+            "promotable_evidence_refs": 0,
+            "_exact_unit_keys": set(),
+            "_promotable_unit_keys": set(),
         }
         for doc in official_docs
     }
@@ -547,11 +549,14 @@ def build_outputs(as_of: str, cache_dir: Path, root: Path = ROOT) -> tuple[dict,
 
         for hit in unit_hits:
             stats = document_stats[hit["document_id"]]
-            stats["exact_units"] += 1
+            stats["exact_evidence_refs"] += 1
+            stats["_exact_unit_keys"].add(unit["unit_key"])
             stats["pages_with_overlap"].update(range(hit["page_start"], hit["page_end"] + 1))
         if promotable:
             for hit in scoped_hits:
-                document_stats[hit["document_id"]]["promotable_units"] += 1
+                scoped_stats = document_stats[hit["document_id"]]
+                scoped_stats["promotable_evidence_refs"] += 1
+                scoped_stats["_promotable_unit_keys"].add(unit["unit_key"])
 
         public = {
             "unit_key": unit["unit_key"],
@@ -589,6 +594,8 @@ def build_outputs(as_of: str, cache_dir: Path, root: Path = ROOT) -> tuple[dict,
     for doc in official_docs:
         row = document_stats[doc["document_id"]]
         row["pages_with_overlap"] = len(row["pages_with_overlap"])
+        row["exact_unique_units"] = len(row.pop("_exact_unit_keys"))
+        row["promotable_unique_units"] = len(row.pop("_promotable_unit_keys"))
         doc_rows.append(row)
 
     by_kind_json = {key: dict(sorted(value.items())) for key, value in sorted(by_kind.items())}
