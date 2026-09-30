@@ -5,7 +5,7 @@
   "checkpoint": "2026-09-30",
   "repository_registered_at": "2026-09-30",
   "status": "PROVISIONAL",
-  "revision_state": "WAVE2_STARTER_PROVENANCE_RECONCILED_WITH_OPEN_KILL_TEAM_COUNT",
+  "revision_state": "WAVE2_KILL_TEAM_COMPOSITION_RECONCILED_SPECIALIST_MAPPING_PARTIAL",
   "physical_pools": [
     {
       "pool_id": "abaddon",
@@ -929,13 +929,92 @@
         "paint_state": "PRIMER_BASECOAT_ONLY",
         "proxy_role": "Possessed"
       }
+    },
+    {
+      "pool_id": "word_bearers_kill_team_chosen_derived",
+      "name": "Word Bearers Legionaries Kill Team — newer Chosen-derived bodies",
+      "physical_bodies": 5,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT_5",
+        "ASSEMBLED",
+        "WORD_BEARERS_THEME",
+        "KILL_TEAM_USAGE",
+        "CURRENT_40K_ROLE_MAPPING_PARTIAL"
+      ],
+      "roles": [
+        {
+          "role": "Legionary Kill Team operative",
+          "simultaneous_usage_group": "word_bearers_legionaries_kill_team"
+        }
+      ],
+      "physical_configuration": {
+        "total": 5,
+        "assembled": 5,
+        "base_size_mm": 32,
+        "source_body_family": "newer Chosen",
+        "known_individuals": [
+          {
+            "label": "magnetized leader",
+            "weapons_raw": [
+              "plasma pistol",
+              "sword OR fist"
+            ],
+            "magnetized": true,
+            "current_kill_team_role_candidate": "Aspiring Champion",
+            "role_confidence": "HIGH",
+            "notes": [
+              "Current Legionary Kill Team rules allow plasma pistol plus power fist/power weapon on an Aspiring Champion."
+            ]
+          },
+          {
+            "label": "executioner-looking operative",
+            "current_kill_team_role_candidate": [
+              "Butcher",
+              "Shrivetalon"
+            ],
+            "role_confidence": "UNRESOLVED_BY_VISUAL_DESCRIPTION_ONLY"
+          },
+          {
+            "label": "dagger psyker-looking operative",
+            "weapons_raw": [
+              "dagger"
+            ],
+            "current_kill_team_role_candidate": "Balefire Acolyte",
+            "role_confidence": "HIGH",
+            "notes": [
+              "Balefire Acolyte is the Legionary psyker specialist and uses a fell dagger in current Kill Team rules."
+            ]
+          },
+          {
+            "label": "staff-bearing operative",
+            "weapons_raw": [
+              "staff"
+            ],
+            "current_kill_team_role_candidate": "UNRESOLVED_CUSTOM_OR_PROXY",
+            "role_confidence": "LOW",
+            "notes": [
+              "A staff by itself does not uniquely identify one of the current Legionary Kill Team operative entries."
+            ]
+          },
+          {
+            "label": "fifth Chosen-derived operative",
+            "current_kill_team_role_candidate": "UNKNOWN",
+            "role_confidence": "UNKNOWN"
+          }
+        ]
+      },
+      "notes": [
+        "These five bodies are additional unique physical models beyond the three Shadowspear Legionary bodies also used in the same Kill Team.",
+        "All eight members of the user's Word Bearers Legionaries Kill Team are on 32 mm bases.",
+        "Some of these bodies visually resemble 40K character archetypes; such alternate role use is tracked as a candidate/proxy relationship and does not create additional physical bodies."
+      ]
     }
   ],
   "confirmed_totals": {
     "wave1_source_declared_top_level_unit_entries": 34,
     "wave1_source_declared_physical_bodies": 117,
-    "normalized_physical_bodies_lower_bound": 151,
-    "actual_total_owned": "UNKNOWN_EXPLICITLY_LARGER_THAN_RECONCILED_LOWER_BOUND_DUE_KILL_TEAM_CHOSEN_AND_FURTHER_WAVES",
+    "normalized_physical_bodies_lower_bound": 156,
+    "actual_total_owned": "UNKNOWN_EXPLICITLY_LARGER_THAN_RECONCILED_LOWER_BOUND_DUE_FURTHER_WAVES",
     "character_or_single_model_top_level_entries": 15,
     "source_declared_cultist_bodies": 40,
     "source_declared_legionary_bodies": 15,
@@ -958,7 +1037,11 @@
     "dark_vengeance_chaos_lord_bodies": 2,
     "greater_possessed_assembled_painted": 2,
     "greater_possessed_on_sprue": 4,
-    "shared_winged_daemon_prince_additional_csm_bodies": 0
+    "shared_winged_daemon_prince_additional_csm_bodies": 0,
+    "word_bearers_kill_team_total_bodies": 8,
+    "word_bearers_kill_team_shadowspear_bodies": 3,
+    "word_bearers_kill_team_newer_chosen_derived_bodies": 5,
+    "wave2_plus_kill_team_unique_body_lower_bound": 156
   },
   "constraints": [
     {
@@ -979,18 +1062,18 @@
   ],
   "open_questions": [
     {
-      "id": "CSM_KILL_TEAM_LEGIONARIES_COUNT",
-      "question": "What is the full physical body count of the Word Bearers Legionaries Kill Team, and how many of its bodies came from the newer Chosen kit/body pool beyond the three Shadowspear bodies?",
-      "state": "USER_CONFIRMATION_REQUIRED"
+      "id": "CSM_KILL_TEAM_SPECIALIST_MAPPING",
+      "question": "Map the eight Word Bearers Kill Team bodies to exact Legionary Kill Team specialists. In particular: does the executioner-looking model carry a double-handed chainaxe (Butcher) or paired/flensing blades (Shrivetalon); what exactly is the staff-bearing model; and what is the fifth Chosen-derived model?",
+      "state": "USER_DESCRIPTION_OR_PHOTO_REQUIRED"
+    },
+    {
+      "id": "CSM_KILL_TEAM_40K_PROXY_MAPPING",
+      "question": "After specialist mapping, decide which Kill Team bodies are intentionally available as 40K character proxies (Chaos Lord, Master of Executions, Sorcerer-like roles) and record any base/weapon conversion requirements without double-counting bodies.",
+      "state": "OPEN_AFTER_SPECIALIST_MAPPING"
     },
     {
       "id": "CSM_AUTOCANNON_MODEL_IDENTITY",
       "question": "The user observed an additional autocannon-armed model that appears to be from Shadowspear. Is it one of the already-counted 20 Shadowspear bodies, or a distinct additional CSM/Chosen/Havoc body?",
-      "state": "USER_CONFIRMATION_REQUIRED"
-    },
-    {
-      "id": "CSM_KILL_TEAM_LEGIONARIES_COUNT",
-      "question": "How many physical models are in the Word Bearers Legionaries Kill Team, and are they additional to the Shadowspear bodies?",
       "state": "USER_CONFIRMATION_REQUIRED"
     },
     {
@@ -1060,6 +1143,21 @@
           "The World Eaters Dark Vengeance Helbrute retains the original fist as its melee arm.",
           "The winged CSM Daemon Prince is the same physical Black Legion-styled winged Daemon Prince already recorded in chaos_daemons."
         ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_WORD_BEARERS_KILL_TEAM_RECONCILIATION",
+        "facts": [
+          "Word Bearers Legionaries Kill Team contains exactly 8 physical models.",
+          "Exactly 5 of the 8 are built from newer Chosen bodies.",
+          "Exactly 3 of the 8 are definite Legionary/Shadowspear bodies.",
+          "All 8 models are mounted on 32 mm bases.",
+          "The team leader is magnetized with plasma pistol and a choice of sword or fist.",
+          "One model has an executioner-like appearance.",
+          "One model is a psyker-looking operative with a dagger.",
+          "One model carries a staff.",
+          "Some of these models may visually represent 40K character roles; these are candidate roles, not extra bodies."
+        ]
       }
     ],
     "product_references": [
@@ -1073,6 +1171,20 @@
         "evidence_url": "https://www.tcgplayer.com/product/192238/warhammer-big-box-games-warhammer-big-box-games-warhammer-40k-shadowspear",
         "concise_fact": "Chaos side contained 1 Master of Possession, 10 Chaos Space Marines, 1 Venomcrawler, 2 Obliterators and 2 Greater Possessed."
       }
+    ],
+    "role_mapping_references": [
+      {
+        "source": "Games Workshop Legionaries Kill Team rules",
+        "url": "https://assets.warhammer-community.com/eng_kt_teamrules_legionaries_jan25-kf5yeock1w-lsotyrx2w0.pdf",
+        "observed_fact": "Current Legionary selection uses one leader (Aspiring Champion or Chosen) plus five other operatives. Aspiring Champion supports plasma pistol + fist/power weapon; Balefire Acolyte is the psyker specialist with a fell dagger; Heavy Gunner can take a heavy bolter.",
+        "authority_scope": "CURRENT_KILL_TEAM_ROLE_MAPPING_ONLY"
+      },
+      {
+        "source": "Historical Shadowspear product/loadout reference",
+        "url": "https://www.belloflostsouls.net/2019/03/40k-shadowspear-chaos-datasheets-clarifications.html",
+        "observed_fact": "The Shadowspear Chaos Space Marine squad included an autocannon-equipped model.",
+        "authority_scope": "HISTORICAL_ACQUISITION_IDENTIFICATION_ONLY"
+      }
     ]
   },
   "notes": [
@@ -1080,7 +1192,8 @@
     "The collection must be reconciled by physical body first, then build state, then current-role mapping. Current 11E squad legality must not be used to erase historical physical builds.",
     "This file is intentionally a durable Wave 1 checkpoint, not a claim of collection completeness.",
     "Wave 2 established Dark Vengeance and Shadowspear acquisition provenance, added legacy/proxy Possessed-role bodies, and promoted several build-state facts while retaining unresolved overlap and missing-body gates.",
-    "Wave 2 closeout resolved the two Dark Vengeance Lords, all 20 Shadowspear CSM acquisition bodies, Greater Possessed build state, Gal Vorbak/Argel Tal state, World Eaters Helbrute fist, and winged Daemon Prince cross-domain identity. Current unique CSM-domain lower bound: 151."
+    "Wave 2 closeout resolved the two Dark Vengeance Lords, all 20 Shadowspear CSM acquisition bodies, Greater Possessed build state, Gal Vorbak/Argel Tal state, World Eaters Helbrute fist, and winged Daemon Prince cross-domain identity. Current unique CSM-domain lower bound: 151.",
+    "Word Bearers Legionaries Kill Team physical composition is closed at 8 bodies (3 Shadowspear + 5 newer Chosen-derived). Current unique CSM-domain lower bound: 156."
   ],
   "acquisition_groups": [
     {
@@ -1135,7 +1248,7 @@
     {
       "usage_group_id": "word_bearers_legionaries_kill_team",
       "name": "Legionaries Kill Team — Word Bearers",
-      "status": "PARTIALLY_RECONCILED",
+      "status": "PHYSICAL_COMPOSITION_COUNT_CLOSED_ROLE_MAPPING_PARTIAL",
       "known_constituents": [
         {
           "source_pool": "legionaries",
@@ -1144,19 +1257,66 @@
           "known_loadouts_raw": [
             "2x bolter",
             "1x heavy bolter"
+          ],
+          "current_kill_team_role_candidates": [
+            {
+              "bodies": 2,
+              "role": "Warrior",
+              "confidence": "HIGH_IF_NO_ICON_OR_SPECIAL_CONVERSION"
+            },
+            {
+              "bodies": 1,
+              "role": "Heavy Gunner",
+              "weapon": "heavy bolter",
+              "confidence": "HIGH"
+            }
           ]
         },
         {
-          "source_pool": "newer_chosen_bodies",
-          "physical_bodies": "UNKNOWN",
-          "origin": "newer Chosen kit/body pool"
+          "source_pool": "word_bearers_kill_team_chosen_derived",
+          "physical_bodies": 5,
+          "origin": "newer Chosen bodies"
         }
       ],
-      "total_physical_bodies": "UNKNOWN_PENDING_USER_COUNT",
+      "total_physical_bodies": 8,
       "notes": [
         "This is a usage/configuration group, not a separate ownership pool.",
         "Three constituent bodies are already counted in the twenty-body Shadowspear Legionaries acquisition pool.",
-        "Additional constituent bodies came from newer Chosen models; exact count remains open and those bodies are not yet included in the unique-body total."
+        "Five constituent bodies are newer Chosen-derived and are counted in the dedicated physical pool.",
+        "All eight models are on 32 mm bases."
+      ],
+      "base_size_mm": 32,
+      "current_kill_team_structure_reference": {
+        "checkpoint": "2026-09-30",
+        "source": "Games Workshop Legionaries Kill Team rules",
+        "selection_summary": "1 leader selected from Aspiring Champion or Chosen, plus 5 operatives from the specialist list; 6 models fielded per battle.",
+        "note": "The owned eight-model hobby roster provides alternative operative choices; all eight are not fielded simultaneously under this selection structure."
+      },
+      "alternate_40k_role_candidates": [
+        {
+          "physical_model_label": "magnetized leader",
+          "candidate_role": "Chaos Lord",
+          "state": "VISUAL_PROXY_CANDIDATE_ONLY",
+          "caveat": "Do not count as an additional Chaos Lord body; exact current 40K base/loadout legality must be checked separately."
+        },
+        {
+          "physical_model_label": "executioner-looking operative",
+          "candidate_role": "Master of Executions",
+          "state": "VISUAL_PROXY_CANDIDATE_ONLY",
+          "caveat": "Requires exact sculpt/weapon/base audit."
+        },
+        {
+          "physical_model_label": "dagger psyker-looking operative",
+          "candidate_role": "Sorcerer-like character",
+          "state": "VISUAL_PROXY_CANDIDATE_ONLY",
+          "caveat": "Physical appearance may support a psyker-character representation, but this is not yet a current 40K datasheet identity."
+        },
+        {
+          "physical_model_label": "staff-bearing operative",
+          "candidate_role": "Sorcerer-like character",
+          "state": "VISUAL_PROXY_CANDIDATE_ONLY",
+          "caveat": "Needs visual/weapon audit before mapping."
+        }
       ]
     }
   ],
@@ -1204,6 +1364,24 @@
       "resolution": "SAME_PHYSICAL_BODY_AS_BLACK_LEGION_WINGED_DAEMON_PRINCE_IN_CHAOS_DAEMONS",
       "resolved_at": "2026-09-30",
       "evidence": "DIRECT_USER_CONFIRMATION"
+    },
+    {
+      "id": "CSM_KILL_TEAM_LEGIONARIES_COUNT",
+      "resolution": "EIGHT_TOTAL_THREE_SHADOWSPEAR_PLUS_FIVE_NEWER_CHOSEN_DERIVED",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_CONFIRMATION",
+      "details": "All eight are on 32 mm bases. Three are definite Legionary/Shadowspear bodies; five are built from newer Chosen bodies."
+    }
+  ],
+  "observed_unresolved_models": [
+    {
+      "observation_id": "shadowspear_autocannon_bagged_body",
+      "description": "One autocannon-armed Chaos Space Marine body observed in a separate bag.",
+      "probable_origin": "Shadowspear",
+      "count_effect": "NO_ADDITIONAL_BODY_ASSUMED",
+      "evidence_state": "USER_OBSERVATION_PLUS_HISTORICAL_PRODUCT_MATCH",
+      "historical_product_note": "Shadowspear's 10-model Chaos Space Marine unit included an autocannon-equipped model, so the observed body is plausibly one of the already-counted twenty Shadowspear bodies.",
+      "unresolved_question": "Identify which already-counted Shadowspear allocation bucket/body this model belongs to."
     }
   ]
 }
