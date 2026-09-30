@@ -81,6 +81,7 @@ jobs:
           assert s['repeated_occurrence_rule_refs']==['15.07','15.08','15.09','15.10','15.11']
           assert s['range_validation_failures']==0
           assert s['all_parent_candidates_atomized'] is True
+          assert s['paragraph_hashes_reproduced_from_verified_pdf']==310
           assert r['source_verification']['binary_sha256_match'] is True
           assert r['source_verification']['page_semantic_fingerprints_match']==88
           assert r['source_verification']['document_semantic_sha256_match'] is True
