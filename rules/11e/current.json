@@ -474,6 +474,13 @@
     "source_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
     "paragraph_level_rules_ast_complete": false,
     "current_normalized_factions_change": 0,
-    "authority_rule": "Stable identities are official numbered Core Rules references with short in-family heading/page-hash evidence only. Atomization does not claim paragraph AST, rule interactions, Codex/app equivalence or faction normalization."
+    "authority_rule": "Stable identities are official numbered Core Rules references with short in-family heading/page-hash evidence only. Atomization does not claim paragraph AST, rule interactions, Codex/app equivalence or faction normalization.",
+    "closure_report": "reports/CORE_RULE_REFERENCE_ATOMIZATION_CLOSURE_2026-09-30.md",
+    "pre_pr_validation": {
+      "atomization_workflow_run": 36694945932,
+      "normative_gap_audit_run": 36695667215,
+      "repository_ci_run": 36695740466,
+      "result": "SUCCESS"
+    }
   }
 }
