@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.6",
+  "schema_version": "3.7",
   "as_of": "2026-09-30",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
@@ -182,14 +182,21 @@
       "required_sources": [
         "GW_40K_DOWNLOADS"
       ],
-      "content_state": "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1",
+      "content_state": "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1",
       "repository_dimension": null,
       "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-      "authority_boundary": "Public Core Rules top-level numbered families 01-24 are structurally normalized; nested/paragraph AST remains pending.",
+      "authority_boundary": "Public Core Rules families 01-24 and all 141 numbered references have stable short-heading/page-hash identities; paragraph/rule-body boundaries and paragraph AST remain pending.",
       "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
       "rule_reference_families": 24,
-      "rule_reference_count": 141
+      "rule_reference_count": 141,
+      "rule_reference_atomization": {
+        "state": "PASS_141_RULE_ATOMS",
+        "report": "reports/CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json",
+        "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json",
+        "atoms": 141,
+        "heading_recovery_gaps": 0
+      }
     },
     "faction_rules": {
       "required_sources": [
@@ -318,6 +325,18 @@
       "semantic_conflicts_created": 0,
       "current_normalized_factions_change": 0,
       "authority_boundary": "Residual classification is diagnostic only; no-exact is not a conflict, non-11/Legends reuse is not current promotion, and Codex/app-only semantics remain pending."
+    },
+    "core_rule_reference_atoms": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS"
+      ],
+      "content_state": "PASS_141_RULE_ATOMS",
+      "repository_dimension": null,
+      "report": "reports/CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json",
+      "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json",
+      "atoms": 141,
+      "families": 24,
+      "authority_boundary": "Numbered-reference identity/heading provenance only; paragraph prose remains external and full faction/app semantics are not promoted."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."
