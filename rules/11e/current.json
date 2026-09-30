@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.5",
+  "schema_version": "3.6",
   "edition": "11e",
   "repository_checkpoint": "2026-09-30",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,19 +14,31 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED",
-      "verified_at": "2026-09-29",
+      "state": "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1",
+      "verified_at": "2026-09-30",
       "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "PENDING",
+      "normative_structured_normalization": "SECTION_LEVEL_COMPLETE_PARAGRAPH_AST_PENDING",
       "public_overlap": {
         "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
         "exact_core_mirror_units": 21,
         "structured_core_ast_complete": false,
         "report": "reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json"
+      },
+      "structured_normalization": {
+        "state": "PASS_RULE_REFERENCE_FAMILIES_01_24",
+        "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
+        "snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
+        "pages": 88,
+        "flat_heading_sections": 80,
+        "rule_reference_families": 24,
+        "rule_reference_count": 141,
+        "section_level_structure_complete": true,
+        "hierarchical_structure_complete": false,
+        "paragraph_level_rules_ast_complete": false
       }
     },
     "faction_rules_content": {
@@ -70,7 +82,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION",
+  "next_milestone": "CORE_RULE_REFERENCE_ATOMIZATION_V1",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -387,5 +399,45 @@
     "full_codex_app_equivalence": "NOT_CLAIMED",
     "core_rules_full_structured_normalization": "PENDING",
     "authority_rule": "Only exact source/faction-scoped mirror semantic units independently present in verified public Games Workshop material enter the structured overlap snapshot. Unmatched or unscoped mirror text is not promoted and is not assumed wrong."
+  },
+  "official_public_structured_normalization_expansion": {
+    "state": "PASS_SCOPED_EXPANSION_V1",
+    "as_of": "2026-09-30",
+    "core_rules_structure": {
+      "state": "PASS_RULE_REFERENCE_FAMILIES_01_24",
+      "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
+      "snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
+      "rule_reference_families": 24,
+      "rule_reference_count": 141,
+      "page_count": 88,
+      "hierarchical_structure_complete": false,
+      "paragraph_level_rules_ast_complete": false
+    },
+    "residual_classification": {
+      "state": "PASS_FAIL_CLOSED_CLASSIFICATION_V1",
+      "report": "reports/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json",
+      "snapshot": "rules/11e/snapshots/2026-09-30/official_public_overlap/residual_classification.json",
+      "unscoped_exact_total": 1566,
+      "unscoped_exact_classes": {
+        "CORE_PUBLIC_GLOBAL": 21,
+        "EDITION_11_SOURCE_MATCH_OUTSIDE_OWN_PACK": 426,
+        "FACTION_ONLY_MATCH_OUTSIDE_OWN_PACK": 124,
+        "NON_11_OR_LEGENDS_SOURCE": 995
+      },
+      "no_exact_total": 7936,
+      "no_exact_classes": {
+        "EDITION_11_SOURCE_NO_EXACT_PUBLIC_OVERLAP": 3467,
+        "FACTION_ONLY_NO_EXACT_PUBLIC_OVERLAP": 1868,
+        "NON_11_OR_LEGENDS_SOURCE_NO_EXACT": 227,
+        "NO_SOURCE_OR_FACTION_NO_EXACT": 61,
+        "TOO_SHORT_FOR_SAFE_AUTO_MATCH": 2313
+      },
+      "promoted_units": 0,
+      "semantic_conflicts_created": 0
+    },
+    "current_normalized_factions_change": 0,
+    "full_normative_semantic_factions_change": 0,
+    "app_codex_inference": "PROHIBITED",
+    "authority_rule": "Core public section structure and residual classifications improve scoped evidence only. Unscoped/no-exact residuals do not promote factions or establish conflicts without additional official evidence."
   }
 }
