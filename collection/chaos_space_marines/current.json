@@ -5,7 +5,7 @@
   "checkpoint": "2026-09-30",
   "repository_registered_at": "2026-09-30",
   "status": "PROVISIONAL",
-  "revision_state": "WAVE1_SOURCE_LOWER_BOUND",
+  "revision_state": "WAVE2_STARTER_PROVENANCE_RECONCILED_PARTIAL",
   "physical_pools": [
     {
       "pool_id": "abaddon",
@@ -64,11 +64,12 @@
     {
       "pool_id": "chaos_lord",
       "name": "Chaos Lord",
-      "physical_bodies": 1,
+      "physical_bodies": 2,
       "status": [
-        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "USER_CONFIRMED_MINIMUM_2",
+        "DARK_VENGEANCE_OLD_SCULPTS",
         "BUILD_STATE_UNRECONCILED",
-        "PHYSICAL_LOADOUT_UNRECONCILED"
+        "SOURCE_ROSTER_ROLE_OVERLAP_UNRESOLVED"
       ],
       "roles": [
         {
@@ -84,8 +85,16 @@
         ]
       },
       "notes": [
-        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
-        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+        "User confirmed ownership of two old Dark Vengeance Chaos Lord sculpts from two starter boxes.",
+        "The Wave 1 roster contains one generic Chaos Lord selection; whether that roster selection maps to one of these two bodies or to another physical Lord remains unresolved.",
+        "Physical loadouts/build state of the two Dark Vengeance Lords have not yet been individually audited."
+      ],
+      "body_variants": [
+        {
+          "name": "Dark Vengeance Chaos Lord",
+          "physical_bodies": 2,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        }
       ]
     },
     {
@@ -354,7 +363,8 @@
       "name": "Cultist Mob",
       "physical_bodies": 40,
       "status": [
-        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "USER_CONFIRMED_EXACT_COUNT_40",
+        "DARK_VENGEANCE_PROVENANCE",
         "BUILD_STATE_UNRECONCILED",
         "PHYSICAL_LOADOUT_UNRECONCILED"
       ],
@@ -386,18 +396,25 @@
         }
       },
       "notes": [
-        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
-        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
-      ]
+        "Exact physical total remains 40.",
+        "User confirmed all 40 CSM cultists come from the two Dark Vengeance starter sets.",
+        "Build/paint/loadout state is still to be reconciled physically."
+      ],
+      "provenance_detail": {
+        "acquisition_source": "2x Dark Vengeance Chaos halves",
+        "box_content_basis": "20 cultists per Dark Vengeance set",
+        "user_statement": "All CSM cultists in this collection are from the Dark Vengeance starters."
+      }
     },
     {
       "pool_id": "legionaries",
       "name": "Legionaries",
-      "physical_bodies": 15,
+      "physical_bodies": 17,
       "status": [
-        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
-        "BUILD_STATE_UNRECONCILED",
-        "PHYSICAL_LOADOUT_UNRECONCILED"
+        "DIRECTLY_OBSERVED_MINIMUM_17",
+        "SHADOWSPEAR_MONOPOSE_PROVENANCE",
+        "ADDITIONAL_KILL_TEAM_GROUP_EXISTS_COUNT_PENDING",
+        "LOADOUT_RECONCILIATION_REQUIRED"
       ],
       "roles": [
         {
@@ -408,19 +425,14 @@
       ],
       "body_variants": [
         {
-          "name": "Aspiring Champion",
-          "physical_bodies": 3,
-          "evidence": "SOURCE_MODEL_SELECTION"
+          "name": "Shadowspear CSM — assembled, unpainted",
+          "physical_bodies": 7,
+          "evidence": "DIRECT_USER_CONFIRMATION"
         },
         {
-          "name": "Legionary w/ boltgun",
+          "name": "Shadowspear CSM — full sprue, unassembled",
           "physical_bodies": 10,
-          "evidence": "SOURCE_MODEL_SELECTION"
-        },
-        {
-          "name": "Legionary w/ other weapon",
-          "physical_bodies": 2,
-          "evidence": "SOURCE_MODEL_SELECTION"
+          "evidence": "DIRECT_USER_CONFIRMATION_APPROX_PRODUCT_IDENTIFICATION"
         }
       ],
       "source_configuration_snapshot": {
@@ -439,10 +451,23 @@
         ]
       },
       "notes": [
-        "This pool is expected to require detailed physical reconciliation because the collection spans multiple editions and historical squad/loadout conventions.",
-        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
-        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
-      ]
+        "Wave 1 roster's 15 Legionaries are treated as a roster projection over part of the physical collection, not as an additional 15 bodies.",
+        "User directly located 10 Shadowspear CSM still on a complete sprue and 7 assembled but unpainted Shadowspear CSM.",
+        "Two Shadowspear boxes historically contained 20 CSM bodies total; three of those original bodies remain to be located/reconciled before promoting the acquisition total to exact current ownership.",
+        "A separate Word Bearers Legionaries Kill Team exists and is not yet included in the physical body count because its exact body count was not stated."
+      ],
+      "acquisition_context": {
+        "shadowspear_boxes_owned": 2,
+        "expected_shadowspear_csm_bodies_from_complete_box_contents": 20,
+        "currently_directly_located_from_shadowspear": 17,
+        "unresolved_remainder_from_original_two_boxes": 3,
+        "additional_group": {
+          "name": "Kill Team Legionaries — Word Bearers",
+          "physical_bodies": "UNKNOWN_PENDING_USER_COUNT",
+          "build_state": "ASSEMBLED_TEAM_CONFIRMED",
+          "notes": "User states a Legionaries Kill Team was built and themed as Word Bearers; exact physical count is not yet recorded."
+        }
+      }
     },
     {
       "pool_id": "accursed_cultists",
@@ -579,9 +604,10 @@
       "name": "Obliterators",
       "physical_bodies": 4,
       "status": [
-        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
-        "BUILD_STATE_UNRECONCILED",
-        "PHYSICAL_LOADOUT_UNRECONCILED"
+        "USER_CONFIRMED_EXACT_COUNT_4",
+        "ASSEMBLED_3",
+        "ON_SPRUE_1",
+        "SHADOWSPEAR_PROVENANCE"
       ],
       "roles": [
         {
@@ -602,18 +628,23 @@
         "models_per_unit": 2
       },
       "notes": [
-        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
-        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
-      ]
+        "User confirmed exactly four Obliterators: three assembled and one still on sprue.",
+        "The four-body total matches two Shadowspear Chaos halves (2 Obliterators per box)."
+      ],
+      "physical_configuration": {
+        "assembled": 3,
+        "on_sprue_unassembled": 1,
+        "total": 4
+      }
     },
     {
       "pool_id": "possessed",
       "name": "Possessed",
       "physical_bodies": 5,
       "status": [
-        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
-        "BUILD_STATE_UNRECONCILED",
-        "PHYSICAL_LOADOUT_UNRECONCILED"
+        "USER_CONFIRMED_EXACT_COUNT_5_CURRENT_KIT",
+        "ON_SPRUE_UNASSEMBLED",
+        "CURRENT_POSSESSED_SCULPT"
       ],
       "roles": [
         {
@@ -630,9 +661,14 @@
         }
       ],
       "notes": [
-        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
-        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
-      ]
+        "User confirmed five current-release Possessed bodies are still on sprues.",
+        "These five are treated as the same physical pool represented by the Wave 1 Possessed selection unless later evidence establishes an additional separate 5-model unit."
+      ],
+      "physical_configuration": {
+        "assembled": 0,
+        "on_sprue_unassembled": 5,
+        "total": 5
+      }
     },
     {
       "pool_id": "warp_talons",
@@ -677,9 +713,11 @@
       "name": "Helbrute",
       "physical_bodies": 1,
       "status": [
-        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
-        "BUILD_STATE_UNRECONCILED",
-        "PHYSICAL_LOADOUT_UNRECONCILED"
+        "USER_CONFIRMED_EXACT_COUNT_1_IN_CSM_DOMAIN",
+        "ASSEMBLED",
+        "PAINTED_ALPHA_LEGION",
+        "FIXED_LOADOUT",
+        "DARK_VENGEANCE_PROVENANCE"
       ],
       "roles": [
         {
@@ -696,10 +734,20 @@
         ]
       },
       "notes": [
-        "Helbrute weapon configuration is especially edition-sensitive and requires direct physical/magnetization audit.",
-        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
-        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
-      ]
+        "This is the second Dark Vengeance Helbrute: painted as Alpha Legion and kept in the CSM collection.",
+        "User directly confirms fist + melta-style starter loadout.",
+        "The Wave 1 roster's missile launcher + multi-melta projection is superseded by direct physical confirmation."
+      ],
+      "physical_configuration": {
+        "provenance": "Dark Vengeance starter",
+        "theme": "Alpha Legion",
+        "build_state": "ASSEMBLED_PAINTED",
+        "magnetized": false,
+        "loadout_raw": [
+          "power fist",
+          "melta/multi-melta starter weapon"
+        ]
+      }
     },
     {
       "pool_id": "venomcrawler",
@@ -728,18 +776,128 @@
         "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
         "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
       ]
+    },
+    {
+      "pool_id": "chosen_dark_vengeance",
+      "name": "Chosen — Dark Vengeance old sculpts",
+      "physical_bodies": 12,
+      "status": [
+        "USER_CONFIRMED_TWO_DARK_VENGEANCE_CHOSEN_SETS",
+        "PRODUCT_CONTENT_DERIVED_12",
+        "BUILD_STATE_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "role": "Chosen",
+          "mapping_state": "CURRENT_ROLE_CANDIDATE"
+        }
+      ],
+      "provenance_detail": {
+        "acquisition_source": "2x Dark Vengeance Chaos halves",
+        "product_reference_count_per_box": 6,
+        "derivation": "2 boxes x 6 Chosen"
+      },
+      "notes": [
+        "User confirmed possession of two complete Dark Vengeance Chosen groups using the old sculpts.",
+        "Public product references identify six Chosen per Dark Vengeance set, giving twelve bodies across two sets.",
+        "Exact current build/paint state and modern 11E loadout mapping remain to be audited."
+      ]
+    },
+    {
+      "pool_id": "greater_possessed_legacy",
+      "name": "Greater Possessed — legacy Shadowspear sculpts",
+      "physical_bodies": 6,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT_6",
+        "LEGACY_DATASHEET_MODEL",
+        "BUILD_STATE_UNRECONCILED",
+        "CURRENT_ROLE_MAPPING_POSSESSED_CANDIDATE"
+      ],
+      "roles": [
+        {
+          "historical_role": "Greater Possessed",
+          "era": "8th Edition / Shadowspear"
+        },
+        {
+          "current_role_candidate": "Possessed",
+          "mapping_basis": "User intent + no separate current Greater Possessed datasheet"
+        }
+      ],
+      "acquisition_context": {
+        "two_shadowspear_boxes_supply": 4,
+        "additional_purchased_bodies": 2,
+        "total": 6
+      },
+      "notes": [
+        "User counted six Greater Possessed physical models.",
+        "Two Shadowspear boxes account for four bodies; two more were acquired separately from the same release lineage.",
+        "Current CSM roster universe has Possessed but no separate Greater Possessed datasheet; preserve the physical identity while mapping them as Possessed-role candidates."
+      ]
+    },
+    {
+      "pool_id": "gal_vorbak",
+      "name": "Gal Vorbak",
+      "physical_bodies": 10,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT_10",
+        "HORUS_HERESY_MODEL_POOL",
+        "PROXY_ROLE_POSSESSED",
+        "BUILD_STATE_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "proxy_role_candidate": "Possessed",
+          "evidence": "DIRECT_USER_INTENT"
+        }
+      ],
+      "notes": [
+        "Ten Gal Vorbak physical models are owned.",
+        "They remain Horus Heresy Gal Vorbak in physical identity but can be used by the user to represent CSM Possessed.",
+        "Build/paint/base-state reconciliation remains open."
+      ]
+    },
+    {
+      "pool_id": "argel_tal",
+      "name": "Argel Tal",
+      "physical_bodies": 1,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT_1",
+        "HORUS_HERESY_CHARACTER_MODEL",
+        "PROXY_ROLE_POSSESSED",
+        "BUILD_STATE_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "proxy_role_candidate": "Possessed",
+          "evidence": "DIRECT_USER_INTENT"
+        }
+      ],
+      "notes": [
+        "One Argel Tal physical model is owned.",
+        "Physical identity remains Argel Tal; user states it can represent a Possessed model in the CSM collection.",
+        "Build/paint/base-state reconciliation remains open."
+      ]
     }
   ],
   "confirmed_totals": {
     "wave1_source_declared_top_level_unit_entries": 34,
     "wave1_source_declared_physical_bodies": 117,
-    "normalized_physical_bodies_lower_bound": 117,
-    "actual_total_owned": "UNKNOWN_COLLECTION_EXPLICITLY_INCOMPLETE",
+    "normalized_physical_bodies_lower_bound": 149,
+    "actual_total_owned": "UNKNOWN_EXPLICITLY_LARGER_THAN_RECONCILED_LOWER_BOUND",
     "character_or_single_model_top_level_entries": 15,
     "source_declared_cultist_bodies": 40,
     "source_declared_legionary_bodies": 15,
     "source_declared_terminator_bodies": 10,
-    "source_declared_havoc_bodies": 10
+    "source_declared_havoc_bodies": 10,
+    "wave2_starter_reconciled_lower_bound": 149,
+    "dark_vengeance_chosen_bodies": 12,
+    "greater_possessed_legacy_bodies": 6,
+    "gal_vorbak_bodies": 10,
+    "argel_tal_bodies": 1,
+    "obliterators_assembled": 3,
+    "obliterators_on_sprue": 1,
+    "current_possessed_on_sprue": 5,
+    "shadowspear_legionaries_directly_located": 17
   },
   "constraints": [
     {
@@ -760,24 +918,44 @@
   ],
   "open_questions": [
     {
-      "id": "CSM_WAVE2_AND_BEYOND",
-      "question": "Which additional CSM models/bodies are owned outside this Wave 1 roster, including assembled models and kits/bodies still on sprues?",
+      "id": "CSM_DARK_VENGEANCE_LORD_IDENTITY",
+      "question": "Does the generic Chaos Lord selected in the Wave 1 roster correspond to one of the two Dark Vengeance Chaos Lords, or is there an additional third generic Chaos Lord body?",
+      "state": "USER_CONFIRMATION_REQUIRED"
+    },
+    {
+      "id": "CSM_DARK_VENGEANCE_CHOSEN_BUILD_STATE",
+      "question": "Are all 12 Dark Vengeance Chosen still present, and what is their current assembled/painted state?",
+      "state": "USER_CONFIRMATION_REQUIRED"
+    },
+    {
+      "id": "CSM_SHADOWSPEAR_LEGIONARY_REMAINDER",
+      "question": "Two Shadowspear boxes originally supplied 20 monopose CSM. Ten are directly observed on sprue and seven are assembled/unpainted. What happened to the remaining three bodies?",
+      "state": "USER_CONFIRMATION_REQUIRED"
+    },
+    {
+      "id": "CSM_KILL_TEAM_LEGIONARIES_COUNT",
+      "question": "How many physical models are in the Word Bearers Legionaries Kill Team, and are they additional to the Shadowspear bodies?",
+      "state": "USER_CONFIRMATION_REQUIRED"
+    },
+    {
+      "id": "CSM_GREATER_POSSESSED_BUILD_STATE",
+      "question": "What is the current assembled/painted state of the six legacy Greater Possessed?",
+      "state": "OPEN"
+    },
+    {
+      "id": "CSM_GAL_VORBAK_ARGEL_TAL_BUILD_STATE",
+      "question": "Are the ten Gal Vorbak and Argel Tal assembled/painted, and are their bases already suitable for the intended Possessed proxy role?",
+      "state": "OPEN"
+    },
+    {
+      "id": "CSM_WORLD_EATERS_HELBRUTE_MELEE_ARM",
+      "question": "For the converted Dark Vengeance Helbrute moved to World Eaters, is the melee arm still the original fist, or was that side also converted?",
+      "state": "USER_CONFIRMATION_REQUIRED"
+    },
+    {
+      "id": "CSM_FURTHER_MODELS",
+      "question": "Continue enumerating additional CSM models, kits, sprues and historical bodies outside the reconciled starter pools.",
       "state": "OPEN_EXPECTED_MULTIWAVE_RECONCILIATION"
-    },
-    {
-      "id": "CSM_BUILD_STATE",
-      "question": "For each pool, which bodies are assembled, partially assembled, unassembled/on sprue, converted, magnetized or loose-bit dependent?",
-      "state": "OPEN"
-    },
-    {
-      "id": "CSM_LEGACY_LOADOUT_RECONCILIATION",
-      "question": "Which physical weapon/loadout combinations actually exist on Legionaries, Terminators, Havocs, Helbrute and characters, independently of the current roster projection?",
-      "state": "OPEN"
-    },
-    {
-      "id": "CSM_SHARED_BODY_AND_ROLE_MAPPING",
-      "question": "Which older models can legally/physically represent multiple modern datasheet roles, and which roles share the same body or component pool?",
-      "state": "OPEN"
     },
     {
       "id": "CSM_WINGED_DAEMON_PRINCE_IDENTITY",
@@ -814,12 +992,92 @@
           "Historical edition changes make current unit/loadout mapping non-trivial.",
           "Some source selections require later physical clarification rather than immediate normalization."
         ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_STARTER_AND_LEGACY_RECONCILIATION",
+        "facts": [
+          "Two Dark Vengeance starter sets were purchased.",
+          "One Dark Vengeance Helbrute was converted into the World Eaters collection with plasma replacing the original melta-type ranged weapon.",
+          "The second Dark Vengeance Helbrute is painted as Alpha Legion and has fist + melta-style starter loadout.",
+          "Two Dark Vengeance Chaos Lords and two sets of old-sculpt Chosen are owned.",
+          "All 40 currently recorded CSM Cultists originate from the Dark Vengeance starters.",
+          "Two Shadowspear starter sets were purchased, plus additional models from the same release lineage.",
+          "Six Greater Possessed are owned.",
+          "Five current-release Possessed are on sprues.",
+          "Ten Gal Vorbak and one Argel Tal are owned and can represent Possessed for the user's CSM army.",
+          "Of four Obliterators, three are assembled and one is still on sprue.",
+          "Ten Shadowspear CSM are directly observed on a complete sprue and seven more are assembled but unpainted.",
+          "A separate Legionaries Kill Team themed as Word Bearers was built; exact body count remains to be recorded."
+        ]
+      }
+    ],
+    "product_references": [
+      {
+        "product": "Dark Vengeance",
+        "evidence_url": "https://warmaster40k.wordpress.com/2012/12/27/review-warhammer-40k-dark-vengeance-6th-edition-boxed-set/",
+        "concise_fact": "Chaos side contained 1 Chaos Lord, 6 Chosen, 1 Helbrute and 20 Chaos Cultists."
+      },
+      {
+        "product": "Shadowspear",
+        "evidence_url": "https://www.tcgplayer.com/product/192238/warhammer-big-box-games-warhammer-big-box-games-warhammer-40k-shadowspear",
+        "concise_fact": "Chaos side contained 1 Master of Possession, 10 Chaos Space Marines, 1 Venomcrawler, 2 Obliterators and 2 Greater Possessed."
       }
     ]
   },
   "notes": [
     "Raw New Recruit export is not vendored because it contains extensive copyrighted rules text; checksum and normalized collection facts are retained.",
     "The collection must be reconciled by physical body first, then build state, then current-role mapping. Current 11E squad legality must not be used to erase historical physical builds.",
-    "This file is intentionally a durable Wave 1 checkpoint, not a claim of collection completeness."
+    "This file is intentionally a durable Wave 1 checkpoint, not a claim of collection completeness.",
+    "Wave 2 established Dark Vengeance and Shadowspear acquisition provenance, added legacy/proxy Possessed-role bodies, and promoted several build-state facts while retaining unresolved overlap and missing-body gates."
+  ],
+  "acquisition_groups": [
+    {
+      "acquisition_id": "dark_vengeance_x2",
+      "product": "Warhammer 40,000: Dark Vengeance",
+      "user_period_description": "2014-era / old starter era",
+      "copies_owned": 2,
+      "csm_relevant_contents": {
+        "chaos_lords": 2,
+        "chosen": 12,
+        "cultists": 40,
+        "helbrutes": 2
+      },
+      "current_domain_split": {
+        "chaos_space_marines": [
+          "2 Dark Vengeance Chaos Lords",
+          "12 old-sculpt Chosen",
+          "40 Cultists",
+          "1 Alpha Legion Helbrute"
+        ],
+        "world_eaters": [
+          "1 converted Dark Vengeance Helbrute"
+        ]
+      },
+      "evidence": [
+        "DIRECT_USER_CONFIRMATION",
+        "PUBLIC_BOX_CONTENT_REFERENCE"
+      ]
+    },
+    {
+      "acquisition_id": "shadowspear_x2_plus_extras",
+      "product": "Warhammer 40,000: Shadowspear — Chaos half",
+      "copies_owned": 2,
+      "known_box_contents_per_copy": {
+        "master_of_possession": 1,
+        "venomcrawler": 1,
+        "obliterators": 2,
+        "greater_possessed": 2,
+        "chaos_space_marines": 10
+      },
+      "user_confirmed_extras": {
+        "greater_possessed_total_owned": 6
+      },
+      "reconciliation_notes": [
+        "Two boxes explain at least 2 Masters of Possession, 2 Venomcrawlers, 4 Obliterators, 4 Greater Possessed and 20 monopose Chaos Space Marines by acquisition history.",
+        "Current physical observation directly located 10 CSM on a complete sprue and 7 assembled/unpainted; three bodies from the nominal twenty remain to be reconciled.",
+        "The user's third Master of Possession is consistent with additional purchases but its exact acquisition source is not yet recorded."
+      ]
+    }
   ]
 }
