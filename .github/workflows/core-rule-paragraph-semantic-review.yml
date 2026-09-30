@@ -1,0 +1,117 @@
+name: Core rule paragraph semantic review
+
+on:
+  push:
+    paths:
+      - "tools/review_core_rule_paragraph_semantics.py"
+      - "tests/test_core_rule_paragraph_semantic_review.py"
+      - "schemas/core_rule_paragraph_semantic_review.schema.json"
+      - "docs/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json"
+      - ".github/workflows/core-rule-paragraph-semantic-review.yml"
+  pull_request:
+    paths:
+      - "tools/review_core_rule_paragraph_semantics.py"
+      - "tests/test_core_rule_paragraph_semantic_review.py"
+      - "schemas/core_rule_paragraph_semantic_review.schema.json"
+      - "docs/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json"
+      - ".github/workflows/core-rule-paragraph-semantic-review.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile and run semantic review contracts
+        run: |
+          python -m compileall -q tools/review_core_rule_paragraph_semantics.py tests/test_core_rule_paragraph_semantic_review.py
+          python -m unittest tests.test_core_rule_paragraph_semantic_review -v
+
+      - name: Build semantic review snapshot
+        run: |
+          python tools/review_core_rule_paragraph_semantics.py \
+            --as-of 2026-09-30 \
+            --output rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json \
+            --summary-output reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json
+
+      - name: Validate semantic review boundary
+        run: |
+          python - <<'PY'
+          import json
+          p='rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json'
+          r=json.load(open(p,encoding='utf-8'))
+          assert r['status']=='PASS'
+          assert r['review_version']=='CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1'
+          s=r['summary']
+          assert s['profiles']==310
+          assert s['unique_paragraph_keys']==310
+          assert s['review_state_counts']=={
+              'AXIS_PROFILE_READY':156,
+              'MULTI_MODAL_REVIEW_REQUIRED':42,
+              'NO_STRONG_SIGNAL_REVIEW_REQUIRED':112,
+          }
+          assert s['modal_axis_counts']=={
+              'MULTI_MODAL':42,
+              'NONE':173,
+              'OBLIGATION':17,
+              'PERMISSION':67,
+              'PROHIBITION':11,
+          }
+          assert s['mixed_decomposition']=={
+              'axis_profile_ready':92,
+              'multi_modal_review_required':42,
+              'no_strong_signal_review_required':0,
+          }
+          assert s['unclassified_decomposition']=={
+              'signal_free':110,
+              'weak_only':2,
+              'review_required':112,
+          }
+          assert s['repeated_variant_review_state_counts']=={
+              'AXIS_PROFILE_READY':4,
+              'MULTI_MODAL_REVIEW_REQUIRED':6,
+          }
+          assert s['parent_hashes_verified']==310
+          b=r['authority_boundary']
+          assert b['semantic_review_complete'] is True
+          assert b['multi_axis_profile_is_not_condition_effect_ast'] is True
+          assert b['axis_profile_ready_is_not_ast_readiness_claim'] is True
+          assert b['condition_effect_ast_complete'] is False
+          assert b['rule_interaction_graph_complete'] is False
+          assert b['next_milestone']=='CORE_RULE_SEMANTIC_AST_READINESS_V1'
+          print(json.dumps(s,indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-rule-paragraph-semantic-review-${{ github.run_id }}
+          path: |
+            reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json
+            rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json
+          if-no-files-found: error
+
+      - name: Checkpoint generated review on source branch
+        if: github.actor != 'github-actions[bot]' && github.ref_name != 'main'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json)" ]; then
+            echo "Semantic review artifacts already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json
+          git add rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json
+          git commit -m "Checkpoint generated Core paragraph semantic review"
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
