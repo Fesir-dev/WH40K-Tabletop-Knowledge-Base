@@ -79,6 +79,27 @@ class OverlapContractTests(unittest.TestCase):
             "EXACT_NORMALIZED_TEXT_MATCH_MULTI_OFFICIAL",
         )
 
+    def test_committed_overlap_snapshot_boundary(self):
+        import json
+        summary = json.loads(
+            (ROOT / "reports" / "OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json").read_text(encoding="utf-8")
+        )
+        snapshot = json.loads(
+            (ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "official_public_overlap" / "index.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(summary["status"], "PASS")
+        self.assertEqual(summary["summary"]["mirror_units"], 13572)
+        self.assertEqual(summary["summary"]["exact_public_overlap_units"], 5636)
+        self.assertEqual(summary["summary"]["promotable_scoped_units"], 4070)
+        self.assertEqual(summary["summary"]["unscoped_exact_units"], 1566)
+        self.assertEqual(summary["summary"]["no_exact_overlap_units"], 7936)
+        self.assertEqual(snapshot["summary"]["units"], 4070)
+        self.assertEqual(snapshot["authority"], "GAMES_WORKSHOP_OFFICIAL_PUBLIC_OVERLAP")
+        self.assertEqual(snapshot["scope"], "EXACT_PUBLIC_OVERLAP_ONLY")
+        self.assertFalse(snapshot["authority_boundary"]["full_faction_current_verified"])
+        self.assertEqual(snapshot["authority_boundary"]["current_normalized_factions_change"], 0)
+        self.assertEqual(snapshot["authority_boundary"]["full_codex_app_equivalence"], "NOT_CLAIMED")
+
 
 if __name__ == "__main__":
     unittest.main()
