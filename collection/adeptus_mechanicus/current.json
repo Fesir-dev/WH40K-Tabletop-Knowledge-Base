@@ -5,7 +5,7 @@
   "checkpoint": "2026-09-30",
   "repository_registered_at": "2026-09-30",
   "status": "PROVISIONAL",
-  "revision_state": "SKITARII_PHYSICAL_RECONCILIATION_PASS2_EXACT_TOTALS",
+  "revision_state": "SKITARII_PHYSICAL_RECONCILIATION_CLOSED",
   "physical_pools": [
     {
       "pool_id": "belisarius_cawl",
@@ -132,10 +132,9 @@
       "physical_bodies": 24,
       "status": [
         "USER_CONFIRMED_EXACT_TOTAL_24",
-        "DIRECTLY_OBSERVED_VARIANTS_PARTIAL",
+        "DIRECTLY_OBSERVED_VARIANTS_RECONCILED",
         "FIXED_BUILDS_NON_MAGNETIZED",
-        "WARGEAR_PARTIALLY_VERIFIED",
-        "RIFLE_ONLY_SUBCOUNT_CONFLICT_PENDING"
+        "WARGEAR_VERIFIED_FOR_COUNTED_SKITARII"
       ],
       "roles": [
         {
@@ -147,10 +146,10 @@
       "notes": [
         "User confirmed exact physical total: 24 Ranger miniatures.",
         "Two distinct Ranger Alpha bodies are confirmed: one with arc pistol + user-described taser sword, one with arc pistol + user-described mace.",
-        "Three physical bodies each are confirmed for transuranic arquebus, plasma caliver and arc rifle.",
+        "Corrected physical special-weapon counts: 3 transuranic arquebus, 2 plasma caliver and 2 arc rifle.",
         "Enhanced data-tether and omnispex are glued to distinct physical models and are not magnetized.",
-        "The earlier statement of 13 rifle-only Rangers conflicts arithmetically with the later exact 24-body total and is therefore retained as unresolved rather than auto-corrected.",
-        "The collection was built across older editions for WYSIWYG flexibility; fixed spare bodies are expected rather than an error."
+        "With the corrected special-weapon counts, the earlier count of 13 galvanic-rifle-only Rangers reconciles exactly to the 24-model total.",
+        "The collection was built across older editions for WYSIWYG flexibility; fixed spare bodies are intentional."
       ],
       "count_basis": "DIRECT_USER_VISUAL_TOTAL_2026_09_30",
       "user_observed_physical_variants": [
@@ -180,13 +179,13 @@
         },
         {
           "name": "Skitarii Ranger w/ plasma caliver",
-          "physical_bodies": 3,
-          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+          "physical_bodies": 2,
+          "evidence": "DIRECT_USER_VISUAL_CORRECTION_2026_09_30"
         },
         {
           "name": "Skitarii Ranger w/ arc rifle",
-          "physical_bodies": 3,
-          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
+          "physical_bodies": 2,
+          "evidence": "DIRECT_USER_VISUAL_CORRECTION_2026_09_30"
         },
         {
           "name": "Skitarii Ranger w/ enhanced data-tether",
@@ -201,27 +200,14 @@
           "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30",
           "build_state": "GLUED_FIXED_BODY",
           "magnetized": false
+        },
+        {
+          "name": "Skitarii Ranger w/ galvanic rifle only",
+          "physical_bodies": 13,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_RECONCILED_2026_09_30"
         }
       ],
       "user_observed_partial_total_excluding_alpha_and_unclassified": 24,
-      "observed_subcount_conflict": {
-        "id": "RANGER_RIFLE_ONLY_COUNT_CONFLICT",
-        "earlier_statement": {
-          "galvanic_rifle_only_bodies": 13,
-          "evidence": "DIRECT_USER_VISUAL_COUNT_EARLIER_SAME_RECONCILIATION"
-        },
-        "later_exact_total": {
-          "all_ranger_bodies": 24,
-          "alpha_bodies": 2,
-          "special_weapon_bodies": 9,
-          "support_gear_bodies": 2
-        },
-        "arithmetic_if_categories_are_exclusive": {
-          "implied_galvanic_rifle_only_non_alpha_bodies": 11
-        },
-        "state": "UNRESOLVED_USER_CONFIRMATION_REQUIRED",
-        "note": "Do not silently replace the earlier 13-body statement with the arithmetic-derived 11."
-      },
       "current_11e_physical_capacity": {
         "evidence_scope": "CURRENT_WAHAPEDIA_11E_MIRROR_CONTEXT_2026_09_30",
         "complete_10_model_units_max_by_total_bodies_and_alpha_count": 2,
@@ -272,10 +258,9 @@
       "physical_bodies": 14,
       "status": [
         "USER_CONFIRMED_EXACT_TOTAL_14",
-        "DIRECTLY_OBSERVED_VARIANTS_PARTIAL",
+        "DIRECTLY_OBSERVED_VARIANTS_RECONCILED",
         "FIXED_BUILDS_NON_MAGNETIZED",
-        "WARGEAR_PARTIALLY_VERIFIED",
-        "CARBINE_ONLY_SUBCOUNT_CONFLICT_PENDING"
+        "WARGEAR_VERIFIED_FOR_COUNTED_SKITARII"
       ],
       "roles": [
         {
@@ -286,24 +271,20 @@
       ],
       "notes": [
         "User confirmed exact physical total: 14 Vanguard miniatures.",
-        "Two distinct Vanguard Alpha bodies are confirmed: one holding a radium carbine; one with radium pistol + power sword and a radium carbine visibly carried on the backpack as a WYSIWYG conversion.",
+        "Only one body is currently classified as the Vanguard Alpha: radium pistol + power sword, with a radium carbine visible on the backpack as a WYSIWYG conversion.",
+        "A second model with an Alpha-style helmet and radium carbine is currently classified as an ordinary Vanguard trooper; it was likely an Alpha in an older edition.",
         "Three plasma-caliver bodies and one transuranic-arquebus body are confirmed; no Vanguard arc-rifle body exists.",
         "Enhanced data-tether and omnispex are glued to distinct physical models and are not magnetized.",
-        "The earlier statement of 7 standard carbine-only Vanguard conflicts with the later exact 14-body total if all categories are exclusive. This is retained as an unresolved subcount instead of being silently normalized.",
-        "User recalls approximately two plastic Skitarii kits plus additional cast-copy bodies fitted with remaining plastic bits/arms. This explains likely asymmetry between Ranger and Vanguard loadout pools but is retained as recollection, not body-by-body provenance."
+        "The ordinary radium-carbine-only count reconciles to 7 when the Alpha-helmet ordinary trooper is included.",
+        "User recalls approximately two plastic Skitarii kits plus additional cast-copy bodies fitted with remaining plastic bits/arms. This explains asymmetry between Ranger and Vanguard loadout pools but is retained as recollection, not body-by-body provenance."
       ],
       "count_basis": "DIRECT_USER_VISUAL_TOTAL_2026_09_30",
       "user_observed_physical_variants": [
         {
           "name": "Skitarii Vanguard Alpha",
-          "physical_bodies": 2,
-          "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30",
+          "physical_bodies": 1,
+          "evidence": "DIRECT_USER_ROLE_RECLASSIFICATION_2026_09_30",
           "configurations": [
-            {
-              "physical_body_count": 1,
-              "primary_weapon": "radium carbine",
-              "evidence": "DIRECT_USER_VISUAL_DESCRIPTION_2026_09_30"
-            },
             {
               "physical_body_count": 1,
               "primary_weapon": "radium pistol",
@@ -342,29 +323,26 @@
           "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30",
           "build_state": "GLUED_FIXED_BODY",
           "magnetized": false
+        },
+        {
+          "name": "Skitarii Vanguard w/ radium carbine only",
+          "physical_bodies": 7,
+          "evidence": "DIRECT_USER_VISUAL_COUNT_RECONCILED_2026_09_30",
+          "subvariants": [
+            {
+              "name": "ordinary helmet/body presentation",
+              "physical_bodies": 6
+            },
+            {
+              "name": "Alpha-style helmet, currently ordinary trooper",
+              "physical_bodies": 1,
+              "evidence": "DIRECT_USER_ROLE_RECLASSIFICATION_2026_09_30",
+              "history_note": "Likely used as an Alpha in an older edition when 5-model units were used; currently treated as an ordinary Vanguard."
+            }
+          ]
         }
       ],
       "user_observed_partial_total_excluding_alpha_arc_arquebus_and_unclassified": 12,
-      "observed_subcount_conflict": {
-        "id": "VANGUARD_CARBINE_ONLY_COUNT_CONFLICT",
-        "earlier_statement": {
-          "standard_carbine_only_bodies": 7,
-          "evidence": "DIRECT_USER_VISUAL_COUNT_EARLIER_SAME_RECONCILIATION"
-        },
-        "later_exact_total": {
-          "all_vanguard_bodies": 14,
-          "alpha_bodies": 2,
-          "plasma_bodies": 3,
-          "arquebus_bodies": 1,
-          "arc_rifle_bodies": 0,
-          "support_gear_bodies": 2
-        },
-        "arithmetic_if_categories_are_exclusive": {
-          "implied_standard_non_alpha_carbine_only_bodies": 6
-        },
-        "possible_resolution_not_assumed": "The earlier count of 7 may have included the Alpha carrying a radium carbine.",
-        "state": "UNRESOLVED_USER_CONFIRMATION_REQUIRED"
-      },
       "current_11e_physical_capacity": {
         "evidence_scope": "CURRENT_WAHAPEDIA_11E_MIRROR_CONTEXT_2026_09_30",
         "complete_10_model_units_max_by_total_bodies": 1,
@@ -622,16 +600,6 @@
   ],
   "open_questions": [
     {
-      "id": "RANGER_RIFLE_ONLY_COUNT_CONFLICT",
-      "question": "Rangers are confirmed as 24 total. Earlier 13 rifle-only bodies were reported, but 2 Alpha + 9 special-weapon + 2 support-gear bodies would leave 11 ordinary rifle-only bodies. Was the earlier 13 count inclusive of two models later identified as Alphas, or is another category overlapping?",
-      "state": "USER_CONFIRMATION_REQUIRED"
-    },
-    {
-      "id": "VANGUARD_CARBINE_ONLY_COUNT_CONFLICT",
-      "question": "Vanguard are confirmed as 14 total. Earlier 7 ordinary carbine-only models were reported, but the exact categorized total implies 6 if categories are exclusive. Did the earlier 7 include the Alpha holding a radium carbine?",
-      "state": "USER_CONFIRMATION_REQUIRED"
-    },
-    {
       "id": "INFILTRATOR_EXTRA_PRINCEPS_COUNT",
       "question": "How many additional Sicarian Infiltrator Princeps/leader bodies exist outside the 20 source-export bodies, and what are their physical loadouts?",
       "state": "USER_CONFIRMED_PRESENT_COUNT_UNKNOWN"
@@ -714,6 +682,19 @@
           "Ranger/Vanguard omnispex and enhanced data-tether are glued to dedicated bodies; these bodies are not magnetized.",
           "The Skitarii collection dates back to approximately 7th edition and was intentionally built with alternate fixed WYSIWYG bodies for changing edition/tournament requirements.",
           "User recollects roughly two plastic kits plus additional cast-copy bodies fitted with spare plastic parts; exact body provenance is not verified."
+        ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_CORRECTION_AND_ROLE_RECLASSIFICATION",
+        "facts": [
+          "Rangers have 2 plasma-caliver models, not 3.",
+          "Rangers have 2 arc-rifle models, not 3.",
+          "The corrected Ranger counts reconcile the 24-model total with 13 galvanic-rifle-only models.",
+          "Of the two Vanguard models previously identified as Alpha-like, only the radium-pistol + power-sword model is currently treated as the Alpha.",
+          "The Vanguard model holding a radium carbine and wearing an Alpha-style helmet is currently used as an ordinary trooper.",
+          "The ordinary Vanguard carbine-only count is therefore 7, including the Alpha-helmet ordinary trooper.",
+          "Vanguard retain 3 plasma-caliver models."
         ]
       }
     ]
