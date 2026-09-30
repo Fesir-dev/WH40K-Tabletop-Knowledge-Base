@@ -52,6 +52,7 @@ class RepositoryContracts(unittest.TestCase):
         cls.core_rule_paragraph_semantic_review = json.loads((ROOT/"reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json").read_text(encoding="utf-8"))
         cls.core_rule_semantic_ast_readiness = json.loads((ROOT/"reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json").read_text(encoding="utf-8"))
         cls.core_rule_direct_modal_ast_pilot = json.loads((ROOT/"reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json").read_text(encoding="utf-8"))
+        cls.core_rule_direct_modal_ast_semantic_validation = json.loads((ROOT/"reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -828,6 +829,104 @@ class RepositoryContracts(unittest.TestCase):
             "docs/CORE_RULE_DIRECT_MODAL_AST_PILOT_MODEL.md",
             ".github/workflows/core-rule-direct-modal-ast-pilot.yml",
             "rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json",
+        ]:
+            self.assertTrue((ROOT/required).exists(),required)
+
+    def test_core_rule_direct_modal_ast_semantic_validation_layer(self):
+        r=self.core_rule_direct_modal_ast_semantic_validation
+        self.assertEqual(r["status"],"PASS")
+        self.assertEqual(r["authority"],"GAMES_WORKSHOP_OFFICIAL")
+        self.assertEqual(r["validation_version"],"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1")
+        self.assertEqual(r["parent_pilot"]["node_key"],"core-ast-direct-modal--13-07--p50-o1")
+        self.assertEqual(r["parent_pilot"]["paragraph_key"],"core-rule-13-07--p50--l1--para-p50-o1")
+
+        v=r["validation"]
+        self.assertEqual(v["decision"],"OPAQUE_PRESERVED")
+        subject=v["subject"]
+        self.assertEqual(subject["state"],"OPAQUE_PRESERVED")
+        self.assertFalse(subject["resolved"])
+        self.assertEqual(subject["semantic_type"],"OPAQUE_SUBJECT_SPAN")
+        self.assertEqual(subject["token_count"],1)
+        self.assertEqual(subject["reason"],"LEXEME_NOT_IN_CLOSED_SUBJECT_LEXICON")
+        self.assertEqual(subject["lexeme_sha256"],"84088805e145b555f349c164a7cfdcf13981e0affcba4393aaa78ae40f320f4e")
+
+        predicate=v["action_predicate"]
+        self.assertEqual(predicate["state"],"OPAQUE_PRESERVED")
+        self.assertFalse(predicate["decomposable"])
+        self.assertIsNone(predicate["action_type"])
+        self.assertEqual(predicate["predicate_token_count"],15)
+        self.assertEqual(predicate["blockers"],["COORDINATION_CUE","UNRECOGNIZED_ACTION_HEAD"])
+        self.assertFalse(v["ast_mutated"])
+        self.assertEqual(v["interaction_edges_created"],0)
+        self.assertEqual(v["additional_paragraphs_admitted"],0)
+
+        s=r["summary"]
+        self.assertEqual(s["nodes_validated"],1)
+        self.assertEqual(s["paragraphs_validated"],1)
+        self.assertEqual(s["subject_types_resolved"],0)
+        self.assertEqual(s["predicate_heads_resolved"],0)
+        self.assertEqual(s["full_refinement_allowed"],0)
+        self.assertEqual(s["partial_refinement_allowed"],0)
+        self.assertEqual(s["opaque_preserved"],1)
+        self.assertEqual(s["interaction_edges_created"],0)
+        self.assertEqual(s["additional_paragraphs_admitted"],0)
+
+        b=r["authority_boundary"]
+        self.assertTrue(b["semantic_validation_only"])
+        self.assertFalse(b["ast_mutation_allowed"])
+        self.assertFalse(b["second_paragraph_allowed"])
+        self.assertFalse(b["interaction_edges_allowed"])
+        self.assertTrue(b["arguments_remain_opaque"])
+        self.assertFalse(b["condition_effect_ast_complete"])
+        self.assertFalse(b["rule_interaction_graph_complete"])
+        self.assertEqual(b["current_normalized_factions_change"],0)
+
+        layer=self.current["core_rule_direct_modal_ast_semantic_validation"]
+        self.assertEqual(layer["state"],"PASS_OPAQUE_PRESERVED")
+        self.assertEqual(layer["decision"],"OPAQUE_PRESERVED")
+        self.assertEqual(layer["subject_types_resolved"],0)
+        self.assertEqual(layer["predicate_heads_resolved"],0)
+        self.assertEqual(layer["predicate_blockers"],["COORDINATION_CUE","UNRECOGNIZED_ACTION_HEAD"])
+        self.assertFalse(layer["ast_mutated"])
+        self.assertEqual(layer["interaction_edges_created"],0)
+        self.assertEqual(layer["additional_paragraphs_admitted"],0)
+        self.assertEqual(layer["current_normalized_factions_change"],0)
+
+        core=self.current["source_currentness"]["core_rules_content"]
+        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1")
+        self.assertEqual(core["normative_structured_normalization"],"DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING")
+        nested=core["structured_normalization"]["direct_modal_ast_semantic_validation"]
+        self.assertEqual(nested["state"],"PASS_OPAQUE_PRESERVED")
+        self.assertFalse(nested["ast_mutated"])
+
+        profile=self.gate["scope_profiles"]["core_rule_direct_modal_ast_semantic_validation"]
+        self.assertEqual(profile["content_state"],"PASS_OPAQUE_PRESERVED")
+        self.assertEqual(profile["nodes_validated"],1)
+        self.assertEqual(profile["paragraphs_validated"],1)
+        self.assertEqual(profile["decision"],"OPAQUE_PRESERVED")
+
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE")
+        g=self.coverage["global"]
+        self.assertEqual(g["official_public_core_direct_modal_ast_semantic_validation_status"],"PASS_OPAQUE_PRESERVED")
+        self.assertEqual(g["official_public_core_direct_modal_ast_nodes_validated"],1)
+        self.assertEqual(g["official_public_core_direct_modal_ast_paragraphs_validated"],1)
+        self.assertEqual(g["official_public_core_direct_modal_ast_subject_types_resolved"],0)
+        self.assertEqual(g["official_public_core_direct_modal_ast_predicate_heads_resolved"],0)
+        self.assertEqual(g["official_public_core_direct_modal_ast_opaque_preserved"],1)
+        self.assertEqual(g["official_public_core_direct_modal_ast_mutations"],0)
+        self.assertEqual(g["official_public_core_direct_modal_ast_semantic_validation_interaction_edges_created"],0)
+        self.assertEqual(g["official_public_core_direct_modal_ast_semantic_validation_additional_paragraphs_admitted"],0)
+        self.assertEqual(g["current_normalized_factions"],0)
+        self.assertEqual(g["full_normative_semantic_factions"],0)
+
+        for required in [
+            "tools/validate_core_rule_direct_modal_ast_semantics.py",
+            "tests/test_core_rule_direct_modal_ast_semantic_validation.py",
+            "schemas/core_rule_direct_modal_ast_semantic_validation.schema.json",
+            "docs/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_MODEL.md",
+            ".github/workflows/core-rule-direct-modal-ast-semantic-validation.yml",
+            "rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_semantic_validation/index.json",
         ]:
             self.assertTrue((ROOT/required).exists(),required)
 
