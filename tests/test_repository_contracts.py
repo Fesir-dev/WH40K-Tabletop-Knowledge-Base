@@ -231,7 +231,7 @@ class RepositoryContracts(unittest.TestCase):
 
         profiles=self.gate["scope_profiles"]
         self.assertEqual(profiles["official_public_semantic_fingerprints"]["content_state"], "PASS")
-        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1")
+        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1")
         self.assertEqual(profiles["faction_rules"]["content_state"], "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING")
         self.assertEqual(profiles["app_wording"]["content_state"], "PENDING")
 
