@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.1",
+  "inventory_id": "chaos_shared_personal",
+  "faction": "Chaos — shared cross-faction physical models",
+  "checkpoint": "2026-09-30",
+  "repository_registered_at": "2026-09-30",
+  "status": "PROVISIONAL",
+  "revision_state": "CHAOS_SPAWN_SHARED_POOL_COUNT_RECONCILED",
+  "physical_pools": [
+    {
+      "pool_id": "chaos_spawn_shared",
+      "name": "Chaos Spawn — shared cross-faction pool",
+      "physical_bodies": 10,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT_10",
+        "CROSS_FACTION_SHARED_POOL",
+        "STYLING_BREAKDOWN_CONFIRMED",
+        "BUILD_STATE_NOT_STATED"
+      ],
+      "body_variants": [
+        {
+          "name": "Khorne-styled Chaos Spawn",
+          "physical_bodies": 1,
+          "evidence": "DIRECT_USER_CONFIRMATION",
+          "styling": "Khorne",
+          "faction_lock": false
+        },
+        {
+          "name": "Tzeentch-styled Chaos Spawn",
+          "physical_bodies": 2,
+          "evidence": "DIRECT_USER_CONFIRMATION",
+          "styling": "Tzeentch",
+          "faction_lock": false
+        },
+        {
+          "name": "Universal Chaos Spawn",
+          "physical_bodies": 7,
+          "evidence": "DIRECT_USER_CONFIRMATION",
+          "styling": "generic/universal Chaos",
+          "faction_lock": false
+        }
+      ],
+      "roles": [
+        {
+          "faction_domain": "Chaos Space Marines",
+          "datasheet_role": "Chaos Spawn",
+          "availability": "SHARED_POOL"
+        },
+        {
+          "faction_domain": "World Eaters",
+          "datasheet_role": "Chaos Spawn",
+          "availability": "SHARED_POOL"
+        },
+        {
+          "faction_domain": "Thousand Sons",
+          "datasheet_role": "Chaos Spawn",
+          "availability": "SHARED_POOL"
+        }
+      ],
+      "physical_configuration": {
+        "total": 10,
+        "khorne_styled": 1,
+        "tzeentch_styled": 2,
+        "universal_styled": 7,
+        "simultaneous_global_capacity": 10,
+        "allocation_rule": "Any physical Spawn allocated to one roster is unavailable to another simultaneous roster unless separate bodies remain."
+      },
+      "notes": [
+        "The user confirmed a single global pool of ten physical Chaos Spawn used across multiple Chaos armies.",
+        "Styling is a hobby/visual property and does not create separate ownership pools.",
+        "One model is Khorne-styled, two are Tzeentch-styled and seven are visually universal.",
+        "The old World Eaters roster selection of six Spawn is a roster allocation over this pool, not evidence of six World Eaters-owned Spawn.",
+        "Build/paint state was not separately stated and is intentionally left unresolved."
+      ]
+    }
+  ],
+  "confirmed_totals": {
+    "normalized_physical_bodies": 10,
+    "chaos_spawn_total": 10,
+    "khorne_styled": 1,
+    "tzeentch_styled": 2,
+    "universal_styled": 7
+  },
+  "constraints": [
+    {
+      "id": "CHAOS_SPAWN_CROSS_FACTION_NO_DOUBLE_COUNT",
+      "type": "shared_physical_pool",
+      "effect": "The ten Chaos Spawn are owned once globally. Faction inventories may reference and allocate them but must not add them to faction-unique physical-body totals."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "CHAOS_SPAWN_BUILD_STATE",
+      "question": "Which of the ten shared Chaos Spawn are assembled, painted, partially built or otherwise unfinished?",
+      "state": "UNKNOWN_NOT_STATED"
+    }
+  ],
+  "provenance": {
+    "user_clarifications": [
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_SHARED_CHAOS_SPAWN_RECONCILIATION",
+        "facts": [
+          "Ten Chaos Spawn are owned across all Chaos collections.",
+          "One is styled for Khorne.",
+          "Two are styled for Tzeentch.",
+          "Seven have a standard/universal Chaos appearance.",
+          "The models are used by multiple Chaos armies and must not be assigned as separate duplicate bodies to individual faction collections."
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "This domain exists to prevent cross-faction double-counting of physical models used by several Chaos armies.",
+    "Current datasheet legality and faction access are rules-layer questions and remain separate from physical ownership."
+  ]
+}
