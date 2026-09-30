@@ -1,0 +1,51 @@
+from __future__ import annotations
+
+import importlib.util
+import sys
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+TOOLS = ROOT / "tools"
+sys.path.insert(0, str(TOOLS))
+
+spec = importlib.util.spec_from_file_location(
+    "build_core_rules_structure",
+    TOOLS / "build_core_rules_structure.py",
+)
+mod = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(mod)
+
+
+class CoreRulesStructureTests(unittest.TestCase):
+    def test_heading_candidate(self):
+        self.assertTrue(mod.is_heading_candidate("MOVEMENT PHASE"))
+        self.assertTrue(mod.is_heading_candidate("1. Core Concepts"))
+        self.assertFalse(mod.is_heading_candidate("This is a normal sentence ending with a period."))
+
+    def test_clean_label_is_bounded(self):
+        value = mod.clean_short_label("  A   B  ")
+        self.assertEqual(value, "A B")
+
+    def test_assign_ranges_and_children(self):
+        rows = [
+            {"title":"A","depth":0,"page_start":1},
+            {"title":"A1","depth":1,"page_start":2},
+            {"title":"B","depth":0,"page_start":5},
+        ]
+        page_sha = [str(i) for i in range(1, 9)]
+        sections = mod.assign_ranges(rows, 8, page_sha, {})
+        self.assertEqual(sections[0]["page_end"], 4)
+        self.assertEqual(sections[1]["page_end"], 4)
+        self.assertEqual(sections[2]["page_end"], 8)
+        self.assertEqual(sections[0]["children"], [sections[1]["section_key"]])
+
+    def test_repeated_heading_noise_is_filtered(self):
+        pages = ["HEADER\nUNIQUE ONE\n" for _ in range(5)]
+        result = mod.heading_candidates(pages)
+        self.assertTrue(all("HEADER" not in rows for rows in result.values()))
+
+
+if __name__ == "__main__":
+    unittest.main()
