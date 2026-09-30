@@ -1,5 +1,5 @@
 {
-  "schema_version": "4.2",
+  "schema_version": "4.3",
   "edition": "11e",
   "repository_checkpoint": "2026-09-30",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,14 +14,14 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1",
+      "state": "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1",
       "verified_at": "2026-09-30",
       "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "SEMANTIC_AST_READINESS_AUDIT_COMPLETE_DIRECT_MODAL_PILOT_PENDING",
+      "normative_structured_normalization": "DIRECT_MODAL_AST_PILOT_COMPLETE_SEMANTIC_VALIDATION_PENDING",
       "public_overlap": {
         "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
         "exact_core_mirror_units": 21,
@@ -164,6 +164,24 @@
           "ast_nodes_created": false,
           "condition_effect_ast_complete": false,
           "rule_interaction_graph_complete": false
+        },
+        "direct_modal_ast_pilot": {
+          "state": "PASS_1_DIRECT_MODAL_AST_NODE",
+          "report": "reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json",
+          "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json",
+          "pilot_version": "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1",
+          "ast_nodes": 1,
+          "paragraphs_parsed": 1,
+          "direct_modal_nodes": 1,
+          "permission_nodes": 1,
+          "conditional_nodes": 0,
+          "subject_spans": 1,
+          "action_predicate_spans": 1,
+          "source_hashes_reproduced": 1,
+          "token_partitions_complete": 1,
+          "interaction_edges_created": 0,
+          "additional_paragraphs_admitted": 0,
+          "full_condition_effect_ast_complete": false
         }
       }
     },
@@ -208,7 +226,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1",
+  "next_milestone": "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -281,26 +299,33 @@
   },
   "automation": {
     "upstream_change_watch": {
-      "state": "ACTIVE_NO_CHANGE",
+      "state": "ACTIVE_CHANGE_DETECTED",
       "report": "reports/UPSTREAM_CHANGE_WATCH_CURRENT.json",
       "workflow": ".github/workflows/upstream-change-watch.yml",
       "cadence": "every 6 hours",
       "bsdata_wh40k_11e": {
         "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "live": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "changed": false
+        "live": "374f50544f0274296ab53c2103766ae3945e8799",
+        "changed": true
       },
       "bsdata_mfm_11e": {
         "pinned": "61a687e858c00a4ad205d564959c622a5605ef3d",
-        "live": "61a687e858c00a4ad205d564959c622a5605ef3d",
-        "changed": false
+        "live": "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390",
+        "changed": true,
+        "changed_file_classes": [
+          "CI",
+          "DOCUMENTATION",
+          "OTHER"
+        ],
+        "normative_mfm_data_change_not_inferred": true
       },
       "wahapedia": {
         "manifest_files_checked": 20,
         "changed_files": 0,
         "last_update_changed": false
       },
-      "auto_promote": false
+      "auto_promote": false,
+      "action": "REVIEW_GUARDED_REINGESTION_PLAN_WITHOUT_NORMATIVE_AUTO_PROMOTION"
     },
     "new_recruit_runtime": {
       "state": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
@@ -822,6 +847,43 @@
       "repository_ci_run": 36712053452,
       "normative_gap_audit_run": 36712053275,
       "readiness_workflow_run": 36712053380,
+      "result": "SUCCESS"
+    }
+  },
+  "core_rule_direct_modal_ast_pilot": {
+    "state": "PASS_1_DIRECT_MODAL_AST_NODE",
+    "as_of": "2026-09-30",
+    "report": "reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json",
+    "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json",
+    "model": "docs/CORE_RULE_DIRECT_MODAL_AST_PILOT_MODEL.md",
+    "schema": "schemas/core_rule_direct_modal_ast_pilot.schema.json",
+    "tool": "tools/build_core_rule_direct_modal_ast_pilot.py",
+    "workflow": ".github/workflows/core-rule-direct-modal-ast-pilot.yml",
+    "node_key": "core-ast-direct-modal--13-07--p50-o1",
+    "node_type": "DIRECT_MODAL_CLAUSE",
+    "rule_ref": "13.07",
+    "paragraph_key": "core-rule-13-07--p50--l1--para-p50-o1",
+    "paragraph_tokens": 17,
+    "subject_tokens": 1,
+    "modal_operator": "PERMISSION",
+    "modal_signal": "PERMISSION_CAN",
+    "modal_tokens": 1,
+    "action_predicate_tokens": 15,
+    "source_hash_reproduced": true,
+    "token_partition_complete": true,
+    "interaction_edges_created": 0,
+    "additional_paragraphs_admitted": 0,
+    "subject_semantic_type_resolved": false,
+    "action_semantic_type_resolved": false,
+    "condition_effect_ast_complete": false,
+    "rule_interaction_graph_complete": false,
+    "current_normalized_factions_change": 0,
+    "authority_rule": "Exactly one readiness-approved paragraph has one structural DIRECT_MODAL_CLAUSE node. Subject and action/predicate spans remain opaque; no interaction edge, semantic entity/action type, repeated-variant equivalence, or Codex/app equivalence is inferred.",
+    "closure_report": "reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CLOSURE_2026-09-30.md",
+    "pre_closure_validation": {
+      "pilot_workflow_run": 36713380722,
+      "repository_ci_run": 36713380314,
+      "normative_gap_audit_run": 36713380431,
       "result": "SUCCESS"
     }
   }

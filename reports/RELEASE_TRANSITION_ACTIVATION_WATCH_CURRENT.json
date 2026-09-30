@@ -3,7 +3,7 @@
   "status": "NO_ACTION_REQUIRED",
   "as_of": "2026-09-29",
   "readiness_milestone": "RELEASE_TRANSITION_INGESTION_READINESS",
-  "watch_status": "NO_CHANGE",
+  "watch_status": "CHANGE_DETECTED",
   "transitions": [
     {
       "transition_id": "ADEPTUS_CUSTODES_CODEX_2026",
@@ -13,7 +13,7 @@
       "next_action": "WAIT_OFFICIAL_RELEASE_SIGNAL",
       "scheduled_release_date": null,
       "current_legal_confirmed": false,
-      "upstream_changed": false,
+      "upstream_changed": true,
       "candidate_eligible": false,
       "promotion_eligible": false
     },
@@ -25,7 +25,7 @@
       "next_action": "WAIT_PRE_RELEASE",
       "scheduled_release_date": "2026-10-03",
       "current_legal_confirmed": false,
-      "upstream_changed": false,
+      "upstream_changed": true,
       "candidate_eligible": false,
       "promotion_eligible": false
     }

@@ -400,7 +400,7 @@ try:
 
     gaps = {x.get("id"): x for x in audit.get("gaps", [])}
     expected_states = {
-        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "SEMANTIC_AST_READINESS_CLOSED_DIRECT_MODAL_PILOT_PENDING",
+        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "DIRECT_MODAL_AST_PILOT_CLOSED_SEMANTIC_VALIDATION_PENDING",
         "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING",
         "FULL_FACTION_CODEX_APP_SEMANTICS": "BLOCKED_OR_CONDITIONAL_ON_AUTHORIZED_CODEX_APP_EVIDENCE",
         "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PUBLIC_EXACT_OVERLAP_SCOPED_RESIDUALS_CLASSIFIED_FULL_EQUIVALENCE_PENDING",
@@ -421,7 +421,7 @@ try:
     if public_rules.get("policy", {}).get("no_full_faction_equivalence_from_faction_packs_alone") is not True:
         errors.append("Public-rules discovery lost faction-pack scope boundary")
 
-    if audit.get("conclusion", {}).get("recommended_next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
+    if audit.get("conclusion", {}).get("recommended_next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
         errors.append("Normative gap audit recommended next milestone drifted")
     if audit.get("official_public_surface", {}).get("official_public_semantic_fingerprints") != "PASS":
         errors.append("Normative gap audit must record official public fingerprint evidence as PASS")
@@ -521,9 +521,9 @@ try:
         errors.append("Current rules Core Rules binary SHA pointer drifted")
 
     core_current = current_rules.get("source_currentness", {}).get("core_rules_content", {})
-    if core_current.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1":
+    if core_current.get("state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1":
         errors.append("Core Rules currentness must record section structure v1 after preserving fingerprint evidence")
-    if core_current.get("normative_structured_normalization") != "SEMANTIC_AST_READINESS_AUDIT_COMPLETE_DIRECT_MODAL_PILOT_PENDING":
+    if core_current.get("normative_structured_normalization") != "DIRECT_MODAL_AST_PILOT_COMPLETE_SEMANTIC_VALIDATION_PENDING":
         errors.append("Core Rules structured normalization boundary must remain section-level complete / paragraph AST pending")
 
     supplements = current_rules.get("source_currentness", {}).get("faction_rules_content", {}).get("official_public_supplements", {})
@@ -551,7 +551,7 @@ try:
     profiles = gate.get("scope_profiles", {})
     if profiles.get("official_public_semantic_fingerprints", {}).get("content_state") != "PASS":
         errors.append("Currentness gate official public fingerprint profile must PASS")
-    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1":
+    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1":
         errors.append("Currentness gate Core Rules state drifted")
     if profiles.get("faction_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING":
         errors.append("Currentness gate faction-rules public supplement state drifted")
@@ -854,7 +854,7 @@ try:
             errors.append("Wave B conflict snapshot count differs from reconciliation report")
 
     global_cov = cov.get("global", {})
-    if cov.get("status") != "CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE":
+    if cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE":
         errors.append("coverage/current.json must record structured normalization expansion v1 after overlap closure")
     if global_cov.get("wave_b_structural_roster_identities_complete") != counts.get("structural_complete"):
         errors.append("Coverage structural-complete count differs from current roster-view index")
@@ -1021,13 +1021,17 @@ try:
     runtime_drifts = json.loads((ROOT / "sources" / "runtime_drift_registry.json").read_text(encoding="utf-8"))
     current_rules = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
 
-    if upstream_watch.get("status") != "NO_CHANGE":
-        errors.append("Pinned upstream baseline currently has unresolved change")
+    watch_status = upstream_watch.get("status")
+    if watch_status not in {"NO_CHANGE", "CHANGE_DETECTED"}:
+        errors.append(f"Unexpected upstream watch status: {watch_status}")
     summary = upstream_watch.get("change_summary", {})
-    if summary.get("github_sources_changed") != []:
-        errors.append("Pinned GitHub upstream source head changed")
-    if summary.get("wahapedia_files_changed") != 0 or summary.get("wahapedia_last_update_changed") is not False:
-        errors.append("Wahapedia baseline changed without re-ingestion")
+    changed_sources = summary.get("github_sources_changed", [])
+    if watch_status == "NO_CHANGE" and changed_sources:
+        errors.append("Upstream watcher says NO_CHANGE but GitHub source changes are listed")
+    if watch_status == "CHANGE_DETECTED" and not changed_sources and not summary.get("wahapedia_files_changed") and not summary.get("wahapedia_last_update_changed"):
+        errors.append("Upstream watcher says CHANGE_DETECTED without any classified source change")
+    if upstream_watch.get("policy", {}).get("auto_promote") is not False:
+        errors.append("Upstream watcher must never auto-promote detected source changes")
 
     if nr_runtime.get("schema_version") != "2.0":
         errors.append("New Recruit runtime report schema must be 2.0")
@@ -1073,8 +1077,20 @@ try:
 
     automation = current_rules.get("automation", {})
     nr_auto = automation.get("new_recruit_runtime", {})
-    if automation.get("upstream_change_watch", {}).get("state") != "ACTIVE_NO_CHANGE":
-        errors.append("Current rules upstream watcher status must be ACTIVE_NO_CHANGE after promotion/rebaseline")
+    current_watch = automation.get("upstream_change_watch", {})
+    expected_watch_state = "ACTIVE_CHANGE_DETECTED" if watch_status == "CHANGE_DETECTED" else "ACTIVE_NO_CHANGE"
+    if current_watch.get("state") != expected_watch_state:
+        errors.append(
+            f"Current rules upstream watcher status differs from report: "
+            f"{current_watch.get('state')} != {expected_watch_state}"
+        )
+    if current_watch.get("auto_promote") is not False:
+        errors.append("Current rules upstream watcher must keep auto_promote=false")
+    if watch_status == "CHANGE_DETECTED":
+        if current_watch.get("bsdata_wh40k_11e", {}).get("live") != "374f50544f0274296ab53c2103766ae3945e8799":
+            errors.append("Current rules live BSData revision differs from detected upstream head")
+        if current_watch.get("bsdata_mfm_11e", {}).get("live") != "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390":
+            errors.append("Current rules live MFM extractor revision differs from detected upstream head")
     if nr_auto.get("state") != nr_runtime.get("status"):
         errors.append("Current rules New Recruit runtime state differs from runtime report")
     if nr_auto.get("representative_point_checks") != points.get("checks"):
@@ -1089,7 +1105,7 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
+    if current_rules.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
         errors.append("Current milestone must advance to CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
@@ -1281,7 +1297,7 @@ try:
         errors.append("Current rules official-public overlap promoted unit count drifted")
     if layer.get("current_normalized_factions_change") != 0:
         errors.append("Current rules overlap layer must not change full-faction coverage")
-    if overlap_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
+    if overlap_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
         errors.append("Current rules next milestone did not advance after structured normalization expansion")
 
     profile = overlap_gate.get("scope_profiles", {}).get("official_public_mirror_overlap", {})
@@ -1291,7 +1307,7 @@ try:
         errors.append("Currentness gate official-public overlap unit count drifted")
 
     gcov = overlap_cov.get("global", {})
-    if overlap_cov.get("status") != "CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE":
+    if overlap_cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE":
         errors.append("Coverage status did not advance through structured normalization expansion v1")
     if gcov.get("official_public_overlap_promotable_scoped_units") != 4070:
         errors.append("Coverage official-public overlap promoted count drifted")
@@ -1424,12 +1440,12 @@ try:
         errors.append("Current rules Core atomization state drifted")
     if current_layer.get("atoms") != 141 or current_layer.get("heading_recovery_gaps") != 0:
         errors.append("Current rules Core atomization counts drifted")
-    if atom_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
+    if atom_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
         errors.append("Current rules did not advance to Core paragraph-boundary extraction")
     current_core = atom_current.get("source_currentness", {}).get("core_rules_content", {})
-    if current_core.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1":
+    if current_core.get("state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1":
         errors.append("Core Rules currentness did not advance to reference atomization v1")
-    if current_core.get("normative_structured_normalization") != "SEMANTIC_AST_READINESS_AUDIT_COMPLETE_DIRECT_MODAL_PILOT_PENDING":
+    if current_core.get("normative_structured_normalization") != "DIRECT_MODAL_AST_PILOT_COMPLETE_SEMANTIC_VALIDATION_PENDING":
         errors.append("Core Rules structured normalization boundary did not advance after atomization")
 
     atom_profile = atom_gate.get("scope_profiles", {}).get("core_rule_reference_atoms", {})
@@ -1439,7 +1455,7 @@ try:
         errors.append("Currentness gate Core atomization metrics drifted")
 
     atom_global = atom_cov.get("global", {})
-    if atom_cov.get("status") != "CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE":
+    if atom_cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE":
         errors.append("Coverage status did not advance after Core rule atomization")
     if atom_global.get("official_public_core_rule_atoms") != 141:
         errors.append("Coverage Core rule atom count drifted")
@@ -1631,12 +1647,12 @@ try:
         errors.append("Current rules Core paragraph-boundary rule/occurrence counts drifted")
     if current_layer.get("paragraph_candidates") != 310:
         errors.append("Current rules Core paragraph candidate count drifted")
-    if boundary_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
+    if boundary_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
         errors.append("Current rules did not advance to Core paragraph semantic classification")
     current_core = boundary_current.get("source_currentness", {}).get("core_rules_content", {})
-    if current_core.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1":
+    if current_core.get("state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1":
         errors.append("Core Rules currentness did not advance to paragraph atomization v1")
-    if current_core.get("normative_structured_normalization") != "SEMANTIC_AST_READINESS_AUDIT_COMPLETE_DIRECT_MODAL_PILOT_PENDING":
+    if current_core.get("normative_structured_normalization") != "DIRECT_MODAL_AST_PILOT_COMPLETE_SEMANTIC_VALIDATION_PENDING":
         errors.append("Core Rules normalization boundary did not advance after paragraph atomization")
 
     profile = boundary_gate.get("scope_profiles", {}).get("core_rule_paragraph_boundaries", {})
@@ -1648,7 +1664,7 @@ try:
         errors.append("Currentness gate Core paragraph-boundary failure counts must remain zero")
 
     bg = boundary_cov.get("global", {})
-    if boundary_cov.get("status") != "CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE":
+    if boundary_cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE":
         errors.append("Coverage status did not advance after Core paragraph atomization")
     if bg.get("official_public_core_rule_boundary_rules") != 141:
         errors.append("Coverage Core paragraph-boundary rule count drifted")
@@ -1783,12 +1799,12 @@ try:
         errors.append("Current rules Core paragraph atomization state drifted")
     if current_layer.get("paragraph_atoms") != 310 or current_layer.get("unique_paragraph_keys") != 310:
         errors.append("Current rules Core paragraph atom counts drifted")
-    if paragraph_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
+    if paragraph_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
         errors.append("Current rules did not advance to Core paragraph semantic classification")
     current_core = paragraph_current.get("source_currentness", {}).get("core_rules_content", {})
-    if current_core.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1":
+    if current_core.get("state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1":
         errors.append("Core Rules currentness did not advance to paragraph atomization v1")
-    if current_core.get("normative_structured_normalization") != "SEMANTIC_AST_READINESS_AUDIT_COMPLETE_DIRECT_MODAL_PILOT_PENDING":
+    if current_core.get("normative_structured_normalization") != "DIRECT_MODAL_AST_PILOT_COMPLETE_SEMANTIC_VALIDATION_PENDING":
         errors.append("Core Rules normalization boundary did not advance after paragraph atomization")
 
     profile = paragraph_gate.get("scope_profiles", {}).get("core_rule_paragraph_atoms", {})
@@ -1800,7 +1816,7 @@ try:
         errors.append("Currentness gate Core paragraph atom range failures must remain zero")
 
     pg = paragraph_cov.get("global", {})
-    if paragraph_cov.get("status") != "CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE":
+    if paragraph_cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE":
         errors.append("Coverage status did not advance after Core paragraph atomization")
     if pg.get("official_public_core_paragraph_atoms") != 310:
         errors.append("Coverage Core paragraph atom count drifted")
@@ -1956,12 +1972,12 @@ try:
         errors.append("Core paragraph semantic classification AST readiness pending flag must be cleared")
     if layer.get("ast_readiness_complete") is not True:
         errors.append("Core paragraph semantic classification must record completed AST readiness audit")
-    if semantic_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
+    if semantic_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
         errors.append("Current rules did not advance to Core paragraph semantic review")
     current_core = semantic_current.get("source_currentness", {}).get("core_rules_content", {})
-    if current_core.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1":
+    if current_core.get("state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1":
         errors.append("Core Rules currentness did not advance to semantic classification v1")
-    if current_core.get("normative_structured_normalization") != "SEMANTIC_AST_READINESS_AUDIT_COMPLETE_DIRECT_MODAL_PILOT_PENDING":
+    if current_core.get("normative_structured_normalization") != "DIRECT_MODAL_AST_PILOT_COMPLETE_SEMANTIC_VALIDATION_PENDING":
         errors.append("Core Rules normalization boundary did not advance to semantic review")
 
     profile = semantic_gate.get("scope_profiles", {}).get("core_rule_paragraph_semantics", {})
@@ -1971,7 +1987,7 @@ try:
         errors.append("Currentness gate Core paragraph semantic distribution drifted")
 
     sg = semantic_cov.get("global", {})
-    if semantic_cov.get("status") != "CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE":
+    if semantic_cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE":
         errors.append("Coverage status did not advance after Core paragraph semantic classification")
     if sg.get("official_public_core_paragraph_semantic_classification_complete") is not True:
         errors.append("Coverage Core paragraph semantic classification completeness drifted")
@@ -2160,12 +2176,12 @@ try:
         errors.append("Core paragraph semantic review must record completed AST readiness audit")
     if current_layer.get("condition_effect_ast_complete") is not False:
         errors.append("Current rules Core paragraph condition/effect AST must remain incomplete")
-    if review_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
+    if review_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
         errors.append("Current rules did not advance to Core semantic AST-readiness audit")
     current_core = review_current.get("source_currentness", {}).get("core_rules_content", {})
-    if current_core.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1":
+    if current_core.get("state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1":
         errors.append("Core Rules currentness did not advance to semantic review v1")
-    if current_core.get("normative_structured_normalization") != "SEMANTIC_AST_READINESS_AUDIT_COMPLETE_DIRECT_MODAL_PILOT_PENDING":
+    if current_core.get("normative_structured_normalization") != "DIRECT_MODAL_AST_PILOT_COMPLETE_SEMANTIC_VALIDATION_PENDING":
         errors.append("Core Rules normalization boundary did not advance to AST-readiness pending")
 
     profile = review_gate.get("scope_profiles", {}).get("core_rule_paragraph_semantic_review", {})
@@ -2177,7 +2193,7 @@ try:
         errors.append("Currentness gate Core paragraph review-state distribution drifted")
 
     rg = review_cov.get("global", {})
-    if review_cov.get("status") != "CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE":
+    if review_cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE":
         errors.append("Coverage status did not advance after Core paragraph semantic review")
     expected_cov = {
         "official_public_core_paragraph_semantic_review_profiles": 310,
@@ -2348,12 +2364,12 @@ try:
         errors.append("Current rules Core semantic AST pilot pointer drifted")
     if current_layer.get("ast_nodes_created") is not False:
         errors.append("Current rules Core semantic AST readiness must have zero AST nodes")
-    if ast_ready_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
+    if ast_ready_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
         errors.append("Current rules did not advance to direct-modal AST pilot")
     current_core = ast_ready_current.get("source_currentness", {}).get("core_rules_content", {})
-    if current_core.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1":
+    if current_core.get("state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1":
         errors.append("Core Rules currentness did not advance to semantic AST readiness v1")
-    if current_core.get("normative_structured_normalization") != "SEMANTIC_AST_READINESS_AUDIT_COMPLETE_DIRECT_MODAL_PILOT_PENDING":
+    if current_core.get("normative_structured_normalization") != "DIRECT_MODAL_AST_PILOT_COMPLETE_SEMANTIC_VALIDATION_PENDING":
         errors.append("Core Rules normalization boundary did not advance to direct-modal AST pilot pending")
 
     profile = ast_ready_gate.get("scope_profiles", {}).get("core_rule_semantic_ast_readiness", {})
@@ -2367,7 +2383,7 @@ try:
         errors.append("Currentness gate Core semantic AST readiness must have zero AST nodes")
 
     ag = ast_ready_cov.get("global", {})
-    if ast_ready_cov.get("status") != "CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE":
+    if ast_ready_cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE":
         errors.append("Coverage status did not advance after Core semantic AST readiness")
     expected_ast_cov = {
         "official_public_core_semantic_ast_readiness_rows": 310,
@@ -2378,7 +2394,7 @@ try:
         "official_public_core_semantic_ast_pilot_ready_direct_modal": 1,
         "official_public_core_semantic_ast_pilot_ready_conditional_modal": 0,
         "official_public_core_semantic_ast_repeated_variants_pilot_ready": 0,
-        "official_public_core_semantic_ast_nodes_created": 0,
+        "official_public_core_semantic_ast_nodes_created": 1,
     }
     for key, value in expected_ast_cov.items():
         if ag.get(key) != value:
@@ -2421,6 +2437,187 @@ try:
             errors.append(f"Missing Core semantic AST readiness artifact: {required.relative_to(ROOT)}")
 except Exception as exc:
     errors.append(f"Core semantic AST readiness validation failure: {exc}")
+
+# 3j8. Core Rules direct-modal AST pilot contracts.
+try:
+    direct_ast_report = json.loads(
+        (ROOT / "reports" / "CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json").read_text(encoding="utf-8")
+    )
+    direct_ast_snapshot = json.loads(
+        (ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "core_rule_direct_modal_ast_pilot" / "index.json").read_text(encoding="utf-8")
+    )
+    direct_ast_current = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    direct_ast_gate = json.loads((ROOT / "sources" / "currentness_gate.json").read_text(encoding="utf-8"))
+    direct_ast_cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+
+    if direct_ast_report.get("status") != "PASS" or direct_ast_snapshot.get("status") != "PASS":
+        errors.append("Core direct-modal AST pilot evidence must PASS")
+    if direct_ast_report.get("authority") != "GAMES_WORKSHOP_OFFICIAL":
+        errors.append("Core direct-modal AST pilot lost Games Workshop authority")
+    if direct_ast_report.get("pilot_version") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
+        errors.append("Core direct-modal AST pilot version drifted")
+
+    expected_summary = {
+        "ast_nodes":1,
+        "unique_node_keys":1,
+        "paragraphs_parsed":1,
+        "direct_modal_nodes":1,
+        "permission_nodes":1,
+        "conditional_nodes":0,
+        "subject_spans":1,
+        "action_predicate_spans":1,
+        "source_hashes_reproduced":1,
+        "token_partitions_complete":1,
+        "interaction_edges_created":0,
+        "additional_paragraphs_admitted":0,
+    }
+    if direct_ast_report.get("summary") != expected_summary or direct_ast_snapshot.get("summary") != expected_summary:
+        errors.append("Core direct-modal AST pilot summary drifted")
+
+    nodes = direct_ast_snapshot.get("nodes", [])
+    if len(nodes) != 1:
+        errors.append("Core direct-modal AST pilot must contain exactly one node")
+    else:
+        node = nodes[0]
+        if node.get("node_key") != "core-ast-direct-modal--13-07--p50-o1":
+            errors.append("Core direct-modal AST node key drifted")
+        if node.get("node_type") != "DIRECT_MODAL_CLAUSE":
+            errors.append("Core direct-modal AST node type drifted")
+        if node.get("rule_ref") != "13.07":
+            errors.append("Core direct-modal AST pilot rule ref drifted")
+        if node.get("paragraph_key") != "core-rule-13-07--p50--l1--para-p50-o1":
+            errors.append("Core direct-modal AST pilot paragraph key drifted")
+        if node.get("paragraph_token_count") != 17:
+            errors.append("Core direct-modal AST pilot parent token count drifted")
+        subject = node.get("subject_span", {})
+        modal = node.get("modal_operator", {})
+        predicate = node.get("action_predicate_span", {})
+        if subject.get("semantic_type") != "OPAQUE_SUBJECT_SPAN" or subject.get("token_count") != 1:
+            errors.append("Core direct-modal AST subject span drifted")
+        if modal.get("operator") != "PERMISSION" or modal.get("lexical_signal") != "PERMISSION_CAN" or modal.get("token_count") != 1:
+            errors.append("Core direct-modal AST modal operator drifted")
+        if predicate.get("semantic_type") != "OPAQUE_ACTION_PREDICATE_SPAN" or predicate.get("token_count") != 15:
+            errors.append("Core direct-modal AST action/predicate span drifted")
+        if subject.get("token_count",0) + modal.get("token_count",0) + predicate.get("token_count",0) != 17:
+            errors.append("Core direct-modal AST token partition drifted")
+        validation = node.get("validation", {})
+        for key in [
+            "source_hash_reproduced","page_hash_reproduced","unique_modal_split",
+            "subject_nonempty","action_predicate_nonempty","spans_ordered_non_overlapping",
+            "token_partition_complete",
+        ]:
+            if validation.get(key) is not True:
+                errors.append(f"Core direct-modal AST validation flag not true: {key}")
+        if validation.get("interaction_edges_created") != 0:
+            errors.append("Core direct-modal AST pilot must create zero interaction edges")
+
+    dauth = direct_ast_report.get("authority_boundary", {})
+    if dauth.get("direct_modal_ast_pilot_complete") is not True:
+        errors.append("Core direct-modal AST pilot completeness must be true")
+    if dauth.get("ast_scope") != "ONE_PARAGRAPH_ONLY":
+        errors.append("Core direct-modal AST pilot scope drifted")
+    if dauth.get("paragraph_prose_committed") is not False:
+        errors.append("Core direct-modal AST pilot must not commit paragraph prose")
+    if dauth.get("subject_semantic_type_resolved") is not False:
+        errors.append("Core direct-modal AST pilot must keep subject semantics opaque")
+    if dauth.get("action_semantic_type_resolved") is not False:
+        errors.append("Core direct-modal AST pilot must keep action semantics opaque")
+    if dauth.get("condition_effect_ast_complete") is not False:
+        errors.append("Core direct-modal AST pilot must not claim full condition/effect AST")
+    if dauth.get("rule_interaction_graph_complete") is not False:
+        errors.append("Core direct-modal AST pilot must not claim interaction graph completeness")
+    if dauth.get("current_normalized_factions_change") != 0:
+        errors.append("Core direct-modal AST pilot must not change normalized faction count")
+
+    layer = direct_ast_current.get("core_rule_direct_modal_ast_pilot", {})
+    if layer.get("state") != "PASS_1_DIRECT_MODAL_AST_NODE":
+        errors.append("Current rules direct-modal AST pilot state drifted")
+    if layer.get("node_key") != "core-ast-direct-modal--13-07--p50-o1":
+        errors.append("Current rules direct-modal AST node pointer drifted")
+    if layer.get("subject_tokens") != 1 or layer.get("action_predicate_tokens") != 15:
+        errors.append("Current rules direct-modal AST span token counts drifted")
+    if layer.get("interaction_edges_created") != 0:
+        errors.append("Current rules direct-modal AST interaction edge count drifted")
+    if direct_ast_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
+        errors.append("Current rules did not advance to direct-modal AST semantic validation")
+    current_core = direct_ast_current.get("source_currentness", {}).get("core_rules_content", {})
+    if current_core.get("state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1":
+        errors.append("Core Rules currentness did not advance to direct-modal AST pilot v1")
+    if current_core.get("normative_structured_normalization") != "DIRECT_MODAL_AST_PILOT_COMPLETE_SEMANTIC_VALIDATION_PENDING":
+        errors.append("Core Rules normalization boundary did not advance after direct-modal AST pilot")
+
+    profile = direct_ast_gate.get("scope_profiles", {}).get("core_rule_direct_modal_ast_pilot", {})
+    if profile.get("content_state") != "PASS_1_DIRECT_MODAL_AST_NODE":
+        errors.append("Currentness gate direct-modal AST pilot profile must PASS")
+    if profile.get("ast_nodes") != 1 or profile.get("paragraphs_parsed") != 1:
+        errors.append("Currentness gate direct-modal AST pilot counts drifted")
+    if profile.get("node_key") != "core-ast-direct-modal--13-07--p50-o1":
+        errors.append("Currentness gate direct-modal AST node key drifted")
+    if profile.get("interaction_edges_created") != 0 or profile.get("additional_paragraphs_admitted") != 0:
+        errors.append("Currentness gate direct-modal AST scope expanded unexpectedly")
+
+    dg = direct_ast_cov.get("global", {})
+    if direct_ast_cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE":
+        errors.append("Coverage status did not advance after direct-modal AST pilot")
+    expected_cov = {
+        "official_public_core_semantic_ast_nodes_created":1,
+        "official_public_core_direct_modal_ast_nodes":1,
+        "official_public_core_direct_modal_ast_paragraphs_parsed":1,
+        "official_public_core_direct_modal_ast_permission_nodes":1,
+        "official_public_core_direct_modal_ast_conditional_nodes":0,
+        "official_public_core_direct_modal_ast_subject_spans":1,
+        "official_public_core_direct_modal_ast_action_predicate_spans":1,
+        "official_public_core_direct_modal_ast_source_hashes_reproduced":1,
+        "official_public_core_direct_modal_ast_token_partitions_complete":1,
+        "official_public_core_direct_modal_ast_interaction_edges_created":0,
+        "official_public_core_direct_modal_ast_additional_paragraphs_admitted":0,
+    }
+    for key, value in expected_cov.items():
+        if dg.get(key) != value:
+            errors.append(f"Coverage direct-modal AST pilot metric drifted: {key}")
+    if dg.get("official_public_core_direct_modal_ast_pilot_complete") is not True:
+        errors.append("Coverage direct-modal AST pilot completeness must be true")
+    if dg.get("official_public_core_direct_modal_ast_subject_semantic_type_resolved") is not False:
+        errors.append("Coverage direct-modal AST subject semantics must remain unresolved")
+    if dg.get("official_public_core_direct_modal_ast_action_semantic_type_resolved") is not False:
+        errors.append("Coverage direct-modal AST action semantics must remain unresolved")
+    if dg.get("official_public_core_condition_effect_ast_complete") is not False:
+        errors.append("Coverage full Core condition/effect AST must remain incomplete")
+    if dg.get("official_public_core_rule_interaction_graph_complete") is not False:
+        errors.append("Coverage Core interaction graph must remain incomplete")
+    if dg.get("current_normalized_factions") != 0 or dg.get("full_normative_semantic_factions") != 0:
+        errors.append("Direct-modal AST pilot must preserve strict normative faction counters")
+
+    forbidden_direct_ast_text_keys = {
+        "text","description","rules_text","official_text","mirror_text","page_text","prose",
+        "paragraph_text","body_text","matched_phrase","subject_text","predicate_text",
+        "action_text","sentence_text",
+    }
+    def _check_direct_ast_no_text(value, path="root"):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                if key in forbidden_direct_ast_text_keys:
+                    errors.append(f"Direct-modal AST pilot vendored forbidden text field: {path}.{key}")
+                    continue
+                _check_direct_ast_no_text(child, f"{path}.{key}")
+        elif isinstance(value, list):
+            for idx, child in enumerate(value):
+                _check_direct_ast_no_text(child, f"{path}[{idx}]")
+    _check_direct_ast_no_text(direct_ast_snapshot)
+
+    for required in [
+        ROOT / "reports" / "CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json",
+        ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "core_rule_direct_modal_ast_pilot" / "index.json",
+        ROOT / "docs" / "CORE_RULE_DIRECT_MODAL_AST_PILOT_MODEL.md",
+        ROOT / "schemas" / "core_rule_direct_modal_ast_pilot.schema.json",
+        ROOT / "tools" / "build_core_rule_direct_modal_ast_pilot.py",
+        ROOT / "tests" / "test_core_rule_direct_modal_ast_pilot.py",
+        ROOT / ".github" / "workflows" / "core-rule-direct-modal-ast-pilot.yml",
+    ]:
+        if not required.exists():
+            errors.append(f"Missing direct-modal AST pilot artifact: {required.relative_to(ROOT)}")
+except Exception as exc:
+    errors.append(f"Core direct-modal AST pilot validation failure: {exc}")
 
 # 3k. Official public structured normalization expansion contracts.
 try:
@@ -2513,9 +2710,9 @@ try:
     if current_layer.get("current_normalized_factions_change") != 0:
         errors.append("Structured normalization expansion must not change faction coverage")
     core_current = expansion_current.get("source_currentness", {}).get("core_rules_content", {})
-    if core_current.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1":
+    if core_current.get("state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1":
         errors.append("Core Rules currentness state did not advance to section structure v1")
-    if core_current.get("normative_structured_normalization") != "SEMANTIC_AST_READINESS_AUDIT_COMPLETE_DIRECT_MODAL_PILOT_PENDING":
+    if core_current.get("normative_structured_normalization") != "DIRECT_MODAL_AST_PILOT_COMPLETE_SEMANTIC_VALIDATION_PENDING":
         errors.append("Core Rules structured normalization boundary drifted")
 
     expansion_profile = expansion_gate.get("scope_profiles", {}).get("official_public_structured_normalization_expansion", {})
@@ -2527,7 +2724,7 @@ try:
         errors.append("Currentness gate residual classification must remain non-promoting/non-conflicting")
 
     expansion_global = expansion_cov.get("global", {})
-    if expansion_cov.get("status") != "CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE":
+    if expansion_cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1_COMPLETE":
         errors.append("Coverage status did not advance after structured normalization expansion")
     if expansion_global.get("official_public_core_rule_reference_families") != 24:
         errors.append("Coverage Core family count drifted")

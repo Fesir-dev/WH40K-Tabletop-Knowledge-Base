@@ -77,6 +77,8 @@ def build_audit(root:Path=ROOT)->dict:
     core_paragraph_review=load(core_paragraph_review_path) if core_paragraph_review_path.exists() else None
     core_ast_readiness_path=root/"reports"/"CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json"
     core_ast_readiness=load(core_ast_readiness_path) if core_ast_readiness_path.exists() else None
+    core_direct_modal_ast_path=root/"reports"/"CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json"
+    core_direct_modal_ast=load(core_direct_modal_ast_path) if core_direct_modal_ast_path.exists() else None
     residual_path=root/"reports"/"OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json"
     residual=load(residual_path) if residual_path.exists() else None
     overlap_summary_path=root/"reports"/"OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json"
@@ -279,6 +281,33 @@ def build_audit(root:Path=ROOT)->dict:
         and core_ast_readiness.get("authority_boundary",{}).get("condition_effect_ast_complete") is False
         and core_ast_readiness.get("authority_boundary",{}).get("rule_interaction_graph_complete") is False
     )
+    core_direct_modal_ast_pass=bool(
+        core_direct_modal_ast
+        and core_direct_modal_ast.get("status")=="PASS"
+        and core_direct_modal_ast.get("pilot_version")=="CORE_RULE_DIRECT_MODAL_AST_PILOT_V1"
+        and core_direct_modal_ast.get("summary",{})=={
+            "ast_nodes":1,
+            "unique_node_keys":1,
+            "paragraphs_parsed":1,
+            "direct_modal_nodes":1,
+            "permission_nodes":1,
+            "conditional_nodes":0,
+            "subject_spans":1,
+            "action_predicate_spans":1,
+            "source_hashes_reproduced":1,
+            "token_partitions_complete":1,
+            "interaction_edges_created":0,
+            "additional_paragraphs_admitted":0,
+        }
+        and core_direct_modal_ast.get("pilot_node",{}).get("rule_ref")=="13.07"
+        and core_direct_modal_ast.get("pilot_node",{}).get("paragraph_key")=="core-rule-13-07--p50--l1--para-p50-o1"
+        and core_direct_modal_ast.get("pilot_node",{}).get("modal_operator",{}).get("operator")=="PERMISSION"
+        and core_direct_modal_ast.get("pilot_node",{}).get("modal_operator",{}).get("lexical_signal")=="PERMISSION_CAN"
+        and core_direct_modal_ast.get("pilot_node",{}).get("validation",{}).get("token_partition_complete") is True
+        and core_direct_modal_ast.get("authority_boundary",{}).get("direct_modal_ast_pilot_complete") is True
+        and core_direct_modal_ast.get("authority_boundary",{}).get("condition_effect_ast_complete") is False
+        and core_direct_modal_ast.get("authority_boundary",{}).get("rule_interaction_graph_complete") is False
+    )
     residual_pass=bool(
         residual
         and residual.get("status")=="PASS"
@@ -292,6 +321,78 @@ def build_audit(root:Path=ROOT)->dict:
         and overlap_summary.get("status")=="PASS"
         and overlap_summary.get("summary",{}).get("promotable_scoped_units")==4070
     )
+
+    if core_direct_modal_ast_pass:
+        core_gap_state="DIRECT_MODAL_AST_PILOT_CLOSED_SEMANTIC_VALIDATION_PENDING"
+        core_next_action="Validate the single direct-modal AST node semantically without admitting another paragraph: review the opaque subject/action spans against verified source evidence, keep interaction edges at zero, and do not generalize the parser."
+        core_publicly_closable="Core Rules direct-modal AST semantic validation"
+    elif core_ast_readiness_pass:
+        core_gap_state="SEMANTIC_AST_READINESS_CLOSED_DIRECT_MODAL_PILOT_PENDING"
+        core_next_action="Run a tightly scoped direct-modal AST parser pilot on the single readiness-approved paragraph (rule 13.07) and validate its structure manually/contractually before expanding the parser. Keep the other 309 paragraphs blocked."
+        core_publicly_closable="Core Rules direct-modal AST pilot"
+    elif core_paragraph_review_pass:
+        core_gap_state="PARAGRAPH_SEMANTIC_REVIEW_CLOSED_AST_READINESS_PENDING"
+        core_next_action="Audit AST readiness only inside the 156 AXIS_PROFILE_READY paragraphs. Keep all 42 MULTI_MODAL and 112 NO_STRONG_SIGNAL rows blocked, and do not infer AST readiness merely from axis-profile readiness."
+        core_publicly_closable="Core Rules semantic AST readiness audit"
+    elif core_paragraph_semantic_pass:
+        core_gap_state="PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSED_SEMANTIC_REVIEW_PENDING"
+        core_next_action="Review the 134 MIXED and 112 UNCLASSIFIED paragraphs plus the 64 HIGH classifications against deterministic signal evidence, refining only demonstrably safe lexical rules before any AST-readiness gate."
+        core_publicly_closable="Core Rules paragraph semantic review"
+    elif core_paragraph_atomization_pass:
+        core_gap_state="PARAGRAPH_ATOMIZATION_CLOSED_SEMANTIC_CLASSIFICATION_PENDING"
+        core_next_action="Classify the 310 stable paragraph identities into conservative semantic roles before building any paragraph AST; keep prose external and repeated variants non-conflicting by default."
+        core_publicly_closable="Core Rules paragraph semantic classification"
+    elif core_boundaries_pass:
+        core_gap_state="PARAGRAPH_BOUNDARIES_CLOSED_PARAGRAPH_ATOMIZATION_PENDING"
+        core_next_action="Atomize the 310 copyright-safe paragraph boundary candidates into stable paragraph identities before any semantic AST parsing."
+        core_publicly_closable="Core Rules paragraph-boundary candidate atomization"
+    elif core_atomization_pass:
+        core_gap_state="RULE_REFERENCE_ATOMIZATION_CLOSED_PARAGRAPH_BOUNDARIES_PENDING"
+        core_next_action="Extract copyright-safe paragraph/rule-body boundaries for the 141 stable Core rule atoms using page/range hashes; keep paragraph prose external."
+        core_publicly_closable="Core Rules per-reference paragraph boundary extraction"
+    elif core_structure_pass:
+        core_gap_state="SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING"
+        core_next_action="Atomize the verified Core Rules numbered references into stable per-rule structural objects without vendoring paragraph prose."
+        core_publicly_closable="Core Rules per-reference structural atomization"
+    elif fp_pass:
+        core_gap_state="FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING"
+        core_next_action="Structurally normalize scoped public Core Rules semantics and compare public official overlap without vendoring long rules prose."
+        core_publicly_closable="Core Rules structured normalization"
+    else:
+        core_gap_state="CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE"
+        core_next_action="Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction."
+        core_publicly_closable="Core Rules official public ingestion"
+
+    if core_direct_modal_ast_pass and overlap_pass and residual_pass:
+        recommended_next_milestone="CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1"
+        expected_effect="One verified Core paragraph now has one copyright-safe DIRECT_MODAL_CLAUSE node with complete subject/modal/action-predicate token partition and zero interaction edges. Next validate the semantic usefulness of this single node without expanding parser scope; full Core/faction/app equivalence remains unchanged."
+    elif core_ast_readiness_pass and overlap_pass and residual_pass:
+        recommended_next_milestone="CORE_RULE_DIRECT_MODAL_AST_PILOT_V1"
+        expected_effect="AST-readiness audit reduces the entire 310-paragraph Core surface to exactly one direct-modal parser pilot candidate (rule 13.07). Thirty-four ranges passed pre-shape gating, 33 were shape-blocked, no repeated variants are pilot-ready, and no AST node exists yet. Next validate a one-paragraph parser pilot before any expansion; faction/app equivalence remains unchanged."
+    elif core_paragraph_review_pass and overlap_pass and residual_pass:
+        recommended_next_milestone="CORE_RULE_SEMANTIC_AST_READINESS_V1"
+        expected_effect="Semantic review decomposes the 310 paragraph classifications into orthogonal axes: 156 are AXIS_PROFILE_READY, while 42 MULTI_MODAL and 112 NO_STRONG_SIGNAL rows remain blocked. The next milestone audits AST readiness only within the 156-profile subset and must not assume they are all parseable; faction/app equivalence remains unchanged."
+    elif core_paragraph_semantic_pass and overlap_pass and residual_pass:
+        recommended_next_milestone="CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1"
+        expected_effect="All 310 Core paragraphs now have reproducible lexical/structural role evidence. Current baseline is 64 HIGH, 134 MIXED and 112 NONE/UNCLASSIFIED; next review ambiguous and signal-free cases before any AST-readiness gate, while faction/app equivalence remains unchanged."
+    elif core_paragraph_atomization_pass and overlap_pass and residual_pass:
+        recommended_next_milestone="CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1"
+        expected_effect="All 310 Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities with zero range failures. Next classify paragraph semantics conservatively before semantic AST construction; full faction/app equivalence and whole-faction normative coverage remain unchanged."
+    elif core_boundaries_pass and overlap_pass and residual_pass:
+        recommended_next_milestone="CORE_RULE_PARAGRAPH_ATOMIZATION_V1"
+        expected_effect="All 141 Core rule atoms now have deterministic rule-body boundaries across 146 occurrences and 310 page-local paragraph candidates, with zero heading-line gaps or empty bodies. Next assign stable paragraph identities before semantic AST work; full faction/app equivalence remains unchanged."
+    elif core_atomization_pass and overlap_pass and residual_pass:
+        recommended_next_milestone="CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1"
+        expected_effect="All 141 numbered Core rule references now have stable structural identities with verified heading/page-hash provenance and zero recovery gaps. Next extract rule-body boundaries without storing paragraph prose; full faction/app equivalence and whole-faction normative coverage remain unchanged."
+    elif core_structure_pass and overlap_pass and residual_pass:
+        recommended_next_milestone="CORE_RULE_REFERENCE_ATOMIZATION_V1"
+        expected_effect="Top-level Core Rules structure is closed at families 01-24, 4,070 exact scoped public-overlap units are structured, and all 1,566 unscoped plus 7,936 no-exact residuals are fail-closed classified. Next atomize Core rule references without changing whole-faction normative coverage; app/Codex-only semantics remain pending."
+    elif fp_pass:
+        recommended_next_milestone="OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT"
+        expected_effect="Fingerprint evidence is closed for the public Core Rules and 28 Faction Packs. Next compare only public official overlap against the current mirror and begin structured public-official normalization; do not promote full-faction normalization while Codex/app-only semantics remain unavailable."
+    else:
+        recommended_next_milestone="OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE"
+        expected_effect="Close Core Rules plus public faction supplement/FAQ official semantics and establish official-vs-mirror overlap fingerprints. This should improve normative scoped coverage but must not automatically promote full-faction normalization."
 
     closed_layers=[
         {
@@ -335,7 +436,7 @@ def build_audit(root:Path=ROOT)->dict:
     gaps=[
         {
             "id":"OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-            "state":"SEMANTIC_AST_READINESS_CLOSED_DIRECT_MODAL_PILOT_PENDING" if core_ast_readiness_pass else ("PARAGRAPH_SEMANTIC_REVIEW_CLOSED_AST_READINESS_PENDING" if core_paragraph_review_pass else ("PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSED_SEMANTIC_REVIEW_PENDING" if core_paragraph_semantic_pass else ("PARAGRAPH_ATOMIZATION_CLOSED_SEMANTIC_CLASSIFICATION_PENDING" if core_paragraph_atomization_pass else ("PARAGRAPH_BOUNDARIES_CLOSED_PARAGRAPH_ATOMIZATION_PENDING" if core_boundaries_pass else ("RULE_REFERENCE_ATOMIZATION_CLOSED_PARAGRAPH_BOUNDARIES_PENDING" if core_atomization_pass else ("SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING" if core_structure_pass else ("FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING" if fp_pass else "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE"))))))),
+            "state":core_gap_state,
             "blocking_scope":["core_rules_content","system_normative_semantics"],
             "evidence":{
                 "repository_state":current["source_currentness"]["core_rules_content"]["state"],
@@ -392,9 +493,17 @@ def build_audit(root:Path=ROOT)->dict:
                 "semantic_ast_pilot_ready":core_ast_readiness.get("summary",{}).get("pilot_ready") if core_ast_readiness_pass else 0,
                 "semantic_ast_pilot_ready_direct_modal":core_ast_readiness.get("summary",{}).get("pilot_ready_direct_modal") if core_ast_readiness_pass else 0,
                 "semantic_ast_pilot_ready_conditional_modal":core_ast_readiness.get("summary",{}).get("pilot_ready_conditional_modal") if core_ast_readiness_pass else 0,
-                "semantic_ast_nodes_created":0,
+                "semantic_ast_nodes_created":1 if core_direct_modal_ast_pass else 0,
+                "direct_modal_ast_pilot_report":"reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json" if core_direct_modal_ast_pass else None,
+                "direct_modal_ast_pilot_state":"PASS_1_DIRECT_MODAL_AST_NODE" if core_direct_modal_ast_pass else "PENDING",
+                "direct_modal_ast_nodes":core_direct_modal_ast.get("summary",{}).get("ast_nodes") if core_direct_modal_ast_pass else 0,
+                "direct_modal_ast_paragraphs_parsed":core_direct_modal_ast.get("summary",{}).get("paragraphs_parsed") if core_direct_modal_ast_pass else 0,
+                "direct_modal_ast_permission_nodes":core_direct_modal_ast.get("summary",{}).get("permission_nodes") if core_direct_modal_ast_pass else 0,
+                "direct_modal_ast_source_hashes_reproduced":core_direct_modal_ast.get("summary",{}).get("source_hashes_reproduced") if core_direct_modal_ast_pass else 0,
+                "direct_modal_ast_token_partitions_complete":core_direct_modal_ast.get("summary",{}).get("token_partitions_complete") if core_direct_modal_ast_pass else 0,
+                "direct_modal_ast_interaction_edges_created":core_direct_modal_ast.get("summary",{}).get("interaction_edges_created") if core_direct_modal_ast_pass else 0,
             },
-            "next_action":"Run a tightly scoped direct-modal AST parser pilot on the single readiness-approved paragraph (rule 13.07) and validate its structure manually/contractually before expanding the parser. Keep the other 309 paragraphs blocked." if core_ast_readiness_pass else ("Audit AST readiness only inside the 156 AXIS_PROFILE_READY paragraphs. Keep all 42 MULTI_MODAL and 112 NO_STRONG_SIGNAL rows blocked, and do not infer AST readiness merely from axis-profile readiness." if core_paragraph_review_pass else ("Review the 134 MIXED and 112 UNCLASSIFIED paragraphs plus the 64 HIGH classifications against deterministic signal evidence, refining only demonstrably safe lexical rules before any AST-readiness gate." if core_paragraph_semantic_pass else ("Classify the 310 stable paragraph identities into conservative semantic roles before building any paragraph AST; keep prose external and repeated variants non-conflicting by default." if core_paragraph_atomization_pass else ("Atomize the 310 copyright-safe paragraph boundary candidates into stable paragraph identities before any semantic AST parsing." if core_boundaries_pass else ("Extract copyright-safe paragraph/rule-body boundaries for the 141 stable Core rule atoms using page/range hashes; keep paragraph prose external." if core_atomization_pass else ("Atomize the verified Core Rules numbered references into stable per-rule structural objects without vendoring paragraph prose." if core_structure_pass else ("Structurally normalize scoped public Core Rules semantics and compare public official overlap without vendoring long rules prose." if fp_pass else "Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction."))))))),
+            "next_action":core_next_action,
         },
         {
             "id":"PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
@@ -563,7 +672,11 @@ def build_audit(root:Path=ROOT)->dict:
             "core_rule_semantic_ast_source_shape_candidates":core_ast_readiness.get("summary",{}).get("source_shape_analysis_candidates") if core_ast_readiness_pass else 0,
             "core_rule_semantic_ast_shape_blocked":core_ast_readiness.get("summary",{}).get("shape_blocked") if core_ast_readiness_pass else 0,
             "core_rule_semantic_ast_pilot_ready":core_ast_readiness.get("summary",{}).get("pilot_ready") if core_ast_readiness_pass else 0,
-            "core_rule_semantic_ast_nodes_created":0,
+            "core_rule_semantic_ast_nodes_created":1 if core_direct_modal_ast_pass else 0,
+            "core_rule_direct_modal_ast_pilot":"PASS_1_DIRECT_MODAL_AST_NODE" if core_direct_modal_ast_pass else "PENDING",
+            "core_rule_direct_modal_ast_nodes":core_direct_modal_ast.get("summary",{}).get("ast_nodes") if core_direct_modal_ast_pass else 0,
+            "core_rule_direct_modal_ast_paragraphs_parsed":core_direct_modal_ast.get("summary",{}).get("paragraphs_parsed") if core_direct_modal_ast_pass else 0,
+            "core_rule_direct_modal_ast_interaction_edges_created":core_direct_modal_ast.get("summary",{}).get("interaction_edges_created") if core_direct_modal_ast_pass else 0,
             "official_public_exact_overlap":"PASS_EXACT_PUBLIC_OVERLAP_V1" if overlap_pass else "PENDING",
             "official_public_residual_classification":"PASS_FAIL_CLOSED_CLASSIFICATION_V1" if residual_pass else "PENDING",
         },
@@ -577,7 +690,7 @@ def build_audit(root:Path=ROOT)->dict:
         "conclusion":{
             "why_current_normalized_factions_is_zero":"The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
             "publicly_closable_now":[
-                "Core Rules direct-modal AST pilot" if core_ast_readiness_pass else ("Core Rules semantic AST readiness audit" if core_paragraph_review_pass else ("Core Rules paragraph semantic review" if core_paragraph_semantic_pass else ("Core Rules paragraph semantic classification" if core_paragraph_atomization_pass else ("Core Rules paragraph-boundary candidate atomization" if core_boundaries_pass else ("Core Rules per-reference paragraph boundary extraction" if core_atomization_pass else "Core Rules per-reference structural atomization"))))),
+                core_publicly_closable,
                 "deeper public Faction Pack structured extraction inside proven public scope",
                 "review of edition-11 residual provenance without automatic promotion",
                 "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING",
@@ -586,8 +699,8 @@ def build_audit(root:Path=ROOT)->dict:
                 "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
                 "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS",
             ],
-            "recommended_next_milestone":"CORE_RULE_DIRECT_MODAL_AST_PILOT_V1" if (core_ast_readiness_pass and overlap_pass and residual_pass) else ("CORE_RULE_SEMANTIC_AST_READINESS_V1" if (core_paragraph_review_pass and overlap_pass and residual_pass) else ("CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1" if (core_paragraph_semantic_pass and overlap_pass and residual_pass) else ("CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1" if (core_paragraph_atomization_pass and overlap_pass and residual_pass) else ("CORE_RULE_PARAGRAPH_ATOMIZATION_V1" if (core_boundaries_pass and overlap_pass and residual_pass) else ("CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1" if (core_atomization_pass and overlap_pass and residual_pass) else ("CORE_RULE_REFERENCE_ATOMIZATION_V1" if (core_structure_pass and overlap_pass and residual_pass) else ("OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT" if fp_pass else "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE"))))))),
-            "expected_effect":"AST-readiness audit reduces the entire 310-paragraph Core surface to exactly one direct-modal parser pilot candidate (rule 13.07). Thirty-four ranges passed pre-shape gating, 33 were shape-blocked, no repeated variants are pilot-ready, and no AST node exists yet. Next validate a one-paragraph parser pilot before any expansion; faction/app equivalence remains unchanged." if (core_ast_readiness_pass and overlap_pass and residual_pass) else ("Semantic review decomposes the 310 paragraph classifications into orthogonal axes: 156 are AXIS_PROFILE_READY, while 42 MULTI_MODAL and 112 NO_STRONG_SIGNAL rows remain blocked. The next milestone audits AST readiness only within the 156-profile subset and must not assume they are all parseable; faction/app equivalence remains unchanged." if (core_paragraph_review_pass and overlap_pass and residual_pass) else ("All 310 Core paragraphs now have reproducible lexical/structural role evidence. Current baseline is 64 HIGH, 134 MIXED and 112 NONE/UNCLASSIFIED; next review ambiguous and signal-free cases before any AST-readiness gate, while faction/app equivalence remains unchanged." if (core_paragraph_semantic_pass and overlap_pass and residual_pass) else ("All 310 Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities with zero range failures. Next classify paragraph semantics conservatively before semantic AST construction; full faction/app equivalence and whole-faction normative coverage remain unchanged." if (core_paragraph_atomization_pass and overlap_pass and residual_pass) else ("All 141 Core rule atoms now have deterministic rule-body boundaries across 146 occurrences and 310 page-local paragraph candidates, with zero heading-line gaps or empty bodies. Next assign stable paragraph identities before semantic AST work; full faction/app equivalence remains unchanged." if (core_boundaries_pass and overlap_pass and residual_pass) else ("All 141 numbered Core rule references now have stable structural identities with verified heading/page-hash provenance and zero recovery gaps. Next extract rule-body boundaries without storing paragraph prose; full faction/app equivalence and whole-faction normative coverage remain unchanged." if (core_atomization_pass and overlap_pass and residual_pass) else ("Top-level Core Rules structure is closed at families 01-24, 4,070 exact scoped public-overlap units are structured, and all 1,566 unscoped plus 7,936 no-exact residuals are fail-closed classified. Next atomize Core rule references without changing whole-faction normative coverage; app/Codex-only semantics remain pending." if (core_structure_pass and overlap_pass and residual_pass) else ("Fingerprint evidence is closed for the public Core Rules and 28 Faction Packs. Next compare only public official overlap against the current mirror and begin structured public-official normalization; do not promote full-faction normalization while Codex/app-only semantics remain unavailable." if fp_pass else "Close Core Rules plus public faction supplement/FAQ official semantics and establish official-vs-mirror overlap fingerprints. This should improve normative scoped coverage but must not automatically promote full-faction normalization."))))))),
+            "recommended_next_milestone":recommended_next_milestone,
+            "expected_effect":expected_effect,
         },
     }
 

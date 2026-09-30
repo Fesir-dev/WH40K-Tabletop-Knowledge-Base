@@ -44,7 +44,7 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
     def test_public_core_rules_fingerprint_and_section_structure_are_closed(self):
         gaps={x["id"]:x for x in self.generated["gaps"]}
         core=gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]
-        self.assertEqual(core["state"],"SEMANTIC_AST_READINESS_CLOSED_DIRECT_MODAL_PILOT_PENDING")
+        self.assertEqual(core["state"],"DIRECT_MODAL_AST_PILOT_CLOSED_SEMANTIC_VALIDATION_PENDING")
         self.assertEqual(core["evidence"]["official_fingerprint_state"],"PASS")
         self.assertEqual(core["evidence"]["section_structure_state"],"PASS_RULE_REFERENCE_FAMILIES_01_24")
         self.assertEqual(core["evidence"]["rule_reference_families"],24)
@@ -135,7 +135,14 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
         self.assertEqual(core["evidence"]["semantic_ast_pilot_ready"],1)
         self.assertEqual(core["evidence"]["semantic_ast_pilot_ready_direct_modal"],1)
         self.assertEqual(core["evidence"]["semantic_ast_pilot_ready_conditional_modal"],0)
-        self.assertEqual(core["evidence"]["semantic_ast_nodes_created"],0)
+        self.assertEqual(core["evidence"]["semantic_ast_nodes_created"],1)
+        self.assertEqual(core["evidence"]["direct_modal_ast_pilot_state"],"PASS_1_DIRECT_MODAL_AST_NODE")
+        self.assertEqual(core["evidence"]["direct_modal_ast_nodes"],1)
+        self.assertEqual(core["evidence"]["direct_modal_ast_paragraphs_parsed"],1)
+        self.assertEqual(core["evidence"]["direct_modal_ast_permission_nodes"],1)
+        self.assertEqual(core["evidence"]["direct_modal_ast_source_hashes_reproduced"],1)
+        self.assertEqual(core["evidence"]["direct_modal_ast_token_partitions_complete"],1)
+        self.assertEqual(core["evidence"]["direct_modal_ast_interaction_edges_created"],0)
         self.assertEqual(core["evidence"]["repeated_boundary_variants"],5)
         self.assertEqual(core["evidence"]["paragraph_atomization_state"],"PASS_310_PARAGRAPH_ATOMS")
         self.assertEqual(core["evidence"]["paragraph_atoms"],310)
@@ -185,8 +192,8 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
 
     def test_next_pipeline_does_not_promise_full_normalization(self):
         conclusion=self.generated["conclusion"]
-        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_DIRECT_MODAL_AST_PILOT_V1")
-        self.assertIn("exactly one direct-modal parser pilot candidate",conclusion["expected_effect"])
+        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1")
+        self.assertIn("one copyright-safe DIRECT_MODAL_CLAUSE node",conclusion["expected_effect"])
 
 
 if __name__=="__main__":
