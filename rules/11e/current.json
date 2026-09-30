@@ -885,6 +885,17 @@
       "repository_ci_run": 36713380314,
       "normative_gap_audit_run": 36713380431,
       "result": "SUCCESS"
+    },
+    "merged_commit": "f61f4579bd1879396e541cb4816b3297e1743325",
+    "latest_validation": {
+      "head": "15f50f7967ffb01e8e1756ed14a075d7c702f195",
+      "pilot_workflow_run": 36728365759,
+      "repository_ci_run": 36728365795,
+      "normative_gap_audit_run": 36728365713,
+      "overlap_regression_run": 36728365792,
+      "release_readiness_run": 36728365815,
+      "release_activation_watch_run": 36728365724,
+      "result": "SUCCESS"
     }
   }
 }
