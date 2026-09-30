@@ -231,29 +231,65 @@ Closure report:
 - app-only wording and full mirror-to-official semantic equivalence remain unresolved.
 - `current_normalized_factions = 0` remains intentional for full normative normalization.
 
+## Latest closed milestone
+
+`OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT` — **CLOSED 2026-09-30**
+
+### C1 — comparison contract
+**CLOSED**
+- model: `docs/OFFICIAL_PUBLIC_MIRROR_OVERLAP_MODEL.md`;
+- exact-match and provenance-scoping policy is explicit;
+- no full Codex/app inference.
+
+### C2 — executable overlap audit
+**CLOSED**
+- tool: `tools/audit_official_public_mirror_overlap.py`;
+- official public corpus verified: **29 / 29**;
+- mirror semantic units audited: **13,572**;
+- exact public overlap: **5,636**;
+- exact-but-unscoped evidence: **1,566**;
+- no exact public overlap: **7,936**;
+- transient Wahapedia fetches use bounded retry/backoff and remain hash-gated.
+
+### C3 — structured official-public normalization
+**CLOSED AT EXACT PUBLIC OVERLAP V1**
+- structured snapshot: `rules/11e/snapshots/2026-09-30/official_public_overlap/index.json`;
+- promotable exact source/faction-scoped units: **4,070**;
+- no long official/mirror rules prose vendored;
+- `current_normalized_factions = 0` unchanged;
+- `full_normative_semantic_factions = 0` unchanged.
+
+### C4 — validation / current integration
+**CLOSED**
+- current rules pointer/state: active;
+- currentness scope: active;
+- coverage metrics: active;
+- repository validator + contract tests: active;
+- closure: `reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CLOSURE_2026-09-30.md`;
+- compact recovery summary: `reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json`.
+
+Validated implementation checkpoints:
+- overlap workflow run `36688272008` — **SUCCESS**;
+- normative/app audit run `36688416703` — **SUCCESS**;
+- generic repository validation run `36688416705` — **SUCCESS**.
+
+Authority boundary remains:
+- public exact overlap proves only the matched semantic object;
+- Faction Packs remain supplemental, not full Codex replacements;
+- app/Codex-only wording remains `PENDING/UNKNOWN`;
+- `NO_EXACT_PUBLIC_OVERLAP` is not automatically a conflict or drift.
+
 ## Current active milestone
 
-`OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT`
+`OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION`
 
-### C1 — comparison contract — COMPLETE ON DEVELOPMENT BRANCH
+Next unresolved work:
 
-- model: `docs/OFFICIAL_PUBLIC_MIRROR_OVERLAP_MODEL.md`;
-- audit schema: `schemas/official_public_mirror_overlap.schema.json`;
-- normalized overlap snapshot schema: `schemas/official_public_overlap_snapshot.schema.json`;
-- only exact normalized public-official containment can become structured official-public overlap evidence;
-- only direct source/faction-scoped mappings are promotable;
-- unscoped exact overlap remains evidence-only;
-- full Codex/app equivalence and `current_normalized_factions` remain unchanged.
-
-### Next unresolved gate — C2 executable overlap audit
-
-1. implement hash-gated live Wahapedia + official PDF overlap audit;
-2. classify exact scoped, exact unscoped and no-exact-public-overlap units;
-3. generate document/page/source-object provenance without storing long rules prose;
-4. C3: generate immutable structured official-public overlap snapshot from promotable exact mappings only;
-5. C4: validate, update current pointers/coverage semantics and close the milestone without generalizing to Codex/app-only text.
-
-Release-transition activation watch continues independently.
+1. build section-level structured normalization for the public Core Rules;
+2. review **1,566** exact-but-unscoped units and strengthen provenance where evidence supports it;
+3. classify **7,936** no-exact-public-overlap units into short/extraction cases, public-scope absence and likely Codex/app-only scope without assuming disagreement;
+4. keep app/Codex-only semantics fail-closed until authorized versioned evidence exists;
+5. release-transition activation watch continues independently.
 
 ## Execution reliability rule
 
