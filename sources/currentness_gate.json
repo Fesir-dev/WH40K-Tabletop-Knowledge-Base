@@ -1,6 +1,6 @@
 {
-  "schema_version": "3.4",
-  "as_of": "2026-09-29",
+  "schema_version": "3.5",
+  "as_of": "2026-09-30",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
     "source_state": "Whether the external source/revision was checked and is reachable/current within the stated scope.",
@@ -275,6 +275,21 @@
       "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
       "documents": 29,
       "authority_boundary": "Evidence/drift scope only; no automatic promotion of normative faction completeness."
+    },
+    "official_public_mirror_overlap": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS",
+        "WAHAPEDIA_11E"
+      ],
+      "content_state": "PASS_EXACT_PUBLIC_OVERLAP_V1",
+      "repository_dimension": null,
+      "report": "reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json",
+      "recovery_summary": "reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json",
+      "structured_snapshot": "rules/11e/snapshots/2026-09-30/official_public_overlap/index.json",
+      "mirror_units": 13572,
+      "exact_public_overlap_units": 5636,
+      "promotable_scoped_units": 4070,
+      "authority_boundary": "Scoped public Games Workshop overlap only. No full Codex/app equivalence or full-faction promotion is implied."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."

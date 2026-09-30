@@ -854,8 +854,8 @@ try:
             errors.append("Wave B conflict snapshot count differs from reconciliation report")
 
     global_cov = cov.get("global", {})
-    if cov.get("status") != "WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE":
-        errors.append("coverage/current.json must retain WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE")
+    if cov.get("status") != "OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE":
+        errors.append("coverage/current.json must record OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE after overlap closure")
     if global_cov.get("wave_b_structural_roster_identities_complete") != counts.get("structural_complete"):
         errors.append("Coverage structural-complete count differs from current roster-view index")
     if global_cov.get("wave_b_structural_roster_identities_unavailable") != counts.get("unavailable"):
@@ -1089,8 +1089,8 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT":
-        errors.append("Current milestone must be OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT")
+    if current_rules.get("next_milestone") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION":
+        errors.append("Current milestone must advance to OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release transition readiness v1 as operational")
@@ -1184,6 +1184,152 @@ try:
             errors.append(f"Missing collection solver artifact: {required.relative_to(ROOT)}")
 except Exception as exc:
     errors.append(f"Collection-aware roster solver validation failure: {exc}")
+
+# 3j. Official public ↔ current-mirror exact overlap contracts.
+try:
+    overlap = json.loads(
+        (ROOT / "reports" / "OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json").read_text(encoding="utf-8")
+    )
+    overlap_summary = json.loads(
+        (ROOT / "reports" / "OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json").read_text(encoding="utf-8")
+    )
+    overlap_snapshot = json.loads(
+        (ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "official_public_overlap" / "index.json").read_text(encoding="utf-8")
+    )
+    overlap_current = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    overlap_gate = json.loads((ROOT / "sources" / "currentness_gate.json").read_text(encoding="utf-8"))
+    overlap_cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+
+    if overlap.get("status") != "PASS" or overlap_summary.get("status") != "PASS":
+        errors.append("Official-public mirror overlap audit and compact summary must PASS")
+    if overlap.get("milestone") != "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT":
+        errors.append("Official-public mirror overlap milestone id drifted")
+    if overlap.get("as_of") != "2026-09-30":
+        errors.append("Official-public mirror overlap checkpoint must remain 2026-09-30")
+
+    expected_overlap = {
+        "official_documents": 29,
+        "core_rules": 1,
+        "faction_packs": 28,
+        "mirror_units": 13572,
+        "exact_public_overlap_units": 5636,
+        "promotable_scoped_units": 4070,
+        "unscoped_exact_units": 1566,
+        "no_exact_overlap_units": 7936,
+        "official_pages": 1430,
+        "official_pages_with_overlap": 1268,
+    }
+    osum = overlap.get("summary", {})
+    ssum = overlap_summary.get("summary", {})
+    for key, value in expected_overlap.items():
+        if osum.get(key) != value:
+            errors.append(f"Official-public overlap summary {key} drifted: {osum.get(key)} != {value}")
+        if ssum.get(key) != value:
+            errors.append(f"Compact official-public overlap summary {key} drifted: {ssum.get(key)} != {value}")
+
+    expected_classifications = {
+        "EXACT_NORMALIZED_TEXT_MATCH": 4145,
+        "EXACT_NORMALIZED_TEXT_MATCH_MULTI_OFFICIAL": 1491,
+    }
+    if osum.get("classification_counts") != expected_classifications:
+        errors.append("Official-public overlap classification counts drifted")
+    expected_provenance = {
+        "CORE_PUBLIC_TEXT_ONLY": 21,
+        "DIRECT_FACTION_SCOPED": 2747,
+        "DIRECT_SOURCE_SCOPED": 1323,
+        "GLOBAL_PUBLIC_TEXT_ONLY": 1545,
+    }
+    if osum.get("provenance_scope_counts") != expected_provenance:
+        errors.append("Official-public overlap provenance-scope counts drifted")
+
+    boundary = overlap.get("authority_boundary", {})
+    if boundary.get("normative_authority") != "GAMES_WORKSHOP":
+        errors.append("Official-public overlap lost Games Workshop normative authority")
+    if boundary.get("current_mirror") != "WAHAPEDIA_11E":
+        errors.append("Official-public overlap current mirror must remain Wahapedia 11E")
+    if boundary.get("full_codex_app_equivalence_claimed") is not False:
+        errors.append("Official-public overlap must not claim full Codex/app equivalence")
+    if boundary.get("faction_pack_is_full_codex_replacement") is not False:
+        errors.append("Official-public overlap must not treat Faction Packs as full Codex replacements")
+    if boundary.get("app_only_wording_inferred") is not False:
+        errors.append("Official-public overlap must not infer app-only wording")
+    if boundary.get("current_normalized_factions_promoted_by_this_audit") is not False:
+        errors.append("Official-public overlap must not promote whole factions")
+
+    if overlap_snapshot.get("status") != "PASS":
+        errors.append("Structured official-public overlap snapshot must PASS")
+    if overlap_snapshot.get("authority") != "GAMES_WORKSHOP_OFFICIAL_PUBLIC_OVERLAP":
+        errors.append("Structured official-public overlap snapshot authority drifted")
+    if overlap_snapshot.get("scope") != "EXACT_PUBLIC_OVERLAP_ONLY":
+        errors.append("Structured official-public overlap snapshot scope drifted")
+    if overlap_snapshot.get("summary", {}).get("units") != 4070:
+        errors.append("Structured official-public overlap snapshot must contain 4070 units")
+    snap_boundary = overlap_snapshot.get("authority_boundary", {})
+    if snap_boundary.get("full_faction_current_verified") is not False:
+        errors.append("Structured overlap snapshot must not verify a whole faction")
+    if snap_boundary.get("current_normalized_factions_change") != 0:
+        errors.append("Structured overlap snapshot must keep current_normalized_factions change at zero")
+    if snap_boundary.get("full_codex_app_equivalence") != "NOT_CLAIMED":
+        errors.append("Structured overlap snapshot must preserve Codex/app equivalence boundary")
+
+    layer = overlap_current.get("official_public_mirror_overlap", {})
+    if layer.get("state") != "PASS_EXACT_PUBLIC_OVERLAP_V1":
+        errors.append("Current rules official-public overlap layer state drifted")
+    if layer.get("snapshot") != "rules/11e/snapshots/2026-09-30/official_public_overlap/index.json":
+        errors.append("Current rules official-public overlap snapshot pointer drifted")
+    if layer.get("promotable_scoped_units") != 4070:
+        errors.append("Current rules official-public overlap promoted unit count drifted")
+    if layer.get("current_normalized_factions_change") != 0:
+        errors.append("Current rules overlap layer must not change full-faction coverage")
+    if overlap_current.get("next_milestone") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION":
+        errors.append("Current rules next milestone did not advance after overlap closure")
+
+    profile = overlap_gate.get("scope_profiles", {}).get("official_public_mirror_overlap", {})
+    if profile.get("content_state") != "PASS_EXACT_PUBLIC_OVERLAP_V1":
+        errors.append("Currentness gate official-public overlap profile must PASS")
+    if profile.get("promotable_scoped_units") != 4070:
+        errors.append("Currentness gate official-public overlap unit count drifted")
+
+    gcov = overlap_cov.get("global", {})
+    if overlap_cov.get("status") != "OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE":
+        errors.append("Coverage status did not advance to official-public overlap v1")
+    if gcov.get("official_public_overlap_promotable_scoped_units") != 4070:
+        errors.append("Coverage official-public overlap promoted count drifted")
+    if gcov.get("current_normalized_factions") != 0:
+        errors.append("Official-public overlap must preserve current_normalized_factions=0")
+    if gcov.get("full_normative_semantic_factions") != 0:
+        errors.append("Official-public overlap must preserve full_normative_semantic_factions=0")
+    if gcov.get("official_public_overlap_current_normalized_factions_change") != 0:
+        errors.append("Coverage overlap delta must remain zero for full factions")
+
+    forbidden_long_text_keys = {"text", "description", "rules_text", "official_text", "mirror_text"}
+    def _check_overlap_no_long_text(value, path="root"):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                if key in forbidden_long_text_keys:
+                    errors.append(f"Official-public overlap vendored forbidden long-text field: {path}.{key}")
+                    continue
+                _check_overlap_no_long_text(child, f"{path}.{key}")
+        elif isinstance(value, list):
+            for idx, child in enumerate(value):
+                _check_overlap_no_long_text(child, f"{path}[{idx}]")
+    _check_overlap_no_long_text(overlap)
+    _check_overlap_no_long_text(overlap_snapshot)
+
+    required_overlap_files = [
+        ROOT / "docs" / "OFFICIAL_PUBLIC_MIRROR_OVERLAP_MODEL.md",
+        ROOT / "schemas" / "official_public_mirror_overlap.schema.json",
+        ROOT / "schemas" / "official_public_overlap_snapshot.schema.json",
+        ROOT / "tools" / "audit_official_public_mirror_overlap.py",
+        ROOT / "tests" / "test_official_public_mirror_overlap.py",
+        ROOT / ".github" / "workflows" / "official-public-mirror-overlap.yml",
+        ROOT / "reports" / "OFFICIAL_PUBLIC_MIRROR_OVERLAP_CLOSURE_2026-09-30.md",
+    ]
+    for path in required_overlap_files:
+        if not path.exists():
+            errors.append(f"Missing official-public overlap artifact: {path.relative_to(ROOT)}")
+except Exception as exc:
+    errors.append(f"Official-public mirror overlap validation failure: {exc}")
 
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (
@@ -1300,5 +1446,5 @@ if errors:
 
 print(
     "PASS: repository JSON, baselines, source statuses, Custodes collection, "
-    "semantic-core index, external/analytics source contracts, roster evidence model, painting KB, current MFM Wave A, Wave B structural coverage, and historical repricing invariants validated."
+    "semantic-core index, external/analytics source contracts, roster evidence model, painting KB, current MFM Wave A, Wave B structural coverage, official-public exact overlap, and historical repricing invariants validated."
 )
