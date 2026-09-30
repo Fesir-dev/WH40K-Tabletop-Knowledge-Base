@@ -133,3 +133,22 @@ Priority order:
 2. review the **1,566** exact-but-unscoped overlap units for stronger provenance;
 3. classify the **7,936** no-exact-public-overlap units into short/extraction cases, public-scope absence and likely Codex/app-only scope without assuming disagreement;
 4. preserve app/Codex-only content as `PENDING/UNKNOWN` until authorized versioned evidence exists.
+
+## C4 — repository integration and validation
+
+Integrated:
+
+- `rules/11e/current.json` now exposes `official_public_mirror_overlap.state = PASS_EXACT_PUBLIC_OVERLAP_V1`;
+- `sources/currentness_gate.json` has a separate `official_public_mirror_overlap` scope profile;
+- `coverage/current.json` records the scoped overlap metrics without changing whole-faction normative coverage;
+- repository governance explicitly forbids converting no-exact-overlap into a conflict without official evidence;
+- `tools/validate_repo.py` and repository contract tests lock the authority boundary and exact checkpoint counts.
+
+Validated integration checkpoints:
+
+- full overlap pipeline after current-pointer integration: run `36688272008` — **SUCCESS**;
+- normative/app historical gap audit reproducibility: run `36688416703` — **SUCCESS**;
+- repository validator + full unit/contract test suite after milestone-baseline advancement: run `36688416705` — **SUCCESS**.
+
+The implementation-head evidence is intentionally recorded before the final handoff-only commit; the PR head is required to pass its own checks before merge.
+
