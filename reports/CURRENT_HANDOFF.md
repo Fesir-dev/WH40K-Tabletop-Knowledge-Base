@@ -341,18 +341,42 @@ Validated implementation head `c35e9604f61f14e3f3db3a3c39a3144f3306dad6`:
 - normative/app gap audit `36703546973` — **SUCCESS**;
 - generic repository validation `36703546698` — **SUCCESS**.
 
+## Latest Core Rules milestone
+
+`CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1` — **CLOSED 2026-09-30**
+
+- classified paragraph identities: **310 / 310**;
+- verified paragraph hashes: **310 / 310**;
+- paragraphs with signals: **200**;
+- paragraphs without signals: **110**;
+- confidence: **64 HIGH / 134 MIXED / 112 NONE**;
+- roles: **31 condition/trigger, 20 permission, 7 procedure/sequence, 4 prohibition, 1 obligation, 1 modification/replacement, 134 mixed, 112 unclassified**;
+- repeated-occurrence variants: **10**, still independent and non-conflicting by default;
+- paragraph prose committed: **false**;
+- condition/effect AST: **pending**;
+- rule-interaction graph: **pending**;
+- `current_normalized_factions = 0` and `full_normative_semantic_factions = 0` unchanged.
+
+Closure:
+`reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSURE_2026-09-30.md`
+
+Validated pre-closure checkpoints:
+- semantic-classification workflow `36706607549` — **SUCCESS**;
+- normative/app gap audit `36706607636` — **SUCCESS**;
+- overlap reproducibility workflow `36706342065` — **SUCCESS**.
+
 ## Current active milestone
 
-`CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1`
+`CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1`
 
 Next unresolved work:
 
-1. define a conservative semantic-role vocabulary for the 310 stable paragraph atoms;
-2. classify only from verified paragraph ranges, storing role/evidence hashes rather than paragraph prose;
-3. preserve ambiguous/mixed paragraphs explicitly instead of forcing a class;
-4. keep the ten repeated-occurrence variants independent and non-conflicting by default;
-5. defer condition/effect AST and rule-interaction graph construction until semantic-role evidence is validated;
-6. keep app/Codex-only semantics fail-closed and whole-faction normative counters unchanged.
+1. review the **134 MIXED** classifications and separate genuinely multi-role paragraphs from classifier overreach;
+2. review the **112 UNCLASSIFIED** classifications and determine whether a stronger evidence-backed signal vocabulary is warranted;
+3. preserve explicit ambiguity where evidence remains insufficient;
+4. define a safely parseable subset only after review;
+5. do **not** construct condition/effect AST nodes or interaction edges yet;
+6. keep repeated variants independent, paragraph prose external, and whole-faction normative counters unchanged.
 
 ## Execution reliability rule
 
@@ -363,6 +387,6 @@ Next unresolved work:
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, Core paragraph-boundary extraction v1, or Core paragraph atomization v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, Core paragraph-boundary extraction v1, Core paragraph atomization v1, or Core paragraph semantic classification v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.
