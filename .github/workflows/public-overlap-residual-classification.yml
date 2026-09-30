@@ -6,6 +6,7 @@ on:
       - "tools/classify_public_overlap_residuals.py"
       - "tests/test_public_overlap_residual_classification.py"
       - "schemas/public_overlap_residual_classification.schema.json"
+      - "docs/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_MODEL.md"
       - "reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json"
       - "rules/11e/snapshots/2026-09-29/wahapedia/**"
       - ".github/workflows/public-overlap-residual-classification.yml"
