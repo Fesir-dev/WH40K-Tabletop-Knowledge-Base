@@ -1,0 +1,88 @@
+name: Core rule direct-modal AST semantic validation
+
+on:
+  push:
+    paths:
+      - "tools/validate_core_rule_direct_modal_ast_semantics.py"
+      - "tests/test_core_rule_direct_modal_ast_semantic_validation.py"
+      - "docs/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_MODEL.md"
+      - "schemas/core_rule_direct_modal_ast_semantic_validation.schema.json"
+      - "rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json"
+      - ".github/workflows/core-rule-direct-modal-ast-semantic-validation.yml"
+  pull_request:
+    paths:
+      - "tools/validate_core_rule_direct_modal_ast_semantics.py"
+      - "tests/test_core_rule_direct_modal_ast_semantic_validation.py"
+      - "docs/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_MODEL.md"
+      - "schemas/core_rule_direct_modal_ast_semantic_validation.schema.json"
+      - "rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json"
+      - ".github/workflows/core-rule-direct-modal-ast-semantic-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-semantic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned PDF extractor
+        run: python -m pip install --disable-pip-version-check pypdf==5.9.0
+      - name: Compile and run semantic-validation contracts
+        run: |
+          python -m compileall -q tools/validate_core_rule_direct_modal_ast_semantics.py tests/test_core_rule_direct_modal_ast_semantic_validation.py
+          python -m unittest tests.test_core_rule_direct_modal_ast_semantic_validation -v
+      - uses: actions/cache@v4
+        with:
+          path: .cache/official-public-rules
+          key: official-public-rules-${{ hashFiles('sources/discoveries/gw_public_rules_surface_2026-09-29.json', 'sources/snapshots/gw_11e_official_assets_2026-09-29.json') }}
+      - name: Validate the sole direct-modal AST node
+        run: |
+          python tools/validate_core_rule_direct_modal_ast_semantics.py \
+            --as-of 2026-09-30 \
+            --output reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json \
+            --snapshot-output rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_semantic_validation/index.json
+      - name: Enforce semantic-validation scope
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json',encoding='utf-8'))
+          assert r['status']=='PASS'
+          assert r['summary']['nodes_validated']==1
+          assert r['summary']['paragraphs_validated']==1
+          assert r['validation']['ast_mutated'] is False
+          assert r['validation']['interaction_edges_created']==0
+          assert r['validation']['additional_paragraphs_admitted']==0
+          assert r['authority_boundary']['ast_mutation_allowed'] is False
+          assert r['authority_boundary']['second_paragraph_allowed'] is False
+          assert r['authority_boundary']['arguments_remain_opaque'] is True
+          assert r['authority_boundary']['current_normalized_factions_change']==0
+          assert 'prose' not in r['validation']
+          print(json.dumps({'decision':r['validation']['decision'],'summary':r['summary'],'subject':r['validation']['subject'],'predicate':r['validation']['action_predicate']},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-rule-direct-modal-semantic-validation-${{ github.run_id }}
+          path: |
+            reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json
+            rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_semantic_validation/index.json
+          if-no-files-found: error
+      - name: Commit generated validation on development branch
+        if: github.event_name == 'push' && github.ref_name != 'main' && github.actor != 'github-actions[bot]'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_semantic_validation/index.json)" ]; then
+            echo "Semantic validation already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json
+          git add rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_semantic_validation/index.json
+          git commit -m "Checkpoint direct-modal AST semantic validation"
+          git push origin HEAD:${GITHUB_REF_NAME}
