@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/core_rule_paragraph_semantic_review.schema.json",
+  "title": "Core Rules paragraph semantic review v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "snapshot_date",
+    "authority",
+    "review_version",
+    "parent_classification",
+    "profiles",
+    "summary",
+    "authority_boundary"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "status": {"enum": ["PASS", "FAIL"]},
+    "snapshot_date": {"type": "string"},
+    "authority": {"const": "GAMES_WORKSHOP_OFFICIAL"},
+    "review_version": {"const": "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1"},
+    "parent_classification": {"type": "object"},
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "paragraph_key",
+          "rule_ref",
+          "occurrence_key",
+          "parent_primary_role",
+          "parent_confidence",
+          "modal_axis",
+          "condition_trigger_present",
+          "procedure_sequence_present",
+          "definition_present",
+          "modification_replacement_present",
+          "reference_present",
+          "structural_list_present",
+          "review_state"
+        ],
+        "properties": {
+          "paragraph_key": {"type": "string"},
+          "rule_ref": {"type": "string"},
+          "occurrence_key": {"type": "string"},
+          "parent_primary_role": {"type": "string"},
+          "parent_confidence": {"type": "string"},
+          "modal_axis": {
+            "enum": ["NONE", "PERMISSION", "OBLIGATION", "PROHIBITION", "MULTI_MODAL"]
+          },
+          "condition_trigger_present": {"type": "boolean"},
+          "procedure_sequence_present": {"type": "boolean"},
+          "definition_present": {"type": "boolean"},
+          "modification_replacement_present": {"type": "boolean"},
+          "reference_present": {"type": "boolean"},
+          "structural_list_present": {"type": "boolean"},
+          "review_state": {
+            "enum": [
+              "AXIS_PROFILE_READY",
+              "MULTI_MODAL_REVIEW_REQUIRED",
+              "NO_STRONG_SIGNAL_REVIEW_REQUIRED"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "summary": {"type": "object"},
+    "authority_boundary": {"type": "object"}
+  },
+  "additionalProperties": true
+}
