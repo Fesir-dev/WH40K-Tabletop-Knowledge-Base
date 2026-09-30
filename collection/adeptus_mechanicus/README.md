@@ -47,3 +47,29 @@ The New Recruit file records selected weapon configurations. Those are retained 
 They are **not yet treated as verified physical loadouts or bit/component pools**. A later revision will record assembled weapons, magnetization/interchangeability and spare components separately.
 
 The canonical normalized inventory is `current.json`.
+
+## Skitarii physical recount pass 1
+
+Direct visual recount on 2026-09-30 supersedes the source roster as physical-loadout evidence for the counted models.
+
+### Rangers — directly observed so far
+
+- 3 × transuranic arquebus;
+- 3 × plasma caliver;
+- 3 × arc rifle;
+- 1 × enhanced data-tether;
+- 1 × omnispex;
+- 13 × galvanic-rifle-only bodies.
+
+These account for **24 Ranger bodies before Alpha models and any remaining unclassified bodies**. The source export's three Ranger squads used a different configuration and must not be read as the physical inventory.
+
+### Vanguard — directly observed so far
+
+- 3 × plasma caliver;
+- 1 × enhanced data-tether;
+- 1 × omnispex;
+- 7 × radium-carbine-only bodies (normalized from the user's “standard rifles” description; pending final visual confirmation).
+
+These account for **12 Vanguard bodies before Alpha, arc-rifle, transuranic-arquebus and any remaining unclassified bodies**.
+
+The total Ranger/Vanguard body counts remain unresolved until the remaining miniatures are classified.
