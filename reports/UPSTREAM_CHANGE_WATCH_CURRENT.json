@@ -1,23 +1,81 @@
 {
   "schema_version": "1.0",
-  "status": "NO_CHANGE",
+  "status": "CHANGE_DETECTED",
   "baseline_snapshot": "2026-09-29",
   "github_sources": [
     {
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "changed": false,
-      "files": []
+      "live": "374f50544f0274296ab53c2103766ae3945e8799",
+      "changed": true,
+      "files": [
+        {
+          "filename": "Necrons.json",
+          "status": "modified",
+          "additions": 490,
+          "deletions": 2,
+          "changes": 492,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Warhammer 40,000.json",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 4,
+          "changes": 8,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        }
+      ]
     },
     {
       "source_id": "BSDATA_MFM_11E",
       "repository": "BSData/wh40k-11e-mfm",
       "pinned": "61a687e858c00a4ad205d564959c622a5605ef3d",
-      "live": "61a687e858c00a4ad205d564959c622a5605ef3d",
-      "changed": false,
-      "files": []
+      "live": "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390",
+      "changed": true,
+      "files": [
+        {
+          "filename": ".github/workflows/ci.yml",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "classification": "CI"
+        },
+        {
+          "filename": ".github/workflows/scrape.yml",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "classification": "CI"
+        },
+        {
+          "filename": "specs/change-tracking.md",
+          "status": "modified",
+          "additions": 44,
+          "deletions": 0,
+          "changes": 44,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "src/diff.ts",
+          "status": "modified",
+          "additions": 37,
+          "deletions": 9,
+          "changes": 46,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/emit-diff.test.ts",
+          "status": "modified",
+          "additions": 149,
+          "deletions": 8,
+          "changes": 157,
+          "classification": "OTHER"
+        }
+      ]
     }
   ],
   "wahapedia": {
@@ -27,7 +85,10 @@
     "changed_files": []
   },
   "change_summary": {
-    "github_sources_changed": [],
+    "github_sources_changed": [
+      "BSDATA_WH40K_11E",
+      "BSDATA_MFM_11E"
+    ],
     "wahapedia_files_changed": 0,
     "wahapedia_last_update_changed": false
   },
