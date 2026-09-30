@@ -193,7 +193,7 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
     def test_next_pipeline_does_not_promise_full_normalization(self):
         conclusion=self.generated["conclusion"]
         self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
-        self.assertIn("one copyright-safe DIRECT_MODAL_CLAUSE node",conclusion["expected_effect"])
+        self.assertIn("semantically validated against verified source evidence",conclusion["expected_effect"])
 
 
 if __name__=="__main__":
