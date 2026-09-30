@@ -1,7 +1,7 @@
 {
-  "schema_version": "2.2",
+  "schema_version": "2.3",
   "as_of": "2026-09-30",
-  "status": "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1_COMPLETE",
+  "status": "CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
   "global": {
     "catalogued_roster_universe": 37,
@@ -134,8 +134,25 @@
     "official_public_core_paragraph_unclassified_weak_only": 2,
     "official_public_core_repeated_axis_profile_ready": 4,
     "official_public_core_repeated_multi_modal_review_required": 6,
-    "official_public_core_semantic_ast_readiness_complete": false,
-    "official_public_core_paragraph_semantic_review_current_normalized_factions_change": 0
+    "official_public_core_semantic_ast_readiness_complete": true,
+    "official_public_core_paragraph_semantic_review_current_normalized_factions_change": 0,
+    "official_public_core_semantic_ast_readiness_status": "PASS_1_DIRECT_MODAL_PILOT_READY",
+    "official_public_core_semantic_ast_readiness_rows": 310,
+    "official_public_core_semantic_ast_pre_shape_parent_review_blocked": 154,
+    "official_public_core_semantic_ast_pre_shape_no_modal_blocked": 61,
+    "official_public_core_semantic_ast_pre_shape_modal_multiplicity_blocked": 27,
+    "official_public_core_semantic_ast_pre_shape_complex_axes_blocked": 26,
+    "official_public_core_semantic_ast_pre_shape_multi_condition_blocked": 6,
+    "official_public_core_semantic_ast_pre_shape_repeated_variant_blocked": 2,
+    "official_public_core_semantic_ast_source_shape_candidates": 34,
+    "official_public_core_semantic_ast_source_hashes_reproduced": 34,
+    "official_public_core_semantic_ast_shape_blocked": 33,
+    "official_public_core_semantic_ast_pilot_ready": 1,
+    "official_public_core_semantic_ast_pilot_ready_direct_modal": 1,
+    "official_public_core_semantic_ast_pilot_ready_conditional_modal": 0,
+    "official_public_core_semantic_ast_repeated_variants_pilot_ready": 0,
+    "official_public_core_semantic_ast_nodes_created": 0,
+    "official_public_core_semantic_ast_readiness_current_normalized_factions_change": 0
   },
   "dimensions": [
     "points",
