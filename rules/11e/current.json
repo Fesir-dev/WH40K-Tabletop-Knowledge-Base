@@ -816,6 +816,13 @@
     "condition_effect_ast_complete": false,
     "rule_interaction_graph_complete": false,
     "current_normalized_factions_change": 0,
-    "authority_rule": "AST readiness is a fail-closed source-shape gate only. Exactly one direct-modal paragraph qualifies for a future parser pilot; no AST node, interaction, repeated-variant equivalence, or Codex/app equivalence is created."
+    "authority_rule": "AST readiness is a fail-closed source-shape gate only. Exactly one direct-modal paragraph qualifies for a future parser pilot; no AST node, interaction, repeated-variant equivalence, or Codex/app equivalence is created.",
+    "closure_report": "reports/CORE_RULE_SEMANTIC_AST_READINESS_CLOSURE_2026-09-30.md",
+    "pre_closure_validation": {
+      "repository_ci_run": 36712053452,
+      "normative_gap_audit_run": 36712053275,
+      "readiness_workflow_run": 36712053380,
+      "result": "SUCCESS"
+    }
   }
 }
