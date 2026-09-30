@@ -871,6 +871,13 @@
     "condition_effect_ast_complete": false,
     "rule_interaction_graph_complete": false,
     "current_normalized_factions_change": 0,
-    "authority_rule": "Exactly one readiness-approved paragraph has one structural DIRECT_MODAL_CLAUSE node. Subject and action/predicate spans remain opaque; no interaction edge, semantic entity/action type, repeated-variant equivalence, or Codex/app equivalence is inferred."
+    "authority_rule": "Exactly one readiness-approved paragraph has one structural DIRECT_MODAL_CLAUSE node. Subject and action/predicate spans remain opaque; no interaction edge, semantic entity/action type, repeated-variant equivalence, or Codex/app equivalence is inferred.",
+    "closure_report": "reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CLOSURE_2026-09-30.md",
+    "pre_closure_validation": {
+      "pilot_workflow_run": 36713380722,
+      "repository_ci_run": 36713380314,
+      "normative_gap_audit_run": 36713380431,
+      "result": "SUCCESS"
+    }
   }
 }
