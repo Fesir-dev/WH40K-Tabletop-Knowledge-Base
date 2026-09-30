@@ -27,3 +27,12 @@ The second Dark Vengeance Helbrute is stored under the Chaos Space Marines colle
 
 
 The converted Dark Vengeance Helbrute melee arm has now been directly reconfirmed: it retains the **original Dark Vengeance fist**. Its ranged arm remains the user's plasma conversion replacing the original melta-type weapon.
+
+
+## Shared Chaos Spawn normalization
+
+The previous New Recruit source selected **6 Chaos Spawn**, but those six are not a World Eaters-owned physical pool.
+
+The user confirmed one global cross-faction pool of **10 Chaos Spawn** stored canonically in `collection/chaos_shared`.
+
+World Eaters may allocate models from that shared pool, but the faction-domain unique physical count does not include them. The historical six-model roster selection is retained only as configuration evidence.

@@ -395,7 +395,9 @@
     }
   ],
   "confirmed_totals": {
-    "source_declared_model_bodies": 109
+    "source_declared_model_bodies": 109,
+    "shared_chaos_spawn_available": 10,
+    "tzeentch_styled_shared_spawn": 2
   },
   "constraints": [],
   "open_questions": [
@@ -413,7 +415,8 @@
   "notes": [
     "This inventory records physical collection evidence only; roster points, legality and detachment choices in the source export are not collection authority.",
     "Raw New Recruit exports are not committed because they contain extensive copyrighted rules text; SHA-256 hashes and normalized physical facts are retained instead.",
-    "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED."
+    "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED.",
+    "Two Tzeentch-styled Chaos Spawn exist in the cross-faction shared Chaos pool; they are not duplicated into the Thousand Sons physical-body count."
   ],
   "provenance": {
     "source_files": [
@@ -433,5 +436,15 @@
         "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
       }
     ]
-  }
+  },
+  "shared_physical_pool_refs": [
+    {
+      "pool_id": "chaos_spawn_shared",
+      "canonical_inventory": "collection/chaos_shared/current.json",
+      "available_role": "Chaos Spawn",
+      "physical_bodies_available": 10,
+      "styling_note": "Two of the ten shared Spawn are Tzeentch-styled.",
+      "count_in_this_inventory": 0
+    }
+  ]
 }
