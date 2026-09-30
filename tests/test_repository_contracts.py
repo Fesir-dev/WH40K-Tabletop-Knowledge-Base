@@ -46,6 +46,7 @@ class RepositoryContracts(unittest.TestCase):
         cls.official_public_fingerprints = json.loads((ROOT/"reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json").read_text(encoding="utf-8"))
         cls.official_core_snapshot = json.loads((ROOT/"sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json").read_text(encoding="utf-8"))
         cls.core_rule_atoms = json.loads((ROOT/"reports/CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json").read_text(encoding="utf-8"))
+        cls.core_rule_boundaries = json.loads((ROOT/"reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -178,11 +179,11 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(mapping["NO_PUBLIC_FACTION_PACK_MAPPING"], 2)
 
         gaps={x["id"]:x for x in audit["gaps"]}
-        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "RULE_REFERENCE_ATOMIZATION_CLOSED_PARAGRAPH_BOUNDARIES_PENDING")
+        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "PARAGRAPH_BOUNDARIES_CLOSED_PARAGRAPH_ATOMIZATION_PENDING")
         self.assertEqual(gaps["PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION"]["state"], "EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING")
         self.assertEqual(gaps["GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK"]["state"], "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE")
         self.assertEqual(gaps["NORMATIVE_COVERAGE_ACCOUNTING"]["state"], "INTENTIONAL_ZERO_NOT_MIRROR_DATA_LOSS")
-        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1")
+        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "CORE_RULE_PARAGRAPH_ATOMIZATION_V1")
 
         findings={x["id"]:x for x in self.public_rules_discovery["findings"]}
         self.assertEqual(findings["GW_11E_CORE_RULES_PUBLIC"]["state"], "PUBLIC_OFFICIAL_SOURCE_DISCOVERED_NOT_INGESTED")
@@ -231,7 +232,7 @@ class RepositoryContracts(unittest.TestCase):
 
         profiles=self.gate["scope_profiles"]
         self.assertEqual(profiles["official_public_semantic_fingerprints"]["content_state"], "PASS")
-        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1")
+        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1")
         self.assertEqual(profiles["faction_rules"]["content_state"], "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING")
         self.assertEqual(profiles["app_wording"]["content_state"], "PENDING")
 
@@ -273,11 +274,11 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["current_normalized_factions_change"], 0)
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["state"],
-            "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1",
+            "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1",
         )
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
-            "RULE_REFERENCE_IDENTITY_COMPLETE_PARAGRAPH_BOUNDARIES_PENDING",
+            "RULE_BODY_BOUNDARIES_COMPLETE_PARAGRAPH_ATOMIZATION_PENDING",
         )
 
         profile=self.gate["scope_profiles"]["core_rule_reference_atoms"]
@@ -299,6 +300,85 @@ class RepositoryContracts(unittest.TestCase):
             "rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json",
         ]:
             self.assertTrue((ROOT/required).exists(), required)
+
+    def test_core_rule_paragraph_boundary_layer(self):
+        r=self.core_rule_boundaries
+        self.assertEqual(r["status"],"PASS")
+        self.assertEqual(r["authority"],"GAMES_WORKSHOP_OFFICIAL")
+        self.assertEqual(r["boundary_version"],"CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1")
+        s=r["summary"]
+        self.assertEqual(s["rules"],141)
+        self.assertEqual(s["occurrences"],146)
+        self.assertEqual(s["families"],24)
+        self.assertEqual(s["classification_counts"],{
+            "REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH":5,
+            "SINGLE_OCCURRENCE_BOUNDARY":136,
+        })
+        self.assertEqual(s["heading_line_recovery_gaps"],0)
+        self.assertEqual(s["heading_line_recovery_gap_refs"],[])
+        self.assertEqual(s["empty_body_boundaries"],0)
+        self.assertEqual(s["empty_body_boundary_refs"],[])
+        self.assertEqual(s["paragraph_candidates"],310)
+        self.assertEqual(s["rules_with_multiple_occurrences"],5)
+        self.assertTrue(s["all_rules_have_nonempty_boundaries"])
+
+        special={x["rule_ref"]:x for x in r["special_rules"]}
+        self.assertEqual(set(special),{"15.07","15.08","15.09","15.10","15.11"})
+        self.assertTrue(all(x["classification"]=="REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH" for x in special.values()))
+        self.assertTrue(all(len(x["occurrence_hashes"])==2 for x in special.values()))
+
+        self.assertTrue(r["source_verification"]["binary_sha256_match"])
+        self.assertEqual(r["source_verification"]["page_semantic_fingerprints_match"],88)
+        self.assertTrue(r["source_verification"]["document_semantic_sha256_match"])
+        self.assertTrue(r["authority_boundary"]["rule_body_boundary_complete"])
+        self.assertTrue(r["authority_boundary"]["paragraph_boundaries_are_extraction_candidates"])
+        self.assertFalse(r["authority_boundary"]["paragraph_level_rules_ast_complete"])
+        self.assertFalse(r["authority_boundary"]["rule_interaction_graph_complete"])
+        self.assertFalse(r["authority_boundary"]["repeated_occurrence_hash_equality_is_semantic_equivalence"])
+        self.assertEqual(r["authority_boundary"]["current_normalized_factions_change"],0)
+
+        layer=self.current["core_rule_paragraph_boundaries"]
+        self.assertEqual(layer["state"],"PASS_141_RULE_BOUNDARIES")
+        self.assertEqual(layer["rules"],141)
+        self.assertEqual(layer["occurrences"],146)
+        self.assertEqual(layer["paragraph_candidates"],310)
+        self.assertEqual(layer["heading_line_recovery_gaps"],0)
+        self.assertEqual(layer["empty_body_boundaries"],0)
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_PARAGRAPH_ATOMIZATION_V1")
+        self.assertEqual(
+            self.current["source_currentness"]["core_rules_content"]["state"],
+            "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1",
+        )
+        self.assertEqual(
+            self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
+            "RULE_BODY_BOUNDARIES_COMPLETE_PARAGRAPH_ATOMIZATION_PENDING",
+        )
+
+        profile=self.gate["scope_profiles"]["core_rule_paragraph_boundaries"]
+        self.assertEqual(profile["content_state"],"PASS_141_RULE_BOUNDARIES")
+        self.assertEqual(profile["rules"],141)
+        self.assertEqual(profile["paragraph_candidates"],310)
+        self.assertEqual(profile["heading_line_recovery_gaps"],0)
+        self.assertEqual(profile["empty_body_boundaries"],0)
+
+        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1_COMPLETE")
+        self.assertEqual(self.coverage["global"]["official_public_core_rule_boundary_rules"],141)
+        self.assertEqual(self.coverage["global"]["official_public_core_rule_boundary_occurrences"],146)
+        self.assertEqual(self.coverage["global"]["official_public_core_rule_paragraph_candidates"],310)
+        self.assertEqual(self.coverage["global"]["official_public_core_rule_heading_line_recovery_gaps"],0)
+        self.assertEqual(self.coverage["global"]["official_public_core_rule_empty_body_boundaries"],0)
+        self.assertEqual(self.coverage["global"]["current_normalized_factions"],0)
+        self.assertEqual(self.coverage["global"]["full_normative_semantic_factions"],0)
+
+        for required in [
+            "tools/build_core_rule_paragraph_boundaries.py",
+            "tests/test_core_rule_paragraph_boundaries.py",
+            "schemas/core_rule_paragraph_boundaries.schema.json",
+            "docs/CORE_RULE_PARAGRAPH_BOUNDARY_MODEL.md",
+            ".github/workflows/core-rule-paragraph-boundaries.yml",
+            "rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json",
+        ]:
+            self.assertTrue((ROOT/required).exists(),required)
 
     def test_mfm_wave_a_snapshot(self):
         self.assertEqual(self.mfm["official_source"]["version"], "1.4")
@@ -347,7 +427,7 @@ class RepositoryContracts(unittest.TestCase):
     def test_wave_b_reconciliation_and_promotion(self):
         self.assertIn(self.wave_b_recon["status"], {"PASS","PASS_WITH_CONFLICTS"})
         self.assertEqual(self.wave_b_recon["conflict_count"], self.current["wave_b_structural"]["source_conflicts"])
-        self.assertEqual(self.coverage["status"], "CORE_RULE_REFERENCE_ATOMIZATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"], "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1_COMPLETE")
         complete=self.wave_b["counts"]["structural_complete"]
         self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_current")), complete)
         self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
@@ -454,7 +534,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["known_runtime_drifts"], points["known_drift_count"]+surfaces["known_drift_count"])
         self.assertEqual(nr["new_runtime_drifts"], 0)
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1")
+        self.assertEqual(self.current["next_milestone"], "CORE_RULE_PARAGRAPH_ATOMIZATION_V1")
         layer=self.current["release_transition_readiness"]
         self.assertEqual(layer["state"], "OPERATIONAL_V1")
         self.assertFalse(layer["policy"]["auto_promote"])
