@@ -186,7 +186,7 @@
       "repository_dimension": null,
       "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-      "authority_boundary": "All 310 stable Core paragraph identities have deterministic lexical/structural role classifications. 134 MIXED and 112 UNCLASSIFIED remain explicit fail-closed states; semantic review, condition/effect AST and interactions remain pending.",
+      "authority_boundary": "All 310 stable Core paragraph identities have deterministic lexical/structural role classifications. 134 MIXED and 112 UNCLASSIFIED remain explicit fail-closed states; AST-readiness review, condition/effect parsing and interactions remain pending.",
       "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
       "rule_reference_families": 24,
       "rule_reference_count": 141,
@@ -226,7 +226,8 @@
         "paragraphs_with_signals": 200,
         "paragraphs_without_signals": 110,
         "repeated_variant_paragraphs": 10,
-        "paragraph_hashes_reproduced_from_verified_pdf": 310
+        "paragraph_hashes_reproduced_from_verified_pdf": 310,
+        "ast_readiness_pending": true
       }
     },
     "faction_rules": {
@@ -429,7 +430,8 @@
       "paragraphs_without_signals": 110,
       "repeated_variant_paragraphs": 10,
       "paragraph_hashes_reproduced_from_verified_pdf": 310,
-      "authority_boundary": "Conservative lexical/structural role labels only. MIXED/UNCLASSIFIED are valid fail-closed states; condition/effect AST, interaction graph and Codex/app equivalence are not claimed."
+      "authority_boundary": "Conservative lexical/structural role labels only. 64 HIGH, 134 MIXED and 112 UNCLASSIFIED; AST-readiness review must define any safely parseable subset before condition/effect nodes or interaction edges.",
+      "ast_readiness_pending": true
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."
