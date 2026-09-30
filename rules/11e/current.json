@@ -730,6 +730,13 @@
     "condition_effect_ast_complete": false,
     "rule_interaction_graph_complete": false,
     "current_normalized_factions_change": 0,
-    "authority_rule": "The review decomposes verified lexical/structural evidence into orthogonal axes. AXIS_PROFILE_READY means no modal conflict, not AST readiness. MULTI_MODAL and no-strong-signal rows remain unresolved; no prose or semantic interaction is inferred."
+    "authority_rule": "The review decomposes verified lexical/structural evidence into orthogonal axes. AXIS_PROFILE_READY means no modal conflict, not AST readiness. MULTI_MODAL and no-strong-signal rows remain unresolved; no prose or semantic interaction is inferred.",
+    "closure_report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CLOSURE_2026-09-30.md",
+    "pre_closure_validation": {
+      "semantic_review_workflow_run": 36708075455,
+      "normative_gap_audit_run": 36708075439,
+      "repository_ci_run": 36708075044,
+      "result": "SUCCESS"
+    }
   }
 }
