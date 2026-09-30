@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.9",
+  "schema_version": "3.10",
   "as_of": "2026-09-30",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
@@ -182,11 +182,11 @@
       "required_sources": [
         "GW_40K_DOWNLOADS"
       ],
-      "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
+      "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
       "repository_dimension": null,
       "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-      "authority_boundary": "All 310 page-local Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities; semantic paragraph classification, AST and rule interactions remain pending.",
+      "authority_boundary": "All 310 stable Core paragraph identities have deterministic lexical/structural semantic-role classifications. 138 MIXED and 110 UNCLASSIFIED remain explicit fail-closed states; semantic AST and interactions remain pending.",
       "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
       "rule_reference_families": 24,
       "rule_reference_count": 141,
@@ -214,6 +214,15 @@
         "paragraph_atoms": 310,
         "unique_paragraph_keys": 310,
         "range_validation_failures": 0
+      },
+      "paragraph_semantic_classification": {
+        "state": "PASS_310_PARAGRAPHS_CLASSIFIED",
+        "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
+        "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
+        "paragraphs": 310,
+        "mixed": 138,
+        "unclassified": 110,
+        "high_confidence": 62
       }
     },
     "faction_rules": {
@@ -387,6 +396,32 @@
       "repeated_occurrence_paragraph_variants": 10,
       "range_validation_failures": 0,
       "authority_boundary": "Stable structural paragraph identities only; paragraph prose is external, repeated variants are not semantic conflicts, and semantic AST/app/Codex equivalence remain pending."
+    },
+    "core_rule_paragraph_semantics": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS"
+      ],
+      "content_state": "PASS_310_PARAGRAPHS_CLASSIFIED",
+      "repository_dimension": null,
+      "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
+      "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
+      "paragraphs": 310,
+      "role_counts": {
+        "CONDITION_OR_TRIGGER": 27,
+        "MIXED": 138,
+        "MODIFICATION_OR_REPLACEMENT": 1,
+        "OBLIGATION": 1,
+        "PERMISSION": 20,
+        "PROCEDURE_OR_SEQUENCE": 9,
+        "PROHIBITION": 4,
+        "UNCLASSIFIED": 110
+      },
+      "confidence_counts": {
+        "HIGH": 62,
+        "MIXED": 138,
+        "NONE": 110
+      },
+      "authority_boundary": "Lexical/structural role evidence only. MIXED/UNCLASSIFIED are intentional; no paragraph prose, semantic AST, interaction graph, repeated-variant equivalence or app/Codex inference."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."
