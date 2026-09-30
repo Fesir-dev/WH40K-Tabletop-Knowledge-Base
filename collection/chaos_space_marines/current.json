@@ -932,19 +932,19 @@
     },
     {
       "pool_id": "word_bearers_kill_team_chosen_derived",
-      "name": "Word Bearers Legionaries Kill Team — newer Chosen-derived bodies",
+      "name": "Word Bearers Legionaries Kill Team — newer Chosen-derived Legionary bodies",
       "physical_bodies": 5,
       "status": [
         "USER_CONFIRMED_EXACT_COUNT_5",
         "ASSEMBLED",
         "WORD_BEARERS_THEME",
-        "KILL_TEAM_USAGE",
-        "CURRENT_40K_ROLE_MAPPING_PARTIAL"
+        "COUNT_AS_LEGIONARIES",
+        "32MM_BASES"
       ],
       "roles": [
         {
-          "role": "Legionary Kill Team operative",
-          "simultaneous_usage_group": "word_bearers_legionaries_kill_team"
+          "role": "Legionaries",
+          "mapping_state": "USER_DIRECTED_PHYSICAL_ROLE"
         }
       ],
       "physical_configuration": {
@@ -952,61 +952,14 @@
         "assembled": 5,
         "base_size_mm": 32,
         "source_body_family": "newer Chosen",
-        "known_individuals": [
-          {
-            "label": "magnetized leader",
-            "weapons_raw": [
-              "plasma pistol",
-              "sword OR fist"
-            ],
-            "magnetized": true,
-            "current_kill_team_role_candidate": "Aspiring Champion",
-            "role_confidence": "HIGH",
-            "notes": [
-              "Current Legionary Kill Team rules allow plasma pistol plus power fist/power weapon on an Aspiring Champion."
-            ]
-          },
-          {
-            "label": "executioner-looking operative",
-            "current_kill_team_role_candidate": [
-              "Butcher",
-              "Shrivetalon"
-            ],
-            "role_confidence": "UNRESOLVED_BY_VISUAL_DESCRIPTION_ONLY"
-          },
-          {
-            "label": "dagger psyker-looking operative",
-            "weapons_raw": [
-              "dagger"
-            ],
-            "current_kill_team_role_candidate": "Balefire Acolyte",
-            "role_confidence": "HIGH",
-            "notes": [
-              "Balefire Acolyte is the Legionary psyker specialist and uses a fell dagger in current Kill Team rules."
-            ]
-          },
-          {
-            "label": "staff-bearing operative",
-            "weapons_raw": [
-              "staff"
-            ],
-            "current_kill_team_role_candidate": "UNRESOLVED_CUSTOM_OR_PROXY",
-            "role_confidence": "LOW",
-            "notes": [
-              "A staff by itself does not uniquely identify one of the current Legionary Kill Team operative entries."
-            ]
-          },
-          {
-            "label": "fifth Chosen-derived operative",
-            "current_kill_team_role_candidate": "UNKNOWN",
-            "role_confidence": "UNKNOWN"
-          }
-        ]
+        "gameplay_identity": "Legionaries",
+        "kill_team_usage": true,
+        "hero_proxy_use": false
       },
       "notes": [
-        "These five bodies are additional unique physical models beyond the three Shadowspear Legionary bodies also used in the same Kill Team.",
-        "All eight members of the user's Word Bearers Legionaries Kill Team are on 32 mm bases.",
-        "Some of these bodies visually resemble 40K character archetypes; such alternate role use is tracked as a candidate/proxy relationship and does not create additional physical bodies."
+        "User explicitly directed that these five Chosen-derived bodies be counted as Legionaries, not as 40K character proxies.",
+        "They remain physically built from newer Chosen sculpts but belong to the Word Bearers Legionaries Kill Team usage group.",
+        "All five are on 32 mm bases."
       ]
     }
   ],
@@ -1063,13 +1016,8 @@
   "open_questions": [
     {
       "id": "CSM_KILL_TEAM_SPECIALIST_MAPPING",
-      "question": "Map the eight Word Bearers Kill Team bodies to exact Legionary Kill Team specialists. In particular: does the executioner-looking model carry a double-handed chainaxe (Butcher) or paired/flensing blades (Shrivetalon); what exactly is the staff-bearing model; and what is the fifth Chosen-derived model?",
-      "state": "USER_DESCRIPTION_OR_PHOTO_REQUIRED"
-    },
-    {
-      "id": "CSM_KILL_TEAM_40K_PROXY_MAPPING",
-      "question": "After specialist mapping, decide which Kill Team bodies are intentionally available as 40K character proxies (Chaos Lord, Master of Executions, Sorcerer-like roles) and record any base/weapon conversion requirements without double-counting bodies.",
-      "state": "OPEN_AFTER_SPECIALIST_MAPPING"
+      "question": "Optional only: map the eight Word Bearers Legionary bodies to exact Kill Team specialist identities. This no longer affects their 40K collection identity; all eight count as Legionaries.",
+      "state": "OPTIONAL_DETAIL_NOT_BLOCKING_COLLECTION_COUNT"
     },
     {
       "id": "CSM_AUTOCANNON_MODEL_IDENTITY",
@@ -1158,6 +1106,14 @@
           "One model carries a staff.",
           "Some of these models may visually represent 40K character roles; these are candidate roles, not extra bodies."
         ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_KILL_TEAM_40K_ROLE_POLICY",
+        "facts": [
+          "All eight Word Bearers Kill Team models should be counted as Legionaries in the CSM collection.",
+          "Do not assign them Chaos Lord, Master of Executions, Sorcerer or other 40K hero proxy roles because the base sizes do not match the desired character use."
+        ]
       }
     ],
     "product_references": [
@@ -1193,7 +1149,8 @@
     "This file is intentionally a durable Wave 1 checkpoint, not a claim of collection completeness.",
     "Wave 2 established Dark Vengeance and Shadowspear acquisition provenance, added legacy/proxy Possessed-role bodies, and promoted several build-state facts while retaining unresolved overlap and missing-body gates.",
     "Wave 2 closeout resolved the two Dark Vengeance Lords, all 20 Shadowspear CSM acquisition bodies, Greater Possessed build state, Gal Vorbak/Argel Tal state, World Eaters Helbrute fist, and winged Daemon Prince cross-domain identity. Current unique CSM-domain lower bound: 151.",
-    "Word Bearers Legionaries Kill Team physical composition is closed at 8 bodies (3 Shadowspear + 5 newer Chosen-derived). Current unique CSM-domain lower bound: 156."
+    "Word Bearers Legionaries Kill Team physical composition is closed at 8 bodies (3 Shadowspear + 5 newer Chosen-derived). Current unique CSM-domain lower bound: 156.",
+    "Word Bearers Kill Team 40K role policy simplified: all eight bodies count as Legionaries; hero proxy candidates removed."
   ],
   "acquisition_groups": [
     {
@@ -1248,7 +1205,7 @@
     {
       "usage_group_id": "word_bearers_legionaries_kill_team",
       "name": "Legionaries Kill Team — Word Bearers",
-      "status": "PHYSICAL_COMPOSITION_COUNT_CLOSED_ROLE_MAPPING_PARTIAL",
+      "status": "PHYSICAL_COMPOSITION_CLOSED_COUNT_AS_LEGIONARIES",
       "known_constituents": [
         {
           "source_pool": "legionaries",
@@ -1281,9 +1238,11 @@
       "total_physical_bodies": 8,
       "notes": [
         "This is a usage/configuration group, not a separate ownership pool.",
-        "Three constituent bodies are already counted in the twenty-body Shadowspear Legionaries acquisition pool.",
-        "Five constituent bodies are newer Chosen-derived and are counted in the dedicated physical pool.",
-        "All eight models are on 32 mm bases."
+        "All eight physical models are counted as Legionaries for the CSM collection.",
+        "Three constituent bodies are already counted in the twenty-body Shadowspear Legionary acquisition pool.",
+        "Five constituent bodies are newer Chosen-derived and are counted in the dedicated Legionary body pool.",
+        "All eight models are on 32 mm bases.",
+        "No 40K hero proxy roles are assigned because the user does not want to treat these bodies as character proxies."
       ],
       "base_size_mm": 32,
       "current_kill_team_structure_reference": {
@@ -1291,33 +1250,7 @@
         "source": "Games Workshop Legionaries Kill Team rules",
         "selection_summary": "1 leader selected from Aspiring Champion or Chosen, plus 5 operatives from the specialist list; 6 models fielded per battle.",
         "note": "The owned eight-model hobby roster provides alternative operative choices; all eight are not fielded simultaneously under this selection structure."
-      },
-      "alternate_40k_role_candidates": [
-        {
-          "physical_model_label": "magnetized leader",
-          "candidate_role": "Chaos Lord",
-          "state": "VISUAL_PROXY_CANDIDATE_ONLY",
-          "caveat": "Do not count as an additional Chaos Lord body; exact current 40K base/loadout legality must be checked separately."
-        },
-        {
-          "physical_model_label": "executioner-looking operative",
-          "candidate_role": "Master of Executions",
-          "state": "VISUAL_PROXY_CANDIDATE_ONLY",
-          "caveat": "Requires exact sculpt/weapon/base audit."
-        },
-        {
-          "physical_model_label": "dagger psyker-looking operative",
-          "candidate_role": "Sorcerer-like character",
-          "state": "VISUAL_PROXY_CANDIDATE_ONLY",
-          "caveat": "Physical appearance may support a psyker-character representation, but this is not yet a current 40K datasheet identity."
-        },
-        {
-          "physical_model_label": "staff-bearing operative",
-          "candidate_role": "Sorcerer-like character",
-          "state": "VISUAL_PROXY_CANDIDATE_ONLY",
-          "caveat": "Needs visual/weapon audit before mapping."
-        }
-      ]
+      }
     }
   ],
   "resolved_questions": [
@@ -1371,6 +1304,12 @@
       "resolved_at": "2026-09-30",
       "evidence": "DIRECT_USER_CONFIRMATION",
       "details": "All eight are on 32 mm bases. Three are definite Legionary/Shadowspear bodies; five are built from newer Chosen bodies."
+    },
+    {
+      "id": "CSM_KILL_TEAM_40K_ROLE_POLICY",
+      "resolution": "COUNT_ALL_EIGHT_AS_LEGIONARIES_NO_HERO_PROXY_ROLES",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_INSTRUCTION"
     }
   ],
   "observed_unresolved_models": [
