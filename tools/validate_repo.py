@@ -400,10 +400,10 @@ try:
 
     gaps = {x.get("id"): x for x in audit.get("gaps", [])}
     expected_states = {
-        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING",
-        "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_EXTRACTION_PENDING",
+        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING",
+        "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING",
         "FULL_FACTION_CODEX_APP_SEMANTICS": "BLOCKED_OR_CONDITIONAL_ON_AUTHORIZED_CODEX_APP_EVIDENCE",
-        "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PARTIALLY_CLOSABLE_PUBLIC_OVERLAP_ONLY",
+        "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PUBLIC_EXACT_OVERLAP_SCOPED_RESIDUALS_CLASSIFIED_FULL_EQUIVALENCE_PENDING",
         "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK": "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE",
         "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING": "CLOSABLE_WITH_METADATA_AND_CONTENT_REVIEW",
         "NORMATIVE_COVERAGE_ACCOUNTING": "INTENTIONAL_ZERO_NOT_MIRROR_DATA_LOSS",
@@ -421,7 +421,7 @@ try:
     if public_rules.get("policy", {}).get("no_full_faction_equivalence_from_faction_packs_alone") is not True:
         errors.append("Public-rules discovery lost faction-pack scope boundary")
 
-    if audit.get("conclusion", {}).get("recommended_next_milestone") != "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT":
+    if audit.get("conclusion", {}).get("recommended_next_milestone") != "CORE_RULE_REFERENCE_ATOMIZATION_V1":
         errors.append("Normative gap audit recommended next milestone drifted")
     if audit.get("official_public_surface", {}).get("official_public_semantic_fingerprints") != "PASS":
         errors.append("Normative gap audit must record official public fingerprint evidence as PASS")
@@ -521,10 +521,10 @@ try:
         errors.append("Current rules Core Rules binary SHA pointer drifted")
 
     core_current = current_rules.get("source_currentness", {}).get("core_rules_content", {})
-    if core_current.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED":
-        errors.append("Core Rules currentness must distinguish fingerprinted evidence from structured normalization")
-    if core_current.get("normative_structured_normalization") != "PENDING":
-        errors.append("Core Rules structured normative normalization was promoted prematurely")
+    if core_current.get("state") != "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1":
+        errors.append("Core Rules currentness must record section structure v1 after preserving fingerprint evidence")
+    if core_current.get("normative_structured_normalization") != "SECTION_LEVEL_COMPLETE_PARAGRAPH_AST_PENDING":
+        errors.append("Core Rules structured normalization boundary must remain section-level complete / paragraph AST pending")
 
     supplements = current_rules.get("source_currentness", {}).get("faction_rules_content", {}).get("official_public_supplements", {})
     if supplements.get("state") != "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED":
@@ -551,7 +551,7 @@ try:
     profiles = gate.get("scope_profiles", {})
     if profiles.get("official_public_semantic_fingerprints", {}).get("content_state") != "PASS":
         errors.append("Currentness gate official public fingerprint profile must PASS")
-    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED":
+    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1":
         errors.append("Currentness gate Core Rules state drifted")
     if profiles.get("faction_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING":
         errors.append("Currentness gate faction-rules public supplement state drifted")
@@ -854,8 +854,8 @@ try:
             errors.append("Wave B conflict snapshot count differs from reconciliation report")
 
     global_cov = cov.get("global", {})
-    if cov.get("status") != "OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE":
-        errors.append("coverage/current.json must record OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE after overlap closure")
+    if cov.get("status") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_V1_COMPLETE":
+        errors.append("coverage/current.json must record structured normalization expansion v1 after overlap closure")
     if global_cov.get("wave_b_structural_roster_identities_complete") != counts.get("structural_complete"):
         errors.append("Coverage structural-complete count differs from current roster-view index")
     if global_cov.get("wave_b_structural_roster_identities_unavailable") != counts.get("unavailable"):
@@ -1089,8 +1089,8 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION":
-        errors.append("Current milestone must advance to OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION")
+    if current_rules.get("next_milestone") != "CORE_RULE_REFERENCE_ATOMIZATION_V1":
+        errors.append("Current milestone must advance to CORE_RULE_REFERENCE_ATOMIZATION_V1")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release transition readiness v1 as operational")
@@ -1281,8 +1281,8 @@ try:
         errors.append("Current rules official-public overlap promoted unit count drifted")
     if layer.get("current_normalized_factions_change") != 0:
         errors.append("Current rules overlap layer must not change full-faction coverage")
-    if overlap_current.get("next_milestone") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION":
-        errors.append("Current rules next milestone did not advance after overlap closure")
+    if overlap_current.get("next_milestone") != "CORE_RULE_REFERENCE_ATOMIZATION_V1":
+        errors.append("Current rules next milestone did not advance after structured normalization expansion")
 
     profile = overlap_gate.get("scope_profiles", {}).get("official_public_mirror_overlap", {})
     if profile.get("content_state") != "PASS_EXACT_PUBLIC_OVERLAP_V1":
@@ -1291,8 +1291,8 @@ try:
         errors.append("Currentness gate official-public overlap unit count drifted")
 
     gcov = overlap_cov.get("global", {})
-    if overlap_cov.get("status") != "OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE":
-        errors.append("Coverage status did not advance to official-public overlap v1")
+    if overlap_cov.get("status") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_V1_COMPLETE":
+        errors.append("Coverage status did not advance through structured normalization expansion v1")
     if gcov.get("official_public_overlap_promotable_scoped_units") != 4070:
         errors.append("Coverage official-public overlap promoted count drifted")
     if gcov.get("current_normalized_factions") != 0:
@@ -1330,6 +1330,163 @@ try:
             errors.append(f"Missing official-public overlap artifact: {path.relative_to(ROOT)}")
 except Exception as exc:
     errors.append(f"Official-public mirror overlap validation failure: {exc}")
+
+# 3k. Official public structured normalization expansion contracts.
+try:
+    core_structure = json.loads(
+        (ROOT / "reports" / "CORE_RULES_STRUCTURE_CURRENT.json").read_text(encoding="utf-8")
+    )
+    core_structure_snapshot = json.loads(
+        (ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "core_rules_structure" / "index.json").read_text(encoding="utf-8")
+    )
+    residual = json.loads(
+        (ROOT / "reports" / "OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json").read_text(encoding="utf-8")
+    )
+    residual_snapshot = json.loads(
+        (ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "official_public_overlap" / "residual_classification.json").read_text(encoding="utf-8")
+    )
+    expansion_current = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    expansion_gate = json.loads((ROOT / "sources" / "currentness_gate.json").read_text(encoding="utf-8"))
+    expansion_cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+
+    if core_structure.get("status") != "PASS" or core_structure_snapshot.get("status") != "PASS":
+        errors.append("Core Rules structured normalization evidence must PASS")
+    if core_structure.get("authority") != "GAMES_WORKSHOP_OFFICIAL":
+        errors.append("Core Rules structured normalization lost Games Workshop authority")
+    core_summary = core_structure.get("summary", {})
+    expected_family_ids = [f"{i:02d}" for i in range(1, 25)]
+    if core_summary.get("rule_reference_family_ids") != expected_family_ids:
+        errors.append("Core Rules rule-reference families must remain canonical 01-24")
+    if core_summary.get("rule_reference_families") != 24:
+        errors.append("Core Rules rule-reference family count drifted")
+    if core_summary.get("rule_reference_count") != 141:
+        errors.append("Core Rules detected rule-reference count drifted")
+    if core_summary.get("pages_represented") != 88:
+        errors.append("Core Rules structured normalization must represent all 88 pages")
+    if core_summary.get("sections") != 80:
+        errors.append("Core Rules flat heading section count drifted")
+    core_boundary = core_structure.get("authority_boundary", {})
+    if core_boundary.get("section_level_structure_complete_for_public_pdf") is not True:
+        errors.append("Core Rules section-level family structure must be complete")
+    if core_boundary.get("hierarchical_structure_complete") is not False:
+        errors.append("Core Rules nested hierarchy must not be overclaimed")
+    if core_boundary.get("paragraph_level_rules_ast_complete") is not False:
+        errors.append("Core Rules paragraph AST must remain pending")
+    if core_boundary.get("current_normalized_factions_change") != 0:
+        errors.append("Core Rules structure must not change full-faction coverage")
+
+    expected_unscoped = {
+        "CORE_PUBLIC_GLOBAL": 21,
+        "EDITION_11_SOURCE_MATCH_OUTSIDE_OWN_PACK": 426,
+        "FACTION_ONLY_MATCH_OUTSIDE_OWN_PACK": 124,
+        "NON_11_OR_LEGENDS_SOURCE": 995,
+    }
+    expected_no_exact = {
+        "EDITION_11_SOURCE_NO_EXACT_PUBLIC_OVERLAP": 3467,
+        "FACTION_ONLY_NO_EXACT_PUBLIC_OVERLAP": 1868,
+        "NON_11_OR_LEGENDS_SOURCE_NO_EXACT": 227,
+        "NO_SOURCE_OR_FACTION_NO_EXACT": 61,
+        "TOO_SHORT_FOR_SAFE_AUTO_MATCH": 2313,
+    }
+    if residual.get("status") != "PASS" or residual_snapshot.get("status") != "PASS":
+        errors.append("Official-public residual classification must PASS")
+    if residual.get("unscoped_exact", {}).get("total") != 1566:
+        errors.append("Residual unscoped exact total drifted")
+    if residual.get("unscoped_exact", {}).get("classes") != expected_unscoped:
+        errors.append("Residual unscoped exact classes drifted")
+    if residual.get("no_exact_public_overlap", {}).get("total") != 7936:
+        errors.append("Residual no-exact total drifted")
+    if residual.get("no_exact_public_overlap", {}).get("classes") != expected_no_exact:
+        errors.append("Residual no-exact classes drifted")
+    residual_boundary = residual.get("authority_boundary", {})
+    if residual_boundary.get("no_exact_is_conflict") is not False:
+        errors.append("No-exact public overlap must not become SOURCE_CONFLICT automatically")
+    if residual_boundary.get("unscoped_exact_is_promotable") is not False:
+        errors.append("Unscoped exact overlap must remain non-promotable")
+    if residual_boundary.get("legends_or_non_11_reuse_promotes_current_rules") is not False:
+        errors.append("Legends/non-11 exact reuse must not promote current rules")
+    if residual_boundary.get("app_codex_inference_allowed") is not False:
+        errors.append("Residual classification must not infer app/Codex wording")
+    if residual.get("summary", {}).get("promoted_units") != 0:
+        errors.append("Residual classification must promote zero units")
+    if residual.get("summary", {}).get("semantic_conflicts_created") != 0:
+        errors.append("Residual classification must create zero semantic conflicts")
+
+    current_layer = expansion_current.get("official_public_structured_normalization_expansion", {})
+    if current_layer.get("state") != "PASS_SCOPED_EXPANSION_V1":
+        errors.append("Current rules structured normalization expansion state drifted")
+    if current_layer.get("core_rules_structure", {}).get("rule_reference_families") != 24:
+        errors.append("Current rules Core structure family count drifted")
+    if current_layer.get("residual_classification", {}).get("no_exact_total") != 7936:
+        errors.append("Current rules residual no-exact count drifted")
+    if current_layer.get("current_normalized_factions_change") != 0:
+        errors.append("Structured normalization expansion must not change faction coverage")
+    core_current = expansion_current.get("source_currentness", {}).get("core_rules_content", {})
+    if core_current.get("state") != "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1":
+        errors.append("Core Rules currentness state did not advance to section structure v1")
+    if core_current.get("normative_structured_normalization") != "SECTION_LEVEL_COMPLETE_PARAGRAPH_AST_PENDING":
+        errors.append("Core Rules structured normalization boundary drifted")
+
+    expansion_profile = expansion_gate.get("scope_profiles", {}).get("official_public_structured_normalization_expansion", {})
+    if expansion_profile.get("content_state") != "PASS_SCOPED_EXPANSION_V1":
+        errors.append("Currentness gate structured expansion profile must PASS")
+    if expansion_profile.get("core_rule_reference_families") != 24:
+        errors.append("Currentness gate Core family count drifted")
+    if expansion_profile.get("promoted_units") != 0 or expansion_profile.get("semantic_conflicts_created") != 0:
+        errors.append("Currentness gate residual classification must remain non-promoting/non-conflicting")
+
+    expansion_global = expansion_cov.get("global", {})
+    if expansion_cov.get("status") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_V1_COMPLETE":
+        errors.append("Coverage status did not advance after structured normalization expansion")
+    if expansion_global.get("official_public_core_rule_reference_families") != 24:
+        errors.append("Coverage Core family count drifted")
+    if expansion_global.get("official_public_core_rule_reference_count") != 141:
+        errors.append("Coverage Core rule-reference count drifted")
+    if expansion_global.get("official_public_unscoped_exact_total") != 1566:
+        errors.append("Coverage unscoped exact total drifted")
+    if expansion_global.get("official_public_no_exact_total") != 7936:
+        errors.append("Coverage no-exact total drifted")
+    if expansion_global.get("official_public_residual_promoted_units") != 0:
+        errors.append("Coverage residual promotion count must remain zero")
+    if expansion_global.get("official_public_residual_semantic_conflicts_created") != 0:
+        errors.append("Coverage residual semantic conflicts must remain zero")
+    if expansion_global.get("current_normalized_factions") != 0:
+        errors.append("Structured normalization expansion must preserve current_normalized_factions=0")
+    if expansion_global.get("full_normative_semantic_factions") != 0:
+        errors.append("Structured normalization expansion must preserve full_normative_semantic_factions=0")
+
+    forbidden_structured_text_keys = {"text", "description", "rules_text", "official_text", "mirror_text", "page_text", "prose"}
+    def _check_structured_no_long_text(value, path="root"):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                if key in forbidden_structured_text_keys:
+                    errors.append(f"Structured normalization vendored forbidden long-text field: {path}.{key}")
+                    continue
+                _check_structured_no_long_text(child, f"{path}.{key}")
+        elif isinstance(value, list):
+            for idx, child in enumerate(value):
+                _check_structured_no_long_text(child, f"{path}[{idx}]")
+    _check_structured_no_long_text(core_structure_snapshot)
+    _check_structured_no_long_text(residual_snapshot)
+
+    required_expansion_files = [
+        ROOT / "docs" / "OFFICIAL_CORE_RULES_STRUCTURE_MODEL.md",
+        ROOT / "docs" / "OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_MODEL.md",
+        ROOT / "schemas" / "core_rules_structure_snapshot.schema.json",
+        ROOT / "schemas" / "public_overlap_residual_classification.schema.json",
+        ROOT / "tools" / "build_core_rules_structure.py",
+        ROOT / "tools" / "classify_public_overlap_residuals.py",
+        ROOT / "tests" / "test_core_rules_structure.py",
+        ROOT / "tests" / "test_public_overlap_residual_classification.py",
+        ROOT / ".github" / "workflows" / "core-rules-structured-normalization.yml",
+        ROOT / ".github" / "workflows" / "public-overlap-residual-classification.yml",
+    ]
+    for path in required_expansion_files:
+        if not path.exists():
+            errors.append(f"Missing structured normalization expansion artifact: {path.relative_to(ROOT)}")
+except Exception as exc:
+    errors.append(f"Official-public structured normalization expansion validation failure: {exc}")
+
 
 # 4. Custodes legacy normalized inventory invariants.
 custodes_path = (

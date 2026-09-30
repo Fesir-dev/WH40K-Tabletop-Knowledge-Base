@@ -1,0 +1,1073 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "snapshot_date": "2026-09-30",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "structure_version": "CORE_RULES_SECTION_STRUCTURE_V1",
+  "document": {
+    "document_id": "GW_11E_CORE_RULES_PUBLIC",
+    "title": "Warhammer 40,000 Core Rules",
+    "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+    "page_count": 88,
+    "source_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf"
+  },
+  "source_verification": {
+    "binary_sha256_match": true,
+    "page_semantic_fingerprints_match": 88,
+    "document_semantic_sha256_match": true,
+    "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+  },
+  "structure_mode": "HEADING_CANDIDATE_PRIMARY_TRIVIAL_OUTLINE",
+  "summary": {
+    "sections": 80,
+    "root_sections": 80,
+    "max_depth": 0,
+    "sections_by_depth": {
+      "0": 80
+    },
+    "pages_represented": 88,
+    "heading_candidate_pages": 80,
+    "heading_candidate_count": 602,
+    "rule_reference_families": 24,
+    "rule_reference_family_ids": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+    ],
+    "rule_reference_families_complete_01_24": true,
+    "rule_reference_count": 141
+  },
+  "root_sections": [
+    {
+      "section_key": "core-rules--d0--p1--n1",
+      "title": "CORE RULES",
+      "page_start": 1,
+      "page_end": 1,
+      "children": 0
+    },
+    {
+      "section_key": "introduction-pg-4-5--d0--p2--n2",
+      "title": "INTRODUCTION pg 4-5",
+      "page_start": 2,
+      "page_end": 3,
+      "children": 0
+    },
+    {
+      "section_key": "introduction--d0--p4--n3",
+      "title": "INTRODUCTION",
+      "page_start": 4,
+      "page_end": 4,
+      "children": 0
+    },
+    {
+      "section_key": "warhammer--d0--p5--n4",
+      "title": "WARHAMMER",
+      "page_start": 5,
+      "page_end": 6,
+      "children": 0
+    },
+    {
+      "section_key": "basic-rules--d0--p7--n5",
+      "title": "BASIC RULES",
+      "page_start": 7,
+      "page_end": 7,
+      "children": 0
+    },
+    {
+      "section_key": "core-concepts--d0--p8--n6",
+      "title": "CORE CONCEPTS",
+      "page_start": 8,
+      "page_end": 8,
+      "children": 0
+    },
+    {
+      "section_key": "measuring-distances-01-04--d0--p9--n7",
+      "title": "MEASURING DISTANCES 01.04",
+      "page_start": 9,
+      "page_end": 9,
+      "children": 0
+    },
+    {
+      "section_key": "datasheets--d0--p10--n8",
+      "title": "DATASHEETS",
+      "page_start": 10,
+      "page_end": 10,
+      "children": 0
+    },
+    {
+      "section_key": "boyz--d0--p11--n9",
+      "title": "BOYZ",
+      "page_start": 11,
+      "page_end": 11,
+      "children": 0
+    },
+    {
+      "section_key": "moving--d0--p12--n10",
+      "title": "MOVING",
+      "page_start": 12,
+      "page_end": 12,
+      "children": 0
+    },
+    {
+      "section_key": "random-movement--d0--p13--n11",
+      "title": "► Random Movement",
+      "page_start": 13,
+      "page_end": 13,
+      "children": 0
+    },
+    {
+      "section_key": "set-up-03-02--d0--p14--n12",
+      "title": "SET UP 03.02",
+      "page_start": 14,
+      "page_end": 14,
+      "children": 0
+    },
+    {
+      "section_key": "coherency--d0--p15--n13",
+      "title": "COHERENCY",
+      "page_start": 15,
+      "page_end": 15,
+      "children": 0
+    },
+    {
+      "section_key": "models-without--d0--p16--n14",
+      "title": "MODELS WITHOUT",
+      "page_start": 16,
+      "page_end": 16,
+      "children": 0
+    },
+    {
+      "section_key": "3-resolve-attacks-04-03--d0--p17--n15",
+      "title": "3 RESOLVE ATTACKS 04.03",
+      "page_start": 17,
+      "page_end": 17,
+      "children": 0
+    },
+    {
+      "section_key": "attack-sequence--d0--p18--n16",
+      "title": "ATTACK SEQUENCE",
+      "page_start": 18,
+      "page_end": 18,
+      "children": 0
+    },
+    {
+      "section_key": "current-allocation--d0--p19--n17",
+      "title": "CURRENT ALLOCATION",
+      "page_start": 19,
+      "page_end": 19,
+      "children": 0
+    },
+    {
+      "section_key": "1-select-weapons--d0--p20--n18",
+      "title": "1. SELECT WEAPONS",
+      "page_start": 20,
+      "page_end": 20,
+      "children": 0
+    },
+    {
+      "section_key": "1-hit-rolls--d0--p21--n19",
+      "title": "1. HIT ROLLS",
+      "page_start": 21,
+      "page_end": 21,
+      "children": 0
+    },
+    {
+      "section_key": "attack-sequence-examples--d0--p22--n20",
+      "title": "ATTACK SEQUENCE EXAMPLES",
+      "page_start": 22,
+      "page_end": 22,
+      "children": 0
+    },
+    {
+      "section_key": "1-create-groups-and-declare-order--d0--p23--n21",
+      "title": "1. CREATE GROUPS AND DECLARE ORDER",
+      "page_start": 23,
+      "page_end": 23,
+      "children": 0
+    },
+    {
+      "section_key": "visibility-06-01--d0--p24--n22",
+      "title": "VISIBILITY 06.01",
+      "page_start": 24,
+      "page_end": 24,
+      "children": 0
+    },
+    {
+      "section_key": "model-visible--d0--p25--n23",
+      "title": "MODEL VISIBLE",
+      "page_start": 25,
+      "page_end": 26,
+      "children": 0
+    },
+    {
+      "section_key": "the-battle-round--d0--p27--n24",
+      "title": "THE BATTLE ROUND",
+      "page_start": 27,
+      "page_end": 27,
+      "children": 0
+    },
+    {
+      "section_key": "the-battle-round--d0--p28--n25",
+      "title": "THE BATTLE ROUND",
+      "page_start": 28,
+      "page_end": 28,
+      "children": 0
+    },
+    {
+      "section_key": "start-of-turn-step--d0--p29--n26",
+      "title": "START OF TURN STEP",
+      "page_start": 29,
+      "page_end": 29,
+      "children": 0
+    },
+    {
+      "section_key": "command-phase--d0--p30--n27",
+      "title": "COMMAND PHASE",
+      "page_start": 30,
+      "page_end": 30,
+      "children": 0
+    },
+    {
+      "section_key": "battle-shock--d0--p31--n28",
+      "title": "BATTLE-SHOCK",
+      "page_start": 31,
+      "page_end": 31,
+      "children": 0
+    },
+    {
+      "section_key": "movement-phase--d0--p32--n29",
+      "title": "MOVEMENT PHASE",
+      "page_start": 32,
+      "page_end": 32,
+      "children": 0
+    },
+    {
+      "section_key": "remain-stationary-09-04--d0--p33--n30",
+      "title": "REMAIN STATIONARY 09.04",
+      "page_start": 33,
+      "page_end": 33,
+      "children": 0
+    },
+    {
+      "section_key": "shooting-phase--d0--p34--n31",
+      "title": "SHOOTING PHASE",
+      "page_start": 34,
+      "page_end": 34,
+      "children": 0
+    },
+    {
+      "section_key": "shoot--d0--p35--n32",
+      "title": "SHOOT",
+      "page_start": 35,
+      "page_end": 35,
+      "children": 0
+    },
+    {
+      "section_key": "charge-phase--d0--p36--n33",
+      "title": "CHARGE PHASE",
+      "page_start": 36,
+      "page_end": 36,
+      "children": 0
+    },
+    {
+      "section_key": "charge-move-11-04--d0--p37--n34",
+      "title": "CHARGE MOVE 11.04",
+      "page_start": 37,
+      "page_end": 37,
+      "children": 0
+    },
+    {
+      "section_key": "fight-phase--d0--p38--n35",
+      "title": "FIGHT PHASE",
+      "page_start": 38,
+      "page_end": 38,
+      "children": 0
+    },
+    {
+      "section_key": "pile-in-moves--d0--p39--n36",
+      "title": "PILE-IN MOVES",
+      "page_start": 39,
+      "page_end": 39,
+      "children": 0
+    },
+    {
+      "section_key": "fight-phase--d0--p40--n37",
+      "title": "FIGHT PHASE",
+      "page_start": 40,
+      "page_end": 40,
+      "children": 0
+    },
+    {
+      "section_key": "overrun-fight--d0--p41--n38",
+      "title": "OVERRUN FIGHT",
+      "page_start": 41,
+      "page_end": 41,
+      "children": 0
+    },
+    {
+      "section_key": "fight-phase--d0--p42--n39",
+      "title": "FIGHT PHASE",
+      "page_start": 42,
+      "page_end": 42,
+      "children": 0
+    },
+    {
+      "section_key": "ongoing-consolidation--d0--p43--n40",
+      "title": "ONGOING CONSOLIDATION",
+      "page_start": 43,
+      "page_end": 44,
+      "children": 0
+    },
+    {
+      "section_key": "battlefields--d0--p45--n41",
+      "title": "BATTLEFIELDS",
+      "page_start": 45,
+      "page_end": 45,
+      "children": 0
+    },
+    {
+      "section_key": "terrain--d0--p46--n42",
+      "title": "TERRAIN",
+      "page_start": 46,
+      "page_end": 46,
+      "children": 0
+    },
+    {
+      "section_key": "terrain-placed-on-a-mat--d0--p47--n43",
+      "title": "TERRAIN PLACED ON A MAT",
+      "page_start": 47,
+      "page_end": 47,
+      "children": 0
+    },
+    {
+      "section_key": "13-terrain--d0--p48--n44",
+      "title": "13 TERRAIN",
+      "page_start": 48,
+      "page_end": 48,
+      "children": 0
+    },
+    {
+      "section_key": "terrain-and-movement--d0--p49--n45",
+      "title": "TERRAIN AND MOVEMENT",
+      "page_start": 49,
+      "page_end": 49,
+      "children": 0
+    },
+    {
+      "section_key": "terrain-and-visibility-13-07--d0--p50--n46",
+      "title": "TERRAIN AND VISIBILITY 13.07",
+      "page_start": 50,
+      "page_end": 50,
+      "children": 0
+    },
+    {
+      "section_key": "hidden-and-obscuringbenefit-of-cover--d0--p51--n47",
+      "title": "HIDDEN AND OBSCURINGBENEFIT OF COVER",
+      "page_start": 51,
+      "page_end": 51,
+      "children": 0
+    },
+    {
+      "section_key": "terrain-objectives-14-01--d0--p52--n48",
+      "title": "TERRAIN OBJECTIVES 14.01",
+      "page_start": 52,
+      "page_end": 52,
+      "children": 0
+    },
+    {
+      "section_key": "a-terrain-area--d0--p53--n49",
+      "title": "a Terrain Area",
+      "page_start": 53,
+      "page_end": 53,
+      "children": 0
+    },
+    {
+      "section_key": "using-stratagems-15-01--d0--p54--n50",
+      "title": "USING STRATAGEMS 15.01",
+      "page_start": 54,
+      "page_end": 54,
+      "children": 0
+    },
+    {
+      "section_key": "rapid-ingress-15-07-1cpcore-stratagem--d0--p55--n51",
+      "title": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
+      "page_start": 55,
+      "page_end": 55,
+      "children": 0
+    },
+    {
+      "section_key": "command-re-roll-15-02-1cp--d0--p56--n52",
+      "title": "COMMAND RE-ROLL 15.02 1CP",
+      "page_start": 56,
+      "page_end": 56,
+      "children": 0
+    },
+    {
+      "section_key": "rapid-ingress-15-07-1cp--d0--p57--n53",
+      "title": "RAPID INGRESS 15.07 1CP",
+      "page_start": 57,
+      "page_end": 57,
+      "children": 0
+    },
+    {
+      "section_key": "actions--d0--p58--n54",
+      "title": "ACTIONS",
+      "page_start": 58,
+      "page_end": 60,
+      "children": 0
+    },
+    {
+      "section_key": "advanced-rules--d0--p61--n55",
+      "title": "ADVANCED RULES",
+      "page_start": 61,
+      "page_end": 61,
+      "children": 0
+    },
+    {
+      "section_key": "17-monsters-and-vehicles--d0--p62--n56",
+      "title": "17 MONSTERS AND VEHICLES",
+      "page_start": 62,
+      "page_end": 62,
+      "children": 0
+    },
+    {
+      "section_key": "engaged-monsters-vehicles-shooting--d0--p63--n57",
+      "title": "ENGAGED MONSTERS/VEHICLES – SHOOTING",
+      "page_start": 63,
+      "page_end": 63,
+      "children": 0
+    },
+    {
+      "section_key": "transport-capacity-18-01--d0--p64--n58",
+      "title": "TRANSPORT CAPACITY 18.01",
+      "page_start": 64,
+      "page_end": 64,
+      "children": 0
+    },
+    {
+      "section_key": "disembark-move-18-04--d0--p65--n59",
+      "title": "DISEMBARK MOVE 18.04",
+      "page_start": 65,
+      "page_end": 65,
+      "children": 0
+    },
+    {
+      "section_key": "19-attached-units--d0--p66--n60",
+      "title": "19 ATTACHED UNITS",
+      "page_start": 66,
+      "page_end": 66,
+      "children": 0
+    },
+    {
+      "section_key": "keywords-in-attached-units-19-03--d0--p67--n61",
+      "title": "KEYWORDS IN ATTACHED UNITS 19.03",
+      "page_start": 67,
+      "page_end": 67,
+      "children": 0
+    },
+    {
+      "section_key": "strategic-reserves--d0--p68--n62",
+      "title": "STRATEGIC RESERVES",
+      "page_start": 68,
+      "page_end": 68,
+      "children": 0
+    },
+    {
+      "section_key": "arriving-from--d0--p69--n63",
+      "title": "ARRIVING FROM",
+      "page_start": 69,
+      "page_end": 69,
+      "children": 0
+    },
+    {
+      "section_key": "surge-moves-21-01--d0--p70--n64",
+      "title": "SURGE MOVES 21.01",
+      "page_start": 70,
+      "page_end": 70,
+      "children": 0
+    },
+    {
+      "section_key": "surge-moves--d0--p71--n65",
+      "title": "SURGE MOVES",
+      "page_start": 71,
+      "page_end": 71,
+      "children": 0
+    },
+    {
+      "section_key": "aura-abilities-22-01--d0--p72--n66",
+      "title": "AURA ABILITIES 22.01",
+      "page_start": 72,
+      "page_end": 72,
+      "children": 0
+    },
+    {
+      "section_key": "plunging-fire-22-05--d0--p73--n67",
+      "title": "PLUNGING FIRE 22.05",
+      "page_start": 73,
+      "page_end": 73,
+      "children": 0
+    },
+    {
+      "section_key": "aircraft--d0--p74--n68",
+      "title": "AIRCRAFT",
+      "page_start": 74,
+      "page_end": 76,
+      "children": 0
+    },
+    {
+      "section_key": "reference--d0--p77--n69",
+      "title": "REFERENCE",
+      "page_start": 77,
+      "page_end": 77,
+      "children": 0
+    },
+    {
+      "section_key": "core-abilities--d0--p78--n70",
+      "title": "CORE ABILITIES",
+      "page_start": 78,
+      "page_end": 78,
+      "children": 0
+    },
+    {
+      "section_key": "anti-24-03--d0--p79--n71",
+      "title": "[ANTI] 24.03",
+      "page_start": 79,
+      "page_end": 79,
+      "children": 0
+    },
+    {
+      "section_key": "close-quarters-24-07--d0--p80--n72",
+      "title": "[CLOSE-QUARTERS] 24.07",
+      "page_start": 80,
+      "page_end": 80,
+      "children": 0
+    },
+    {
+      "section_key": "extra-attacks-24-11--d0--p81--n73",
+      "title": "[EXTRA ATTACKS] 24.11",
+      "page_start": 81,
+      "page_end": 81,
+      "children": 0
+    },
+    {
+      "section_key": "heavy-24-16--d0--p82--n74",
+      "title": "[HEAVY] 24.16",
+      "page_start": 82,
+      "page_end": 82,
+      "children": 0
+    },
+    {
+      "section_key": "lone-operative-24-24--d0--p83--n75",
+      "title": "LONE OPERATIVE 24.24",
+      "page_start": 83,
+      "page_end": 83,
+      "children": 0
+    },
+    {
+      "section_key": "precision-24-28--d0--p84--n76",
+      "title": "[PRECISION] 24.28",
+      "page_start": 84,
+      "page_end": 84,
+      "children": 0
+    },
+    {
+      "section_key": "stealth-24-33--d0--p85--n77",
+      "title": "STEALTH 24.33",
+      "page_start": 85,
+      "page_end": 85,
+      "children": 0
+    },
+    {
+      "section_key": "rules-appendix--d0--p86--n78",
+      "title": "RULES APPENDIX",
+      "page_start": 86,
+      "page_end": 86,
+      "children": 0
+    },
+    {
+      "section_key": "adding-a-new-unit-to-your-army--d0--p87--n79",
+      "title": "ADDING A NEW UNIT TO YOUR ARMY",
+      "page_start": 87,
+      "page_end": 87,
+      "children": 0
+    },
+    {
+      "section_key": "rules-appendixobjectives-not-within--d0--p88--n80",
+      "title": "RULES APPENDIXOBJECTIVES NOT WITHIN",
+      "page_start": 88,
+      "page_end": 88,
+      "children": 0
+    }
+  ],
+  "rule_reference_families": [
+    {
+      "family_id": "01",
+      "canonical_anchor_page": 9,
+      "page_start": 8,
+      "page_end": 9,
+      "rule_refs": 6,
+      "anchor_labels": [
+        {
+          "page": 9,
+          "label": "MEASURING DISTANCES 01.04",
+          "label_sha256": "563691e7a6f36f0f9e830e6e4cf98af562a69b4243a9ee8289bd7b3a126d5ba2"
+        },
+        {
+          "page": 9,
+          "label": "DICE 01.05",
+          "label_sha256": "a8795731e463874259468984d4d5b2ab8279b45e3a3571e5710d7fbf8b98d58d"
+        }
+      ]
+    },
+    {
+      "family_id": "02",
+      "canonical_anchor_page": 10,
+      "page_start": 10,
+      "page_end": 11,
+      "rule_refs": 5,
+      "anchor_labels": [
+        {
+          "page": 10,
+          "label": "1 DATASHEET NAME 02.01",
+          "label_sha256": "96e97f63cae1ac08d1b3b751d36ec7843d22637fed7e38ffe8ea3fbd5fcb03f7"
+        },
+        {
+          "page": 10,
+          "label": "2 PROFILES 02.02",
+          "label_sha256": "65ca94682567db9dc4e55153698bea2fa9d270ed1e1050d1239ee7e927c9b6bc"
+        }
+      ]
+    },
+    {
+      "family_id": "03",
+      "canonical_anchor_page": 14,
+      "page_start": 12,
+      "page_end": 15,
+      "rule_refs": 4,
+      "anchor_labels": [
+        {
+          "page": 14,
+          "label": "SET UP 03.02",
+          "label_sha256": "8698bc7e82c647c3ec12788dc6b7183fa6ec0d88fff0bb1aa11bf04e276bc488"
+        },
+        {
+          "page": 14,
+          "label": "COHERENCY 03.03",
+          "label_sha256": "e96860ae56620a8510e33b78dd76d82c73c6af0e8438de4b556120ea1fcfa5bd"
+        }
+      ]
+    },
+    {
+      "family_id": "04",
+      "canonical_anchor_page": 16,
+      "page_start": 16,
+      "page_end": 17,
+      "rule_refs": 2,
+      "anchor_labels": [
+        {
+          "page": 16,
+          "label": "1 SELECT WEAPONS 04.01",
+          "label_sha256": "7eb15db73c9bf63ac420e0954ea5745e62aefa2b6c6aaf514a7c33655e5d38b6"
+        }
+      ]
+    },
+    {
+      "family_id": "05",
+      "canonical_anchor_page": 18,
+      "page_start": 18,
+      "page_end": 23,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 18,
+          "label": "1 HIT ROLLS 05.01",
+          "label_sha256": "459910561e71860ef683618de953a1caff245f2676968fd39e8f9c2dcab365c3"
+        },
+        {
+          "page": 18,
+          "label": "2 WOUND ROLLS 05.02",
+          "label_sha256": "3fa30d783fb30a8922fc0de4814ec86a6a135961474b561b43bb1b437baef7d1"
+        }
+      ]
+    },
+    {
+      "family_id": "06",
+      "canonical_anchor_page": 24,
+      "page_start": 24,
+      "page_end": 27,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 24,
+          "label": "VISIBILITY 06.01",
+          "label_sha256": "cc8579c50a6a27041f0fa0420ec05daa643920a56691feef9b9801cca1ec7764"
+        },
+        {
+          "page": 24,
+          "label": "MORTAL WOUNDS 06.02",
+          "label_sha256": "09b82eebfb04de714667fa31e04b755c08950615fc4d3015a8b4dabdc4e60cc8"
+        }
+      ]
+    },
+    {
+      "family_id": "07",
+      "canonical_anchor_page": 28,
+      "page_start": 28,
+      "page_end": 29,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 28,
+          "label": "1 START OF BATTLE ROUND 07.01",
+          "label_sha256": "9e5674b61bed99c7d0dfc16d859fc81ed526e48ee1eef9c3f9e87fffe96bba8c"
+        },
+        {
+          "page": 28,
+          "label": "2 PLAYER TURNS 07.02",
+          "label_sha256": "f947aab198789011611fbbe4797fb61033465c2fbfb738d33c1c8aa94358cd5c"
+        }
+      ]
+    },
+    {
+      "family_id": "08",
+      "canonical_anchor_page": 30,
+      "page_start": 30,
+      "page_end": 31,
+      "rule_refs": 5,
+      "anchor_labels": [
+        {
+          "page": 30,
+          "label": "1 START OF COMMAND PHASE 08.01",
+          "label_sha256": "b7d3d1fd9f56d18ebf803b21f54c11eecf022d729a0a5179d6e50babca61730e"
+        },
+        {
+          "page": 30,
+          "label": "2 GAIN CORE CP 08.02",
+          "label_sha256": "e46bc00beff1378838570360b0c8098bc8dcc6ac245e6fa84ad69705023af75e"
+        }
+      ]
+    },
+    {
+      "family_id": "09",
+      "canonical_anchor_page": 33,
+      "page_start": 32,
+      "page_end": 33,
+      "rule_refs": 7,
+      "anchor_labels": [
+        {
+          "page": 33,
+          "label": "REMAIN STATIONARY 09.04",
+          "label_sha256": "b5d8b7ed494554824b61a5e47e90634445e9c2d4a233f885f7c6d92564b3b3c6"
+        },
+        {
+          "page": 33,
+          "label": "NORMAL MOVE 09.05",
+          "label_sha256": "e1f37ac970f42275e4d8878d5bd6423cd8a472a82d971bcd4a0a3b69a8bd3e3a"
+        }
+      ]
+    },
+    {
+      "family_id": "10",
+      "canonical_anchor_page": 34,
+      "page_start": 34,
+      "page_end": 35,
+      "rule_refs": 6,
+      "anchor_labels": [
+        {
+          "page": 34,
+          "label": "1 START OF SHOOTING PHASE 10.01",
+          "label_sha256": "6d27b89fd2533c8936f1f0016cd7412d151157c3567a55ad5af3da60872daec2"
+        },
+        {
+          "page": 34,
+          "label": "2 SHOOT 10.02",
+          "label_sha256": "71f2e656e7b36a8ae0b954d822415b1842b95fcbd688eb1205efd63825390094"
+        }
+      ]
+    },
+    {
+      "family_id": "11",
+      "canonical_anchor_page": 36,
+      "page_start": 36,
+      "page_end": 37,
+      "rule_refs": 4,
+      "anchor_labels": [
+        {
+          "page": 36,
+          "label": "1 START OF CHARGE PHASE 11.01",
+          "label_sha256": "fe4664c7607919a55299407fe1f853c2a2ca9adbe7c88b2a104cc099a42138cf"
+        },
+        {
+          "page": 36,
+          "label": "2 CHARGE 11.02",
+          "label_sha256": "670f491639b45e42f65af3ee06f99925ba05278d8952bd067572f757de1dbf46"
+        }
+      ]
+    },
+    {
+      "family_id": "12",
+      "canonical_anchor_page": 38,
+      "page_start": 38,
+      "page_end": 45,
+      "rule_refs": 9,
+      "anchor_labels": [
+        {
+          "page": 38,
+          "label": "1 START OF FIGHT PHASE 12.01",
+          "label_sha256": "c9c2fe33c8a3d44d82876af9537d9a8ee726b94b519a03d8935e5c96ec11748f"
+        },
+        {
+          "page": 38,
+          "label": "2 PILE IN 12.02",
+          "label_sha256": "00f61d9248eee924f9419bdba2faa83eb7c6b0386913b4b19148b3605639e3b4"
+        }
+      ]
+    },
+    {
+      "family_id": "13",
+      "canonical_anchor_page": 46,
+      "page_start": 46,
+      "page_end": 51,
+      "rule_refs": 11,
+      "anchor_labels": [
+        {
+          "page": 46,
+          "label": "PLACING TERRAIN 13.01",
+          "label_sha256": "e6527bbab3cbae40245c8d49281a1f9bec76cf0be688c684f4191b48b7c5a377"
+        },
+        {
+          "page": 46,
+          "label": "TERRAIN CATEGORIES 13.02",
+          "label_sha256": "a1282bfb3a86707ad2822cf7a1145ecc4683a3ea5e772dafd0883c92ea02d318"
+        }
+      ]
+    },
+    {
+      "family_id": "14",
+      "canonical_anchor_page": 52,
+      "page_start": 52,
+      "page_end": 53,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 52,
+          "label": "TERRAIN OBJECTIVES 14.01",
+          "label_sha256": "a163b09225fea51c6c7ecf40662223f78034c949cbe0eac7b7e1f3bd474b28ac"
+        },
+        {
+          "page": 52,
+          "label": "LEVEL OF CONTROL 14.02",
+          "label_sha256": "01ba67dd19197584495935b43a2da51097c39b35ed63becea8a95ea94c5adb4c"
+        }
+      ]
+    },
+    {
+      "family_id": "15",
+      "canonical_anchor_page": 55,
+      "page_start": 54,
+      "page_end": 57,
+      "rule_refs": 8,
+      "anchor_labels": [
+        {
+          "page": 55,
+          "label": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
+          "label_sha256": "ff184dfabf47a6b011932cdc27925152d2a42eea91cf7b96401be44372133bbc"
+        },
+        {
+          "page": 55,
+          "label": "FIRE OVERWATCH 15.08 1CPCORE STRATAGEM",
+          "label_sha256": "a35a5279d4d913a43885a5be035130d62c2ca2c867449fda1e114b68ec73ce99"
+        }
+      ]
+    },
+    {
+      "family_id": "16",
+      "canonical_anchor_page": 58,
+      "page_start": 58,
+      "page_end": 61,
+      "rule_refs": 1,
+      "anchor_labels": [
+        {
+          "page": 58,
+          "label": "PERFORMING ACTIONS 16.01",
+          "label_sha256": "caabe4570d0f1d12cdae9a06fafa556e655fca458e688d522d9ee2c92bdd61f1"
+        }
+      ]
+    },
+    {
+      "family_id": "17",
+      "canonical_anchor_page": 62,
+      "page_start": 62,
+      "page_end": 63,
+      "rule_refs": 1,
+      "anchor_labels": [
+        {
+          "page": 62,
+          "label": "FRAME 17.02",
+          "label_sha256": "7ca78d4e084413b1dad7c0919ab85ca82356746c909d79dddc590834a6fdcbd1"
+        }
+      ]
+    },
+    {
+      "family_id": "18",
+      "canonical_anchor_page": 64,
+      "page_start": 64,
+      "page_end": 65,
+      "rule_refs": 5,
+      "anchor_labels": [
+        {
+          "page": 64,
+          "label": "TRANSPORT CAPACITY 18.01",
+          "label_sha256": "29861a878336b59d4aa1258dcb7b198754c00641236fd359a950d102774f98a4"
+        },
+        {
+          "page": 64,
+          "label": "EMBARKING 18.02",
+          "label_sha256": "c30b56db8c6ab55f0e782006924d739c88da8317bd5130ecde7549d5d522784e"
+        }
+      ]
+    },
+    {
+      "family_id": "19",
+      "canonical_anchor_page": 66,
+      "page_start": 66,
+      "page_end": 67,
+      "rule_refs": 4,
+      "anchor_labels": [
+        {
+          "page": 66,
+          "label": "FORMING ATTACHED UNITS 19.01",
+          "label_sha256": "8c5c19085cdbe133fa48b98948a943585284662ade1020ac05ddd79da7d644d8"
+        },
+        {
+          "page": 66,
+          "label": "ATTACKING ATTACHED UNITS 19.02",
+          "label_sha256": "3a65453a62dad444c8fb9ce87619cfaa4abb56788da32234195cfe3bba4ae044"
+        }
+      ]
+    },
+    {
+      "family_id": "20",
+      "canonical_anchor_page": 68,
+      "page_start": 68,
+      "page_end": 69,
+      "rule_refs": 2,
+      "anchor_labels": [
+        {
+          "page": 68,
+          "label": "REPOSITIONED UNITS 20.02",
+          "label_sha256": "7089ad8613311e8f0994b4029763748ab091c301992514a29b87baf693afbd25"
+        }
+      ]
+    },
+    {
+      "family_id": "21",
+      "canonical_anchor_page": 70,
+      "page_start": 70,
+      "page_end": 71,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 70,
+          "label": "SURGE MOVES 21.01",
+          "label_sha256": "3789b751fba0b46f405834b8f929353395f48d43bc63411aa162faf512d2605a"
+        },
+        {
+          "page": 70,
+          "label": "SURGE MOVE 21.02",
+          "label_sha256": "46ace89af25067006635fe0ffd50eb26a816834d68163dc237e2df770c5da393"
+        }
+      ]
+    },
+    {
+      "family_id": "22",
+      "canonical_anchor_page": 72,
+      "page_start": 72,
+      "page_end": 73,
+      "rule_refs": 5,
+      "anchor_labels": [
+        {
+          "page": 72,
+          "label": "AURA ABILITIES 22.01",
+          "label_sha256": "d579f7c134fc9f7a7151fdaf531aaf2b6a6e9c01cdc94ac66ff448f73c0eb18e"
+        },
+        {
+          "page": 72,
+          "label": "FACTION ABILITIES 22.02",
+          "label_sha256": "cf31c0880dd356b2cbb9d120f2e77e7a443bc82d70414b9737b86432bd85ca3e"
+        }
+      ]
+    },
+    {
+      "family_id": "23",
+      "canonical_anchor_page": 74,
+      "page_start": 74,
+      "page_end": 77,
+      "rule_refs": 4,
+      "anchor_labels": [
+        {
+          "page": 74,
+          "label": "DEPLOYMENT 23.01",
+          "label_sha256": "d21e23b006e1c7a7eae36a71cde1e63ba6f0d93371ce0f19709ed33458c836f8"
+        },
+        {
+          "page": 74,
+          "label": "MOVEMENT 23.02",
+          "label_sha256": "3b58c537976c4a630ea78f5d4495dd3ac9df1ccee154585d00f1a2db33419471"
+        }
+      ]
+    },
+    {
+      "family_id": "24",
+      "canonical_anchor_page": 82,
+      "page_start": 78,
+      "page_end": 88,
+      "rule_refs": 37,
+      "anchor_labels": [
+        {
+          "page": 82,
+          "label": "[HEAVY] 24.16",
+          "label_sha256": "7478cbd48ce60e14387b08d15be1e9ae9f04c5886a5a192fbd12244adef02e42"
+        },
+        {
+          "page": 82,
+          "label": "HOVER 24.17",
+          "label_sha256": "993bd5e9ef64f9e6fbeb88738561a3f0b5d62690ec7dfeec9e21174102e6e800"
+        }
+      ]
+    }
+  ],
+  "authority_boundary": {
+    "section_level_structure_complete_for_public_pdf": true,
+    "flat_heading_map_complete_for_public_pdf": true,
+    "rule_reference_family_map_complete_01_24": true,
+    "hierarchical_structure_complete": false,
+    "paragraph_level_rules_ast_complete": false,
+    "app_codex_equivalence": "NOT_CLAIMED",
+    "full_faction_promotion": false,
+    "current_normalized_factions_change": 0,
+    "copyright_policy": "Short headings, hierarchy, page ranges and hashes only; no long rules prose committed."
+  }
+}

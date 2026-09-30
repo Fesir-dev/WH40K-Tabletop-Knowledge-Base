@@ -76,7 +76,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Audit the remaining normative/app equivalence gaps that keep `current_normalized_factions = 0`, including public Core Rules discovery, supplemental faction-pack scope, app blockers and source-to-roster provenance.
 - [x] Build copyright-safe official public semantic fingerprints for the 11E Core Rules plus all 28 verified public Faction Packs, with daily reproducibility checks and no full Codex/app equivalence claim.
 - [x] Audit official-public ↔ current-mirror semantic overlap and normalize 4,070 exact source/faction-scoped public-official semantic units without generalizing to Codex/app-only text.
-- [ ] Expand structured public-official normalization: Core Rules section model, provenance review for 1,566 exact-but-unscoped units, and classification of the remaining 7,936 non-exact public-overlap units without assuming semantic drift.
+- [x] Expand structured public-official normalization: Core Rules families 01–24 / 141 detected rule references, fail-closed review of 1,566 exact-but-unscoped units, and classification of all 7,936 non-exact public-overlap units without assuming semantic drift.
+- [ ] Atomize Core Rules rule references into a stable per-rule structural index while keeping paragraph prose external and app/Codex-only semantics pending.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary
@@ -125,6 +126,29 @@ The repository now compares the hash-verified current Wahapedia semantic project
 - official pages: **1,430**, with exact overlap on **1,268** pages.
 
 The structured snapshot is `rules/11e/snapshots/2026-09-30/official_public_overlap/index.json`. It stores identities, hashes and page provenance, not long rules prose. This milestone does **not** change `current_normalized_factions = 0`: public Faction Packs remain supplemental rather than complete Codex replacements, Core Rules still require broader section-level structured normalization, and app/Codex-only wording remains pending.
+
+
+## Official public structured normalization expansion v1
+
+Checkpoint: **2026-09-30**.
+
+The public Core Rules now have a hash-gated section structure independent of the mirror:
+
+- all **88** PDF pages revalidated against committed official fingerprints;
+- **80** sanitized page-heading anchors;
+- all numbered rule families **01–24** detected in canonical order;
+- **141** distinct numbered rule references detected;
+- section-level family structure: complete;
+- nested hierarchy / paragraph-level AST: still pending.
+
+The overlap residuals are now explicitly classified rather than left as an undifferentiated gap:
+
+- exact but unscoped: **1,566** = 21 Core-global + 426 edition-11 matches outside the object's own pack + 124 faction-only outside-own-pack + 995 non-11/Legends;
+- no exact public overlap: **7,936** = 3,467 edition-11 unresolved + 1,868 faction-only unresolved + 227 non-11/Legends + 61 no source/faction scope + 2,313 too short for safe exact auto-match;
+- units promoted by residual classification: **0**;
+- semantic conflicts created by residual classification: **0**.
+
+This closes the scoped normalization-expansion milestone without changing whole-faction normative coverage. `current_normalized_factions = 0` and `full_normative_semantic_factions = 0` remain intentional.
 
 ## Semantic access
 

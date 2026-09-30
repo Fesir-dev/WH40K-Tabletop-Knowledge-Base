@@ -41,11 +41,15 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
         complete=mfm["evidence"]["complete_roster_identities_by_dimension"]
         self.assertTrue(all(v==36 for v in complete.values()))
 
-    def test_public_core_rules_fingerprint_evidence_is_closed_but_structure_pending(self):
+    def test_public_core_rules_fingerprint_and_section_structure_are_closed(self):
         gaps={x["id"]:x for x in self.generated["gaps"]}
         core=gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]
-        self.assertEqual(core["state"],"FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING")
+        self.assertEqual(core["state"],"SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING")
         self.assertEqual(core["evidence"]["official_fingerprint_state"],"PASS")
+        self.assertEqual(core["evidence"]["section_structure_state"],"PASS_RULE_REFERENCE_FAMILIES_01_24")
+        self.assertEqual(core["evidence"]["rule_reference_families"],24)
+        self.assertEqual(core["evidence"]["rule_reference_count"],141)
+        self.assertFalse(core["evidence"]["paragraph_level_rules_ast_complete"])
         self.assertEqual(len(core["evidence"]["core_rules_binary_sha256"]),64)
         self.assertEqual(len(core["evidence"]["core_rules_semantic_sha256"]),64)
         self.assertTrue(core["evidence"]["official_public_source"]["asset_url"].startswith("https://assets.warhammer-community.com/"))
@@ -53,10 +57,15 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
     def test_public_faction_packs_are_fingerprinted_and_still_supplemental(self):
         gaps={x["id"]:x for x in self.generated["gaps"]}
         public=gaps["PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION"]
-        self.assertEqual(public["state"],"FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_EXTRACTION_PENDING")
+        self.assertEqual(public["state"],"EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING")
         self.assertEqual(public["evidence"]["verified_public_faction_pack_pdfs"],28)
         self.assertEqual(public["evidence"]["official_fingerprint_state"],"PASS")
         self.assertEqual(public["evidence"]["official_fingerprint_documents"],29)
+        self.assertEqual(public["evidence"]["promotable_scoped_units"],4070)
+        self.assertEqual(public["evidence"]["unscoped_exact_units"],1566)
+        self.assertEqual(public["evidence"]["no_exact_public_overlap_units"],7936)
+        self.assertEqual(public["evidence"]["residual_promoted_units"],0)
+        self.assertEqual(public["evidence"]["residual_semantic_conflicts_created"],0)
         full=gaps["FULL_FACTION_CODEX_APP_SEMANTICS"]
         self.assertEqual(full["evidence"]["public_faction_pack_scope"],"SUPPLEMENTS_CODEX_NOT_FULL_CODEX")
         self.assertIn("AUTHORIZED_CODEX_APP_EVIDENCE",full["state"])
@@ -82,8 +91,8 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
 
     def test_next_pipeline_does_not_promise_full_normalization(self):
         conclusion=self.generated["conclusion"]
-        self.assertEqual(conclusion["recommended_next_milestone"],"OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT")
-        self.assertIn("do not promote full-faction normalization",conclusion["expected_effect"])
+        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_REFERENCE_ATOMIZATION_V1")
+        self.assertIn("app/Codex-only semantics remain pending",conclusion["expected_effect"])
 
 
 if __name__=="__main__":
