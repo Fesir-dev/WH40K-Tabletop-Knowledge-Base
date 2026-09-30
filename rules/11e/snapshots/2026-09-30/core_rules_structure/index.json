@@ -1619,10 +1619,11 @@
   "rule_reference_families": [
     {
       "family_id": "01",
-      "section_key": "rule-family-01--p8",
-      "page_start": 8,
+      "section_key": "rule-family-01--p9",
+      "page_start": 9,
       "page_end": 9,
-      "page_range_sha256": "6c6375ce09b2d5d91e13b7d77c8be158cf54640b6d800e350350b4579d80b724",
+      "page_range_sha256": "5197f208418809e1da3413fa16a3a03c784fdaecbe2890cb57974be142aecc3e",
+      "canonical_anchor_page": 9,
       "observed_heading_pages": [
         8,
         9
@@ -1635,17 +1636,19 @@
         "01.06",
         "01.07"
       ],
+      "refs_by_page": {
+        "8": [
+          "01.01",
+          "01.02"
+        ],
+        "9": [
+          "01.04",
+          "01.05",
+          "01.06",
+          "01.07"
+        ]
+      },
       "anchor_labels": [
-        {
-          "page": 8,
-          "label": "ARMIES 01.01",
-          "label_sha256": "64a454ef2b8f8a4ba1ba276b67f3e9939fffae71ea0c952e05500cca6f6336e2"
-        },
-        {
-          "page": 8,
-          "label": "UNITS AND MODELS 01.02",
-          "label_sha256": "3583777a51ec9bb98b3283bb5635b9943e3b17d1fdb709d5e5f6367c685d0973"
-        },
         {
           "page": 9,
           "label": "MEASURING DISTANCES 01.04",
@@ -1672,8 +1675,9 @@
       "family_id": "02",
       "section_key": "rule-family-02--p10",
       "page_start": 10,
-      "page_end": 11,
-      "page_range_sha256": "ac41ad2b6bb27a5dca129957476f355440c45ef130a2cce505bc4c97a3e76de0",
+      "page_end": 13,
+      "page_range_sha256": "e03b3231799959adf32f4fbb62f7411d37ee7779b02b70b390079dbde3f4538d",
+      "canonical_anchor_page": 10,
       "observed_heading_pages": [
         10
       ],
@@ -1684,6 +1688,15 @@
         "02.04",
         "02.05"
       ],
+      "refs_by_page": {
+        "10": [
+          "02.01",
+          "02.02",
+          "02.03",
+          "02.04",
+          "02.05"
+        ]
+      },
       "anchor_labels": [
         {
           "page": 10,
@@ -1714,10 +1727,11 @@
     },
     {
       "family_id": "03",
-      "section_key": "rule-family-03--p12",
-      "page_start": 12,
+      "section_key": "rule-family-03--p14",
+      "page_start": 14,
       "page_end": 15,
-      "page_range_sha256": "f06efbbb0db9835389610b301c4d0794e5657f949a413482a06e9af112e50173",
+      "page_range_sha256": "6de29539624bcd807505a84fd0fad38f0f2e1ce1668672433621a0705c3a181f",
+      "canonical_anchor_page": 14,
       "observed_heading_pages": [
         12,
         14
@@ -1728,12 +1742,17 @@
         "03.03",
         "03.04"
       ],
+      "refs_by_page": {
+        "12": [
+          "03.01"
+        ],
+        "14": [
+          "03.02",
+          "03.03",
+          "03.04"
+        ]
+      },
       "anchor_labels": [
-        {
-          "page": 12,
-          "label": "MOVING UNITS 03.01",
-          "label_sha256": "56ee3f8ed8c70c10987bc87af4bbf185da89ddcced5c6aba4827a610485e4f3d"
-        },
         {
           "page": 14,
           "label": "SET UP 03.02",
@@ -1755,8 +1774,9 @@
       "family_id": "04",
       "section_key": "rule-family-04--p16",
       "page_start": 16,
-      "page_end": 16,
-      "page_range_sha256": "2602824383f911bfbf44f5dc504a890c9a9072c1a586231885f31fca93e11a7f",
+      "page_end": 17,
+      "page_range_sha256": "8e80195fda6ffb9f5f176b376f6f2d57afc51985f348c0add71fd50a74b609c9",
+      "canonical_anchor_page": 16,
       "observed_heading_pages": [
         16,
         17,
@@ -1766,30 +1786,939 @@
         "04.01",
         "04.03"
       ],
+      "refs_by_page": {
+        "16": [
+          "04.01"
+        ],
+        "17": [
+          "04.03"
+        ],
+        "81": [
+          "04.01"
+        ]
+      },
       "anchor_labels": [
         {
           "page": 16,
           "label": "1 SELECT WEAPONS 04.01",
           "label_sha256": "7eb15db73c9bf63ac420e0954ea5745e62aefa2b6c6aaf514a7c33655e5d38b6"
+        }
+      ]
+    },
+    {
+      "family_id": "05",
+      "section_key": "rule-family-05--p18",
+      "page_start": 18,
+      "page_end": 23,
+      "page_range_sha256": "a4b7212f7e5e02fe963d57f04f2c8d29d8cea89132ba85a5cf0ea6f5dc58d57d",
+      "canonical_anchor_page": 18,
+      "observed_heading_pages": [
+        18,
+        19
+      ],
+      "rule_refs": [
+        "05.01",
+        "05.02",
+        "05.03"
+      ],
+      "refs_by_page": {
+        "18": [
+          "05.01",
+          "05.02"
+        ],
+        "19": [
+          "05.03"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 18,
+          "label": "1 HIT ROLLS 05.01",
+          "label_sha256": "459910561e71860ef683618de953a1caff245f2676968fd39e8f9c2dcab365c3"
         },
         {
-          "page": 17,
-          "label": "3 RESOLVE ATTACKS 04.03",
-          "label_sha256": "d5b7534ab09e92d4b1cbdadfdb67ec8710b0b4ebd4a47708838dd83a64126b02"
+          "page": 18,
+          "label": "2 WOUND ROLLS 05.02",
+          "label_sha256": "3fa30d783fb30a8922fc0de4814ec86a6a135961474b561b43bb1b437baef7d1"
+        }
+      ]
+    },
+    {
+      "family_id": "06",
+      "section_key": "rule-family-06--p24",
+      "page_start": 24,
+      "page_end": 27,
+      "page_range_sha256": "4eec1c34712f3aaf043fd93a6032189617eb828c4d7db584ec6005c907a97519",
+      "canonical_anchor_page": 24,
+      "observed_heading_pages": [
+        24,
+        81
+      ],
+      "rule_refs": [
+        "06.01",
+        "06.02",
+        "06.03"
+      ],
+      "refs_by_page": {
+        "24": [
+          "06.01",
+          "06.02",
+          "06.03"
+        ],
+        "81": [
+          "06.03"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 24,
+          "label": "VISIBILITY 06.01",
+          "label_sha256": "cc8579c50a6a27041f0fa0420ec05daa643920a56691feef9b9801cca1ec7764"
         },
         {
-          "page": 81,
-          "label": "04.01), for each of those models, you",
-          "label_sha256": "872d7145e7345d4c7c224ad08765e26fff9b47bc405d6baad8054493f6a9efdb"
+          "page": 24,
+          "label": "MORTAL WOUNDS 06.02",
+          "label_sha256": "09b82eebfb04de714667fa31e04b755c08950615fc4d3015a8b4dabdc4e60cc8"
+        },
+        {
+          "page": 24,
+          "label": "HAZARD ROLLS 06.03",
+          "label_sha256": "15bd2ecb1b9234d19ec7fe4fe9f778ef0001c81faf0fd7c8334ba5e99d60e360"
+        }
+      ]
+    },
+    {
+      "family_id": "07",
+      "section_key": "rule-family-07--p28",
+      "page_start": 28,
+      "page_end": 29,
+      "page_range_sha256": "0828b41867dde2422b53650e9ea323d4f26a425251ca7121c0eb3833881483f8",
+      "canonical_anchor_page": 28,
+      "observed_heading_pages": [
+        28
+      ],
+      "rule_refs": [
+        "07.01",
+        "07.02",
+        "07.03"
+      ],
+      "refs_by_page": {
+        "28": [
+          "07.01",
+          "07.02",
+          "07.03"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 28,
+          "label": "1 START OF BATTLE ROUND 07.01",
+          "label_sha256": "9e5674b61bed99c7d0dfc16d859fc81ed526e48ee1eef9c3f9e87fffe96bba8c"
+        },
+        {
+          "page": 28,
+          "label": "2 PLAYER TURNS 07.02",
+          "label_sha256": "f947aab198789011611fbbe4797fb61033465c2fbfb738d33c1c8aa94358cd5c"
+        },
+        {
+          "page": 28,
+          "label": "3 END OF BATTLE ROUND 07.03",
+          "label_sha256": "012d184b80bbed781b9987745735b16460466db841ca572957e3f908a1b62035"
+        }
+      ]
+    },
+    {
+      "family_id": "08",
+      "section_key": "rule-family-08--p30",
+      "page_start": 30,
+      "page_end": 32,
+      "page_range_sha256": "5e5a38507421f66c5b92b0bb1c38d8124e99fb85288d652de3cc5f87d51dbd96",
+      "canonical_anchor_page": 30,
+      "observed_heading_pages": [
+        30
+      ],
+      "rule_refs": [
+        "08.01",
+        "08.02",
+        "08.03",
+        "08.04",
+        "08.05"
+      ],
+      "refs_by_page": {
+        "30": [
+          "08.01",
+          "08.02",
+          "08.03",
+          "08.04",
+          "08.05"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 30,
+          "label": "1 START OF COMMAND PHASE 08.01",
+          "label_sha256": "b7d3d1fd9f56d18ebf803b21f54c11eecf022d729a0a5179d6e50babca61730e"
+        },
+        {
+          "page": 30,
+          "label": "2 GAIN CORE CP 08.02",
+          "label_sha256": "e46bc00beff1378838570360b0c8098bc8dcc6ac245e6fa84ad69705023af75e"
+        },
+        {
+          "page": 30,
+          "label": "3 BATTLE-SHOCK 08.03",
+          "label_sha256": "598122f41220383c9b2f41fcfbab512e5d3ac2b39ad93639ecaf4987a5ead852"
+        },
+        {
+          "page": 30,
+          "label": "4 COMMAND ABILITIES 08.04",
+          "label_sha256": "46d6afd0cec64e53008b3cd44d524ab8b117ded0a09b9e61fc026b4b989b6d45"
+        },
+        {
+          "page": 30,
+          "label": "5 END OF COMMAND PHASE 08.05",
+          "label_sha256": "ba7dfa4a54060d6c6a32dcfa4bd9477f18f77b81275a82d42dc193f0f759cb44"
+        }
+      ]
+    },
+    {
+      "family_id": "09",
+      "section_key": "rule-family-09--p33",
+      "page_start": 33,
+      "page_end": 33,
+      "page_range_sha256": "8a6abf6391328700ec6b19e93f0b519e9bcdb09c5f4c5466877def535e19e5d1",
+      "canonical_anchor_page": 33,
+      "observed_heading_pages": [
+        32,
+        33
+      ],
+      "rule_refs": [
+        "09.01",
+        "09.02",
+        "09.03",
+        "09.04",
+        "09.05",
+        "09.06",
+        "09.07"
+      ],
+      "refs_by_page": {
+        "32": [
+          "09.01",
+          "09.02",
+          "09.03"
+        ],
+        "33": [
+          "09.04",
+          "09.05",
+          "09.06",
+          "09.07"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 33,
+          "label": "REMAIN STATIONARY 09.04",
+          "label_sha256": "b5d8b7ed494554824b61a5e47e90634445e9c2d4a233f885f7c6d92564b3b3c6"
+        },
+        {
+          "page": 33,
+          "label": "NORMAL MOVE 09.05",
+          "label_sha256": "e1f37ac970f42275e4d8878d5bd6423cd8a472a82d971bcd4a0a3b69a8bd3e3a"
+        },
+        {
+          "page": 33,
+          "label": "ADVANCE MOVE 09.06",
+          "label_sha256": "4f49871432f04256757ba388aad4f01fee43841610bc5dc410f5940ed7a57c72"
+        },
+        {
+          "page": 33,
+          "label": "FALL-BACK MOVE 09.07",
+          "label_sha256": "65cefd04cafd017a5dc9a095689d876b996158b90e13be454c0539662aec6269"
+        }
+      ]
+    },
+    {
+      "family_id": "10",
+      "section_key": "rule-family-10--p34",
+      "page_start": 34,
+      "page_end": 35,
+      "page_range_sha256": "a3f7732f1b02a0d24d8677502aa29e21c73f4f6a6c28d5c584e5f1c4472028d2",
+      "canonical_anchor_page": 34,
+      "observed_heading_pages": [
+        34,
+        35
+      ],
+      "rule_refs": [
+        "10.01",
+        "10.02",
+        "10.03",
+        "10.04",
+        "10.05",
+        "10.06"
+      ],
+      "refs_by_page": {
+        "34": [
+          "10.01",
+          "10.02",
+          "10.03",
+          "10.04"
+        ],
+        "35": [
+          "10.05",
+          "10.06"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 34,
+          "label": "1 START OF SHOOTING PHASE 10.01",
+          "label_sha256": "6d27b89fd2533c8936f1f0016cd7412d151157c3567a55ad5af3da60872daec2"
+        },
+        {
+          "page": 34,
+          "label": "2 SHOOT 10.02",
+          "label_sha256": "71f2e656e7b36a8ae0b954d822415b1842b95fcbd688eb1205efd63825390094"
+        },
+        {
+          "page": 34,
+          "label": "3 END OF SHOOTING PHASE 10.03",
+          "label_sha256": "2151352a09b24fd9529f9800bda9570d855cc587bcf124d11a3fe008f414efb8"
+        },
+        {
+          "page": 34,
+          "label": "NORMAL SHOOTING 10.04",
+          "label_sha256": "7c3cb7e87d172809e00bc095bf96a62fccaa23bb9a9a771778194d51c03d1965"
+        }
+      ]
+    },
+    {
+      "family_id": "11",
+      "section_key": "rule-family-11--p36",
+      "page_start": 36,
+      "page_end": 37,
+      "page_range_sha256": "286266160d57c38f55b9741b4acdf804fcd7fdb7b37fa085bd2db5d48f139156",
+      "canonical_anchor_page": 36,
+      "observed_heading_pages": [
+        36,
+        37
+      ],
+      "rule_refs": [
+        "11.01",
+        "11.02",
+        "11.03",
+        "11.04"
+      ],
+      "refs_by_page": {
+        "36": [
+          "11.01",
+          "11.02",
+          "11.03"
+        ],
+        "37": [
+          "11.04"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 36,
+          "label": "1 START OF CHARGE PHASE 11.01",
+          "label_sha256": "fe4664c7607919a55299407fe1f853c2a2ca9adbe7c88b2a104cc099a42138cf"
+        },
+        {
+          "page": 36,
+          "label": "2 CHARGE 11.02",
+          "label_sha256": "670f491639b45e42f65af3ee06f99925ba05278d8952bd067572f757de1dbf46"
+        },
+        {
+          "page": 36,
+          "label": "3 END OF CHARGE PHASE 11.03",
+          "label_sha256": "1bc7394f66c006f169577b9134b486194f078bcbe0c0071f0ae79c46f5fff21f"
+        }
+      ]
+    },
+    {
+      "family_id": "12",
+      "section_key": "rule-family-12--p38",
+      "page_start": 38,
+      "page_end": 45,
+      "page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
+      "canonical_anchor_page": 38,
+      "observed_heading_pages": [
+        38,
+        40,
+        42
+      ],
+      "rule_refs": [
+        "12.01",
+        "12.02",
+        "12.03",
+        "12.04",
+        "12.05",
+        "12.06",
+        "12.07",
+        "12.08",
+        "12.09"
+      ],
+      "refs_by_page": {
+        "38": [
+          "12.01",
+          "12.02",
+          "12.03"
+        ],
+        "40": [
+          "12.04",
+          "12.05",
+          "12.06"
+        ],
+        "42": [
+          "12.07",
+          "12.08",
+          "12.09"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 38,
+          "label": "1 START OF FIGHT PHASE 12.01",
+          "label_sha256": "c9c2fe33c8a3d44d82876af9537d9a8ee726b94b519a03d8935e5c96ec11748f"
+        },
+        {
+          "page": 38,
+          "label": "2 PILE IN 12.02",
+          "label_sha256": "00f61d9248eee924f9419bdba2faa83eb7c6b0386913b4b19148b3605639e3b4"
+        },
+        {
+          "page": 38,
+          "label": "PILE-IN MOVE 12.03",
+          "label_sha256": "70368ca5a9aff6e5c7c411f86a7c572db4b6b04877a62432a197fddc3ae0f2fc"
+        }
+      ]
+    },
+    {
+      "family_id": "13",
+      "section_key": "rule-family-13--p46",
+      "page_start": 46,
+      "page_end": 51,
+      "page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
+      "canonical_anchor_page": 46,
+      "observed_heading_pages": [
+        46,
+        48,
+        50,
+        52,
+        82
+      ],
+      "rule_refs": [
+        "13.01",
+        "13.02",
+        "13.03",
+        "13.04",
+        "13.05",
+        "13.06",
+        "13.07",
+        "13.08",
+        "13.09",
+        "13.10",
+        "13.11"
+      ],
+      "refs_by_page": {
+        "46": [
+          "13.01",
+          "13.02",
+          "13.03",
+          "13.04",
+          "13.05"
+        ],
+        "48": [
+          "13.06"
+        ],
+        "50": [
+          "13.07",
+          "13.08",
+          "13.09",
+          "13.10",
+          "13.11"
+        ],
+        "52": [
+          "13.01"
+        ],
+        "82": [
+          "13.08"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 46,
+          "label": "PLACING TERRAIN 13.01",
+          "label_sha256": "e6527bbab3cbae40245c8d49281a1f9bec76cf0be688c684f4191b48b7c5a377"
+        },
+        {
+          "page": 46,
+          "label": "TERRAIN CATEGORIES 13.02",
+          "label_sha256": "a1282bfb3a86707ad2822cf7a1145ecc4683a3ea5e772dafd0883c92ea02d318"
+        },
+        {
+          "page": 46,
+          "label": "EXPOSED 13.03",
+          "label_sha256": "3db9630b7e7f7759565ac11f17bc84c5e4734295c1755825e35eb90856ead628"
+        },
+        {
+          "page": 46,
+          "label": "LIGHT 13.04",
+          "label_sha256": "ffdcfe9649dad20be40f87ceaff5970170dd0b80ae91838f72bcef2869a9814b"
+        },
+        {
+          "page": 46,
+          "label": "DENSE 13.05",
+          "label_sha256": "af3ff5cad7dafaafd1552229fa166fd242f572a5f11c632e81fa0e4c3cb2084c"
+        }
+      ]
+    },
+    {
+      "family_id": "14",
+      "section_key": "rule-family-14--p52",
+      "page_start": 52,
+      "page_end": 54,
+      "page_range_sha256": "bd4234dc0f882886b90e48d4d8f589362562143bb2537e466f21cbd1c81290c4",
+      "canonical_anchor_page": 52,
+      "observed_heading_pages": [
+        52
+      ],
+      "rule_refs": [
+        "14.01",
+        "14.02",
+        "14.03"
+      ],
+      "refs_by_page": {
+        "52": [
+          "14.01",
+          "14.02",
+          "14.03"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 52,
+          "label": "TERRAIN OBJECTIVES 14.01",
+          "label_sha256": "a163b09225fea51c6c7ecf40662223f78034c949cbe0eac7b7e1f3bd474b28ac"
+        },
+        {
+          "page": 52,
+          "label": "LEVEL OF CONTROL 14.02",
+          "label_sha256": "01ba67dd19197584495935b43a2da51097c39b35ed63becea8a95ea94c5adb4c"
+        },
+        {
+          "page": 52,
+          "label": "SECURED OBJECTIVES 14.03",
+          "label_sha256": "4274e7538fea23141106dcbde62adcfb397f67e51eee934213ca2515b19f88a4"
+        }
+      ]
+    },
+    {
+      "family_id": "15",
+      "section_key": "rule-family-15--p55",
+      "page_start": 55,
+      "page_end": 57,
+      "page_range_sha256": "7db1ea8d4ae03afadf607afb7df0f4351772d37237c847bcab664a3c12bb2080",
+      "canonical_anchor_page": 55,
+      "observed_heading_pages": [
+        54,
+        55,
+        56,
+        57
+      ],
+      "rule_refs": [
+        "15.01",
+        "15.02",
+        "15.07",
+        "15.08",
+        "15.09",
+        "15.10",
+        "15.11",
+        "15.12"
+      ],
+      "refs_by_page": {
+        "54": [
+          "15.01"
+        ],
+        "55": [
+          "15.07",
+          "15.08",
+          "15.09",
+          "15.10",
+          "15.11",
+          "15.12"
+        ],
+        "56": [
+          "15.02"
+        ],
+        "57": [
+          "15.07",
+          "15.08",
+          "15.09",
+          "15.10",
+          "15.11"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 55,
+          "label": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
+          "label_sha256": "ff184dfabf47a6b011932cdc27925152d2a42eea91cf7b96401be44372133bbc"
+        },
+        {
+          "page": 55,
+          "label": "FIRE OVERWATCH 15.08 1CPCORE STRATAGEM",
+          "label_sha256": "a35a5279d4d913a43885a5be035130d62c2ca2c867449fda1e114b68ec73ce99"
+        },
+        {
+          "page": 55,
+          "label": "SNAP SHOOTING 15.09",
+          "label_sha256": "dd45701712f31d1ca2c46390708f510557aed9f8039618cef7083738c4a84ba3"
+        },
+        {
+          "page": 55,
+          "label": "SMOKESCREEN 15.10 1CPCORE STRATAGEM",
+          "label_sha256": "e70545f35f381cc20f0007047507a7b01273d3900f64998fd55adb269f349d1a"
+        },
+        {
+          "page": 55,
+          "label": "HEROIC INTERVENTION 15.11 1CPCORE STRATAGEM",
+          "label_sha256": "f8edd7774573c1bbff937e07dab83cc3f064417894d28ab5677604918e7c7f23"
+        },
+        {
+          "page": 55,
+          "label": "COUNTEROFFENSIVE 15.12 2CPCORE STRATAGEM",
+          "label_sha256": "3052b74762ab918108f49e78c993ccc100093f3881e7da6b3178daf84a1f8856"
+        }
+      ]
+    },
+    {
+      "family_id": "16",
+      "section_key": "rule-family-16--p58",
+      "page_start": 58,
+      "page_end": 61,
+      "page_range_sha256": "bb442cbd11310d8369b1698f173848d117c849179d48078fbc5316961386a96b",
+      "canonical_anchor_page": 58,
+      "observed_heading_pages": [
+        58
+      ],
+      "rule_refs": [
+        "16.01"
+      ],
+      "refs_by_page": {
+        "58": [
+          "16.01"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 58,
+          "label": "PERFORMING ACTIONS 16.01",
+          "label_sha256": "caabe4570d0f1d12cdae9a06fafa556e655fca458e688d522d9ee2c92bdd61f1"
+        }
+      ]
+    },
+    {
+      "family_id": "17",
+      "section_key": "rule-family-17--p62",
+      "page_start": 62,
+      "page_end": 63,
+      "page_range_sha256": "48d95a611d6452deda6de4c59ab9a6c07f0eed8395e8bff6f21cc0c154cefc16",
+      "canonical_anchor_page": 62,
+      "observed_heading_pages": [
+        62
+      ],
+      "rule_refs": [
+        "17.02"
+      ],
+      "refs_by_page": {
+        "62": [
+          "17.02"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 62,
+          "label": "FRAME 17.02",
+          "label_sha256": "7ca78d4e084413b1dad7c0919ab85ca82356746c909d79dddc590834a6fdcbd1"
+        }
+      ]
+    },
+    {
+      "family_id": "18",
+      "section_key": "rule-family-18--p64",
+      "page_start": 64,
+      "page_end": 65,
+      "page_range_sha256": "5a137c18b17dd208b0333a076575e40544fc0da6dfec991f4ff3d98282c62c7b",
+      "canonical_anchor_page": 64,
+      "observed_heading_pages": [
+        64,
+        65
+      ],
+      "rule_refs": [
+        "18.01",
+        "18.02",
+        "18.03",
+        "18.04",
+        "18.05"
+      ],
+      "refs_by_page": {
+        "64": [
+          "18.01",
+          "18.02",
+          "18.03"
+        ],
+        "65": [
+          "18.04",
+          "18.05"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 64,
+          "label": "TRANSPORT CAPACITY 18.01",
+          "label_sha256": "29861a878336b59d4aa1258dcb7b198754c00641236fd359a950d102774f98a4"
+        },
+        {
+          "page": 64,
+          "label": "EMBARKING 18.02",
+          "label_sha256": "c30b56db8c6ab55f0e782006924d739c88da8317bd5130ecde7549d5d522784e"
+        },
+        {
+          "page": 64,
+          "label": "DISEMBARKING 18.03",
+          "label_sha256": "ec71d93addb89db7b48cb195911dca1b140cbacc4bca41b041fc52a39afee568"
+        }
+      ]
+    },
+    {
+      "family_id": "19",
+      "section_key": "rule-family-19--p66",
+      "page_start": 66,
+      "page_end": 67,
+      "page_range_sha256": "e17c99f0181e5dc03cfb81b512860e2929cfc3753c0ff0e6042ee58c9ee43093",
+      "canonical_anchor_page": 66,
+      "observed_heading_pages": [
+        66,
+        67
+      ],
+      "rule_refs": [
+        "19.01",
+        "19.02",
+        "19.03",
+        "19.04"
+      ],
+      "refs_by_page": {
+        "66": [
+          "19.01",
+          "19.02"
+        ],
+        "67": [
+          "19.03",
+          "19.04"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 66,
+          "label": "FORMING ATTACHED UNITS 19.01",
+          "label_sha256": "8c5c19085cdbe133fa48b98948a943585284662ade1020ac05ddd79da7d644d8"
+        },
+        {
+          "page": 66,
+          "label": "ATTACKING ATTACHED UNITS 19.02",
+          "label_sha256": "3a65453a62dad444c8fb9ce87619cfaa4abb56788da32234195cfe3bba4ae044"
+        }
+      ]
+    },
+    {
+      "family_id": "20",
+      "section_key": "rule-family-20--p68",
+      "page_start": 68,
+      "page_end": 69,
+      "page_range_sha256": "30aebe5beede45f2b10203ec527d57c82cf569da0d2cc8e09696b046b1923525",
+      "canonical_anchor_page": 68,
+      "observed_heading_pages": [
+        68,
+        69,
+        80
+      ],
+      "rule_refs": [
+        "20.02",
+        "20.04"
+      ],
+      "refs_by_page": {
+        "68": [
+          "20.02"
+        ],
+        "69": [
+          "20.04"
+        ],
+        "80": [
+          "20.04"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 68,
+          "label": "REPOSITIONED UNITS 20.02",
+          "label_sha256": "7089ad8613311e8f0994b4029763748ab091c301992514a29b87baf693afbd25"
+        }
+      ]
+    },
+    {
+      "family_id": "21",
+      "section_key": "rule-family-21--p70",
+      "page_start": 70,
+      "page_end": 71,
+      "page_range_sha256": "7c84970f95c2a97326b71a788ab9c7821536dc38c6b527d8d9f3c5b6f95c5cbe",
+      "canonical_anchor_page": 70,
+      "observed_heading_pages": [
+        33,
+        70,
+        71,
+        82
+      ],
+      "rule_refs": [
+        "21.01",
+        "21.02",
+        "21.03"
+      ],
+      "refs_by_page": {
+        "33": [
+          "21.03"
+        ],
+        "70": [
+          "21.01",
+          "21.02"
+        ],
+        "71": [
+          "21.03"
+        ],
+        "82": [
+          "21.03"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 70,
+          "label": "SURGE MOVES 21.01",
+          "label_sha256": "3789b751fba0b46f405834b8f929353395f48d43bc63411aa162faf512d2605a"
+        },
+        {
+          "page": 70,
+          "label": "SURGE MOVE 21.02",
+          "label_sha256": "46ace89af25067006635fe0ffd50eb26a816834d68163dc237e2df770c5da393"
+        }
+      ]
+    },
+    {
+      "family_id": "22",
+      "section_key": "rule-family-22--p72",
+      "page_start": 72,
+      "page_end": 73,
+      "page_range_sha256": "430abf7fd9849b3d7a18e62bcf9073b0ea4a3edeaa6a934b72da46d6921ae3b8",
+      "canonical_anchor_page": 72,
+      "observed_heading_pages": [
+        72,
+        73
+      ],
+      "rule_refs": [
+        "22.01",
+        "22.02",
+        "22.03",
+        "22.04",
+        "22.05"
+      ],
+      "refs_by_page": {
+        "72": [
+          "22.01",
+          "22.02",
+          "22.03",
+          "22.04"
+        ],
+        "73": [
+          "22.05"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 72,
+          "label": "AURA ABILITIES 22.01",
+          "label_sha256": "d579f7c134fc9f7a7151fdaf531aaf2b6a6e9c01cdc94ac66ff448f73c0eb18e"
+        },
+        {
+          "page": 72,
+          "label": "FACTION ABILITIES 22.02",
+          "label_sha256": "cf31c0880dd356b2cbb9d120f2e77e7a443bc82d70414b9737b86432bd85ca3e"
+        },
+        {
+          "page": 72,
+          "label": "PSYCHIC ABILITIES 22.03",
+          "label_sha256": "3e4db3cb9b7d2c74ec23eef919e4d047034293656fd28610e0b5bc64fe716d5f"
+        },
+        {
+          "page": 72,
+          "label": "WARGEAR ABILITIES 22.04",
+          "label_sha256": "a18d57eb32b4f3f4bd5cf22fe7c3fa4a3a4fb5956cc1849077b646866a5f81f8"
+        }
+      ]
+    },
+    {
+      "family_id": "23",
+      "section_key": "rule-family-23--p74",
+      "page_start": 74,
+      "page_end": 81,
+      "page_range_sha256": "db33c655fc34d74979cbc7aedf55c0cd365a118468db8cb21745a92d1d2b7e43",
+      "canonical_anchor_page": 74,
+      "observed_heading_pages": [
+        74
+      ],
+      "rule_refs": [
+        "23.01",
+        "23.02",
+        "23.03",
+        "23.04"
+      ],
+      "refs_by_page": {
+        "74": [
+          "23.01",
+          "23.02",
+          "23.03",
+          "23.04"
+        ]
+      },
+      "anchor_labels": [
+        {
+          "page": 74,
+          "label": "DEPLOYMENT 23.01",
+          "label_sha256": "d21e23b006e1c7a7eae36a71cde1e63ba6f0d93371ce0f19709ed33458c836f8"
+        },
+        {
+          "page": 74,
+          "label": "MOVEMENT 23.02",
+          "label_sha256": "3b58c537976c4a630ea78f5d4495dd3ac9df1ccee154585d00f1a2db33419471"
+        },
+        {
+          "page": 74,
+          "label": "SHOOTING 23.03",
+          "label_sha256": "1e10a2259dfabea76ae0c3a6e0289a882715b40c0e18e08a470fbc9e5b934e66"
+        },
+        {
+          "page": 74,
+          "label": "CHARGING AND FIGHTING 23.04",
+          "label_sha256": "966840478d8d92e4add528e4205f05dd74946f57760e9636b23ca463eb0cfc51"
         }
       ]
     },
     {
       "family_id": "24",
-      "section_key": "rule-family-24--p17",
-      "page_start": 17,
-      "page_end": 17,
-      "page_range_sha256": "6037e8aa659ed0896b8228013ec7bd8ffc80e14abfd9cc05d5e49920637c7bf0",
+      "section_key": "rule-family-24--p82",
+      "page_start": 82,
+      "page_end": 88,
+      "page_range_sha256": "3444f32fb945224d0cf93d5520a06d7eeb80c69cc1de4bf1022aecc69a75478f",
+      "canonical_anchor_page": 82,
       "observed_heading_pages": [
         17,
         66,
@@ -1841,811 +2770,99 @@
         "24.37",
         "24.38"
       ],
+      "refs_by_page": {
+        "17": [
+          "24.07",
+          "24.11"
+        ],
+        "66": [
+          "24.22",
+          "24.34"
+        ],
+        "78": [
+          "24.01",
+          "24.02"
+        ],
+        "79": [
+          "24.03",
+          "24.04",
+          "24.05",
+          "24.06"
+        ],
+        "80": [
+          "24.07",
+          "24.08",
+          "24.09",
+          "24.10"
+        ],
+        "81": [
+          "24.11",
+          "24.12",
+          "24.13",
+          "24.14",
+          "24.15"
+        ],
+        "82": [
+          "24.16",
+          "24.17",
+          "24.18",
+          "24.19",
+          "24.20",
+          "24.21",
+          "24.22"
+        ],
+        "83": [
+          "24.24",
+          "24.25",
+          "24.26",
+          "24.27"
+        ],
+        "84": [
+          "24.28",
+          "24.29",
+          "24.30",
+          "24.31",
+          "24.32"
+        ],
+        "85": [
+          "24.33",
+          "24.34",
+          "24.35",
+          "24.36",
+          "24.37",
+          "24.38"
+        ]
+      },
       "anchor_labels": [
         {
-          "page": 17,
-          "label": "▪ [CLOSE - QUARTERS] 24.07",
-          "label_sha256": "94770aee84d3ae00027507912065eb0cb40b5b3d92af6705c3e14048048a4ab7"
-        },
-        {
-          "page": 17,
-          "label": "▪ [EXTRA ATTACKS] 24.11",
-          "label_sha256": "4f1e20354424147e120e316ae1354a25468707d7e26e63a010953516ba6528da"
-        },
-        {
-          "page": 66,
-          "label": "LEADER 24.22 / SUPPORT 24.34",
-          "label_sha256": "27069d2a46c245268cab714bf71ad65bd275d93961312a4e174260efc024b4f6"
-        },
-        {
-          "page": 66,
-          "label": "LEADER 24.22 / SUPPORT 24.34",
-          "label_sha256": "27069d2a46c245268cab714bf71ad65bd275d93961312a4e174260efc024b4f6"
-        },
-        {
-          "page": 78,
-          "label": "ABILITIES 24.01",
-          "label_sha256": "544c01e6c3e2e43769f3496ee2d524499fe42c75efae185f47872a53b0858e3f"
-        },
-        {
-          "page": 78,
-          "label": "DUPLICATED ABILITIES 24.02",
-          "label_sha256": "d24e1e2074cde486177a995a64e991a57b3712016a5a49770548d3fbae41b0d4"
-        }
-      ]
-    },
-    {
-      "family_id": "05",
-      "section_key": "rule-family-05--p18",
-      "page_start": 18,
-      "page_end": 23,
-      "page_range_sha256": "a4b7212f7e5e02fe963d57f04f2c8d29d8cea89132ba85a5cf0ea6f5dc58d57d",
-      "observed_heading_pages": [
-        18,
-        19
-      ],
-      "rule_refs": [
-        "05.01",
-        "05.02",
-        "05.03"
-      ],
-      "anchor_labels": [
-        {
-          "page": 18,
-          "label": "1 HIT ROLLS 05.01",
-          "label_sha256": "459910561e71860ef683618de953a1caff245f2676968fd39e8f9c2dcab365c3"
-        },
-        {
-          "page": 18,
-          "label": "2 WOUND ROLLS 05.02",
-          "label_sha256": "3fa30d783fb30a8922fc0de4814ec86a6a135961474b561b43bb1b437baef7d1"
-        },
-        {
-          "page": 19,
-          "label": "3 SAVE ROLLS 05.03",
-          "label_sha256": "b327ad5ad563d2980a9d324959b55bdfd9fb157c1d4941bc4545ee77f8e7a1e0"
-        }
-      ]
-    },
-    {
-      "family_id": "06",
-      "section_key": "rule-family-06--p24",
-      "page_start": 24,
-      "page_end": 27,
-      "page_range_sha256": "4eec1c34712f3aaf043fd93a6032189617eb828c4d7db584ec6005c907a97519",
-      "observed_heading_pages": [
-        24,
-        81
-      ],
-      "rule_refs": [
-        "06.01",
-        "06.02",
-        "06.03"
-      ],
-      "anchor_labels": [
-        {
-          "page": 24,
-          "label": "VISIBILITY 06.01",
-          "label_sha256": "cc8579c50a6a27041f0fa0420ec05daa643920a56691feef9b9801cca1ec7764"
-        },
-        {
-          "page": 24,
-          "label": "MORTAL WOUNDS 06.02",
-          "label_sha256": "09b82eebfb04de714667fa31e04b755c08950615fc4d3015a8b4dabdc4e60cc8"
-        },
-        {
-          "page": 24,
-          "label": "HAZARD ROLLS 06.03",
-          "label_sha256": "15bd2ecb1b9234d19ec7fe4fe9f778ef0001c81faf0fd7c8334ba5e99d60e360"
-        },
-        {
-          "page": 81,
-          "label": "06.03) for that",
-          "label_sha256": "0712c5cdfb2f555d1f518b6ed994a1aa498033a43b02b8b83a3d67df71fe8fd9"
-        }
-      ]
-    },
-    {
-      "family_id": "07",
-      "section_key": "rule-family-07--p28",
-      "page_start": 28,
-      "page_end": 29,
-      "page_range_sha256": "0828b41867dde2422b53650e9ea323d4f26a425251ca7121c0eb3833881483f8",
-      "observed_heading_pages": [
-        28
-      ],
-      "rule_refs": [
-        "07.01",
-        "07.02",
-        "07.03"
-      ],
-      "anchor_labels": [
-        {
-          "page": 28,
-          "label": "1 START OF BATTLE ROUND 07.01",
-          "label_sha256": "9e5674b61bed99c7d0dfc16d859fc81ed526e48ee1eef9c3f9e87fffe96bba8c"
-        },
-        {
-          "page": 28,
-          "label": "2 PLAYER TURNS 07.02",
-          "label_sha256": "f947aab198789011611fbbe4797fb61033465c2fbfb738d33c1c8aa94358cd5c"
-        },
-        {
-          "page": 28,
-          "label": "3 END OF BATTLE ROUND 07.03",
-          "label_sha256": "012d184b80bbed781b9987745735b16460466db841ca572957e3f908a1b62035"
-        }
-      ]
-    },
-    {
-      "family_id": "08",
-      "section_key": "rule-family-08--p30",
-      "page_start": 30,
-      "page_end": 31,
-      "page_range_sha256": "b1e883a038137fd18c1e412ee603bd5a8572e804d4eb233d48620f7af2a78c9d",
-      "observed_heading_pages": [
-        30
-      ],
-      "rule_refs": [
-        "08.01",
-        "08.02",
-        "08.03",
-        "08.04",
-        "08.05"
-      ],
-      "anchor_labels": [
-        {
-          "page": 30,
-          "label": "1 START OF COMMAND PHASE 08.01",
-          "label_sha256": "b7d3d1fd9f56d18ebf803b21f54c11eecf022d729a0a5179d6e50babca61730e"
-        },
-        {
-          "page": 30,
-          "label": "2 GAIN CORE CP 08.02",
-          "label_sha256": "e46bc00beff1378838570360b0c8098bc8dcc6ac245e6fa84ad69705023af75e"
-        },
-        {
-          "page": 30,
-          "label": "3 BATTLE-SHOCK 08.03",
-          "label_sha256": "598122f41220383c9b2f41fcfbab512e5d3ac2b39ad93639ecaf4987a5ead852"
-        },
-        {
-          "page": 30,
-          "label": "4 COMMAND ABILITIES 08.04",
-          "label_sha256": "46d6afd0cec64e53008b3cd44d524ab8b117ded0a09b9e61fc026b4b989b6d45"
-        },
-        {
-          "page": 30,
-          "label": "5 END OF COMMAND PHASE 08.05",
-          "label_sha256": "ba7dfa4a54060d6c6a32dcfa4bd9477f18f77b81275a82d42dc193f0f759cb44"
-        }
-      ]
-    },
-    {
-      "family_id": "09",
-      "section_key": "rule-family-09--p32",
-      "page_start": 32,
-      "page_end": 32,
-      "page_range_sha256": "e1fc9ba395781fbdb4fb754f26cddf9df5368b95ec51c80aeb934c14e2ec166a",
-      "observed_heading_pages": [
-        32,
-        33
-      ],
-      "rule_refs": [
-        "09.01",
-        "09.02",
-        "09.03",
-        "09.04",
-        "09.05",
-        "09.06",
-        "09.07"
-      ],
-      "anchor_labels": [
-        {
-          "page": 32,
-          "label": "1 START OF MOVEMENT PHASE 09.01",
-          "label_sha256": "d764b8a65d7843811f72bd24e9d7c18e3d4c4d8344ea196991e6d1fd2a11b705"
-        },
-        {
-          "page": 32,
-          "label": "2 MOVE UNITS 09.02",
-          "label_sha256": "f51572f7c80266770142b789d6fed702db7d9a3ae8788f66d1e85d025e69da90"
-        },
-        {
-          "page": 32,
-          "label": "3 END OF MOVEMENT PHASE 09.03",
-          "label_sha256": "d31951a1ad0550d94cd6f32d7fd194c68c7349bbd8ebd9432177d71a76e94cb9"
-        },
-        {
-          "page": 33,
-          "label": "REMAIN STATIONARY 09.04",
-          "label_sha256": "b5d8b7ed494554824b61a5e47e90634445e9c2d4a233f885f7c6d92564b3b3c6"
-        },
-        {
-          "page": 33,
-          "label": "NORMAL MOVE 09.05",
-          "label_sha256": "e1f37ac970f42275e4d8878d5bd6423cd8a472a82d971bcd4a0a3b69a8bd3e3a"
-        },
-        {
-          "page": 33,
-          "label": "ADVANCE MOVE 09.06",
-          "label_sha256": "4f49871432f04256757ba388aad4f01fee43841610bc5dc410f5940ed7a57c72"
-        }
-      ]
-    },
-    {
-      "family_id": "21",
-      "section_key": "rule-family-21--p33",
-      "page_start": 33,
-      "page_end": 33,
-      "page_range_sha256": "8a6abf6391328700ec6b19e93f0b519e9bcdb09c5f4c5466877def535e19e5d1",
-      "observed_heading_pages": [
-        33,
-        70,
-        71,
-        82
-      ],
-      "rule_refs": [
-        "21.01",
-        "21.02",
-        "21.03"
-      ],
-      "anchor_labels": [
-        {
-          "page": 33,
-          "label": "Models 21.03",
-          "label_sha256": "fa73cb9ac739d96f9c290be97dbd69340c49885f69d3bcabfd050495da9cef89"
-        },
-        {
-          "page": 70,
-          "label": "SURGE MOVES 21.01",
-          "label_sha256": "3789b751fba0b46f405834b8f929353395f48d43bc63411aa162faf512d2605a"
-        },
-        {
-          "page": 70,
-          "label": "SURGE MOVE 21.02",
-          "label_sha256": "46ace89af25067006635fe0ffd50eb26a816834d68163dc237e2df770c5da393"
-        },
-        {
-          "page": 71,
-          "label": "FLYING MODELS 21.03",
-          "label_sha256": "f2744eaaa90050ceb4315e0a58f0f9ceb140bb2dbbe86d4baadd6a20bdfbb4c3"
+          "page": 82,
+          "label": "[HEAVY] 24.16",
+          "label_sha256": "7478cbd48ce60e14387b08d15be1e9ae9f04c5886a5a192fbd12244adef02e42"
         },
         {
           "page": 82,
-          "label": "21.03), do not subtract 2\" from the",
-          "label_sha256": "5db524b619cf537f4c488093eb33d8c6709596189045cbfb6e583f72d0d5c19a"
-        }
-      ]
-    },
-    {
-      "family_id": "10",
-      "section_key": "rule-family-10--p34",
-      "page_start": 34,
-      "page_end": 35,
-      "page_range_sha256": "a3f7732f1b02a0d24d8677502aa29e21c73f4f6a6c28d5c584e5f1c4472028d2",
-      "observed_heading_pages": [
-        34,
-        35
-      ],
-      "rule_refs": [
-        "10.01",
-        "10.02",
-        "10.03",
-        "10.04",
-        "10.05",
-        "10.06"
-      ],
-      "anchor_labels": [
-        {
-          "page": 34,
-          "label": "1 START OF SHOOTING PHASE 10.01",
-          "label_sha256": "6d27b89fd2533c8936f1f0016cd7412d151157c3567a55ad5af3da60872daec2"
+          "label": "HOVER 24.17",
+          "label_sha256": "993bd5e9ef64f9e6fbeb88738561a3f0b5d62690ec7dfeec9e21174102e6e800"
         },
         {
-          "page": 34,
-          "label": "2 SHOOT 10.02",
-          "label_sha256": "71f2e656e7b36a8ae0b954d822415b1842b95fcbd688eb1205efd63825390094"
+          "page": 82,
+          "label": "[IGNORES COVER] 24.18",
+          "label_sha256": "29e38d70fe2c5f0b243f07c3efeae4eeab2041fcce6af7ad48de1865a77ca85c"
         },
         {
-          "page": 34,
-          "label": "3 END OF SHOOTING PHASE 10.03",
-          "label_sha256": "2151352a09b24fd9529f9800bda9570d855cc587bcf124d11a3fe008f414efb8"
+          "page": 82,
+          "label": "[INDIRECT FIRE] 24.19",
+          "label_sha256": "ba626a8301e7282dd661e2f43d4c5732826122634b8a9775c947342e2e792b3c"
         },
         {
-          "page": 34,
-          "label": "NORMAL SHOOTING 10.04",
-          "label_sha256": "7c3cb7e87d172809e00bc095bf96a62fccaa23bb9a9a771778194d51c03d1965"
+          "page": 82,
+          "label": "INFILTRATORS 24.20",
+          "label_sha256": "22d2e6160781ce912fa29d555154b173483137d09d60bfc3b3a5e3c8fb4a3614"
         },
         {
-          "page": 35,
-          "label": "ASSAULT SHOOTING 10.05",
-          "label_sha256": "e33078bb69f895fbe1b26dbbe705728b673f3b27802ffa11cd916e83de78772f"
-        },
-        {
-          "page": 35,
-          "label": "CLOSE-QUARTERS SHOOTING 10.06",
-          "label_sha256": "e8f3cdd2d7b3fea8bd543884fc5252bff91591ef268640062e694bee3b363d5c"
-        }
-      ]
-    },
-    {
-      "family_id": "11",
-      "section_key": "rule-family-11--p36",
-      "page_start": 36,
-      "page_end": 37,
-      "page_range_sha256": "286266160d57c38f55b9741b4acdf804fcd7fdb7b37fa085bd2db5d48f139156",
-      "observed_heading_pages": [
-        36,
-        37
-      ],
-      "rule_refs": [
-        "11.01",
-        "11.02",
-        "11.03",
-        "11.04"
-      ],
-      "anchor_labels": [
-        {
-          "page": 36,
-          "label": "1 START OF CHARGE PHASE 11.01",
-          "label_sha256": "fe4664c7607919a55299407fe1f853c2a2ca9adbe7c88b2a104cc099a42138cf"
-        },
-        {
-          "page": 36,
-          "label": "2 CHARGE 11.02",
-          "label_sha256": "670f491639b45e42f65af3ee06f99925ba05278d8952bd067572f757de1dbf46"
-        },
-        {
-          "page": 36,
-          "label": "3 END OF CHARGE PHASE 11.03",
-          "label_sha256": "1bc7394f66c006f169577b9134b486194f078bcbe0c0071f0ae79c46f5fff21f"
-        },
-        {
-          "page": 37,
-          "label": "CHARGE MOVE 11.04",
-          "label_sha256": "fe1a39a7fe25f4df80a77fa9f0ce11c0595f8d1c6a549a5bae677437704aeed2"
-        }
-      ]
-    },
-    {
-      "family_id": "12",
-      "section_key": "rule-family-12--p38",
-      "page_start": 38,
-      "page_end": 45,
-      "page_range_sha256": "f77ca842f0b3038a092954cb0e38655738822c646e4209351eced109dd231d51",
-      "observed_heading_pages": [
-        38,
-        40,
-        42
-      ],
-      "rule_refs": [
-        "12.01",
-        "12.02",
-        "12.03",
-        "12.04",
-        "12.05",
-        "12.06",
-        "12.07",
-        "12.08",
-        "12.09"
-      ],
-      "anchor_labels": [
-        {
-          "page": 38,
-          "label": "1 START OF FIGHT PHASE 12.01",
-          "label_sha256": "c9c2fe33c8a3d44d82876af9537d9a8ee726b94b519a03d8935e5c96ec11748f"
-        },
-        {
-          "page": 38,
-          "label": "2 PILE IN 12.02",
-          "label_sha256": "00f61d9248eee924f9419bdba2faa83eb7c6b0386913b4b19148b3605639e3b4"
-        },
-        {
-          "page": 38,
-          "label": "PILE-IN MOVE 12.03",
-          "label_sha256": "70368ca5a9aff6e5c7c411f86a7c572db4b6b04877a62432a197fddc3ae0f2fc"
-        },
-        {
-          "page": 40,
-          "label": "3 FIGHT 12.04",
-          "label_sha256": "01f51156cd4b45923e580967eb68cb20149b792fc54d2104389bbbe7d7272006"
-        },
-        {
-          "page": 40,
-          "label": "NORMAL FIGHT 12.05",
-          "label_sha256": "486e59a1317ed8ea3c253516d56dad94b3913150cf44307095dcf324f9b02d89"
-        },
-        {
-          "page": 40,
-          "label": "OVERRUN FIGHT 12.06",
-          "label_sha256": "df9a2bf5f07cff4452e00fa815fb7f9c0b92f5876b63d74dfd0729b2f001d1ad"
-        }
-      ]
-    },
-    {
-      "family_id": "13",
-      "section_key": "rule-family-13--p46",
-      "page_start": 46,
-      "page_end": 51,
-      "page_range_sha256": "40a0055a39f0df5481e639e1c8815d059100c879051bd6ac7c11d5e23b36d930",
-      "observed_heading_pages": [
-        46,
-        48,
-        50,
-        52,
-        82
-      ],
-      "rule_refs": [
-        "13.01",
-        "13.02",
-        "13.03",
-        "13.04",
-        "13.05",
-        "13.06",
-        "13.07",
-        "13.08",
-        "13.09",
-        "13.10",
-        "13.11"
-      ],
-      "anchor_labels": [
-        {
-          "page": 46,
-          "label": "PLACING TERRAIN 13.01",
-          "label_sha256": "e6527bbab3cbae40245c8d49281a1f9bec76cf0be688c684f4191b48b7c5a377"
-        },
-        {
-          "page": 46,
-          "label": "TERRAIN CATEGORIES 13.02",
-          "label_sha256": "a1282bfb3a86707ad2822cf7a1145ecc4683a3ea5e772dafd0883c92ea02d318"
-        },
-        {
-          "page": 46,
-          "label": "EXPOSED 13.03",
-          "label_sha256": "3db9630b7e7f7759565ac11f17bc84c5e4734295c1755825e35eb90856ead628"
-        },
-        {
-          "page": 46,
-          "label": "LIGHT 13.04",
-          "label_sha256": "ffdcfe9649dad20be40f87ceaff5970170dd0b80ae91838f72bcef2869a9814b"
-        },
-        {
-          "page": 46,
-          "label": "DENSE 13.05",
-          "label_sha256": "af3ff5cad7dafaafd1552229fa166fd242f572a5f11c632e81fa0e4c3cb2084c"
-        },
-        {
-          "page": 48,
-          "label": "TERRAIN AND MOVEMENT 13.06",
-          "label_sha256": "a1fc09fe033ba3f52acea666549d5bfd2842a5c689f4c6871dee51e9821080f7"
-        }
-      ]
-    },
-    {
-      "family_id": "14",
-      "section_key": "rule-family-14--p52",
-      "page_start": 52,
-      "page_end": 53,
-      "page_range_sha256": "8c4af6fb26aa33015de6b9efd97b608b342bdb0b4ee4dd4718048957e15dbf2d",
-      "observed_heading_pages": [
-        52
-      ],
-      "rule_refs": [
-        "14.01",
-        "14.02",
-        "14.03"
-      ],
-      "anchor_labels": [
-        {
-          "page": 52,
-          "label": "TERRAIN OBJECTIVES 14.01",
-          "label_sha256": "a163b09225fea51c6c7ecf40662223f78034c949cbe0eac7b7e1f3bd474b28ac"
-        },
-        {
-          "page": 52,
-          "label": "LEVEL OF CONTROL 14.02",
-          "label_sha256": "01ba67dd19197584495935b43a2da51097c39b35ed63becea8a95ea94c5adb4c"
-        },
-        {
-          "page": 52,
-          "label": "SECURED OBJECTIVES 14.03",
-          "label_sha256": "4274e7538fea23141106dcbde62adcfb397f67e51eee934213ca2515b19f88a4"
-        }
-      ]
-    },
-    {
-      "family_id": "15",
-      "section_key": "rule-family-15--p54",
-      "page_start": 54,
-      "page_end": 57,
-      "page_range_sha256": "f33a6d2caf5bafa65bf2a49b167e12428ed144d00c50554bba5cd6a89c6d3766",
-      "observed_heading_pages": [
-        54,
-        55,
-        56,
-        57
-      ],
-      "rule_refs": [
-        "15.01",
-        "15.02",
-        "15.07",
-        "15.08",
-        "15.09",
-        "15.10",
-        "15.11",
-        "15.12"
-      ],
-      "anchor_labels": [
-        {
-          "page": 54,
-          "label": "USING STRATAGEMS 15.01",
-          "label_sha256": "0e89312942ada4e6fcdc4011f5d54cd2769f11a46b9e0df5bf2547f1c6a919fd"
-        },
-        {
-          "page": 55,
-          "label": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
-          "label_sha256": "ff184dfabf47a6b011932cdc27925152d2a42eea91cf7b96401be44372133bbc"
-        },
-        {
-          "page": 55,
-          "label": "FIRE OVERWATCH 15.08 1CPCORE STRATAGEM",
-          "label_sha256": "a35a5279d4d913a43885a5be035130d62c2ca2c867449fda1e114b68ec73ce99"
-        },
-        {
-          "page": 55,
-          "label": "SNAP SHOOTING 15.09",
-          "label_sha256": "dd45701712f31d1ca2c46390708f510557aed9f8039618cef7083738c4a84ba3"
-        },
-        {
-          "page": 55,
-          "label": "SMOKESCREEN 15.10 1CPCORE STRATAGEM",
-          "label_sha256": "e70545f35f381cc20f0007047507a7b01273d3900f64998fd55adb269f349d1a"
-        },
-        {
-          "page": 55,
-          "label": "HEROIC INTERVENTION 15.11 1CPCORE STRATAGEM",
-          "label_sha256": "f8edd7774573c1bbff937e07dab83cc3f064417894d28ab5677604918e7c7f23"
-        }
-      ]
-    },
-    {
-      "family_id": "16",
-      "section_key": "rule-family-16--p58",
-      "page_start": 58,
-      "page_end": 61,
-      "page_range_sha256": "bb442cbd11310d8369b1698f173848d117c849179d48078fbc5316961386a96b",
-      "observed_heading_pages": [
-        58
-      ],
-      "rule_refs": [
-        "16.01"
-      ],
-      "anchor_labels": [
-        {
-          "page": 58,
-          "label": "PERFORMING ACTIONS 16.01",
-          "label_sha256": "caabe4570d0f1d12cdae9a06fafa556e655fca458e688d522d9ee2c92bdd61f1"
-        }
-      ]
-    },
-    {
-      "family_id": "17",
-      "section_key": "rule-family-17--p62",
-      "page_start": 62,
-      "page_end": 63,
-      "page_range_sha256": "48d95a611d6452deda6de4c59ab9a6c07f0eed8395e8bff6f21cc0c154cefc16",
-      "observed_heading_pages": [
-        62
-      ],
-      "rule_refs": [
-        "17.02"
-      ],
-      "anchor_labels": [
-        {
-          "page": 62,
-          "label": "FRAME 17.02",
-          "label_sha256": "7ca78d4e084413b1dad7c0919ab85ca82356746c909d79dddc590834a6fdcbd1"
-        }
-      ]
-    },
-    {
-      "family_id": "18",
-      "section_key": "rule-family-18--p64",
-      "page_start": 64,
-      "page_end": 65,
-      "page_range_sha256": "5a137c18b17dd208b0333a076575e40544fc0da6dfec991f4ff3d98282c62c7b",
-      "observed_heading_pages": [
-        64,
-        65
-      ],
-      "rule_refs": [
-        "18.01",
-        "18.02",
-        "18.03",
-        "18.04",
-        "18.05"
-      ],
-      "anchor_labels": [
-        {
-          "page": 64,
-          "label": "TRANSPORT CAPACITY 18.01",
-          "label_sha256": "29861a878336b59d4aa1258dcb7b198754c00641236fd359a950d102774f98a4"
-        },
-        {
-          "page": 64,
-          "label": "EMBARKING 18.02",
-          "label_sha256": "c30b56db8c6ab55f0e782006924d739c88da8317bd5130ecde7549d5d522784e"
-        },
-        {
-          "page": 64,
-          "label": "DISEMBARKING 18.03",
-          "label_sha256": "ec71d93addb89db7b48cb195911dca1b140cbacc4bca41b041fc52a39afee568"
-        },
-        {
-          "page": 65,
-          "label": "DISEMBARK MOVE 18.04",
-          "label_sha256": "cf92bb05d0183cab0fd92118fd42659127415602edd92ecf2fa14e03c8a79f9f"
-        },
-        {
-          "page": 65,
-          "label": "EMERGENCY DISEMBARK MOVE 18.05",
-          "label_sha256": "e98f0fbe6c08f6796a973dadb15a7b98a08a4221ccdd9f77064ec5c4c61f66f6"
-        }
-      ]
-    },
-    {
-      "family_id": "19",
-      "section_key": "rule-family-19--p66",
-      "page_start": 66,
-      "page_end": 67,
-      "page_range_sha256": "e17c99f0181e5dc03cfb81b512860e2929cfc3753c0ff0e6042ee58c9ee43093",
-      "observed_heading_pages": [
-        66,
-        67
-      ],
-      "rule_refs": [
-        "19.01",
-        "19.02",
-        "19.03",
-        "19.04"
-      ],
-      "anchor_labels": [
-        {
-          "page": 66,
-          "label": "FORMING ATTACHED UNITS 19.01",
-          "label_sha256": "8c5c19085cdbe133fa48b98948a943585284662ade1020ac05ddd79da7d644d8"
-        },
-        {
-          "page": 66,
-          "label": "ATTACKING ATTACHED UNITS 19.02",
-          "label_sha256": "3a65453a62dad444c8fb9ce87619cfaa4abb56788da32234195cfe3bba4ae044"
-        },
-        {
-          "page": 67,
-          "label": "KEYWORDS IN ATTACHED UNITS 19.03",
-          "label_sha256": "3090ec8fbec17c5c8a013fd32ed110b321d879059c162557e3570f3b6c17ae21"
-        },
-        {
-          "page": 67,
-          "label": "ABILITIES IN ATTACHED UNITS 19.04",
-          "label_sha256": "8760e29793d6a6a8b339cc17182325a15ff63036ddd7885094307b5022e7f6e5"
-        }
-      ]
-    },
-    {
-      "family_id": "20",
-      "section_key": "rule-family-20--p68",
-      "page_start": 68,
-      "page_end": 71,
-      "page_range_sha256": "3a47648709fa8fd0a7213d03254c64c75ced758daa818a5fc6bddb428afd9e91",
-      "observed_heading_pages": [
-        68,
-        69,
-        80
-      ],
-      "rule_refs": [
-        "20.02",
-        "20.04"
-      ],
-      "anchor_labels": [
-        {
-          "page": 68,
-          "label": "REPOSITIONED UNITS 20.02",
-          "label_sha256": "7089ad8613311e8f0994b4029763748ab091c301992514a29b87baf693afbd25"
-        },
-        {
-          "page": 69,
-          "label": "INGRESS MOVE 20.04",
-          "label_sha256": "572960cf06ee67e74fadeebcabf389b322227ed2c89ee877e76ed7b674d42977"
-        },
-        {
-          "page": 80,
-          "label": "20.04), if every model in this unit",
-          "label_sha256": "945a44a3ba68f182205301ea4b9eaa1daecd16dfb49cdf3cf8f8f854f5407e1f"
-        }
-      ]
-    },
-    {
-      "family_id": "22",
-      "section_key": "rule-family-22--p72",
-      "page_start": 72,
-      "page_end": 73,
-      "page_range_sha256": "430abf7fd9849b3d7a18e62bcf9073b0ea4a3edeaa6a934b72da46d6921ae3b8",
-      "observed_heading_pages": [
-        72,
-        73
-      ],
-      "rule_refs": [
-        "22.01",
-        "22.02",
-        "22.03",
-        "22.04",
-        "22.05"
-      ],
-      "anchor_labels": [
-        {
-          "page": 72,
-          "label": "AURA ABILITIES 22.01",
-          "label_sha256": "d579f7c134fc9f7a7151fdaf531aaf2b6a6e9c01cdc94ac66ff448f73c0eb18e"
-        },
-        {
-          "page": 72,
-          "label": "FACTION ABILITIES 22.02",
-          "label_sha256": "cf31c0880dd356b2cbb9d120f2e77e7a443bc82d70414b9737b86432bd85ca3e"
-        },
-        {
-          "page": 72,
-          "label": "PSYCHIC ABILITIES 22.03",
-          "label_sha256": "3e4db3cb9b7d2c74ec23eef919e4d047034293656fd28610e0b5bc64fe716d5f"
-        },
-        {
-          "page": 72,
-          "label": "WARGEAR ABILITIES 22.04",
-          "label_sha256": "a18d57eb32b4f3f4bd5cf22fe7c3fa4a3a4fb5956cc1849077b646866a5f81f8"
-        },
-        {
-          "page": 73,
-          "label": "PLUNGING FIRE 22.05",
-          "label_sha256": "f1aff5191b07b33cbabdf8516dbb96c309ef443d197bbb9ada248901f39f5103"
-        }
-      ]
-    },
-    {
-      "family_id": "23",
-      "section_key": "rule-family-23--p74",
-      "page_start": 74,
-      "page_end": 88,
-      "page_range_sha256": "97c054088fcdc8ccc96a7146f14738d104ff758bb72714113e72c6c248712cb1",
-      "observed_heading_pages": [
-        74
-      ],
-      "rule_refs": [
-        "23.01",
-        "23.02",
-        "23.03",
-        "23.04"
-      ],
-      "anchor_labels": [
-        {
-          "page": 74,
-          "label": "DEPLOYMENT 23.01",
-          "label_sha256": "d21e23b006e1c7a7eae36a71cde1e63ba6f0d93371ce0f19709ed33458c836f8"
-        },
-        {
-          "page": 74,
-          "label": "MOVEMENT 23.02",
-          "label_sha256": "3b58c537976c4a630ea78f5d4495dd3ac9df1ccee154585d00f1a2db33419471"
-        },
-        {
-          "page": 74,
-          "label": "SHOOTING 23.03",
-          "label_sha256": "1e10a2259dfabea76ae0c3a6e0289a882715b40c0e18e08a470fbc9e5b934e66"
-        },
-        {
-          "page": 74,
-          "label": "CHARGING AND FIGHTING 23.04",
-          "label_sha256": "966840478d8d92e4add528e4205f05dd74946f57760e9636b23ca463eb0cfc51"
+          "page": 82,
+          "label": "[LANCE] 24.21",
+          "label_sha256": "8a1c56e0c0f4a5236948d431d46345e220b1fbf6eb6e2c8837367e4ef101002f"
         }
       ]
     }

@@ -597,26 +597,28 @@
   "rule_reference_families": [
     {
       "family_id": "01",
-      "page_start": 8,
+      "canonical_anchor_page": 9,
+      "page_start": 9,
       "page_end": 9,
       "rule_refs": 6,
       "anchor_labels": [
         {
-          "page": 8,
-          "label": "ARMIES 01.01",
-          "label_sha256": "64a454ef2b8f8a4ba1ba276b67f3e9939fffae71ea0c952e05500cca6f6336e2"
+          "page": 9,
+          "label": "MEASURING DISTANCES 01.04",
+          "label_sha256": "563691e7a6f36f0f9e830e6e4cf98af562a69b4243a9ee8289bd7b3a126d5ba2"
         },
         {
-          "page": 8,
-          "label": "UNITS AND MODELS 01.02",
-          "label_sha256": "3583777a51ec9bb98b3283bb5635b9943e3b17d1fdb709d5e5f6367c685d0973"
+          "page": 9,
+          "label": "DICE 01.05",
+          "label_sha256": "a8795731e463874259468984d4d5b2ab8279b45e3a3571e5710d7fbf8b98d58d"
         }
       ]
     },
     {
       "family_id": "02",
+      "canonical_anchor_page": 10,
       "page_start": 10,
-      "page_end": 11,
+      "page_end": 13,
       "rule_refs": 5,
       "anchor_labels": [
         {
@@ -633,60 +635,40 @@
     },
     {
       "family_id": "03",
-      "page_start": 12,
+      "canonical_anchor_page": 14,
+      "page_start": 14,
       "page_end": 15,
       "rule_refs": 4,
       "anchor_labels": [
         {
-          "page": 12,
-          "label": "MOVING UNITS 03.01",
-          "label_sha256": "56ee3f8ed8c70c10987bc87af4bbf185da89ddcced5c6aba4827a610485e4f3d"
-        },
-        {
           "page": 14,
           "label": "SET UP 03.02",
           "label_sha256": "8698bc7e82c647c3ec12788dc6b7183fa6ec0d88fff0bb1aa11bf04e276bc488"
+        },
+        {
+          "page": 14,
+          "label": "COHERENCY 03.03",
+          "label_sha256": "e96860ae56620a8510e33b78dd76d82c73c6af0e8438de4b556120ea1fcfa5bd"
         }
       ]
     },
     {
       "family_id": "04",
+      "canonical_anchor_page": 16,
       "page_start": 16,
-      "page_end": 16,
+      "page_end": 17,
       "rule_refs": 2,
       "anchor_labels": [
         {
           "page": 16,
           "label": "1 SELECT WEAPONS 04.01",
           "label_sha256": "7eb15db73c9bf63ac420e0954ea5745e62aefa2b6c6aaf514a7c33655e5d38b6"
-        },
-        {
-          "page": 17,
-          "label": "3 RESOLVE ATTACKS 04.03",
-          "label_sha256": "d5b7534ab09e92d4b1cbdadfdb67ec8710b0b4ebd4a47708838dd83a64126b02"
-        }
-      ]
-    },
-    {
-      "family_id": "24",
-      "page_start": 17,
-      "page_end": 17,
-      "rule_refs": 37,
-      "anchor_labels": [
-        {
-          "page": 17,
-          "label": "▪ [CLOSE - QUARTERS] 24.07",
-          "label_sha256": "94770aee84d3ae00027507912065eb0cb40b5b3d92af6705c3e14048048a4ab7"
-        },
-        {
-          "page": 17,
-          "label": "▪ [EXTRA ATTACKS] 24.11",
-          "label_sha256": "4f1e20354424147e120e316ae1354a25468707d7e26e63a010953516ba6528da"
         }
       ]
     },
     {
       "family_id": "05",
+      "canonical_anchor_page": 18,
       "page_start": 18,
       "page_end": 23,
       "rule_refs": 3,
@@ -705,6 +687,7 @@
     },
     {
       "family_id": "06",
+      "canonical_anchor_page": 24,
       "page_start": 24,
       "page_end": 27,
       "rule_refs": 3,
@@ -723,6 +706,7 @@
     },
     {
       "family_id": "07",
+      "canonical_anchor_page": 28,
       "page_start": 28,
       "page_end": 29,
       "rule_refs": 3,
@@ -741,8 +725,9 @@
     },
     {
       "family_id": "08",
+      "canonical_anchor_page": 30,
       "page_start": 30,
-      "page_end": 31,
+      "page_end": 32,
       "rule_refs": 5,
       "anchor_labels": [
         {
@@ -759,42 +744,26 @@
     },
     {
       "family_id": "09",
-      "page_start": 32,
-      "page_end": 32,
+      "canonical_anchor_page": 33,
+      "page_start": 33,
+      "page_end": 33,
       "rule_refs": 7,
       "anchor_labels": [
         {
-          "page": 32,
-          "label": "1 START OF MOVEMENT PHASE 09.01",
-          "label_sha256": "d764b8a65d7843811f72bd24e9d7c18e3d4c4d8344ea196991e6d1fd2a11b705"
+          "page": 33,
+          "label": "REMAIN STATIONARY 09.04",
+          "label_sha256": "b5d8b7ed494554824b61a5e47e90634445e9c2d4a233f885f7c6d92564b3b3c6"
         },
-        {
-          "page": 32,
-          "label": "2 MOVE UNITS 09.02",
-          "label_sha256": "f51572f7c80266770142b789d6fed702db7d9a3ae8788f66d1e85d025e69da90"
-        }
-      ]
-    },
-    {
-      "family_id": "21",
-      "page_start": 33,
-      "page_end": 33,
-      "rule_refs": 3,
-      "anchor_labels": [
         {
           "page": 33,
-          "label": "Models 21.03",
-          "label_sha256": "fa73cb9ac739d96f9c290be97dbd69340c49885f69d3bcabfd050495da9cef89"
-        },
-        {
-          "page": 70,
-          "label": "SURGE MOVES 21.01",
-          "label_sha256": "3789b751fba0b46f405834b8f929353395f48d43bc63411aa162faf512d2605a"
+          "label": "NORMAL MOVE 09.05",
+          "label_sha256": "e1f37ac970f42275e4d8878d5bd6423cd8a472a82d971bcd4a0a3b69a8bd3e3a"
         }
       ]
     },
     {
       "family_id": "10",
+      "canonical_anchor_page": 34,
       "page_start": 34,
       "page_end": 35,
       "rule_refs": 6,
@@ -813,6 +782,7 @@
     },
     {
       "family_id": "11",
+      "canonical_anchor_page": 36,
       "page_start": 36,
       "page_end": 37,
       "rule_refs": 4,
@@ -831,6 +801,7 @@
     },
     {
       "family_id": "12",
+      "canonical_anchor_page": 38,
       "page_start": 38,
       "page_end": 45,
       "rule_refs": 9,
@@ -849,6 +820,7 @@
     },
     {
       "family_id": "13",
+      "canonical_anchor_page": 46,
       "page_start": 46,
       "page_end": 51,
       "rule_refs": 11,
@@ -867,8 +839,9 @@
     },
     {
       "family_id": "14",
+      "canonical_anchor_page": 52,
       "page_start": 52,
-      "page_end": 53,
+      "page_end": 54,
       "rule_refs": 3,
       "anchor_labels": [
         {
@@ -885,24 +858,26 @@
     },
     {
       "family_id": "15",
-      "page_start": 54,
+      "canonical_anchor_page": 55,
+      "page_start": 55,
       "page_end": 57,
       "rule_refs": 8,
       "anchor_labels": [
         {
-          "page": 54,
-          "label": "USING STRATAGEMS 15.01",
-          "label_sha256": "0e89312942ada4e6fcdc4011f5d54cd2769f11a46b9e0df5bf2547f1c6a919fd"
-        },
-        {
           "page": 55,
           "label": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
           "label_sha256": "ff184dfabf47a6b011932cdc27925152d2a42eea91cf7b96401be44372133bbc"
+        },
+        {
+          "page": 55,
+          "label": "FIRE OVERWATCH 15.08 1CPCORE STRATAGEM",
+          "label_sha256": "a35a5279d4d913a43885a5be035130d62c2ca2c867449fda1e114b68ec73ce99"
         }
       ]
     },
     {
       "family_id": "16",
+      "canonical_anchor_page": 58,
       "page_start": 58,
       "page_end": 61,
       "rule_refs": 1,
@@ -916,6 +891,7 @@
     },
     {
       "family_id": "17",
+      "canonical_anchor_page": 62,
       "page_start": 62,
       "page_end": 63,
       "rule_refs": 1,
@@ -929,6 +905,7 @@
     },
     {
       "family_id": "18",
+      "canonical_anchor_page": 64,
       "page_start": 64,
       "page_end": 65,
       "rule_refs": 5,
@@ -947,6 +924,7 @@
     },
     {
       "family_id": "19",
+      "canonical_anchor_page": 66,
       "page_start": 66,
       "page_end": 67,
       "rule_refs": 4,
@@ -965,24 +943,40 @@
     },
     {
       "family_id": "20",
+      "canonical_anchor_page": 68,
       "page_start": 68,
-      "page_end": 71,
+      "page_end": 69,
       "rule_refs": 2,
       "anchor_labels": [
         {
           "page": 68,
           "label": "REPOSITIONED UNITS 20.02",
           "label_sha256": "7089ad8613311e8f0994b4029763748ab091c301992514a29b87baf693afbd25"
+        }
+      ]
+    },
+    {
+      "family_id": "21",
+      "canonical_anchor_page": 70,
+      "page_start": 70,
+      "page_end": 71,
+      "rule_refs": 3,
+      "anchor_labels": [
+        {
+          "page": 70,
+          "label": "SURGE MOVES 21.01",
+          "label_sha256": "3789b751fba0b46f405834b8f929353395f48d43bc63411aa162faf512d2605a"
         },
         {
-          "page": 69,
-          "label": "INGRESS MOVE 20.04",
-          "label_sha256": "572960cf06ee67e74fadeebcabf389b322227ed2c89ee877e76ed7b674d42977"
+          "page": 70,
+          "label": "SURGE MOVE 21.02",
+          "label_sha256": "46ace89af25067006635fe0ffd50eb26a816834d68163dc237e2df770c5da393"
         }
       ]
     },
     {
       "family_id": "22",
+      "canonical_anchor_page": 72,
       "page_start": 72,
       "page_end": 73,
       "rule_refs": 5,
@@ -1001,8 +995,9 @@
     },
     {
       "family_id": "23",
+      "canonical_anchor_page": 74,
       "page_start": 74,
-      "page_end": 88,
+      "page_end": 81,
       "rule_refs": 4,
       "anchor_labels": [
         {
@@ -1014,6 +1009,25 @@
           "page": 74,
           "label": "MOVEMENT 23.02",
           "label_sha256": "3b58c537976c4a630ea78f5d4495dd3ac9df1ccee154585d00f1a2db33419471"
+        }
+      ]
+    },
+    {
+      "family_id": "24",
+      "canonical_anchor_page": 82,
+      "page_start": 82,
+      "page_end": 88,
+      "rule_refs": 37,
+      "anchor_labels": [
+        {
+          "page": 82,
+          "label": "[HEAVY] 24.16",
+          "label_sha256": "7478cbd48ce60e14387b08d15be1e9ae9f04c5886a5a192fbd12244adef02e42"
+        },
+        {
+          "page": 82,
+          "label": "HOVER 24.17",
+          "label_sha256": "993bd5e9ef64f9e6fbeb88738561a3f0b5d62690ec7dfeec9e21174102e6e800"
         }
       ]
     }
