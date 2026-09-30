@@ -176,3 +176,97 @@ This still excludes:
 - any later waves of models not yet enumerated.
 
 The collection is therefore still explicitly incomplete.
+
+
+## Wave 2 closeout clarification
+
+The starter-era layer is now substantially reconciled.
+
+### Dark Vengeance Lords
+
+Exactly **2** old Dark Vengeance Chaos Lord bodies are confirmed.
+
+- both are the Dark Vengeance sculpt;
+- one is damaged;
+- no third generic Chaos Lord body is currently established;
+- the Wave 1 generic Chaos Lord selection maps into this two-body pool.
+
+### Dark Vengeance Chosen
+
+Exactly **12** old-sculpt Chosen are confirmed.
+
+- all twelve are present;
+- all twelve are assembled;
+- all retain the fixed starter-sculpt loadouts;
+- paint state was not separately reconfirmed.
+
+### Shadowspear CSM bodies
+
+The full historical **20-body** CSM allocation from two Shadowspear boxes is now reconciled:
+
+- 10 still on a complete sprue;
+- 7 assembled but unpainted outside the Kill Team;
+- 3 transferred into the Word Bearers Legionaries Kill Team.
+
+For the three Kill Team bodies originating from Shadowspear, the user recalls:
+
+- 2 with bolters;
+- 1 with a heavy bolter.
+
+A further autocannon-armed model is visible and appears likely to be from Shadowspear, but its exact identity is not yet established. It is therefore not counted as an additional body.
+
+The Kill Team also uses newer Chosen bodies. Their exact number remains open.
+
+### Greater Possessed
+
+Exactly **6** legacy Greater Possessed:
+
+- 2 assembled and painted;
+- 4 still on sprues.
+
+They remain legacy Greater Possessed physical identities with current-role candidate `Possessed`.
+
+### Gal Vorbak / Argel Tal
+
+- Gal Vorbak — 10;
+- Argel Tal — 1.
+
+All are sprayed/primed in a base coat and currently **unbased**.
+
+They remain Horus Heresy physical identities with user-authorized Possessed proxy/representation use.
+
+### World Eaters Dark Vengeance Helbrute
+
+The converted Dark Vengeance Helbrute in the World Eaters collection is now physically resolved as:
+
+- assembled;
+- original Dark Vengeance fist retained;
+- plasma fitted in place of the original melta-type ranged weapon;
+- fixed/non-magnetized configuration unless later corrected.
+
+### Winged Black Legion Daemon Prince
+
+The winged Heretic Astartes Daemon Prince selected in the CSM roster is confirmed to be the **same physical model** already stored as the winged Black Legion-styled Daemon Prince in `collection/chaos_daemons`.
+
+Therefore:
+
+- it remains available as a CSM role;
+- it contributes **0 additional unique bodies** to the CSM physical total;
+- it must never be double-counted across the CSM and Chaos Daemons collection domains.
+
+## Current lower bound
+
+After resolving the three missing Shadowspear bodies and removing the cross-domain Daemon Prince duplicate, the current **unique CSM-domain physical lower bound is 151 bodies/models**.
+
+This remains deliberately conservative because it excludes:
+
+- the still-unknown number of newer Chosen bodies used in the Word Bearers Legionaries Kill Team;
+- the unresolved autocannon-armed body identity;
+- all additional later CSM models/kits not yet enumerated.
+
+### Next exact questions
+
+1. Full model count of the Word Bearers Legionaries Kill Team.
+2. How many of that Kill Team's bodies are newer Chosen bodies beyond the three known Shadowspear bodies.
+3. Whether the observed autocannon model is one of the already-counted 20 Shadowspear bodies or a separate physical model.
+4. Continue with the next acquisition/build layer after the starter era.
