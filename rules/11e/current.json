@@ -658,6 +658,13 @@
     "rule_interaction_graph_complete": false,
     "current_normalized_factions_change": 0,
     "authority_rule": "Lexical/structural semantic roles are conservative evidence only. MIXED and UNCLASSIFIED are valid fail-closed states; paragraph prose, condition/effect AST, interaction graph, repeated-variant equivalence and Codex/app equivalence remain unclaimed.",
-    "ast_readiness_pending": true
+    "ast_readiness_pending": true,
+    "closure_report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSURE_2026-09-30.md",
+    "pre_closure_validation": {
+      "semantic_classification_workflow_run": 36706607549,
+      "normative_gap_audit_run": 36706607636,
+      "overlap_workflow_run": 36706342065,
+      "result": "SPECIALIZED_AND_GAP_GATES_SUCCESS"
+    }
   }
 }
