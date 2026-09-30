@@ -21,7 +21,7 @@
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "PARAGRAPH_SEMANTIC_ROLES_CLASSIFIED_AST_READINESS_PENDING",
+      "normative_structured_normalization": "PARAGRAPH_SEMANTIC_ROLES_CLASSIFIED_SEMANTIC_REVIEW_PENDING",
       "public_overlap": {
         "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
         "exact_core_mirror_units": 21,
@@ -155,7 +155,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
+  "next_milestone": "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
