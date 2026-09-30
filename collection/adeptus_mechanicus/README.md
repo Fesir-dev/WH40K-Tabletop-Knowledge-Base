@@ -92,27 +92,39 @@ rather than as permanently assigned squad 1 / squad 2 / squad 3.
 
 The canonical normalized inventory is `current.json`.
 
-## Sicarian physical reconciliation pass 1
-
-Direct physical inspection now confirms the Princeps pools and fixed weapon builds.
+## Sicarian physical reconciliation — closed
 
 ### Sicarian Infiltrators
 
-- 3 × Princeps on bases;
-- 1 × additional Princeps body without a base, kept as a future spare;
-- all Infiltrator models are permanently built with **Taser goad & flechette blaster**;
-- no weapon interchangeability is available.
+Exact physical total: **21 bodies**.
 
-The exact number of ordinary based Infiltrators still needs a direct count before the physical pool can be closed.
+- 17 × ordinary Infiltrators;
+- 3 × Princeps on bases;
+- 1 × additional Princeps body without a base, kept as a future spare.
+
+All Infiltrators, including Princeps, are permanently assembled with **Taser goad & flechette blaster**. No weapon interchangeability is available.
 
 ### Sicarian Ruststalkers
 
+Exact physical total: **31 bodies**.
+
+- 27 × ordinary Ruststalkers;
 - 3 × Princeps on bases;
-- 1 × additional Princeps body without a base, kept as a future spare;
-- all ordinary Ruststalkers are permanently built with **Transonic blades**;
-- all Princeps are permanently built with **Transonic blades & chordclaw**;
-- no interchangeable loadout has been reported.
+- 1 × additional Princeps body without a base, kept as a future spare.
 
-The exact number of ordinary based Ruststalkers still needs a direct count before the physical pool can be closed.
+Ordinary Ruststalkers are permanently assembled with **Transonic blades**.
 
-The two previously known extra Princeps bodies are therefore no longer only a minimum: they are now **exactly identified as one extra unbased Infiltrator Princeps body and one extra unbased Ruststalker Princeps body**.
+All Princeps are permanently assembled with **Transonic blades & chordclaw**.
+
+### Sicarian closure consequence
+
+The old source-export counts of 20 Infiltrators and 30 Ruststalkers were each short by one unbased spare Princeps body.
+
+The physical Sicarian pools are now closed:
+
+- Infiltrators: **21**
+- Ruststalkers: **31**
+
+Together with the already reconciled Skitarii pools, the normalized known Adeptus Mechanicus body count is now **121**.
+
+This is the current known physical floor, not yet a final full-collection audit result, because several remaining Mechanicus pools still inherit their quantities from the source export rather than from a direct hand count.
