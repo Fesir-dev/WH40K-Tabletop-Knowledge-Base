@@ -1018,6 +1018,13 @@
     "existing_ast_nodes_mutated": 0,
     "additional_paragraphs_admitted": 0,
     "current_normalized_factions_change": 0,
-    "authority_rule": "The 11 sentence candidates are source-shape readiness evidence only. They are not AST nodes and do not authorize bulk parser admission; the existing 13.07 AST node remains unchanged and opaque."
+    "authority_rule": "The 11 sentence candidates are source-shape readiness evidence only. They are not AST nodes and do not authorize bulk parser admission; the existing 13.07 AST node remains unchanged and opaque.",
+    "closure_report": "reports/CORE_RULE_AST_READINESS_EXPANSION_CLOSURE_2026-09-30.md",
+    "pre_closure_validation": {
+      "expansion_workflow_run": 36734460626,
+      "implementation_repository_ci_run": 36734460041,
+      "normative_gap_audit_run": 36735485529,
+      "result": "SUCCESS"
+    }
   }
 }
