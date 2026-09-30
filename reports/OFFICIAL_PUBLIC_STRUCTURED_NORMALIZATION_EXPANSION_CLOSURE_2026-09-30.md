@@ -166,3 +166,17 @@ Scope:
 3. keep paragraph prose external/copyright-safe;
 4. distinguish safely atomizable references from layout/extraction ambiguities;
 5. do not change faction normative coverage or infer Codex/app-only semantics.
+
+
+## Merge evidence
+
+- merged PR: **#10**;
+- merge commit: `191b258a9a85fe71417f48c2fd74ee66afd30644`;
+- validated final PR head: `cc1297b7472c835014c215ef5c5ca6a706a55d32`;
+- final PR-head generic validation: `36692867757` — **SUCCESS**;
+- final PR-head normative/app gap audit: `36692867724` — **SUCCESS**;
+- final PR-head Core structure workflow: `36692867778` — **SUCCESS**;
+- final PR-head residual classification: `36692867670` — **SUCCESS**;
+- final PR-head overlap revalidation: `36692867854` — **SUCCESS**.
+
+The merge therefore promotes the fully validated candidate without changing its authority boundaries.
