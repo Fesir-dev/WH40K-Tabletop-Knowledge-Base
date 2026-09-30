@@ -1,0 +1,825 @@
+{
+  "schema_version": "1.1",
+  "inventory_id": "chaos_space_marines_personal",
+  "faction": "Chaos Space Marines / Heretic Astartes",
+  "checkpoint": "2026-09-30",
+  "repository_registered_at": "2026-09-30",
+  "status": "PROVISIONAL",
+  "revision_state": "WAVE1_SOURCE_LOWER_BOUND",
+  "physical_pools": [
+    {
+      "pool_id": "abaddon",
+      "name": "Abaddon the Despoiler",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Abaddon the Despoiler",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "loadout": [
+          "Drach'nyen",
+          "Talon of Horus"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "haarken",
+      "name": "Haarken Worldclaimer",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Haarken Worldclaimer",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "loadout": [
+          "Hellspear",
+          "Herald's Talon"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "chaos_lord",
+      "name": "Chaos Lord",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Chaos Lord",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "loadout": [
+          "Daemon hammer",
+          "Plasma pistol"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "chaos_lord_terminator",
+      "name": "Chaos Lord in Terminator Armour",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Chaos Lord in Terminator Armour",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "loadout": [
+          "Combi-bolter",
+          "Exalted weapon"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "chaos_lord_jump_pack",
+      "name": "Chaos Lord with Jump Pack",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Chaos Lord with Jump Pack",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "loadout": [
+          "Accursed weapon",
+          "Bolt pistol"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "dark_apostle",
+      "name": "Dark Apostle",
+      "physical_bodies": 3,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Dark Apostle",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Dark Apostle",
+          "physical_bodies": 1,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Dark Disciple",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "unit_bodies": 3,
+        "loadout": [
+          "Accursed crozius",
+          "Bolt pistol",
+          "2x Dark Disciple close combat weapon"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "exalted_champion_crucible",
+      "name": "Exalted Champion [Crucible]",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Exalted Champion [Crucible]",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "notes": [
+        "Exact source identity includes the [Crucible] qualifier; current rules identity/legality is not inferred into the physical layer.",
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "daemon_prince_winged_csm",
+      "name": "Heretic Astartes Daemon Prince with wings",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Heretic Astartes Daemon Prince with wings",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "physical_identity_state": "CROSS_DOMAIN_OVERLAP_CANDIDATE",
+      "source_configuration_snapshot": {
+        "loadout": [
+          "Hellforged weapons",
+          "Infernal cannon"
+        ]
+      },
+      "notes": [
+        "Potential overlap with the already-recorded winged Black Legion-styled Daemon Prince in collection/chaos_daemons; direct identity confirmation is required before any global collection total deduplication.",
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "lord_discordant",
+      "name": "Lord Discordant on Helstalker",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Lord Discordant on Helstalker",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "loadout": [
+          "Impaler chainglaive",
+          "Helstalker autocannon",
+          "Techno-virus injector",
+          "Bolt pistol",
+          "Bladed limbs"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "master_of_executions",
+      "name": "Master of Executions",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Master of Executions",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "loadout": [
+          "Axe of dismemberment",
+          "Bolt pistol"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "master_of_possession",
+      "name": "Master of Possession",
+      "physical_bodies": 3,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Master of Possession",
+          "source_unit_instances": 3,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "source_unit_instances": 3,
+        "per_model_loadout": [
+          "Bolt pistol",
+          "Rite of Possession",
+          "Staff of possession"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "sorcerer",
+      "name": "Sorcerer",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Sorcerer",
+          "source_unit_instances": 2,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "source_unit_instances": 2,
+        "per_model_loadout": [
+          "Bolt pistol",
+          "Force weapon",
+          "Infernal Gaze"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "cultist_mob",
+      "name": "Cultist Mob",
+      "physical_bodies": 40,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Cultist Mob",
+          "source_unit_instances": 4,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Cultist Champion",
+          "physical_bodies": 4,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Cultist w/ autopistol and brutal assault weapon",
+          "physical_bodies": 36,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "source_squads": 4,
+        "squad_size": 10,
+        "aggregate_loadout": {
+          "Autopistol": 40,
+          "Brutal assault weapon": 40
+        }
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "legionaries",
+      "name": "Legionaries",
+      "physical_bodies": 15,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Legionaries",
+          "source_unit_instances": 3,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Aspiring Champion",
+          "physical_bodies": 3,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Legionary w/ boltgun",
+          "physical_bodies": 10,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Legionary w/ other weapon",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "source_squads": 3,
+        "squad_size": 5,
+        "aggregate_weapons": {
+          "Bolt pistol": 15,
+          "Close combat weapon": 15,
+          "Boltgun": 13,
+          "Lascannon": 2
+        },
+        "squad_pattern": [
+          "5 bodies: 4 boltguns + 1 lascannon",
+          "5 bodies: 5 boltguns",
+          "5 bodies: 4 boltguns + 1 lascannon"
+        ]
+      },
+      "notes": [
+        "This pool is expected to require detailed physical reconciliation because the collection spans multiple editions and historical squad/loadout conventions.",
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "accursed_cultists",
+      "name": "Accursed Cultists",
+      "physical_bodies": 8,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Accursed Cultists",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Mutant",
+          "physical_bodies": 5,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Torment",
+          "physical_bodies": 3,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "aggregate_weapons": {
+          "Blasphemous appendages": 5,
+          "Hideous mutations": 3
+        }
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "chaos_terminators",
+      "name": "Chaos Terminator Squad",
+      "physical_bodies": 10,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Chaos Terminator Squad",
+          "source_unit_instances": 2,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Terminator Champion",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Accursed weapon and combi-bolter",
+          "physical_bodies": 8,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "source_squads": 2,
+        "squad_size": 5,
+        "aggregate_weapons": {
+          "Accursed weapon": 10,
+          "Combi-bolter": 10
+        }
+      },
+      "notes": [
+        "Historical weapon-build differences across editions must be reconciled physically before treating this source configuration as exact WYSIWYG.",
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "havocs",
+      "name": "Havocs",
+      "physical_bodies": 10,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Havocs",
+          "source_unit_instances": 2,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Havoc Champion",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Havoc w/ autocannon",
+          "physical_bodies": 4,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Havoc w/ lascannon",
+          "physical_bodies": 4,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "source_squads": 2,
+        "squad_size": 5,
+        "aggregate_weapons": {
+          "Havoc autocannon": 4,
+          "Havoc lascannon": 4,
+          "Flamer": 2,
+          "Astartes chainsword": 2
+        }
+      },
+      "notes": [
+        "Heavy-weapon bodies and loose heavy-weapon bits require direct audit; the roster selection is not assumed to equal the current physical state.",
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "obliterators",
+      "name": "Obliterators",
+      "physical_bodies": 4,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Obliterators",
+          "source_unit_instances": 2,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Obliterator",
+          "physical_bodies": 4,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "source_units": 2,
+        "models_per_unit": 2
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "possessed",
+      "name": "Possessed",
+      "physical_bodies": 5,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Possessed",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Possessed",
+          "physical_bodies": 5,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "warp_talons",
+      "name": "Warp Talons",
+      "physical_bodies": 5,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Warp Talons",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Warp Talon Champion",
+          "physical_bodies": 1,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Warp Talon",
+          "physical_bodies": 4,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "aggregate_weapons": {
+          "Warp claws": 5
+        }
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "helbrute",
+      "name": "Helbrute",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Helbrute",
+          "source_unit_instances": 1,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "loadout": [
+          "Missile launcher",
+          "Multi-melta",
+          "Close combat weapon"
+        ]
+      },
+      "notes": [
+        "Helbrute weapon configuration is especially edition-sensitive and requires direct physical/magnetization audit.",
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    },
+    {
+      "pool_id": "venomcrawler",
+      "name": "Venomcrawler",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
+        "BUILD_STATE_UNRECONCILED",
+        "PHYSICAL_LOADOUT_UNRECONCILED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Venomcrawler",
+          "source_unit_instances": 2,
+          "source_id": "NR_CSM_WAVE1_2026_09_30"
+        }
+      ],
+      "source_configuration_snapshot": {
+        "source_unit_instances": 2,
+        "per_model_weapons": [
+          "2x Excruciator cannon",
+          "Soulflayer tendrils and claws"
+        ]
+      },
+      "notes": [
+        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
+        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
+      ]
+    }
+  ],
+  "confirmed_totals": {
+    "wave1_source_declared_top_level_unit_entries": 34,
+    "wave1_source_declared_physical_bodies": 117,
+    "normalized_physical_bodies_lower_bound": 117,
+    "actual_total_owned": "UNKNOWN_COLLECTION_EXPLICITLY_INCOMPLETE",
+    "character_or_single_model_top_level_entries": 15,
+    "source_declared_cultist_bodies": 40,
+    "source_declared_legionary_bodies": 15,
+    "source_declared_terminator_bodies": 10,
+    "source_declared_havoc_bodies": 10
+  },
+  "constraints": [
+    {
+      "id": "WAVE1_IS_LOWER_BOUND",
+      "type": "collection_completeness",
+      "effect": "The 117 bodies represented by this export are a lower bound only. Additional assembled, unassembled and on-sprue CSM models exist outside the source roster."
+    },
+    {
+      "id": "ROSTER_LOADOUT_NOT_PHYSICAL_AUTHORITY",
+      "type": "source_boundary",
+      "effect": "Weapon and squad configurations in the New Recruit export are retained as a dated roster projection. They must not overwrite direct physical inspection, magnetization, loose bits or historical build evidence."
+    },
+    {
+      "id": "CSM_DAEMON_PRINCE_OVERLAP_PENDING",
+      "type": "cross_domain_identity",
+      "effect": "The winged Heretic Astartes Daemon Prince may be the same physical body already stored as the winged Black Legion-styled Daemon Prince in collection/chaos_daemons. Global totals must not treat the identity as resolved until user confirmation."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "CSM_WAVE2_AND_BEYOND",
+      "question": "Which additional CSM models/bodies are owned outside this Wave 1 roster, including assembled models and kits/bodies still on sprues?",
+      "state": "OPEN_EXPECTED_MULTIWAVE_RECONCILIATION"
+    },
+    {
+      "id": "CSM_BUILD_STATE",
+      "question": "For each pool, which bodies are assembled, partially assembled, unassembled/on sprue, converted, magnetized or loose-bit dependent?",
+      "state": "OPEN"
+    },
+    {
+      "id": "CSM_LEGACY_LOADOUT_RECONCILIATION",
+      "question": "Which physical weapon/loadout combinations actually exist on Legionaries, Terminators, Havocs, Helbrute and characters, independently of the current roster projection?",
+      "state": "OPEN"
+    },
+    {
+      "id": "CSM_SHARED_BODY_AND_ROLE_MAPPING",
+      "question": "Which older models can legally/physically represent multiple modern datasheet roles, and which roles share the same body or component pool?",
+      "state": "OPEN"
+    },
+    {
+      "id": "CSM_WINGED_DAEMON_PRINCE_IDENTITY",
+      "question": "Is the Heretic Astartes Daemon Prince with wings in this CSM roster the same physical model already recorded as the winged Black Legion-styled Daemon Prince in the Chaos Daemons collection?",
+      "state": "USER_CONFIRMATION_REQUIRED"
+    }
+  ],
+  "provenance": {
+    "source_files": [
+      {
+        "source_id": "NR_CSM_WAVE1_2026_09_30",
+        "uploaded_name": "Вся колллекция CSM.json",
+        "sha256": "8549829fb7d7002aae6f4e5e859ba939cbf86f7370cf3248f75d681c214058ec",
+        "roster_name": "Вся колллекция CSM",
+        "generator": "https://newrecruit.eu",
+        "battle_scribe_version": "2.03",
+        "game_system_name": "Warhammer 40,000 11th Edition",
+        "game_system_revision": 15,
+        "catalogue_name": "Chaos - Chaos Space Marines",
+        "catalogue_revision": 17,
+        "source_reported_points": 3600,
+        "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY",
+        "extracted_scope": "Wave 1 CSM physical-selection lower bound and source configuration snapshot"
+      }
+    ],
+    "user_clarifications": [
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_SCOPE_DECLARATION",
+        "facts": [
+          "The CSM collection has been accumulated unevenly since approximately 2013 across multiple editions.",
+          "The Wave 1 New Recruit roster is explicitly not the complete physical collection.",
+          "Additional models and kits remain unassembled/on sprues.",
+          "Historical edition changes make current unit/loadout mapping non-trivial.",
+          "Some source selections require later physical clarification rather than immediate normalization."
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Raw New Recruit export is not vendored because it contains extensive copyrighted rules text; checksum and normalized collection facts are retained.",
+    "The collection must be reconciled by physical body first, then build state, then current-role mapping. Current 11E squad legality must not be used to erase historical physical builds.",
+    "This file is intentionally a durable Wave 1 checkpoint, not a claim of collection completeness."
+  ]
+}
