@@ -28,7 +28,7 @@ class OfficialPublicMirrorOverlapContracts(unittest.TestCase):
         official="unit ability alpha beta gamma delta epsilon zeta eta theta"
         state,cov,anchor=classify(
             "alpha beta gamma delta epsilon zeta eta iota",
-            "unit ability",official.split(),"EXACT_SOURCE_ID"
+            "unit ability",tokens(official),"EXACT_SOURCE_ID"
         )
         self.assertIn(state,{"HIGH_OVERLAP_NORMALIZATION_MATCH","PARTIAL_OVERLAP_REVIEW"})
         self.assertTrue(anchor)
@@ -38,7 +38,7 @@ class OfficialPublicMirrorOverlapContracts(unittest.TestCase):
         official="Eldrad Ulthran unrelated public text"
         state,cov,anchor=classify(
             "Completely different semantic wording with enough tokens for comparison",
-            "Eldrad Ulthran",official.split(),"EXACT_SOURCE_ID"
+            "Eldrad Ulthran",tokens(official),"EXACT_SOURCE_ID"
         )
         self.assertEqual(state,"REVIEW_REQUIRED_POSSIBLE_DRIFT_OR_LAYOUT")
         self.assertTrue(anchor)
