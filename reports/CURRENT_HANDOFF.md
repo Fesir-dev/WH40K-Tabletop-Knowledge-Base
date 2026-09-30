@@ -7,10 +7,12 @@ Updated: **2026-09-30**
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
 
-Latest validated structured-normalization expansion candidate:
+Latest closed structured-normalization expansion milestone:
 
-- PR: **#10**;
+- merged PR: **#10**;
+- merge commit: `191b258a9a85fe71417f48c2fd74ee66afd30644`;
 - validated implementation head: `a1c46b76eb186776559ac1dc91cc925abcf45a44`;
+- final validated PR head: `cc1297b7472c835014c215ef5c5ca6a706a55d32`;
 - Core Rules structure: **24** numbered families (`01–24`), **141** detected references, **88 / 88** pages verified;
 - exact-but-unscoped residuals classified: **1,566**;
 - no-exact-public-overlap residuals classified: **7,936**;
@@ -20,7 +22,12 @@ Latest validated structured-normalization expansion candidate:
 - normative/app gap reproducibility: `36692560396` — **SUCCESS**;
 - Core structured normalization: `36692560392` — **SUCCESS**;
 - residual classification: `36692560385` — **SUCCESS**;
-- full official-public overlap revalidation: `36692560403` — **SUCCESS**;
+- full official-public overlap revalidation on implementation head: `36692560403` — **SUCCESS**;
+- final PR-head generic validation: `36692867757` — **SUCCESS**;
+- final PR-head normative/app gap audit: `36692867724` — **SUCCESS**;
+- final PR-head Core structure workflow: `36692867778` — **SUCCESS**;
+- final PR-head residual classification: `36692867670` — **SUCCESS**;
+- final PR-head overlap revalidation: `36692867854` — **SUCCESS**;
 - closure report: `reports/OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_CLOSURE_2026-09-30.md`;
 - next milestone: `CORE_RULE_REFERENCE_ATOMIZATION_V1`.
 
@@ -313,7 +320,7 @@ Authority boundary remains:
 
 `CORE_RULE_REFERENCE_ATOMIZATION_V1`
 
-The structured-normalization expansion is closed on the validated PR candidate:
+The structured-normalization expansion is closed and merged into `main`:
 
 - Core Rules section-level structure: **PASS**, families `01–24`;
 - detected numbered Core references: **141**;
