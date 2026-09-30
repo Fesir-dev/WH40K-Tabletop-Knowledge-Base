@@ -47,6 +47,7 @@ class RepositoryContracts(unittest.TestCase):
         cls.official_core_snapshot = json.loads((ROOT/"sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json").read_text(encoding="utf-8"))
         cls.core_rule_atoms = json.loads((ROOT/"reports/CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json").read_text(encoding="utf-8"))
         cls.core_rule_boundaries = json.loads((ROOT/"reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json").read_text(encoding="utf-8"))
+        cls.core_rule_paragraph_atoms = json.loads((ROOT/"reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -179,11 +180,11 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(mapping["NO_PUBLIC_FACTION_PACK_MAPPING"], 2)
 
         gaps={x["id"]:x for x in audit["gaps"]}
-        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "PARAGRAPH_BOUNDARIES_CLOSED_PARAGRAPH_ATOMIZATION_PENDING")
+        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "PARAGRAPH_ATOMIZATION_CLOSED_SEMANTIC_CLASSIFICATION_PENDING")
         self.assertEqual(gaps["PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION"]["state"], "EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING")
         self.assertEqual(gaps["GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK"]["state"], "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE")
         self.assertEqual(gaps["NORMATIVE_COVERAGE_ACCOUNTING"]["state"], "INTENTIONAL_ZERO_NOT_MIRROR_DATA_LOSS")
-        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "CORE_RULE_PARAGRAPH_ATOMIZATION_V1")
+        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1")
 
         findings={x["id"]:x for x in self.public_rules_discovery["findings"]}
         self.assertEqual(findings["GW_11E_CORE_RULES_PUBLIC"]["state"], "PUBLIC_OFFICIAL_SOURCE_DISCOVERED_NOT_INGESTED")
@@ -232,7 +233,7 @@ class RepositoryContracts(unittest.TestCase):
 
         profiles=self.gate["scope_profiles"]
         self.assertEqual(profiles["official_public_semantic_fingerprints"]["content_state"], "PASS")
-        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1")
+        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1")
         self.assertEqual(profiles["faction_rules"]["content_state"], "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING")
         self.assertEqual(profiles["app_wording"]["content_state"], "PENDING")
 
@@ -274,11 +275,11 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["current_normalized_factions_change"], 0)
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["state"],
-            "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1",
+            "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
         )
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
-            "RULE_BODY_BOUNDARIES_COMPLETE_PARAGRAPH_ATOMIZATION_PENDING",
+            "PARAGRAPH_IDENTITIES_COMPLETE_SEMANTIC_CLASSIFICATION_PENDING",
         )
 
         profile=self.gate["scope_profiles"]["core_rule_reference_atoms"]
@@ -344,14 +345,14 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["paragraph_candidates"],310)
         self.assertEqual(layer["heading_line_recovery_gaps"],0)
         self.assertEqual(layer["empty_body_boundaries"],0)
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_PARAGRAPH_ATOMIZATION_V1")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1")
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["state"],
-            "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1",
+            "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
         )
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
-            "RULE_BODY_BOUNDARIES_COMPLETE_PARAGRAPH_ATOMIZATION_PENDING",
+            "PARAGRAPH_IDENTITIES_COMPLETE_SEMANTIC_CLASSIFICATION_PENDING",
         )
 
         profile=self.gate["scope_profiles"]["core_rule_paragraph_boundaries"]
@@ -361,7 +362,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["heading_line_recovery_gaps"],0)
         self.assertEqual(profile["empty_body_boundaries"],0)
 
-        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE")
         self.assertEqual(self.coverage["global"]["official_public_core_rule_boundary_rules"],141)
         self.assertEqual(self.coverage["global"]["official_public_core_rule_boundary_occurrences"],146)
         self.assertEqual(self.coverage["global"]["official_public_core_rule_paragraph_candidates"],310)
@@ -377,6 +378,87 @@ class RepositoryContracts(unittest.TestCase):
             "docs/CORE_RULE_PARAGRAPH_BOUNDARY_MODEL.md",
             ".github/workflows/core-rule-paragraph-boundaries.yml",
             "rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json",
+        ]:
+            self.assertTrue((ROOT/required).exists(),required)
+
+    def test_core_rule_paragraph_atomization_layer(self):
+        r=self.core_rule_paragraph_atoms
+        self.assertEqual(r["status"],"PASS")
+        self.assertEqual(r["authority"],"GAMES_WORKSHOP_OFFICIAL")
+        self.assertEqual(r["atomization_version"],"CORE_RULE_PARAGRAPH_ATOMIZATION_V1")
+        s=r["summary"]
+        self.assertEqual(s["paragraph_atoms"],310)
+        self.assertEqual(s["unique_paragraph_keys"],310)
+        self.assertEqual(s["parent_paragraph_candidates"],310)
+        self.assertEqual(s["rules_represented"],141)
+        self.assertEqual(s["occurrences_represented"],146)
+        self.assertEqual(s["families_represented"],24)
+        self.assertEqual(s["classification_counts"],{
+            "REPEATED_OCCURRENCE_PARAGRAPH_VARIANT":10,
+            "SINGLE_OCCURRENCE_PARAGRAPH":300,
+        })
+        self.assertEqual(s["repeated_occurrence_rule_refs"],["15.07","15.08","15.09","15.10","15.11"])
+        self.assertEqual(s["range_validation_failures"],0)
+        self.assertEqual(s["range_validation_failure_samples"],[])
+        self.assertTrue(s["all_parent_candidates_atomized"])
+        self.assertEqual(s["paragraph_hashes_reproduced_from_verified_pdf"],310)
+
+        self.assertTrue(r["source_verification"]["binary_sha256_match"])
+        self.assertEqual(r["source_verification"]["page_semantic_fingerprints_match"],88)
+        self.assertTrue(r["source_verification"]["document_semantic_sha256_match"])
+        b=r["authority_boundary"]
+        self.assertTrue(b["stable_paragraph_identity_complete"])
+        self.assertTrue(b["paragraph_boundaries_are_extraction_candidates"])
+        self.assertFalse(b["paragraph_semantic_ast_complete"])
+        self.assertFalse(b["condition_effect_parsing_complete"])
+        self.assertFalse(b["rule_interaction_graph_complete"])
+        self.assertFalse(b["repeated_paragraph_variant_is_semantic_conflict"])
+        self.assertEqual(b["current_normalized_factions_change"],0)
+
+        layer=self.current["core_rule_paragraph_atomization"]
+        self.assertEqual(layer["state"],"PASS_310_PARAGRAPH_ATOMS")
+        self.assertEqual(layer["paragraph_atoms"],310)
+        self.assertEqual(layer["unique_paragraph_keys"],310)
+        self.assertEqual(layer["range_validation_failures"],0)
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1")
+        self.assertEqual(
+            self.current["source_currentness"]["core_rules_content"]["state"],
+            "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
+        )
+        self.assertEqual(
+            self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
+            "PARAGRAPH_IDENTITIES_COMPLETE_SEMANTIC_CLASSIFICATION_PENDING",
+        )
+
+        profile=self.gate["scope_profiles"]["core_rule_paragraph_atoms"]
+        self.assertEqual(profile["content_state"],"PASS_310_PARAGRAPH_ATOMS")
+        self.assertEqual(profile["paragraph_atoms"],310)
+        self.assertEqual(profile["rules_represented"],141)
+        self.assertEqual(profile["occurrences_represented"],146)
+        self.assertEqual(profile["repeated_occurrence_paragraph_variants"],10)
+        self.assertEqual(profile["range_validation_failures"],0)
+
+        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE")
+        g=self.coverage["global"]
+        self.assertEqual(g["official_public_core_paragraph_atoms"],310)
+        self.assertEqual(g["official_public_core_paragraph_unique_keys"],310)
+        self.assertEqual(g["official_public_core_paragraph_rules_represented"],141)
+        self.assertEqual(g["official_public_core_paragraph_occurrences_represented"],146)
+        self.assertEqual(g["official_public_core_single_occurrence_paragraph_atoms"],300)
+        self.assertEqual(g["official_public_core_repeated_occurrence_paragraph_variants"],10)
+        self.assertEqual(g["official_public_core_paragraph_range_validation_failures"],0)
+        self.assertFalse(g["official_public_core_paragraph_semantic_classification_complete"])
+        self.assertFalse(g["official_public_core_paragraph_semantic_ast_complete"])
+        self.assertEqual(g["current_normalized_factions"],0)
+        self.assertEqual(g["full_normative_semantic_factions"],0)
+
+        for required in [
+            "tools/build_core_rule_paragraph_atoms.py",
+            "tests/test_core_rule_paragraph_atomization.py",
+            "schemas/core_rule_paragraph_atoms.schema.json",
+            "docs/CORE_RULE_PARAGRAPH_ATOMIZATION_MODEL.md",
+            ".github/workflows/core-rule-paragraph-atomization.yml",
+            "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json",
         ]:
             self.assertTrue((ROOT/required).exists(),required)
 
@@ -427,7 +509,7 @@ class RepositoryContracts(unittest.TestCase):
     def test_wave_b_reconciliation_and_promotion(self):
         self.assertIn(self.wave_b_recon["status"], {"PASS","PASS_WITH_CONFLICTS"})
         self.assertEqual(self.wave_b_recon["conflict_count"], self.current["wave_b_structural"]["source_conflicts"])
-        self.assertEqual(self.coverage["status"], "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"], "CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE")
         complete=self.wave_b["counts"]["structural_complete"]
         self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_current")), complete)
         self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
@@ -534,7 +616,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["known_runtime_drifts"], points["known_drift_count"]+surfaces["known_drift_count"])
         self.assertEqual(nr["new_runtime_drifts"], 0)
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "CORE_RULE_PARAGRAPH_ATOMIZATION_V1")
+        self.assertEqual(self.current["next_milestone"], "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1")
         layer=self.current["release_transition_readiness"]
         self.assertEqual(layer["state"], "OPERATIONAL_V1")
         self.assertFalse(layer["policy"]["auto_promote"])
