@@ -296,17 +296,6 @@
           ]
         },
         {
-          "name": "Skitarii Vanguard ordinary trooper with Alpha-style helmet",
-          "physical_bodies": 1,
-          "evidence": "DIRECT_USER_ROLE_RECLASSIFICATION_2026_09_30",
-          "configuration": {
-            "primary_weapon": "radium carbine"
-          },
-          "notes": [
-            "This model was likely used as an Alpha in older editions when 5-model units were legal, but is currently classified by the user as an ordinary Vanguard trooper. The Alpha-style helmet is cosmetic/historical and does not define its current physical role."
-          ]
-        },
-        {
           "name": "Skitarii Vanguard w/ plasma caliver",
           "physical_bodies": 3,
           "evidence": "DIRECT_USER_VISUAL_COUNT_2026_09_30"
@@ -339,8 +328,17 @@
           "name": "Skitarii Vanguard w/ radium carbine only",
           "physical_bodies": 7,
           "evidence": "DIRECT_USER_VISUAL_COUNT_RECONCILED_2026_09_30",
-          "notes": [
-            "This count includes the ordinary trooper with an Alpha-style helmet."
+          "subvariants": [
+            {
+              "name": "ordinary helmet/body presentation",
+              "physical_bodies": 6
+            },
+            {
+              "name": "Alpha-style helmet, currently ordinary trooper",
+              "physical_bodies": 1,
+              "evidence": "DIRECT_USER_ROLE_RECLASSIFICATION_2026_09_30",
+              "history_note": "Likely used as an Alpha in an older edition when 5-model units were used; currently treated as an ordinary Vanguard."
+            }
           ]
         }
       ],
