@@ -948,10 +948,14 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(self.current["status"], "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING")
 
     def test_upstream_watch_and_new_recruit_runtime(self):
-        self.assertEqual(self.upstream_watch["status"], "NO_CHANGE")
-        self.assertEqual(self.upstream_watch["change_summary"]["github_sources_changed"], [])
+        self.assertEqual(self.upstream_watch["status"], "CHANGE_DETECTED")
+        self.assertEqual(
+            self.upstream_watch["change_summary"]["github_sources_changed"],
+            ["BSDATA_WH40K_11E","BSDATA_MFM_11E"],
+        )
         self.assertEqual(self.upstream_watch["change_summary"]["wahapedia_files_changed"], 0)
         self.assertFalse(self.upstream_watch["change_summary"]["wahapedia_last_update_changed"])
+        self.assertFalse(self.upstream_watch["policy"]["auto_promote"])
 
         self.assertEqual(self.nr_runtime["schema_version"], "2.0")
         self.assertIn(self.nr_runtime["status"], {"PASS","PASS_WITH_KNOWN_RUNTIME_DRIFT"})
@@ -978,7 +982,14 @@ class RepositoryContracts(unittest.TestCase):
 
         automation=self.current["automation"]
         nr=automation["new_recruit_runtime"]
-        self.assertEqual(automation["upstream_change_watch"]["state"], "ACTIVE_NO_CHANGE")
+        watch=automation["upstream_change_watch"]
+        self.assertEqual(watch["state"], "ACTIVE_CHANGE_DETECTED")
+        self.assertFalse(watch["auto_promote"])
+        self.assertEqual(watch["bsdata_wh40k_11e"]["live"], "374f50544f0274296ab53c2103766ae3945e8799")
+        self.assertTrue(watch["bsdata_wh40k_11e"]["changed"])
+        self.assertEqual(watch["bsdata_mfm_11e"]["live"], "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390")
+        self.assertTrue(watch["bsdata_mfm_11e"]["changed"])
+        self.assertTrue(watch["bsdata_mfm_11e"]["normative_mfm_data_change_not_inferred"])
         self.assertEqual(nr["state"], self.nr_runtime["status"])
         self.assertEqual(nr["representative_point_checks"], points["checks"])
         self.assertEqual(nr["representative_point_matches"], points["matched"])
