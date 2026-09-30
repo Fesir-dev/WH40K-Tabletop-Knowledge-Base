@@ -448,7 +448,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(g["official_public_core_single_occurrence_paragraph_atoms"],300)
         self.assertEqual(g["official_public_core_repeated_occurrence_paragraph_variants"],10)
         self.assertEqual(g["official_public_core_paragraph_range_validation_failures"],0)
-        self.assertFalse(g["official_public_core_paragraph_semantic_classification_complete"])
+        self.assertTrue(g["official_public_core_paragraph_semantic_classification_complete"])
         self.assertFalse(g["official_public_core_paragraph_semantic_ast_complete"])
         self.assertEqual(g["current_normalized_factions"],0)
         self.assertEqual(g["full_normative_semantic_factions"],0)
