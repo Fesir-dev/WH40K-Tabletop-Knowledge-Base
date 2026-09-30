@@ -43,3 +43,17 @@ Adeptus Mechanicus physical reconciliation is closed at 121 models. Imperial Kni
 
 
 Cross-faction Chaos models must be stored once in a canonical shared pool when the same physical bodies are routinely allocated between faction collections. Faction inventories reference those pools with zero local body contribution.
+
+
+## Chaos cross-faction collection graph
+
+Current machine-readable and human-readable maps:
+
+- `CHAOS_CROSS_FACTION_MATRIX.json`
+- `CHAOS_CROSS_FACTION_MATRIX.md`
+
+They separate unique physical ownership from current 11E cross-faction use.
+
+Current normalized known Chaos-domain sum: **662 unique bodies/models** across CSM, Thousand Sons, World Eaters, Chaos Daemons and the shared Chaos pool. This is not a claim that all 662 have equal verification depth.
+
+Important current bridges include CSM Cult of the Dark Gods, Daemonic Pact, Chaos Daemons Shadow Legion, god-legion direct daemon datasheets and the all-CHAOS Chaos Knights ally rule.

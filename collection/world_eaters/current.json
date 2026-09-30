@@ -371,7 +371,8 @@
     "source_declared_model_bodies": 54,
     "normalized_unique_world_eaters_bodies_excluding_shared_spawn": 48,
     "shared_chaos_spawn_available": 10,
-    "source_selected_chaos_spawn": 6
+    "source_selected_chaos_spawn": 6,
+    "external_khorne_daemon_bodies_directly_available": 39
   },
   "constraints": [],
   "open_questions": [
@@ -385,7 +386,8 @@
     "This inventory records physical collection evidence only; roster points, legality and detachment choices in the source export are not collection authority.",
     "Raw New Recruit exports are not committed because they contain extensive copyrighted rules text; SHA-256 hashes and normalized physical facts are retained instead.",
     "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED.",
-    "Chaos Spawn ownership moved to the canonical cross-faction shared Chaos pool; the old six-body World Eaters roster selection is retained only as historical roster evidence."
+    "Chaos Spawn ownership moved to the canonical cross-faction shared Chaos pool; the old six-body World Eaters roster selection is retained only as historical roster evidence.",
+    "Current World Eaters faction pack directly exposes five owned Khorne daemon roles totaling 39 physical bodies in the Chaos Daemons collection, in addition to the global shared Spawn pool."
   ],
   "provenance": {
     "source_files": [
@@ -434,5 +436,54 @@
       "physical_bodies_available": 10,
       "count_in_this_inventory": 0
     }
-  ]
+  ],
+  "cross_faction_access": {
+    "checkpoint": "2026-09-30",
+    "direct_faction_pack_daemon_roles": [
+      {
+        "unit": "Bloodletters",
+        "collection_ref": "collection/chaos_daemons/current.json#bloodletters",
+        "owned_bodies": 20
+      },
+      {
+        "unit": "Bloodcrushers",
+        "collection_ref": "collection/chaos_daemons/current.json#bloodcrushers",
+        "owned_bodies": 6
+      },
+      {
+        "unit": "Bloodthirster",
+        "collection_ref": "collection/chaos_daemons/current.json#bloodthirster",
+        "owned_bodies": 2
+      },
+      {
+        "unit": "Flesh Hounds",
+        "collection_ref": "collection/chaos_daemons/current.json#flesh_hounds",
+        "owned_bodies": 10
+      },
+      {
+        "unit": "Skarbrand",
+        "collection_ref": "collection/chaos_daemons/current.json#skarbrand",
+        "owned_bodies": 1
+      }
+    ],
+    "shared_pools": [
+      {
+        "unit": "Chaos Spawn",
+        "collection_ref": "collection/chaos_shared/current.json#chaos_spawn_shared",
+        "owned_bodies": 10
+      }
+    ],
+    "csm_overlap": [
+      {
+        "unit": "Khorne Berzerkers",
+        "relation": "CSM can import this World Eaters unit via Cult of the Dark Gods",
+        "owned_bodies": 20
+      },
+      {
+        "unit": "Master Of Executions",
+        "relation": "same current datasheet name exists in CSM and World Eaters; physical bodies remain separately owned until user confirms any body sharing",
+        "owned_bodies_in_world_eaters": 1
+      }
+    ]
+  }
 }

@@ -1022,7 +1022,11 @@
     "confirmed_legionary_bodies": 25,
     "probable_additional_legionary_bodies_from_separate_box": 10,
     "probable_legionary_bodies_if_box_reconfirmed": 35,
-    "probable_physical_bodies_if_legionary_box_reconfirmed": 165
+    "probable_physical_bodies_if_legionary_box_reconfirmed": 165,
+    "external_khorne_berzerker_bodies_available_via_cult_rule": 20,
+    "external_rubric_marine_bodies_available_via_cult_rule": 15,
+    "external_chaos_daemon_bodies_in_global_pool": 340,
+    "external_ts_terminator_sorcerer_role_candidate_bodies": 2
   },
   "constraints": [
     {
@@ -1202,7 +1206,8 @@
     "Word Bearers Legionaries Kill Team physical composition is closed at 8 bodies (3 Shadowspear + 5 newer Chosen-derived). Current unique CSM-domain lower bound: 156.",
     "Word Bearers Kill Team 40K role policy simplified: all eight bodies count as Legionaries; hero proxy candidates removed.",
     "Haarken / Chaos Lord with Jump Pack identity reconciled as one magnetized shared body. CSM unique-body lower bound corrected to 155.",
-    "Legionary accounting now distinguishes 25 confirmed physical bodies from a probable 35-body acquisition universe pending recheck of one separate 10-model Legionaries box."
+    "Legionary accounting now distinguishes 25 confirmed physical bodies from a probable 35-body acquisition universe pending recheck of one separate 10-model Legionaries box.",
+    "Cross-faction Chaos audit added formal CSM access to owned Khorne Berzerkers, Rubric Marines, Daemonic Pact pools, shared Spawn, the shared Black Legion Daemon Prince and two Thousand Sons Terminator Sorcerers as CSM physical-role candidates."
   ],
   "acquisition_groups": [
     {
@@ -1406,5 +1411,85 @@
         "The five newer Chosen-derived Word Bearers Kill Team bodies are already separately confirmed and are not part of this probable ten."
       ]
     }
-  ]
+  ],
+  "cross_faction_access": {
+    "checkpoint": "2026-09-30",
+    "rules_state": "CURRENT_11E_LIVE_MIRROR_VERIFIED",
+    "formal_bridges": [
+      {
+        "rule": "Cult of the Dark Gods",
+        "source_faction": "Chaos Space Marines / HERETIC ASTARTES",
+        "strike_force_points_cap": 500,
+        "imported_units": [
+          {
+            "unit": "Khorne Berzerkers",
+            "collection_ref": "collection/world_eaters/current.json#khorne_berzerkers",
+            "owned_bodies": 20,
+            "state": "CONFIRMED_PHYSICAL_POOL"
+          },
+          {
+            "unit": "Rubric Marines",
+            "collection_ref": "collection/thousand_sons/current.json#rubric_marines",
+            "owned_bodies": 15,
+            "state": "CONFIRMED_PHYSICAL_POOL"
+          },
+          {
+            "unit": "Plague Marines",
+            "collection_ref": null,
+            "owned_bodies": 0,
+            "state": "NO_PHYSICAL_POOL_RECORDED"
+          },
+          {
+            "unit": "Noise Marines",
+            "collection_ref": null,
+            "owned_bodies": 0,
+            "state": "NO_PHYSICAL_POOL_RECORDED"
+          }
+        ],
+        "note": "Faction keywords are replaced with HERETIC ASTARTES when these units are included using this rule."
+      },
+      {
+        "rule": "Daemonic Pact",
+        "source_faction": "Chaos Daemons / LEGIONES DAEMONICA",
+        "strike_force_points_cap": 500,
+        "collection_ref": "collection/chaos_daemons/current.json",
+        "available_physical_pool_bodies": 340,
+        "constraint": "For each god keyword, non-BATTLELINE allied units cannot outnumber BATTLELINE allied units with that keyword.",
+        "collection_effect": [
+          "Khorne daemon access is physically supported by Bloodletters plus non-Battleline Khorne units.",
+          "Tzeentch daemon access is physically supported by Horror Battleline plus non-Battleline Tzeentch units.",
+          "Slaanesh daemon access is physically supported by Daemonette Battleline plus non-Battleline Slaanesh units.",
+          "Nurgle non-Battleline daemon access is currently constrained because no Plaguebearer Battleline pool is recorded."
+        ]
+      },
+      {
+        "rule": "Chaos Knights allied units",
+        "source_faction": "Chaos Knights",
+        "allowance": "If every model in the army has CHAOS, include either 1 TITANIC CHAOS KNIGHTS model or up to 3 WAR DOG models.",
+        "collection_state": "NO_CHAOS_KNIGHTS_PHYSICAL_POOL_RECORDED"
+      }
+    ],
+    "shared_or_cross_role_physical_models": [
+      {
+        "role": "Heretic Astartes Daemon Prince with Wings",
+        "collection_ref": "collection/chaos_daemons/current.json#daemon_prince_black_legion_winged",
+        "physical_bodies": 1,
+        "state": "CONFIRMED_SHARED_PHYSICAL_IDENTITY"
+      },
+      {
+        "role": "Chaos Spawn",
+        "collection_ref": "collection/chaos_shared/current.json#chaos_spawn_shared",
+        "physical_bodies": 10,
+        "state": "CONFIRMED_SHARED_CROSS_FACTION_POOL"
+      },
+      {
+        "role": "Sorcerer In Terminator Armour",
+        "collection_ref": "collection/thousand_sons/current.json#sorcerer_in_terminator_armour",
+        "physical_bodies": 2,
+        "state": "HIGH_CONFIDENCE_CROSS_ROLE_CANDIDATE",
+        "basis": "Both current CSM and Thousand Sons datasheets use 40 mm bases, force weapon and combi-bolter/combi-weapon physical weapon families.",
+        "caveat": "Count remains canonical in Thousand Sons. Use as the CSM datasheet requires the roster to select the HERETIC ASTARTES Sorcerer In Terminator Armour profile; this is physical role reuse, not importing the Thousand Sons datasheet."
+      }
+    ]
+  }
 }
