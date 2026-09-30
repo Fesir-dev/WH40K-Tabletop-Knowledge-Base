@@ -5,9 +5,10 @@ Status: **PROVISIONAL**
 
 Normalized from three user-supplied New Recruit exports plus direct user confirmation of additional physical models, now including the Slaanesh collection.
 
-- Source-declared daemon physical bodies: **158**.
-- Additional user-confirmed daemon bodies not present in the exports: **3**.
-- Normalized Chaos Daemons physical bodies in this domain: **161**.
+- Original Khorne/Tzeentch source-declared daemon physical bodies: **158**.
+- Additional pre-Slaanesh user-confirmed daemon bodies not present in those exports: **3**.
+- Slaanesh import adds **155 unique physical bodies/models** beyond the already-recorded shared Be'lakor.
+- Current normalized Chaos Daemons physical bodies/models in this domain: **316**.
 - The Tzeentch-labelled export used a Titanicus Traitoris catalogue only as a host/container; no Titanicus physical collection is inferred.
 - Daemon Prince identity overlap is resolved.
 
@@ -28,26 +29,62 @@ Raw exports are not vendored because they include extensive rules text.
 The canonical normalized inventory is `current.json`.
 
 
-## Slaanesh collection import — 2026-09-30
+## Slaanesh collection — physical-count reconciliation closed
 
-The uploaded Slaanesh roster contains 60 Daemonettes, 15 Seekers, 6 Fiends and the listed Slaanesh characters/Greater Daemons. It is retained as a roster snapshot, not as the physical collection ceiling.
+The uploaded Slaanesh roster is retained as configuration/provenance evidence. Direct user confirmation supersedes its incomplete bulk-unit counts.
 
-Direct physical corrections:
+### Daemonettes
 
-- **Daemonettes: 110 owned total**, with at least 90 assembled; the exact assembled/on-sprue split still needs one final confirmation.
-- **Seekers: 30 owned total** — 15 assembled and 15 retained unassembled/on sprue.
-- **Keeper of Secrets bodies: 2 physical bodies total**.
-  - Keeper A is magnetized and can also represent **Shalaxi Helbane**; its arms support whip, shield and claw configurations.
-  - Keeper B is a fixed non-magnetized Keeper build with sword + hand/arm; shield magnetization is only possible future work.
-- Source-declared counts provisionally retained pending user confirmation:
-  - Syll'esske — 1
-  - The Masque of Slaanesh — 1
-  - Contorted Epitome — 1
-  - Infernal Enrapturess — 2
-  - Tormentbringer — 1
-  - Tranceweaver — 1
-  - Fiends — 6
+- **110 owned total — exact**
+- **at least 90 assembled**
+- the remaining 20 are owned, but their exact assembled/on-sprue split is intentionally not invented
+- source roster represented only 60
 
-The Slaanesh export also contains Be'lakor. It is **not double-counted** until the user confirms whether that roster entry refers to the already-recorded Be'lakor physical miniature.
+Current roster limits do not cap physical ownership. Legacy 40K/Age of Sigmar surplus remains part of the collection.
 
-Physical ownership is independent of current roster limits; legacy 40K and Age of Sigmar surplus remains part of the collection.
+### Seekers
+
+- **30 owned total — exact**
+- 15 assembled
+- 15 unassembled/on sprue
+- source roster represented only 15
+
+### Keeper of Secrets / Shalaxi Helbane
+
+There are **2 physical Keeper-scale bodies total**.
+
+Body A:
+- magnetized;
+- can represent **Keeper of Secrets or Shalaxi Helbane**;
+- magnetized arm options include the user's whip, shield and claw configurations.
+
+Body B:
+- fixed/non-magnetized Keeper build;
+- current build: sword + hand/arm;
+- shield magnetization would be future conversion work only.
+
+Shalaxi therefore does **not** create a third physical model.
+
+### Other Slaanesh models — exact assembled counts
+
+- Syll'esske — 1
+- The Masque of Slaanesh — 1
+- Contorted Epitome — 1
+- Infernal Enrapturess — 2
+- Tormentbringer — 1
+- Tranceweaver — 1
+- Fiends — 6
+
+The user confirmed all of the above source counts are complete and all of those models are assembled.
+
+### Be'lakor overlap
+
+The Be'lakor selected in the Slaanesh export is the **same single physical Be'lakor** already represented in this inventory. It is not double-counted.
+
+### Slaanesh reconciliation result
+
+The Slaanesh import contributes **155 unique physical bodies/models** beyond the already-counted Be'lakor.
+
+Current normalized Chaos Daemons collection total: **316 physical bodies/models**.
+
+The Slaanesh physical-count reconciliation is closed. The overall Chaos Daemons domain remains provisional only because build state/magnetization for older Khorne/Tzeentch pools has not yet been fully reconciled.
