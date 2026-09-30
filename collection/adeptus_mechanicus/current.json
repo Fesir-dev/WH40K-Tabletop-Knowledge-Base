@@ -626,7 +626,8 @@
     "actual_collection_total": "UNKNOWN_GREATER_THAN_OR_EQUAL_TO_121",
     "directly_reconciled_ranger_bodies": 24,
     "directly_reconciled_vanguard_bodies": 14,
-    "normalized_known_bodies_before_unquantified_sicarian_extras": 119
+    "normalized_known_bodies_before_unquantified_sicarian_extras": 119,
+    "user_confirmed_additional_princeps_bodies_exact": 2
   },
   "constraints": [
     {
@@ -659,8 +660,8 @@
   ],
   "notes": [
     "This is the first Adeptus Mechanicus baseline import and intentionally preserves known uncertainty instead of guessing the final collection size.",
-    "The user explicitly requested a later second-stage physical revision covering extra bodies and actual loadout/wargear variants.",
-    "Roster points, detachment and legality data from the New Recruit export are not physical collection authority."
+    "Roster points, detachment and legality data from the New Recruit export are not physical collection authority.",
+    "Skitarii Ranger/Vanguard physical reconciliation is closed. Sicarian Princeps counts/loadouts are now verified; only ordinary Infiltrator/Ruststalker body counts remain to close those pools."
   ],
   "provenance": {
     "source_files": [
