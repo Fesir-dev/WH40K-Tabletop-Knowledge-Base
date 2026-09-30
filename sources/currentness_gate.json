@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.5",
+  "schema_version": "3.6",
   "as_of": "2026-09-30",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
@@ -38,6 +38,14 @@
         "pages": 1430,
         "failures": 0,
         "authority_boundary": "Official public PDF hashes/fingerprints verify exact public text projections only; they do not prove full Codex/app faction equivalence."
+      },
+      "structured_core_rules": {
+        "state": "PASS_SECTION_STRUCTURE_V1",
+        "checked_at": "2026-09-30",
+        "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
+        "rule_reference_families": 24,
+        "rule_reference_count": 141,
+        "paragraph_level_ast": "PENDING"
       }
     },
     {
@@ -174,11 +182,14 @@
       "required_sources": [
         "GW_40K_DOWNLOADS"
       ],
-      "content_state": "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED",
+      "content_state": "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1",
       "repository_dimension": null,
-      "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
+      "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-      "authority_boundary": "Public official Core Rules text is fingerprinted; structured normative normalization remains pending."
+      "authority_boundary": "Public Core Rules top-level numbered families 01-24 are structurally normalized; nested/paragraph AST remains pending.",
+      "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
+      "rule_reference_families": 24,
+      "rule_reference_count": 141
     },
     "faction_rules": {
       "required_sources": [
@@ -290,6 +301,23 @@
       "exact_public_overlap_units": 5636,
       "promotable_scoped_units": 4070,
       "authority_boundary": "Scoped public Games Workshop overlap only. No full Codex/app equivalence or full-faction promotion is implied."
+    },
+    "official_public_structured_normalization_expansion": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS",
+        "WAHAPEDIA_11E"
+      ],
+      "content_state": "PASS_SCOPED_EXPANSION_V1",
+      "core_rules_report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
+      "residual_report": "reports/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json",
+      "core_rule_reference_families": 24,
+      "core_rule_reference_count": 141,
+      "unscoped_exact_total": 1566,
+      "no_exact_total": 7936,
+      "promoted_units": 0,
+      "semantic_conflicts_created": 0,
+      "current_normalized_factions_change": 0,
+      "authority_boundary": "Residual classification is diagnostic only; no-exact is not a conflict, non-11/Legends reuse is not current promotion, and Codex/app-only semantics remain pending."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."
