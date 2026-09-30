@@ -75,7 +75,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Add read-only six-hour release activation watch with fail-closed action states and guarded-candidate readiness only after official currentness plus upstream projection drift.
 - [x] Audit the remaining normative/app equivalence gaps that keep `current_normalized_factions = 0`, including public Core Rules discovery, supplemental faction-pack scope, app blockers and source-to-roster provenance.
 - [x] Build copyright-safe official public semantic fingerprints for the 11E Core Rules plus all 28 verified public Faction Packs, with daily reproducibility checks and no full Codex/app equivalence claim.
-- [ ] Audit official-public ↔ current-mirror semantic overlap and begin structured official-public normalization without generalizing to Codex/app-only text.
+- [x] Audit official-public ↔ current-mirror semantic overlap and normalize 4,070 exact source/faction-scoped public-official semantic units without generalizing to Codex/app-only text.
+- [ ] Expand structured public-official normalization: Core Rules section model, provenance review for 1,566 exact-but-unscoped units, and classification of the remaining 7,936 non-exact public-overlap units without assuming semantic drift.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary
@@ -108,6 +109,22 @@ Checkpoint: **2026-09-29**.
 
 See `reports/WAVE_B_STRUCTURAL_CLOSURE_2026-09-29.md`.
 
+
+## Official public ↔ mirror overlap v1
+
+Checkpoint: **2026-09-30**.
+
+The repository now compares the hash-verified current Wahapedia semantic projection against the verified public Games Workshop 11E corpus under a fail-closed exact-match contract.
+
+- mirror semantic units audited: **13,572**;
+- exact normalized public-GW overlap: **5,636**;
+- exact source/faction-scoped units promoted into the structured official-public overlap snapshot: **4,070**;
+- exact but insufficiently scoped evidence-only units: **1,566**;
+- no exact public overlap: **7,936** — this is not automatically a conflict or drift;
+- official documents verified: **29 / 29**;
+- official pages: **1,430**, with exact overlap on **1,268** pages.
+
+The structured snapshot is `rules/11e/snapshots/2026-09-30/official_public_overlap/index.json`. It stores identities, hashes and page provenance, not long rules prose. This milestone does **not** change `current_normalized_factions = 0`: public Faction Packs remain supplemental rather than complete Codex replacements, Core Rules still require broader section-level structured normalization, and app/Codex-only wording remains pending.
 
 ## Semantic access
 
