@@ -42,3 +42,4 @@ Re-ingestion automation contracts:
 - `normative_equivalence_gap_audit.schema.json` — authority-aware classification of public-official, mirror, Codex/app and normative-coverage gaps.
 - `official_public_semantic_fingerprint.schema.json` — copyright-safe binary/document/page fingerprint evidence for public official Core Rules and Faction Pack PDFs; no long rules prose stored.
 - `core_rule_reference_index.schema.json` — stable identities and short-heading/page-hash provenance for all numbered public Core Rules references; paragraph prose remains external.
+- `core_rule_paragraph_boundaries.schema.json` — copyright-safe Core rule-body/page-local paragraph boundary offsets, counts and hashes; no paragraph prose or semantic AST.
