@@ -400,7 +400,7 @@ try:
 
     gaps = {x.get("id"): x for x in audit.get("gaps", [])}
     expected_states = {
-        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "PARAGRAPH_BOUNDARIES_CLOSED_PARAGRAPH_ATOMIZATION_PENDING",
+        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "PARAGRAPH_ATOMIZATION_CLOSED_SEMANTIC_CLASSIFICATION_PENDING",
         "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING",
         "FULL_FACTION_CODEX_APP_SEMANTICS": "BLOCKED_OR_CONDITIONAL_ON_AUTHORIZED_CODEX_APP_EVIDENCE",
         "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PUBLIC_EXACT_OVERLAP_SCOPED_RESIDUALS_CLASSIFIED_FULL_EQUIVALENCE_PENDING",
@@ -421,7 +421,7 @@ try:
     if public_rules.get("policy", {}).get("no_full_faction_equivalence_from_faction_packs_alone") is not True:
         errors.append("Public-rules discovery lost faction-pack scope boundary")
 
-    if audit.get("conclusion", {}).get("recommended_next_milestone") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1":
+    if audit.get("conclusion", {}).get("recommended_next_milestone") != "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1":
         errors.append("Normative gap audit recommended next milestone drifted")
     if audit.get("official_public_surface", {}).get("official_public_semantic_fingerprints") != "PASS":
         errors.append("Normative gap audit must record official public fingerprint evidence as PASS")
@@ -521,9 +521,9 @@ try:
         errors.append("Current rules Core Rules binary SHA pointer drifted")
 
     core_current = current_rules.get("source_currentness", {}).get("core_rules_content", {})
-    if core_current.get("state") != "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1":
+    if core_current.get("state") != "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1":
         errors.append("Core Rules currentness must record section structure v1 after preserving fingerprint evidence")
-    if core_current.get("normative_structured_normalization") != "RULE_BODY_BOUNDARIES_COMPLETE_PARAGRAPH_ATOMIZATION_PENDING":
+    if core_current.get("normative_structured_normalization") != "PARAGRAPH_IDENTITIES_COMPLETE_SEMANTIC_CLASSIFICATION_PENDING":
         errors.append("Core Rules structured normalization boundary must remain section-level complete / paragraph AST pending")
 
     supplements = current_rules.get("source_currentness", {}).get("faction_rules_content", {}).get("official_public_supplements", {})
@@ -551,7 +551,7 @@ try:
     profiles = gate.get("scope_profiles", {})
     if profiles.get("official_public_semantic_fingerprints", {}).get("content_state") != "PASS":
         errors.append("Currentness gate official public fingerprint profile must PASS")
-    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1":
+    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1":
         errors.append("Currentness gate Core Rules state drifted")
     if profiles.get("faction_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING":
         errors.append("Currentness gate faction-rules public supplement state drifted")
@@ -854,7 +854,7 @@ try:
             errors.append("Wave B conflict snapshot count differs from reconciliation report")
 
     global_cov = cov.get("global", {})
-    if cov.get("status") != "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1_COMPLETE":
+    if cov.get("status") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE":
         errors.append("coverage/current.json must record structured normalization expansion v1 after overlap closure")
     if global_cov.get("wave_b_structural_roster_identities_complete") != counts.get("structural_complete"):
         errors.append("Coverage structural-complete count differs from current roster-view index")
@@ -1089,8 +1089,8 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1":
-        errors.append("Current milestone must advance to CORE_RULE_REFERENCE_ATOMIZATION_V1")
+    if current_rules.get("next_milestone") != "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1":
+        errors.append("Current milestone must advance to CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release transition readiness v1 as operational")
@@ -1281,7 +1281,7 @@ try:
         errors.append("Current rules official-public overlap promoted unit count drifted")
     if layer.get("current_normalized_factions_change") != 0:
         errors.append("Current rules overlap layer must not change full-faction coverage")
-    if overlap_current.get("next_milestone") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1":
+    if overlap_current.get("next_milestone") != "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1":
         errors.append("Current rules next milestone did not advance after structured normalization expansion")
 
     profile = overlap_gate.get("scope_profiles", {}).get("official_public_mirror_overlap", {})
@@ -1291,7 +1291,7 @@ try:
         errors.append("Currentness gate official-public overlap unit count drifted")
 
     gcov = overlap_cov.get("global", {})
-    if overlap_cov.get("status") != "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1_COMPLETE":
+    if overlap_cov.get("status") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE":
         errors.append("Coverage status did not advance through structured normalization expansion v1")
     if gcov.get("official_public_overlap_promotable_scoped_units") != 4070:
         errors.append("Coverage official-public overlap promoted count drifted")
@@ -1424,12 +1424,12 @@ try:
         errors.append("Current rules Core atomization state drifted")
     if current_layer.get("atoms") != 141 or current_layer.get("heading_recovery_gaps") != 0:
         errors.append("Current rules Core atomization counts drifted")
-    if atom_current.get("next_milestone") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1":
+    if atom_current.get("next_milestone") != "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1":
         errors.append("Current rules did not advance to Core paragraph-boundary extraction")
     current_core = atom_current.get("source_currentness", {}).get("core_rules_content", {})
-    if current_core.get("state") != "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1":
+    if current_core.get("state") != "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1":
         errors.append("Core Rules currentness did not advance to reference atomization v1")
-    if current_core.get("normative_structured_normalization") != "RULE_BODY_BOUNDARIES_COMPLETE_PARAGRAPH_ATOMIZATION_PENDING":
+    if current_core.get("normative_structured_normalization") != "PARAGRAPH_IDENTITIES_COMPLETE_SEMANTIC_CLASSIFICATION_PENDING":
         errors.append("Core Rules structured normalization boundary did not advance after atomization")
 
     atom_profile = atom_gate.get("scope_profiles", {}).get("core_rule_reference_atoms", {})
@@ -1439,7 +1439,7 @@ try:
         errors.append("Currentness gate Core atomization metrics drifted")
 
     atom_global = atom_cov.get("global", {})
-    if atom_cov.get("status") != "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1_COMPLETE":
+    if atom_cov.get("status") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE":
         errors.append("Coverage status did not advance after Core rule atomization")
     if atom_global.get("official_public_core_rule_atoms") != 141:
         errors.append("Coverage Core rule atom count drifted")
@@ -1631,13 +1631,13 @@ try:
         errors.append("Current rules Core paragraph-boundary rule/occurrence counts drifted")
     if current_layer.get("paragraph_candidates") != 310:
         errors.append("Current rules Core paragraph candidate count drifted")
-    if boundary_current.get("next_milestone") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1":
-        errors.append("Current rules did not advance to Core paragraph atomization")
+    if boundary_current.get("next_milestone") != "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1":
+        errors.append("Current rules did not advance to Core paragraph semantic classification")
     current_core = boundary_current.get("source_currentness", {}).get("core_rules_content", {})
-    if current_core.get("state") != "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1":
-        errors.append("Core Rules currentness did not advance to paragraph boundaries v1")
-    if current_core.get("normative_structured_normalization") != "RULE_BODY_BOUNDARIES_COMPLETE_PARAGRAPH_ATOMIZATION_PENDING":
-        errors.append("Core Rules normalization boundary did not advance after paragraph extraction")
+    if current_core.get("state") != "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1":
+        errors.append("Core Rules currentness did not advance to paragraph atomization v1")
+    if current_core.get("normative_structured_normalization") != "PARAGRAPH_IDENTITIES_COMPLETE_SEMANTIC_CLASSIFICATION_PENDING":
+        errors.append("Core Rules normalization boundary did not advance after paragraph atomization")
 
     profile = boundary_gate.get("scope_profiles", {}).get("core_rule_paragraph_boundaries", {})
     if profile.get("content_state") != "PASS_141_RULE_BOUNDARIES":
@@ -1648,8 +1648,8 @@ try:
         errors.append("Currentness gate Core paragraph-boundary failure counts must remain zero")
 
     bg = boundary_cov.get("global", {})
-    if boundary_cov.get("status") != "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1_COMPLETE":
-        errors.append("Coverage status did not advance after Core paragraph-boundary extraction")
+    if boundary_cov.get("status") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE":
+        errors.append("Coverage status did not advance after Core paragraph atomization")
     if bg.get("official_public_core_rule_boundary_rules") != 141:
         errors.append("Coverage Core paragraph-boundary rule count drifted")
     if bg.get("official_public_core_rule_boundary_occurrences") != 146:
@@ -1689,6 +1689,163 @@ try:
             errors.append(f"Missing Core paragraph-boundary artifact: {required.relative_to(ROOT)}")
 except Exception as exc:
     errors.append(f"Core rule paragraph-boundary validation failure: {exc}")
+
+# 3j4. Core Rules stable paragraph atomization contracts.
+try:
+    paragraph_report = json.loads(
+        (ROOT / "reports" / "CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json").read_text(encoding="utf-8")
+    )
+    paragraph_snapshot = json.loads(
+        (ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "core_rule_paragraph_atoms" / "index.json").read_text(encoding="utf-8")
+    )
+    paragraph_current = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    paragraph_gate = json.loads((ROOT / "sources" / "currentness_gate.json").read_text(encoding="utf-8"))
+    paragraph_cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+
+    if paragraph_report.get("status") != "PASS" or paragraph_snapshot.get("status") != "PASS":
+        errors.append("Core paragraph atomization evidence must PASS")
+    if paragraph_report.get("authority") != "GAMES_WORKSHOP_OFFICIAL":
+        errors.append("Core paragraph atomization lost Games Workshop authority")
+    if paragraph_report.get("atomization_version") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1":
+        errors.append("Core paragraph atomization version drifted")
+
+    psum = paragraph_report.get("summary", {})
+    expected_paragraph_classes = {
+        "REPEATED_OCCURRENCE_PARAGRAPH_VARIANT": 10,
+        "SINGLE_OCCURRENCE_PARAGRAPH": 300,
+    }
+    expected_paragraph_summary = {
+        "paragraph_atoms": 310,
+        "unique_paragraph_keys": 310,
+        "parent_paragraph_candidates": 310,
+        "rules_represented": 141,
+        "occurrences_represented": 146,
+        "families_represented": 24,
+        "range_validation_failures": 0,
+        "paragraph_hashes_reproduced_from_verified_pdf": 310,
+    }
+    for key, value in expected_paragraph_summary.items():
+        if psum.get(key) != value:
+            errors.append(f"Core paragraph atomization summary {key} drifted: {psum.get(key)} != {value}")
+    if psum.get("classification_counts") != expected_paragraph_classes:
+        errors.append("Core paragraph atomization classification counts drifted")
+    if psum.get("repeated_occurrence_rule_refs") != ["15.07","15.08","15.09","15.10","15.11"]:
+        errors.append("Core paragraph repeated-occurrence rule refs drifted")
+    if psum.get("range_validation_failure_samples") != []:
+        errors.append("Core paragraph atomization must have zero range failure samples")
+    if psum.get("all_parent_candidates_atomized") is not True:
+        errors.append("All 310 parent paragraph candidates must remain atomized")
+
+    atoms = paragraph_snapshot.get("paragraph_atoms", [])
+    if len(atoms) != 310:
+        errors.append("Core paragraph atom snapshot must contain exactly 310 atoms")
+    if len({x.get("paragraph_key") for x in atoms}) != 310:
+        errors.append("Core paragraph atom keys are not unique")
+    if len({x.get("rule_ref") for x in atoms}) != 141:
+        errors.append("Core paragraph atoms must represent exactly 141 parent rules")
+    if len({x.get("occurrence_key") for x in atoms}) != 146:
+        errors.append("Core paragraph atoms must represent exactly 146 parent occurrences")
+    if len({x.get("family_id") for x in atoms}) != 24:
+        errors.append("Core paragraph atoms must represent exactly 24 families")
+    for atom in atoms:
+        if int(atom.get("line_start", 0)) > int(atom.get("line_end", -1)):
+            errors.append(f"Core paragraph atom line range inverted: {atom.get('paragraph_key')}")
+        if int(atom.get("char_start", 0)) > int(atom.get("char_end", -1)):
+            errors.append(f"Core paragraph atom char range inverted: {atom.get('paragraph_key')}")
+        for key in ("semantic_sha256","page_semantic_sha256","parent_body_semantic_sha256"):
+            if len(str(atom.get(key) or "")) != 64:
+                errors.append(f"Core paragraph atom missing 64-char {key}: {atom.get('paragraph_key')}")
+
+    pverify = paragraph_report.get("source_verification", {})
+    if pverify.get("binary_sha256_match") is not True:
+        errors.append("Core paragraph atomization source binary verification failed")
+    if pverify.get("page_semantic_fingerprints_match") != 88:
+        errors.append("Core paragraph atomization source page verification count drifted")
+    if pverify.get("document_semantic_sha256_match") is not True:
+        errors.append("Core paragraph atomization document semantic verification failed")
+
+    pauth = paragraph_report.get("authority_boundary", {})
+    if pauth.get("stable_paragraph_identity_complete") is not True:
+        errors.append("Core stable paragraph identity completeness must be true")
+    if pauth.get("paragraph_semantic_ast_complete") is not False:
+        errors.append("Core paragraph atomization must not claim semantic AST completeness")
+    if pauth.get("condition_effect_parsing_complete") is not False:
+        errors.append("Core paragraph atomization must not claim condition/effect parsing completeness")
+    if pauth.get("rule_interaction_graph_complete") is not False:
+        errors.append("Core paragraph atomization must not claim interaction graph completeness")
+    if pauth.get("repeated_paragraph_variant_is_semantic_conflict") is not False:
+        errors.append("Repeated Core paragraph variants must not become semantic conflicts automatically")
+    if pauth.get("current_normalized_factions_change") != 0:
+        errors.append("Core paragraph atomization must not change normalized faction count")
+
+    current_layer = paragraph_current.get("core_rule_paragraph_atomization", {})
+    if current_layer.get("state") != "PASS_310_PARAGRAPH_ATOMS":
+        errors.append("Current rules Core paragraph atomization state drifted")
+    if current_layer.get("paragraph_atoms") != 310 or current_layer.get("unique_paragraph_keys") != 310:
+        errors.append("Current rules Core paragraph atom counts drifted")
+    if paragraph_current.get("next_milestone") != "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1":
+        errors.append("Current rules did not advance to Core paragraph semantic classification")
+    current_core = paragraph_current.get("source_currentness", {}).get("core_rules_content", {})
+    if current_core.get("state") != "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1":
+        errors.append("Core Rules currentness did not advance to paragraph atomization v1")
+    if current_core.get("normative_structured_normalization") != "PARAGRAPH_IDENTITIES_COMPLETE_SEMANTIC_CLASSIFICATION_PENDING":
+        errors.append("Core Rules normalization boundary did not advance after paragraph atomization")
+
+    profile = paragraph_gate.get("scope_profiles", {}).get("core_rule_paragraph_atoms", {})
+    if profile.get("content_state") != "PASS_310_PARAGRAPH_ATOMS":
+        errors.append("Currentness gate Core paragraph atom profile must PASS")
+    if profile.get("paragraph_atoms") != 310 or profile.get("rules_represented") != 141 or profile.get("occurrences_represented") != 146:
+        errors.append("Currentness gate Core paragraph atom metrics drifted")
+    if profile.get("range_validation_failures") != 0:
+        errors.append("Currentness gate Core paragraph atom range failures must remain zero")
+
+    pg = paragraph_cov.get("global", {})
+    if paragraph_cov.get("status") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE":
+        errors.append("Coverage status did not advance after Core paragraph atomization")
+    if pg.get("official_public_core_paragraph_atoms") != 310:
+        errors.append("Coverage Core paragraph atom count drifted")
+    if pg.get("official_public_core_paragraph_unique_keys") != 310:
+        errors.append("Coverage Core paragraph unique-key count drifted")
+    if pg.get("official_public_core_paragraph_rules_represented") != 141:
+        errors.append("Coverage Core paragraph rule count drifted")
+    if pg.get("official_public_core_paragraph_occurrences_represented") != 146:
+        errors.append("Coverage Core paragraph occurrence count drifted")
+    if pg.get("official_public_core_single_occurrence_paragraph_atoms") != 300:
+        errors.append("Coverage single-occurrence paragraph count drifted")
+    if pg.get("official_public_core_repeated_occurrence_paragraph_variants") != 10:
+        errors.append("Coverage repeated paragraph variant count drifted")
+    if pg.get("official_public_core_paragraph_range_validation_failures") != 0:
+        errors.append("Coverage paragraph range validation failures must remain zero")
+    if pg.get("current_normalized_factions") != 0 or pg.get("full_normative_semantic_factions") != 0:
+        errors.append("Core paragraph atomization must preserve strict normative faction counters")
+
+    forbidden_paragraph_text_keys = {
+        "text","description","rules_text","official_text","mirror_text","page_text","prose",
+        "paragraph_text","paragraph_body","body_text",
+    }
+    def _check_paragraph_atoms_no_long_text(value, path="root"):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                if key in forbidden_paragraph_text_keys:
+                    errors.append(f"Core paragraph atomization vendored forbidden long-text field: {path}.{key}")
+                    continue
+                _check_paragraph_atoms_no_long_text(child, f"{path}.{key}")
+        elif isinstance(value, list):
+            for idx, child in enumerate(value):
+                _check_paragraph_atoms_no_long_text(child, f"{path}[{idx}]")
+    _check_paragraph_atoms_no_long_text(paragraph_snapshot)
+
+    for required in [
+        ROOT / "docs" / "CORE_RULE_PARAGRAPH_ATOMIZATION_MODEL.md",
+        ROOT / "schemas" / "core_rule_paragraph_atoms.schema.json",
+        ROOT / "tools" / "build_core_rule_paragraph_atoms.py",
+        ROOT / "tests" / "test_core_rule_paragraph_atomization.py",
+        ROOT / ".github" / "workflows" / "core-rule-paragraph-atomization.yml",
+    ]:
+        if not required.exists():
+            errors.append(f"Missing Core paragraph atomization artifact: {required.relative_to(ROOT)}")
+except Exception as exc:
+    errors.append(f"Core rule paragraph atomization validation failure: {exc}")
 
 # 3k. Official public structured normalization expansion contracts.
 try:
@@ -1781,9 +1938,9 @@ try:
     if current_layer.get("current_normalized_factions_change") != 0:
         errors.append("Structured normalization expansion must not change faction coverage")
     core_current = expansion_current.get("source_currentness", {}).get("core_rules_content", {})
-    if core_current.get("state") != "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1":
+    if core_current.get("state") != "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1":
         errors.append("Core Rules currentness state did not advance to section structure v1")
-    if core_current.get("normative_structured_normalization") != "RULE_BODY_BOUNDARIES_COMPLETE_PARAGRAPH_ATOMIZATION_PENDING":
+    if core_current.get("normative_structured_normalization") != "PARAGRAPH_IDENTITIES_COMPLETE_SEMANTIC_CLASSIFICATION_PENDING":
         errors.append("Core Rules structured normalization boundary drifted")
 
     expansion_profile = expansion_gate.get("scope_profiles", {}).get("official_public_structured_normalization_expansion", {})
@@ -1795,7 +1952,7 @@ try:
         errors.append("Currentness gate residual classification must remain non-promoting/non-conflicting")
 
     expansion_global = expansion_cov.get("global", {})
-    if expansion_cov.get("status") != "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1_COMPLETE":
+    if expansion_cov.get("status") != "CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE":
         errors.append("Coverage status did not advance after structured normalization expansion")
     if expansion_global.get("official_public_core_rule_reference_families") != 24:
         errors.append("Coverage Core family count drifted")
