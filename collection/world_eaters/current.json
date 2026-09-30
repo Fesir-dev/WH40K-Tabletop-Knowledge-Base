@@ -58,6 +58,7 @@
       "physical_bodies": 1,
       "status": [
         "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_DISTINCT_PHYSICAL_MODEL",
         "BUILD_STATE_UNKNOWN",
         "MAGNETIZATION_UNKNOWN"
       ],
@@ -72,8 +73,16 @@
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
-      ]
+        "Physical body is present in the source export.",
+        "User confirmed on 2026-09-30 that this is a distinct wingless/foot Daemon Prince miniature styled for Khorne.",
+        "This model is not the winged Tzeentch Daemon Prince and is not shared with the other confirmed Daemon Prince miniatures."
+      ],
+      "physical_identity_id": "daemon_prince_khorne_foot_01",
+      "physical_configuration": {
+        "wings": false,
+        "physical_theme": "Khorne",
+        "build_state": "UNKNOWN_NOT_STATED"
+      }
     },
     {
       "pool_id": "lord_on_juggernaut",
@@ -346,27 +355,11 @@
   "confirmed_totals": {
     "source_declared_model_bodies": 54
   },
-  "constraints": [
-    {
-      "id": "DAEMON_PRINCE_CROSS_FACTION_IDENTITY_UNRESOLVED",
-      "type": "possible_shared_physical_model",
-      "related_inventory": "chaos_daemons_personal",
-      "source_aliases": [
-        "Daemon Prince of Khorne",
-        "Daemon Prince of Chaos with wings (Khorne)"
-      ],
-      "effect": "Do not assume both entries are simultaneously available until physical identity is reconciled."
-    }
-  ],
+  "constraints": [],
   "open_questions": [
     {
       "id": "WE_BUILD_STATE",
       "question": "Which models are built, on sprue, magnetized, converted or proxyable?",
-      "state": "UNKNOWN"
-    },
-    {
-      "id": "DAEMON_PRINCE_IDENTITY",
-      "question": "Is the World Eaters Daemon Prince of Khorne the same physical miniature as the winged Khorne Daemon Prince listed in the daemon export?",
       "state": "UNKNOWN"
     }
   ],
@@ -393,5 +386,14 @@
         "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
       }
     ]
-  }
+  },
+  "resolved_questions": [
+    {
+      "id": "DAEMON_PRINCE_IDENTITY",
+      "resolution": "DISTINCT_PHYSICAL_MODELS_CONFIRMED",
+      "resolved_at": "2026-09-30",
+      "evidence": "USER_CONFIRMATION",
+      "details": "The World Eaters Daemon Prince of Khorne is the wingless Khorne-styled miniature and is distinct from all other Daemon Prince miniatures."
+    }
+  ]
 }
