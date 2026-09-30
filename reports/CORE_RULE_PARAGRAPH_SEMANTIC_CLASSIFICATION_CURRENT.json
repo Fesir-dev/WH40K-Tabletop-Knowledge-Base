@@ -63,6 +63,10 @@
       "SEQUENCE_THEN",
       "TRIGGER_WHEN"
     ],
+    "weak_signal_families": [
+      "STRUCTURAL_LIST",
+      "REFERENCE_OR_CROSS_REFERENCE"
+    ],
     "reference_signals_are_weak": true,
     "mixed_is_preferred_over_forced_single_role": true,
     "unclassified_is_allowed": true
@@ -71,19 +75,19 @@
     "paragraphs": 310,
     "unique_paragraph_keys": 310,
     "role_counts": {
-      "CONDITION_OR_TRIGGER": 27,
-      "MIXED": 138,
+      "CONDITION_OR_TRIGGER": 31,
+      "MIXED": 134,
       "MODIFICATION_OR_REPLACEMENT": 1,
       "OBLIGATION": 1,
       "PERMISSION": 20,
-      "PROCEDURE_OR_SEQUENCE": 9,
+      "PROCEDURE_OR_SEQUENCE": 7,
       "PROHIBITION": 4,
-      "UNCLASSIFIED": 110
+      "UNCLASSIFIED": 112
     },
     "confidence_counts": {
-      "HIGH": 62,
-      "MIXED": 138,
-      "NONE": 110
+      "HIGH": 64,
+      "MIXED": 134,
+      "NONE": 112
     },
     "signal_occurrence_counts": {
       "BULLET_LIKE": 240,
@@ -107,8 +111,8 @@
     },
     "paragraphs_with_signals": 200,
     "paragraphs_without_signals": 110,
-    "mixed_paragraphs": 138,
-    "unclassified_paragraphs": 110,
+    "mixed_paragraphs": 134,
+    "unclassified_paragraphs": 112,
     "repeated_variant_paragraphs": 10,
     "repeated_variant_role_counts": {
       "CONDITION_OR_TRIGGER": 2,

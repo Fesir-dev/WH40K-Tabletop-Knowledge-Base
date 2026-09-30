@@ -63,6 +63,10 @@
       "SEQUENCE_THEN",
       "TRIGGER_WHEN"
     ],
+    "weak_signal_families": [
+      "STRUCTURAL_LIST",
+      "REFERENCE_OR_CROSS_REFERENCE"
+    ],
     "reference_signals_are_weak": true,
     "mixed_is_preferred_over_forced_single_role": true,
     "unclassified_is_allowed": true
@@ -133,7 +137,6 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 2
       },
       "primary_role": "MIXED",
@@ -167,11 +170,10 @@
         }
       ],
       "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 2
       },
-      "primary_role": "MIXED",
-      "classification_confidence": "MIXED",
+      "primary_role": "CONDITION_OR_TRIGGER",
+      "classification_confidence": "HIGH",
       "classifier_version": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1"
     },
     {
@@ -244,8 +246,7 @@
       ],
       "signal_family_counts": {
         "DEFINITION": 2,
-        "MODIFICATION_OR_REPLACEMENT": 3,
-        "PROCEDURE_OR_SEQUENCE": 5
+        "MODIFICATION_OR_REPLACEMENT": 3
       },
       "primary_role": "MIXED",
       "classification_confidence": "MIXED",
@@ -316,7 +317,6 @@
       ],
       "signal_family_counts": {
         "PROHIBITION": 2,
-        "PROCEDURE_OR_SEQUENCE": 6,
         "CONDITION_OR_TRIGGER": 3
       },
       "primary_role": "MIXED",
@@ -556,7 +556,7 @@
       "signal_family_counts": {
         "PERMISSION": 1,
         "DEFINITION": 1,
-        "PROCEDURE_OR_SEQUENCE": 8,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -682,7 +682,7 @@
         "OBLIGATION": 2,
         "PERMISSION": 5,
         "MODIFICATION_OR_REPLACEMENT": 1,
-        "PROCEDURE_OR_SEQUENCE": 12,
+        "PROCEDURE_OR_SEQUENCE": 4,
         "CONDITION_OR_TRIGGER": 5
       },
       "primary_role": "MIXED",
@@ -725,7 +725,7 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 2,
-        "PROCEDURE_OR_SEQUENCE": 22
+        "PROCEDURE_OR_SEQUENCE": 5
       },
       "primary_role": "MIXED",
       "classification_confidence": "MIXED",
@@ -908,7 +908,7 @@
       "signal_family_counts": {
         "PROHIBITION": 1,
         "PERMISSION": 2,
-        "PROCEDURE_OR_SEQUENCE": 4,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 2
       },
       "primary_role": "MIXED",
@@ -955,7 +955,6 @@
       ],
       "signal_family_counts": {
         "OBLIGATION": 2,
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 3
       },
       "primary_role": "MIXED",
@@ -1002,7 +1001,6 @@
       ],
       "signal_family_counts": {
         "PROHIBITION": 1,
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 6
       },
       "primary_role": "MIXED",
@@ -1413,7 +1411,6 @@
         "PROHIBITION": 1,
         "OBLIGATION": 3,
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 5,
         "CONDITION_OR_TRIGGER": 5
       },
       "primary_role": "MIXED",
@@ -1609,7 +1606,6 @@
       ],
       "signal_family_counts": {
         "OBLIGATION": 2,
-        "PROCEDURE_OR_SEQUENCE": 4,
         "CONDITION_OR_TRIGGER": 3
       },
       "primary_role": "MIXED",
@@ -2152,7 +2148,7 @@
         }
       ],
       "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 5
+        "PROCEDURE_OR_SEQUENCE": 3
       },
       "primary_role": "PROCEDURE_OR_SEQUENCE",
       "classification_confidence": "HIGH",
@@ -2222,7 +2218,7 @@
         }
       ],
       "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 8,
+        "PROCEDURE_OR_SEQUENCE": 5,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -2351,7 +2347,7 @@
         }
       ],
       "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 5
+        "PROCEDURE_OR_SEQUENCE": 3
       },
       "primary_role": "PROCEDURE_OR_SEQUENCE",
       "classification_confidence": "HIGH",
@@ -2397,7 +2393,7 @@
       ],
       "signal_family_counts": {
         "OBLIGATION": 2,
-        "PROCEDURE_OR_SEQUENCE": 7,
+        "PROCEDURE_OR_SEQUENCE": 4,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -2886,7 +2882,6 @@
       ],
       "signal_family_counts": {
         "OBLIGATION": 1,
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -3550,7 +3545,7 @@
       ],
       "signal_family_counts": {
         "OBLIGATION": 1,
-        "PROCEDURE_OR_SEQUENCE": 4,
+        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 2
       },
       "primary_role": "MIXED",
@@ -3688,7 +3683,7 @@
         "OBLIGATION": 5,
         "PERMISSION": 1,
         "MODIFICATION_OR_REPLACEMENT": 1,
-        "PROCEDURE_OR_SEQUENCE": 12,
+        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 8
       },
       "primary_role": "MIXED",
@@ -3941,11 +3936,9 @@
           "count": 3
         }
       ],
-      "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 3
-      },
-      "primary_role": "PROCEDURE_OR_SEQUENCE",
-      "classification_confidence": "HIGH",
+      "signal_family_counts": {},
+      "primary_role": "UNCLASSIFIED",
+      "classification_confidence": "NONE",
       "classifier_version": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1"
     },
     {
@@ -3988,7 +3981,7 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 3,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 2
       },
       "primary_role": "MIXED",
@@ -4057,7 +4050,7 @@
         "PROHIBITION": 2,
         "PERMISSION": 6,
         "MODIFICATION_OR_REPLACEMENT": 2,
-        "PROCEDURE_OR_SEQUENCE": 10,
+        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 7
       },
       "primary_role": "MIXED",
@@ -4373,7 +4366,7 @@
         "PROHIBITION": 2,
         "OBLIGATION": 3,
         "PERMISSION": 6,
-        "PROCEDURE_OR_SEQUENCE": 9,
+        "PROCEDURE_OR_SEQUENCE": 3,
         "CONDITION_OR_TRIGGER": 2
       },
       "primary_role": "MIXED",
@@ -4467,7 +4460,7 @@
         }
       ],
       "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 4,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -4548,7 +4541,7 @@
       "signal_family_counts": {
         "PROHIBITION": 1,
         "OBLIGATION": 3,
-        "PROCEDURE_OR_SEQUENCE": 5,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 2
       },
       "primary_role": "MIXED",
@@ -4819,7 +4812,7 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 3,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 7
       },
       "primary_role": "MIXED",
@@ -5152,7 +5145,7 @@
       "signal_family_counts": {
         "PROHIBITION": 1,
         "OBLIGATION": 8,
-        "PROCEDURE_OR_SEQUENCE": 7,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 8
       },
       "primary_role": "MIXED",
@@ -5299,7 +5292,7 @@
         "OBLIGATION": 1,
         "PERMISSION": 1,
         "DEFINITION": 1,
-        "PROCEDURE_OR_SEQUENCE": 6
+        "PROCEDURE_OR_SEQUENCE": 3
       },
       "primary_role": "MIXED",
       "classification_confidence": "MIXED",
@@ -5561,7 +5554,7 @@
         "PROHIBITION": 4,
         "OBLIGATION": 2,
         "PERMISSION": 9,
-        "PROCEDURE_OR_SEQUENCE": 7,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 4
       },
       "primary_role": "MIXED",
@@ -5668,11 +5661,10 @@
         }
       ],
       "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 1
       },
-      "primary_role": "MIXED",
-      "classification_confidence": "MIXED",
+      "primary_role": "CONDITION_OR_TRIGGER",
+      "classification_confidence": "HIGH",
       "classifier_version": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1"
     },
     {
@@ -5711,7 +5703,6 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 3
       },
       "primary_role": "MIXED",
@@ -5911,7 +5902,6 @@
       "signal_family_counts": {
         "PROHIBITION": 1,
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 6,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -6013,7 +6003,6 @@
       ],
       "signal_family_counts": {
         "MODIFICATION_OR_REPLACEMENT": 1,
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 4
       },
       "primary_role": "MIXED",
@@ -6119,7 +6108,6 @@
       "signal_family_counts": {
         "PROHIBITION": 3,
         "PERMISSION": 8,
-        "PROCEDURE_OR_SEQUENCE": 7,
         "CONDITION_OR_TRIGGER": 6
       },
       "primary_role": "MIXED",
@@ -6162,7 +6150,7 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 7,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -6222,7 +6210,7 @@
       "signal_family_counts": {
         "PROHIBITION": 1,
         "OBLIGATION": 1,
-        "PROCEDURE_OR_SEQUENCE": 5,
+        "PROCEDURE_OR_SEQUENCE": 3,
         "CONDITION_OR_TRIGGER": 4
       },
       "primary_role": "MIXED",
@@ -6473,7 +6461,7 @@
       "signal_family_counts": {
         "PROHIBITION": 1,
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 4,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 3
       },
       "primary_role": "MIXED",
@@ -6525,7 +6513,7 @@
       "signal_family_counts": {
         "PROHIBITION": 1,
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 4,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 3
       },
       "primary_role": "MIXED",
@@ -6643,7 +6631,7 @@
       "signal_family_counts": {
         "OBLIGATION": 1,
         "PERMISSION": 3,
-        "PROCEDURE_OR_SEQUENCE": 4,
+        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 7
       },
       "primary_role": "MIXED",
@@ -6703,7 +6691,7 @@
       "signal_family_counts": {
         "OBLIGATION": 2,
         "PERMISSION": 4,
-        "PROCEDURE_OR_SEQUENCE": 5,
+        "PROCEDURE_OR_SEQUENCE": 3,
         "CONDITION_OR_TRIGGER": 8
       },
       "primary_role": "MIXED",
@@ -6798,7 +6786,6 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 3,
-        "PROCEDURE_OR_SEQUENCE": 15,
         "CONDITION_OR_TRIGGER": 7
       },
       "primary_role": "MIXED",
@@ -7181,11 +7168,10 @@
         }
       ],
       "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 3,
         "CONDITION_OR_TRIGGER": 1
       },
-      "primary_role": "MIXED",
-      "classification_confidence": "MIXED",
+      "primary_role": "CONDITION_OR_TRIGGER",
+      "classification_confidence": "HIGH",
       "classifier_version": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1"
     },
     {
@@ -7263,7 +7249,7 @@
         }
       ],
       "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 6,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -7413,7 +7399,7 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 5
+        "PROCEDURE_OR_SEQUENCE": 1
       },
       "primary_role": "MIXED",
       "classification_confidence": "MIXED",
@@ -7737,7 +7723,6 @@
         "PROHIBITION": 1,
         "PERMISSION": 2,
         "DEFINITION": 1,
-        "PROCEDURE_OR_SEQUENCE": 3,
         "CONDITION_OR_TRIGGER": 8
       },
       "primary_role": "MIXED",
@@ -7849,7 +7834,7 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 4,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 5
       },
       "primary_role": "MIXED",
@@ -7954,7 +7939,7 @@
         "PROHIBITION": 3,
         "OBLIGATION": 1,
         "PERMISSION": 1,
-        "PROCEDURE_OR_SEQUENCE": 14,
+        "PROCEDURE_OR_SEQUENCE": 3,
         "CONDITION_OR_TRIGGER": 4
       },
       "primary_role": "MIXED",
@@ -8023,7 +8008,7 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 5,
-        "PROCEDURE_OR_SEQUENCE": 5,
+        "PROCEDURE_OR_SEQUENCE": 1,
         "CONDITION_OR_TRIGGER": 3
       },
       "primary_role": "MIXED",
@@ -8204,11 +8189,10 @@
         }
       ],
       "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 1
       },
-      "primary_role": "MIXED",
-      "classification_confidence": "MIXED",
+      "primary_role": "CONDITION_OR_TRIGGER",
+      "classification_confidence": "HIGH",
       "classifier_version": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1"
     },
     {
@@ -8303,7 +8287,6 @@
       "signal_family_counts": {
         "OBLIGATION": 1,
         "PERMISSION": 2,
-        "PROCEDURE_OR_SEQUENCE": 5,
         "CONDITION_OR_TRIGGER": 2
       },
       "primary_role": "MIXED",
@@ -8364,7 +8347,6 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 3,
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -8458,7 +8440,6 @@
       ],
       "signal_family_counts": {
         "OBLIGATION": 4,
-        "PROCEDURE_OR_SEQUENCE": 3,
         "CONDITION_OR_TRIGGER": 5
       },
       "primary_role": "MIXED",
@@ -8641,7 +8622,6 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 3,
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -8791,7 +8771,6 @@
       ],
       "signal_family_counts": {
         "OBLIGATION": 1,
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 1
       },
       "primary_role": "MIXED",
@@ -9031,11 +9010,9 @@
           "count": 2
         }
       ],
-      "signal_family_counts": {
-        "PROCEDURE_OR_SEQUENCE": 2
-      },
-      "primary_role": "PROCEDURE_OR_SEQUENCE",
-      "classification_confidence": "HIGH",
+      "signal_family_counts": {},
+      "primary_role": "UNCLASSIFIED",
+      "classification_confidence": "NONE",
       "classifier_version": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1"
     },
     {
@@ -9533,7 +9510,6 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 4,
-        "PROCEDURE_OR_SEQUENCE": 3,
         "CONDITION_OR_TRIGGER": 5
       },
       "primary_role": "MIXED",
@@ -9683,7 +9659,6 @@
       ],
       "signal_family_counts": {
         "PERMISSION": 3,
-        "PROCEDURE_OR_SEQUENCE": 2,
         "CONDITION_OR_TRIGGER": 2
       },
       "primary_role": "MIXED",
@@ -10260,7 +10235,7 @@
         "PROHIBITION": 3,
         "OBLIGATION": 3,
         "PERMISSION": 9,
-        "PROCEDURE_OR_SEQUENCE": 7,
+        "PROCEDURE_OR_SEQUENCE": 5,
         "CONDITION_OR_TRIGGER": 13
       },
       "primary_role": "MIXED",
@@ -10272,19 +10247,19 @@
     "paragraphs": 310,
     "unique_paragraph_keys": 310,
     "role_counts": {
-      "CONDITION_OR_TRIGGER": 27,
-      "MIXED": 138,
+      "CONDITION_OR_TRIGGER": 31,
+      "MIXED": 134,
       "MODIFICATION_OR_REPLACEMENT": 1,
       "OBLIGATION": 1,
       "PERMISSION": 20,
-      "PROCEDURE_OR_SEQUENCE": 9,
+      "PROCEDURE_OR_SEQUENCE": 7,
       "PROHIBITION": 4,
-      "UNCLASSIFIED": 110
+      "UNCLASSIFIED": 112
     },
     "confidence_counts": {
-      "HIGH": 62,
-      "MIXED": 138,
-      "NONE": 110
+      "HIGH": 64,
+      "MIXED": 134,
+      "NONE": 112
     },
     "signal_occurrence_counts": {
       "BULLET_LIKE": 240,
@@ -10308,8 +10283,8 @@
     },
     "paragraphs_with_signals": 200,
     "paragraphs_without_signals": 110,
-    "mixed_paragraphs": 138,
-    "unclassified_paragraphs": 110,
+    "mixed_paragraphs": 134,
+    "unclassified_paragraphs": 112,
     "repeated_variant_paragraphs": 10,
     "repeated_variant_role_counts": {
       "CONDITION_OR_TRIGGER": 2,
