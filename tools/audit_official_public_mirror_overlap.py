@@ -68,21 +68,29 @@ def tokens(value:str|None)->list[str]:
     c=canonical_text(value)
     return c.split() if c else []
 
-def shingle_coverage(candidate_tokens:list[str], official_tokens:list[str], n:int=5)->float:
+def build_official_index(official_tokens:list[str], n:int=5)->dict:
+    return {
+        "join":" ".join(official_tokens),
+        "shingles":{tuple(official_tokens[i:i+n]) for i in range(max(0,len(official_tokens)-n+1))},
+        "n":n,
+    }
+
+def shingle_coverage(candidate_tokens:list[str], official_tokens:list[str], n:int=5, official_index:dict|None=None)->float:
     if not candidate_tokens:
         return 0.0
+    idx=official_index or build_official_index(official_tokens,n)
     if len(candidate_tokens)<n:
         needle=" ".join(candidate_tokens)
-        hay=" ".join(official_tokens)
-        return 1.0 if needle and needle in hay else 0.0
+        return 1.0 if needle and needle in idx["join"] else 0.0
     cand={tuple(candidate_tokens[i:i+n]) for i in range(len(candidate_tokens)-n+1)}
-    off={tuple(official_tokens[i:i+n]) for i in range(len(official_tokens)-n+1)}
+    off=idx["shingles"]
     return len(cand & off)/len(cand) if cand else 0.0
 
-def classify(text:str,anchor:str,official_tokens:list[str],provenance:str)->tuple[str,float,bool]:
+def classify(text:str,anchor:str,official_tokens:list[str],provenance:str,official_index:dict|None=None)->tuple[str,float,bool]:
     ct=tokens(text)
     at=tokens(anchor)
-    off_join=" ".join(official_tokens)
+    idx=official_index or build_official_index(official_tokens)
+    off_join=idx["join"]
     cand_join=" ".join(ct)
     anchor_join=" ".join(at)
     anchor_present=bool(anchor_join and anchor_join in off_join)
@@ -90,7 +98,7 @@ def classify(text:str,anchor:str,official_tokens:list[str],provenance:str)->tupl
         return "EMPTY",0.0,anchor_present
     if len(ct)>=4 and cand_join in off_join:
         return "EXACT_TOKEN_SEQUENCE_MATCH",1.0,anchor_present
-    cov=shingle_coverage(ct,official_tokens)
+    cov=shingle_coverage(ct,official_tokens,official_index=idx)
     if anchor_present and cov>=0.85:
         return "HIGH_OVERLAP_NORMALIZATION_MATCH",cov,True
     if anchor_present and cov>=0.40:
@@ -210,6 +218,7 @@ def main()->int:
         sid=doc["document_id"].removeprefix("GW_11E_FACTION_PACK_")
         source=source_by_id.get(sid,{})
         official_tokens,page_count=extract_pdf_tokens(doc["url"],doc["binary_sha256"],args.cache_dir)
+        official_index=build_official_index(official_tokens)
 
         fids=set(faction_ids_by_source.get(sid,set()))
         if not fids:
@@ -267,7 +276,9 @@ def main()->int:
         by_kind=defaultdict(Counter)
         by_prov=defaultdict(Counter)
         for row in candidates:
-            state,cov,anchor_present=classify(row.pop("_text"),row["anchor"],official_tokens,row["provenance"])
+            state,cov,anchor_present=classify(
+                row.pop("_text"),row["anchor"],official_tokens,row["provenance"],official_index=official_index
+            )
             result={
                 **row,
                 "result":state,
