@@ -636,16 +636,16 @@
         "system_normative_semantics"
       ],
       "evidence": {
-        "repository_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+        "repository_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
         "currentness_profile": {
           "required_sources": [
             "GW_40K_DOWNLOADS"
           ],
-          "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+          "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
           "repository_dimension": null,
           "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
           "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-          "authority_boundary": "All 310 stable Core paragraph identities have deterministic lexical/structural role classifications. 134 MIXED and 112 UNCLASSIFIED remain explicit fail-closed states; AST-readiness review, condition/effect parsing and interactions remain pending.",
+          "authority_boundary": "All 310 stable Core paragraph identities have been reviewed as orthogonal semantic profiles. 156 are axis-profile-ready without modal conflict; 42 remain multi-modal and 112 lack strong semantic signals. AST readiness, condition/effect parsing and interactions remain pending.",
           "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
           "rule_reference_families": 24,
           "rule_reference_count": 141,
@@ -686,6 +686,20 @@
             "paragraphs_without_signals": 110,
             "repeated_variant_paragraphs": 10,
             "paragraph_hashes_reproduced_from_verified_pdf": 310,
+            "ast_readiness_pending": true
+          },
+          "paragraph_semantic_review": {
+            "state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
+            "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json",
+            "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json",
+            "profiles": 310,
+            "axis_profile_ready": 156,
+            "review_required": 154,
+            "multi_modal_review_required": 42,
+            "no_strong_signal_review_required": 112,
+            "mixed_axis_profile_ready": 92,
+            "unclassified_signal_free": 110,
+            "unclassified_weak_only": 2,
             "ast_readiness_pending": true
           }
         },
