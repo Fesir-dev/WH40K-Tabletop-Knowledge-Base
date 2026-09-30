@@ -517,6 +517,8 @@ def build_outputs(as_of: str, cache_dir: Path, root: Path = ROOT) -> tuple[dict,
 
     matches = []
     normalized_units = []
+    classification_counts = Counter()
+    provenance_scope_counts = Counter()
     exact_count = promotable_count = unscoped_count = no_exact_count = 0
 
     for idx, unit in enumerate(units):
@@ -539,6 +541,8 @@ def build_outputs(as_of: str, cache_dir: Path, root: Path = ROOT) -> tuple[dict,
         provenance_scope, scoped_hits = classify_provenance(
             unit, unit_hits, pack_doc_by_source, faction_pack_source
         )
+        classification_counts[classification] += 1
+        provenance_scope_counts[provenance_scope] += 1
         promotable = provenance_scope in PROMOTABLE_SCOPES
         if promotable:
             promotable_count += 1
@@ -610,6 +614,8 @@ def build_outputs(as_of: str, cache_dir: Path, root: Path = ROOT) -> tuple[dict,
         "no_exact_overlap_units": no_exact_count,
         "official_pages": sum(x["page_count"] for x in official_docs),
         "official_pages_with_overlap": sum(x["pages_with_overlap"] for x in doc_rows),
+        "classification_counts": dict(sorted(classification_counts.items())),
+        "provenance_scope_counts": dict(sorted(provenance_scope_counts.items())),
     }
 
     report = {
