@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "snapshot_date": "2026-09-30",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "structure_version": "CORE_RULES_SECTION_STRUCTURE_V1",
+  "document": {
+    "document_id": "GW_11E_CORE_RULES_PUBLIC",
+    "title": "Warhammer 40,000 Core Rules",
+    "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+    "page_count": 88,
+    "source_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf"
+  },
+  "source_verification": {
+    "binary_sha256_match": true,
+    "page_semantic_fingerprints_match": 88,
+    "document_semantic_sha256_match": true,
+    "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+  },
+  "structure_mode": "PDF_OUTLINE_PRIMARY",
+  "sections": [
+    {
+      "section_key": "core-rules-40k11--d0--p1--n1",
+      "title": "Core_Rules_40K11",
+      "depth": 0,
+      "page_start": 1,
+      "page_end": 88,
+      "page_range_sha256": "19755b5513b72bb3e43d54fe348f243f0130e2e5898af90a1e302816aa35b377",
+      "children": [],
+      "outline_source": true,
+      "heading_evidence": [
+        {
+          "page": 1,
+          "label": "CORE RULES",
+          "label_sha256": "8232628faea3245f202c62ebe88ab98c1e23a9c79e4f90536b1aa3157c04b659"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "sections": 1,
+    "root_sections": 1,
+    "max_depth": 0,
+    "sections_by_depth": {
+      "0": 1
+    },
+    "pages_represented": 88,
+    "heading_candidate_pages": 80,
+    "heading_candidate_count": 603
+  },
+  "authority_boundary": {
+    "section_level_structure_complete_for_public_pdf": true,
+    "paragraph_level_rules_ast_complete": false,
+    "app_codex_equivalence": "NOT_CLAIMED",
+    "full_faction_promotion": false,
+    "current_normalized_factions_change": 0,
+    "copyright_policy": "Short headings, hierarchy, page ranges and hashes only; no long rules prose committed."
+  }
+}
