@@ -1952,8 +1952,10 @@ try:
         errors.append("Core paragraph semantic classification review-pending flag must be false after review closure")
     if layer.get("semantic_review_complete") is not True:
         errors.append("Core paragraph semantic review completeness must be true after review closure")
-    if layer.get("ast_readiness_pending") is not True:
-        errors.append("Core paragraph AST readiness must remain pending after v1 classification")
+    if layer.get("ast_readiness_pending") is not False:
+        errors.append("Core paragraph semantic classification AST readiness pending flag must be cleared")
+    if layer.get("ast_readiness_complete") is not True:
+        errors.append("Core paragraph semantic classification must record completed AST readiness audit")
     if semantic_current.get("next_milestone") != "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1":
         errors.append("Current rules did not advance to Core paragraph semantic review")
     current_core = semantic_current.get("source_currentness", {}).get("core_rules_content", {})
