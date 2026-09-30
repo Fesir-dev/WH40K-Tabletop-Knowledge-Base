@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
-  "as_of": "2026-09-29",
-  "status": "WAVE_B_SEMANTIC_FAQ_OPERATIONAL_COMPLETE",
+  "schema_version": "1.6",
+  "as_of": "2026-09-30",
+  "status": "OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
   "global": {
     "catalogued_roster_universe": 37,
@@ -37,7 +37,15 @@
     "official_public_pages_fingerprinted": 1430,
     "official_public_text_chars_fingerprinted": 1915296,
     "official_public_fingerprint_failures": 0,
-    "official_public_core_rules_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+    "official_public_core_rules_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "official_public_overlap_status": "PASS_EXACT_PUBLIC_OVERLAP_V1",
+    "official_public_overlap_mirror_units": 13572,
+    "official_public_overlap_exact_units": 5636,
+    "official_public_overlap_promotable_scoped_units": 4070,
+    "official_public_overlap_unscoped_exact_units": 1566,
+    "official_public_overlap_no_exact_units": 7936,
+    "official_public_overlap_pages_with_overlap": 1268,
+    "official_public_overlap_current_normalized_factions_change": 0
   },
   "dimensions": [
     "points",
