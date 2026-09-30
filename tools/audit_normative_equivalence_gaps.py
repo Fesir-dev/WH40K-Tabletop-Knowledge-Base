@@ -79,6 +79,8 @@ def build_audit(root:Path=ROOT)->dict:
     core_ast_readiness=load(core_ast_readiness_path) if core_ast_readiness_path.exists() else None
     core_direct_modal_ast_path=root/"reports"/"CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json"
     core_direct_modal_ast=load(core_direct_modal_ast_path) if core_direct_modal_ast_path.exists() else None
+    core_direct_modal_semantic_validation_path=root/"reports"/"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json"
+    core_direct_modal_semantic_validation=load(core_direct_modal_semantic_validation_path) if core_direct_modal_semantic_validation_path.exists() else None
     residual_path=root/"reports"/"OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json"
     residual=load(residual_path) if residual_path.exists() else None
     overlap_summary_path=root/"reports"/"OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json"
@@ -308,6 +310,32 @@ def build_audit(root:Path=ROOT)->dict:
         and core_direct_modal_ast.get("authority_boundary",{}).get("condition_effect_ast_complete") is False
         and core_direct_modal_ast.get("authority_boundary",{}).get("rule_interaction_graph_complete") is False
     )
+    core_direct_modal_semantic_validation_pass=bool(
+        core_direct_modal_semantic_validation
+        and core_direct_modal_semantic_validation.get("status")=="PASS"
+        and core_direct_modal_semantic_validation.get("validation_version")=="CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1"
+        and core_direct_modal_semantic_validation.get("parent_pilot",{}).get("node_key")=="core-ast-direct-modal--13-07--p50-o1"
+        and core_direct_modal_semantic_validation.get("parent_pilot",{}).get("paragraph_key")=="core-rule-13-07--p50--l1--para-p50-o1"
+        and core_direct_modal_semantic_validation.get("validation",{}).get("decision")=="OPAQUE_PRESERVED"
+        and core_direct_modal_semantic_validation.get("validation",{}).get("subject",{}).get("state")=="OPAQUE_PRESERVED"
+        and core_direct_modal_semantic_validation.get("validation",{}).get("subject",{}).get("resolved") is False
+        and core_direct_modal_semantic_validation.get("validation",{}).get("subject",{}).get("reason")=="LEXEME_NOT_IN_CLOSED_SUBJECT_LEXICON"
+        and core_direct_modal_semantic_validation.get("validation",{}).get("subject",{}).get("lexeme_sha256")=="84088805e145b555f349c164a7cfdcf13981e0affcba4393aaa78ae40f320f4e"
+        and core_direct_modal_semantic_validation.get("validation",{}).get("action_predicate",{}).get("state")=="OPAQUE_PRESERVED"
+        and core_direct_modal_semantic_validation.get("validation",{}).get("action_predicate",{}).get("decomposable") is False
+        and core_direct_modal_semantic_validation.get("validation",{}).get("action_predicate",{}).get("blockers")==["COORDINATION_CUE","UNRECOGNIZED_ACTION_HEAD"]
+        and core_direct_modal_semantic_validation.get("validation",{}).get("ast_mutated") is False
+        and core_direct_modal_semantic_validation.get("validation",{}).get("interaction_edges_created")==0
+        and core_direct_modal_semantic_validation.get("validation",{}).get("additional_paragraphs_admitted")==0
+        and core_direct_modal_semantic_validation.get("summary",{}).get("nodes_validated")==1
+        and core_direct_modal_semantic_validation.get("summary",{}).get("opaque_preserved")==1
+        and core_direct_modal_semantic_validation.get("summary",{}).get("subject_types_resolved")==0
+        and core_direct_modal_semantic_validation.get("summary",{}).get("predicate_heads_resolved")==0
+        and core_direct_modal_semantic_validation.get("authority_boundary",{}).get("ast_mutation_allowed") is False
+        and core_direct_modal_semantic_validation.get("authority_boundary",{}).get("second_paragraph_allowed") is False
+        and core_direct_modal_semantic_validation.get("authority_boundary",{}).get("interaction_edges_allowed") is False
+        and core_direct_modal_semantic_validation.get("authority_boundary",{}).get("current_normalized_factions_change")==0
+    )
     residual_pass=bool(
         residual
         and residual.get("status")=="PASS"
@@ -322,7 +350,11 @@ def build_audit(root:Path=ROOT)->dict:
         and overlap_summary.get("summary",{}).get("promotable_scoped_units")==4070
     )
 
-    if core_direct_modal_ast_pass:
+    if core_direct_modal_semantic_validation_pass:
+        core_gap_state="DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING"
+        core_next_action="Preserve the sole validated AST node unchanged and opaque. Expand readiness analysis only across the 33 source-shape-blocked candidates with stricter deterministic shape rules; do not admit new AST nodes in the audit itself."
+        core_publicly_closable="Core Rules AST-readiness expansion over source-shape blockers"
+    elif core_direct_modal_ast_pass:
         core_gap_state="DIRECT_MODAL_AST_PILOT_CLOSED_SEMANTIC_VALIDATION_PENDING"
         core_next_action="Validate the single direct-modal AST node semantically without admitting another paragraph: review the opaque subject/action spans against verified source evidence, keep interaction edges at zero, and do not generalize the parser."
         core_publicly_closable="Core Rules direct-modal AST semantic validation"
@@ -363,7 +395,10 @@ def build_audit(root:Path=ROOT)->dict:
         core_next_action="Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction."
         core_publicly_closable="Core Rules official public ingestion"
 
-    if core_direct_modal_ast_pass and overlap_pass and residual_pass:
+    if core_direct_modal_semantic_validation_pass and overlap_pass and residual_pass:
+        recommended_next_milestone="CORE_RULE_AST_READINESS_EXPANSION_V1"
+        expected_effect="The sole direct-modal AST node was semantically validated against verified source evidence and correctly remained opaque: subject type unresolved, predicate action head unresolved, coordination blocker retained, zero AST mutation, zero interaction edges and zero additional paragraphs. Next expand readiness analysis over the 33 shape-blocked candidates without changing this node or admitting new AST nodes during the audit."
+    elif core_direct_modal_ast_pass and overlap_pass and residual_pass:
         recommended_next_milestone="CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1"
         expected_effect="One verified Core paragraph now has one copyright-safe DIRECT_MODAL_CLAUSE node with complete subject/modal/action-predicate token partition and zero interaction edges. Next validate the semantic usefulness of this single node without expanding parser scope; full Core/faction/app equivalence remains unchanged."
     elif core_ast_readiness_pass and overlap_pass and residual_pass:
@@ -502,6 +537,13 @@ def build_audit(root:Path=ROOT)->dict:
                 "direct_modal_ast_source_hashes_reproduced":core_direct_modal_ast.get("summary",{}).get("source_hashes_reproduced") if core_direct_modal_ast_pass else 0,
                 "direct_modal_ast_token_partitions_complete":core_direct_modal_ast.get("summary",{}).get("token_partitions_complete") if core_direct_modal_ast_pass else 0,
                 "direct_modal_ast_interaction_edges_created":core_direct_modal_ast.get("summary",{}).get("interaction_edges_created") if core_direct_modal_ast_pass else 0,
+                "direct_modal_ast_semantic_validation_report":"reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json" if core_direct_modal_semantic_validation_pass else None,
+                "direct_modal_ast_semantic_validation_state":"PASS_OPAQUE_PRESERVED" if core_direct_modal_semantic_validation_pass else "PENDING",
+                "direct_modal_ast_semantic_validation_decision":core_direct_modal_semantic_validation.get("validation",{}).get("decision") if core_direct_modal_semantic_validation_pass else None,
+                "direct_modal_ast_subject_types_resolved":core_direct_modal_semantic_validation.get("summary",{}).get("subject_types_resolved") if core_direct_modal_semantic_validation_pass else 0,
+                "direct_modal_ast_predicate_heads_resolved":core_direct_modal_semantic_validation.get("summary",{}).get("predicate_heads_resolved") if core_direct_modal_semantic_validation_pass else 0,
+                "direct_modal_ast_predicate_blockers":core_direct_modal_semantic_validation.get("validation",{}).get("action_predicate",{}).get("blockers",[]) if core_direct_modal_semantic_validation_pass else [],
+                "direct_modal_ast_semantic_validation_ast_mutated":core_direct_modal_semantic_validation.get("validation",{}).get("ast_mutated") if core_direct_modal_semantic_validation_pass else False,
             },
             "next_action":core_next_action,
         },
@@ -677,6 +719,10 @@ def build_audit(root:Path=ROOT)->dict:
             "core_rule_direct_modal_ast_nodes":core_direct_modal_ast.get("summary",{}).get("ast_nodes") if core_direct_modal_ast_pass else 0,
             "core_rule_direct_modal_ast_paragraphs_parsed":core_direct_modal_ast.get("summary",{}).get("paragraphs_parsed") if core_direct_modal_ast_pass else 0,
             "core_rule_direct_modal_ast_interaction_edges_created":core_direct_modal_ast.get("summary",{}).get("interaction_edges_created") if core_direct_modal_ast_pass else 0,
+            "core_rule_direct_modal_ast_semantic_validation":"PASS_OPAQUE_PRESERVED" if core_direct_modal_semantic_validation_pass else "PENDING",
+            "core_rule_direct_modal_ast_semantic_validation_decision":core_direct_modal_semantic_validation.get("validation",{}).get("decision") if core_direct_modal_semantic_validation_pass else None,
+            "core_rule_direct_modal_ast_subject_types_resolved":core_direct_modal_semantic_validation.get("summary",{}).get("subject_types_resolved") if core_direct_modal_semantic_validation_pass else 0,
+            "core_rule_direct_modal_ast_predicate_heads_resolved":core_direct_modal_semantic_validation.get("summary",{}).get("predicate_heads_resolved") if core_direct_modal_semantic_validation_pass else 0,
             "official_public_exact_overlap":"PASS_EXACT_PUBLIC_OVERLAP_V1" if overlap_pass else "PENDING",
             "official_public_residual_classification":"PASS_FAIL_CLOSED_CLASSIFICATION_V1" if residual_pass else "PENDING",
         },
