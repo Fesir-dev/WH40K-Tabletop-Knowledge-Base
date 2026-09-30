@@ -944,6 +944,13 @@
     "condition_effect_ast_complete": false,
     "rule_interaction_graph_complete": false,
     "current_normalized_factions_change": 0,
-    "authority_rule": "Verified source-range semantic validation closed fail-closed: neither subject nor action/predicate may be typed by the current closed lexicons. Existing pilot AST remains unchanged and opaque; no second paragraph or interaction edge is admitted."
+    "authority_rule": "Verified source-range semantic validation closed fail-closed: neither subject nor action/predicate may be typed by the current closed lexicons. Existing pilot AST remains unchanged and opaque; no second paragraph or interaction edge is admitted.",
+    "closure_report": "reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSURE_2026-09-30.md",
+    "pre_closure_validation": {
+      "semantic_validation_workflow_run": 36729536267,
+      "normative_gap_audit_run": 36733041159,
+      "repository_ci_run": 36733049749,
+      "result": "SUCCESS"
+    }
   }
 }
