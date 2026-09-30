@@ -1,0 +1,610 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "as_of": "2026-09-30",
+  "milestone": "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT",
+  "summary": {
+    "official_documents": 29,
+    "core_rules": 1,
+    "faction_packs": 28,
+    "mirror_units": 13572,
+    "exact_public_overlap_units": 5636,
+    "promotable_scoped_units": 4070,
+    "unscoped_exact_units": 1566,
+    "no_exact_overlap_units": 7936,
+    "official_pages": 1430,
+    "official_pages_with_overlap": 1268,
+    "classification_counts": {
+      "EXACT_NORMALIZED_TEXT_MATCH": 4145,
+      "EXACT_NORMALIZED_TEXT_MATCH_MULTI_OFFICIAL": 1491
+    },
+    "provenance_scope_counts": {
+      "CORE_PUBLIC_TEXT_ONLY": 21,
+      "DIRECT_FACTION_SCOPED": 2747,
+      "DIRECT_SOURCE_SCOPED": 1323,
+      "GLOBAL_PUBLIC_TEXT_ONLY": 1545
+    }
+  },
+  "by_kind": {
+    "ability": {
+      "exact_public_overlap": 22,
+      "mirror_units": 95,
+      "no_exact_public_overlap": 73,
+      "promotable_scoped": 12,
+      "unscoped_exact": 10
+    },
+    "datasheet-ability": {
+      "exact_public_overlap": 2017,
+      "mirror_units": 3472,
+      "no_exact_public_overlap": 1455,
+      "promotable_scoped": 1401,
+      "too_short_for_safe_auto_match": 20,
+      "unscoped_exact": 616
+    },
+    "datasheet-damaged-description": {
+      "exact_public_overlap": 319,
+      "mirror_units": 327,
+      "no_exact_public_overlap": 8,
+      "promotable_scoped": 269,
+      "unscoped_exact": 50
+    },
+    "datasheet-loadout": {
+      "exact_public_overlap": 737,
+      "mirror_units": 1653,
+      "no_exact_public_overlap": 916,
+      "promotable_scoped": 483,
+      "too_short_for_safe_auto_match": 19,
+      "unscoped_exact": 254
+    },
+    "datasheet-option": {
+      "exact_public_overlap": 1238,
+      "mirror_units": 2745,
+      "no_exact_public_overlap": 1507,
+      "promotable_scoped": 770,
+      "too_short_for_safe_auto_match": 281,
+      "unscoped_exact": 468
+    },
+    "datasheet-transport": {
+      "exact_public_overlap": 68,
+      "mirror_units": 166,
+      "no_exact_public_overlap": 98,
+      "promotable_scoped": 62,
+      "unscoped_exact": 6
+    },
+    "detachment-ability": {
+      "exact_public_overlap": 143,
+      "mirror_units": 350,
+      "no_exact_public_overlap": 207,
+      "promotable_scoped": 129,
+      "unscoped_exact": 14
+    },
+    "enhancement": {
+      "exact_public_overlap": 414,
+      "mirror_units": 1023,
+      "no_exact_public_overlap": 609,
+      "promotable_scoped": 367,
+      "too_short_for_safe_auto_match": 2,
+      "unscoped_exact": 47
+    },
+    "stratagem": {
+      "exact_public_overlap": 592,
+      "mirror_units": 1634,
+      "no_exact_public_overlap": 1042,
+      "promotable_scoped": 518,
+      "unscoped_exact": 74
+    },
+    "unit-composition": {
+      "exact_public_overlap": 86,
+      "mirror_units": 2107,
+      "no_exact_public_overlap": 2021,
+      "promotable_scoped": 59,
+      "too_short_for_safe_auto_match": 1991,
+      "unscoped_exact": 27
+    }
+  },
+  "documents": [
+    {
+      "document_id": "GW_11E_CORE_RULES_PUBLIC",
+      "title": "Warhammer 40,000 Core Rules",
+      "document_type": "CORE_RULES",
+      "source_id": null,
+      "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+      "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+      "pages": 88,
+      "pages_with_overlap": 12,
+      "exact_evidence_refs": 25,
+      "promotable_evidence_refs": 0,
+      "exact_unique_units": 21,
+      "promotable_unique_units": 0
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000112",
+      "title": "Adepta Sororitas",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000112",
+      "binary_sha256": "3bafe610941e2d802ff7c491d1d60966dab5b644852590b805fd85651a798dac",
+      "semantic_sha256": "83c2b7e409bdbe390e6fb2f7268c4b0014f4dd6fa013065d590db13367af33ba",
+      "pages": 24,
+      "pages_with_overlap": 22,
+      "exact_evidence_refs": 825,
+      "promotable_evidence_refs": 111,
+      "exact_unique_units": 614,
+      "promotable_unique_units": 95
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000024",
+      "title": "Adeptus Custodes",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000024",
+      "binary_sha256": "2bd44272dd4abb2c4e44b77ecb3bac55cb21d14f3be9312ee4ca2591b8112427",
+      "semantic_sha256": "8d73afaf36ae102fbe4a00f41462edc53ab513d7f97ef1431f83d55390209114",
+      "pages": 35,
+      "pages_with_overlap": 35,
+      "exact_evidence_refs": 416,
+      "promotable_evidence_refs": 108,
+      "exact_unique_units": 327,
+      "promotable_unique_units": 100
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000015",
+      "title": "Adeptus Mechanicus",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000015",
+      "binary_sha256": "76819664005154632450e45677d609aa3934dee965317f74dfedc26efc3467ab",
+      "semantic_sha256": "55453119bdc6267ab5ad6ea065bbf7ba38597f011a6cdeb9fd274a5df9afa301",
+      "pages": 27,
+      "pages_with_overlap": 26,
+      "exact_evidence_refs": 246,
+      "promotable_evidence_refs": 129,
+      "exact_unique_units": 223,
+      "promotable_unique_units": 109
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000270",
+      "title": "Adeptus Titanicus (Forge World)",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000270",
+      "binary_sha256": "8622ee4dea768cf14823b950376b3e4be5102826dcc27bb821c9dcf5a35a9b3b",
+      "semantic_sha256": "a54808f295c0c73265e009f93fb47f1adc36c85aa977cbabdc7b72140d55ab56",
+      "pages": 10,
+      "pages_with_overlap": 10,
+      "exact_evidence_refs": 47,
+      "promotable_evidence_refs": 36,
+      "exact_unique_units": 39,
+      "promotable_unique_units": 30
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000186",
+      "title": "Aeldari",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000186",
+      "binary_sha256": "07cfef8fbf48a3e6be28563b0bbc3151cd173848052a2466029c09f16f8ba20e",
+      "semantic_sha256": "2ae1eff3e285c0cb8710a6814a4385e9102cd87de622838e6a33a9368d9f6126",
+      "pages": 79,
+      "pages_with_overlap": 76,
+      "exact_evidence_refs": 935,
+      "promotable_evidence_refs": 301,
+      "exact_unique_units": 581,
+      "promotable_unique_units": 247
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000016",
+      "title": "Astra Militarum",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000016",
+      "binary_sha256": "b8fccdf9cfcd37dc538a1f49d84871e6b184e01c54e9fa83bef8372aa6190601",
+      "semantic_sha256": "800c2c1b8ba62346444267d26852934ac82af04fb16e1a2334df8a5089669ab6",
+      "pages": 155,
+      "pages_with_overlap": 152,
+      "exact_evidence_refs": 12844,
+      "promotable_evidence_refs": 4706,
+      "exact_unique_units": 1303,
+      "promotable_unique_units": 593
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000162",
+      "title": "Black Templars",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000162",
+      "binary_sha256": "9cba4d7699499c58e71062182a8eb0639f7caee7171a1e41cea9316b2c0550e2",
+      "semantic_sha256": "9ff193aae04d58adeeb2401021ba47292c1a3b1c57c208457e14385d232a80d1",
+      "pages": 5,
+      "pages_with_overlap": 5,
+      "exact_evidence_refs": 20,
+      "promotable_evidence_refs": 2,
+      "exact_unique_units": 18,
+      "promotable_unique_units": 2
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000021",
+      "title": "Blood Angels",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000021",
+      "binary_sha256": "e0c06b2cdeff8be5a94721f96854d35f9f6fa4d6c410453e61ece14c1aa0bce7",
+      "semantic_sha256": "1db3172efb37bd3ae1b0dfbcdd5e2613f121df8fb6e7e145cdb3a14a9ef9baf2",
+      "pages": 29,
+      "pages_with_overlap": 28,
+      "exact_evidence_refs": 223,
+      "promotable_evidence_refs": 17,
+      "exact_unique_units": 161,
+      "promotable_unique_units": 16
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000025",
+      "title": "Chaos Daemons",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000025",
+      "binary_sha256": "818f7ef144691b9eef6b3c5b5d0a39793690af5a958037b7055215e6675e6a2c",
+      "semantic_sha256": "57ef94693254e432557d83ecf40114cf7af529be659af622d9434d8713381d1a",
+      "pages": 151,
+      "pages_with_overlap": 149,
+      "exact_evidence_refs": 1348,
+      "promotable_evidence_refs": 611,
+      "exact_unique_units": 807,
+      "promotable_unique_units": 355
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000070",
+      "title": "Chaos Knights",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000070",
+      "binary_sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd",
+      "semantic_sha256": "9dd7e005b437c12cd2284e928dd82df21e7877ee49e9e0caf4ea076e7be31d02",
+      "pages": 26,
+      "pages_with_overlap": 24,
+      "exact_evidence_refs": 243,
+      "promotable_evidence_refs": 124,
+      "exact_unique_units": 139,
+      "promotable_unique_units": 79
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000012",
+      "title": "Chaos Space Marines",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000012",
+      "binary_sha256": "f3a8d05ed88bad5085d014bf76fad684b60336f92cf75cf3aed30b989a33a495",
+      "semantic_sha256": "92e3007e20f3f79fe726c9f08662c7862ed16e7c2eb45cb09181fc973e4447f6",
+      "pages": 102,
+      "pages_with_overlap": 99,
+      "exact_evidence_refs": 1564,
+      "promotable_evidence_refs": 442,
+      "exact_unique_units": 1263,
+      "promotable_unique_units": 344
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000023",
+      "title": "Dark Angels",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000023",
+      "binary_sha256": "b33b79c207d910a8e6aec4abfa8042507154e7ff17cb88d8e9a77d4c02c78bb1",
+      "semantic_sha256": "d687823c0f8ebc23b31fd1682f225bc3c41b921f39d0d17bdd77bc8b6a54fec1",
+      "pages": 17,
+      "pages_with_overlap": 16,
+      "exact_evidence_refs": 203,
+      "promotable_evidence_refs": 13,
+      "exact_unique_units": 172,
+      "promotable_unique_units": 13
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000014",
+      "title": "Death Guard",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000014",
+      "binary_sha256": "3b446db7d7dc48fc19ee61b263ec672a88c129b61ca8cd0dfa644414a1fef7c6",
+      "semantic_sha256": "362de5044dfac0abe22dadddb801e23e2e8390670a856f6e725e5a7d7ba0a0fa",
+      "pages": 17,
+      "pages_with_overlap": 15,
+      "exact_evidence_refs": 126,
+      "promotable_evidence_refs": 67,
+      "exact_unique_units": 120,
+      "promotable_unique_units": 61
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000031",
+      "title": "Drukhari",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000031",
+      "binary_sha256": "ab3baea55fa6e7b932a3f940a860b9c30348593615f5098c705de0bdaefddd50",
+      "semantic_sha256": "2a360506ece7f0fefdcb00926a722c20836deee14aded11863585cf7f2de2070",
+      "pages": 22,
+      "pages_with_overlap": 22,
+      "exact_evidence_refs": 280,
+      "promotable_evidence_refs": 67,
+      "exact_unique_units": 279,
+      "promotable_unique_units": 66
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000280",
+      "title": "Emperor’s Children",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000280",
+      "binary_sha256": "50f456e9f4a20889450093a9e6627aa1c1ed0af66efbc29c583c46d910295ca7",
+      "semantic_sha256": "69b09029c024e037e1d4d280b4a00089cb4f72fab07e927bbfe16b69be5f3218",
+      "pages": 10,
+      "pages_with_overlap": 9,
+      "exact_evidence_refs": 117,
+      "promotable_evidence_refs": 46,
+      "exact_unique_units": 117,
+      "promotable_unique_units": 46
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000053",
+      "title": "Genestealer Cults",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000053",
+      "binary_sha256": "045ee9f53f7b1e018e3fc06c5932cb8e1d9c308ea2e0c298a703c3ea5745d769",
+      "semantic_sha256": "1abd1ea7cb3f3a7387d89703ede03f84530b3b829f3de562a62a510950446ff0",
+      "pages": 11,
+      "pages_with_overlap": 10,
+      "exact_evidence_refs": 121,
+      "promotable_evidence_refs": 53,
+      "exact_unique_units": 121,
+      "promotable_unique_units": 53
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000013",
+      "title": "Grey Knights",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000013",
+      "binary_sha256": "8df7b54292988edb5ef5a83260dd4c054f658f06ba7cacc2467e3f558a1dd797",
+      "semantic_sha256": "c65387b6806fcf55bfe46d4ef14a0fdf007a01dd1d8afd2d45a1c51ca084b38b",
+      "pages": 19,
+      "pages_with_overlap": 19,
+      "exact_evidence_refs": 558,
+      "promotable_evidence_refs": 82,
+      "exact_unique_units": 554,
+      "promotable_unique_units": 80
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000259",
+      "title": "Imperial Agents",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000259",
+      "binary_sha256": "bd8486b44d14c4e409bd1d9e1676cd7732ce73c251b3d484c75df8ce35810bd7",
+      "semantic_sha256": "5f08158ff088cea05432ffb83e8c6f76b2b3f30aa0b6b310d8b142d6d2a41b5f",
+      "pages": 46,
+      "pages_with_overlap": 44,
+      "exact_evidence_refs": 728,
+      "promotable_evidence_refs": 240,
+      "exact_unique_units": 488,
+      "promotable_unique_units": 186
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000034",
+      "title": "Imperial Knights",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000034",
+      "binary_sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81",
+      "semantic_sha256": "9f7d07be8bee347b46d2206e40c3245477a5ca6857581a477fa67920575cde66",
+      "pages": 27,
+      "pages_with_overlap": 26,
+      "exact_evidence_refs": 278,
+      "promotable_evidence_refs": 149,
+      "exact_unique_units": 156,
+      "promotable_unique_units": 88
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000203",
+      "title": "Leagues of Votann",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000203",
+      "binary_sha256": "dd29a4633ada948536c7e3b2b3da7e8237e65fcb4bde3291d6f084a3b4d8e4cd",
+      "semantic_sha256": "67e98c97c730af69324441badd5ded96411a20833be18005185750653944dbe3",
+      "pages": 11,
+      "pages_with_overlap": 11,
+      "exact_evidence_refs": 71,
+      "promotable_evidence_refs": 51,
+      "exact_unique_units": 68,
+      "promotable_unique_units": 48
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000029",
+      "title": "Necrons",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000029",
+      "binary_sha256": "be3417eab97f4a3857dfb4a481719e0910ee88ffc169dd718283233e2c4ffcd3",
+      "semantic_sha256": "8634c766dc0632dabab569726b528044190d8b3d5791d5cbb88dba2c3ef0bdf3",
+      "pages": 57,
+      "pages_with_overlap": 55,
+      "exact_evidence_refs": 825,
+      "promotable_evidence_refs": 236,
+      "exact_unique_units": 573,
+      "promotable_unique_units": 169
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000046",
+      "title": "Orks",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000046",
+      "binary_sha256": "9ba3febf34a2bb03dc3ca22ec9942d9669a19805aca66787764939e72ea92d4b",
+      "semantic_sha256": "abda74bbccd29148caea298fd84908047c1845f7e167d77485f003c830c3bd19",
+      "pages": 87,
+      "pages_with_overlap": 42,
+      "exact_evidence_refs": 1193,
+      "promotable_evidence_refs": 28,
+      "exact_unique_units": 571,
+      "promotable_unique_units": 23
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000139",
+      "title": "Space Marines",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000139",
+      "binary_sha256": "f1f96c0a3dda8dfc2d5686b4aa60e7959697651edbc51f5a344439ff6ac1a1f9",
+      "semantic_sha256": "0cc753fbbcb348ed9fb7a0f3e061a3960537b9b1f995afddb3d487f4baf897f4",
+      "pages": 219,
+      "pages_with_overlap": 213,
+      "exact_evidence_refs": 12907,
+      "promotable_evidence_refs": 3664,
+      "exact_unique_units": 1910,
+      "promotable_unique_units": 847
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000036",
+      "title": "Space Wolves",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000036",
+      "binary_sha256": "0d3424b0c258b3faa11b82b45eba709c11b3380e43bc1b24f3a66edc2bd8fc72",
+      "semantic_sha256": "65ba726dc6c64757309afbf05061bd69076d4d7ff3c0b767e82f618b71b09f00",
+      "pages": 45,
+      "pages_with_overlap": 44,
+      "exact_evidence_refs": 830,
+      "promotable_evidence_refs": 58,
+      "exact_unique_units": 341,
+      "promotable_unique_units": 21
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000027",
+      "title": "Thousand Sons",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000027",
+      "binary_sha256": "886bc73de0af878511bd0de2023010ec1a1e424f83ee439c095e2a7e5968eccf",
+      "semantic_sha256": "6420e0e72bba3a31653e525fab0c16eec65270ba3c76ffe0c9526b8dbceb49ed",
+      "pages": 11,
+      "pages_with_overlap": 10,
+      "exact_evidence_refs": 117,
+      "promotable_evidence_refs": 46,
+      "exact_unique_units": 117,
+      "promotable_unique_units": 46
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000020",
+      "title": "Tyranids",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000020",
+      "binary_sha256": "d7531867ba2c0939c098dbd247e459e611b206fe009c1ba031c896bcbc541663",
+      "semantic_sha256": "6acab16238ceeae32f32a14d55462dd5237db74ba77060c1c2500f83dd06a13d",
+      "pages": 31,
+      "pages_with_overlap": 29,
+      "exact_evidence_refs": 270,
+      "promotable_evidence_refs": 106,
+      "exact_unique_units": 232,
+      "promotable_unique_units": 101
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000028",
+      "title": "T’au Empire",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000028",
+      "binary_sha256": "143cf421a68cd067b376cd8b8d04c92301af9f4eb5a1d6717aba6d22940f5b9c",
+      "semantic_sha256": "c596861bd64cb5718d13fe32b92d83242c2fc13a5363385f96778baddf856e0a",
+      "pages": 61,
+      "pages_with_overlap": 58,
+      "exact_evidence_refs": 2154,
+      "promotable_evidence_refs": 370,
+      "exact_unique_units": 631,
+      "promotable_unique_units": 210
+    },
+    {
+      "document_id": "GW_11E_FACTION_PACK_000000210",
+      "title": "World Eaters",
+      "document_type": "FACTION_PACK",
+      "source_id": "000000210",
+      "binary_sha256": "e991bc0fea80059f38e2cc0d4c6f4d38e642a8fef93ee2c3da18d6c581399ea6",
+      "semantic_sha256": "e173ee831f1ffef3d697be77e453341d7ab73e24886a300b6556d8c0b3ac5078",
+      "pages": 8,
+      "pages_with_overlap": 7,
+      "exact_evidence_refs": 114,
+      "promotable_evidence_refs": 42,
+      "exact_unique_units": 109,
+      "promotable_unique_units": 42
+    }
+  ],
+  "authority_boundary": {
+    "normative_authority": "GAMES_WORKSHOP",
+    "current_mirror": "WAHAPEDIA_11E",
+    "full_codex_app_equivalence_claimed": false,
+    "faction_pack_is_full_codex_replacement": false,
+    "app_only_wording_inferred": false,
+    "current_normalized_factions_promoted_by_this_audit": false
+  },
+  "source_state": {
+    "official_public": {
+      "verification": "PASS",
+      "documents_verified": 29,
+      "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+    },
+    "current_mirror": {
+      "verification": "PASS",
+      "snapshot_date": "2026-09-29",
+      "last_update": "2026-09-28 02:38:04",
+      "files_verified": 11,
+      "files": [
+        {
+          "file": "Last_update.csv",
+          "sha256": "4b3a7e63006be965073bdc34022bdd17f6f7b063602b46a4640a11ac641b20a9",
+          "rows": 1,
+          "verification": "PASS"
+        },
+        {
+          "file": "Source.csv",
+          "sha256": "e6f74afb7b43f6779ec9a03ad0699ff11dd27b9d2f08243d5c04dd07fd99f6e0",
+          "rows": 66,
+          "verification": "PASS"
+        },
+        {
+          "file": "Factions.csv",
+          "sha256": "d5038518059e5deeafa8d74e814a51598929a45c2864d3056c92c8629e7d4608",
+          "rows": 25,
+          "verification": "PASS"
+        },
+        {
+          "file": "Datasheets.csv",
+          "sha256": "ba363e9a68e6d7ee19f93a32abc06ba3f6a5f1efd0da5aaab32701a130a15623",
+          "rows": 1660,
+          "verification": "PASS"
+        },
+        {
+          "file": "Datasheets_abilities.csv",
+          "sha256": "5aba5ff1d7a2353904fac32d2b2b234c03573bef418f1bf4afabca1001cc2109",
+          "rows": 6935,
+          "verification": "PASS"
+        },
+        {
+          "file": "Datasheets_options.csv",
+          "sha256": "4b729297fe68b3c7cfc2c99205610a1741f838e29ae7150501d84365882e8d13",
+          "rows": 2745,
+          "verification": "PASS"
+        },
+        {
+          "file": "Datasheets_unit_composition.csv",
+          "sha256": "fca0b694f146a13f56c828d78f2aaa0dbe79341273173c68f534b8985494b03f",
+          "rows": 2107,
+          "verification": "PASS"
+        },
+        {
+          "file": "Abilities.csv",
+          "sha256": "f3fc44a0fd91b7b45b38ae477632517e732bda64b4a0c548033a9f874664c7f3",
+          "rows": 128,
+          "verification": "PASS"
+        },
+        {
+          "file": "Detachment_abilities.csv",
+          "sha256": "d7e4966e2b094d43feaa88a66e10608301ff817d92393b9c7f04ec2ac1ed6a44",
+          "rows": 350,
+          "verification": "PASS"
+        },
+        {
+          "file": "Enhancements.csv",
+          "sha256": "7e7fa39c9e1f9d268bda75affa8cd647c72b5511726631a8ee4110c8e86bc212",
+          "rows": 1024,
+          "verification": "PASS"
+        },
+        {
+          "file": "Stratagems.csv",
+          "sha256": "2ed24cacbe826c4eccea0920385669ac2fea5ebf3aca8822169d15d03f5814cb",
+          "rows": 1645,
+          "verification": "PASS"
+        }
+      ]
+    }
+  },
+  "promotion_policy": {
+    "structured_snapshot": "rules/11e/snapshots/2026-09-30/official_public_overlap/index.json",
+    "exact_match_required": true,
+    "direct_scope_required": true,
+    "full_faction_promotion": false,
+    "core_rules_full_ast_claimed": false,
+    "app_codex_equivalence": "PENDING"
+  }
+}
