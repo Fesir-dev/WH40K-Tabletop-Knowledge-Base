@@ -110,7 +110,8 @@
           "semantic_review_pending": true,
           "condition_effect_ast_complete": false,
           "rule_interaction_graph_complete": false,
-          "ast_readiness_pending": true
+          "ast_readiness_pending": false,
+          "ast_readiness_complete": true
         },
         "paragraph_semantic_review": {
           "state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
@@ -127,7 +128,7 @@
           "unclassified_weak_only": 2,
           "repeated_axis_profile_ready": 4,
           "repeated_multi_modal_review_required": 6,
-          "ast_readiness_complete": false,
+          "ast_readiness_complete": true,
           "condition_effect_ast_complete": false,
           "rule_interaction_graph_complete": false
         },
@@ -710,7 +711,7 @@
     "rule_interaction_graph_complete": false,
     "current_normalized_factions_change": 0,
     "authority_rule": "Lexical/structural semantic roles are conservative evidence only. MIXED and UNCLASSIFIED are valid fail-closed states; paragraph prose, condition/effect AST, interaction graph, repeated-variant equivalence and Codex/app equivalence remain unclaimed.",
-    "ast_readiness_pending": true,
+    "ast_readiness_pending": false,
     "closure_report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSURE_2026-09-30.md",
     "pre_closure_validation": {
       "semantic_classification_workflow_run": 36706607549,
@@ -718,7 +719,8 @@
       "overlap_workflow_run": 36706342065,
       "result": "SPECIALIZED_AND_GAP_GATES_SUCCESS"
     },
-    "semantic_review_complete": true
+    "semantic_review_complete": true,
+    "ast_readiness_complete": true
   },
   "core_rule_paragraph_semantic_review": {
     "state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
@@ -759,7 +761,7 @@
       "MULTI_MODAL_REVIEW_REQUIRED": 6
     },
     "axis_profile_ready_is_ast_ready": false,
-    "ast_readiness_pending": true,
+    "ast_readiness_pending": false,
     "condition_effect_ast_complete": false,
     "rule_interaction_graph_complete": false,
     "current_normalized_factions_change": 0,
@@ -770,7 +772,8 @@
       "normative_gap_audit_run": 36708075439,
       "repository_ci_run": 36708075044,
       "result": "SUCCESS"
-    }
+    },
+    "ast_readiness_complete": true
   },
   "core_rule_semantic_ast_readiness": {
     "state": "PASS_1_DIRECT_MODAL_PILOT_READY",
