@@ -29,7 +29,7 @@ Historical roster point values may be retained only as explicitly dated snapshot
 - `adeptus_custodes/` — migrated from the 2026-07-11 v0.5 provisional inventory.
 - `thousand_sons/` — user-supplied New Recruit physical collection export, normalized 2026-09-30.
 - `world_eaters/` — World Eaters portion of the mixed World Eaters/Khorne export, normalized 2026-09-30.
-- `chaos_daemons/` — Khorne, Tzeentch, Slaanesh and Undivided daemon physical collection pools, normalized/reconciled incrementally on 2026-09-30.
+- `chaos_daemons/` — Khorne, Tzeentch, Slaanesh, Nurgle and Undivided daemon physical collection pools, normalized/reconciled incrementally on 2026-09-30.
 - `adeptus_mechanicus/` — reconciled 121-model physical collection, closed 2026-09-30 with magnetization/loadout constraints recorded.
 - `imperial_knights/` — 4-model direct-confirmation baseline: 2 fully magnetized Armiger chassis + 2 magnetized Questoris-scale chassis with shared component pools.
 
