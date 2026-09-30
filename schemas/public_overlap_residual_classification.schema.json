@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"schemas/public_overlap_residual_classification.schema.json",
+  "title":"Official public overlap residual classification",
+  "type":"object",
+  "required":["schema_version","status","as_of","authority_boundary","unscoped_exact","no_exact_public_overlap","summary"],
+  "properties":{
+    "schema_version":{"type":"string"},
+    "status":{"const":"PASS"},
+    "as_of":{"type":"string"},
+    "authority_boundary":{"type":"object"},
+    "unscoped_exact":{"type":"object","required":["total","classes","rows"]},
+    "no_exact_public_overlap":{"type":"object","required":["total","classes","rows"]},
+    "summary":{"type":"object"}
+  },
+  "additionalProperties":true
+}
