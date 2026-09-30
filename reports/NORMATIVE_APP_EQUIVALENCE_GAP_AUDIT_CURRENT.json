@@ -651,11 +651,11 @@
           "required_sources": [
             "GW_40K_DOWNLOADS"
           ],
-          "content_state": "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1",
+          "content_state": "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_PILOT_V1",
           "repository_dimension": null,
           "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
           "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-          "authority_boundary": "Core semantic AST-readiness audit is complete: 310 rows assessed, 34 verified source-shape candidates, 33 shape-blocked and exactly 1 direct-modal pilot candidate. No AST node has been created and all multi-modal/no-strong-signal/repeated-variant ambiguity remains fail-closed.",
+          "authority_boundary": "One readiness-approved Core paragraph (rule 13.07) now has a structural DIRECT_MODAL_CLAUSE node with opaque subject/action spans and verified range/hash provenance. This is one-paragraph pilot evidence only; semantic typing, condition/effect completeness, interactions and Codex/app equivalence remain pending.",
           "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
           "rule_reference_families": 24,
           "rule_reference_count": 141,
@@ -725,6 +725,19 @@
             "shape_blocked": 33,
             "repeated_variants_pilot_ready": 0,
             "ast_nodes_created": 0
+          },
+          "direct_modal_ast_pilot": {
+            "state": "PASS_1_DIRECT_MODAL_AST_NODE",
+            "report": "reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json",
+            "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_pilot/index.json",
+            "ast_nodes": 1,
+            "paragraphs_parsed": 1,
+            "rule_ref": "13.07",
+            "paragraph_key": "core-rule-13-07--p50--l1--para-p50-o1",
+            "subject_tokens": 1,
+            "modal_operator": "PERMISSION",
+            "action_predicate_tokens": 15,
+            "interaction_edges_created": 0
           }
         },
         "official_public_source": {
