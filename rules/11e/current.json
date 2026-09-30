@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.7",
+  "schema_version": "3.8",
   "edition": "11e",
   "repository_checkpoint": "2026-09-30",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,14 +14,14 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1",
+      "state": "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1",
       "verified_at": "2026-09-30",
       "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "RULE_REFERENCE_IDENTITY_COMPLETE_PARAGRAPH_BOUNDARIES_PENDING",
+      "normative_structured_normalization": "RULE_BODY_BOUNDARIES_COMPLETE_PARAGRAPH_ATOMIZATION_PENDING",
       "public_overlap": {
         "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
         "exact_core_mirror_units": 21,
@@ -52,6 +52,19 @@
           "atoms_with_cross_references": 40,
           "paragraph_level_rules_ast_complete": false,
           "rule_interaction_graph_complete": false
+        },
+        "paragraph_boundaries": {
+          "state": "PASS_141_RULE_BOUNDARIES",
+          "report": "reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json",
+          "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json",
+          "rules": 141,
+          "occurrences": 146,
+          "paragraph_candidates": 310,
+          "single_occurrence_rules": 136,
+          "repeated_variant_rules": 5,
+          "heading_line_recovery_gaps": 0,
+          "empty_body_boundaries": 0,
+          "paragraph_level_rules_ast_complete": false
         }
       }
     },
@@ -96,7 +109,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1",
+  "next_milestone": "CORE_RULE_PARAGRAPH_ATOMIZATION_V1",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -491,5 +504,28 @@
       "overlap_regression_run": 36695977631,
       "result": "SUCCESS"
     }
+  },
+  "core_rule_paragraph_boundaries": {
+    "state": "PASS_141_RULE_BOUNDARIES",
+    "as_of": "2026-09-30",
+    "report": "reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json",
+    "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json",
+    "model": "docs/CORE_RULE_PARAGRAPH_BOUNDARY_MODEL.md",
+    "schema": "schemas/core_rule_paragraph_boundaries.schema.json",
+    "tool": "tools/build_core_rule_paragraph_boundaries.py",
+    "workflow": ".github/workflows/core-rule-paragraph-boundaries.yml",
+    "rules": 141,
+    "occurrences": 146,
+    "paragraph_candidates": 310,
+    "classification_counts": {
+      "SINGLE_OCCURRENCE_BOUNDARY": 136,
+      "REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH": 5
+    },
+    "heading_line_recovery_gaps": 0,
+    "empty_body_boundaries": 0,
+    "source_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "paragraph_level_rules_ast_complete": false,
+    "current_normalized_factions_change": 0,
+    "authority_rule": "Rule-body and paragraph candidates are deterministic pypdf extraction boundaries with offsets/counts/hashes only. No paragraph prose, semantic AST, interaction graph or Codex/app equivalence is claimed."
   }
 }
