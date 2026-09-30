@@ -1,0 +1,611 @@
+{
+  "schema_version": "1.1",
+  "inventory_id": "chaos_daemons_personal",
+  "faction": "Chaos Daemons / Legiones Daemonica",
+  "checkpoint": "2026-09-30",
+  "repository_registered_at": "2026-09-30",
+  "status": "PROVISIONAL",
+  "physical_pools": [
+    {
+      "pool_id": "skarbrand",
+      "name": "Skarbrand",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Skarbrand",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Epic Hero"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Khorne"
+    },
+    {
+      "pool_id": "bloodthirster",
+      "name": "Bloodthirster",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Bloodthirster",
+          "source_unit_instances": 2,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Character"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Khorne"
+    },
+    {
+      "pool_id": "bloodletters",
+      "name": "Bloodletters",
+      "physical_bodies": 20,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Bloodletters",
+          "source_unit_instances": 2,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Battleline"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Bloodreaper",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Bloodletter",
+          "physical_bodies": 18,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "alignment": "Khorne"
+    },
+    {
+      "pool_id": "bloodcrushers",
+      "name": "Bloodcrushers",
+      "physical_bodies": 6,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Bloodcrushers",
+          "source_unit_instances": 1,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Mounted"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Bloodhunter",
+          "physical_bodies": 1,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Bloodcrusher",
+          "physical_bodies": 5,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "alignment": "Khorne"
+    },
+    {
+      "pool_id": "flesh_hounds",
+      "name": "Flesh Hounds",
+      "physical_bodies": 10,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Flesh Hounds",
+          "source_unit_instances": 2,
+          "source_id": "NR_WE_KHORNE_2026_09_30",
+          "source_primary_categories": [
+            "Beast"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Gore Hound",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Flesh Hound",
+          "physical_bodies": 8,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "alignment": "Khorne"
+    },
+    {
+      "pool_id": "belakor",
+      "name": "Be'lakor",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Be'lakor",
+          "source_unit_instances": 1,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Undivided"
+    },
+    {
+      "pool_id": "kairos_fateweaver",
+      "name": "Kairos Fateweaver",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Kairos Fateweaver",
+          "source_unit_instances": 1,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "the_blue_scribes",
+      "name": "The Blue Scribes",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "The Blue Scribes",
+          "source_unit_instances": 1,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "the_changeling",
+      "name": "The Changeling",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "The Changeling",
+          "source_unit_instances": 1,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "changecaster",
+      "name": "Changecaster",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Changecaster",
+          "source_unit_instances": 2,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "daemon_prince_of_chaos_with_wings",
+      "name": "Daemon Prince of Chaos with wings",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Daemon Prince of Chaos with wings",
+          "source_unit_instances": 1,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied.",
+        "The source export marks this Daemon Prince as Khorne despite the file being named as a Tzeentch collection; alignment is preserved from the source, not inferred from the filename."
+      ],
+      "alignment": "Khorne"
+    },
+    {
+      "pool_id": "exalted_flamer",
+      "name": "Exalted Flamer",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Exalted Flamer",
+          "source_unit_instances": 1,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "fateskimmer",
+      "name": "Fateskimmer",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Fateskimmer",
+          "source_unit_instances": 1,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "lord_of_change",
+      "name": "Lord of Change",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Lord of Change",
+          "source_unit_instances": 2,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "blue_horrors",
+      "name": "Blue Horrors",
+      "physical_bodies": 40,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Blue Horrors",
+          "source_unit_instances": 4,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Blue Horror",
+          "physical_bodies": 40,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "pink_horrors",
+      "name": "Pink Horrors",
+      "physical_bodies": 40,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Pink Horrors",
+          "source_unit_instances": 4,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Pink Horror",
+          "physical_bodies": 40,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "flamers",
+      "name": "Flamers",
+      "physical_bodies": 12,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Flamers",
+          "source_unit_instances": 4,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Pyrocaster",
+          "physical_bodies": 4,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        },
+        {
+          "name": "Flamer",
+          "physical_bodies": 8,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "screamers",
+      "name": "Screamers",
+      "physical_bodies": 15,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Screamers",
+          "source_unit_instances": 5,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "body_variants": [
+        {
+          "name": "Screamer",
+          "physical_bodies": 15,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ],
+      "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "fluxmaster",
+      "name": "Fluxmaster",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Fluxmaster",
+          "source_unit_instances": 1,
+          "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+          "source_primary_categories": [
+            "Allies: Legiones Daemonica"
+          ]
+        }
+      ],
+      "notes": [
+        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+      ],
+      "alignment": "Tzeentch"
+    }
+  ],
+  "confirmed_totals": {
+    "source_declared_model_bodies": 158,
+    "khorne_aligned_source_bodies": 40,
+    "tzeentch_aligned_source_bodies": 117,
+    "undivided_source_bodies": 1
+  },
+  "constraints": [
+    {
+      "id": "DAEMON_PRINCE_CROSS_FACTION_IDENTITY_UNRESOLVED",
+      "type": "possible_shared_physical_model",
+      "related_inventory": "world_eaters_personal",
+      "source_aliases": [
+        "Daemon Prince of Khorne",
+        "Daemon Prince of Chaos with wings (Khorne)"
+      ],
+      "effect": "Do not assume both entries are simultaneously available until physical identity is reconciled."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "DAEMON_BUILD_STATE",
+      "question": "Which daemon models are built, on sprue, magnetized, converted or proxyable?",
+      "state": "UNKNOWN"
+    },
+    {
+      "id": "DAEMON_PRINCE_IDENTITY",
+      "question": "Is the winged Khorne Daemon Prince the same physical miniature as the World Eaters Daemon Prince of Khorne?",
+      "state": "UNKNOWN"
+    },
+    {
+      "id": "TITANICUS_CONTAINER_ONLY",
+      "question": "The Tzeentch daemon export used the Titanicus Traitoris catalogue as a container. No Titanicus physical models are inferred from that catalogue choice.",
+      "state": "RESOLVED_BY_IMPORT_POLICY"
+    }
+  ],
+  "notes": [
+    "This inventory records physical collection evidence only; roster points, legality and detachment choices in the source export are not collection authority.",
+    "Raw New Recruit exports are not committed because they contain extensive copyrighted rules text; SHA-256 hashes and normalized physical facts are retained instead.",
+    "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED.",
+    "The Tzeentch daemon export was classified by actual model/faction tags, not by its Titanicus Traitoris host catalogue."
+  ],
+  "provenance": {
+    "source_files": [
+      {
+        "source_id": "NR_WE_KHORNE_2026_09_30",
+        "uploaded_name": "Unnamed list (4).json",
+        "sha256": "668b9228ff8e37f15af36c1bdabf22cdc2a04adbfdaa87b2b4ada7bcf5537109",
+        "roster_name": "Unnamed list",
+        "generator": "https://newrecruit.eu",
+        "battle_scribe_version": "2.03",
+        "game_system_name": "Warhammer 40,000 11th Edition",
+        "game_system_revision": 14,
+        "catalogue_name": "Chaos - World Eaters",
+        "catalogue_revision": 11,
+        "extracted_scope": "Blood Legions / Khorne daemon physical selections only",
+        "source_reported_points": 3725,
+        "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
+      },
+      {
+        "source_id": "NR_TZEENTCH_DAEMONS_2026_09_30",
+        "uploaded_name": "Коллекция тзинтча.json",
+        "sha256": "da5415beeec66cadcf7d56f4d1dc1f9c74ba72373a9b39f99f2cc1e4311e6e04",
+        "roster_name": "Коллекция тзинтча",
+        "generator": "https://newrecruit.eu",
+        "battle_scribe_version": "2.03",
+        "game_system_name": "Warhammer 40,000 11th Edition",
+        "game_system_revision": 14,
+        "catalogue_name": "Chaos - Titanicus Traitoris",
+        "catalogue_revision": 2,
+        "extracted_scope": "Legiones Daemonica physical selections only",
+        "source_reported_points": 3815,
+        "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
+      }
+    ]
+  }
+}
