@@ -1,0 +1,94 @@
+name: Official public overlap residual classification
+
+on:
+  push:
+    paths:
+      - "tools/classify_public_overlap_residuals.py"
+      - "tests/test_public_overlap_residual_classification.py"
+      - "schemas/public_overlap_residual_classification.schema.json"
+      - "reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json"
+      - "rules/11e/snapshots/2026-09-29/wahapedia/**"
+      - ".github/workflows/public-overlap-residual-classification.yml"
+  pull_request:
+    paths:
+      - "tools/classify_public_overlap_residuals.py"
+      - "tests/test_public_overlap_residual_classification.py"
+      - "schemas/public_overlap_residual_classification.schema.json"
+      - "reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json"
+      - "rules/11e/snapshots/2026-09-29/wahapedia/**"
+      - ".github/workflows/public-overlap-residual-classification.yml"
+  schedule:
+    - cron: "31 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  classify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run residual classification contracts
+        run: |
+          python -m compileall -q tools/classify_public_overlap_residuals.py tests/test_public_overlap_residual_classification.py
+          python -m unittest tests.test_public_overlap_residual_classification -v
+
+      - name: Build residual classification
+        run: |
+          python tools/classify_public_overlap_residuals.py \
+            --as-of 2026-09-30 \
+            --output rules/11e/snapshots/2026-09-30/official_public_overlap/residual_classification.json \
+            --summary-output reports/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json
+
+      - name: Validate fail-closed residual semantics
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('reports/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json',encoding='utf-8'))
+          assert r['status']=='PASS'
+          assert r['unscoped_exact']['total']==1566, r['unscoped_exact']
+          assert r['no_exact_public_overlap']['total']==7936, r['no_exact_public_overlap']
+          assert r['authority_boundary']['no_exact_is_conflict'] is False
+          assert r['authority_boundary']['unscoped_exact_is_promotable'] is False
+          assert r['authority_boundary']['current_normalized_factions_change']==0
+          assert r['summary']['promoted_units']==0
+          assert r['summary']['semantic_conflicts_created']==0
+          print(json.dumps({
+              'unscoped':r['unscoped_exact']['classes'],
+              'no_exact':r['no_exact_public_overlap']['classes']
+          },indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-overlap-residuals-${{ github.run_id }}
+          path: |
+            reports/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json
+            rules/11e/snapshots/2026-09-30/official_public_overlap/residual_classification.json
+          if-no-files-found: error
+
+      - name: Commit generated residual evidence on development branch
+        if: github.event_name == 'push' && github.ref_name != 'main' && github.actor != 'github-actions[bot]'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json rules/11e/snapshots/2026-09-30/official_public_overlap/residual_classification.json)" ]; then
+            echo "Residual classification already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json
+          git add rules/11e/snapshots/2026-09-30/official_public_overlap/residual_classification.json
+          git commit -m "Checkpoint public-overlap residual classification"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Assert scheduled committed reproducibility
+        if: github.event_name == 'schedule'
+        run: git diff --exit-code -- reports/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json rules/11e/snapshots/2026-09-30/official_public_overlap/residual_classification.json
