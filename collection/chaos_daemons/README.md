@@ -102,6 +102,30 @@ These 17 models are additional to the already-recorded **1 wingless Nurgle-style
 
 Current Nurgle-aligned physical count in this domain: **18**.
 
-Current normalized Chaos Daemons collection total: **333 physical bodies/models**.
+Current normalized Chaos Daemons collection total: **340 physical bodies/models**.
 
 Build state/magnetization for these three newly enumerated Nurgle pools was not separately stated and is therefore not inferred.
+
+
+## Khorne collection expansion — 2026-09-30
+
+Direct user-confirmed additional physical models:
+
+- Bloodmaster — **2**
+- Karanak — **1**
+- Rendmaster on Blood Throne / Skull Cannon — **1 shared magnetized chariot chassis**
+- Skullmaster — **1**
+- Skulltaker — **1**
+- Skull Altar — **1**
+
+The Rendmaster/Skull Cannon chassis is one physical model with mutually exclusive magnetized roles and is counted only once.
+
+These additions contribute **7 unique physical models** beyond the original New Recruit-derived Khorne layer.
+
+Current Khorne-aligned total inside `chaos_daemons`: **46**.
+
+Including the separately tracked wingless Khorne-styled Daemon Prince in `world_eaters`, the cross-domain Khorne-styled physical total is **47**.
+
+Current normalized `chaos_daemons` total: **340 physical bodies/models**.
+
+Khorne reconciliation is not yet closed: the original Bloodletters/Bloodcrushers/Flesh Hounds totals and Bloodthirster build/magnetization state still require direct confirmation, and any further legacy/Age of Sigmar Khorne bodies must be checked.
