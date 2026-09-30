@@ -322,6 +322,9 @@ def build_snapshot(as_of: str, cache_dir: Path, root: Path = ROOT) -> dict:
         hierarchy_complete = False
 
     rule_families = build_rule_reference_families(candidates, len(page_texts), page_sha)
+    expected_family_ids = [f"{i:02d}" for i in range(1, 25)]
+    actual_family_ids = [x["family_id"] for x in rule_families]
+    family_map_complete = actual_family_ids == expected_family_ids
     depth_counts = Counter(str(x["depth"]) for x in sections)
     pages_represented = sorted({p for s in sections for p in range(s["page_start"], s["page_end"] + 1)})
     heading_pages = sum(bool(v) for v in candidates.values())
@@ -358,12 +361,14 @@ def build_snapshot(as_of: str, cache_dir: Path, root: Path = ROOT) -> dict:
             "heading_candidate_pages": heading_pages,
             "heading_candidate_count": sum(len(v) for v in candidates.values()),
             "rule_reference_families": len(rule_families),
+            "rule_reference_family_ids": actual_family_ids,
+            "rule_reference_families_complete_01_24": family_map_complete,
             "rule_reference_count": sum(len(x["rule_refs"]) for x in rule_families),
         },
         "authority_boundary": {
-            "section_level_structure_complete_for_public_pdf": hierarchy_complete,
+            "section_level_structure_complete_for_public_pdf": family_map_complete,
             "flat_heading_map_complete_for_public_pdf": True,
-            "rule_reference_family_map_complete_for_detected_headings": bool(rule_families),
+            "rule_reference_family_map_complete_01_24": family_map_complete,
             "hierarchical_structure_complete": hierarchy_complete,
             "paragraph_level_rules_ast_complete": False,
             "app_codex_equivalence": "NOT_CLAIMED",
