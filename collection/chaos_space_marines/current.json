@@ -36,18 +36,25 @@
     },
     {
       "pool_id": "haarken",
-      "name": "Haarken Worldclaimer",
+      "name": "Haarken Worldclaimer / Chaos Lord with Jump Pack shared magnetized body",
       "physical_bodies": 1,
       "status": [
-        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
-        "BUILD_STATE_UNRECONCILED",
-        "PHYSICAL_LOADOUT_UNRECONCILED"
+        "USER_CONFIRMED_EXACT_COUNT_1",
+        "MAGNETIZED_SHARED_ROLE",
+        "HAARKEN_BASE_MODEL_CONVERSION",
+        "MUTUALLY_EXCLUSIVE_CONFIGURATION"
       ],
       "roles": [
         {
-          "source_datasheet_name": "Haarken Worldclaimer",
-          "source_unit_instances": 1,
-          "source_id": "NR_CSM_WAVE1_2026_09_30"
+          "role": "Haarken Worldclaimer",
+          "simultaneous_capacity": 1,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        },
+        {
+          "role": "Chaos Lord with Jump Pack",
+          "simultaneous_capacity": 1,
+          "shares_body_with": "same magnetized Haarken-derived physical body",
+          "evidence": "DIRECT_USER_CONFIRMATION"
         }
       ],
       "source_configuration_snapshot": {
@@ -57,9 +64,21 @@
         ]
       },
       "notes": [
-        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
-        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
-      ]
+        "User confirmed that the Chaos Lord with Jump Pack is a conversion of the Haarken model.",
+        "The conversion is magnetized and can be restored/configured as Haarken.",
+        "This is one physical body with two mutually exclusive current roles."
+      ],
+      "physical_configuration": {
+        "physical_identity_id": "haarken_jump_lord_shared_01",
+        "base_model_origin": "Haarken Worldclaimer",
+        "converted": true,
+        "magnetized": true,
+        "immediate_role_interchangeability": [
+          "Haarken Worldclaimer",
+          "Chaos Lord with Jump Pack"
+        ],
+        "simultaneous_role_count": 1
+      }
     },
     {
       "pool_id": "chaos_lord",
@@ -136,11 +155,11 @@
     {
       "pool_id": "chaos_lord_jump_pack",
       "name": "Chaos Lord with Jump Pack",
-      "physical_bodies": 1,
+      "physical_bodies": 0,
       "status": [
-        "SOURCE_EXPORT_DECLARED_LOWER_BOUND",
-        "BUILD_STATE_UNRECONCILED",
-        "PHYSICAL_LOADOUT_UNRECONCILED"
+        "SHARED_PHYSICAL_IDENTITY",
+        "USER_CONFIRMED_SAME_AS_HAARKEN_CONVERSION",
+        "ROLE_REFERENCE_ONLY_NOT_ADDITIONAL_BODY"
       ],
       "roles": [
         {
@@ -156,9 +175,11 @@
         ]
       },
       "notes": [
-        "Wave 1 source evidence only. User explicitly states the export is not the complete CSM collection.",
-        "Roster loadout/configuration is preserved as source projection and is not yet physical WYSIWYG authority."
-      ]
+        "This roster role is instantiated by the same magnetized Haarken-derived physical body stored in the haarken pool.",
+        "It contributes zero additional physical bodies.",
+        "Haarken and Chaos Lord with Jump Pack cannot be fielded simultaneously from this collection unless another body is later added."
+      ],
+      "shared_physical_identity_id": "haarken_jump_lord_shared_01"
     },
     {
       "pool_id": "dark_apostle",
@@ -966,7 +987,7 @@
   "confirmed_totals": {
     "wave1_source_declared_top_level_unit_entries": 34,
     "wave1_source_declared_physical_bodies": 117,
-    "normalized_physical_bodies_lower_bound": 156,
+    "normalized_physical_bodies_lower_bound": 155,
     "actual_total_owned": "UNKNOWN_EXPLICITLY_LARGER_THAN_RECONCILED_LOWER_BOUND_DUE_FURTHER_WAVES",
     "character_or_single_model_top_level_entries": 15,
     "source_declared_cultist_bodies": 40,
@@ -994,7 +1015,10 @@
     "word_bearers_kill_team_total_bodies": 8,
     "word_bearers_kill_team_shadowspear_bodies": 3,
     "word_bearers_kill_team_newer_chosen_derived_bodies": 5,
-    "wave2_plus_kill_team_unique_body_lower_bound": 156
+    "wave2_plus_kill_team_unique_body_lower_bound": 155,
+    "haarken_jump_lord_shared_bodies": 1,
+    "shared_chaos_spawn_available": 10,
+    "shared_chaos_spawn_counted_in_csm": 0
   },
   "constraints": [
     {
@@ -1011,6 +1035,11 @@
       "id": "CSM_DAEMON_PRINCE_OVERLAP_PENDING",
       "type": "cross_domain_identity",
       "effect": "The winged Heretic Astartes Daemon Prince may be the same physical body already stored as the winged Black Legion-styled Daemon Prince in collection/chaos_daemons. Global totals must not treat the identity as resolved until user confirmation."
+    },
+    {
+      "id": "CSM_HAARKEN_JUMP_LORD_SHARED_BODY",
+      "type": "mutually_exclusive_roles",
+      "effect": "The single magnetized Haarken-derived body can instantiate either Haarken Worldclaimer or Chaos Lord with Jump Pack, never both simultaneously."
     }
   ],
   "open_questions": [
@@ -1114,6 +1143,15 @@
           "All eight Word Bearers Kill Team models should be counted as Legionaries in the CSM collection.",
           "Do not assign them Chaos Lord, Master of Executions, Sorcerer or other 40K hero proxy roles because the base sizes do not match the desired character use."
         ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_HAARKEN_JUMP_LORD_SHARED_BODY",
+        "facts": [
+          "The Chaos Lord with Jump Pack is a conversion built from Haarken Worldclaimer.",
+          "The body is magnetized and can be configured back into Haarken.",
+          "Haarken and Jump Pack Lord are one physical miniature, not two."
+        ]
       }
     ],
     "product_references": [
@@ -1150,7 +1188,8 @@
     "Wave 2 established Dark Vengeance and Shadowspear acquisition provenance, added legacy/proxy Possessed-role bodies, and promoted several build-state facts while retaining unresolved overlap and missing-body gates.",
     "Wave 2 closeout resolved the two Dark Vengeance Lords, all 20 Shadowspear CSM acquisition bodies, Greater Possessed build state, Gal Vorbak/Argel Tal state, World Eaters Helbrute fist, and winged Daemon Prince cross-domain identity. Current unique CSM-domain lower bound: 151.",
     "Word Bearers Legionaries Kill Team physical composition is closed at 8 bodies (3 Shadowspear + 5 newer Chosen-derived). Current unique CSM-domain lower bound: 156.",
-    "Word Bearers Kill Team 40K role policy simplified: all eight bodies count as Legionaries; hero proxy candidates removed."
+    "Word Bearers Kill Team 40K role policy simplified: all eight bodies count as Legionaries; hero proxy candidates removed.",
+    "Haarken / Chaos Lord with Jump Pack identity reconciled as one magnetized shared body. CSM unique-body lower bound corrected to 155."
   ],
   "acquisition_groups": [
     {
@@ -1310,6 +1349,12 @@
       "resolution": "COUNT_ALL_EIGHT_AS_LEGIONARIES_NO_HERO_PROXY_ROLES",
       "resolved_at": "2026-09-30",
       "evidence": "DIRECT_USER_INSTRUCTION"
+    },
+    {
+      "id": "CSM_HAARKEN_JUMP_LORD_IDENTITY",
+      "resolution": "ONE_MAGNETIZED_HAARKEN_DERIVED_BODY_TWO_MUTUALLY_EXCLUSIVE_ROLES",
+      "resolved_at": "2026-09-30",
+      "evidence": "DIRECT_USER_CONFIRMATION"
     }
   ],
   "observed_unresolved_models": [
@@ -1321,6 +1366,16 @@
       "evidence_state": "USER_OBSERVATION_PLUS_HISTORICAL_PRODUCT_MATCH",
       "historical_product_note": "Shadowspear's 10-model Chaos Space Marine unit included an autocannon-equipped model, so the observed body is plausibly one of the already-counted twenty Shadowspear bodies.",
       "unresolved_question": "Identify which already-counted Shadowspear allocation bucket/body this model belongs to."
+    }
+  ],
+  "shared_physical_pool_refs": [
+    {
+      "pool_id": "chaos_spawn_shared",
+      "canonical_inventory": "collection/chaos_shared/current.json",
+      "available_role": "Chaos Spawn",
+      "physical_bodies_available": 10,
+      "count_in_this_inventory": 0,
+      "note": "Shared cross-faction Chaos Spawn pool; do not double-count in CSM."
     }
   ]
 }
