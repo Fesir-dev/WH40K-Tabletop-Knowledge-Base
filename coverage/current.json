@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.9",
+  "schema_version": "2.0",
   "as_of": "2026-09-30",
-  "status": "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1_COMPLETE",
+  "status": "CORE_RULE_PARAGRAPH_ATOMIZATION_V1_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
   "global": {
     "catalogued_roster_universe": 37,
@@ -84,7 +84,18 @@
     "official_public_core_rule_repeated_variant_boundaries": 5,
     "official_public_core_rule_heading_line_recovery_gaps": 0,
     "official_public_core_rule_empty_body_boundaries": 0,
-    "official_public_core_rule_boundary_current_normalized_factions_change": 0
+    "official_public_core_rule_boundary_current_normalized_factions_change": 0,
+    "official_public_core_paragraph_atomization_status": "PASS_310_PARAGRAPH_ATOMS",
+    "official_public_core_paragraph_atoms": 310,
+    "official_public_core_paragraph_unique_keys": 310,
+    "official_public_core_paragraph_rules_represented": 141,
+    "official_public_core_paragraph_occurrences_represented": 146,
+    "official_public_core_single_occurrence_paragraph_atoms": 300,
+    "official_public_core_repeated_occurrence_paragraph_variants": 10,
+    "official_public_core_paragraph_range_validation_failures": 0,
+    "official_public_core_paragraph_semantic_classification_complete": false,
+    "official_public_core_paragraph_semantic_ast_complete": false,
+    "official_public_core_paragraph_atomization_current_normalized_factions_change": 0
   },
   "dimensions": [
     "points",

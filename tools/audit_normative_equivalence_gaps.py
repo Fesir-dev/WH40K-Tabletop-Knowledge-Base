@@ -69,6 +69,8 @@ def build_audit(root:Path=ROOT)->dict:
     core_atoms=load(core_atoms_path) if core_atoms_path.exists() else None
     core_boundaries_path=root/"reports"/"CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json"
     core_boundaries=load(core_boundaries_path) if core_boundaries_path.exists() else None
+    core_paragraph_atoms_path=root/"reports"/"CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json"
+    core_paragraph_atoms=load(core_paragraph_atoms_path) if core_paragraph_atoms_path.exists() else None
     residual_path=root/"reports"/"OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json"
     residual=load(residual_path) if residual_path.exists() else None
     overlap_summary_path=root/"reports"/"OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json"
@@ -193,6 +195,18 @@ def build_audit(root:Path=ROOT)->dict:
         and core_boundaries.get("authority_boundary",{}).get("rule_body_boundary_complete") is True
         and core_boundaries.get("authority_boundary",{}).get("paragraph_level_rules_ast_complete") is False
     )
+    core_paragraph_atomization_pass=bool(
+        core_paragraph_atoms
+        and core_paragraph_atoms.get("status")=="PASS"
+        and core_paragraph_atoms.get("summary",{}).get("paragraph_atoms")==310
+        and core_paragraph_atoms.get("summary",{}).get("unique_paragraph_keys")==310
+        and core_paragraph_atoms.get("summary",{}).get("rules_represented")==141
+        and core_paragraph_atoms.get("summary",{}).get("occurrences_represented")==146
+        and core_paragraph_atoms.get("summary",{}).get("range_validation_failures")==0
+        and core_paragraph_atoms.get("summary",{}).get("all_parent_candidates_atomized") is True
+        and core_paragraph_atoms.get("authority_boundary",{}).get("stable_paragraph_identity_complete") is True
+        and core_paragraph_atoms.get("authority_boundary",{}).get("paragraph_semantic_ast_complete") is False
+    )
     residual_pass=bool(
         residual
         and residual.get("status")=="PASS"
@@ -249,7 +263,7 @@ def build_audit(root:Path=ROOT)->dict:
     gaps=[
         {
             "id":"OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-            "state":"PARAGRAPH_BOUNDARIES_CLOSED_PARAGRAPH_ATOMIZATION_PENDING" if core_boundaries_pass else ("RULE_REFERENCE_ATOMIZATION_CLOSED_PARAGRAPH_BOUNDARIES_PENDING" if core_atomization_pass else ("SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING" if core_structure_pass else ("FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING" if fp_pass else "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE"))),
+            "state":"PARAGRAPH_ATOMIZATION_CLOSED_SEMANTIC_CLASSIFICATION_PENDING" if core_paragraph_atomization_pass else ("PARAGRAPH_BOUNDARIES_CLOSED_PARAGRAPH_ATOMIZATION_PENDING" if core_boundaries_pass else ("RULE_REFERENCE_ATOMIZATION_CLOSED_PARAGRAPH_BOUNDARIES_PENDING" if core_atomization_pass else ("SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING" if core_structure_pass else ("FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING" if fp_pass else "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE")))),
             "blocking_scope":["core_rules_content","system_normative_semantics"],
             "evidence":{
                 "repository_state":current["source_currentness"]["core_rules_content"]["state"],
@@ -276,8 +290,13 @@ def build_audit(root:Path=ROOT)->dict:
                 "boundary_occurrences":core_boundaries.get("summary",{}).get("occurrences") if core_boundaries_pass else 0,
                 "paragraph_candidates":core_boundaries.get("summary",{}).get("paragraph_candidates") if core_boundaries_pass else 0,
                 "repeated_boundary_variants":core_boundaries.get("summary",{}).get("classification_counts",{}).get("REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH",0) if core_boundaries_pass else 0,
+                "paragraph_atomization_report":"reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json" if core_paragraph_atomization_pass else None,
+                "paragraph_atomization_state":"PASS_310_PARAGRAPH_ATOMS" if core_paragraph_atomization_pass else "PENDING",
+                "paragraph_atoms":core_paragraph_atoms.get("summary",{}).get("paragraph_atoms") if core_paragraph_atomization_pass else 0,
+                "paragraph_atom_classification_counts":core_paragraph_atoms.get("summary",{}).get("classification_counts",{}) if core_paragraph_atomization_pass else {},
+                "paragraph_range_validation_failures":core_paragraph_atoms.get("summary",{}).get("range_validation_failures") if core_paragraph_atomization_pass else None,
             },
-            "next_action":"Atomize the 310 copyright-safe paragraph boundary candidates into stable paragraph identities before any semantic AST parsing." if core_boundaries_pass else ("Extract copyright-safe paragraph/rule-body boundaries for the 141 stable Core rule atoms using page/range hashes; keep paragraph prose external." if core_atomization_pass else ("Atomize the verified Core Rules numbered references into stable per-rule structural objects without vendoring paragraph prose." if core_structure_pass else ("Structurally normalize scoped public Core Rules semantics and compare public official overlap without vendoring long rules prose." if fp_pass else "Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction."))),
+            "next_action":"Classify the 310 stable paragraph identities into conservative semantic roles before building any paragraph AST; keep prose external and repeated variants non-conflicting by default." if core_paragraph_atomization_pass else ("Atomize the 310 copyright-safe paragraph boundary candidates into stable paragraph identities before any semantic AST parsing." if core_boundaries_pass else ("Extract copyright-safe paragraph/rule-body boundaries for the 141 stable Core rule atoms using page/range hashes; keep paragraph prose external." if core_atomization_pass else ("Atomize the verified Core Rules numbered references into stable per-rule structural objects without vendoring paragraph prose." if core_structure_pass else ("Structurally normalize scoped public Core Rules semantics and compare public official overlap without vendoring long rules prose." if fp_pass else "Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction.")))),
         },
         {
             "id":"PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
@@ -427,6 +446,9 @@ def build_audit(root:Path=ROOT)->dict:
             "core_rule_paragraph_boundaries":"PASS_141_RULE_BOUNDARIES" if core_boundaries_pass else "PENDING",
             "core_rule_boundary_occurrences":core_boundaries.get("summary",{}).get("occurrences") if core_boundaries_pass else 0,
             "core_rule_paragraph_candidates":core_boundaries.get("summary",{}).get("paragraph_candidates") if core_boundaries_pass else 0,
+            "core_rule_paragraph_atomization":"PASS_310_PARAGRAPH_ATOMS" if core_paragraph_atomization_pass else "PENDING",
+            "core_rule_paragraph_atoms":core_paragraph_atoms.get("summary",{}).get("paragraph_atoms") if core_paragraph_atomization_pass else 0,
+            "core_rule_paragraph_range_validation_failures":core_paragraph_atoms.get("summary",{}).get("range_validation_failures") if core_paragraph_atomization_pass else None,
             "official_public_exact_overlap":"PASS_EXACT_PUBLIC_OVERLAP_V1" if overlap_pass else "PENDING",
             "official_public_residual_classification":"PASS_FAIL_CLOSED_CLASSIFICATION_V1" if residual_pass else "PENDING",
         },
@@ -440,7 +462,7 @@ def build_audit(root:Path=ROOT)->dict:
         "conclusion":{
             "why_current_normalized_factions_is_zero":"The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
             "publicly_closable_now":[
-                "Core Rules paragraph-boundary candidate atomization" if core_boundaries_pass else ("Core Rules per-reference paragraph boundary extraction" if core_atomization_pass else "Core Rules per-reference structural atomization"),
+                "Core Rules paragraph semantic classification" if core_paragraph_atomization_pass else ("Core Rules paragraph-boundary candidate atomization" if core_boundaries_pass else ("Core Rules per-reference paragraph boundary extraction" if core_atomization_pass else "Core Rules per-reference structural atomization")),
                 "deeper public Faction Pack structured extraction inside proven public scope",
                 "review of edition-11 residual provenance without automatic promotion",
                 "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING",
@@ -449,8 +471,8 @@ def build_audit(root:Path=ROOT)->dict:
                 "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
                 "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS",
             ],
-            "recommended_next_milestone":"CORE_RULE_PARAGRAPH_ATOMIZATION_V1" if (core_boundaries_pass and overlap_pass and residual_pass) else ("CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1" if (core_atomization_pass and overlap_pass and residual_pass) else ("CORE_RULE_REFERENCE_ATOMIZATION_V1" if (core_structure_pass and overlap_pass and residual_pass) else ("OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT" if fp_pass else "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE"))),
-            "expected_effect":"All 141 Core rule atoms now have deterministic rule-body boundaries across 146 occurrences and 310 page-local paragraph candidates, with zero heading-line gaps or empty bodies. Next assign stable paragraph identities before semantic AST work; full faction/app equivalence remains unchanged." if (core_boundaries_pass and overlap_pass and residual_pass) else ("All 141 numbered Core rule references now have stable structural identities with verified heading/page-hash provenance and zero recovery gaps. Next extract rule-body boundaries without storing paragraph prose; full faction/app equivalence and whole-faction normative coverage remain unchanged." if (core_atomization_pass and overlap_pass and residual_pass) else ("Top-level Core Rules structure is closed at families 01-24, 4,070 exact scoped public-overlap units are structured, and all 1,566 unscoped plus 7,936 no-exact residuals are fail-closed classified. Next atomize Core rule references without changing whole-faction normative coverage; app/Codex-only semantics remain pending." if (core_structure_pass and overlap_pass and residual_pass) else ("Fingerprint evidence is closed for the public Core Rules and 28 Faction Packs. Next compare only public official overlap against the current mirror and begin structured public-official normalization; do not promote full-faction normalization while Codex/app-only semantics remain unavailable." if fp_pass else "Close Core Rules plus public faction supplement/FAQ official semantics and establish official-vs-mirror overlap fingerprints. This should improve normative scoped coverage but must not automatically promote full-faction normalization."))),
+            "recommended_next_milestone":"CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1" if (core_paragraph_atomization_pass and overlap_pass and residual_pass) else ("CORE_RULE_PARAGRAPH_ATOMIZATION_V1" if (core_boundaries_pass and overlap_pass and residual_pass) else ("CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1" if (core_atomization_pass and overlap_pass and residual_pass) else ("CORE_RULE_REFERENCE_ATOMIZATION_V1" if (core_structure_pass and overlap_pass and residual_pass) else ("OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT" if fp_pass else "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE")))),
+            "expected_effect":"All 310 Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities with zero range failures. Next classify paragraph semantics conservatively before semantic AST construction; full faction/app equivalence and whole-faction normative coverage remain unchanged." if (core_paragraph_atomization_pass and overlap_pass and residual_pass) else ("All 141 Core rule atoms now have deterministic rule-body boundaries across 146 occurrences and 310 page-local paragraph candidates, with zero heading-line gaps or empty bodies. Next assign stable paragraph identities before semantic AST work; full faction/app equivalence remains unchanged." if (core_boundaries_pass and overlap_pass and residual_pass) else ("All 141 numbered Core rule references now have stable structural identities with verified heading/page-hash provenance and zero recovery gaps. Next extract rule-body boundaries without storing paragraph prose; full faction/app equivalence and whole-faction normative coverage remain unchanged." if (core_atomization_pass and overlap_pass and residual_pass) else ("Top-level Core Rules structure is closed at families 01-24, 4,070 exact scoped public-overlap units are structured, and all 1,566 unscoped plus 7,936 no-exact residuals are fail-closed classified. Next atomize Core rule references without changing whole-faction normative coverage; app/Codex-only semantics remain pending." if (core_structure_pass and overlap_pass and residual_pass) else ("Fingerprint evidence is closed for the public Core Rules and 28 Faction Packs. Next compare only public official overlap against the current mirror and begin structured public-official normalization; do not promote full-faction normalization while Codex/app-only semantics remain unavailable." if fp_pass else "Close Core Rules plus public faction supplement/FAQ official semantics and establish official-vs-mirror overlap fingerprints. This should improve normative scoped coverage but must not automatically promote full-faction normalization.")))),
         },
     }
 

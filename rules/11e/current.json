@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.8",
+  "schema_version": "3.9",
   "edition": "11e",
   "repository_checkpoint": "2026-09-30",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,14 +14,14 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "OFFICIAL_PUBLIC_PARAGRAPH_BOUNDARIES_V1",
+      "state": "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
       "verified_at": "2026-09-30",
       "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "RULE_BODY_BOUNDARIES_COMPLETE_PARAGRAPH_ATOMIZATION_PENDING",
+      "normative_structured_normalization": "PARAGRAPH_IDENTITIES_COMPLETE_SEMANTIC_CLASSIFICATION_PENDING",
       "public_overlap": {
         "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
         "exact_core_mirror_units": 21,
@@ -65,6 +65,21 @@
           "heading_line_recovery_gaps": 0,
           "empty_body_boundaries": 0,
           "paragraph_level_rules_ast_complete": false
+        },
+        "paragraph_atomization": {
+          "state": "PASS_310_PARAGRAPH_ATOMS",
+          "report": "reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json",
+          "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json",
+          "paragraph_atoms": 310,
+          "unique_paragraph_keys": 310,
+          "rules_represented": 141,
+          "occurrences_represented": 146,
+          "single_occurrence_paragraphs": 300,
+          "repeated_occurrence_paragraph_variants": 10,
+          "range_validation_failures": 0,
+          "paragraph_semantic_ast_complete": false,
+          "condition_effect_parsing_complete": false,
+          "rule_interaction_graph_complete": false
         }
       }
     },
@@ -109,7 +124,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "CORE_RULE_PARAGRAPH_ATOMIZATION_V1",
+  "next_milestone": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -532,6 +547,44 @@
       "boundary_workflow_run": 36696663834,
       "normative_gap_audit_run": 36696967737,
       "repository_ci_run": 36697099240,
+      "result": "SUCCESS"
+    }
+  },
+  "core_rule_paragraph_atomization": {
+    "state": "PASS_310_PARAGRAPH_ATOMS",
+    "as_of": "2026-09-30",
+    "report": "reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json",
+    "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json",
+    "model": "docs/CORE_RULE_PARAGRAPH_ATOMIZATION_MODEL.md",
+    "schema": "schemas/core_rule_paragraph_atoms.schema.json",
+    "tool": "tools/build_core_rule_paragraph_atoms.py",
+    "workflow": ".github/workflows/core-rule-paragraph-atomization.yml",
+    "paragraph_atoms": 310,
+    "unique_paragraph_keys": 310,
+    "rules_represented": 141,
+    "occurrences_represented": 146,
+    "classification_counts": {
+      "SINGLE_OCCURRENCE_PARAGRAPH": 300,
+      "REPEATED_OCCURRENCE_PARAGRAPH_VARIANT": 10
+    },
+    "repeated_occurrence_rule_refs": [
+      "15.07",
+      "15.08",
+      "15.09",
+      "15.10",
+      "15.11"
+    ],
+    "range_validation_failures": 0,
+    "source_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "paragraph_semantic_ast_complete": false,
+    "current_normalized_factions_change": 0,
+    "authority_rule": "Stable paragraph identities preserve parent rule/occurrence/page/range/hash provenance only. Repeated variants are structural, not semantic conflicts; no paragraph prose, semantic AST, interaction graph or Codex/app equivalence is claimed.",
+    "closure_report": "reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CLOSURE_2026-09-30.md",
+    "latest_validation": {
+      "head": "c35e9604f61f14e3f3db3a3c39a3144f3306dad6",
+      "paragraph_atomization_workflow_run": 36703546953,
+      "normative_gap_audit_run": 36703546973,
+      "repository_ci_run": 36703546698,
       "result": "SUCCESS"
     }
   }

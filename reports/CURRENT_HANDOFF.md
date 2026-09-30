@@ -317,21 +317,42 @@ Authority boundary remains:
 - app/Codex-only wording remains `PENDING/UNKNOWN`;
 - `NO_EXACT_PUBLIC_OVERLAP` is not automatically a conflict or drift.
 
+## Latest Core Rules milestone
+
+`CORE_RULE_PARAGRAPH_ATOMIZATION_V1` — **CLOSED 2026-09-30**
+
+- stable paragraph atoms: **310 / 310**;
+- unique paragraph keys: **310**;
+- parent Core rules represented: **141**;
+- parent occurrences represented: **146**;
+- single-occurrence paragraph atoms: **300**;
+- repeated-occurrence paragraph variants: **10** across `15.07–15.11`;
+- range validation failures: **0**;
+- semantic hashes reproduced directly from verified PDF ranges: **310 / 310**;
+- paragraph prose committed: **false**;
+- semantic AST / condition-effect parsing / interaction graph: **pending**;
+- `current_normalized_factions = 0` and `full_normative_semantic_factions = 0` unchanged.
+
+Closure:
+`reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CLOSURE_2026-09-30.md`
+
+Validated implementation head `c35e9604f61f14e3f3db3a3c39a3144f3306dad6`:
+- paragraph atomization workflow `36703546953` — **SUCCESS**;
+- normative/app gap audit `36703546973` — **SUCCESS**;
+- generic repository validation `36703546698` — **SUCCESS**.
+
 ## Current active milestone
 
-`CORE_RULE_PARAGRAPH_ATOMIZATION_V1`
+`CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1`
 
-Boundary extraction candidate is complete:
+Next unresolved work:
 
-- stable Core rules: **141**;
-- deterministic body occurrences: **146**;
-- page-local paragraph candidates: **310**;
-- recovery gaps / empty bodies: **0 / 0**;
-- repeated body variants: **5** refs (`15.07–15.11`);
-- paragraph prose and semantic AST remain external/pending;
-- whole-faction normative counters remain **0**.
-
-Next: assign stable identities to all 310 paragraph candidates with parent rule/occurrence/page/range/hash provenance, preserving repeated variants without semantic guessing.
+1. define a conservative semantic-role vocabulary for the 310 stable paragraph atoms;
+2. classify only from verified paragraph ranges, storing role/evidence hashes rather than paragraph prose;
+3. preserve ambiguous/mixed paragraphs explicitly instead of forcing a class;
+4. keep the ten repeated-occurrence variants independent and non-conflicting by default;
+5. defer condition/effect AST and rule-interaction graph construction until semantic-role evidence is validated;
+6. keep app/Codex-only semantics fail-closed and whole-faction normative counters unchanged.
 
 ## Execution reliability rule
 
@@ -342,6 +363,6 @@ Next: assign stable identities to all 310 paragraph candidates with parent rule/
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, or Core paragraph-boundary extraction v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, Core paragraph-boundary extraction v1, or Core paragraph atomization v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.

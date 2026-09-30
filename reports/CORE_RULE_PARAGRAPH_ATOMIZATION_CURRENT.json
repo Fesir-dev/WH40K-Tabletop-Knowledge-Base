@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "snapshot_date": "2026-09-30",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "atomization_version": "CORE_RULE_PARAGRAPH_ATOMIZATION_V1",
+  "source": {
+    "document_id": "GW_11E_CORE_RULES_PUBLIC",
+    "source_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+    "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+    "page_count": 88,
+    "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+  },
+  "source_verification": {
+    "binary_sha256_match": true,
+    "page_semantic_fingerprints_match": 88,
+    "document_semantic_sha256_match": true
+  },
+  "parent_boundaries": {
+    "path": "rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json",
+    "boundary_version": "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1",
+    "rules": 141,
+    "occurrences": 146,
+    "paragraph_candidates": 310,
+    "heading_line_recovery_gaps": 0,
+    "empty_body_boundaries": 0
+  },
+  "summary": {
+    "paragraph_atoms": 310,
+    "unique_paragraph_keys": 310,
+    "parent_paragraph_candidates": 310,
+    "rules_represented": 141,
+    "occurrences_represented": 146,
+    "families_represented": 24,
+    "classification_counts": {
+      "REPEATED_OCCURRENCE_PARAGRAPH_VARIANT": 10,
+      "SINGLE_OCCURRENCE_PARAGRAPH": 300
+    },
+    "repeated_occurrence_rule_refs": [
+      "15.07",
+      "15.08",
+      "15.09",
+      "15.10",
+      "15.11"
+    ],
+    "range_validation_failures": 0,
+    "range_validation_failure_samples": [],
+    "all_parent_candidates_atomized": true,
+    "paragraph_hashes_reproduced_from_verified_pdf": 310
+  },
+  "repeated_occurrence_paragraphs": [
+    {
+      "paragraph_key": "core-rule-15-07--p55--l1--para-p55-o1",
+      "rule_ref": "15.07",
+      "occurrence_key": "core-rule-15-07--p55--l1",
+      "page": 55,
+      "ordinal_on_page": 1,
+      "semantic_sha256": "bce09954530140d2b4916c2a7ebcae7b1ac8673c9c89d26a4a0cae244c27dc74",
+      "parent_body_semantic_sha256": "bce09954530140d2b4916c2a7ebcae7b1ac8673c9c89d26a4a0cae244c27dc74"
+    },
+    {
+      "paragraph_key": "core-rule-15-07--p57--l1--para-p57-o1",
+      "rule_ref": "15.07",
+      "occurrence_key": "core-rule-15-07--p57--l1",
+      "page": 57,
+      "ordinal_on_page": 1,
+      "semantic_sha256": "c1c380daabb9c05583ab57823b2931a9a91b7020265d2c821b1340c36ad0c3be",
+      "parent_body_semantic_sha256": "c1c380daabb9c05583ab57823b2931a9a91b7020265d2c821b1340c36ad0c3be"
+    },
+    {
+      "paragraph_key": "core-rule-15-08--p55--l15--para-p55-o1",
+      "rule_ref": "15.08",
+      "occurrence_key": "core-rule-15-08--p55--l15",
+      "page": 55,
+      "ordinal_on_page": 1,
+      "semantic_sha256": "123f68cbc1ca70ae6179d10ba13bf0e717dfa24bb07dee77b12195d157af5885",
+      "parent_body_semantic_sha256": "123f68cbc1ca70ae6179d10ba13bf0e717dfa24bb07dee77b12195d157af5885"
+    },
+    {
+      "paragraph_key": "core-rule-15-08--p57--l14--para-p57-o1",
+      "rule_ref": "15.08",
+      "occurrence_key": "core-rule-15-08--p57--l14",
+      "page": 57,
+      "ordinal_on_page": 1,
+      "semantic_sha256": "76d69a043a6547a505e9389e51fca932c471a30880a6b86a58b4a1ff942f522c",
+      "parent_body_semantic_sha256": "76d69a043a6547a505e9389e51fca932c471a30880a6b86a58b4a1ff942f522c"
+    },
+    {
+      "paragraph_key": "core-rule-15-09--p55--l22--para-p55-o1",
+      "rule_ref": "15.09",
+      "occurrence_key": "core-rule-15-09--p55--l22",
+      "page": 55,
+      "ordinal_on_page": 1,
+      "semantic_sha256": "7e53fd4ab164add882c1eaf365f065cc196871ffdd06c72d6a6b3377c009cc77",
+      "parent_body_semantic_sha256": "7e53fd4ab164add882c1eaf365f065cc196871ffdd06c72d6a6b3377c009cc77"
+    },
+    {
+      "paragraph_key": "core-rule-15-09--p57--l22--para-p57-o1",
+      "rule_ref": "15.09",
+      "occurrence_key": "core-rule-15-09--p57--l22",
+      "page": 57,
+      "ordinal_on_page": 1,
+      "semantic_sha256": "1c6c09bfc5d230ded48d5b7e6e40b624d2c5e7c8fae7f031773a2c35d65ddbfa",
+      "parent_body_semantic_sha256": "1c6c09bfc5d230ded48d5b7e6e40b624d2c5e7c8fae7f031773a2c35d65ddbfa"
+    },
+    {
+      "paragraph_key": "core-rule-15-10--p55--l38--para-p55-o1",
+      "rule_ref": "15.10",
+      "occurrence_key": "core-rule-15-10--p55--l38",
+      "page": 55,
+      "ordinal_on_page": 1,
+      "semantic_sha256": "6b184102441767a60cb973ed7aa102a8a74c3a6ce3272b258c47e9c984e050e1",
+      "parent_body_semantic_sha256": "6b184102441767a60cb973ed7aa102a8a74c3a6ce3272b258c47e9c984e050e1"
+    },
+    {
+      "paragraph_key": "core-rule-15-10--p57--l43--para-p57-o1",
+      "rule_ref": "15.10",
+      "occurrence_key": "core-rule-15-10--p57--l43",
+      "page": 57,
+      "ordinal_on_page": 1,
+      "semantic_sha256": "c1301d1e85e01e8a0845bc8ce4386723d57a9eb5706a1107cc6bb479a0d5e729",
+      "parent_body_semantic_sha256": "c1301d1e85e01e8a0845bc8ce4386723d57a9eb5706a1107cc6bb479a0d5e729"
+    },
+    {
+      "paragraph_key": "core-rule-15-11--p55--l48--para-p55-o1",
+      "rule_ref": "15.11",
+      "occurrence_key": "core-rule-15-11--p55--l48",
+      "page": 55,
+      "ordinal_on_page": 1,
+      "semantic_sha256": "0306c9279f37abdbf0262e5173ad825bc010de26e1343ee32cecdb1f351242b4",
+      "parent_body_semantic_sha256": "0306c9279f37abdbf0262e5173ad825bc010de26e1343ee32cecdb1f351242b4"
+    },
+    {
+      "paragraph_key": "core-rule-15-11--p57--l56--para-p57-o1",
+      "rule_ref": "15.11",
+      "occurrence_key": "core-rule-15-11--p57--l56",
+      "page": 57,
+      "ordinal_on_page": 1,
+      "semantic_sha256": "aa36031a5c90521d1e8c936443ae68af4f3fa1fb7c5163443a84d0666e5e2892",
+      "parent_body_semantic_sha256": "aa36031a5c90521d1e8c936443ae68af4f3fa1fb7c5163443a84d0666e5e2892"
+    }
+  ],
+  "authority_boundary": {
+    "stable_paragraph_identity_complete": true,
+    "paragraph_boundaries_are_extraction_candidates": true,
+    "paragraph_semantic_ast_complete": false,
+    "condition_effect_parsing_complete": false,
+    "rule_interaction_graph_complete": false,
+    "repeated_paragraph_variant_is_semantic_conflict": false,
+    "app_codex_equivalence": "NOT_CLAIMED",
+    "full_faction_promotion": false,
+    "current_normalized_factions_change": 0,
+    "copyright_policy": "Stable IDs, parent provenance, ranges/counts and hashes only. No paragraph or rule-body prose committed."
+  }
+}

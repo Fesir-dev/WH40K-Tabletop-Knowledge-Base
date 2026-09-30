@@ -1,0 +1,134 @@
+name: Core rule paragraph atomization
+
+on:
+  push:
+    paths:
+      - "tools/build_core_rule_paragraph_atoms.py"
+      - "tests/test_core_rule_paragraph_atomization.py"
+      - "schemas/core_rule_paragraph_atoms.schema.json"
+      - "docs/CORE_RULE_PARAGRAPH_ATOMIZATION_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - ".github/workflows/core-rule-paragraph-atomization.yml"
+  pull_request:
+    paths:
+      - "tools/build_core_rule_paragraph_atoms.py"
+      - "tests/test_core_rule_paragraph_atomization.py"
+      - "schemas/core_rule_paragraph_atoms.schema.json"
+      - "docs/CORE_RULE_PARAGRAPH_ATOMIZATION_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - ".github/workflows/core-rule-paragraph-atomization.yml"
+  schedule:
+    - cron: "51 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  atomize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned PDF extractor
+        run: python -m pip install --disable-pip-version-check pypdf==5.9.0
+
+      - name: Compile and run paragraph atomization contracts
+        run: |
+          python -m compileall -q tools/build_core_rule_paragraph_atoms.py tests/test_core_rule_paragraph_atomization.py
+          python -m unittest tests.test_core_rule_paragraph_atomization -v
+
+      - uses: actions/cache@v4
+        with:
+          path: .cache/official-public-rules
+          key: official-public-rules-${{ hashFiles('sources/discoveries/gw_public_rules_surface_2026-09-29.json', 'sources/snapshots/gw_11e_official_assets_2026-09-29.json') }}
+
+      - name: Build verified Core paragraph atoms
+        run: |
+          python tools/build_core_rule_paragraph_atoms.py \
+            --as-of 2026-09-30 \
+            --output rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json \
+            --summary-output reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json
+
+      - name: Validate paragraph atomization authority boundary
+        run: |
+          python - <<'PY'
+          import json
+          p='rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json'
+          r=json.load(open(p,encoding='utf-8'))
+          assert r['status']=='PASS'
+          assert r['authority']=='GAMES_WORKSHOP_OFFICIAL'
+          assert r['atomization_version']=='CORE_RULE_PARAGRAPH_ATOMIZATION_V1'
+          s=r['summary']
+          assert s['paragraph_atoms']==310
+          assert s['unique_paragraph_keys']==310
+          assert s['parent_paragraph_candidates']==310
+          assert s['rules_represented']==141
+          assert s['occurrences_represented']==146
+          assert s['families_represented']==24
+          assert s['classification_counts']=={
+              'REPEATED_OCCURRENCE_PARAGRAPH_VARIANT':10,
+              'SINGLE_OCCURRENCE_PARAGRAPH':300,
+          }
+          assert s['repeated_occurrence_rule_refs']==['15.07','15.08','15.09','15.10','15.11']
+          assert s['range_validation_failures']==0
+          assert s['all_parent_candidates_atomized'] is True
+          assert s['paragraph_hashes_reproduced_from_verified_pdf']==310
+          assert r['source_verification']['binary_sha256_match'] is True
+          assert r['source_verification']['page_semantic_fingerprints_match']==88
+          assert r['source_verification']['document_semantic_sha256_match'] is True
+          b=r['authority_boundary']
+          assert b['stable_paragraph_identity_complete'] is True
+          assert b['paragraph_semantic_ast_complete'] is False
+          assert b['condition_effect_parsing_complete'] is False
+          assert b['rule_interaction_graph_complete'] is False
+          assert b['current_normalized_factions_change']==0
+          atoms=r['paragraph_atoms']
+          assert len({x['paragraph_key'] for x in atoms})==310
+          assert len({x['occurrence_key'] for x in atoms})==146
+          assert len({x['rule_ref'] for x in atoms})==141
+          forbidden={'text','description','rules_text','official_text','mirror_text','page_text','prose','paragraph_text','body_text'}
+          def walk(v):
+              if isinstance(v,dict):
+                  for k,x in v.items():
+                      assert k not in forbidden, k
+                      walk(x)
+              elif isinstance(v,list):
+                  for x in v: walk(x)
+          walk(r)
+          print(json.dumps(s,indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-rule-paragraph-atoms-${{ github.run_id }}
+          path: |
+            reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json
+            rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json
+          if-no-files-found: error
+
+      - name: Commit generated paragraph atoms on development branch
+        if: github.event_name == 'push' && github.ref_name != 'main' && github.actor != 'github-actions[bot]'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json)" ]; then
+            echo "Core paragraph atoms already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json
+          git add rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json
+          git commit -m "Checkpoint generated Core paragraph atoms"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Assert scheduled committed reproducibility
+        if: github.event_name == 'schedule'
+        run: git diff --exit-code -- reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json

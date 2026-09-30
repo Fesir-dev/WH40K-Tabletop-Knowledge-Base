@@ -79,7 +79,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Expand structured public-official normalization: Core Rules families 01–24 / 141 detected rule references, fail-closed review of 1,566 exact-but-unscoped units, and classification of all 7,936 non-exact public-overlap units without assuming semantic drift.
 - [x] Atomize all 141 numbered Core Rules references into stable per-rule identities with verified page/hash provenance, zero heading-recovery gaps and no paragraph prose vendored.
 - [x] Extract copyright-safe rule-body boundaries for all 141 Core rule atoms: 146 occurrences / 310 page-local paragraph candidates / zero recovery gaps or empty bodies.
-- [ ] Atomize the 310 paragraph candidates into stable paragraph identities before any semantic AST or interaction graph.
+- [x] Atomize all 310 Core paragraph candidates into stable paragraph identities with verified parent rule/occurrence/page/range/hash provenance and 310/310 source-range hash reproduction.
+- [ ] Classify the 310 stable Core paragraph identities into conservative semantic roles before condition/effect AST or interaction-graph construction.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary
