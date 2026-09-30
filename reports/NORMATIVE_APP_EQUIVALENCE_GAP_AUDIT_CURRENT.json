@@ -630,7 +630,7 @@
   "gaps": [
     {
       "id": "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-      "state": "PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSED_AST_READINESS_PENDING",
+      "state": "PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSED_SEMANTIC_REVIEW_PENDING",
       "blocking_scope": [
         "core_rules_content",
         "system_normative_semantics"
@@ -749,9 +749,13 @@
         },
         "paragraphs_with_signals": 200,
         "paragraphs_without_signals": 110,
-        "paragraph_semantic_hashes_reproduced": 310
+        "paragraph_semantic_hashes_reproduced": 310,
+        "paragraph_semantic_classification_report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
+        "paragraph_semantic_classification_state": "PASS_310_PARAGRAPHS_CLASSIFIED",
+        "paragraphs_with_semantic_signals": 200,
+        "paragraphs_without_semantic_signals": 110
       },
-      "next_action": "Audit AST readiness across all 310 classified paragraphs, define the safely parseable subset, and keep MIXED/UNCLASSIFIED paragraphs blocked from forced condition/effect parsing."
+      "next_action": "Review the 134 MIXED and 112 UNCLASSIFIED paragraphs plus the 64 HIGH classifications against deterministic signal evidence, refining only demonstrably safe lexical rules before any AST-readiness gate."
     },
     {
       "id": "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
@@ -1060,7 +1064,7 @@
   "conclusion": {
     "why_current_normalized_factions_is_zero": "The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
     "publicly_closable_now": [
-      "Core Rules semantic AST readiness audit",
+      "Core Rules paragraph semantic review",
       "deeper public Faction Pack structured extraction inside proven public scope",
       "review of edition-11 residual provenance without automatic promotion",
       "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING"
@@ -1069,7 +1073,7 @@
       "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
       "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS"
     ],
-    "recommended_next_milestone": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
-    "expected_effect": "All 310 Core paragraphs now have reproducible lexical/structural role evidence. Because only 64 are HIGH while 134 are MIXED and 112 UNCLASSIFIED, the next step is an AST-readiness audit that defines a safe parse subset rather than forcing condition/effect nodes; faction/app equivalence remains unchanged."
+    "recommended_next_milestone": "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1",
+    "expected_effect": "All 310 Core paragraphs now have reproducible lexical/structural role evidence. Current baseline is 64 HIGH, 134 MIXED and 112 NONE/UNCLASSIFIED; next review ambiguous and signal-free cases before any AST-readiness gate, while faction/app equivalence remains unchanged."
   }
 }
