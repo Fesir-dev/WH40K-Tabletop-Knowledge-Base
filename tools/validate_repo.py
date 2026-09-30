@@ -1021,13 +1021,17 @@ try:
     runtime_drifts = json.loads((ROOT / "sources" / "runtime_drift_registry.json").read_text(encoding="utf-8"))
     current_rules = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
 
-    if upstream_watch.get("status") != "NO_CHANGE":
-        errors.append("Pinned upstream baseline currently has unresolved change")
+    watch_status = upstream_watch.get("status")
+    if watch_status not in {"NO_CHANGE", "CHANGE_DETECTED"}:
+        errors.append(f"Unexpected upstream watch status: {watch_status}")
     summary = upstream_watch.get("change_summary", {})
-    if summary.get("github_sources_changed") != []:
-        errors.append("Pinned GitHub upstream source head changed")
-    if summary.get("wahapedia_files_changed") != 0 or summary.get("wahapedia_last_update_changed") is not False:
-        errors.append("Wahapedia baseline changed without re-ingestion")
+    changed_sources = summary.get("github_sources_changed", [])
+    if watch_status == "NO_CHANGE" and changed_sources:
+        errors.append("Upstream watcher says NO_CHANGE but GitHub source changes are listed")
+    if watch_status == "CHANGE_DETECTED" and not changed_sources and not summary.get("wahapedia_files_changed") and not summary.get("wahapedia_last_update_changed"):
+        errors.append("Upstream watcher says CHANGE_DETECTED without any classified source change")
+    if upstream_watch.get("policy", {}).get("auto_promote") is not False:
+        errors.append("Upstream watcher must never auto-promote detected source changes")
 
     if nr_runtime.get("schema_version") != "2.0":
         errors.append("New Recruit runtime report schema must be 2.0")
@@ -1073,8 +1077,20 @@ try:
 
     automation = current_rules.get("automation", {})
     nr_auto = automation.get("new_recruit_runtime", {})
-    if automation.get("upstream_change_watch", {}).get("state") != "ACTIVE_NO_CHANGE":
-        errors.append("Current rules upstream watcher status must be ACTIVE_NO_CHANGE after promotion/rebaseline")
+    current_watch = automation.get("upstream_change_watch", {})
+    expected_watch_state = "ACTIVE_CHANGE_DETECTED" if watch_status == "CHANGE_DETECTED" else "ACTIVE_NO_CHANGE"
+    if current_watch.get("state") != expected_watch_state:
+        errors.append(
+            f"Current rules upstream watcher status differs from report: "
+            f"{current_watch.get('state')} != {expected_watch_state}"
+        )
+    if current_watch.get("auto_promote") is not False:
+        errors.append("Current rules upstream watcher must keep auto_promote=false")
+    if watch_status == "CHANGE_DETECTED":
+        if current_watch.get("bsdata_wh40k_11e", {}).get("live") != "374f50544f0274296ab53c2103766ae3945e8799":
+            errors.append("Current rules live BSData revision differs from detected upstream head")
+        if current_watch.get("bsdata_mfm_11e", {}).get("live") != "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390":
+            errors.append("Current rules live MFM extractor revision differs from detected upstream head")
     if nr_auto.get("state") != nr_runtime.get("status"):
         errors.append("Current rules New Recruit runtime state differs from runtime report")
     if nr_auto.get("representative_point_checks") != points.get("checks"):
