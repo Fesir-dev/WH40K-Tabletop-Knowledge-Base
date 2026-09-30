@@ -64,6 +64,28 @@ jobs:
             --report-output reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json \
             --snapshot-output rules/11e/snapshots/2026-09-30/official_public_overlap/index.json
 
+      - name: Build compact recovery summary
+        run: |
+          python - <<'PY'
+          import json
+          src=json.load(open('reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json',encoding='utf-8'))
+          compact={
+              'schema_version':'1.0',
+              'status':src['status'],
+              'as_of':src['as_of'],
+              'milestone':src['milestone'],
+              'summary':src['summary'],
+              'by_kind':src['by_kind'],
+              'documents':src['documents'],
+              'authority_boundary':src['authority_boundary'],
+              'source_state':src['source_state'],
+              'promotion_policy':src['promotion_policy'],
+          }
+          with open('reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json','w',encoding='utf-8') as h:
+              json.dump(compact,h,ensure_ascii=False,indent=2)
+              h.write('\n')
+          PY
+
       - name: Validate generated authority boundary
         run: |
           python - <<'PY'
@@ -103,6 +125,7 @@ jobs:
              git cat-file -e HEAD:rules/11e/snapshots/2026-09-30/official_public_overlap/index.json 2>/dev/null; then
             git diff --exit-code -- \
               reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json \
+              reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json \
               rules/11e/snapshots/2026-09-30/official_public_overlap/index.json
           else
             echo "Generated outputs are not committed on this head yet; branch push run will checkpoint them."
@@ -113,19 +136,21 @@ jobs:
           name: official-public-mirror-overlap-${{ github.run_id }}
           path: |
             reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json
+            reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json
             rules/11e/snapshots/2026-09-30/official_public_overlap/index.json
           if-no-files-found: error
 
       - name: Commit generated overlap evidence on development branch
         if: github.event_name == 'push' && github.ref_name != 'main' && github.actor != 'github-actions[bot]'
         run: |
-          if [ -z "$(git status --porcelain -- reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json rules/11e/snapshots/2026-09-30/official_public_overlap/index.json)" ]; then
+          if [ -z "$(git status --porcelain -- reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json rules/11e/snapshots/2026-09-30/official_public_overlap/index.json)" ]; then
             echo "Overlap evidence already current"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json
+          git add reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json
           git add rules/11e/snapshots/2026-09-30/official_public_overlap/index.json
           git commit -m "Checkpoint generated official-public overlap evidence"
           git push origin HEAD:${GITHUB_REF_NAME}
