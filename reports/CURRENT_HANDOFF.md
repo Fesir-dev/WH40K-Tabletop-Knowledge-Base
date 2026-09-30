@@ -6,57 +6,41 @@ Updated: **2026-09-30**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
+Latest Core rule-reference atomization candidate:
 
-Latest closed structured-normalization expansion milestone:
+- branch: `core-rule-reference-atomization-v1`;
+- generated atom snapshot: `rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json`;
+- compact report: `reports/CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json`;
+- rule atoms: **141 / 141**;
+- stable unique refs / keys: **141 / 141**;
+- families: **24** (`01–24`);
+- unique-heading atoms: **136**;
+- repeated-heading atoms: **5** (`15.07–15.11`, pages 55 + 57);
+- heading-recovery gaps: **0**;
+- atoms with cross-reference pages: **40**;
+- atomization workflow run: `36694945932` — **SUCCESS**;
+- normative/app gap reproducibility run: `36695667215` — **SUCCESS**;
+- generic repository validation run: `36695740466` — **SUCCESS**;
+- closure report: `reports/CORE_RULE_REFERENCE_ATOMIZATION_CLOSURE_2026-09-30.md`;
+- full faction/app equivalence: **NOT CLAIMED**;
+- next milestone: `CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1`.
+
+Previous closed structured-normalization expansion:
 
 - merged PR: **#10**;
 - merge commit: `191b258a9a85fe71417f48c2fd74ee66afd30644`;
-- validated implementation head: `a1c46b76eb186776559ac1dc91cc925abcf45a44`;
 - final validated PR head: `cc1297b7472c835014c215ef5c5ca6a706a55d32`;
-- Core Rules structure: **24** numbered families (`01–24`), **141** detected references, **88 / 88** pages verified;
-- exact-but-unscoped residuals classified: **1,566**;
-- no-exact-public-overlap residuals classified: **7,936**;
-- residual promotions: **0**;
-- residual semantic conflicts created: **0**;
-- generic repository validation: `36692560373` — **SUCCESS**;
-- normative/app gap reproducibility: `36692560396` — **SUCCESS**;
-- Core structured normalization: `36692560392` — **SUCCESS**;
-- residual classification: `36692560385` — **SUCCESS**;
-- full official-public overlap revalidation on implementation head: `36692560403` — **SUCCESS**;
-- final PR-head generic validation: `36692867757` — **SUCCESS**;
-- final PR-head normative/app gap audit: `36692867724` — **SUCCESS**;
-- final PR-head Core structure workflow: `36692867778` — **SUCCESS**;
-- final PR-head residual classification: `36692867670` — **SUCCESS**;
-- final PR-head overlap revalidation: `36692867854` — **SUCCESS**;
-- closure report: `reports/OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_CLOSURE_2026-09-30.md`;
-- next milestone: `CORE_RULE_REFERENCE_ATOMIZATION_V1`.
+- Core Rules structure: **24** families / **141** detected references / **88 / 88** pages;
+- exact-but-unscoped residuals: **1,566**, promoted **0**;
+- no-exact residuals: **7,936**, semantic conflicts **0**;
+- closure: `reports/OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_CLOSURE_2026-09-30.md`.
 
-Latest closed official-public ↔ mirror overlap milestone:
+Previous closed official-public ↔ mirror overlap:
 
 - merged PR: **#9**;
 - merge commit: `a933e69856753d4a97b1537d77eb599c7b2b6dbd`;
-- validated PR head: `aadd558093a25bbd56e54724ff97624aeca4f0ca`;
-- final generic repository validation: `36688560039` — **SUCCESS**;
-- final normative/app gap reproducibility: `36688560359` — **SUCCESS**;
-- final full official-public mirror overlap audit: `36688560258` — **SUCCESS**;
 - structured exact scoped official-public units: **4,070**;
-- next milestone: `OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION`.
-
-
-Latest validated official-public fingerprint evidence:
-
-- merged milestone commit: `1eaa07e137c72ebc5087c3306a3eaa0752356c80`
-- validated PR head: `d265ec44b70a62384ffb1d36af987d0aaa7aa8ee`
-- official fingerprint reproducibility run: `36616297652` — **SUCCESS**
-- normative/app gap projection run: `36616297679` — **SUCCESS**
-- generic repository validation run: `36616297669` — **SUCCESS**
-- official public corpus: **29 / 29 PASS**
-- Core Rules: **1 / 1**, 88 pages
-- public Faction Packs: **28 / 28**, all binary SHAs match prior official-asset evidence
-- total pages: **1,430**
-- normalized fingerprinted text: **1,915,296 characters**
-- strict normative faction promotion: **none**
-- closure report: `reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CLOSURE_2026-09-29.md`
+- closure: `reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CLOSURE_2026-09-30.md`.
 
 ## Completed major layers
 
@@ -318,24 +302,26 @@ Authority boundary remains:
 
 ## Current active milestone
 
-`CORE_RULE_REFERENCE_ATOMIZATION_V1`
+`CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1`
 
-The structured-normalization expansion is closed and merged into `main`:
+Core rule-reference atomization is closed at the candidate layer:
 
-- Core Rules section-level structure: **PASS**, families `01–24`;
-- detected numbered Core references: **141**;
-- exact-but-unscoped residuals: **1,566**, fully classified, **0 promoted**;
-- no-exact residuals: **7,936**, fully classified, **0 semantic conflicts created**;
-- whole-faction normative counters remain **0**;
-- app/Codex-only wording remains `PENDING/UNKNOWN`.
+- stable Core rule identities: **141 / 141**;
+- heading recovery gaps: **0**;
+- repeated structural heading evidence: exactly **5** refs (`15.07–15.11`);
+- cross-reference-bearing atoms: **40**;
+- source binary/page/document fingerprints: verified;
+- paragraph prose: not vendored;
+- paragraph-level AST: still **PENDING**;
+- whole-faction normative counters: unchanged at **0**.
 
 Next unresolved work:
 
-1. atomize the **141** numbered Core Rules references into stable per-rule structural identities;
-2. retain exact official page/range hash provenance for every atomized identity;
-3. distinguish atomizable definitions from layout/cross-reference ambiguities;
-4. keep paragraph prose external/copyright-safe;
-5. do not change faction normative coverage or infer app/Codex-only semantics;
+1. derive deterministic rule-body/paragraph boundaries for each stable Core atom;
+2. retain official page/offset/range hash provenance without committing long paragraph prose;
+3. fail closed on layout ambiguity and multi-page body uncertainty;
+4. keep paragraph AST and interaction-graph modeling as later layers;
+5. do not infer app/Codex-only semantics or alter faction normative coverage;
 6. release-transition activation watch continues independently.
 
 ## Execution reliability rule
@@ -347,6 +333,6 @@ Next unresolved work:
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, or structured-normalization expansion v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, or Core rule-reference atomization v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.
