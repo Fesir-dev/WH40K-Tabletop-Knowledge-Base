@@ -234,3 +234,37 @@ Active milestone:
 
 Next derive deterministic rule-body/paragraph boundaries for each stable atom using verified official page text transiently while committing only offsets/ranges/hashes and structural metadata, not paragraph prose.
 
+## Core paragraph-boundary extraction v1 — COMPLETE
+
+All **141** stable Core rule atoms now have deterministic extraction boundaries.
+
+Result:
+
+- rules: **141**;
+- resolved heading occurrences: **146**;
+- single-occurrence rules: **136**;
+- repeated-occurrence rules: **5**;
+- paragraph-boundary candidates: **310**;
+- heading-line recovery gaps: **0**;
+- empty rule-body boundaries: **0**.
+
+The repeated rules `15.07–15.11` each produce two body occurrences. Their normalized body hashes differ between the two occurrences, so v1 preserves them as `REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH`. This is structural evidence, not an automatic semantic conflict.
+
+Committed boundary data contains only page/line/character ranges, counts, hashes and structural relationships. Paragraph/rule-body prose remains external.
+
+This milestone does **not** claim:
+
+- paragraph semantic AST completeness;
+- semantic equivalence of repeated body occurrences;
+- rule-interaction graph completeness;
+- Codex/app equivalence;
+- any increase in whole-faction normative coverage.
+
+Strict faction counters remain zero.
+
+Active milestone:
+
+`CORE_RULE_PARAGRAPH_ATOMIZATION_V1`
+
+Next assign stable identities to the **310** page-local paragraph candidates, retain parent rule/occurrence provenance and hashes, and keep semantic parsing as a later layer.
+
