@@ -193,11 +193,12 @@
     {
       "pool_id": "rubric_marines",
       "name": "Rubric Marines",
-      "physical_bodies": 15,
+      "physical_bodies": 20,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "USER_CONFIRMED_EXACT_COUNT_20",
+        "MAGNETIZED_TWO_WEAPON_CONFIGURATIONS",
+        "SOURCE_EXPORT_UNDERCOUNT",
+        "BUILD_STATE_NOT_FULLY_RECONCILED"
       ],
       "roles": [
         {
@@ -210,20 +211,25 @@
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+        "User directly confirmed exactly 20 physical Rubric Marines.",
+        "All twenty are magnetized to switch between two weapon loadout configurations.",
+        "The old New Recruit export represented only 15 bodies and is superseded for physical count.",
+        "Exact names/composition of the two magnetized weapon configurations are intentionally not inferred here; record them when physically reconfirmed."
       ],
       "body_variants": [
         {
-          "name": "Aspiring Sorcerer",
-          "physical_bodies": 3,
-          "evidence": "SOURCE_MODEL_SELECTION"
-        },
-        {
-          "name": "Rubric Marine w/ inferno boltgun",
-          "physical_bodies": 12,
-          "evidence": "SOURCE_MODEL_SELECTION"
+          "name": "Rubric Marines — shared magnetized body pool",
+          "physical_bodies": 20,
+          "evidence": "DIRECT_USER_CONFIRMATION"
         }
-      ]
+      ],
+      "physical_configuration": {
+        "total": 20,
+        "magnetized": true,
+        "weapon_configuration_count": 2,
+        "exact_weapon_configuration_names": "NOT_RESTATED_BY_USER_IN_THIS_CHECKPOINT",
+        "simultaneous_body_count": 20
+      }
     },
     {
       "pool_id": "scarab_occult_terminators",
@@ -399,10 +405,20 @@
     "shared_chaos_spawn_available": 10,
     "tzeentch_styled_shared_spawn": 2,
     "external_tzeentch_daemon_bodies_directly_available": 110,
-    "terminator_sorcerer_bodies_cross_role_candidate_for_csm": 2
+    "terminator_sorcerer_bodies_cross_role_candidate_for_csm": 2,
+    "normalized_physical_bodies": 114,
+    "rubric_marines_exact": 20,
+    "rubric_marines_source_export_count": 15,
+    "rubric_marines_source_export_undercount": 5,
+    "rubric_marines_magnetized_two_weapon_configurations": true
   },
   "constraints": [],
   "open_questions": [
+    {
+      "id": "TS_RUBRIC_WEAPON_CONFIG_NAMES",
+      "question": "Which exact two weapon configurations are represented by the magnetized Rubric Marine parts? Count is already closed at 20; this is loadout-detail only.",
+      "state": "OPTIONAL_DETAIL_PENDING"
+    },
     {
       "id": "TS_BUILD_STATE",
       "question": "Which models are built, on sprue, magnetized, converted or proxyable?",
@@ -419,7 +435,8 @@
     "Raw New Recruit exports are not committed because they contain extensive copyrighted rules text; SHA-256 hashes and normalized physical facts are retained instead.",
     "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED.",
     "Two Tzeentch-styled Chaos Spawn exist in the cross-faction shared Chaos pool; they are not duplicated into the Thousand Sons physical-body count.",
-    "Cross-faction audit records 110 owned Tzeentch daemon bodies directly represented in the current Thousand Sons faction pack and two Terminator Sorcerers as high-confidence physical candidates for the CSM datasheet of the same role."
+    "Cross-faction audit records 110 owned Tzeentch daemon bodies directly represented in the current Thousand Sons faction pack and two Terminator Sorcerers as high-confidence physical candidates for the CSM datasheet of the same role.",
+    "Rubric Marine physical count corrected from source-projected 15 to user-confirmed 20; normalized Thousand Sons body total is now 114."
   ],
   "provenance": {
     "source_files": [
@@ -437,6 +454,17 @@
         "extracted_scope": "all physical model/unit selections",
         "source_reported_points": 2995,
         "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
+      }
+    ],
+    "user_clarifications": [
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_RUBRIC_RECONCILIATION",
+        "facts": [
+          "Exactly 20 Rubric Marines are physically owned.",
+          "All 20 are magnetized for two weapon loadout configurations.",
+          "The previous 15-body New Recruit projection undercounted physical ownership by 5."
+        ]
       }
     ]
   },
@@ -496,7 +524,7 @@
       {
         "unit": "Rubric Marines",
         "relation": "CSM can import this Thousand Sons unit via Cult of the Dark Gods",
-        "owned_bodies": 15
+        "owned_bodies": 20
       },
       {
         "unit": "Sorcerer In Terminator Armour",

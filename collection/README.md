@@ -27,7 +27,7 @@ Historical roster point values may be retained only as explicitly dated snapshot
 ## Canonical collection domains
 
 - `adeptus_custodes/` — migrated from the 2026-07-11 v0.5 provisional inventory.
-- `thousand_sons/` — user-supplied New Recruit physical collection export, normalized 2026-09-30.
+- `thousand_sons/` — **114 normalized physical bodies**: historical New Recruit export 109, with Rubric Marines directly corrected from 15 to 20 on 2026-09-30.
 - `world_eaters/` — World Eaters portion of the mixed World Eaters/Khorne export, normalized 2026-09-30.
 - `chaos_shared/` — canonical cross-faction Chaos body pools. Currently contains the single global 10-model Chaos Spawn pool to prevent CSM/World Eaters/Thousand Sons double-counting.
 - `chaos_daemons/` — Khorne, Tzeentch, Slaanesh, Nurgle and Undivided daemon physical collection pools, normalized/reconciled incrementally on 2026-09-30.
@@ -54,6 +54,6 @@ Current machine-readable and human-readable maps:
 
 They separate unique physical ownership from current 11E cross-faction use.
 
-Current normalized known Chaos-domain sum: **662 unique bodies/models** across CSM, Thousand Sons, World Eaters, Chaos Daemons and the shared Chaos pool. This is not a claim that all 662 have equal verification depth.
+Current normalized known Chaos-domain sum: **667 unique bodies/models** across CSM, Thousand Sons, World Eaters, Chaos Daemons and the shared Chaos pool. This is not a claim that all 662 have equal verification depth.
 
 Important current bridges include CSM Cult of the Dark Gods, Daemonic Pact, Chaos Daemons Shadow Legion, god-legion direct daemon datasheets and the all-CHAOS Chaos Knights ally rule.

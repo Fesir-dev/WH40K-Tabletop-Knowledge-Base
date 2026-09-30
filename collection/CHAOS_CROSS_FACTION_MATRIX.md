@@ -13,17 +13,17 @@ A shared rules role never creates another physical miniature.
 
 Current normalized cross-domain known total:
 
-**662 unique physical bodies/models**
+**667 unique physical bodies/models**
 
 Breakdown:
 
 - Chaos Space Marines — **155 confirmed unique bodies**
-- Thousand Sons — **109 source-declared bodies**
+- Thousand Sons — **114 normalized bodies** (109 in the historical source export; Rubrics directly corrected from 15 to 20)
 - World Eaters — **48 unique bodies**, excluding the shared Spawn pool
 - Chaos Daemons — **340 normalized bodies**
 - shared Chaos pool — **10 Chaos Spawn**
 
-If the remembered separate ten-model Legionaries box is physically reconfirmed, the CSM total becomes 165 and the global Chaos sum becomes **672**.
+If the remembered separate ten-model Legionaries box is physically reconfirmed, the CSM total becomes 165 and the global Chaos sum becomes **677**.
 
 Verification depth is not uniform: Chaos Daemons/Khorne and several CSM layers have direct physical reconciliation, while Thousand Sons and parts of World Eaters still rely on source-export evidence.
 
@@ -41,7 +41,7 @@ At Strike Force size, CSM can include up to **500 pts combined** of:
 Current collection coverage:
 
 - Khorne Berzerkers — **20 owned** in World Eaters
-- Rubric Marines — **15 owned** in Thousand Sons
+- Rubric Marines — **20 owned** in Thousand Sons
 - Plague Marines — none recorded
 - Noise Marines — none recorded
 
@@ -222,7 +222,7 @@ The physical network is better represented as:
               |   \------ Chaos Spawn (10)
               |
               +-- Berzerkers (20 from WE)
-              +-- Rubrics (15 from TS)
+              +-- Rubrics (20 from TS)
               +-- TS Terminator Sorcerers (2 physical role candidates)
 
 future:

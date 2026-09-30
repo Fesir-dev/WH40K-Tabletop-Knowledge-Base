@@ -15,9 +15,10 @@
     "world_eaters_unique_bodies_excluding_shared_spawn": 48,
     "chaos_daemons_normalized_bodies": 340,
     "chaos_shared_spawn_bodies": 10,
-    "current_normalized_cross_domain_unique_sum": 662,
-    "probable_sum_if_csm_legionaries_box_reconfirmed": 672,
-    "caveat": "Verification depth differs by domain: Chaos Daemons/Khorne and several CSM layers are directly reconciled, while Thousand Sons and parts of World Eaters remain source-export-derived."
+    "current_normalized_cross_domain_unique_sum": 667,
+    "probable_sum_if_csm_legionaries_box_reconfirmed": 677,
+    "caveat": "Verification depth differs by domain: Chaos Daemons/Khorne and several CSM layers are directly reconciled, while Thousand Sons and parts of World Eaters remain source-export-derived.",
+    "thousand_sons_normalized_bodies": 114
   },
   "formal_rules_bridges": [
     {
@@ -33,7 +34,7 @@
       ],
       "owned_now": {
         "Khorne Berzerkers": 20,
-        "Rubric Marines": 15,
+        "Rubric Marines": 20,
         "Plague Marines": 0,
         "Noise Marines": 0
       }
