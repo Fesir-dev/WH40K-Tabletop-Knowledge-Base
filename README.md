@@ -77,7 +77,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Build copyright-safe official public semantic fingerprints for the 11E Core Rules plus all 28 verified public Faction Packs, with daily reproducibility checks and no full Codex/app equivalence claim.
 - [x] Audit official-public ↔ current-mirror semantic overlap and normalize 4,070 exact source/faction-scoped public-official semantic units without generalizing to Codex/app-only text.
 - [x] Expand structured public-official normalization: Core Rules families 01–24 / 141 detected rule references, fail-closed review of 1,566 exact-but-unscoped units, and classification of all 7,936 non-exact public-overlap units without assuming semantic drift.
-- [ ] Atomize Core Rules rule references into a stable per-rule structural index while keeping paragraph prose external and app/Codex-only semantics pending.
+- [x] Atomize all 141 numbered Core Rules references into stable per-rule identities with verified page/hash provenance, zero heading-recovery gaps and no paragraph prose vendored.
+- [ ] Extract copyright-safe paragraph/rule-body boundaries for the 141 Core rule atoms before any paragraph-level AST or interaction graph.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary
