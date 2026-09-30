@@ -400,10 +400,10 @@ try:
 
     gaps = {x.get("id"): x for x in audit.get("gaps", [])}
     expected_states = {
-        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING",
-        "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_EXTRACTION_PENDING",
+        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING",
+        "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING",
         "FULL_FACTION_CODEX_APP_SEMANTICS": "BLOCKED_OR_CONDITIONAL_ON_AUTHORIZED_CODEX_APP_EVIDENCE",
-        "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PARTIALLY_CLOSABLE_PUBLIC_OVERLAP_ONLY",
+        "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PUBLIC_EXACT_OVERLAP_SCOPED_RESIDUALS_CLASSIFIED_FULL_EQUIVALENCE_PENDING",
         "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK": "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE",
         "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING": "CLOSABLE_WITH_METADATA_AND_CONTENT_REVIEW",
         "NORMATIVE_COVERAGE_ACCOUNTING": "INTENTIONAL_ZERO_NOT_MIRROR_DATA_LOSS",
@@ -421,7 +421,7 @@ try:
     if public_rules.get("policy", {}).get("no_full_faction_equivalence_from_faction_packs_alone") is not True:
         errors.append("Public-rules discovery lost faction-pack scope boundary")
 
-    if audit.get("conclusion", {}).get("recommended_next_milestone") != "OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT":
+    if audit.get("conclusion", {}).get("recommended_next_milestone") != "CORE_RULE_REFERENCE_ATOMIZATION_V1":
         errors.append("Normative gap audit recommended next milestone drifted")
     if audit.get("official_public_surface", {}).get("official_public_semantic_fingerprints") != "PASS":
         errors.append("Normative gap audit must record official public fingerprint evidence as PASS")
@@ -521,10 +521,10 @@ try:
         errors.append("Current rules Core Rules binary SHA pointer drifted")
 
     core_current = current_rules.get("source_currentness", {}).get("core_rules_content", {})
-    if core_current.get("state") != "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED":
-        errors.append("Core Rules currentness must distinguish fingerprinted evidence from structured normalization")
-    if core_current.get("normative_structured_normalization") != "PENDING":
-        errors.append("Core Rules structured normative normalization was promoted prematurely")
+    if core_current.get("state") != "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1":
+        errors.append("Core Rules currentness must record section structure v1 after preserving fingerprint evidence")
+    if core_current.get("normative_structured_normalization") != "SECTION_LEVEL_COMPLETE_PARAGRAPH_AST_PENDING":
+        errors.append("Core Rules structured normalization boundary must remain section-level complete / paragraph AST pending")
 
     supplements = current_rules.get("source_currentness", {}).get("faction_rules_content", {}).get("official_public_supplements", {})
     if supplements.get("state") != "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED":
@@ -551,7 +551,7 @@ try:
     profiles = gate.get("scope_profiles", {})
     if profiles.get("official_public_semantic_fingerprints", {}).get("content_state") != "PASS":
         errors.append("Currentness gate official public fingerprint profile must PASS")
-    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SEMANTIC_FINGERPRINTED_NOT_STRUCTURED":
+    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1":
         errors.append("Currentness gate Core Rules state drifted")
     if profiles.get("faction_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING":
         errors.append("Currentness gate faction-rules public supplement state drifted")
@@ -854,8 +854,8 @@ try:
             errors.append("Wave B conflict snapshot count differs from reconciliation report")
 
     global_cov = cov.get("global", {})
-    if cov.get("status") != "OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE":
-        errors.append("coverage/current.json must record OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE after overlap closure")
+    if cov.get("status") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_V1_COMPLETE":
+        errors.append("coverage/current.json must record structured normalization expansion v1 after overlap closure")
     if global_cov.get("wave_b_structural_roster_identities_complete") != counts.get("structural_complete"):
         errors.append("Coverage structural-complete count differs from current roster-view index")
     if global_cov.get("wave_b_structural_roster_identities_unavailable") != counts.get("unavailable"):
@@ -1089,8 +1089,8 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION":
-        errors.append("Current milestone must advance to OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION")
+    if current_rules.get("next_milestone") != "CORE_RULE_REFERENCE_ATOMIZATION_V1":
+        errors.append("Current milestone must advance to CORE_RULE_REFERENCE_ATOMIZATION_V1")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release transition readiness v1 as operational")
@@ -1291,8 +1291,8 @@ try:
         errors.append("Currentness gate official-public overlap unit count drifted")
 
     gcov = overlap_cov.get("global", {})
-    if overlap_cov.get("status") != "OFFICIAL_PUBLIC_OVERLAP_V1_COMPLETE":
-        errors.append("Coverage status did not advance to official-public overlap v1")
+    if overlap_cov.get("status") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_V1_COMPLETE":
+        errors.append("Coverage status did not advance through structured normalization expansion v1")
     if gcov.get("official_public_overlap_promotable_scoped_units") != 4070:
         errors.append("Coverage official-public overlap promoted count drifted")
     if gcov.get("current_normalized_factions") != 0:
