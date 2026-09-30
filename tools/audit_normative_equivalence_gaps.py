@@ -63,6 +63,12 @@ def build_audit(root:Path=ROOT)->dict:
     discovery=load(root/"sources/discoveries/gw_public_rules_surface_2026-09-29.json")
     official_fp_path=root/"reports"/"OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
     official_fp=load(official_fp_path) if official_fp_path.exists() else None
+    core_structure_path=root/"reports"/"CORE_RULES_STRUCTURE_CURRENT.json"
+    core_structure=load(core_structure_path) if core_structure_path.exists() else None
+    residual_path=root/"reports"/"OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json"
+    residual=load(residual_path) if residual_path.exists() else None
+    overlap_summary_path=root/"reports"/"OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json"
+    overlap_summary=load(overlap_summary_path) if overlap_summary_path.exists() else None
 
     factions=catalog["factions"]
     cov_rows=coverage["factions"]
@@ -151,6 +157,27 @@ def build_audit(root:Path=ROOT)->dict:
         (x for x in (official_fp or {}).get("documents",[]) if x.get("document_type")=="CORE_RULES"),
         None,
     )
+    core_structure_pass=bool(
+        core_structure
+        and core_structure.get("status")=="PASS"
+        and core_structure.get("summary",{}).get("rule_reference_family_ids")==[f"{i:02d}" for i in range(1,25)]
+        and core_structure.get("summary",{}).get("rule_reference_count")==141
+        and core_structure.get("authority_boundary",{}).get("section_level_structure_complete_for_public_pdf") is True
+        and core_structure.get("authority_boundary",{}).get("paragraph_level_rules_ast_complete") is False
+    )
+    residual_pass=bool(
+        residual
+        and residual.get("status")=="PASS"
+        and residual.get("unscoped_exact",{}).get("total")==1566
+        and residual.get("no_exact_public_overlap",{}).get("total")==7936
+        and residual.get("summary",{}).get("promoted_units")==0
+        and residual.get("summary",{}).get("semantic_conflicts_created")==0
+    )
+    overlap_pass=bool(
+        overlap_summary
+        and overlap_summary.get("status")=="PASS"
+        and overlap_summary.get("summary",{}).get("promotable_scoped_units")==4070
+    )
 
     closed_layers=[
         {
@@ -194,7 +221,7 @@ def build_audit(root:Path=ROOT)->dict:
     gaps=[
         {
             "id":"OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-            "state":"FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING" if fp_pass else "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE",
+            "state":"SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING" if core_structure_pass else ("FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_NORMALIZATION_PENDING" if fp_pass else "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCE"),
             "blocking_scope":["core_rules_content","system_normative_semantics"],
             "evidence":{
                 "repository_state":current["source_currentness"]["core_rules_content"]["state"],
@@ -206,12 +233,17 @@ def build_audit(root:Path=ROOT)->dict:
                 "official_fingerprint_state":"PASS" if fp_pass else "PENDING",
                 "core_rules_binary_sha256":fp_core.get("binary_sha256") if fp_core else None,
                 "core_rules_semantic_sha256":fp_core.get("semantic_sha256") if fp_core else None,
+                "section_structure_report":"reports/CORE_RULES_STRUCTURE_CURRENT.json" if core_structure_pass else None,
+                "section_structure_state":"PASS_RULE_REFERENCE_FAMILIES_01_24" if core_structure_pass else "PENDING",
+                "rule_reference_families":core_structure.get("summary",{}).get("rule_reference_families") if core_structure_pass else 0,
+                "rule_reference_count":core_structure.get("summary",{}).get("rule_reference_count") if core_structure_pass else 0,
+                "paragraph_level_rules_ast_complete":core_structure.get("authority_boundary",{}).get("paragraph_level_rules_ast_complete") if core_structure_pass else False,
             },
-            "next_action":"Structurally normalize scoped public Core Rules semantics and compare public official overlap without vendoring long rules prose." if fp_pass else "Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction.",
+            "next_action":"Atomize the verified Core Rules numbered references into stable per-rule structural objects without vendoring paragraph prose." if core_structure_pass else ("Structurally normalize scoped public Core Rules semantics and compare public official overlap without vendoring long rules prose." if fp_pass else "Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction."),
         },
         {
             "id":"PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
-            "state":"FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_EXTRACTION_PENDING" if fp_pass else "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCES",
+            "state":"EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING" if (fp_pass and overlap_pass and residual_pass) else ("FINGERPRINT_EVIDENCE_CLOSED_STRUCTURED_EXTRACTION_PENDING" if fp_pass else "CLOSABLE_WITH_CURRENT_PUBLIC_SOURCES"),
             "blocking_scope":["public_faction_supplements","faq_errata","public_extra_datasheets","public_extra_detachments"],
             "evidence":{
                 "verified_public_faction_pack_pdfs":off.get("verified_pdf_assets"),
@@ -221,8 +253,14 @@ def build_audit(root:Path=ROOT)->dict:
                 "official_fingerprint_state":"PASS" if fp_pass else "PENDING",
                 "official_fingerprint_documents":official_fp.get("summary",{}).get("documents") if fp_pass else 0,
                 "official_fingerprint_pages":official_fp.get("summary",{}).get("pages") if fp_pass else 0,
+                "exact_public_overlap_units":overlap_summary.get("summary",{}).get("exact_public_overlap_units") if overlap_pass else 0,
+                "promotable_scoped_units":overlap_summary.get("summary",{}).get("promotable_scoped_units") if overlap_pass else 0,
+                "unscoped_exact_units":residual.get("unscoped_exact",{}).get("total") if residual_pass else 0,
+                "no_exact_public_overlap_units":residual.get("no_exact_public_overlap",{}).get("total") if residual_pass else 0,
+                "residual_promoted_units":residual.get("summary",{}).get("promoted_units") if residual_pass else None,
+                "residual_semantic_conflicts_created":residual.get("summary",{}).get("semantic_conflicts_created") if residual_pass else None,
             },
-            "next_action":"Structurally extract public Faction Pack supplement semantics and compare only public official overlap against the current mirror." if fp_pass else "Fingerprint and structurally extract the public official faction-pack supplement/FAQ semantics without treating them as complete Codex replacements.",
+            "next_action":"Deepen structured extraction only where public official scope supports it; keep residual and Codex/app-only semantics non-promotable without stronger official provenance." if (overlap_pass and residual_pass) else ("Structurally extract public Faction Pack supplement semantics and compare only public official overlap against the current mirror." if fp_pass else "Fingerprint and structurally extract the public official faction-pack supplement/FAQ semantics without treating them as complete Codex replacements."),
         },
         {
             "id":"FULL_FACTION_CODEX_APP_SEMANTICS",
@@ -240,7 +278,7 @@ def build_audit(root:Path=ROOT)->dict:
         },
         {
             "id":"MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE",
-            "state":"PARTIALLY_CLOSABLE_PUBLIC_OVERLAP_ONLY",
+            "state":"PUBLIC_EXACT_OVERLAP_SCOPED_RESIDUALS_CLASSIFIED_FULL_EQUIVALENCE_PENDING" if (overlap_pass and residual_pass) else "PARTIALLY_CLOSABLE_PUBLIC_OVERLAP_ONLY",
             "blocking_scope":["normative_semantic_equivalence","full_normative_faction"],
             "evidence":{
                 "secondary_mirror_fingerprints_expected":sem_expected,
@@ -252,8 +290,12 @@ def build_audit(root:Path=ROOT)->dict:
                 "public_official_faction_packs":len(packs),
                 "official_public_fingerprint_state":"PASS" if fp_pass else "PENDING",
                 "official_public_fingerprint_report":"reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json" if fp_pass else None,
+                "exact_public_overlap_units":overlap_summary.get("summary",{}).get("exact_public_overlap_units") if overlap_pass else 0,
+                "promotable_scoped_units":overlap_summary.get("summary",{}).get("promotable_scoped_units") if overlap_pass else 0,
+                "unscoped_exact_units":residual.get("unscoped_exact",{}).get("total") if residual_pass else 0,
+                "no_exact_public_overlap_units":residual.get("no_exact_public_overlap",{}).get("total") if residual_pass else 0,
             },
-            "next_action":"Compare only overlapping public official Core/Faction Pack semantics against the mirror. Never generalize overlap matches into full-faction equivalence where Codex/app-only text is absent.",
+            "next_action":"Use only the 4,070 exact scoped public-overlap units as structured official evidence; residuals remain classified but non-promotable, and full Codex/app equivalence remains pending." if (overlap_pass and residual_pass) else "Compare only overlapping public official Core/Faction Pack semantics against the mirror. Never generalize overlap matches into full-faction equivalence where Codex/app-only text is absent.",
         },
         {
             "id":"GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
@@ -338,6 +380,11 @@ def build_audit(root:Path=ROOT)->dict:
             "official_public_fingerprint_report":"reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json" if fp_pass else None,
             "official_public_documents_fingerprinted":official_fp.get("summary",{}).get("documents",0) if fp_pass else 0,
             "core_rules_semantic_fingerprinted":bool(fp_core) and fp_pass,
+            "core_rules_section_structure":"PASS_RULE_REFERENCE_FAMILIES_01_24" if core_structure_pass else "PENDING",
+            "core_rules_rule_reference_families":24 if core_structure_pass else 0,
+            "core_rules_rule_reference_count":141 if core_structure_pass else 0,
+            "official_public_exact_overlap":"PASS_EXACT_PUBLIC_OVERLAP_V1" if overlap_pass else "PENDING",
+            "official_public_residual_classification":"PASS_FAIL_CLOSED_CLASSIFICATION_V1" if residual_pass else "PENDING",
         },
         "roster_source_mapping":{
             "counts":dict(sorted(mapping_counts.items())),
@@ -349,17 +396,17 @@ def build_audit(root:Path=ROOT)->dict:
         "conclusion":{
             "why_current_normalized_factions_is_zero":"The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
             "publicly_closable_now":[
-                "structured public Core Rules normalization",
-                "structured public Faction Pack supplement extraction",
-                "public-overlap portion of MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE",
+                "Core Rules per-reference structural atomization",
+                "deeper public Faction Pack structured extraction inside proven public scope",
+                "review of edition-11 residual provenance without automatic promotion",
                 "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING",
             ],
             "must_remain_pending_without_new_authorized_evidence":[
                 "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
                 "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS",
             ],
-            "recommended_next_milestone":"OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT" if fp_pass else "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE",
-            "expected_effect":"Fingerprint evidence is closed for the public Core Rules and 28 Faction Packs. Next compare only public official overlap against the current mirror and begin structured public-official normalization; do not promote full-faction normalization while Codex/app-only semantics remain unavailable." if fp_pass else "Close Core Rules plus public faction supplement/FAQ official semantics and establish official-vs-mirror overlap fingerprints. This should improve normative scoped coverage but must not automatically promote full-faction normalization.",
+            "recommended_next_milestone":"CORE_RULE_REFERENCE_ATOMIZATION_V1" if (core_structure_pass and overlap_pass and residual_pass) else ("OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT" if fp_pass else "OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_PIPELINE"),
+            "expected_effect":"Top-level Core Rules structure is closed at families 01-24, 4,070 exact scoped public-overlap units are structured, and all 1,566 unscoped plus 7,936 no-exact residuals are fail-closed classified. Next atomize Core rule references without changing whole-faction normative coverage; app/Codex-only semantics remain pending." if (core_structure_pass and overlap_pass and residual_pass) else ("Fingerprint evidence is closed for the public Core Rules and 28 Faction Packs. Next compare only public official overlap against the current mirror and begin structured public-official normalization; do not promote full-faction normalization while Codex/app-only semantics remain unavailable." if fp_pass else "Close Core Rules plus public faction supplement/FAQ official semantics and establish official-vs-mirror overlap fingerprints. This should improve normative scoped coverage but must not automatically promote full-faction normalization."),
         },
     }
 
