@@ -1,5 +1,5 @@
 {
-  "schema_version": "4.1",
+  "schema_version": "4.2",
   "edition": "11e",
   "repository_checkpoint": "2026-09-30",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,14 +14,14 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
+      "state": "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1",
       "verified_at": "2026-09-30",
       "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "PARAGRAPH_SEMANTIC_REVIEW_COMPLETE_AST_READINESS_PENDING",
+      "normative_structured_normalization": "SEMANTIC_AST_READINESS_AUDIT_COMPLETE_DIRECT_MODAL_PILOT_PENDING",
       "public_overlap": {
         "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
         "exact_core_mirror_units": 21,
@@ -110,7 +110,8 @@
           "semantic_review_pending": true,
           "condition_effect_ast_complete": false,
           "rule_interaction_graph_complete": false,
-          "ast_readiness_pending": true
+          "ast_readiness_pending": false,
+          "ast_readiness_complete": true
         },
         "paragraph_semantic_review": {
           "state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
@@ -127,7 +128,40 @@
           "unclassified_weak_only": 2,
           "repeated_axis_profile_ready": 4,
           "repeated_multi_modal_review_required": 6,
-          "ast_readiness_complete": false,
+          "ast_readiness_complete": true,
+          "condition_effect_ast_complete": false,
+          "rule_interaction_graph_complete": false
+        },
+        "semantic_ast_readiness": {
+          "state": "PASS_1_DIRECT_MODAL_PILOT_READY",
+          "report": "reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json",
+          "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json",
+          "readiness_version": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
+          "rows": 310,
+          "unique_paragraph_keys": 310,
+          "pre_shape_blocker_counts": {
+            "BLOCKED_PARENT_REVIEW": 154,
+            "BLOCKED_NO_NORMATIVE_MODAL": 61,
+            "BLOCKED_MODAL_MULTIPLICITY": 27,
+            "BLOCKED_COMPLEX_SEMANTIC_AXES": 26,
+            "BLOCKED_MULTIPLE_CONDITION_CUES": 6,
+            "BLOCKED_REPEATED_VARIANT": 2
+          },
+          "source_shape_analysis_candidates": 34,
+          "source_shape_hashes_reproduced": 34,
+          "shape_state_counts": {
+            "BLOCKED_COMPLEX_DELIMITERS": 4,
+            "BLOCKED_PARENTHETICAL_SCOPE": 1,
+            "BLOCKED_SENTENCE_SHAPE": 28,
+            "PILOT_READY_DIRECT_MODAL": 1
+          },
+          "pilot_ready": 1,
+          "pilot_ready_direct_modal": 1,
+          "pilot_ready_conditional_modal": 0,
+          "shape_blocked": 33,
+          "repeated_variants_pilot_ready": 0,
+          "ast_readiness_audit_complete": true,
+          "ast_nodes_created": false,
           "condition_effect_ast_complete": false,
           "rule_interaction_graph_complete": false
         }
@@ -174,7 +208,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
+  "next_milestone": "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -677,7 +711,7 @@
     "rule_interaction_graph_complete": false,
     "current_normalized_factions_change": 0,
     "authority_rule": "Lexical/structural semantic roles are conservative evidence only. MIXED and UNCLASSIFIED are valid fail-closed states; paragraph prose, condition/effect AST, interaction graph, repeated-variant equivalence and Codex/app equivalence remain unclaimed.",
-    "ast_readiness_pending": true,
+    "ast_readiness_pending": false,
     "closure_report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSURE_2026-09-30.md",
     "pre_closure_validation": {
       "semantic_classification_workflow_run": 36706607549,
@@ -685,7 +719,8 @@
       "overlap_workflow_run": 36706342065,
       "result": "SPECIALIZED_AND_GAP_GATES_SUCCESS"
     },
-    "semantic_review_complete": true
+    "semantic_review_complete": true,
+    "ast_readiness_complete": true
   },
   "core_rule_paragraph_semantic_review": {
     "state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
@@ -726,7 +761,7 @@
       "MULTI_MODAL_REVIEW_REQUIRED": 6
     },
     "axis_profile_ready_is_ast_ready": false,
-    "ast_readiness_pending": true,
+    "ast_readiness_pending": false,
     "condition_effect_ast_complete": false,
     "rule_interaction_graph_complete": false,
     "current_normalized_factions_change": 0,
@@ -736,6 +771,57 @@
       "semantic_review_workflow_run": 36708075455,
       "normative_gap_audit_run": 36708075439,
       "repository_ci_run": 36708075044,
+      "result": "SUCCESS"
+    },
+    "ast_readiness_complete": true
+  },
+  "core_rule_semantic_ast_readiness": {
+    "state": "PASS_1_DIRECT_MODAL_PILOT_READY",
+    "as_of": "2026-09-30",
+    "report": "reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json",
+    "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json",
+    "model": "docs/CORE_RULE_SEMANTIC_AST_READINESS_MODEL.md",
+    "schema": "schemas/core_rule_semantic_ast_readiness.schema.json",
+    "tool": "tools/audit_core_rule_semantic_ast_readiness.py",
+    "workflow": ".github/workflows/core-rule-semantic-ast-readiness.yml",
+    "rows": 310,
+    "unique_paragraph_keys": 310,
+    "pre_shape_blocker_counts": {
+      "BLOCKED_PARENT_REVIEW": 154,
+      "BLOCKED_NO_NORMATIVE_MODAL": 61,
+      "BLOCKED_MODAL_MULTIPLICITY": 27,
+      "BLOCKED_COMPLEX_SEMANTIC_AXES": 26,
+      "BLOCKED_MULTIPLE_CONDITION_CUES": 6,
+      "BLOCKED_REPEATED_VARIANT": 2
+    },
+    "source_shape_analysis_candidates": 34,
+    "source_shape_hashes_reproduced": 34,
+    "shape_state_counts": {
+      "BLOCKED_COMPLEX_DELIMITERS": 4,
+      "BLOCKED_PARENTHETICAL_SCOPE": 1,
+      "BLOCKED_SENTENCE_SHAPE": 28,
+      "PILOT_READY_DIRECT_MODAL": 1
+    },
+    "pilot_ready": 1,
+    "pilot_ready_direct_modal": 1,
+    "pilot_ready_conditional_modal": 0,
+    "shape_blocked": 33,
+    "repeated_variants_pilot_ready": 0,
+    "pilot_rule_ref": "13.07",
+    "pilot_paragraph_key": "core-rule-13-07--p50--l1--para-p50-o1",
+    "pilot_modal_axis": "PERMISSION",
+    "pilot_condition_cues": 0,
+    "pilot_ready_is_not_ast_node": true,
+    "ast_nodes_created": false,
+    "condition_effect_ast_complete": false,
+    "rule_interaction_graph_complete": false,
+    "current_normalized_factions_change": 0,
+    "authority_rule": "AST readiness is a fail-closed source-shape gate only. Exactly one direct-modal paragraph qualifies for a future parser pilot; no AST node, interaction, repeated-variant equivalence, or Codex/app equivalence is created.",
+    "closure_report": "reports/CORE_RULE_SEMANTIC_AST_READINESS_CLOSURE_2026-09-30.md",
+    "pre_closure_validation": {
+      "repository_ci_run": 36712053452,
+      "normative_gap_audit_run": 36712053275,
+      "readiness_workflow_run": 36712053380,
       "result": "SUCCESS"
     }
   }

@@ -116,6 +116,11 @@
     "core_rule_paragraph_semantic_review_required": 154,
     "core_rule_paragraph_multi_modal_review_required": 42,
     "core_rule_paragraph_no_strong_signal_review_required": 112,
+    "core_rule_semantic_ast_readiness": "PASS_1_DIRECT_MODAL_PILOT_READY",
+    "core_rule_semantic_ast_source_shape_candidates": 34,
+    "core_rule_semantic_ast_shape_blocked": 33,
+    "core_rule_semantic_ast_pilot_ready": 1,
+    "core_rule_semantic_ast_nodes_created": 0,
     "official_public_exact_overlap": "PASS_EXACT_PUBLIC_OVERLAP_V1",
     "official_public_residual_classification": "PASS_FAIL_CLOSED_CLASSIFICATION_V1"
   },
@@ -635,22 +640,22 @@
   "gaps": [
     {
       "id": "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-      "state": "PARAGRAPH_SEMANTIC_REVIEW_CLOSED_AST_READINESS_PENDING",
+      "state": "SEMANTIC_AST_READINESS_CLOSED_DIRECT_MODAL_PILOT_PENDING",
       "blocking_scope": [
         "core_rules_content",
         "system_normative_semantics"
       ],
       "evidence": {
-        "repository_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
+        "repository_state": "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1",
         "currentness_profile": {
           "required_sources": [
             "GW_40K_DOWNLOADS"
           ],
-          "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
+          "content_state": "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1",
           "repository_dimension": null,
           "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
           "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-          "authority_boundary": "All 310 stable Core paragraph identities have been reviewed as orthogonal semantic profiles. 156 are axis-profile-ready without modal conflict; 42 remain multi-modal and 112 lack strong semantic signals. AST readiness, condition/effect parsing and interactions remain pending.",
+          "authority_boundary": "Core semantic AST-readiness audit is complete: 310 rows assessed, 34 verified source-shape candidates, 33 shape-blocked and exactly 1 direct-modal pilot candidate. No AST node has been created and all multi-modal/no-strong-signal/repeated-variant ambiguity remains fail-closed.",
           "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
           "rule_reference_families": 24,
           "rule_reference_count": 141,
@@ -706,6 +711,20 @@
             "unclassified_signal_free": 110,
             "unclassified_weak_only": 2,
             "ast_readiness_pending": true
+          },
+          "semantic_ast_readiness": {
+            "state": "PASS_1_DIRECT_MODAL_PILOT_READY",
+            "report": "reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json",
+            "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json",
+            "rows": 310,
+            "source_shape_analysis_candidates": 34,
+            "source_shape_hashes_reproduced": 34,
+            "pilot_ready": 1,
+            "pilot_ready_direct_modal": 1,
+            "pilot_ready_conditional_modal": 0,
+            "shape_blocked": 33,
+            "repeated_variants_pilot_ready": 0,
+            "ast_nodes_created": 0
           }
         },
         "official_public_source": {
@@ -798,9 +817,31 @@
         "paragraph_semantic_repeated_review_states": {
           "AXIS_PROFILE_READY": 4,
           "MULTI_MODAL_REVIEW_REQUIRED": 6
-        }
+        },
+        "semantic_ast_readiness_report": "reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json",
+        "semantic_ast_readiness_state": "PASS_1_DIRECT_MODAL_PILOT_READY",
+        "semantic_ast_readiness_pre_shape_blockers": {
+          "BLOCKED_PARENT_REVIEW": 154,
+          "BLOCKED_NO_NORMATIVE_MODAL": 61,
+          "BLOCKED_MODAL_MULTIPLICITY": 27,
+          "BLOCKED_COMPLEX_SEMANTIC_AXES": 26,
+          "BLOCKED_MULTIPLE_CONDITION_CUES": 6,
+          "BLOCKED_REPEATED_VARIANT": 2
+        },
+        "semantic_ast_source_shape_candidates": 34,
+        "semantic_ast_source_hashes_reproduced": 34,
+        "semantic_ast_shape_state_counts": {
+          "BLOCKED_COMPLEX_DELIMITERS": 4,
+          "BLOCKED_PARENTHETICAL_SCOPE": 1,
+          "BLOCKED_SENTENCE_SHAPE": 28,
+          "PILOT_READY_DIRECT_MODAL": 1
+        },
+        "semantic_ast_pilot_ready": 1,
+        "semantic_ast_pilot_ready_direct_modal": 1,
+        "semantic_ast_pilot_ready_conditional_modal": 0,
+        "semantic_ast_nodes_created": 0
       },
-      "next_action": "Audit AST readiness only inside the 156 AXIS_PROFILE_READY paragraphs. Keep all 42 MULTI_MODAL and 112 NO_STRONG_SIGNAL rows blocked, and do not infer AST readiness merely from axis-profile readiness."
+      "next_action": "Run a tightly scoped direct-modal AST parser pilot on the single readiness-approved paragraph (rule 13.07) and validate its structure manually/contractually before expanding the parser. Keep the other 309 paragraphs blocked."
     },
     {
       "id": "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
@@ -1109,7 +1150,7 @@
   "conclusion": {
     "why_current_normalized_factions_is_zero": "The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
     "publicly_closable_now": [
-      "Core Rules semantic AST readiness audit",
+      "Core Rules direct-modal AST pilot",
       "deeper public Faction Pack structured extraction inside proven public scope",
       "review of edition-11 residual provenance without automatic promotion",
       "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING"
@@ -1118,7 +1159,7 @@
       "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
       "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS"
     ],
-    "recommended_next_milestone": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
-    "expected_effect": "Semantic review decomposes the 310 paragraph classifications into orthogonal axes: 156 are AXIS_PROFILE_READY, while 42 MULTI_MODAL and 112 NO_STRONG_SIGNAL rows remain blocked. The next milestone audits AST readiness only within the 156-profile subset and must not assume they are all parseable; faction/app equivalence remains unchanged."
+    "recommended_next_milestone": "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1",
+    "expected_effect": "AST-readiness audit reduces the entire 310-paragraph Core surface to exactly one direct-modal parser pilot candidate (rule 13.07). Thirty-four ranges passed pre-shape gating, 33 were shape-blocked, no repeated variants are pilot-ready, and no AST node exists yet. Next validate a one-paragraph parser pilot before any expansion; faction/app equivalence remains unchanged."
   }
 }

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/core_rule_semantic_ast_readiness.schema.json",
+  "title": "Core Rules semantic AST readiness v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "snapshot_date",
+    "authority",
+    "readiness_version",
+    "parent_review",
+    "rows",
+    "summary",
+    "authority_boundary"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "status": {"enum": ["PASS", "FAIL", "SOURCE_DRIFT"]},
+    "snapshot_date": {"type": "string"},
+    "authority": {"const": "GAMES_WORKSHOP_OFFICIAL"},
+    "readiness_version": {"const": "CORE_RULE_SEMANTIC_AST_READINESS_V1"},
+    "parent_review": {"type": "object"},
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "paragraph_key",
+          "rule_ref",
+          "occurrence_key",
+          "semantic_sha256",
+          "parent_review_state",
+          "modal_axis",
+          "readiness_state",
+          "ast_node_created"
+        ],
+        "properties": {
+          "paragraph_key": {"type": "string"},
+          "rule_ref": {"type": "string"},
+          "occurrence_key": {"type": "string"},
+          "semantic_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "parent_review_state": {"type": "string"},
+          "modal_axis": {"type": "string"},
+          "readiness_state": {"type": "string"},
+          "ast_node_created": {"const": false}
+        },
+        "additionalProperties": true
+      }
+    },
+    "summary": {"type": "object"},
+    "authority_boundary": {"type": "object"}
+  },
+  "additionalProperties": true
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": "4.1",
+  "schema_version": "4.2",
   "as_of": "2026-09-30",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
@@ -182,11 +182,11 @@
       "required_sources": [
         "GW_40K_DOWNLOADS"
       ],
-      "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
+      "content_state": "OFFICIAL_PUBLIC_SEMANTIC_AST_READINESS_V1",
       "repository_dimension": null,
       "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-      "authority_boundary": "All 310 stable Core paragraph identities have been reviewed as orthogonal semantic profiles. 156 are axis-profile-ready without modal conflict; 42 remain multi-modal and 112 lack strong semantic signals. AST readiness, condition/effect parsing and interactions remain pending.",
+      "authority_boundary": "Core semantic AST-readiness audit is complete: 310 rows assessed, 34 verified source-shape candidates, 33 shape-blocked and exactly 1 direct-modal pilot candidate. No AST node has been created and all multi-modal/no-strong-signal/repeated-variant ambiguity remains fail-closed.",
       "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
       "rule_reference_families": 24,
       "rule_reference_count": 141,
@@ -242,6 +242,20 @@
         "unclassified_signal_free": 110,
         "unclassified_weak_only": 2,
         "ast_readiness_pending": true
+      },
+      "semantic_ast_readiness": {
+        "state": "PASS_1_DIRECT_MODAL_PILOT_READY",
+        "report": "reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json",
+        "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json",
+        "rows": 310,
+        "source_shape_analysis_candidates": 34,
+        "source_shape_hashes_reproduced": 34,
+        "pilot_ready": 1,
+        "pilot_ready_direct_modal": 1,
+        "pilot_ready_conditional_modal": 0,
+        "shape_blocked": 33,
+        "repeated_variants_pilot_ready": 0,
+        "ast_nodes_created": 0
       }
     },
     "faction_rules": {
@@ -468,6 +482,39 @@
         "MULTI_MODAL_REVIEW_REQUIRED": 6
       },
       "authority_boundary": "Multi-axis lexical/structural profile review only. AXIS_PROFILE_READY is not AST-ready; multi-modal and no-strong-signal rows remain unresolved; no condition/effect AST or interaction graph is claimed."
+    },
+    "core_rule_semantic_ast_readiness": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS"
+      ],
+      "content_state": "PASS_1_DIRECT_MODAL_PILOT_READY",
+      "repository_dimension": null,
+      "report": "reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json",
+      "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json",
+      "rows": 310,
+      "pre_shape_blocker_counts": {
+        "BLOCKED_PARENT_REVIEW": 154,
+        "BLOCKED_NO_NORMATIVE_MODAL": 61,
+        "BLOCKED_MODAL_MULTIPLICITY": 27,
+        "BLOCKED_COMPLEX_SEMANTIC_AXES": 26,
+        "BLOCKED_MULTIPLE_CONDITION_CUES": 6,
+        "BLOCKED_REPEATED_VARIANT": 2
+      },
+      "source_shape_analysis_candidates": 34,
+      "source_shape_hashes_reproduced": 34,
+      "shape_state_counts": {
+        "BLOCKED_COMPLEX_DELIMITERS": 4,
+        "BLOCKED_PARENTHETICAL_SCOPE": 1,
+        "BLOCKED_SENTENCE_SHAPE": 28,
+        "PILOT_READY_DIRECT_MODAL": 1
+      },
+      "pilot_ready": 1,
+      "pilot_rule_ref": "13.07",
+      "pilot_paragraph_key": "core-rule-13-07--p50--l1--para-p50-o1",
+      "pilot_modal_axis": "PERMISSION",
+      "repeated_variants_pilot_ready": 0,
+      "ast_nodes_created": 0,
+      "authority_boundary": "One direct-modal source range is eligible for a future parser pilot only. Readiness is not an AST, not normative semantic equivalence, and does not alter faction coverage."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."

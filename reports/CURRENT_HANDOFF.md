@@ -417,18 +417,54 @@ Validated pre-closure checkpoints:
 - normative/app gap audit `36708075439` — **SUCCESS**;
 - generic repository validation `36708075044` — **SUCCESS**.
 
+## Latest Core Rules milestone
+
+`CORE_RULE_SEMANTIC_AST_READINESS_V1` — **CLOSED 2026-09-30**
+
+- paragraph identities audited: **310 / 310**;
+- parent-review blocked: **154**;
+- no-modal blocked: **61**;
+- modal-multiplicity blocked: **27**;
+- complex-semantic-axis blocked: **26**;
+- multiple-condition-cue blocked: **6**;
+- repeated-variant blocked: **2**;
+- verified source-shape candidates: **34**;
+- candidate hashes reproduced: **34 / 34**;
+- sentence-shape blocked: **28**;
+- complex-delimiter blocked: **4**;
+- parenthetical-scope blocked: **1**;
+- pilot-ready direct-modal paragraphs: **1**;
+- pilot-ready conditional-modal paragraphs: **0**;
+- AST nodes created: **0**;
+- repeated variants pilot-ready: **0**;
+- `current_normalized_factions = 0` and `full_normative_semantic_factions = 0` unchanged.
+
+Only readiness-approved pilot identity:
+- rule `13.07`;
+- paragraph `core-rule-13-07--p50--l1--para-p50-o1`;
+- modal axis `PERMISSION`;
+- condition cues **0**.
+
+Closure:
+`reports/CORE_RULE_SEMANTIC_AST_READINESS_CLOSURE_2026-09-30.md`
+
+Validated pre-closure checkpoints:
+- repository validation `36712053452` — **SUCCESS**;
+- normative/app gap audit `36712053275` — **SUCCESS**;
+- semantic AST-readiness workflow `36712053380` — build/authority gates **SUCCESS**.
+
 ## Current active milestone
 
-`CORE_RULE_SEMANTIC_AST_READINESS_V1`
+`CORE_RULE_DIRECT_MODAL_AST_PILOT_V1`
 
 Next unresolved work:
 
-1. audit AST readiness only inside the **156 AXIS_PROFILE_READY** paragraph profiles;
-2. define explicit prerequisites for a safely parseable subset instead of treating all 156 as ready;
-3. keep all **42 MULTI_MODAL** profiles blocked;
-4. keep all **112 NO_STRONG_SIGNAL** profiles blocked;
-5. do not build condition/effect AST nodes until the readiness subset is validated;
-6. preserve repeated variants independently, keep paragraph prose external, and keep whole-faction normative counters unchanged.
+1. parse only `core-rule-13-07--p50--l1--para-p50-o1`;
+2. build the smallest copyright-safe direct-modal AST with source-range/hash provenance;
+3. validate subject/modal/action extraction against the verified official source range;
+4. create **no** interaction edges in the pilot;
+5. do **not** admit a second paragraph until the first pilot closes;
+6. keep repeated variants, Codex/app-only semantics and whole-faction normative counters fail-closed.
 
 ## Execution reliability rule
 
@@ -439,6 +475,6 @@ Next unresolved work:
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, Core paragraph-boundary extraction v1, Core paragraph atomization v1, Core paragraph semantic classification v1, or Core paragraph semantic review v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, Core paragraph-boundary extraction v1, Core paragraph atomization v1, Core paragraph semantic classification v1, Core paragraph semantic review v1, or Core semantic AST readiness v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.
