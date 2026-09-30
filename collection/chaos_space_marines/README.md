@@ -270,3 +270,74 @@ This remains deliberately conservative because it excludes:
 2. How many of that Kill Team's bodies are newer Chosen bodies beyond the three known Shadowspear bodies.
 3. Whether the observed autocannon model is one of the already-counted 20 Shadowspear bodies or a separate physical model.
 4. Continue with the next acquisition/build layer after the starter era.
+
+
+## Word Bearers Legionaries Kill Team — composition reconciled
+
+The user's Word Bearers Legionaries Kill Team is an **8-model physical roster/pool**, not an 8-model simultaneous battle selection.
+
+Current Legionary Kill Team selection uses:
+- 1 leader chosen from Aspiring Champion or Chosen;
+- 5 additional operatives from the specialist list.
+
+Therefore six models are fielded at once, while the user's eight physical models provide alternative choices.
+
+### Physical composition
+
+- **8 total models**
+- all on **32 mm bases**
+- **3** bodies originate from the Shadowspear Legionary pool
+- **5** bodies are built from newer Chosen bodies
+
+The three Shadowspear-derived bodies are already counted inside the twenty-body Shadowspear acquisition pool and are not counted again.
+
+The five newer Chosen-derived bodies are distinct additional physical bodies and increase the unique CSM lower bound.
+
+### Known operative-role mapping
+
+High-confidence current Kill Team mappings:
+
+- magnetized leader with plasma pistol + sword/fist -> **Aspiring Champion candidate**
+  - plasma pistol + fist/power weapon matches the current Aspiring Champion option structure;
+- heavy-bolter Shadowspear body -> **Heavy Gunner candidate**;
+- two bolter Shadowspear bodies -> **Warrior candidates**, unless later physical details establish an Icon Bearer or other conversion;
+- dagger-armed psyker-looking model -> **Balefire Acolyte candidate**.
+
+Still unresolved:
+
+- executioner-looking model:
+  - Butcher if it has the large double-handed chainaxe;
+  - Shrivetalon if it is built around paired/flensing blades;
+- staff-bearing model:
+  - staff alone does not uniquely correspond to a current Legionary specialist and requires direct visual/weapon audit;
+- fifth newer-Chosen-derived model:
+  - exact specialist identity not yet described.
+
+### Alternate 40K character-role candidates
+
+Some Kill Team bodies are visually strong enough to act as character representations in ordinary 40K.
+
+These are stored only as **candidate/proxy roles**, never as additional physical models:
+
+- magnetized leader -> Chaos Lord-like candidate;
+- executioner-looking operative -> Master of Executions-like candidate;
+- dagger psyker-looking operative -> Sorcerer-like candidate;
+- staff-bearing operative -> Sorcerer-like/custom character candidate.
+
+Current 40K base/loadout legality must be audited separately before promoting any of these from visual proxy to a current WYSIWYG role.
+
+### Autocannon body
+
+One autocannon-armed CSM model has been observed in a separate bag.
+
+Historical Shadowspear contents included an autocannon-equipped Chaos Space Marine, so this model is plausibly one of the already-counted twenty Shadowspear bodies. It is **not counted as an additional model** unless later evidence proves it is distinct.
+
+### Updated lower bound
+
+The five newer Chosen-derived Kill Team bodies add five unique models.
+
+Current unique CSM-domain lower bound:
+
+**156 physical bodies/models**.
+
+The collection remains explicitly incomplete.
