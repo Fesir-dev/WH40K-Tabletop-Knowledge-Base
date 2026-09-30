@@ -7,15 +7,183 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "374f50544f0274296ab53c2103766ae3945e8799",
+      "live": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
       "changed": true,
       "files": [
         {
+          "filename": "Aeldari - Aeldari Library.json",
+          "status": "modified",
+          "additions": 75,
+          "deletions": 31,
+          "changes": 106,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Chaos - Chaos Daemons Library.json",
+          "status": "modified",
+          "additions": 49,
+          "deletions": 26,
+          "changes": 75,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Chaos - Chaos Knights Library.json",
+          "status": "modified",
+          "additions": 19,
+          "deletions": 13,
+          "changes": 32,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Chaos - Chaos Space Marines.json",
+          "status": "modified",
+          "additions": 554,
+          "deletions": 362,
+          "changes": 916,
+          "classification": "ASTARTES"
+        },
+        {
+          "filename": "Chaos - Death Guard.json",
+          "status": "modified",
+          "additions": 219,
+          "deletions": 55,
+          "changes": 274,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Chaos - Emperor's Children.json",
+          "status": "modified",
+          "additions": 82,
+          "deletions": 66,
+          "changes": 148,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Chaos - Thousand Sons.json",
+          "status": "modified",
+          "additions": 80,
+          "deletions": 125,
+          "changes": 205,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Chaos - World Eaters.json",
+          "status": "modified",
+          "additions": 1180,
+          "deletions": 69,
+          "changes": 1249,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Genestealer Cults.json",
+          "status": "modified",
+          "additions": 31,
+          "deletions": 7,
+          "changes": 38,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Adepta Sororitas.json",
+          "status": "modified",
+          "additions": 19,
+          "deletions": 12,
+          "changes": 31,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Adeptus Custodes.json",
+          "status": "modified",
+          "additions": 66,
+          "deletions": 52,
+          "changes": 118,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Adeptus Mechanicus.json",
+          "status": "modified",
+          "additions": 42,
+          "deletions": 31,
+          "changes": 73,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Agents of the Imperium.json",
+          "status": "modified",
+          "additions": 79,
+          "deletions": 28,
+          "changes": 107,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Astra Militarum - Library.json",
+          "status": "modified",
+          "additions": 60,
+          "deletions": 25,
+          "changes": 85,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Grey Knights.json",
+          "status": "modified",
+          "additions": 243,
+          "deletions": 119,
+          "changes": 362,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Imperial Knights - Library.json",
+          "status": "modified",
+          "additions": 18,
+          "deletions": 10,
+          "changes": 28,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Leagues of Votann.json",
+          "status": "modified",
+          "additions": 37,
+          "deletions": 13,
+          "changes": 50,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Library - Tyranids.json",
+          "status": "modified",
+          "additions": 23,
+          "deletions": 13,
+          "changes": 36,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
           "filename": "Necrons.json",
           "status": "modified",
-          "additions": 490,
-          "deletions": 2,
-          "changes": 492,
+          "additions": 530,
+          "deletions": 24,
+          "changes": 554,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Orks.json",
+          "status": "modified",
+          "additions": 54,
+          "deletions": 55,
+          "changes": 109,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "T'au Empire.json",
+          "status": "modified",
+          "additions": 22,
+          "deletions": 6,
+          "changes": 28,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Tyranids.json",
+          "status": "modified",
+          "additions": 28,
+          "deletions": 8,
+          "changes": 36,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -32,9 +200,17 @@
       "source_id": "BSDATA_MFM_11E",
       "repository": "BSData/wh40k-11e-mfm",
       "pinned": "61a687e858c00a4ad205d564959c622a5605ef3d",
-      "live": "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390",
+      "live": "04eb6d35643a9157def15fce8c3911b7f00b2e6d",
       "changed": true,
       "files": [
+        {
+          "filename": ".agents/playbooks/diagnose-parse.md",
+          "status": "modified",
+          "additions": 7,
+          "deletions": 6,
+          "changes": 13,
+          "classification": "DOCUMENTATION"
+        },
         {
           "filename": ".github/workflows/ci.yml",
           "status": "modified",
@@ -52,12 +228,92 @@
           "classification": "CI"
         },
         {
+          "filename": "AGENTS.md",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 3,
+          "changes": 7,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 2,
+          "changes": 5,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "biome.json",
+          "status": "modified",
+          "additions": 7,
+          "deletions": 1,
+          "changes": 8,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "package.json",
+          "status": "modified",
+          "additions": 9,
+          "deletions": 8,
+          "changes": 17,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "pnpm-lock.yaml",
+          "status": "modified",
+          "additions": 371,
+          "deletions": 391,
+          "changes": 762,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "scripts/refresh-fixtures.ts",
+          "status": "modified",
+          "additions": 16,
+          "deletions": 5,
+          "changes": 21,
+          "classification": "OTHER"
+        },
+        {
           "filename": "specs/change-tracking.md",
           "status": "modified",
           "additions": 44,
           "deletions": 0,
           "changes": 44,
           "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "specs/data-model.md",
+          "status": "modified",
+          "additions": 15,
+          "deletions": 5,
+          "changes": 20,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "specs/scraping.md",
+          "status": "modified",
+          "additions": 19,
+          "deletions": 13,
+          "changes": 32,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "src/browser.ts",
+          "status": "modified",
+          "additions": 24,
+          "deletions": 17,
+          "changes": 41,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/cli.ts",
+          "status": "modified",
+          "additions": 19,
+          "deletions": 9,
+          "changes": 28,
+          "classification": "OTHER"
         },
         {
           "filename": "src/diff.ts",
@@ -68,11 +324,59 @@
           "classification": "OTHER"
         },
         {
+          "filename": "src/emit.ts",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 0,
+          "changes": 3,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/fetch.ts",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/parse.ts",
+          "status": "modified",
+          "additions": 77,
+          "deletions": 80,
+          "changes": 157,
+          "classification": "OTHER"
+        },
+        {
           "filename": "test/emit-diff.test.ts",
           "status": "modified",
-          "additions": 149,
+          "additions": 162,
           "deletions": 8,
-          "changes": 157,
+          "changes": 170,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/fixtures/necrons-notes.html",
+          "status": "removed",
+          "additions": 0,
+          "deletions": 231,
+          "changes": 231,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/fixtures/necrons-panels.html",
+          "status": "added",
+          "additions": 295,
+          "deletions": 0,
+          "changes": 295,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/parse.test.ts",
+          "status": "modified",
+          "additions": 63,
+          "deletions": 6,
+          "changes": 69,
           "classification": "OTHER"
         }
       ]
