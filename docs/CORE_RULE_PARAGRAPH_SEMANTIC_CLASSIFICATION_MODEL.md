@@ -82,9 +82,13 @@ Assigned only when permission signals exist and no obligation/prohibition signal
 
 Assigned when definition signals exist and no competing normative modal signal exists.
 
+### `MODIFICATION_OR_REPLACEMENT`
+
+Assigned when replacement/modifier signals exist without competing normative/definition/modal signals.
+
 ### `PROCEDURE_OR_SEQUENCE`
 
-Assigned when ordered-step or sequence signals exist without competing normative/definition signals.
+Assigned when ordered-step or sequence signals exist without competing normative/definition/modification signals.
 
 ### `CONDITION_OR_TRIGGER`
 
