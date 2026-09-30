@@ -68,6 +68,10 @@ jobs:
           assert r['document']['page_count']==88
           assert r['summary']['sections']>0
           assert r['summary']['pages_represented']==88
+          assert r['summary']['rule_reference_family_ids']==[f"{i:02d}" for i in range(1,25)], r['summary']['rule_reference_family_ids']
+          assert r['summary']['rule_reference_families_complete_01_24'] is True
+          assert r['authority_boundary']['section_level_structure_complete_for_public_pdf'] is True
+          assert r['authority_boundary']['hierarchical_structure_complete'] is False
           assert r['authority_boundary']['paragraph_level_rules_ast_complete'] is False
           assert r['authority_boundary']['current_normalized_factions_change']==0
           forbidden={'text','description','rules_text','page_text','prose'}
