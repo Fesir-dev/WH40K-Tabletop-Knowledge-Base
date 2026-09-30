@@ -91,3 +91,28 @@ rather than as permanently assigned squad 1 / squad 2 / squad 3.
 - later physical-loadout audit for the remaining Mechanicus pools.
 
 The canonical normalized inventory is `current.json`.
+
+## Sicarian physical reconciliation pass 1
+
+Direct physical inspection now confirms the Princeps pools and fixed weapon builds.
+
+### Sicarian Infiltrators
+
+- 3 × Princeps on bases;
+- 1 × additional Princeps body without a base, kept as a future spare;
+- all Infiltrator models are permanently built with **Taser goad & flechette blaster**;
+- no weapon interchangeability is available.
+
+The exact number of ordinary based Infiltrators still needs a direct count before the physical pool can be closed.
+
+### Sicarian Ruststalkers
+
+- 3 × Princeps on bases;
+- 1 × additional Princeps body without a base, kept as a future spare;
+- all ordinary Ruststalkers are permanently built with **Transonic blades**;
+- all Princeps are permanently built with **Transonic blades & chordclaw**;
+- no interchangeable loadout has been reported.
+
+The exact number of ordinary based Ruststalkers still needs a direct count before the physical pool can be closed.
+
+The two previously known extra Princeps bodies are therefore no longer only a minimum: they are now **exactly identified as one extra unbased Infiltrator Princeps body and one extra unbased Ruststalker Princeps body**.
