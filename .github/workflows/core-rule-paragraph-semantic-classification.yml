@@ -1,0 +1,135 @@
+name: Core rule paragraph semantic classification
+
+on:
+  push:
+    paths:
+      - "tools/classify_core_rule_paragraph_semantics.py"
+      - "tests/test_core_rule_paragraph_semantic_classification.py"
+      - "schemas/core_rule_paragraph_semantic_classification.schema.json"
+      - "docs/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - ".github/workflows/core-rule-paragraph-semantic-classification.yml"
+  pull_request:
+    paths:
+      - "tools/classify_core_rule_paragraph_semantics.py"
+      - "tests/test_core_rule_paragraph_semantic_classification.py"
+      - "schemas/core_rule_paragraph_semantic_classification.schema.json"
+      - "docs/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - ".github/workflows/core-rule-paragraph-semantic-classification.yml"
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  classify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned PDF extractor
+        run: python -m pip install --disable-pip-version-check pypdf==5.9.0
+
+      - name: Compile and run classifier contracts
+        run: |
+          python -m compileall -q tools/classify_core_rule_paragraph_semantics.py tests/test_core_rule_paragraph_semantic_classification.py
+          python -m unittest tests.test_core_rule_paragraph_semantic_classification -v
+
+      - uses: actions/cache@v4
+        with:
+          path: .cache/official-public-rules
+          key: official-public-rules-${{ hashFiles('sources/discoveries/gw_public_rules_surface_2026-09-29.json', 'sources/snapshots/gw_11e_official_assets_2026-09-29.json') }}
+
+      - name: Build verified paragraph semantic classifications
+        run: |
+          python tools/classify_core_rule_paragraph_semantics.py \
+            --as-of 2026-09-30 \
+            --output rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json \
+            --summary-output reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json
+
+      - name: Validate classifier authority boundary
+        run: |
+          python - <<'PY'
+          import json
+          p='rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json'
+          r=json.load(open(p,encoding='utf-8'))
+          assert r['status']=='PASS'
+          assert r['authority']=='GAMES_WORKSHOP_OFFICIAL'
+          assert r['classifier_version']=='CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1'
+          s=r['summary']
+          assert s['paragraphs']==310
+          assert s['unique_paragraph_keys']==310
+          assert sum(s['role_counts'].values())==310
+          assert sum(s['confidence_counts'].values())==310
+          assert s['repeated_variant_paragraphs']==10
+          assert s['paragraph_hashes_reproduced_from_verified_pdf']==310
+          assert r['source_verification']['binary_sha256_match'] is True
+          assert r['source_verification']['page_semantic_fingerprints_match']==88
+          assert r['source_verification']['document_semantic_sha256_match'] is True
+          b=r['authority_boundary']
+          assert b['semantic_role_classification_complete'] is True
+          assert b['classification_is_lexical_structural_not_full_semantic_ast'] is True
+          assert b['mixed_and_unclassified_are_valid_fail_closed_states'] is True
+          assert b['condition_effect_ast_complete'] is False
+          assert b['rule_interaction_graph_complete'] is False
+          assert b['current_normalized_factions_change']==0
+          rows=r['classifications']
+          assert len({x['paragraph_key'] for x in rows})==310
+          valid={
+              'PROHIBITION','OBLIGATION','PERMISSION','DEFINITION',
+              'MODIFICATION_OR_REPLACEMENT','PROCEDURE_OR_SEQUENCE',
+              'CONDITION_OR_TRIGGER','REFERENCE_OR_CROSS_REFERENCE',
+              'MIXED','UNCLASSIFIED'
+          }
+          assert {x['primary_role'] for x in rows} <= valid
+          forbidden={
+              'text','description','rules_text','official_text','mirror_text',
+              'page_text','prose','paragraph_text','body_text','matched_phrase'
+          }
+          def walk(v):
+              if isinstance(v,dict):
+                  for k,x in v.items():
+                      assert k not in forbidden, k
+                      walk(x)
+              elif isinstance(v,list):
+                  for x in v: walk(x)
+          walk(r)
+          print(json.dumps(s,indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-rule-paragraph-semantic-classification-${{ github.run_id }}
+          path: |
+            reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json
+            rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json
+          if-no-files-found: error
+
+      - name: Commit generated classifications on development branch
+        if: github.event_name == 'push' && github.ref_name != 'main' && github.actor != 'github-actions[bot]'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json)" ]; then
+            echo "Paragraph classifications already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json
+          git add rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json
+          git commit -m "Checkpoint generated Core paragraph semantics"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Assert scheduled committed reproducibility
+        if: github.event_name == 'schedule'
+        run: git diff --exit-code -- reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json
