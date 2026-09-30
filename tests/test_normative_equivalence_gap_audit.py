@@ -44,12 +44,19 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
     def test_public_core_rules_fingerprint_and_section_structure_are_closed(self):
         gaps={x["id"]:x for x in self.generated["gaps"]}
         core=gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]
-        self.assertEqual(core["state"],"SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING")
+        self.assertEqual(core["state"],"RULE_REFERENCE_ATOMIZATION_CLOSED_PARAGRAPH_BOUNDARIES_PENDING")
         self.assertEqual(core["evidence"]["official_fingerprint_state"],"PASS")
         self.assertEqual(core["evidence"]["section_structure_state"],"PASS_RULE_REFERENCE_FAMILIES_01_24")
         self.assertEqual(core["evidence"]["rule_reference_families"],24)
         self.assertEqual(core["evidence"]["rule_reference_count"],141)
         self.assertFalse(core["evidence"]["paragraph_level_rules_ast_complete"])
+        self.assertEqual(core["evidence"]["rule_atomization_state"],"PASS_141_RULE_ATOMS")
+        self.assertEqual(core["evidence"]["rule_atoms"],141)
+        self.assertEqual(core["evidence"]["rule_atom_classification_counts"],{
+            "REPEATED_IN_FAMILY_HEADING":5,
+            "UNIQUE_IN_FAMILY_HEADING":136,
+        })
+        self.assertEqual(core["evidence"]["atoms_with_cross_references"],40)
         self.assertEqual(len(core["evidence"]["core_rules_binary_sha256"]),64)
         self.assertEqual(len(core["evidence"]["core_rules_semantic_sha256"]),64)
         self.assertTrue(core["evidence"]["official_public_source"]["asset_url"].startswith("https://assets.warhammer-community.com/"))
@@ -91,8 +98,8 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
 
     def test_next_pipeline_does_not_promise_full_normalization(self):
         conclusion=self.generated["conclusion"]
-        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_REFERENCE_ATOMIZATION_V1")
-        self.assertIn("app/Codex-only semantics remain pending",conclusion["expected_effect"])
+        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1")
+        self.assertIn("full faction/app equivalence",conclusion["expected_effect"])
 
 
 if __name__=="__main__":
