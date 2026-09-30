@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "snapshot_date": "2026-09-30",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "pilot_version": "CORE_RULE_DIRECT_MODAL_AST_PILOT_V1",
+  "source": {
+    "document_id": "GW_11E_CORE_RULES_PUBLIC",
+    "source_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+    "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+    "page_count": 88,
+    "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+  },
+  "source_verification": {
+    "binary_sha256_match": true,
+    "page_semantic_fingerprints_match": 88,
+    "document_semantic_sha256_match": true
+  },
+  "parent_readiness": {
+    "path": "rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json",
+    "readiness_version": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
+    "pilot_ready": 1,
+    "pilot_paragraph_key": "core-rule-13-07--p50--l1--para-p50-o1",
+    "pilot_rule_ref": "13.07",
+    "readiness_state": "PILOT_READY_DIRECT_MODAL"
+  },
+  "nodes": [
+    {
+      "node_key": "core-ast-direct-modal--13-07--p50-o1",
+      "node_type": "DIRECT_MODAL_CLAUSE",
+      "rule_ref": "13.07",
+      "rule_key": "core-rule-13-07",
+      "family_id": "13",
+      "occurrence_key": "core-rule-13-07--p50--l1",
+      "paragraph_key": "core-rule-13-07--p50--l1--para-p50-o1",
+      "page": 50,
+      "paragraph_absolute_char_start": 29,
+      "paragraph_absolute_char_end": 143,
+      "paragraph_char_count": 114,
+      "paragraph_token_count": 17,
+      "paragraph_semantic_sha256": "07bde679c8d572db04fb606c75742d71fd86691b768bc2a6e4e1dc4b86f02f52",
+      "page_semantic_sha256": "ce8c5db2b4bfe0cb9fe1b77878f9e43b61081cedac50ab2c5d21492bea6e2ed4",
+      "subject_span": {
+        "relative_char_start": 0,
+        "relative_char_end": 7,
+        "absolute_char_start": 29,
+        "absolute_char_end": 36,
+        "char_count": 7,
+        "token_count": 1,
+        "semantic_sha256": "5dd6e0396c9df27d3535f32afe0049cfbe0108aefcd2b5bbd745ed5170f7aa6e",
+        "semantic_type": "OPAQUE_SUBJECT_SPAN"
+      },
+      "modal_operator": {
+        "operator": "PERMISSION",
+        "lexical_signal": "PERMISSION_CAN",
+        "relative_char_start": 8,
+        "relative_char_end": 11,
+        "absolute_char_start": 37,
+        "absolute_char_end": 40,
+        "char_count": 3,
+        "token_count": 1,
+        "semantic_sha256": "9f584196e7fe6de85d3898bc0b11c78b1d0a1d49530ee5eaf7c26c3939cf043d"
+      },
+      "action_predicate_span": {
+        "relative_char_start": 12,
+        "relative_char_end": 114,
+        "absolute_char_start": 41,
+        "absolute_char_end": 143,
+        "char_count": 102,
+        "token_count": 15,
+        "semantic_sha256": "c44de44e5b46ba2e801a5419bf8f918cbc34ac3cc7a8ba10b4ff73fbbefa1324",
+        "semantic_type": "OPAQUE_ACTION_PREDICATE_SPAN"
+      },
+      "condition": null,
+      "validation": {
+        "source_hash_reproduced": true,
+        "page_hash_reproduced": true,
+        "unique_modal_split": true,
+        "subject_nonempty": true,
+        "action_predicate_nonempty": true,
+        "spans_ordered_non_overlapping": true,
+        "token_partition_complete": true,
+        "parent_readiness_state": "PILOT_READY_DIRECT_MODAL",
+        "parent_condition_cues": 0,
+        "interaction_edges_created": 0
+      }
+    }
+  ],
+  "summary": {
+    "ast_nodes": 1,
+    "unique_node_keys": 1,
+    "paragraphs_parsed": 1,
+    "direct_modal_nodes": 1,
+    "permission_nodes": 1,
+    "conditional_nodes": 0,
+    "subject_spans": 1,
+    "action_predicate_spans": 1,
+    "source_hashes_reproduced": 1,
+    "token_partitions_complete": 1,
+    "interaction_edges_created": 0,
+    "additional_paragraphs_admitted": 0
+  },
+  "authority_boundary": {
+    "direct_modal_ast_pilot_complete": true,
+    "ast_scope": "ONE_PARAGRAPH_ONLY",
+    "paragraph_prose_committed": false,
+    "subject_semantic_type_resolved": false,
+    "action_semantic_type_resolved": false,
+    "target_object_resolved": false,
+    "quantifier_resolved": false,
+    "condition_effect_ast_complete": false,
+    "rule_interaction_graph_complete": false,
+    "repeated_variant_semantic_equivalence_claimed": false,
+    "app_codex_equivalence": "NOT_CLAIMED",
+    "full_faction_promotion": false,
+    "current_normalized_factions_change": 0
+  }
+}
