@@ -1,0 +1,117 @@
+name: Core rule semantic AST readiness
+
+on:
+  push:
+    paths:
+      - "tools/audit_core_rule_semantic_ast_readiness.py"
+      - "tests/test_core_rule_semantic_ast_readiness.py"
+      - "schemas/core_rule_semantic_ast_readiness.schema.json"
+      - "docs/CORE_RULE_SEMANTIC_AST_READINESS_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json"
+      - ".github/workflows/core-rule-semantic-ast-readiness.yml"
+  pull_request:
+    paths:
+      - "tools/audit_core_rule_semantic_ast_readiness.py"
+      - "tests/test_core_rule_semantic_ast_readiness.py"
+      - "schemas/core_rule_semantic_ast_readiness.schema.json"
+      - "docs/CORE_RULE_SEMANTIC_AST_READINESS_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json"
+      - "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json"
+      - ".github/workflows/core-rule-semantic-ast-readiness.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned PDF extractor
+        run: python -m pip install --disable-pip-version-check pypdf==5.9.0
+
+      - name: Compile and run readiness contracts
+        run: |
+          python -m compileall -q tools/audit_core_rule_semantic_ast_readiness.py tests/test_core_rule_semantic_ast_readiness.py
+          python -m unittest tests.test_core_rule_semantic_ast_readiness -v
+
+      - uses: actions/cache@v4
+        with:
+          path: .cache/official-public-rules
+          key: official-public-rules-${{ hashFiles('sources/discoveries/gw_public_rules_surface_2026-09-29.json', 'sources/snapshots/gw_11e_official_assets_2026-09-29.json') }}
+
+      - name: Build verified AST-readiness snapshot
+        run: |
+          python tools/audit_core_rule_semantic_ast_readiness.py \
+            --as-of 2026-09-30 \
+            --output rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json \
+            --summary-output reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json
+
+      - name: Validate AST-readiness authority boundary
+        run: |
+          python - <<'PY'
+          import json
+          p='rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json'
+          r=json.load(open(p,encoding='utf-8'))
+          assert r['status']=='PASS'
+          assert r['authority']=='GAMES_WORKSHOP_OFFICIAL'
+          assert r['readiness_version']=='CORE_RULE_SEMANTIC_AST_READINESS_V1'
+          s=r['summary']
+          assert s['rows']==310
+          assert s['unique_paragraph_keys']==310
+          assert s['pre_shape_blocker_counts']=={
+              'BLOCKED_PARENT_REVIEW':154,
+              'BLOCKED_NO_NORMATIVE_MODAL':61,
+              'BLOCKED_MODAL_MULTIPLICITY':27,
+              'BLOCKED_COMPLEX_SEMANTIC_AXES':26,
+              'BLOCKED_MULTIPLE_CONDITION_CUES':6,
+              'BLOCKED_REPEATED_VARIANT':2,
+          }
+          assert s['source_shape_analysis_candidates']==34
+          assert s['source_shape_hashes_reproduced']==34
+          assert s['pilot_ready']+s['shape_blocked']==34
+          assert s['repeated_variants_pilot_ready']==0
+          assert sum(s['readiness_state_counts'].values())==310
+          b=r['authority_boundary']
+          assert b['ast_readiness_audit_complete'] is True
+          assert b['pilot_ready_is_not_ast_node'] is True
+          assert b['ast_nodes_created'] is False
+          assert b['condition_effect_ast_complete'] is False
+          assert b['rule_interaction_graph_complete'] is False
+          assert b['current_normalized_factions_change']==0
+          assert all(x['ast_node_created'] is False for x in r['rows'])
+          print(json.dumps(s,indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-rule-semantic-ast-readiness-${{ github.run_id }}
+          path: |
+            reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json
+            rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json
+          if-no-files-found: error
+
+      - name: Checkpoint generated readiness on source branch
+        if: github.actor != 'github-actions[bot]' && github.ref_name != 'main'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json)" ]; then
+            echo "AST-readiness artifacts already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json
+          git add rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json
+          git commit -m "Checkpoint generated Core semantic AST readiness"
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
