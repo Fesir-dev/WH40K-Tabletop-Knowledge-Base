@@ -2619,6 +2619,167 @@ try:
 except Exception as exc:
     errors.append(f"Core direct-modal AST pilot validation failure: {exc}")
 
+# 3j9. Core Rules direct-modal AST semantic validation contracts.
+try:
+    semantic_validation_report = json.loads(
+        (ROOT / "reports" / "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json").read_text(encoding="utf-8")
+    )
+    semantic_validation_snapshot = json.loads(
+        (ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "core_rule_direct_modal_ast_semantic_validation" / "index.json").read_text(encoding="utf-8")
+    )
+    semantic_validation_current = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    semantic_validation_gate = json.loads((ROOT / "sources" / "currentness_gate.json").read_text(encoding="utf-8"))
+    semantic_validation_cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+
+    if semantic_validation_report != semantic_validation_snapshot:
+        errors.append("Direct-modal semantic validation compact report and snapshot diverged")
+    if semantic_validation_report.get("status") != "PASS":
+        errors.append("Direct-modal semantic validation must PASS")
+    if semantic_validation_report.get("authority") != "GAMES_WORKSHOP_OFFICIAL":
+        errors.append("Direct-modal semantic validation lost Games Workshop authority")
+    if semantic_validation_report.get("validation_version") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
+        errors.append("Direct-modal semantic validation version drifted")
+
+    parent = semantic_validation_report.get("parent_pilot", {})
+    if parent.get("node_key") != "core-ast-direct-modal--13-07--p50-o1":
+        errors.append("Direct-modal semantic validation parent node drifted")
+    if parent.get("paragraph_key") != "core-rule-13-07--p50--l1--para-p50-o1":
+        errors.append("Direct-modal semantic validation parent paragraph drifted")
+    if parent.get("rule_ref") != "13.07" or parent.get("node_type") != "DIRECT_MODAL_CLAUSE":
+        errors.append("Direct-modal semantic validation parent identity drifted")
+
+    validation = semantic_validation_report.get("validation", {})
+    if validation.get("decision") != "OPAQUE_PRESERVED":
+        errors.append("Direct-modal semantic validation must preserve opaque semantics")
+    subject = validation.get("subject", {})
+    if subject.get("state") != "OPAQUE_PRESERVED" or subject.get("resolved") is not False:
+        errors.append("Direct-modal semantic validation subject must remain opaque")
+    if subject.get("semantic_type") != "OPAQUE_SUBJECT_SPAN" or subject.get("token_count") != 1:
+        errors.append("Direct-modal semantic validation subject shape drifted")
+    if subject.get("reason") != "LEXEME_NOT_IN_CLOSED_SUBJECT_LEXICON":
+        errors.append("Direct-modal semantic validation subject blocker drifted")
+    if subject.get("lexeme_sha256") != "84088805e145b555f349c164a7cfdcf13981e0affcba4393aaa78ae40f320f4e":
+        errors.append("Direct-modal semantic validation subject lexeme hash drifted")
+
+    predicate = validation.get("action_predicate", {})
+    if predicate.get("state") != "OPAQUE_PRESERVED" or predicate.get("decomposable") is not False:
+        errors.append("Direct-modal semantic validation predicate must remain opaque")
+    if predicate.get("action_type") is not None or predicate.get("action_head_token_count") != 0:
+        errors.append("Direct-modal semantic validation inferred an action head")
+    if predicate.get("predicate_token_count") != 15:
+        errors.append("Direct-modal semantic validation predicate token count drifted")
+    if predicate.get("blockers") != ["COORDINATION_CUE","UNRECOGNIZED_ACTION_HEAD"]:
+        errors.append("Direct-modal semantic validation predicate blockers drifted")
+
+    if validation.get("ast_mutated") is not False:
+        errors.append("Direct-modal semantic validation must not mutate the AST")
+    if validation.get("interaction_edges_created") != 0:
+        errors.append("Direct-modal semantic validation must create zero interaction edges")
+    if validation.get("additional_paragraphs_admitted") != 0:
+        errors.append("Direct-modal semantic validation must admit zero additional paragraphs")
+
+    expected_summary = {
+        "nodes_validated":1,
+        "paragraphs_validated":1,
+        "subject_types_resolved":0,
+        "predicate_heads_resolved":0,
+        "full_refinement_allowed":0,
+        "partial_refinement_allowed":0,
+        "opaque_preserved":1,
+        "interaction_edges_created":0,
+        "additional_paragraphs_admitted":0,
+    }
+    if semantic_validation_report.get("summary") != expected_summary:
+        errors.append("Direct-modal semantic validation summary drifted")
+
+    vauth = semantic_validation_report.get("authority_boundary", {})
+    for key in ["semantic_validation_only","subject_closed_lexicon_only","predicate_closed_action_lexicon_only","arguments_remain_opaque"]:
+        if vauth.get(key) is not True:
+            errors.append(f"Direct-modal semantic validation authority flag not true: {key}")
+    for key in ["ast_mutation_allowed","second_paragraph_allowed","interaction_edges_allowed","condition_effect_ast_complete","rule_interaction_graph_complete","repeated_variant_semantic_equivalence_claimed","full_faction_promotion"]:
+        if vauth.get(key) is not False:
+            errors.append(f"Direct-modal semantic validation authority flag not false: {key}")
+    if vauth.get("current_normalized_factions_change") != 0:
+        errors.append("Direct-modal semantic validation changed normalized faction count")
+
+    layer = semantic_validation_current.get("core_rule_direct_modal_ast_semantic_validation", {})
+    if layer.get("state") != "PASS_OPAQUE_PRESERVED" or layer.get("decision") != "OPAQUE_PRESERVED":
+        errors.append("Current rules semantic-validation layer drifted")
+    if layer.get("subject_types_resolved") != 0 or layer.get("predicate_heads_resolved") != 0:
+        errors.append("Current rules semantic-validation resolution counts drifted")
+    if layer.get("predicate_blockers") != ["COORDINATION_CUE","UNRECOGNIZED_ACTION_HEAD"]:
+        errors.append("Current rules semantic-validation blocker list drifted")
+    if layer.get("ast_mutated") is not False or layer.get("interaction_edges_created") != 0 or layer.get("additional_paragraphs_admitted") != 0:
+        errors.append("Current rules semantic-validation scope expanded unexpectedly")
+    if semantic_validation_current.get("next_milestone") != "CORE_RULE_AST_READINESS_EXPANSION_V1":
+        errors.append("Current rules did not advance to AST-readiness expansion")
+
+    current_core = semantic_validation_current.get("source_currentness", {}).get("core_rules_content", {})
+    if current_core.get("state") != "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1":
+        errors.append("Core Rules currentness did not advance to semantic validation v1")
+    if current_core.get("normative_structured_normalization") != "DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING":
+        errors.append("Core Rules normalization boundary did not advance after semantic validation")
+
+    profile = semantic_validation_gate.get("scope_profiles", {}).get("core_rule_direct_modal_ast_semantic_validation", {})
+    if profile.get("content_state") != "PASS_OPAQUE_PRESERVED":
+        errors.append("Currentness gate semantic-validation profile must PASS_OPAQUE_PRESERVED")
+    if profile.get("nodes_validated") != 1 or profile.get("paragraphs_validated") != 1:
+        errors.append("Currentness gate semantic-validation counts drifted")
+    if profile.get("decision") != "OPAQUE_PRESERVED":
+        errors.append("Currentness gate semantic-validation decision drifted")
+
+    sg = semantic_validation_cov.get("global", {})
+    if semantic_validation_cov.get("status") != "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE":
+        errors.append("Coverage status did not advance after semantic validation")
+    expected_cov = {
+        "official_public_core_direct_modal_ast_semantic_validation_status":"PASS_OPAQUE_PRESERVED",
+        "official_public_core_direct_modal_ast_nodes_validated":1,
+        "official_public_core_direct_modal_ast_paragraphs_validated":1,
+        "official_public_core_direct_modal_ast_subject_types_resolved":0,
+        "official_public_core_direct_modal_ast_predicate_heads_resolved":0,
+        "official_public_core_direct_modal_ast_opaque_preserved":1,
+        "official_public_core_direct_modal_ast_mutations":0,
+        "official_public_core_direct_modal_ast_semantic_validation_interaction_edges_created":0,
+        "official_public_core_direct_modal_ast_semantic_validation_additional_paragraphs_admitted":0,
+        "official_public_core_direct_modal_ast_semantic_validation_current_normalized_factions_change":0,
+    }
+    for key, value in expected_cov.items():
+        if sg.get(key) != value:
+            errors.append(f"Coverage semantic-validation metric drifted: {key}")
+    if sg.get("current_normalized_factions") != 0 or sg.get("full_normative_semantic_factions") != 0:
+        errors.append("Direct-modal semantic validation must preserve strict normative faction counters")
+
+    forbidden_semantic_validation_text_keys = {
+        "text","description","rules_text","official_text","mirror_text","page_text","prose",
+        "paragraph_text","body_text","matched_phrase","subject_text","predicate_text",
+        "action_text","sentence_text","lexeme",
+    }
+    def _check_semantic_validation_no_text(value, path="root"):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                if key in forbidden_semantic_validation_text_keys:
+                    errors.append(f"Semantic validation vendored forbidden text field: {path}.{key}")
+                    continue
+                _check_semantic_validation_no_text(child, f"{path}.{key}")
+        elif isinstance(value, list):
+            for idx, child in enumerate(value):
+                _check_semantic_validation_no_text(child, f"{path}[{idx}]")
+    _check_semantic_validation_no_text(semantic_validation_snapshot)
+
+    for required in [
+        ROOT / "reports" / "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json",
+        ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "core_rule_direct_modal_ast_semantic_validation" / "index.json",
+        ROOT / "docs" / "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_MODEL.md",
+        ROOT / "schemas" / "core_rule_direct_modal_ast_semantic_validation.schema.json",
+        ROOT / "tools" / "validate_core_rule_direct_modal_ast_semantics.py",
+        ROOT / "tests" / "test_core_rule_direct_modal_ast_semantic_validation.py",
+        ROOT / ".github" / "workflows" / "core-rule-direct-modal-ast-semantic-validation.yml",
+    ]:
+        if not required.exists():
+            errors.append(f"Missing direct-modal semantic-validation artifact: {required.relative_to(ROOT)}")
+except Exception as exc:
+    errors.append(f"Core direct-modal AST semantic validation failure: {exc}")
+
 # 3k. Official public structured normalization expansion contracts.
 try:
     core_structure = json.loads(
