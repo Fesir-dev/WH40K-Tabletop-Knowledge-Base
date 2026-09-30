@@ -18,17 +18,17 @@
     "document_semantic_sha256_match": true,
     "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
   },
-  "structure_mode": "PDF_OUTLINE_PRIMARY",
+  "structure_mode": "HEADING_CANDIDATE_PRIMARY_TRIVIAL_OUTLINE",
   "sections": [
     {
-      "section_key": "core-rules-40k11--d0--p1--n1",
-      "title": "Core_Rules_40K11",
+      "section_key": "core-rules--d0--p1--n1",
+      "title": "CORE RULES",
       "depth": 0,
       "page_start": 1,
-      "page_end": 88,
-      "page_range_sha256": "19755b5513b72bb3e43d54fe348f243f0130e2e5898af90a1e302816aa35b377",
+      "page_end": 1,
+      "page_range_sha256": "eaa1d817d47c7837ff79e5ea20f9d3994483b45742e90ec583a65751acb7e07e",
       "children": [],
-      "outline_source": true,
+      "outline_source": false,
       "heading_evidence": [
         {
           "page": 1,
@@ -36,21 +36,1606 @@
           "label_sha256": "8232628faea3245f202c62ebe88ab98c1e23a9c79e4f90536b1aa3157c04b659"
         }
       ]
+    },
+    {
+      "section_key": "introduction-pg-4-5--d0--p2--n2",
+      "title": "INTRODUCTION\b�����������������������������������������������������������������pg 4-5",
+      "depth": 0,
+      "page_start": 2,
+      "page_end": 3,
+      "page_range_sha256": "368cbf31b253014513cfa4aa008dae1049937dcf043230f0ff79c64b24dee981",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 2,
+          "label": "INTRODUCTION\b�����������������������������������������������������������������pg 4-5",
+          "label_sha256": "451cd764529eaee0cdaa0ea2048552293dfab4ae96641098770ac95246e1662e"
+        }
+      ]
+    },
+    {
+      "section_key": "introduction--d0--p4--n3",
+      "title": "INTRODUCTION",
+      "depth": 0,
+      "page_start": 4,
+      "page_end": 4,
+      "page_range_sha256": "23bb683f8d40b2970e57d78bc98d729f82534365c98a8bef3a6741b8050c0ead",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 4,
+          "label": "INTRODUCTION",
+          "label_sha256": "348348036267fa046df6956d6bff62c93c2f7b89c711056c6a8cdcab6dd4a8e7"
+        }
+      ]
+    },
+    {
+      "section_key": "warhammer--d0--p5--n4",
+      "title": "WARHAMMER\b",
+      "depth": 0,
+      "page_start": 5,
+      "page_end": 6,
+      "page_range_sha256": "0c9f92df8eb12150642ee4e035f8ef440594886c2daaf19ef1be5d858831fed4",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 5,
+          "label": "WARHAMMER\b",
+          "label_sha256": "ce3ce9cf2809564a8d84fbc5ba11ac5e30f7cbaaabab2a57914850d36fe3e07b"
+        }
+      ]
+    },
+    {
+      "section_key": "basic-rules--d0--p7--n5",
+      "title": "BASIC RULES",
+      "depth": 0,
+      "page_start": 7,
+      "page_end": 7,
+      "page_range_sha256": "b3e359e19c35b42785d9af83fd7fae6d0ccea61484f61138b5d769489f1376ef",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 7,
+          "label": "BASIC RULES",
+          "label_sha256": "7accef4206194157e184e1be15231dda79f37f3e0f98a89e1cc4840889b67a33"
+        }
+      ]
+    },
+    {
+      "section_key": "core-concepts--d0--p8--n6",
+      "title": "CORE CONCEPTS",
+      "depth": 0,
+      "page_start": 8,
+      "page_end": 8,
+      "page_range_sha256": "ae4905b8dee9ddc2cc77d5d582e69e228b1a0a42659ebf20ec21b8b7faa514ae",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 8,
+          "label": "CORE CONCEPTS",
+          "label_sha256": "f88737d106ba9fbb5f14639ccc9fb9164af00cabc02dd6a1d55394216a7f5b88"
+        }
+      ]
+    },
+    {
+      "section_key": "measuring-distances-01-04--d0--p9--n7",
+      "title": "MEASURING\bDISTANCES\b01.04\b",
+      "depth": 0,
+      "page_start": 9,
+      "page_end": 9,
+      "page_range_sha256": "5197f208418809e1da3413fa16a3a03c784fdaecbe2890cb57974be142aecc3e",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 9,
+          "label": "MEASURING\bDISTANCES\b01.04\b",
+          "label_sha256": "92d3dfe5395f5d64dcd8dca99b05496259468d4d114f6afc8426a0deb38b8a7a"
+        }
+      ]
+    },
+    {
+      "section_key": "datasheets--d0--p10--n8",
+      "title": "DATASHEETS",
+      "depth": 0,
+      "page_start": 10,
+      "page_end": 10,
+      "page_range_sha256": "db3a7b1d40260aed8872f8706c5d1720db1582dce2041359f8954916e150c082",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 10,
+          "label": "DATASHEETS",
+          "label_sha256": "3bdbe1eaee046655a0b034241b2614b6b41d4be1148eb341df5e4cd11c23ce8a"
+        }
+      ]
+    },
+    {
+      "section_key": "boyz--d0--p11--n9",
+      "title": "BOYZ",
+      "depth": 0,
+      "page_start": 11,
+      "page_end": 11,
+      "page_range_sha256": "876ec9469816a88f388c224cac4406af41b9158c5cfd2830e930bbf076bc4a7c",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 11,
+          "label": "BOYZ",
+          "label_sha256": "82f8307e17e125e0c032fa378de14717c1730a616b22ad690daf66d78b089ba4"
+        }
+      ]
+    },
+    {
+      "section_key": "moving--d0--p12--n10",
+      "title": "MOVING",
+      "depth": 0,
+      "page_start": 12,
+      "page_end": 12,
+      "page_range_sha256": "d99139892d998135028309cfea969469fe0af9b48fa3244c91cc6ff7b1c7ac2d",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 12,
+          "label": "MOVING",
+          "label_sha256": "d40436f6037a8ac542b781d487f6eea36344ecf187f2efe5a470c3004331e556"
+        },
+        {
+          "page": 12,
+          "label": "MOVING\bUNITS\b03.01",
+          "label_sha256": "d6906149365da98e5b560021a4901b600da2b765cad283531f17729864f6192a"
+        },
+        {
+          "page": 12,
+          "label": "MOVING\bA\bMODEL\bIN\bA\bSTRAIGHT\bLINE",
+          "label_sha256": "70b83f36f95ff9b5d124eb2eb1f6a0dcd56c29a7bd460e2fe6eda6c9528eba63"
+        }
+      ]
+    },
+    {
+      "section_key": "random-movement--d0--p13--n11",
+      "title": "► Random Movement",
+      "depth": 0,
+      "page_start": 13,
+      "page_end": 13,
+      "page_range_sha256": "71efbf61ad6dccbae62578dedc7d35a33d1d9fa623e4f306e3ef03e5442931e5",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 13,
+          "label": "► Random Movement",
+          "label_sha256": "08493dcfc87c510f07883d0523f50e18b8a853afee8a953864b4eff112478ed4"
+        }
+      ]
+    },
+    {
+      "section_key": "set-up-03-02--d0--p14--n12",
+      "title": "SET\bUP\b03.02",
+      "depth": 0,
+      "page_start": 14,
+      "page_end": 14,
+      "page_range_sha256": "ee8d307081233de3f650e96b915b2c2bd218a4faa319f7f6568d012b82d8a501",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 14,
+          "label": "SET\bUP\b03.02",
+          "label_sha256": "213e685c27692e721cc8497833d79d66d2ccdde6e311f382a64fb4790ce20298"
+        }
+      ]
+    },
+    {
+      "section_key": "coherency--d0--p15--n13",
+      "title": "COHERENCY",
+      "depth": 0,
+      "page_start": 15,
+      "page_end": 15,
+      "page_range_sha256": "a5d68503d99415b050e296706e2f27c04dee351116f46ca9524db6ee9ba0cf96",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 15,
+          "label": "COHERENCY",
+          "label_sha256": "3fc6970a4189d594cdd2020ddb1cec3f3963b9d496a25e67a621aa96b173f803"
+        }
+      ]
+    },
+    {
+      "section_key": "models-without--d0--p16--n14",
+      "title": "MODELS\bWITHOUT\b",
+      "depth": 0,
+      "page_start": 16,
+      "page_end": 16,
+      "page_range_sha256": "2602824383f911bfbf44f5dc504a890c9a9072c1a586231885f31fca93e11a7f",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 16,
+          "label": "MODELS\bWITHOUT\b",
+          "label_sha256": "6339a54a5e49294bef10e9cab49dc4ed48d4e3d181be9e78bd64932feb2ad0e3"
+        }
+      ]
+    },
+    {
+      "section_key": "3-resolve-attacks-04-03--d0--p17--n15",
+      "title": "3�\bRESOLVE\bATTACKS\b04.03",
+      "depth": 0,
+      "page_start": 17,
+      "page_end": 17,
+      "page_range_sha256": "6037e8aa659ed0896b8228013ec7bd8ffc80e14abfd9cc05d5e49920637c7bf0",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 17,
+          "label": "3�\bRESOLVE\bATTACKS\b04.03",
+          "label_sha256": "e7e42cb9ba3306026f779efbd2175e65be59d368d7f7a1f5bc9897c78a13b218"
+        },
+        {
+          "page": 17,
+          "label": "RESOLVE\bATTACKS",
+          "label_sha256": "13daf71f46eccedc2ea73c06370d08367e52b83515424c0638ad3b907702524b"
+        },
+        {
+          "page": 17,
+          "label": "► T",
+          "label_sha256": "697a679797b4b149b722a70758a98258fd9a32f1f45c6e701bcb2f70e7fe5167"
+        }
+      ]
+    },
+    {
+      "section_key": "attack-sequence--d0--p18--n16",
+      "title": "ATTACK SEQUENCE",
+      "depth": 0,
+      "page_start": 18,
+      "page_end": 18,
+      "page_range_sha256": "3d4f48631fb5907b4d54e1940de11c3012abc7a19aee000f0c9b7600b3580241",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 18,
+          "label": "ATTACK SEQUENCE",
+          "label_sha256": "7335129c015d4b6ecf1c419b9d07846300e436f8baaba78a1ce8dae2c747fbeb"
+        },
+        {
+          "page": 18,
+          "label": "ATTACK’S",
+          "label_sha256": "e52ff3726169d1b12fb8fc1151fd6d7e4f735e000033eecaabf5e69da4221ef6"
+        }
+      ]
+    },
+    {
+      "section_key": "current-allocation--d0--p19--n17",
+      "title": "CURRENT\bALLOCATION\b",
+      "depth": 0,
+      "page_start": 19,
+      "page_end": 19,
+      "page_range_sha256": "0b45f15a68fde4fb3b685866d02d406a1627efdf89479c8747fedfe80976e4ae",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 19,
+          "label": "CURRENT\bALLOCATION\b",
+          "label_sha256": "5024c303e54ff8d607c445fa493f75c4276911922f820c01876ba63ef43411ab"
+        }
+      ]
+    },
+    {
+      "section_key": "1-select-weapons--d0--p20--n18",
+      "title": "1. SELECT WEAPONS",
+      "depth": 0,
+      "page_start": 20,
+      "page_end": 20,
+      "page_range_sha256": "777458a641f35d5a6e2df68396560db8df23499fea4218c0429c8c00c913ccb9",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 20,
+          "label": "1. SELECT WEAPONS",
+          "label_sha256": "9587ac0b24d791ad5453ca914aa2372e82736ac5d8dee4daea380785dd56e50c"
+        }
+      ]
+    },
+    {
+      "section_key": "1-hit-rolls--d0--p21--n19",
+      "title": "1. HIT ROLLS",
+      "depth": 0,
+      "page_start": 21,
+      "page_end": 21,
+      "page_range_sha256": "276a73453d1a60ea12aa7d99b5ccbb7cc74233c69b82aebd650a1d71da25e62a",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 21,
+          "label": "1. HIT ROLLS",
+          "label_sha256": "05030267621ef6e6389ce10f8c92543546f8f54abfb3451e1671e8f475898f5e"
+        }
+      ]
+    },
+    {
+      "section_key": "attack-sequence-examples--d0--p22--n20",
+      "title": "ATTACK\bSEQUENCE\bEXAMPLES",
+      "depth": 0,
+      "page_start": 22,
+      "page_end": 22,
+      "page_range_sha256": "a62cd7b5b559662520de61f239fbb31c926166f6adf8a6a3018c0d3b34d8af9f",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 22,
+          "label": "ATTACK\bSEQUENCE\bEXAMPLES",
+          "label_sha256": "e314c952fae2a1460190d1b5ca844e217ccf3fd411747e360718fcff118e2204"
+        }
+      ]
+    },
+    {
+      "section_key": "1-create-groups-and-declare-order--d0--p23--n21",
+      "title": "1. CREATE GROUPS AND DECLARE ORDER",
+      "depth": 0,
+      "page_start": 23,
+      "page_end": 23,
+      "page_range_sha256": "4dcd782d339ae688094a1bfc6c1e8d7ef2bb7306a919e20cf46b31e092dc45d8",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 23,
+          "label": "1. CREATE GROUPS AND DECLARE ORDER",
+          "label_sha256": "66a5f6f617383a4ca9b5c637f0394cbeffa978168d2f15b77ac1f42b482994d2"
+        }
+      ]
+    },
+    {
+      "section_key": "visibility-06-01--d0--p24--n22",
+      "title": "VISIBILITY 06.01",
+      "depth": 0,
+      "page_start": 24,
+      "page_end": 24,
+      "page_range_sha256": "e5666c0bda8fab304d9ad469d7de102561a74eeb0a97cc31881c0f9701e8c412",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 24,
+          "label": "VISIBILITY 06.01",
+          "label_sha256": "cc8579c50a6a27041f0fa0420ec05daa643920a56691feef9b9801cca1ec7764"
+        }
+      ]
+    },
+    {
+      "section_key": "model-visible--d0--p25--n23",
+      "title": "MODEL VISIBLE",
+      "depth": 0,
+      "page_start": 25,
+      "page_end": 26,
+      "page_range_sha256": "ad95d3bf81764aa46216a4bafa77b57aefeafb26d437754753fb48cbc37feab5",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 25,
+          "label": "MODEL VISIBLE",
+          "label_sha256": "19448fe0c4fb5554d4dc8df32615aa6acea12935f804e946cad5e12afcc324b8"
+        }
+      ]
+    },
+    {
+      "section_key": "the-battle-round--d0--p27--n24",
+      "title": "THE BATTLE ROUND",
+      "depth": 0,
+      "page_start": 27,
+      "page_end": 27,
+      "page_range_sha256": "9375a353ac93c7113d20036a5a3e401d7a90a2a4c224be72c59c0f352a6d9901",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 27,
+          "label": "THE BATTLE ROUND",
+          "label_sha256": "342e981b92c3f3b9dec833041d80a52683e2574157b1f383d43b3f9c9c7b173e"
+        }
+      ]
+    },
+    {
+      "section_key": "the-battle-round--d0--p28--n25",
+      "title": "THE BATTLE ROUND",
+      "depth": 0,
+      "page_start": 28,
+      "page_end": 28,
+      "page_range_sha256": "ccc21fcd672fc18bc4309fcd1f65a78f02ce5f6bc43ef546803b756cf945b7df",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 28,
+          "label": "THE BATTLE ROUND",
+          "label_sha256": "342e981b92c3f3b9dec833041d80a52683e2574157b1f383d43b3f9c9c7b173e"
+        },
+        {
+          "page": 28,
+          "label": "BATTLE",
+          "label_sha256": "abdad3609e33ec53bb32e1d6427a2f33b4551e3b243f5eb86b66029964a744d6"
+        },
+        {
+          "page": 28,
+          "label": "ROUND",
+          "label_sha256": "7c8da9c1c58a90b40968467f6c01f498dd4fd20d3ce35530abf88ec16cfe9a7f"
+        }
+      ]
+    },
+    {
+      "section_key": "start-of-turn-step--d0--p29--n26",
+      "title": "START\bOF\bTURN\bSTEP",
+      "depth": 0,
+      "page_start": 29,
+      "page_end": 29,
+      "page_range_sha256": "ca1341d6826444cb9940fb838f5e7ad0dcdd997988f251a20cd6260e5aaca450",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 29,
+          "label": "START\bOF\bTURN\bSTEP",
+          "label_sha256": "df3e36bfaecbefa6d48a3895e8d776365d0b587eef3299706aae9c119d8f268c"
+        }
+      ]
+    },
+    {
+      "section_key": "command-phase--d0--p30--n27",
+      "title": "COMMAND PHASE",
+      "depth": 0,
+      "page_start": 30,
+      "page_end": 30,
+      "page_range_sha256": "ab995a13ebbc85cc001c40973d88a9cb2ce2ac86a55d3d0ad68c14ed1722f40d",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 30,
+          "label": "COMMAND PHASE",
+          "label_sha256": "5c918daa056826963793c05f38b1edefc3701a31e77ce636a752eeb115606611"
+        },
+        {
+          "page": 30,
+          "label": "1�\bSTART\bOF\bCOMMAND\bPHASE\b08.01",
+          "label_sha256": "c71391215a7633046cce033e3a6893f8771f6cffb161796c9941737a198fc954"
+        },
+        {
+          "page": 30,
+          "label": "5�\bEND\bOF\bCOMMAND\bPHASE\b08.05",
+          "label_sha256": "04b0be87810ba9ed2a5155d8fde7edb7e3cb3f553762c6dbf3480518202fca22"
+        },
+        {
+          "page": 30,
+          "label": "1�\b START \b OF \b COMMAND \b PHASE",
+          "label_sha256": "2beccfd9cdd9290729748a608e023314fb94d81199cacc4d6fcc5c8fb116d979"
+        }
+      ]
+    },
+    {
+      "section_key": "battle-shock--d0--p31--n28",
+      "title": "BATTLE-SHOCK\b",
+      "depth": 0,
+      "page_start": 31,
+      "page_end": 31,
+      "page_range_sha256": "6b067fe88cb45eb65271e2b27fae2a5159cc66ce626f4134542261266044e546",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 31,
+          "label": "BATTLE-SHOCK\b",
+          "label_sha256": "3f5f7a7eafbf9aa02d04c772a05f4db7123612c78e827f775601f3284aa94102"
+        },
+        {
+          "page": 31,
+          "label": "iple Battle-shock Rolls",
+          "label_sha256": "d91c6ae76194de35f9110073b7127946ec08f03e7e6347c67942e1b58b3fe1db"
+        },
+        {
+          "page": 31,
+          "label": "BATTLE-SHOCK EXAMPLES",
+          "label_sha256": "e57abec34f6e8dd02641cd7f42f8521f8248ceef7c25014f5d9d4ce1f32e6902"
+        }
+      ]
+    },
+    {
+      "section_key": "movement-phase--d0--p32--n29",
+      "title": "MOVEMENT PHASE",
+      "depth": 0,
+      "page_start": 32,
+      "page_end": 32,
+      "page_range_sha256": "e1fc9ba395781fbdb4fb754f26cddf9df5368b95ec51c80aeb934c14e2ec166a",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 32,
+          "label": "MOVEMENT PHASE",
+          "label_sha256": "e64fcbe29d8525e3ba2d176066a6e2905b4223594751973cb3f85d10fce731cf"
+        },
+        {
+          "page": 32,
+          "label": "1�\bSTART\bOF\bMOVEMENT\bPHASE\b09.01",
+          "label_sha256": "7fc196a32be5aec2fc22193445e4a778b38072b37f7748ae49cbfab153e4e386"
+        },
+        {
+          "page": 32,
+          "label": "3�\bEND\bOF\bMOVEMENT\bPHASE\b09.03",
+          "label_sha256": "3d3d6a9f6a6cc2947964ae88af0cfb9b92d4c57e386e0f6f1cb57b980a73a562"
+        },
+        {
+          "page": 32,
+          "label": "1�\b START \b OF \b MOVEMENT \b PHASE",
+          "label_sha256": "070bb205ff027a1a0798507edf5c77597ed7e0d80512f587123b2595a20fda4a"
+        }
+      ]
+    },
+    {
+      "section_key": "remain-stationary-09-04--d0--p33--n30",
+      "title": "REMAIN STATIONARY 09.04",
+      "depth": 0,
+      "page_start": 33,
+      "page_end": 33,
+      "page_range_sha256": "8a6abf6391328700ec6b19e93f0b519e9bcdb09c5f4c5466877def535e19e5d1",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 33,
+          "label": "REMAIN STATIONARY 09.04",
+          "label_sha256": "b5d8b7ed494554824b61a5e47e90634445e9c2d4a233f885f7c6d92564b3b3c6"
+        }
+      ]
+    },
+    {
+      "section_key": "shooting-phase--d0--p34--n31",
+      "title": "SHOOTING PHASE",
+      "depth": 0,
+      "page_start": 34,
+      "page_end": 34,
+      "page_range_sha256": "e3892fb620b8935ff1864647e77b19f682d7983ac64125d69e795a4719686665",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 34,
+          "label": "SHOOTING PHASE",
+          "label_sha256": "84ffcbbe6cf41c734a8f6f6341d5b5dde19dcf98a8dba3d378280eef18227a7c"
+        },
+        {
+          "page": 34,
+          "label": "1�\bSTART\bOF\bSHOOTING\bPHASE\b10.01",
+          "label_sha256": "06c00a813cbf2b9c4566672eb0608770bf7e971f765010acfcfc141c31f75614"
+        },
+        {
+          "page": 34,
+          "label": "▫ As",
+          "label_sha256": "2c7ae4727b28a0c6cba778c0b3b1b9dc181acdb490b8e37418899b6a725b4b49"
+        },
+        {
+          "page": 34,
+          "label": "3�\bEND\bOF\bSHOOTING\bPHASE\b10.03",
+          "label_sha256": "314e80c2e82730e191719c6deec86e57286736c3ee34953104544d83cc1d3069"
+        }
+      ]
+    },
+    {
+      "section_key": "shoot--d0--p35--n32",
+      "title": "SHOOT",
+      "depth": 0,
+      "page_start": 35,
+      "page_end": 35,
+      "page_range_sha256": "316cc14a7733881528ad29a5d4998a251ab5be04b642e673edd803d2f62a322a",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 35,
+          "label": "SHOOT",
+          "label_sha256": "0bd5de8ec3685ec159b86d235869d65c00deafca48c58a7fb74fba68877814fb"
+        },
+        {
+          "page": 35,
+          "label": "ASSAULT SHOOTING 10.05",
+          "label_sha256": "e33078bb69f895fbe1b26dbbe705728b673f3b27802ffa11cd916e83de78772f"
+        },
+        {
+          "page": 35,
+          "label": "CLOSE-QUARTERS SHOOTING 10.06",
+          "label_sha256": "e8f3cdd2d7b3fea8bd543884fc5252bff91591ef268640062e694bee3b363d5c"
+        }
+      ]
+    },
+    {
+      "section_key": "charge-phase--d0--p36--n33",
+      "title": "CHARGE PHASE",
+      "depth": 0,
+      "page_start": 36,
+      "page_end": 36,
+      "page_range_sha256": "d54160e05bd89f64c66ac29bc5b60eaef26dbfd26d3d7bc601bf4f1897d298c5",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 36,
+          "label": "CHARGE PHASE",
+          "label_sha256": "273051ce7356e8ca022bf1fe57e2aa8a6b6de6934955c9b4cc0f97a2bc52d568"
+        },
+        {
+          "page": 36,
+          "label": "1�\bSTART\bOF\bCHARGE\bPHASE\b11.01",
+          "label_sha256": "4c767660b70ffcd4f2855b1ed3c76a61d995d779a6e6dabaa95e71da32977ae8"
+        },
+        {
+          "page": 36,
+          "label": "3�\bEND\bOF\bCHARGE\bPHASE\b11.03",
+          "label_sha256": "e9e6d6d74fa13a5ec7dac39c6005ca13e0499325db55b151afa78fb5a93f5cbc"
+        },
+        {
+          "page": 36,
+          "label": "1�\b START \b OF \b CHARGE \b PHASE",
+          "label_sha256": "43c19ba85d0fa1076be7dcfc7233dc26f317f7626432ccce49ac5331759b9c1d"
+        }
+      ]
+    },
+    {
+      "section_key": "charge-move-11-04--d0--p37--n34",
+      "title": "CHARGE MOVE 11.04",
+      "depth": 0,
+      "page_start": 37,
+      "page_end": 37,
+      "page_range_sha256": "ef8414452058f24690e8e2da93a9eadad087cec327198a9bcfb362a728b9c951",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 37,
+          "label": "CHARGE MOVE 11.04",
+          "label_sha256": "fe1a39a7fe25f4df80a77fa9f0ce11c0595f8d1c6a549a5bae677437704aeed2"
+        }
+      ]
+    },
+    {
+      "section_key": "fight-phase--d0--p38--n35",
+      "title": "FIGHT PHASE",
+      "depth": 0,
+      "page_start": 38,
+      "page_end": 38,
+      "page_range_sha256": "4ed90321b84d3673ec63b699d386553821c12b838b32496c4705c10a975c62dd",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 38,
+          "label": "FIGHT PHASE",
+          "label_sha256": "1568194a78c7378c4b66659c25cf19320063dd77cdae4e4cd648465ce7a4f9cb"
+        },
+        {
+          "page": 38,
+          "label": "1�\bSTART\bOF\bFIGHT\bPHASE\b12.01",
+          "label_sha256": "2878f46d712db61f1009947c3372ff9c8a4b6c5fce26b6fcd6fbf726497b80b5"
+        },
+        {
+          "page": 38,
+          "label": "1�\b START \b OF \b FIGHT \b PHASE",
+          "label_sha256": "b1e07ad4908034b50c7d7ff1d3070b01ec32f092687336b8e436276074b0ccf2"
+        },
+        {
+          "page": 38,
+          "label": "�\b FIGHT",
+          "label_sha256": "082d5be57eaebca93a3b51809f7e128db6619f296e67c5382cb2907207381fa1"
+        }
+      ]
+    },
+    {
+      "section_key": "pile-in-moves--d0--p39--n36",
+      "title": "PILE-IN MOVES",
+      "depth": 0,
+      "page_start": 39,
+      "page_end": 39,
+      "page_range_sha256": "97f2969047c9c90ea8e4e34d4bb00ef6b4f0e17ac8bc047f7cf864cb43741b90",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 39,
+          "label": "PILE-IN MOVES",
+          "label_sha256": "b1344d72262a3a6965bf950e164dfb33e8bf0016434e3539e2c231d511c426e9"
+        }
+      ]
+    },
+    {
+      "section_key": "fight-phase--d0--p40--n37",
+      "title": "FIGHT PHASE",
+      "depth": 0,
+      "page_start": 40,
+      "page_end": 40,
+      "page_range_sha256": "6cefc879c460f0efbb1debae8992a731cb111e73c41bed6a83708ed6d157b654",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 40,
+          "label": "FIGHT PHASE",
+          "label_sha256": "1568194a78c7378c4b66659c25cf19320063dd77cdae4e4cd648465ce7a4f9cb"
+        }
+      ]
+    },
+    {
+      "section_key": "overrun-fight--d0--p41--n38",
+      "title": "OVERRUN FIGHT",
+      "depth": 0,
+      "page_start": 41,
+      "page_end": 41,
+      "page_range_sha256": "dde82d08207633b450548b115efa95f4b67ff7412dbe21d00336b0212fe39695",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 41,
+          "label": "OVERRUN FIGHT",
+          "label_sha256": "6f81717ea0681c9cd6cc628db9009607c80b7f42f46f84b8f43a352f7d0880fe"
+        }
+      ]
+    },
+    {
+      "section_key": "fight-phase--d0--p42--n39",
+      "title": "FIGHT PHASE",
+      "depth": 0,
+      "page_start": 42,
+      "page_end": 42,
+      "page_range_sha256": "b1bb567d6132f5815b5a8f2bc471d16296df3eb698732290aacadb90ce239c05",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 42,
+          "label": "FIGHT PHASE",
+          "label_sha256": "1568194a78c7378c4b66659c25cf19320063dd77cdae4e4cd648465ce7a4f9cb"
+        },
+        {
+          "page": 42,
+          "label": "5�\bEND\bOF\bFIGHT\bPHASE\b12.09",
+          "label_sha256": "47d1fd65f8af82210b84aeb0eb5ee471154d6502f2ae3f9a207863881578cd4c"
+        }
+      ]
+    },
+    {
+      "section_key": "ongoing-consolidation--d0--p43--n40",
+      "title": "ONGOING CONSOLIDATION",
+      "depth": 0,
+      "page_start": 43,
+      "page_end": 44,
+      "page_range_sha256": "3ac74a6955f9c20aa9d046f0af693fc187f0a3fb74a6fa8eaf01ef8483f18806",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 43,
+          "label": "ONGOING CONSOLIDATION",
+          "label_sha256": "563800ea1e772b7a17edaacb7eaa03f506139cf9177471f89745f37dd129a710"
+        }
+      ]
+    },
+    {
+      "section_key": "battlefields--d0--p45--n41",
+      "title": "BATTLEFIELDS",
+      "depth": 0,
+      "page_start": 45,
+      "page_end": 45,
+      "page_range_sha256": "63a10ae86f63f86232af7e4b7ba8f1d4fadcb87854dafe3f3f99ec89eddb592c",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 45,
+          "label": "BATTLEFIELDS",
+          "label_sha256": "ce47b27499f29bcdab66b6af69f728fb224721ffbe02856a29a8be2ddd5bde29"
+        }
+      ]
+    },
+    {
+      "section_key": "terrain--d0--p46--n42",
+      "title": "TERRAIN",
+      "depth": 0,
+      "page_start": 46,
+      "page_end": 46,
+      "page_range_sha256": "a82bbe2c42edf5c33625207f22652be769b00fe4951728dcf7e34305d4b658fb",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 46,
+          "label": "TERRAIN",
+          "label_sha256": "d83311e42a584c230a571e0cee22adc65a41f9b93c4b67d79f60d9fd3d017691"
+        },
+        {
+          "page": 46,
+          "label": "PLACING\bTERRAIN\b13.01",
+          "label_sha256": "4b2c45c44105a9c2544a4d0aea31a51a618e32ef85e3a204babda3b90fe6f218"
+        },
+        {
+          "page": 46,
+          "label": "TERRAIN\bCATEGORIES\b13.02",
+          "label_sha256": "60eab4ab81ce160b91bdbee65043c0ff5e508d824d86595810a89af120a515bb"
+        },
+        {
+          "page": 46,
+          "label": "A mission’s deployment map may define which terrain",
+          "label_sha256": "bda6ec999efcd7a3d0279c8b1e5be7ca741c6ee8b2cdb33f624b5756302d6af6"
+        }
+      ]
+    },
+    {
+      "section_key": "terrain-placed-on-a-mat--d0--p47--n43",
+      "title": "TERRAIN PLACED ON A MAT",
+      "depth": 0,
+      "page_start": 47,
+      "page_end": 47,
+      "page_range_sha256": "f37703eefa53536f34b31057e242776366d1e1d926ec78329698df2548c94102",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 47,
+          "label": "TERRAIN PLACED ON A MAT",
+          "label_sha256": "4593f842b8f18c861fffe298f3f9d54485480aeaef6f593a3be1f66259dc49ee"
+        }
+      ]
+    },
+    {
+      "section_key": "13-terrain--d0--p48--n44",
+      "title": "13 TERRAIN",
+      "depth": 0,
+      "page_start": 48,
+      "page_end": 48,
+      "page_range_sha256": "c8c7b45a40a7c6b9f649223b92589d8776e51333460dbbbacca38fad611e479a",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 48,
+          "label": "13 TERRAIN",
+          "label_sha256": "d24c39d387bca68c6d7876d283755e7a46abe0ffdcea094c4b878232311a7246"
+        }
+      ]
+    },
+    {
+      "section_key": "terrain-and-movement--d0--p49--n45",
+      "title": "TERRAIN AND MOVEMENT",
+      "depth": 0,
+      "page_start": 49,
+      "page_end": 49,
+      "page_range_sha256": "6af537dd2c53de73e83f77b346c214c6c768fd95c917e4e30d7a087c59d9fdf7",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 49,
+          "label": "TERRAIN AND MOVEMENT",
+          "label_sha256": "e2c51c8cbd929479b12788a006b60354eded282d7f895e086977ce4470c831c6"
+        }
+      ]
+    },
+    {
+      "section_key": "terrain-and-visibility-13-07--d0--p50--n46",
+      "title": "TERRAIN\bAND\bVISIBILITY\b13.07",
+      "depth": 0,
+      "page_start": 50,
+      "page_end": 50,
+      "page_range_sha256": "3ad4fd92fe77729f8fef2cd5159d014a1b0706107241c4a6e5e43de92b5d275f",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 50,
+          "label": "TERRAIN\bAND\bVISIBILITY\b13.07",
+          "label_sha256": "962a6200cb78754ab9e39ff5df1d9a07b08c99708005b319cd7db28aa0f9c7d8"
+        },
+        {
+          "page": 50,
+          "label": "TERRAIN",
+          "label_sha256": "d83311e42a584c230a571e0cee22adc65a41f9b93c4b67d79f60d9fd3d017691"
+        }
+      ]
+    },
+    {
+      "section_key": "hidden-and-obscuringbenefit-of-cover--d0--p51--n47",
+      "title": "HIDDEN AND OBSCURINGBENEFIT OF COVER",
+      "depth": 0,
+      "page_start": 51,
+      "page_end": 51,
+      "page_range_sha256": "ac8c90368aa7b2af0ffc9ebec088b9715037ff4d7ed35b31a8e79e86a821baca",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 51,
+          "label": "HIDDEN AND OBSCURINGBENEFIT OF COVER",
+          "label_sha256": "8010a5ed4355ae7fc5561e0359a288ac03583344d44f671b22760a0b191518e3"
+        }
+      ]
+    },
+    {
+      "section_key": "terrain-objectives-14-01--d0--p52--n48",
+      "title": "TERRAIN\bOBJECTIVES\b14.01",
+      "depth": 0,
+      "page_start": 52,
+      "page_end": 52,
+      "page_range_sha256": "2d16718cdcf35767cd198dbb17fd6057689e0f7db7e762b418164fb4dd6b55a9",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 52,
+          "label": "TERRAIN\bOBJECTIVES\b14.01",
+          "label_sha256": "38adf893c54e1a775ce1b1c81fed2df9c0b9ed3e0b9a9abb3bb15fc2678adde2"
+        },
+        {
+          "page": 52,
+          "label": "OBJECTIVES",
+          "label_sha256": "3f8152da90f14deac4d15bf7ea88cd02b813c43240a95dc14c6dce756707bcab"
+        }
+      ]
+    },
+    {
+      "section_key": "a-terrain-area--d0--p53--n49",
+      "title": "a Terrain Area",
+      "depth": 0,
+      "page_start": 53,
+      "page_end": 53,
+      "page_range_sha256": "e47a32a854116247192b906fd40f81d57addf98f68799772a207ab158c74507a",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 53,
+          "label": "a Terrain Area",
+          "label_sha256": "12a6d2d3f01f6478e15fa6c82d048de94194cbe438c996dfbab269bee235bbd4"
+        }
+      ]
+    },
+    {
+      "section_key": "using-stratagems-15-01--d0--p54--n50",
+      "title": "USING\bSTRATAGEMS\b15.01",
+      "depth": 0,
+      "page_start": 54,
+      "page_end": 54,
+      "page_range_sha256": "9a8e1356009d042b3ed998c83fa98efaccb37fb0be51989329c022444195e382",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 54,
+          "label": "USING\bSTRATAGEMS\b15.01",
+          "label_sha256": "d0c86f9ddc3e644d11c33bda8ceb18ab7556134661edcdd036b6450e2f4b9860"
+        },
+        {
+          "page": 54,
+          "label": "▪ T",
+          "label_sha256": "a57b064ffe6fa6fda3e4f3853eb8c59075c9707117916905a406a585150bf772"
+        },
+        {
+          "page": 54,
+          "label": "▪ R",
+          "label_sha256": "b26aece37bc9b2bf1a6433f19c77d5d14d5b60ef978b24c114ac6a7254265123"
+        },
+        {
+          "page": 54,
+          "label": "STRATAGEMS",
+          "label_sha256": "974159c1c68c357e2a198410e9da9567efac5ef92cc20df2fc5f99cdd19c12ec"
+        }
+      ]
+    },
+    {
+      "section_key": "rapid-ingress-15-07-1cpcore-stratagem--d0--p55--n51",
+      "title": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
+      "depth": 0,
+      "page_start": 55,
+      "page_end": 55,
+      "page_range_sha256": "93d79579328424f92804611811f9c80bacc8c126e96616cd272aaa8521df19f3",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 55,
+          "label": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
+          "label_sha256": "ff184dfabf47a6b011932cdc27925152d2a42eea91cf7b96401be44372133bbc"
+        },
+        {
+          "page": 55,
+          "label": "+1CP",
+          "label_sha256": "1d0434bdb6e5abb86a21ed066293e2fd17feb827d75e6f0b7afffd082c85f2da"
+        }
+      ]
+    },
+    {
+      "section_key": "command-re-roll-15-02-1cp--d0--p56--n52",
+      "title": "COMMAND RE-ROLL 15.02 1CP",
+      "depth": 0,
+      "page_start": 56,
+      "page_end": 56,
+      "page_range_sha256": "3e83162ce4c5e46c9c05c24f78acd4b884c8702d0d9cf62882cfd2b7a5df2b43",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 56,
+          "label": "COMMAND RE-ROLL 15.02 1CP",
+          "label_sha256": "b8a66f06ca9120bc97e3d50444274158f29a480db98260a1ecd1b5889377ecc9"
+        }
+      ]
+    },
+    {
+      "section_key": "rapid-ingress-15-07-1cp--d0--p57--n53",
+      "title": "RAPID INGRESS 15.07 1CP",
+      "depth": 0,
+      "page_start": 57,
+      "page_end": 57,
+      "page_range_sha256": "45c43d0ae56a6712e9817b2bc81343d38149db295d97cc02d6ba19ad0bbf686b",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 57,
+          "label": "RAPID INGRESS 15.07 1CP",
+          "label_sha256": "3b684d57a5797ab4df90930bad9db2de3679b2fbb6140f4d41040eaa69956870"
+        },
+        {
+          "page": 57,
+          "label": "+1CP",
+          "label_sha256": "1d0434bdb6e5abb86a21ed066293e2fd17feb827d75e6f0b7afffd082c85f2da"
+        }
+      ]
+    },
+    {
+      "section_key": "actions--d0--p58--n54",
+      "title": "ACTIONS",
+      "depth": 0,
+      "page_start": 58,
+      "page_end": 60,
+      "page_range_sha256": "62bf8f0608075915023167de8d5fe68aae9f15c6c3da7ffcd0830417811b1948",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 58,
+          "label": "ACTIONS",
+          "label_sha256": "1ba13aa632ae657ddd1d8daf325e38804a3834e24fdd8bd0ab46272642e8a9cc"
+        },
+        {
+          "page": 58,
+          "label": "PERFORMING\bACTIONS\b16.01",
+          "label_sha256": "273ec7d9835164ebdbb7819546fc116556c71c6c0a974b37559eba79103f09e6"
+        }
+      ]
+    },
+    {
+      "section_key": "advanced-rules--d0--p61--n55",
+      "title": "ADVANCED RULES",
+      "depth": 0,
+      "page_start": 61,
+      "page_end": 61,
+      "page_range_sha256": "713777871b93dafcde8bc552e0fe4ab513490a79ad266139bfef3d0b4169e332",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 61,
+          "label": "ADVANCED RULES",
+          "label_sha256": "b23f2280113c41a7e2ad8e5648a66e52efd0779866b79e2b0cd4e8a484d9a84f"
+        }
+      ]
+    },
+    {
+      "section_key": "17-monsters-and-vehicles--d0--p62--n56",
+      "title": "17 MONSTERS AND VEHICLES",
+      "depth": 0,
+      "page_start": 62,
+      "page_end": 62,
+      "page_range_sha256": "118ba2b3b44f921accdfe86cf30482747080f3ccc6f316b34ecda901582f4399",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 62,
+          "label": "17 MONSTERS AND VEHICLES",
+          "label_sha256": "0174000462dac4c53e1e0ffb89cf349ea890a74d2459c0b9bde2a09fed2df21d"
+        },
+        {
+          "page": 62,
+          "label": "AND",
+          "label_sha256": "bd972cc4f15d8c175061381ba53c0b85cfb33c09637e55c2cf97721fbd1b3645"
+        },
+        {
+          "page": 62,
+          "label": "VEHICLES",
+          "label_sha256": "b85bda910235dcbfcefd6374849f0bd1f5c829fe3ff69f187fab7d91206fbb5d"
+        },
+        {
+          "page": 62,
+          "label": "MONSTERS",
+          "label_sha256": "0645803b3014f006239d03a8466492c0ee4c614eb82369005ca41de2a5f78cc7"
+        }
+      ]
+    },
+    {
+      "section_key": "engaged-monsters-vehicles-shooting--d0--p63--n57",
+      "title": "ENGAGED MONSTERS/VEHICLES – SHOOTING",
+      "depth": 0,
+      "page_start": 63,
+      "page_end": 63,
+      "page_range_sha256": "8279ff532f03ab7bf98bc4e11de0d889844585904296c7d54c32dadc1efd374a",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 63,
+          "label": "ENGAGED MONSTERS/VEHICLES – SHOOTING",
+          "label_sha256": "c46cf5516c9eea3dc03e25672a58ac530a2d026979eb3eca031c78c05da5dc1f"
+        }
+      ]
+    },
+    {
+      "section_key": "transport-capacity-18-01--d0--p64--n58",
+      "title": "TRANSPORT\bCAPACITY\b18.01",
+      "depth": 0,
+      "page_start": 64,
+      "page_end": 64,
+      "page_range_sha256": "ab96697b684ea0129e97f894405b41b423609a029dd8d9dc0ea76ec9da28664c",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 64,
+          "label": "TRANSPORT\bCAPACITY\b18.01",
+          "label_sha256": "8ccfdb56bef7b6bfdfc460d7b3f84a58def121fa9478b995d764662110d7a147"
+        }
+      ]
+    },
+    {
+      "section_key": "disembark-move-18-04--d0--p65--n59",
+      "title": "DISEMBARK MOVE 18.04",
+      "depth": 0,
+      "page_start": 65,
+      "page_end": 65,
+      "page_range_sha256": "e586dbb0577bad46c4a15ccd32508ea2a0f5547fd4bf033e5b188ddca8f9abab",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 65,
+          "label": "DISEMBARK MOVE 18.04",
+          "label_sha256": "cf92bb05d0183cab0fd92118fd42659127415602edd92ecf2fa14e03c8a79f9f"
+        }
+      ]
+    },
+    {
+      "section_key": "19-attached-units--d0--p66--n60",
+      "title": "19 ATTACHED UNITS",
+      "depth": 0,
+      "page_start": 66,
+      "page_end": 66,
+      "page_range_sha256": "4cfee771e3abc01174284a26455ef88e37038f3dda5767361ffb4c59a8b950ff",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 66,
+          "label": "19 ATTACHED UNITS",
+          "label_sha256": "ca22fc8991f5858bc888a3c35bd419b2726433c2b0327ef7b4f590189b679838"
+        }
+      ]
+    },
+    {
+      "section_key": "keywords-in-attached-units-19-03--d0--p67--n61",
+      "title": "KEYWORDS\bIN\bATTACHED\bUNITS\b19.03",
+      "depth": 0,
+      "page_start": 67,
+      "page_end": 67,
+      "page_range_sha256": "3e23b92c944114e3783b5dc6f7e8b19fa014c06508830900e5cd2e695789ce00",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 67,
+          "label": "KEYWORDS\bIN\bATTACHED\bUNITS\b19.03",
+          "label_sha256": "535695bb80935d47f47f96b4f772926a0d24c0c3fae16ccc0bdaf1f893ee82f5"
+        }
+      ]
+    },
+    {
+      "section_key": "strategic-reserves--d0--p68--n62",
+      "title": "STRATEGIC RESERVES",
+      "depth": 0,
+      "page_start": 68,
+      "page_end": 68,
+      "page_range_sha256": "01f7c91e3fddec2d1e4cf4945b08a7d26565539c91df901085048d61dc561939",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 68,
+          "label": "STRATEGIC RESERVES",
+          "label_sha256": "413f44bae971c6c35c304686eefcd8d3cfa606c942b39795139836f340953a56"
+        },
+        {
+          "page": 68,
+          "label": "STRATEGIC",
+          "label_sha256": "3ab339fbdbe280fcf207bae383bfe0a98ef5201767f9101ab4cd96d0da1d2e22"
+        },
+        {
+          "page": 68,
+          "label": "RESERVES",
+          "label_sha256": "92025c91d533510a0091178f59a7e5f86647f9198b7c14c0f7ffd193a7504163"
+        }
+      ]
+    },
+    {
+      "section_key": "arriving-from--d0--p69--n63",
+      "title": "ARRIVING\bFROM\b",
+      "depth": 0,
+      "page_start": 69,
+      "page_end": 69,
+      "page_range_sha256": "a0dfab8b5af131ba12c06c533f4195b1367c2266a240f1f7699db02f723d5232",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 69,
+          "label": "ARRIVING\bFROM\b",
+          "label_sha256": "b79c09f9d5ed522a7b8b7a046175768e4fe5668a5105ade3d7c8426ba1755f72"
+        },
+        {
+          "page": 69,
+          "label": "ARRIVING\bFROM\b\b",
+          "label_sha256": "e752bb959fa4c6e54b99b2bfb2084380b269e84a79985ffe6c53ac589b1b22a3"
+        }
+      ]
+    },
+    {
+      "section_key": "surge-moves-21-01--d0--p70--n64",
+      "title": "SURGE\bMOVES\b21.01",
+      "depth": 0,
+      "page_start": 70,
+      "page_end": 70,
+      "page_range_sha256": "a2c80957b07786335d217b6b3a7b03890fbbd5c299d48bdfbdee94ce42bd26d5",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 70,
+          "label": "SURGE\bMOVES\b21.01",
+          "label_sha256": "c799a3ecccb7957e2ac719fd1aac9690d28c667a516ef21cb36c37ec78a19cde"
+        }
+      ]
+    },
+    {
+      "section_key": "surge-moves--d0--p71--n65",
+      "title": "SURGE\bMOVES",
+      "depth": 0,
+      "page_start": 71,
+      "page_end": 71,
+      "page_range_sha256": "33771fa7fa2e1ef671645ce159237f0fe67855d9f055712f405a5e5aaa1ab4f5",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 71,
+          "label": "SURGE\bMOVES",
+          "label_sha256": "cca675b6f47d1c04809efbb9425d3c683cef178ad14b96dca19fa4eebe42e31d"
+        }
+      ]
+    },
+    {
+      "section_key": "aura-abilities-22-01--d0--p72--n66",
+      "title": "AURA\bABILITIES\b22.01",
+      "depth": 0,
+      "page_start": 72,
+      "page_end": 72,
+      "page_range_sha256": "fa1e35a149594bb2cd2b05d95d5d4ae3b632f40797ea5195664263d311c7d932",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 72,
+          "label": "AURA\bABILITIES\b22.01",
+          "label_sha256": "012b8fe1d4fee1ea2ae0c1168264e99218fab8d811bb6a184749ad7a5bdc7892"
+        }
+      ]
+    },
+    {
+      "section_key": "plunging-fire-22-05--d0--p73--n67",
+      "title": "PLUNGING\bFIRE\b22.05",
+      "depth": 0,
+      "page_start": 73,
+      "page_end": 73,
+      "page_range_sha256": "10128b94e6a4f949486be84f093226a7eb42a6d2b18c64bdcb17c89cbca1c5b9",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 73,
+          "label": "PLUNGING\bFIRE\b22.05",
+          "label_sha256": "933b8abdad43daf345bb92aefadfacf10e50105d1231aff9087c7ad5438471d0"
+        },
+        {
+          "page": 73,
+          "label": "PLUNGING FIRE",
+          "label_sha256": "1a464daffad3a2db3e6d7e4dbe0a3803bcc0317bc421e3a5a7a596bbde58396d"
+        }
+      ]
+    },
+    {
+      "section_key": "aircraft--d0--p74--n68",
+      "title": "AIRCRAFT",
+      "depth": 0,
+      "page_start": 74,
+      "page_end": 76,
+      "page_range_sha256": "6124c7d35f21214efbf9b0db00acdc398d485b3af2e5f71a099cfded12406125",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 74,
+          "label": "AIRCRAFT",
+          "label_sha256": "a3201958b4e6be8fcf2e362753461d3ea2e1a216c1651fd04c287a1e32596573"
+        }
+      ]
+    },
+    {
+      "section_key": "reference--d0--p77--n69",
+      "title": "REFERENCE",
+      "depth": 0,
+      "page_start": 77,
+      "page_end": 77,
+      "page_range_sha256": "87e30409d0f19083ddb21781250f5432f8f6c083a258068123d6f0317196900b",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 77,
+          "label": "REFERENCE",
+          "label_sha256": "ae679b833e58538ea397c5848b3336417e38777b02e837865e5dbff67c86a045"
+        }
+      ]
+    },
+    {
+      "section_key": "core-abilities--d0--p78--n70",
+      "title": "CORE ABILITIES",
+      "depth": 0,
+      "page_start": 78,
+      "page_end": 78,
+      "page_range_sha256": "f10a37e4d88ee94d747a9288a621fb54063d08b203066d781f79134216573daf",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 78,
+          "label": "CORE ABILITIES",
+          "label_sha256": "4754c772d0f65fdcfe875fd39b5c07e67e84a1023477e8e49777e5e99d859951"
+        }
+      ]
+    },
+    {
+      "section_key": "anti-24-03--d0--p79--n71",
+      "title": "[ANTI] 24.03",
+      "depth": 0,
+      "page_start": 79,
+      "page_end": 79,
+      "page_range_sha256": "b4b9e119f49779b66384e102b41478744a6e0131d15bcd2624604c2f8ea1e3a4",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 79,
+          "label": "[ANTI] 24.03",
+          "label_sha256": "4b50a6eaee35dcca3bb2b8cb7872c036c6f3181eb315715784875994ae55f9e1"
+        },
+        {
+          "page": 79,
+          "label": "[ANTI",
+          "label_sha256": "9d2f387e011c27136d9f79a58f6eaf23a7cd3671136f964dd9cdd23aa43801fa"
+        }
+      ]
+    },
+    {
+      "section_key": "close-quarters-24-07--d0--p80--n72",
+      "title": "[CLOSE-QUARTERS] 24.07",
+      "depth": 0,
+      "page_start": 80,
+      "page_end": 80,
+      "page_range_sha256": "d1dd091b200f886db0672d6b5740cc0fc20d958015fcd0f933e8e1451cbbbd1a",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 80,
+          "label": "[CLOSE-QUARTERS] 24.07",
+          "label_sha256": "04a0644f58e3cc36a15e408e38a40c582d21b60e65ee1db553dc20fb5967f6a9"
+        },
+        {
+          "page": 80,
+          "label": "QUARTERS]",
+          "label_sha256": "84f7812914bd24675a76a26b67701c333932f4cf7939cc2612a2fcfa013f68fa"
+        },
+        {
+          "page": 80,
+          "label": "[CLOSE",
+          "label_sha256": "35813d91c83334b7d94182156b2af66d528566b7d1591c5a906b64cbe035e0a9"
+        }
+      ]
+    },
+    {
+      "section_key": "extra-attacks-24-11--d0--p81--n73",
+      "title": "[EXTRA ATTACKS] 24.11",
+      "depth": 0,
+      "page_start": 81,
+      "page_end": 81,
+      "page_range_sha256": "53cbd61096016004801593f2ef388060e24e302c9f1f94e8a2b6f1603aee778d",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 81,
+          "label": "[EXTRA ATTACKS] 24.11",
+          "label_sha256": "d2d72cd991a1d3d695025f4068e8189f27024f5a451ef8cb694b76d27dfe71f2"
+        }
+      ]
+    },
+    {
+      "section_key": "heavy-24-16--d0--p82--n74",
+      "title": "[HEAVY] 24.16",
+      "depth": 0,
+      "page_start": 82,
+      "page_end": 82,
+      "page_range_sha256": "d16526fdf994354cf54d9072c1355035c62e98bdfce471883bbc6847edcbe16b",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 82,
+          "label": "[HEAVY] 24.16",
+          "label_sha256": "7478cbd48ce60e14387b08d15be1e9ae9f04c5886a5a192fbd12244adef02e42"
+        }
+      ]
+    },
+    {
+      "section_key": "lone-operative-24-24--d0--p83--n75",
+      "title": "LONE OPERATIVE 24.24",
+      "depth": 0,
+      "page_start": 83,
+      "page_end": 83,
+      "page_range_sha256": "a247e7365703416f2b5dc6368355aa0c99ca73ba18139c595b19df51efb1c07c",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 83,
+          "label": "LONE OPERATIVE 24.24",
+          "label_sha256": "6562a9d78f6affe71c80172b5fac071f97a26a463db9e84c6284a8a7c602dff9"
+        }
+      ]
+    },
+    {
+      "section_key": "precision-24-28--d0--p84--n76",
+      "title": "[PRECISION] 24.28",
+      "depth": 0,
+      "page_start": 84,
+      "page_end": 84,
+      "page_range_sha256": "67b832a53257f5f9a253d9ce96e513ed1d3581dfbadfb5e24fa0f4ff78834b39",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 84,
+          "label": "[PRECISION] 24.28",
+          "label_sha256": "9489e1d796cc6dc49ed3af96ae5352aff9b50ab9892d83331d8b2208161c6c54"
+        }
+      ]
+    },
+    {
+      "section_key": "stealth-24-33--d0--p85--n77",
+      "title": "STEALTH 24.33",
+      "depth": 0,
+      "page_start": 85,
+      "page_end": 85,
+      "page_range_sha256": "91a888de8b49654e9731a7b93c35a66144fa4de05d4c3ce7621dd26512a4d76d",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 85,
+          "label": "STEALTH 24.33",
+          "label_sha256": "188d0588ea431d2b9d4939d6b9bb079f6c2284f53d8186d1e4435c7b85836a0d"
+        }
+      ]
+    },
+    {
+      "section_key": "rules-appendix--d0--p86--n78",
+      "title": "RULES APPENDIX",
+      "depth": 0,
+      "page_start": 86,
+      "page_end": 86,
+      "page_range_sha256": "714a09d7f13df55b92613f8724e9bc183f8326c1642d3975e780b4579f9a4ebc",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 86,
+          "label": "RULES APPENDIX",
+          "label_sha256": "a163ff34fac9dcd496c8a888e0e95e99c8620213e3fd9b63afa78f9372afdc9b"
+        }
+      ]
+    },
+    {
+      "section_key": "adding-a-new-unit-to-your-army--d0--p87--n79",
+      "title": "ADDING\bA\bNEW\bUNIT\bTO\bYOUR\bARMY",
+      "depth": 0,
+      "page_start": 87,
+      "page_end": 87,
+      "page_range_sha256": "f7ce74e5cd2a38f099ab3c0a44aa1c484125cfc42d7e0ae68490ada9ea5466be",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 87,
+          "label": "ADDING\bA\bNEW\bUNIT\bTO\bYOUR\bARMY",
+          "label_sha256": "0f51030bedc06e0a0e5e8ffd1f680dacd1f381e0f31b6a292407b47ec08540b9"
+        }
+      ]
+    },
+    {
+      "section_key": "rules-appendixobjectives-not-within--d0--p88--n80",
+      "title": "RULES APPENDIXOBJECTIVES\bNOT\bWITHIN\b",
+      "depth": 0,
+      "page_start": 88,
+      "page_end": 88,
+      "page_range_sha256": "1cafa6a3e5e5a4601520bf7d6f36c2a04c5961bd8a9a3c434f32102597f550d3",
+      "children": [],
+      "outline_source": false,
+      "heading_evidence": [
+        {
+          "page": 88,
+          "label": "RULES APPENDIXOBJECTIVES\bNOT\bWITHIN\b",
+          "label_sha256": "ee2bb9166f19dc6937afc46f77aa66d2f12c0a40fd3099150e5cd25faed0e4a8"
+        }
+      ]
     }
   ],
   "summary": {
-    "sections": 1,
-    "root_sections": 1,
+    "sections": 80,
+    "root_sections": 80,
     "max_depth": 0,
     "sections_by_depth": {
-      "0": 1
+      "0": 80
     },
     "pages_represented": 88,
     "heading_candidate_pages": 80,
     "heading_candidate_count": 603
   },
   "authority_boundary": {
-    "section_level_structure_complete_for_public_pdf": true,
+    "section_level_structure_complete_for_public_pdf": false,
+    "flat_heading_map_complete_for_public_pdf": true,
+    "hierarchical_structure_complete": false,
     "paragraph_level_rules_ast_complete": false,
     "app_codex_equivalence": "NOT_CLAIMED",
     "full_faction_promotion": false,

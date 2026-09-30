@@ -18,13 +18,13 @@
     "document_semantic_sha256_match": true,
     "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
   },
-  "structure_mode": "PDF_OUTLINE_PRIMARY",
+  "structure_mode": "HEADING_CANDIDATE_PRIMARY_TRIVIAL_OUTLINE",
   "summary": {
-    "sections": 1,
-    "root_sections": 1,
+    "sections": 80,
+    "root_sections": 80,
     "max_depth": 0,
     "sections_by_depth": {
-      "0": 1
+      "0": 80
     },
     "pages_represented": 88,
     "heading_candidate_pages": 80,
@@ -32,15 +32,570 @@
   },
   "root_sections": [
     {
-      "section_key": "core-rules-40k11--d0--p1--n1",
-      "title": "Core_Rules_40K11",
+      "section_key": "core-rules--d0--p1--n1",
+      "title": "CORE RULES",
       "page_start": 1,
+      "page_end": 1,
+      "children": 0
+    },
+    {
+      "section_key": "introduction-pg-4-5--d0--p2--n2",
+      "title": "INTRODUCTION\b�����������������������������������������������������������������pg 4-5",
+      "page_start": 2,
+      "page_end": 3,
+      "children": 0
+    },
+    {
+      "section_key": "introduction--d0--p4--n3",
+      "title": "INTRODUCTION",
+      "page_start": 4,
+      "page_end": 4,
+      "children": 0
+    },
+    {
+      "section_key": "warhammer--d0--p5--n4",
+      "title": "WARHAMMER\b",
+      "page_start": 5,
+      "page_end": 6,
+      "children": 0
+    },
+    {
+      "section_key": "basic-rules--d0--p7--n5",
+      "title": "BASIC RULES",
+      "page_start": 7,
+      "page_end": 7,
+      "children": 0
+    },
+    {
+      "section_key": "core-concepts--d0--p8--n6",
+      "title": "CORE CONCEPTS",
+      "page_start": 8,
+      "page_end": 8,
+      "children": 0
+    },
+    {
+      "section_key": "measuring-distances-01-04--d0--p9--n7",
+      "title": "MEASURING\bDISTANCES\b01.04\b",
+      "page_start": 9,
+      "page_end": 9,
+      "children": 0
+    },
+    {
+      "section_key": "datasheets--d0--p10--n8",
+      "title": "DATASHEETS",
+      "page_start": 10,
+      "page_end": 10,
+      "children": 0
+    },
+    {
+      "section_key": "boyz--d0--p11--n9",
+      "title": "BOYZ",
+      "page_start": 11,
+      "page_end": 11,
+      "children": 0
+    },
+    {
+      "section_key": "moving--d0--p12--n10",
+      "title": "MOVING",
+      "page_start": 12,
+      "page_end": 12,
+      "children": 0
+    },
+    {
+      "section_key": "random-movement--d0--p13--n11",
+      "title": "► Random Movement",
+      "page_start": 13,
+      "page_end": 13,
+      "children": 0
+    },
+    {
+      "section_key": "set-up-03-02--d0--p14--n12",
+      "title": "SET\bUP\b03.02",
+      "page_start": 14,
+      "page_end": 14,
+      "children": 0
+    },
+    {
+      "section_key": "coherency--d0--p15--n13",
+      "title": "COHERENCY",
+      "page_start": 15,
+      "page_end": 15,
+      "children": 0
+    },
+    {
+      "section_key": "models-without--d0--p16--n14",
+      "title": "MODELS\bWITHOUT\b",
+      "page_start": 16,
+      "page_end": 16,
+      "children": 0
+    },
+    {
+      "section_key": "3-resolve-attacks-04-03--d0--p17--n15",
+      "title": "3�\bRESOLVE\bATTACKS\b04.03",
+      "page_start": 17,
+      "page_end": 17,
+      "children": 0
+    },
+    {
+      "section_key": "attack-sequence--d0--p18--n16",
+      "title": "ATTACK SEQUENCE",
+      "page_start": 18,
+      "page_end": 18,
+      "children": 0
+    },
+    {
+      "section_key": "current-allocation--d0--p19--n17",
+      "title": "CURRENT\bALLOCATION\b",
+      "page_start": 19,
+      "page_end": 19,
+      "children": 0
+    },
+    {
+      "section_key": "1-select-weapons--d0--p20--n18",
+      "title": "1. SELECT WEAPONS",
+      "page_start": 20,
+      "page_end": 20,
+      "children": 0
+    },
+    {
+      "section_key": "1-hit-rolls--d0--p21--n19",
+      "title": "1. HIT ROLLS",
+      "page_start": 21,
+      "page_end": 21,
+      "children": 0
+    },
+    {
+      "section_key": "attack-sequence-examples--d0--p22--n20",
+      "title": "ATTACK\bSEQUENCE\bEXAMPLES",
+      "page_start": 22,
+      "page_end": 22,
+      "children": 0
+    },
+    {
+      "section_key": "1-create-groups-and-declare-order--d0--p23--n21",
+      "title": "1. CREATE GROUPS AND DECLARE ORDER",
+      "page_start": 23,
+      "page_end": 23,
+      "children": 0
+    },
+    {
+      "section_key": "visibility-06-01--d0--p24--n22",
+      "title": "VISIBILITY 06.01",
+      "page_start": 24,
+      "page_end": 24,
+      "children": 0
+    },
+    {
+      "section_key": "model-visible--d0--p25--n23",
+      "title": "MODEL VISIBLE",
+      "page_start": 25,
+      "page_end": 26,
+      "children": 0
+    },
+    {
+      "section_key": "the-battle-round--d0--p27--n24",
+      "title": "THE BATTLE ROUND",
+      "page_start": 27,
+      "page_end": 27,
+      "children": 0
+    },
+    {
+      "section_key": "the-battle-round--d0--p28--n25",
+      "title": "THE BATTLE ROUND",
+      "page_start": 28,
+      "page_end": 28,
+      "children": 0
+    },
+    {
+      "section_key": "start-of-turn-step--d0--p29--n26",
+      "title": "START\bOF\bTURN\bSTEP",
+      "page_start": 29,
+      "page_end": 29,
+      "children": 0
+    },
+    {
+      "section_key": "command-phase--d0--p30--n27",
+      "title": "COMMAND PHASE",
+      "page_start": 30,
+      "page_end": 30,
+      "children": 0
+    },
+    {
+      "section_key": "battle-shock--d0--p31--n28",
+      "title": "BATTLE-SHOCK\b",
+      "page_start": 31,
+      "page_end": 31,
+      "children": 0
+    },
+    {
+      "section_key": "movement-phase--d0--p32--n29",
+      "title": "MOVEMENT PHASE",
+      "page_start": 32,
+      "page_end": 32,
+      "children": 0
+    },
+    {
+      "section_key": "remain-stationary-09-04--d0--p33--n30",
+      "title": "REMAIN STATIONARY 09.04",
+      "page_start": 33,
+      "page_end": 33,
+      "children": 0
+    },
+    {
+      "section_key": "shooting-phase--d0--p34--n31",
+      "title": "SHOOTING PHASE",
+      "page_start": 34,
+      "page_end": 34,
+      "children": 0
+    },
+    {
+      "section_key": "shoot--d0--p35--n32",
+      "title": "SHOOT",
+      "page_start": 35,
+      "page_end": 35,
+      "children": 0
+    },
+    {
+      "section_key": "charge-phase--d0--p36--n33",
+      "title": "CHARGE PHASE",
+      "page_start": 36,
+      "page_end": 36,
+      "children": 0
+    },
+    {
+      "section_key": "charge-move-11-04--d0--p37--n34",
+      "title": "CHARGE MOVE 11.04",
+      "page_start": 37,
+      "page_end": 37,
+      "children": 0
+    },
+    {
+      "section_key": "fight-phase--d0--p38--n35",
+      "title": "FIGHT PHASE",
+      "page_start": 38,
+      "page_end": 38,
+      "children": 0
+    },
+    {
+      "section_key": "pile-in-moves--d0--p39--n36",
+      "title": "PILE-IN MOVES",
+      "page_start": 39,
+      "page_end": 39,
+      "children": 0
+    },
+    {
+      "section_key": "fight-phase--d0--p40--n37",
+      "title": "FIGHT PHASE",
+      "page_start": 40,
+      "page_end": 40,
+      "children": 0
+    },
+    {
+      "section_key": "overrun-fight--d0--p41--n38",
+      "title": "OVERRUN FIGHT",
+      "page_start": 41,
+      "page_end": 41,
+      "children": 0
+    },
+    {
+      "section_key": "fight-phase--d0--p42--n39",
+      "title": "FIGHT PHASE",
+      "page_start": 42,
+      "page_end": 42,
+      "children": 0
+    },
+    {
+      "section_key": "ongoing-consolidation--d0--p43--n40",
+      "title": "ONGOING CONSOLIDATION",
+      "page_start": 43,
+      "page_end": 44,
+      "children": 0
+    },
+    {
+      "section_key": "battlefields--d0--p45--n41",
+      "title": "BATTLEFIELDS",
+      "page_start": 45,
+      "page_end": 45,
+      "children": 0
+    },
+    {
+      "section_key": "terrain--d0--p46--n42",
+      "title": "TERRAIN",
+      "page_start": 46,
+      "page_end": 46,
+      "children": 0
+    },
+    {
+      "section_key": "terrain-placed-on-a-mat--d0--p47--n43",
+      "title": "TERRAIN PLACED ON A MAT",
+      "page_start": 47,
+      "page_end": 47,
+      "children": 0
+    },
+    {
+      "section_key": "13-terrain--d0--p48--n44",
+      "title": "13 TERRAIN",
+      "page_start": 48,
+      "page_end": 48,
+      "children": 0
+    },
+    {
+      "section_key": "terrain-and-movement--d0--p49--n45",
+      "title": "TERRAIN AND MOVEMENT",
+      "page_start": 49,
+      "page_end": 49,
+      "children": 0
+    },
+    {
+      "section_key": "terrain-and-visibility-13-07--d0--p50--n46",
+      "title": "TERRAIN\bAND\bVISIBILITY\b13.07",
+      "page_start": 50,
+      "page_end": 50,
+      "children": 0
+    },
+    {
+      "section_key": "hidden-and-obscuringbenefit-of-cover--d0--p51--n47",
+      "title": "HIDDEN AND OBSCURINGBENEFIT OF COVER",
+      "page_start": 51,
+      "page_end": 51,
+      "children": 0
+    },
+    {
+      "section_key": "terrain-objectives-14-01--d0--p52--n48",
+      "title": "TERRAIN\bOBJECTIVES\b14.01",
+      "page_start": 52,
+      "page_end": 52,
+      "children": 0
+    },
+    {
+      "section_key": "a-terrain-area--d0--p53--n49",
+      "title": "a Terrain Area",
+      "page_start": 53,
+      "page_end": 53,
+      "children": 0
+    },
+    {
+      "section_key": "using-stratagems-15-01--d0--p54--n50",
+      "title": "USING\bSTRATAGEMS\b15.01",
+      "page_start": 54,
+      "page_end": 54,
+      "children": 0
+    },
+    {
+      "section_key": "rapid-ingress-15-07-1cpcore-stratagem--d0--p55--n51",
+      "title": "RAPID INGRESS 15.07 1CPCORE STRATAGEM",
+      "page_start": 55,
+      "page_end": 55,
+      "children": 0
+    },
+    {
+      "section_key": "command-re-roll-15-02-1cp--d0--p56--n52",
+      "title": "COMMAND RE-ROLL 15.02 1CP",
+      "page_start": 56,
+      "page_end": 56,
+      "children": 0
+    },
+    {
+      "section_key": "rapid-ingress-15-07-1cp--d0--p57--n53",
+      "title": "RAPID INGRESS 15.07 1CP",
+      "page_start": 57,
+      "page_end": 57,
+      "children": 0
+    },
+    {
+      "section_key": "actions--d0--p58--n54",
+      "title": "ACTIONS",
+      "page_start": 58,
+      "page_end": 60,
+      "children": 0
+    },
+    {
+      "section_key": "advanced-rules--d0--p61--n55",
+      "title": "ADVANCED RULES",
+      "page_start": 61,
+      "page_end": 61,
+      "children": 0
+    },
+    {
+      "section_key": "17-monsters-and-vehicles--d0--p62--n56",
+      "title": "17 MONSTERS AND VEHICLES",
+      "page_start": 62,
+      "page_end": 62,
+      "children": 0
+    },
+    {
+      "section_key": "engaged-monsters-vehicles-shooting--d0--p63--n57",
+      "title": "ENGAGED MONSTERS/VEHICLES – SHOOTING",
+      "page_start": 63,
+      "page_end": 63,
+      "children": 0
+    },
+    {
+      "section_key": "transport-capacity-18-01--d0--p64--n58",
+      "title": "TRANSPORT\bCAPACITY\b18.01",
+      "page_start": 64,
+      "page_end": 64,
+      "children": 0
+    },
+    {
+      "section_key": "disembark-move-18-04--d0--p65--n59",
+      "title": "DISEMBARK MOVE 18.04",
+      "page_start": 65,
+      "page_end": 65,
+      "children": 0
+    },
+    {
+      "section_key": "19-attached-units--d0--p66--n60",
+      "title": "19 ATTACHED UNITS",
+      "page_start": 66,
+      "page_end": 66,
+      "children": 0
+    },
+    {
+      "section_key": "keywords-in-attached-units-19-03--d0--p67--n61",
+      "title": "KEYWORDS\bIN\bATTACHED\bUNITS\b19.03",
+      "page_start": 67,
+      "page_end": 67,
+      "children": 0
+    },
+    {
+      "section_key": "strategic-reserves--d0--p68--n62",
+      "title": "STRATEGIC RESERVES",
+      "page_start": 68,
+      "page_end": 68,
+      "children": 0
+    },
+    {
+      "section_key": "arriving-from--d0--p69--n63",
+      "title": "ARRIVING\bFROM\b",
+      "page_start": 69,
+      "page_end": 69,
+      "children": 0
+    },
+    {
+      "section_key": "surge-moves-21-01--d0--p70--n64",
+      "title": "SURGE\bMOVES\b21.01",
+      "page_start": 70,
+      "page_end": 70,
+      "children": 0
+    },
+    {
+      "section_key": "surge-moves--d0--p71--n65",
+      "title": "SURGE\bMOVES",
+      "page_start": 71,
+      "page_end": 71,
+      "children": 0
+    },
+    {
+      "section_key": "aura-abilities-22-01--d0--p72--n66",
+      "title": "AURA\bABILITIES\b22.01",
+      "page_start": 72,
+      "page_end": 72,
+      "children": 0
+    },
+    {
+      "section_key": "plunging-fire-22-05--d0--p73--n67",
+      "title": "PLUNGING\bFIRE\b22.05",
+      "page_start": 73,
+      "page_end": 73,
+      "children": 0
+    },
+    {
+      "section_key": "aircraft--d0--p74--n68",
+      "title": "AIRCRAFT",
+      "page_start": 74,
+      "page_end": 76,
+      "children": 0
+    },
+    {
+      "section_key": "reference--d0--p77--n69",
+      "title": "REFERENCE",
+      "page_start": 77,
+      "page_end": 77,
+      "children": 0
+    },
+    {
+      "section_key": "core-abilities--d0--p78--n70",
+      "title": "CORE ABILITIES",
+      "page_start": 78,
+      "page_end": 78,
+      "children": 0
+    },
+    {
+      "section_key": "anti-24-03--d0--p79--n71",
+      "title": "[ANTI] 24.03",
+      "page_start": 79,
+      "page_end": 79,
+      "children": 0
+    },
+    {
+      "section_key": "close-quarters-24-07--d0--p80--n72",
+      "title": "[CLOSE-QUARTERS] 24.07",
+      "page_start": 80,
+      "page_end": 80,
+      "children": 0
+    },
+    {
+      "section_key": "extra-attacks-24-11--d0--p81--n73",
+      "title": "[EXTRA ATTACKS] 24.11",
+      "page_start": 81,
+      "page_end": 81,
+      "children": 0
+    },
+    {
+      "section_key": "heavy-24-16--d0--p82--n74",
+      "title": "[HEAVY] 24.16",
+      "page_start": 82,
+      "page_end": 82,
+      "children": 0
+    },
+    {
+      "section_key": "lone-operative-24-24--d0--p83--n75",
+      "title": "LONE OPERATIVE 24.24",
+      "page_start": 83,
+      "page_end": 83,
+      "children": 0
+    },
+    {
+      "section_key": "precision-24-28--d0--p84--n76",
+      "title": "[PRECISION] 24.28",
+      "page_start": 84,
+      "page_end": 84,
+      "children": 0
+    },
+    {
+      "section_key": "stealth-24-33--d0--p85--n77",
+      "title": "STEALTH 24.33",
+      "page_start": 85,
+      "page_end": 85,
+      "children": 0
+    },
+    {
+      "section_key": "rules-appendix--d0--p86--n78",
+      "title": "RULES APPENDIX",
+      "page_start": 86,
+      "page_end": 86,
+      "children": 0
+    },
+    {
+      "section_key": "adding-a-new-unit-to-your-army--d0--p87--n79",
+      "title": "ADDING\bA\bNEW\bUNIT\bTO\bYOUR\bARMY",
+      "page_start": 87,
+      "page_end": 87,
+      "children": 0
+    },
+    {
+      "section_key": "rules-appendixobjectives-not-within--d0--p88--n80",
+      "title": "RULES APPENDIXOBJECTIVES\bNOT\bWITHIN\b",
+      "page_start": 88,
       "page_end": 88,
       "children": 0
     }
   ],
   "authority_boundary": {
-    "section_level_structure_complete_for_public_pdf": true,
+    "section_level_structure_complete_for_public_pdf": false,
+    "flat_heading_map_complete_for_public_pdf": true,
+    "hierarchical_structure_complete": false,
     "paragraph_level_rules_ast_complete": false,
     "app_codex_equivalence": "NOT_CLAIMED",
     "full_faction_promotion": false,
