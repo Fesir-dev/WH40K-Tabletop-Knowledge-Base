@@ -1,0 +1,131 @@
+name: Official public mirror overlap audit
+
+on:
+  push:
+    paths:
+      - "tools/audit_official_public_mirror_overlap.py"
+      - "tests/test_official_public_mirror_overlap.py"
+      - "schemas/official_public_mirror_overlap.schema.json"
+      - "schemas/official_public_overlap_snapshot.schema.json"
+      - "docs/OFFICIAL_PUBLIC_MIRROR_OVERLAP_MODEL.md"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - "rules/11e/current.json"
+      - "rules/11e/snapshots/2026-09-29/wahapedia/**"
+      - "sources/snapshots/gw_11e_official_assets_2026-09-29.json"
+      - ".github/workflows/official-public-mirror-overlap.yml"
+  pull_request:
+    paths:
+      - "tools/audit_official_public_mirror_overlap.py"
+      - "tests/test_official_public_mirror_overlap.py"
+      - "schemas/official_public_mirror_overlap.schema.json"
+      - "schemas/official_public_overlap_snapshot.schema.json"
+      - "docs/OFFICIAL_PUBLIC_MIRROR_OVERLAP_MODEL.md"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - "rules/11e/current.json"
+      - "rules/11e/snapshots/2026-09-29/wahapedia/**"
+      - "sources/snapshots/gw_11e_official_assets_2026-09-29.json"
+      - ".github/workflows/official-public-mirror-overlap.yml"
+  schedule:
+    - cron: "47 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  overlap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned PDF extractor
+        run: python -m pip install --disable-pip-version-check pypdf==5.9.0
+
+      - name: Compile and run overlap contracts
+        run: |
+          python -m compileall -q tools/audit_official_public_mirror_overlap.py tests/test_official_public_mirror_overlap.py
+          python -m unittest tests.test_official_public_mirror_overlap -v
+
+      - uses: actions/cache@v4
+        with:
+          path: .cache/official-public-rules
+          key: official-public-rules-${{ hashFiles('sources/discoveries/gw_public_rules_surface_2026-09-29.json', 'sources/snapshots/gw_11e_official_assets_2026-09-29.json') }}
+
+      - name: Run full public overlap audit
+        run: |
+          python tools/audit_official_public_mirror_overlap.py \
+            --as-of 2026-09-30 \
+            --report-output reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json \
+            --snapshot-output rules/11e/snapshots/2026-09-30/official_public_overlap/index.json
+
+      - name: Validate generated authority boundary
+        run: |
+          python - <<'PY'
+          import json
+          report=json.load(open('reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json',encoding='utf-8'))
+          snap=json.load(open('rules/11e/snapshots/2026-09-30/official_public_overlap/index.json',encoding='utf-8'))
+          assert report['status']=='PASS', report
+          s=report['summary']
+          assert s['official_documents']==29, s
+          assert s['core_rules']==1 and s['faction_packs']==28, s
+          assert s['mirror_units']>0, s
+          assert s['promotable_scoped_units']==snap['summary']['units'], (s, snap['summary'])
+          assert snap['authority']=='GAMES_WORKSHOP_OFFICIAL_PUBLIC_OVERLAP'
+          assert snap['scope']=='EXACT_PUBLIC_OVERLAP_ONLY'
+          assert snap['authority_boundary']['full_faction_current_verified'] is False
+          assert snap['authority_boundary']['current_normalized_factions_change']==0
+          assert report['authority_boundary']['full_codex_app_equivalence_claimed'] is False
+          assert report['authority_boundary']['faction_pack_is_full_codex_replacement'] is False
+
+          forbidden={'text','description','rules_text','official_text','mirror_text'}
+          def walk(v):
+              if isinstance(v,dict):
+                  for k,x in v.items():
+                      assert k not in forbidden, f'long-text field forbidden: {k}'
+                      walk(x)
+              elif isinstance(v,list):
+                  for x in v: walk(x)
+          walk(report)
+          walk(snap)
+          print(json.dumps({'summary':s,'snapshot_units':snap['summary']['units']},indent=2))
+          PY
+
+      - name: Assert committed reproducibility when generated outputs already exist
+        if: github.event_name == 'pull_request' || github.event_name == 'schedule'
+        run: |
+          if git cat-file -e HEAD:reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json 2>/dev/null && \
+             git cat-file -e HEAD:rules/11e/snapshots/2026-09-30/official_public_overlap/index.json 2>/dev/null; then
+            git diff --exit-code -- \
+              reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json \
+              rules/11e/snapshots/2026-09-30/official_public_overlap/index.json
+          else
+            echo "Generated outputs are not committed on this head yet; branch push run will checkpoint them."
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: official-public-mirror-overlap-${{ github.run_id }}
+          path: |
+            reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json
+            rules/11e/snapshots/2026-09-30/official_public_overlap/index.json
+          if-no-files-found: error
+
+      - name: Commit generated overlap evidence on development branch
+        if: github.event_name == 'push' && github.ref_name != 'main' && github.actor != 'github-actions[bot]'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json rules/11e/snapshots/2026-09-30/official_public_overlap/index.json)" ]; then
+            echo "Overlap evidence already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json
+          git add rules/11e/snapshots/2026-09-30/official_public_overlap/index.json
+          git commit -m "Checkpoint generated official-public overlap evidence"
+          git push origin HEAD:${GITHUB_REF_NAME}
