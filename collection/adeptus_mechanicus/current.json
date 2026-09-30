@@ -1,0 +1,508 @@
+{
+  "schema_version": "1.1",
+  "inventory_id": "adeptus_mechanicus_personal",
+  "faction": "Adeptus Mechanicus",
+  "checkpoint": "2026-09-30",
+  "repository_registered_at": "2026-09-30",
+  "status": "PROVISIONAL",
+  "revision_state": "BASELINE_IMPORT_WITH_CONFIRMED_UNDERCOUNT",
+  "physical_pools": [
+    {
+      "pool_id": "belisarius_cawl",
+      "name": "Belisarius Cawl",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Belisarius Cawl",
+          "source_unit_instances": 1,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ]
+    },
+    {
+      "pool_id": "cybernetica_datasmith",
+      "name": "Cybernetica Datasmith",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Cybernetica Datasmith",
+          "source_unit_instances": 2,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ]
+    },
+    {
+      "pool_id": "skitarii_marshal",
+      "name": "Skitarii Marshal",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Skitarii Marshal",
+          "source_unit_instances": 1,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ]
+    },
+    {
+      "pool_id": "tech_priest_dominus",
+      "name": "Tech-Priest Dominus",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Tech-Priest Dominus",
+          "source_unit_instances": 2,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ]
+    },
+    {
+      "pool_id": "tech_priest_enginseer",
+      "name": "Tech-Priest Enginseer",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Tech-Priest Enginseer",
+          "source_unit_instances": 2,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ]
+    },
+    {
+      "pool_id": "tech_priest_manipulus",
+      "name": "Tech-Priest Manipulus",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Tech-Priest Manipulus",
+          "source_unit_instances": 1,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ]
+    },
+    {
+      "pool_id": "technoarcheologist",
+      "name": "Technoarcheologist",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Technoarcheologist",
+          "source_unit_instances": 2,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ]
+    },
+    {
+      "pool_id": "skitarii_rangers",
+      "name": "Skitarii Rangers",
+      "physical_bodies": 30,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "KNOWN_UNDERCOUNT_CANDIDATE",
+        "BUILD_STATE_PARTIALLY_REPRESENTED_BY_SOURCE",
+        "WARGEAR_RECHECK_REQUIRED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Skitarii Rangers",
+          "source_unit_instances": 3,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Skitarii Ranger Alpha",
+          "physical_bodies": 3,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Skitarii Ranger w/ arc rifle",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Skitarii Ranger w/ plasma caliver",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Skitarii Ranger w/ transuranic arquebus",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Skitarii Ranger w/ data-tether",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Skitarii Ranger w/ galvanic rifle",
+          "physical_bodies": 19,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        }
+      ],
+      "notes": [
+        "User states the actual physical Ranger count is likely higher than the 30 bodies represented in this export. Exact extra count is pending physical recheck.",
+        "Source-selected weapon variants are a roster/export snapshot only and are not yet promoted to verified physical loadout inventory."
+      ]
+    },
+    {
+      "pool_id": "skitarii_vanguard",
+      "name": "Skitarii Vanguard",
+      "physical_bodies": 20,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "KNOWN_UNDERCOUNT_CANDIDATE",
+        "BUILD_STATE_PARTIALLY_REPRESENTED_BY_SOURCE",
+        "WARGEAR_RECHECK_REQUIRED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Skitarii Vanguard",
+          "source_unit_instances": 2,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Skitarii Vanguard Alpha",
+          "physical_bodies": 2,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Skitarii Vanguard w/ plasma caliver",
+          "physical_bodies": 1,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Skitarii Vanguard w/ transuranic arquebus",
+          "physical_bodies": 1,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Skitarii Vanguard w/ data-tether",
+          "physical_bodies": 1,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Skitarii Vanguard w/ radium carbine",
+          "physical_bodies": 15,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        }
+      ],
+      "notes": [
+        "User states the actual physical Vanguard count is likely higher than the 20 bodies represented in this export. Exact extra count is pending physical recheck.",
+        "Source-selected weapon variants are a roster/export snapshot only and are not yet promoted to verified physical loadout inventory."
+      ]
+    },
+    {
+      "pool_id": "kataphron_destroyers",
+      "name": "Kataphron Destroyers",
+      "physical_bodies": 3,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "BUILD_STATE_PARTIALLY_REPRESENTED_BY_SOURCE",
+        "WARGEAR_RECHECK_REQUIRED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Kataphron Destroyers",
+          "source_unit_instances": 1,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Kataphron Destroyer (Heavy grav-cannon & phosphor blaster)",
+          "physical_bodies": 3,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        }
+      ]
+    },
+    {
+      "pool_id": "sicarian_infiltrators",
+      "name": "Sicarian Infiltrators",
+      "physical_bodies": 20,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_ADDITIONAL_PRINCEPS_BODIES_EXIST",
+        "EXTRA_BODY_COUNT_UNKNOWN",
+        "WARGEAR_RECHECK_REQUIRED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Sicarian Infiltrators",
+          "source_unit_instances": 3,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Sicarian Infiltrator Princeps (Power weapon & stub carbine)",
+          "physical_bodies": 3,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Sicarian Infiltrator (Power weapon & stubcarbine)",
+          "physical_bodies": 17,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        }
+      ],
+      "notes": [
+        "In addition to the 20 source-export bodies, the user confirms at least one extra Infiltrator leader/Princeps body exists. Exact extra count and loadout are pending physical recheck."
+      ]
+    },
+    {
+      "pool_id": "sicarian_ruststalkers",
+      "name": "Sicarian Ruststalkers",
+      "physical_bodies": 30,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_ADDITIONAL_PRINCEPS_BODIES_EXIST",
+        "EXTRA_BODY_COUNT_UNKNOWN",
+        "WARGEAR_RECHECK_REQUIRED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Sicarian Ruststalkers",
+          "source_unit_instances": 3,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Sicarian Ruststalker Princeps (Transonic razor & chordclaw)",
+          "physical_bodies": 3,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        },
+        {
+          "name": "Sicarian Ruststalker (Transonic razor & chordclaw)",
+          "physical_bodies": 27,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        }
+      ],
+      "notes": [
+        "In addition to the 30 source-export bodies, the user confirms at least one extra Ruststalker leader/Princeps body exists. Exact extra count and loadout are pending physical recheck."
+      ]
+    },
+    {
+      "pool_id": "ironstrider_ballistarii",
+      "name": "Ironstrider Ballistarii",
+      "physical_bodies": 6,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "WARGEAR_RECHECK_REQUIRED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Ironstrider Ballistarii",
+          "source_unit_instances": 2,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Ironstrider Ballistarius (Twin cognis lascannon)",
+          "physical_bodies": 6,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        }
+      ]
+    },
+    {
+      "pool_id": "kastelan_robots",
+      "name": "Kastelan Robots",
+      "physical_bodies": 4,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "WARGEAR_RECHECK_REQUIRED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Kastelan Robots",
+          "source_unit_instances": 2,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Kastelan Robot",
+          "physical_bodies": 4,
+          "evidence": "SOURCE_MODEL_SELECTION"
+        }
+      ]
+    },
+    {
+      "pool_id": "onager_dunecrawler",
+      "name": "Onager Dunecrawler",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "WARGEAR_RECHECK_REQUIRED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Onager Dunecrawler",
+          "source_unit_instances": 2,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ]
+    },
+    {
+      "pool_id": "sydonian_dragoons_taser_lances",
+      "name": "Sydonian Dragoons with taser lances",
+      "physical_bodies": 4,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "WARGEAR_RECHECK_REQUIRED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Sydonian Dragoons with taser lances",
+          "source_unit_instances": 2,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ],
+      "body_variants": [
+        {
+          "name": "Sydonian Dragoon with taser lance",
+          "physical_bodies": 4,
+          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+        }
+      ]
+    },
+    {
+      "pool_id": "skorpius_dunerider",
+      "name": "Skorpius Dunerider",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_EXPORT_DECLARED",
+        "WARGEAR_RECHECK_REQUIRED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Skorpius Dunerider",
+          "source_unit_instances": 1,
+          "source_id": "NR_ADMECH_2026_09_30"
+        }
+      ]
+    }
+  ],
+  "confirmed_totals": {
+    "source_declared_model_bodies": 131,
+    "source_declared_independent_characters_and_vehicles": 14,
+    "source_declared_unit_bodies": 117,
+    "user_confirmed_additional_princeps_bodies_minimum": 2,
+    "current_known_physical_minimum": 133,
+    "actual_collection_total": "UNKNOWN_GREATER_THAN_OR_EQUAL_TO_133"
+  },
+  "constraints": [
+    {
+      "id": "ADMECH_SOURCE_EXPORT_IS_LOWER_BOUND",
+      "type": "physical_count_lower_bound",
+      "effect": "Do not treat 131 source-declared bodies as the final Adeptus Mechanicus collection total. At least two additional Princeps bodies are user-confirmed, and Rangers/Vanguard may also be undercounted."
+    },
+    {
+      "id": "ADMECH_WARGEAR_NOT_VERIFIED",
+      "type": "configuration_boundary",
+      "effect": "Source-selected weapons/loadouts are retained only as a configuration snapshot. Do not use them as verified physical wargear/component availability until the dedicated loadout audit is completed."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "RANGER_EXTRA_BODY_COUNT",
+      "question": "How many Skitarii Ranger bodies exist beyond the 30 represented in the source export?",
+      "state": "LIKELY_UNDERCOUNT_USER_FLAGGED"
+    },
+    {
+      "id": "VANGUARD_EXTRA_BODY_COUNT",
+      "question": "How many Skitarii Vanguard bodies exist beyond the 20 represented in the source export?",
+      "state": "LIKELY_UNDERCOUNT_USER_FLAGGED"
+    },
+    {
+      "id": "INFILTRATOR_EXTRA_PRINCEPS_COUNT",
+      "question": "How many additional Sicarian Infiltrator Princeps/leader bodies exist outside the 20 source-export bodies, and what are their physical loadouts?",
+      "state": "USER_CONFIRMED_PRESENT_COUNT_UNKNOWN"
+    },
+    {
+      "id": "RUSTSTALKER_EXTRA_PRINCEPS_COUNT",
+      "question": "How many additional Sicarian Ruststalker Princeps/leader bodies exist outside the 30 source-export bodies, and what are their physical loadouts?",
+      "state": "USER_CONFIRMED_PRESENT_COUNT_UNKNOWN"
+    },
+    {
+      "id": "ADMECH_WARGEAR_PHYSICAL_AUDIT",
+      "question": "For every pool, which loadouts are actually assembled, magnetized, interchangeable, or available as loose components?",
+      "state": "PENDING_NEXT_REVISION_STAGE"
+    }
+  ],
+  "notes": [
+    "This is the first Adeptus Mechanicus baseline import and intentionally preserves known uncertainty instead of guessing the final collection size.",
+    "The user explicitly requested a later second-stage physical revision covering extra bodies and actual loadout/wargear variants.",
+    "Roster points, detachment and legality data from the New Recruit export are not physical collection authority."
+  ],
+  "provenance": {
+    "source_files": [
+      {
+        "source_id": "NR_ADMECH_2026_09_30",
+        "uploaded_name": "Коллекция мехов.json",
+        "sha256": "62155c7682df465d64155aeea237d4fe7b9600b14cce397438a72e787891e960",
+        "roster_name": "Коллекция мехов",
+        "generator": "https://newrecruit.eu",
+        "battle_scribe_version": "2.03",
+        "game_system_name": "Warhammer 40,000 11th Edition",
+        "game_system_revision": 14,
+        "catalogue_name": "Imperium - Adeptus Mechanicus",
+        "catalogue_revision": 17,
+        "extracted_scope": "physical model/unit selections only",
+        "source_reported_points": 3530,
+        "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
+      }
+    ],
+    "user_clarifications": [
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_CONFIRMATION",
+        "facts": [
+          "Skitarii Rangers are likely undercounted in the export.",
+          "Skitarii Vanguard are likely undercounted in the export.",
+          "Additional Sicarian Infiltrator leader/Princeps bodies exist outside the export count.",
+          "Additional Sicarian Ruststalker leader/Princeps bodies exist outside the export count.",
+          "Physical loadout/wargear revision will be performed separately after the baseline import."
+        ]
+      }
+    ]
+  }
+}
