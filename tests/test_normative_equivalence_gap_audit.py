@@ -60,6 +60,13 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
         self.assertEqual(core["evidence"]["paragraph_boundary_state"],"PASS_141_RULE_BOUNDARIES")
         self.assertEqual(core["evidence"]["boundary_occurrences"],146)
         self.assertEqual(core["evidence"]["paragraph_candidates"],310)
+        self.assertEqual(core["evidence"]["paragraph_atomization_state"],"PASS_310_PARAGRAPH_ATOMS")
+        self.assertEqual(core["evidence"]["paragraph_atoms"],310)
+        self.assertEqual(core["evidence"]["paragraph_atom_classification_counts"],{
+            "REPEATED_OCCURRENCE_PARAGRAPH_VARIANT":10,
+            "SINGLE_OCCURRENCE_PARAGRAPH":300,
+        })
+        self.assertEqual(core["evidence"]["paragraph_range_validation_failures"],0)
         self.assertEqual(core["evidence"]["repeated_boundary_variants"],5)
         self.assertEqual(core["evidence"]["paragraph_atomization_state"],"PASS_310_PARAGRAPH_ATOMS")
         self.assertEqual(core["evidence"]["paragraph_atoms"],310)
