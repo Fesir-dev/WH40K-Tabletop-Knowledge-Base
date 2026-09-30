@@ -66,6 +66,7 @@
               "OBLIGATION",
               "PERMISSION",
               "DEFINITION",
+              "MODIFICATION_OR_REPLACEMENT",
               "PROCEDURE_OR_SEQUENCE",
               "CONDITION_OR_TRIGGER",
               "REFERENCE_OR_CROSS_REFERENCE",
