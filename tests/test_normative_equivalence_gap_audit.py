@@ -44,7 +44,7 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
     def test_public_core_rules_fingerprint_and_section_structure_are_closed(self):
         gaps={x["id"]:x for x in self.generated["gaps"]}
         core=gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]
-        self.assertEqual(core["state"],"PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSED_SEMANTIC_REVIEW_PENDING")
+        self.assertEqual(core["state"],"PARAGRAPH_SEMANTIC_REVIEW_CLOSED_AST_READINESS_PENDING")
         self.assertEqual(core["evidence"]["official_fingerprint_state"],"PASS")
         self.assertEqual(core["evidence"]["section_structure_state"],"PASS_RULE_REFERENCE_FAMILIES_01_24")
         self.assertEqual(core["evidence"]["rule_reference_families"],24)
@@ -86,6 +86,35 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
         self.assertEqual(core["evidence"]["paragraphs_with_semantic_signals"],200)
         self.assertEqual(core["evidence"]["paragraphs_without_semantic_signals"],110)
         self.assertEqual(core["evidence"]["paragraph_semantic_hashes_reproduced"],310)
+        self.assertEqual(core["evidence"]["paragraph_semantic_review_state"],"PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED")
+        self.assertEqual(core["evidence"]["paragraph_semantic_review_state_counts"],{
+            "AXIS_PROFILE_READY":156,
+            "MULTI_MODAL_REVIEW_REQUIRED":42,
+            "NO_STRONG_SIGNAL_REVIEW_REQUIRED":112,
+        })
+        self.assertEqual(core["evidence"]["paragraph_semantic_modal_axis_counts"],{
+            "MULTI_MODAL":42,
+            "NONE":173,
+            "OBLIGATION":17,
+            "PERMISSION":67,
+            "PROHIBITION":11,
+        })
+        self.assertEqual(core["evidence"]["paragraph_semantic_axis_profile_ready"],156)
+        self.assertEqual(core["evidence"]["paragraph_semantic_review_required"],154)
+        self.assertEqual(core["evidence"]["paragraph_semantic_mixed_decomposition"],{
+            "axis_profile_ready":92,
+            "multi_modal_review_required":42,
+            "no_strong_signal_review_required":0,
+        })
+        self.assertEqual(core["evidence"]["paragraph_semantic_unclassified_decomposition"],{
+            "signal_free":110,
+            "weak_only":2,
+            "review_required":112,
+        })
+        self.assertEqual(core["evidence"]["paragraph_semantic_repeated_review_states"],{
+            "AXIS_PROFILE_READY":4,
+            "MULTI_MODAL_REVIEW_REQUIRED":6,
+        })
         self.assertEqual(core["evidence"]["repeated_boundary_variants"],5)
         self.assertEqual(core["evidence"]["paragraph_atomization_state"],"PASS_310_PARAGRAPH_ATOMS")
         self.assertEqual(core["evidence"]["paragraph_atoms"],310)
@@ -135,8 +164,8 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
 
     def test_next_pipeline_does_not_promise_full_normalization(self):
         conclusion=self.generated["conclusion"]
-        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1")
-        self.assertIn("64 HIGH",conclusion["expected_effect"])
+        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_SEMANTIC_AST_READINESS_V1")
+        self.assertIn("156 are AXIS_PROFILE_READY",conclusion["expected_effect"])
 
 
 if __name__=="__main__":
