@@ -1154,7 +1154,10 @@
     "nurgle_aligned_bodies_including_existing_daemon_prince": 18,
     "khorne_newly_confirmed_bodies_2026_09_30": 7,
     "khorne_aligned_bodies_in_chaos_daemons_inventory": 46,
-    "khorne_styled_bodies_across_world_eaters_and_chaos_daemons": 47
+    "khorne_styled_bodies_across_world_eaters_and_chaos_daemons": 47,
+    "khorne_physical_reconciliation_state": "CLOSED",
+    "khorne_current_non_legends_datasheet_roles_representable": 12,
+    "khorne_shared_role_constraint_count": 1
   },
   "constraints": [
     {
