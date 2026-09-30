@@ -951,6 +951,15 @@
       "normative_gap_audit_run": 36733041159,
       "repository_ci_run": 36733049749,
       "result": "SUCCESS"
+    },
+    "merged_commit": "005e040f1d1393f9cfd369a9b300c03bb99364ba",
+    "latest_validation": {
+      "head": "3c5a708abaa3e88b3f62005f5b7090b82378e8ed",
+      "semantic_validation_workflow_run": 36733351388,
+      "normative_gap_audit_run": 36733351608,
+      "repository_ci_run": 36733351431,
+      "overlap_regression_run": 36733351472,
+      "result": "SUCCESS"
     }
   }
 }
