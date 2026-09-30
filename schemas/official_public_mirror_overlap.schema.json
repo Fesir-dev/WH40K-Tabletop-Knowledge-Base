@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/official_public_mirror_overlap.schema.json",
+  "title": "Official public to current mirror semantic overlap audit",
+  "type": "object",
+  "required": ["schema_version","status","as_of","milestone","authority_boundary","source_state","comparison_contract","summary","by_kind","documents","promotion_policy"],
+  "properties": {
+    "schema_version": {"type":"string"},
+    "status": {"enum":["PASS","SOURCE_DRIFT","FAIL"]},
+    "as_of": {"type":"string"},
+    "milestone": {"const":"OFFICIAL_PUBLIC_RULES_MIRROR_OVERLAP_AUDIT"},
+    "authority_boundary": {
+      "type":"object",
+      "required":["normative_authority","current_mirror","full_codex_app_equivalence_claimed","faction_pack_is_full_codex_replacement"],
+      "properties":{
+        "normative_authority":{"const":"GAMES_WORKSHOP"},
+        "current_mirror":{"const":"WAHAPEDIA_11E"},
+        "full_codex_app_equivalence_claimed":{"const":false},
+        "faction_pack_is_full_codex_replacement":{"const":false}
+      },
+      "additionalProperties":true
+    },
+    "source_state":{"type":"object"},
+    "comparison_contract":{
+      "type":"object",
+      "required":["normalization_version","eligible_exact_classifications","promotable_provenance_scopes","copyright_policy"],
+      "properties":{
+        "normalization_version":{"const":"OFFICIAL_MIRROR_OVERLAP_NFKC_ALNUM_V1"},
+        "eligible_exact_classifications":{"type":"array","items":{"type":"string"}},
+        "promotable_provenance_scopes":{"type":"array","items":{"type":"string"}},
+        "copyright_policy":{"type":"string"}
+      },
+      "additionalProperties":true
+    },
+    "summary":{
+      "type":"object",
+      "required":["official_documents","core_rules","faction_packs","mirror_units","exact_public_overlap_units","promotable_scoped_units","unscoped_exact_units","no_exact_overlap_units"],
+      "properties":{
+        "official_documents":{"type":"integer","minimum":1},
+        "core_rules":{"type":"integer","minimum":1},
+        "faction_packs":{"type":"integer","minimum":1},
+        "mirror_units":{"type":"integer","minimum":0},
+        "exact_public_overlap_units":{"type":"integer","minimum":0},
+        "promotable_scoped_units":{"type":"integer","minimum":0},
+        "unscoped_exact_units":{"type":"integer","minimum":0},
+        "no_exact_overlap_units":{"type":"integer","minimum":0}
+      },
+      "additionalProperties":true
+    },
+    "by_kind":{"type":"object"},
+    "documents":{"type":"array","items":{"type":"object"}},
+    "matches":{"type":"array","items":{"type":"object"}},
+    "promotion_policy":{"type":"object"}
+  },
+  "additionalProperties":true
+}
