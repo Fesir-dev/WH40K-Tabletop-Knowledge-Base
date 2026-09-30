@@ -88,3 +88,20 @@ The Slaanesh import contributes **155 unique physical bodies/models** beyond the
 Current normalized Chaos Daemons collection total: **316 physical bodies/models**.
 
 The Slaanesh physical-count reconciliation is closed. The overall Chaos Daemons domain remains provisional only because build state/magnetization for older Khorne/Tzeentch pools has not yet been fully reconciled.
+
+
+## Nurgle collection — 2026-09-30
+
+Direct user-confirmed physical counts:
+
+- Poxbringer — **1**
+- Beasts of Nurgle — **4**
+- Nurglings — **12**
+
+These 17 models are additional to the already-recorded **1 wingless Nurgle-styled Daemon Prince**.
+
+Current Nurgle-aligned physical count in this domain: **18**.
+
+Current normalized Chaos Daemons collection total: **333 physical bodies/models**.
+
+Build state/magnetization for these three newly enumerated Nurgle pools was not separately stated and is therefore not inferred.
