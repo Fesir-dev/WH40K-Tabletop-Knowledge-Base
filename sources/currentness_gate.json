@@ -336,7 +336,9 @@
       "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json",
       "atoms": 141,
       "families": 24,
-      "authority_boundary": "Numbered-reference identity/heading provenance only; paragraph prose remains external and full faction/app semantics are not promoted."
+      "authority_boundary": "Numbered-reference identity/heading provenance only; paragraph prose remains external and full faction/app semantics are not promoted.",
+      "heading_recovery_gaps": 0,
+      "atoms_with_cross_references": 40
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."
