@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.1",
+  "inventory_id": "imperial_knights_personal",
+  "faction": "Imperial Knights",
+  "checkpoint": "2026-09-30",
+  "status": "CURRENT_VERIFIED",
+  "revision_state": "PHYSICAL_BASELINE_DIRECT_USER_CONFIRMATION",
+  "physical_pools": [
+    {
+      "pool_id": "armiger_chassis",
+      "name": "Armiger chassis",
+      "physical_bodies": 2,
+      "status": [
+        "DIRECT_USER_CONFIRMED",
+        "FULLY_MAGNETIZED",
+        "MULTI_ROLE_SHARED_CHASSIS"
+      ],
+      "roles": [
+        {
+          "role_family": "Armiger",
+          "role_assignment": "INTERCHANGEABLE_BY_MAGNETIZED_LOADOUT",
+          "note": "Do not count alternate Armiger configurations as additional physical models."
+        }
+      ],
+      "physical_configuration": {
+        "chassis": 2,
+        "weapon_mounting": "MAGNETIZED",
+        "loadout_coverage": "ALL_STANDARD_RETAINED_ARMIGER_KIT_OPTIONS_PER_USER_CONFIRMATION",
+        "current_fixed_role": null
+      },
+      "notes": [
+        "Two distinct Armiger physical models are owned.",
+        "Both are magnetized and can be reconfigured across the user's retained Armiger weapon options.",
+        "Specific current datasheet legality/role names are intentionally kept outside the physical inventory layer."
+      ]
+    },
+    {
+      "pool_id": "questoris_scale_chassis",
+      "name": "Questoris-scale Knight chassis",
+      "physical_bodies": 2,
+      "status": [
+        "DIRECT_USER_CONFIRMED",
+        "FULLY_MAGNETIZED_PRIMARY_WEAPON_SYSTEM",
+        "MAGNETIZED_CARAPACE_OPTIONS",
+        "KIT_PROVENANCE_USER_RECOLLECTION"
+      ],
+      "roles": [
+        {
+          "role_family": "Questoris-pattern Imperial Knight",
+          "role_assignment": "INTERCHANGEABLE_BY_MAGNETIZED_LOADOUT",
+          "note": "Concrete current datasheet role is derived later from the equipped legal weapon combination; alternate roles do not create extra physical bodies."
+        }
+      ],
+      "physical_configuration": {
+        "chassis": 2,
+        "kit_origin_recollection": {
+          "description": "User recalls buying two Knight Warden boxes.",
+          "certainty": "USER_RECOLLECTION_NOT_INDEPENDENTLY_VERIFIED"
+        },
+        "weapon_mounting": "MAGNETIZED",
+        "component_sets": 2,
+        "confirmed_built_weapon_components": [
+          {
+            "normalized_name": "Avenger gatling cannon",
+            "raw_user_description": "gatling",
+            "state": "ASSEMBLED_MAGNETIZED"
+          },
+          {
+            "normalized_name": "Reaper chainsword",
+            "raw_user_description": "пиломеч",
+            "state": "ASSEMBLED_MAGNETIZED"
+          },
+          {
+            "normalized_name": "Thunderstrike gauntlet",
+            "raw_user_description": "кулак",
+            "state": "ASSEMBLED_MAGNETIZED"
+          },
+          {
+            "normalized_name": "Thermal cannon",
+            "raw_user_description": "мельта гигантская",
+            "state": "ASSEMBLED_MAGNETIZED"
+          },
+          {
+            "normalized_name": null,
+            "raw_user_description": "пушка длинная",
+            "state": "ASSEMBLED_MAGNETIZED",
+            "identity_state": "EXACT_CANONICAL_NAME_NOT_RECHECKED"
+          }
+        ],
+        "retained_additional_primary_weapon_options": {
+          "state": "AVAILABLE_FOR_COMPLETION_AND_MAGNETIZATION",
+          "scope": "User states two retained sets of the remaining weapon/loadout components exist.",
+          "exact_component_manifest": "NOT_INDIVIDUALLY_RECOUNTED"
+        },
+        "carapace_components": [
+          {
+            "normalized_name": null,
+            "raw_user_description": "ракетная установка",
+            "state": "ASSEMBLED_MAGNETIZED",
+            "identity_state": "EXACT_SUBTYPE_NOT_RECHECKED"
+          },
+          {
+            "normalized_name": null,
+            "raw_user_description": "ПВО",
+            "state": "ASSEMBLED_MAGNETIZED",
+            "identity_state": "EXACT_SUBTYPE_NOT_RECHECKED"
+          }
+        ]
+      },
+      "notes": [
+        "Two distinct medium/Questoris-scale Knight physical bodies are owned.",
+        "The major weapon system is magnetized rather than tied to one permanent Knight datasheet.",
+        "User reports two sets of loadout parts from the two kits; the listed weapons are definitely assembled, while remaining retained options can be completed/magnetized if needed.",
+        "Exact names for the user-described long gun and carapace rocket/anti-air modules are deliberately left unresolved rather than guessed."
+      ]
+    }
+  ],
+  "component_pools": {
+    "armiger_weapon_components": {
+      "owner_pool": "armiger_chassis",
+      "state": "MAGNETIZED_AVAILABLE",
+      "coverage": "ALL_STANDARD_RETAINED_ARMIGER_KIT_OPTIONS_PER_USER_CONFIRMATION"
+    },
+    "questoris_weapon_components": {
+      "owner_pool": "questoris_scale_chassis",
+      "state": "MAGNETIZED_OR_RETAINED_FOR_MAGNETIZATION",
+      "component_sets": 2,
+      "note": "Two-kit component pool. Confirmed assembled weapons are listed on the chassis pool; remaining parts are retained but not individually recounted."
+    }
+  },
+  "constraints": [
+    {
+      "id": "ARMIGER_SHARED_CHASSIS",
+      "type": "mutually_exclusive_roles",
+      "effect": "At most two Armiger-role models can exist simultaneously because all Armiger configurations share two physical chassis."
+    },
+    {
+      "id": "QUESTORIS_SHARED_CHASSIS",
+      "type": "mutually_exclusive_roles",
+      "effect": "At most two Questoris-role models can exist simultaneously because all alternate weapon configurations share two physical chassis."
+    },
+    {
+      "id": "COLLECTION_RULES_BOUNDARY",
+      "type": "physical_vs_rules",
+      "effect": "This inventory establishes ownership and component availability only. Current ally limits, datasheet names, legal weapon combinations and points must be resolved from the current rules/points layer."
+    }
+  ],
+  "confirmed_totals": {
+    "armiger_bodies": 2,
+    "questoris_scale_bodies": 2,
+    "total_imperial_knight_bodies": 4
+  },
+  "open_questions": [],
+  "provenance": {
+    "user_clarifications": [
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_CONFIRMATION",
+        "facts": [
+          "Two Armiger models are owned and fully magnetized across the user's available weapon/loadout options.",
+          "Two medium/Questoris-scale Knight models are owned; user recalls buying two Warden boxes.",
+          "Two sets of Knight weapon options were retained and magnetized or kept available for completion/magnetization.",
+          "Definitely assembled/magnetized Knight weapons include a gatling cannon, chainsword, gauntlet/fist, giant melta-type cannon and a long gun.",
+          "Both rocket-type and anti-air carapace modules are assembled and magnetized.",
+          "Alternate loadouts share the same four physical Knight bodies and must not be double-counted."
+        ]
+      }
+    ]
+  }
+}
