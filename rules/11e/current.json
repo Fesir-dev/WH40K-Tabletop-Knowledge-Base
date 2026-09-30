@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.9",
+  "schema_version": "3.10",
   "edition": "11e",
   "repository_checkpoint": "2026-09-30",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,14 +14,14 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
+      "state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
       "verified_at": "2026-09-30",
       "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "PARAGRAPH_IDENTITIES_COMPLETE_SEMANTIC_CLASSIFICATION_PENDING",
+      "normative_structured_normalization": "PARAGRAPH_SEMANTIC_ROLES_COMPLETE_AST_READINESS_PENDING",
       "public_overlap": {
         "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
         "exact_core_mirror_units": 21,
@@ -80,6 +80,36 @@
           "paragraph_semantic_ast_complete": false,
           "condition_effect_parsing_complete": false,
           "rule_interaction_graph_complete": false
+        },
+        "paragraph_semantic_classification": {
+          "state": "PASS_310_PARAGRAPHS_CLASSIFIED",
+          "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
+          "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
+          "paragraphs": 310,
+          "paragraphs_with_signals": 200,
+          "paragraphs_without_signals": 110,
+          "role_counts": {
+            "CONDITION_OR_TRIGGER": 27,
+            "MIXED": 138,
+            "MODIFICATION_OR_REPLACEMENT": 1,
+            "OBLIGATION": 1,
+            "PERMISSION": 20,
+            "PROCEDURE_OR_SEQUENCE": 9,
+            "PROHIBITION": 4,
+            "UNCLASSIFIED": 110
+          },
+          "confidence_counts": {
+            "HIGH": 62,
+            "MIXED": 138,
+            "NONE": 110
+          },
+          "mixed_paragraphs": 138,
+          "unclassified_paragraphs": 110,
+          "repeated_variant_paragraphs": 10,
+          "paragraph_hashes_reproduced_from_verified_pdf": 310,
+          "semantic_ast_complete": false,
+          "condition_effect_ast_complete": false,
+          "rule_interaction_graph_complete": false
         }
       }
     },
@@ -124,7 +154,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+  "next_milestone": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -587,5 +617,44 @@
       "repository_ci_run": 36703546698,
       "result": "SUCCESS"
     }
+  },
+  "core_rule_paragraph_semantic_classification": {
+    "state": "PASS_310_PARAGRAPHS_CLASSIFIED",
+    "as_of": "2026-09-30",
+    "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
+    "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
+    "model": "docs/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_MODEL.md",
+    "schema": "schemas/core_rule_paragraph_semantic_classification.schema.json",
+    "tool": "tools/classify_core_rule_paragraph_semantics.py",
+    "workflow": ".github/workflows/core-rule-paragraph-semantic-classification.yml",
+    "paragraphs": 310,
+    "role_counts": {
+      "CONDITION_OR_TRIGGER": 27,
+      "MIXED": 138,
+      "MODIFICATION_OR_REPLACEMENT": 1,
+      "OBLIGATION": 1,
+      "PERMISSION": 20,
+      "PROCEDURE_OR_SEQUENCE": 9,
+      "PROHIBITION": 4,
+      "UNCLASSIFIED": 110
+    },
+    "confidence_counts": {
+      "HIGH": 62,
+      "MIXED": 138,
+      "NONE": 110
+    },
+    "paragraphs_with_signals": 200,
+    "paragraphs_without_signals": 110,
+    "mixed_paragraphs": 138,
+    "unclassified_paragraphs": 110,
+    "repeated_variant_paragraphs": 10,
+    "repeated_variant_role_counts": {
+      "CONDITION_OR_TRIGGER": 2,
+      "MIXED": 8
+    },
+    "source_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "semantic_ast_complete": false,
+    "current_normalized_factions_change": 0,
+    "authority_rule": "Paragraph roles are deterministic lexical/structural classifications over verified ranges. MIXED and UNCLASSIFIED are valid fail-closed states; classification does not establish condition/effect AST, interactions, repeated-variant equivalence or Codex/app equivalence."
   }
 }
