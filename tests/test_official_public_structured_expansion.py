@@ -33,7 +33,7 @@ class StructuredExpansionRepositoryTests(unittest.TestCase):
         self.assertEqual(layer["current_normalized_factions_change"],0)
         self.assertEqual(current["next_milestone"],"CORE_RULE_DIRECT_MODAL_AST_PILOT_V1")
 
-        self.assertEqual(coverage["status"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1_COMPLETE")
+        self.assertEqual(coverage["status"],"CORE_RULE_SEMANTIC_AST_READINESS_V1_COMPLETE")
         self.assertEqual(coverage["global"]["current_normalized_factions"],0)
         self.assertEqual(coverage["global"]["full_normative_semantic_factions"],0)
         self.assertEqual(coverage["global"]["official_public_residual_promoted_units"],0)
