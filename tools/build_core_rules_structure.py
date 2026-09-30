@@ -39,7 +39,9 @@ def sha256_text(value: str) -> str:
 
 def clean_short_label(value: str | None) -> str:
     value = unicodedata.normalize("NFKC", value or "")
-    value = value.replace("\u00ad", "")
+    value = value.replace("\u00ad", "").replace("\ufffd", " ")
+    value = "".join(" " if unicodedata.category(ch).startswith("C") else ch for ch in value)
+    value = re.sub(r"[•·⋅…]+", " ", value)
     value = " ".join(value.split()).strip()
     return value[:160]
 
@@ -185,6 +187,55 @@ def fallback_sections(page_count: int, page_semantic_sha: list[str], candidates:
     return assign_ranges(rows, page_count, page_semantic_sha, candidates, outline_source=False)
 
 
+RULE_REF_RE = re.compile(r"\b(\d{2})\.(\d{2})\b")
+
+
+def build_rule_reference_families(candidates: dict[int, list[str]], page_count: int, page_semantic_sha: list[str]) -> list[dict]:
+    raw: dict[str, dict] = {}
+    for page, labels in candidates.items():
+        for label in labels:
+            refs = [f"{a}.{b}" for a, b in RULE_REF_RE.findall(label)]
+            for ref in refs:
+                family = ref.split(".", 1)[0]
+                row = raw.setdefault(family, {"pages": set(), "refs": set(), "labels": []})
+                row["pages"].add(page)
+                row["refs"].add(ref)
+                if len(row["labels"]) < 12:
+                    row["labels"].append({"page": page, "label": label, "label_sha256": sha256_text(label)})
+
+    ordered = sorted(
+        (
+            {
+                "family_id": family,
+                "first_page": min(data["pages"]),
+                "observed_pages": sorted(data["pages"]),
+                "refs": sorted(data["refs"]),
+                "labels": data["labels"],
+            }
+            for family, data in raw.items()
+        ),
+        key=lambda x: (x["first_page"], int(x["family_id"])),
+    )
+
+    out = []
+    for idx, row in enumerate(ordered):
+        start = row["first_page"]
+        end = page_count
+        if idx + 1 < len(ordered):
+            end = max(start, ordered[idx + 1]["first_page"] - 1)
+        out.append({
+            "family_id": row["family_id"],
+            "section_key": f"rule-family-{row['family_id']}--p{start}",
+            "page_start": start,
+            "page_end": end,
+            "page_range_sha256": sha256_text("\n".join(page_semantic_sha[start - 1:end])),
+            "observed_heading_pages": row["observed_pages"],
+            "rule_refs": row["refs"],
+            "anchor_labels": row["labels"][:6],
+        })
+    return out
+
+
 def build_snapshot(as_of: str, cache_dir: Path, root: Path = ROOT) -> dict:
     try:
         from pypdf import PdfReader
@@ -245,6 +296,7 @@ def build_snapshot(as_of: str, cache_dir: Path, root: Path = ROOT) -> dict:
         mode = "HEADING_CANDIDATE_PRIMARY_TRIVIAL_OUTLINE"
         hierarchy_complete = False
 
+    rule_families = build_rule_reference_families(candidates, len(page_texts), page_sha)
     depth_counts = Counter(str(x["depth"]) for x in sections)
     pages_represented = sorted({p for s in sections for p in range(s["page_start"], s["page_end"] + 1)})
     heading_pages = sum(bool(v) for v in candidates.values())
@@ -271,6 +323,7 @@ def build_snapshot(as_of: str, cache_dir: Path, root: Path = ROOT) -> dict:
         },
         "structure_mode": mode,
         "sections": sections,
+        "rule_reference_families": rule_families,
         "summary": {
             "sections": len(sections),
             "root_sections": sum(x["depth"] == 0 for x in sections),
@@ -279,10 +332,13 @@ def build_snapshot(as_of: str, cache_dir: Path, root: Path = ROOT) -> dict:
             "pages_represented": len(pages_represented),
             "heading_candidate_pages": heading_pages,
             "heading_candidate_count": sum(len(v) for v in candidates.values()),
+            "rule_reference_families": len(rule_families),
+            "rule_reference_count": sum(len(x["rule_refs"]) for x in rule_families),
         },
         "authority_boundary": {
             "section_level_structure_complete_for_public_pdf": hierarchy_complete,
             "flat_heading_map_complete_for_public_pdf": True,
+            "rule_reference_family_map_complete_for_detected_headings": bool(rule_families),
             "hierarchical_structure_complete": hierarchy_complete,
             "paragraph_level_rules_ast_complete": False,
             "app_codex_equivalence": "NOT_CLAIMED",
@@ -342,6 +398,16 @@ def main() -> int:
                 "children": len(x["children"]),
             }
             for x in snapshot["sections"] if x["depth"] == 0
+        ],
+        "rule_reference_families": [
+            {
+                "family_id": x["family_id"],
+                "page_start": x["page_start"],
+                "page_end": x["page_end"],
+                "rule_refs": len(x["rule_refs"]),
+                "anchor_labels": x["anchor_labels"][:2],
+            }
+            for x in snapshot["rule_reference_families"]
         ],
         "authority_boundary": snapshot["authority_boundary"],
     }
