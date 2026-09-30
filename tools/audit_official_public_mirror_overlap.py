@@ -11,6 +11,7 @@ import re
 import sys
 import unicodedata
 import urllib.request
+import time
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -95,10 +96,26 @@ def resolve_current_wahapedia_root(root: Path = ROOT) -> Path:
     return wroot
 
 
-def fetch(url: str, timeout: int = 120) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=timeout) as response:
-        return response.read()
+def fetch(url: str, timeout: int = 45, attempts: int = 4) -> bytes:
+    last_exc = None
+    for attempt in range(1, attempts + 1):
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": UA,
+                "Accept": "text/plain,text/csv,*/*",
+                "Connection": "close",
+            },
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as response:
+                return response.read()
+        except Exception as exc:
+            last_exc = exc
+            if attempt >= attempts:
+                break
+            time.sleep(min(2 ** (attempt - 1), 8))
+    raise RuntimeError(f"Fetch failed after {attempts} attempts: {url}: {last_exc}")
 
 
 def parse_pipe_csv(raw: bytes) -> list[dict]:
