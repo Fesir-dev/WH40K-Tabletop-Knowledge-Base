@@ -1,0 +1,124 @@
+name: Core rule paragraph boundaries
+
+on:
+  push:
+    paths:
+      - "tools/build_core_rule_paragraph_boundaries.py"
+      - "tests/test_core_rule_paragraph_boundaries.py"
+      - "schemas/core_rule_paragraph_boundaries.schema.json"
+      - "docs/CORE_RULE_PARAGRAPH_BOUNDARY_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - ".github/workflows/core-rule-paragraph-boundaries.yml"
+  pull_request:
+    paths:
+      - "tools/build_core_rule_paragraph_boundaries.py"
+      - "tests/test_core_rule_paragraph_boundaries.py"
+      - "schemas/core_rule_paragraph_boundaries.schema.json"
+      - "docs/CORE_RULE_PARAGRAPH_BOUNDARY_MODEL.md"
+      - "rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json"
+      - "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+      - ".github/workflows/core-rule-paragraph-boundaries.yml"
+  schedule:
+    - cron: "43 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  boundaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned PDF extractor
+        run: python -m pip install --disable-pip-version-check pypdf==5.9.0
+
+      - name: Compile and run boundary contracts
+        run: |
+          python -m compileall -q tools/build_core_rule_paragraph_boundaries.py tests/test_core_rule_paragraph_boundaries.py
+          python -m unittest tests.test_core_rule_paragraph_boundaries -v
+
+      - uses: actions/cache@v4
+        with:
+          path: .cache/official-public-rules
+          key: official-public-rules-${{ hashFiles('sources/discoveries/gw_public_rules_surface_2026-09-29.json', 'sources/snapshots/gw_11e_official_assets_2026-09-29.json') }}
+
+      - name: Build verified Core rule boundaries
+        run: |
+          python tools/build_core_rule_paragraph_boundaries.py \
+            --as-of 2026-09-30 \
+            --output rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json \
+            --summary-output reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json
+
+      - name: Validate boundary authority and copyright contract
+        run: |
+          python - <<'PY'
+          import json
+          p='rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json'
+          r=json.load(open(p,encoding='utf-8'))
+          assert r['status']=='PASS'
+          assert r['authority']=='GAMES_WORKSHOP_OFFICIAL'
+          assert r['summary']['rules']==141
+          assert r['summary']['families']==24
+          assert r['summary']['heading_line_recovery_gaps']==0
+          assert r['summary']['empty_body_boundaries']==0
+          assert r['summary']['rules_with_multiple_occurrences']==5
+          assert r['summary']['all_rules_have_nonempty_boundaries'] is True
+          assert r['summary']['paragraph_candidates']>0
+          assert r['source_verification']['binary_sha256_match'] is True
+          assert r['source_verification']['page_semantic_fingerprints_match']==88
+          assert r['source_verification']['document_semantic_sha256_match'] is True
+          assert r['authority_boundary']['rule_body_boundary_complete'] is True
+          assert r['authority_boundary']['paragraph_level_rules_ast_complete'] is False
+          assert r['authority_boundary']['current_normalized_factions_change']==0
+          assert len({x['rule_ref'] for x in r['rules']})==141
+          assert all(x['occurrences'] for x in r['rules'])
+          assert all(
+              len(y.get('body_semantic_sha256') or '')==64
+              for x in r['rules'] for y in x['occurrences']
+          )
+          forbidden={'text','description','rules_text','official_text','mirror_text','page_text','prose','paragraph_body'}
+          def walk(v):
+              if isinstance(v,dict):
+                  for k,x in v.items():
+                      assert k not in forbidden, k
+                      walk(x)
+              elif isinstance(v,list):
+                  for x in v: walk(x)
+          walk(r)
+          print(json.dumps(r['summary'],indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-rule-paragraph-boundaries-${{ github.run_id }}
+          path: |
+            reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json
+            rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json
+          if-no-files-found: error
+
+      - name: Commit generated boundaries on development branch
+        if: github.event_name == 'push' && github.ref_name != 'main' && github.actor != 'github-actions[bot]'
+        run: |
+          if [ -z "$(git status --porcelain -- reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json)" ]; then
+            echo "Core rule boundaries already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json
+          git add rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json
+          git commit -m "Checkpoint generated Core rule boundaries"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Assert scheduled committed reproducibility
+        if: github.event_name == 'schedule'
+        run: git diff --exit-code -- reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json
