@@ -968,6 +968,144 @@
       "notes": [
         "User confirmed ownership of exactly twelve Nurgling bases/models on 2026-09-30."
       ]
+    },
+    {
+      "pool_id": "bloodmaster",
+      "name": "Bloodmaster",
+      "physical_bodies": 2,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT",
+        "BUILD_STATE_NOT_STATED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Bloodmaster",
+          "source_unit_instances": 2,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        }
+      ],
+      "alignment": "Khorne",
+      "notes": [
+        "User confirmed ownership of exactly two Bloodmaster models on 2026-09-30."
+      ]
+    },
+    {
+      "pool_id": "karanak",
+      "name": "Karanak",
+      "physical_bodies": 1,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT",
+        "BUILD_STATE_NOT_STATED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Karanak",
+          "source_unit_instances": 1,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        }
+      ],
+      "alignment": "Khorne",
+      "notes": [
+        "User confirmed ownership of exactly one Karanak model on 2026-09-30."
+      ]
+    },
+    {
+      "pool_id": "blood_throne_skull_cannon_shared_chassis",
+      "name": "Rendmaster on Blood Throne / Skull Cannon shared chassis",
+      "physical_bodies": 1,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT",
+        "MAGNETIZED_SHARED_ROLE",
+        "MUTUALLY_EXCLUSIVE_CONFIGURATION"
+      ],
+      "roles": [
+        {
+          "role": "Rendmaster on Blood Throne",
+          "simultaneous_capacity": 1,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        },
+        {
+          "role": "Skull Cannon",
+          "simultaneous_capacity": 1,
+          "shares_body_with": "same magnetized chariot chassis",
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        }
+      ],
+      "alignment": "Khorne",
+      "physical_configuration": {
+        "chassis": 1,
+        "magnetized": true,
+        "immediate_role_interchangeability": [
+          "Rendmaster on Blood Throne",
+          "Skull Cannon"
+        ],
+        "simultaneous_role_count": 1
+      },
+      "notes": [
+        "One physical chariot chassis is owned.",
+        "The chassis is magnetized and can be configured as either Rendmaster on Blood Throne or Skull Cannon.",
+        "The two datasheet roles are mutually exclusive and must never be double-counted as two physical models."
+      ]
+    },
+    {
+      "pool_id": "skullmaster",
+      "name": "Skullmaster",
+      "physical_bodies": 1,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT",
+        "BUILD_STATE_NOT_STATED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Skullmaster",
+          "source_unit_instances": 1,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        }
+      ],
+      "alignment": "Khorne",
+      "notes": [
+        "User confirmed ownership of exactly one Skullmaster model on 2026-09-30."
+      ]
+    },
+    {
+      "pool_id": "skulltaker",
+      "name": "Skulltaker",
+      "physical_bodies": 1,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT",
+        "BUILD_STATE_NOT_STATED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Skulltaker",
+          "source_unit_instances": 1,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        }
+      ],
+      "alignment": "Khorne",
+      "notes": [
+        "User confirmed ownership of exactly one Skulltaker model on 2026-09-30."
+      ]
+    },
+    {
+      "pool_id": "skull_altar",
+      "name": "Skull Altar",
+      "physical_bodies": 1,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT",
+        "BUILD_STATE_NOT_STATED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Skull Altar",
+          "source_unit_instances": 1,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        }
+      ],
+      "alignment": "Khorne",
+      "notes": [
+        "User confirmed ownership of exactly one Skull Altar model on 2026-09-30."
+      ]
     }
   ],
   "confirmed_totals": {
@@ -976,21 +1114,30 @@
     "tzeentch_aligned_source_bodies": 117,
     "undivided_source_bodies": 1,
     "user_confirmed_supplemental_model_bodies": 3,
-    "normalized_physical_bodies": 333,
+    "normalized_physical_bodies": 340,
     "daemon_prince_models_in_this_inventory": 4,
     "daemon_prince_models_across_world_eaters_and_daemons": 5,
     "source_declared_model_entries_across_exports": 249,
     "slaanesh_source_declared_model_entries": 91,
     "slaanesh_direct_total_owned_including_sprues_excluding_belakor_overlap": 155,
-    "actual_normalized_physical_bodies": 333,
+    "actual_normalized_physical_bodies": 340,
     "slaanesh_unique_physical_bodies": 155,
     "daemonette_owned_total": 110,
     "seeker_owned_total": 30,
     "slaanesh_keeper_scale_bodies": 2,
     "nurgle_additional_bodies_2026_09_30": 17,
-    "nurgle_aligned_bodies_including_existing_daemon_prince": 18
+    "nurgle_aligned_bodies_including_existing_daemon_prince": 18,
+    "khorne_newly_confirmed_bodies_2026_09_30": 7,
+    "khorne_aligned_bodies_in_chaos_daemons_inventory": 46,
+    "khorne_styled_bodies_across_world_eaters_and_chaos_daemons": 47
   },
-  "constraints": [],
+  "constraints": [
+    {
+      "id": "KHORNE_BLOOD_THRONE_SKULL_CANNON_SHARED_CHASSIS",
+      "type": "mutually_exclusive_roles",
+      "effect": "The single magnetized chariot chassis can instantiate either Rendmaster on Blood Throne or Skull Cannon, never both simultaneously."
+    }
+  ],
   "open_questions": [
     {
       "id": "DAEMON_BUILD_STATE",
@@ -1001,6 +1148,11 @@
       "id": "TITANICUS_CONTAINER_ONLY",
       "question": "The Tzeentch daemon export used the Titanicus Traitoris catalogue as a container. No Titanicus physical models are inferred from that catalogue choice.",
       "state": "RESOLVED_BY_IMPORT_POLICY"
+    },
+    {
+      "id": "KHORNE_PHYSICAL_RECONCILIATION_REMAINDER",
+      "question": "Confirm whether Bloodletters 20, Bloodcrushers 6 and Flesh Hounds 10 are complete physical totals; record Bloodthirster build/magnetization state; record the separate Khorne Daemon Prince build state in world_eaters; confirm whether any further Khorne daemon bodies/legacy-AoS models remain outside the current inventory.",
+      "state": "USER_CONFIRMATION_REQUIRED"
     }
   ],
   "notes": [
@@ -1011,7 +1163,8 @@
     "Physical styling and current rules alignment are separate facts. In particular, the winged Tzeentch-styled model was selected as Khorne in the source roster export.",
     "Slaanesh collection import added on 2026-09-30. Source roster limits are not used to cap physical ownership; legacy and Age of Sigmar surplus remains part of the collection.",
     "Slaanesh physical-count reconciliation is closed at 155 unique Slaanesh-aligned bodies beyond the shared Be'lakor, bringing the normalized Chaos Daemons inventory to 316 physical bodies/models.",
-    "Nurgle count layer added: 17 newly enumerated Nurgle models plus the already-recorded Nurgle-styled Daemon Prince, bringing the Chaos Daemons normalized physical total to 333."
+    "Nurgle count layer added: 17 newly enumerated Nurgle models plus the already-recorded Nurgle-styled Daemon Prince, bringing the Chaos Daemons normalized physical total to 333.",
+    "Khorne direct-confirmation expansion added 7 unique physical bodies/models beyond the original New Recruit-derived Khorne pools. The magnetized Rendmaster/Skull Cannon chassis is counted once."
   ],
   "provenance": {
     "source_files": [
@@ -1091,6 +1244,18 @@
           "Beasts of Nurgle: 4 physical models.",
           "Nurglings: 12 physical models/bases.",
           "These are added alongside the already-recorded wingless Nurgle-styled Daemon Prince."
+        ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_KHORNE_COLLECTION_EXPANSION",
+        "facts": [
+          "Bloodmaster: 2 physical models.",
+          "Karanak: 1 physical model.",
+          "Rendmaster on Blood Throne / Skull Cannon: one shared physical chariot chassis, magnetized to switch between the two roles.",
+          "Skullmaster: 1 physical model.",
+          "Skulltaker: 1 physical model.",
+          "Skull Altar: 1 physical model."
         ]
       }
     ]
