@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "snapshot_date": "2026-09-30",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "classifier_version": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+  "source": {
+    "document_id": "GW_11E_CORE_RULES_PUBLIC",
+    "source_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+    "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+    "page_count": 88,
+    "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+  },
+  "source_verification": {
+    "binary_sha256_match": true,
+    "page_semantic_fingerprints_match": 88,
+    "document_semantic_sha256_match": true
+  },
+  "parent_paragraph_atoms": {
+    "path": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_atoms/index.json",
+    "atomization_version": "CORE_RULE_PARAGRAPH_ATOMIZATION_V1",
+    "paragraph_atoms": 310,
+    "unique_paragraph_keys": 310,
+    "rules_represented": 141,
+    "occurrences_represented": 146,
+    "paragraph_hashes_reproduced_from_verified_pdf": 310
+  },
+  "classification_contract": {
+    "role_vocabulary": [
+      "PROHIBITION",
+      "OBLIGATION",
+      "PERMISSION",
+      "DEFINITION",
+      "MODIFICATION_OR_REPLACEMENT",
+      "PROCEDURE_OR_SEQUENCE",
+      "CONDITION_OR_TRIGGER",
+      "REFERENCE_OR_CROSS_REFERENCE",
+      "MIXED",
+      "UNCLASSIFIED"
+    ],
+    "signal_vocabulary": [
+      "BULLET_LIKE",
+      "CONDITION_IF",
+      "DEFINITION_KNOWN_AS",
+      "DEFINITION_MEANS",
+      "DEFINITION_REFERRED_TO_AS",
+      "DURATION_WHILE",
+      "EXCEPTION_UNLESS",
+      "MODIFIER_ADD_SUBTRACT",
+      "OBLIGATION_MUST",
+      "ORDERED_STEP",
+      "PERMISSION_CAN",
+      "PERMISSION_MAY",
+      "PROHIBITION_CANNOT",
+      "PROHIBITION_MUST_NOT",
+      "REFERENCE_PAGE",
+      "REFERENCE_RULE_REF",
+      "REFERENCE_SEE",
+      "REPLACEMENT_INSTEAD",
+      "SEQUENCE_AFTER",
+      "SEQUENCE_BEFORE",
+      "SEQUENCE_THEN",
+      "TRIGGER_WHEN"
+    ],
+    "weak_signal_families": [
+      "STRUCTURAL_LIST",
+      "REFERENCE_OR_CROSS_REFERENCE"
+    ],
+    "reference_signals_are_weak": true,
+    "mixed_is_preferred_over_forced_single_role": true,
+    "unclassified_is_allowed": true
+  },
+  "summary": {
+    "paragraphs": 310,
+    "unique_paragraph_keys": 310,
+    "role_counts": {
+      "CONDITION_OR_TRIGGER": 31,
+      "MIXED": 134,
+      "MODIFICATION_OR_REPLACEMENT": 1,
+      "OBLIGATION": 1,
+      "PERMISSION": 20,
+      "PROCEDURE_OR_SEQUENCE": 7,
+      "PROHIBITION": 4,
+      "UNCLASSIFIED": 112
+    },
+    "confidence_counts": {
+      "HIGH": 64,
+      "MIXED": 134,
+      "NONE": 112
+    },
+    "signal_occurrence_counts": {
+      "BULLET_LIKE": 240,
+      "CONDITION_IF": 202,
+      "DEFINITION_KNOWN_AS": 6,
+      "DEFINITION_MEANS": 12,
+      "DURATION_WHILE": 72,
+      "EXCEPTION_UNLESS": 29,
+      "MODIFIER_ADD_SUBTRACT": 21,
+      "OBLIGATION_MUST": 80,
+      "ORDERED_STEP": 36,
+      "PERMISSION_CAN": 191,
+      "PERMISSION_MAY": 16,
+      "PROHIBITION_CANNOT": 61,
+      "REFERENCE_SEE": 4,
+      "REPLACEMENT_INSTEAD": 8,
+      "SEQUENCE_AFTER": 45,
+      "SEQUENCE_BEFORE": 28,
+      "SEQUENCE_THEN": 21,
+      "TRIGGER_WHEN": 83
+    },
+    "paragraphs_with_signals": 200,
+    "paragraphs_without_signals": 110,
+    "mixed_paragraphs": 134,
+    "unclassified_paragraphs": 112,
+    "repeated_variant_paragraphs": 10,
+    "repeated_variant_role_counts": {
+      "CONDITION_OR_TRIGGER": 2,
+      "MIXED": 8
+    },
+    "paragraph_hashes_reproduced_from_verified_pdf": 310
+  },
+  "authority_boundary": {
+    "semantic_role_classification_complete": true,
+    "classification_is_lexical_structural_not_full_semantic_ast": true,
+    "mixed_and_unclassified_are_valid_fail_closed_states": true,
+    "paragraph_prose_committed": false,
+    "condition_effect_ast_complete": false,
+    "rule_interaction_graph_complete": false,
+    "repeated_variant_semantic_equivalence_claimed": false,
+    "app_codex_equivalence": "NOT_CLAIMED",
+    "full_faction_promotion": false,
+    "current_normalized_factions_change": 0,
+    "copyright_policy": "Stable IDs, role/signal labels, counts, ranges and hashes only; no paragraph prose or matched phrases committed."
+  }
+}
