@@ -30,7 +30,10 @@ Historical roster point values may be retained only as explicitly dated snapshot
 - `thousand_sons/` — user-supplied New Recruit physical collection export, normalized 2026-09-30.
 - `world_eaters/` — World Eaters portion of the mixed World Eaters/Khorne export, normalized 2026-09-30.
 - `chaos_daemons/` — Khorne and Tzeentch daemon physical collection pools, normalized 2026-09-30.
+- `adeptus_mechanicus/` — provisional New Recruit baseline normalized 2026-09-30; source export is a known lower bound pending Ranger/Vanguard and Sicarian Princeps reconciliation.
 
 All newly imported Chaos-side inventories are `PROVISIONAL` until remaining build state, magnetization and loose component pools are physically reconciled. The previously suspected Daemon Prince shared-body overlap was resolved by user confirmation on 2026-09-30: five distinct Daemon Prince physical models are confirmed across the World Eaters and Chaos Daemons domains.
 
 Raw New Recruit exports are not vendored when they contain extensive copyrighted rules text. Store normalized physical facts plus provenance hashes instead.
+
+Adeptus Mechanicus is intentionally fail-closed at this stage: 131 bodies are represented in the source export, at least two additional Sicarian Princeps bodies are user-confirmed, and the exact Ranger/Vanguard surplus plus physical loadouts remain pending.
