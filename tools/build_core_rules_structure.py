@@ -195,43 +195,68 @@ def build_rule_reference_families(candidates: dict[int, list[str]], page_count: 
     for page, labels in candidates.items():
         for label in labels:
             refs = [f"{a}.{b}" for a, b in RULE_REF_RE.findall(label)]
+            by_family: dict[str, set[str]] = {}
             for ref in refs:
                 family = ref.split(".", 1)[0]
-                row = raw.setdefault(family, {"pages": set(), "refs": set(), "labels": []})
+                by_family.setdefault(family, set()).add(ref)
+            for family, family_refs in by_family.items():
+                row = raw.setdefault(
+                    family,
+                    {
+                        "pages": set(),
+                        "refs": set(),
+                        "labels_by_page": {},
+                        "refs_by_page": {},
+                    },
+                )
                 row["pages"].add(page)
-                row["refs"].add(ref)
-                if len(row["labels"]) < 12:
-                    row["labels"].append({"page": page, "label": label, "label_sha256": sha256_text(label)})
+                row["refs"].update(family_refs)
+                row["refs_by_page"].setdefault(page, set()).update(family_refs)
+                labels_for_page = row["labels_by_page"].setdefault(page, [])
+                if len(labels_for_page) < 8:
+                    labels_for_page.append({
+                        "page": page,
+                        "label": label,
+                        "label_sha256": sha256_text(label),
+                    })
 
-    ordered = sorted(
-        (
-            {
-                "family_id": family,
-                "first_page": min(data["pages"]),
-                "observed_pages": sorted(data["pages"]),
-                "refs": sorted(data["refs"]),
-                "labels": data["labels"],
-            }
-            for family, data in raw.items()
-        ),
-        key=lambda x: (x["first_page"], int(x["family_id"])),
-    )
+    prepared = []
+    for family, data in raw.items():
+        canonical_page = min(
+            data["refs_by_page"],
+            key=lambda page: (-len(data["refs_by_page"][page]), page),
+        )
+        prepared.append({
+            "family_id": family,
+            "canonical_page": canonical_page,
+            "observed_pages": sorted(data["pages"]),
+            "refs": sorted(data["refs"]),
+            "refs_by_page": {
+                str(page): sorted(refs)
+                for page, refs in sorted(data["refs_by_page"].items())
+            },
+            "anchor_labels": data["labels_by_page"].get(canonical_page, [])[:6],
+        })
+
+    ordered = sorted(prepared, key=lambda x: (x["canonical_page"], int(x["family_id"])))
 
     out = []
     for idx, row in enumerate(ordered):
-        start = row["first_page"]
+        start = row["canonical_page"]
         end = page_count
         if idx + 1 < len(ordered):
-            end = max(start, ordered[idx + 1]["first_page"] - 1)
+            end = max(start, ordered[idx + 1]["canonical_page"] - 1)
         out.append({
             "family_id": row["family_id"],
             "section_key": f"rule-family-{row['family_id']}--p{start}",
             "page_start": start,
             "page_end": end,
             "page_range_sha256": sha256_text("\n".join(page_semantic_sha[start - 1:end])),
+            "canonical_anchor_page": start,
             "observed_heading_pages": row["observed_pages"],
             "rule_refs": row["refs"],
-            "anchor_labels": row["labels"][:6],
+            "refs_by_page": row["refs_by_page"],
+            "anchor_labels": row["anchor_labels"],
         })
     return out
 
@@ -402,6 +427,7 @@ def main() -> int:
         "rule_reference_families": [
             {
                 "family_id": x["family_id"],
+                "canonical_anchor_page": x["canonical_anchor_page"],
                 "page_start": x["page_start"],
                 "page_end": x["page_end"],
                 "rule_refs": len(x["rule_refs"]),
