@@ -92,7 +92,27 @@
     "core_rule_paragraph_candidates": 310,
     "core_rule_paragraph_atomization": "PASS_310_PARAGRAPH_ATOMS",
     "core_rule_paragraph_atoms": 310,
-    "core_rule_paragraph_range_validation_failures": 0
+    "core_rule_paragraph_range_validation_failures": 0,
+    "core_rule_paragraph_semantic_classification": "PASS_310_PARAGRAPHS_CLASSIFIED",
+    "core_rule_paragraph_semantic_role_counts": {
+      "CONDITION_OR_TRIGGER": 31,
+      "MIXED": 134,
+      "MODIFICATION_OR_REPLACEMENT": 1,
+      "OBLIGATION": 1,
+      "PERMISSION": 20,
+      "PROCEDURE_OR_SEQUENCE": 7,
+      "PROHIBITION": 4,
+      "UNCLASSIFIED": 112
+    },
+    "core_rule_paragraph_semantic_confidence_counts": {
+      "HIGH": 64,
+      "MIXED": 134,
+      "NONE": 112
+    },
+    "core_rule_paragraph_semantic_hashes_reproduced": 310,
+    "core_rule_paragraph_semantic_high_confidence": 64,
+    "core_rule_paragraph_semantic_mixed": 134,
+    "core_rule_paragraph_semantic_unclassified": 112
   },
   "roster_source_mapping": {
     "counts": {
@@ -610,22 +630,22 @@
   "gaps": [
     {
       "id": "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-      "state": "PARAGRAPH_ATOMIZATION_CLOSED_SEMANTIC_CLASSIFICATION_PENDING",
+      "state": "PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSED_AST_READINESS_PENDING",
       "blocking_scope": [
         "core_rules_content",
         "system_normative_semantics"
       ],
       "evidence": {
-        "repository_state": "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
+        "repository_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
         "currentness_profile": {
           "required_sources": [
             "GW_40K_DOWNLOADS"
           ],
-          "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_ATOMIZATION_V1",
+          "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
           "repository_dimension": null,
           "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
           "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-          "authority_boundary": "All 310 page-local Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities; semantic paragraph classification, AST and rule interactions remain pending.",
+          "authority_boundary": "All 310 stable Core paragraph identities have deterministic lexical/structural role classifications. 134 MIXED and 112 UNCLASSIFIED remain explicit fail-closed states; AST-readiness review, condition/effect parsing and interactions remain pending.",
           "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
           "rule_reference_families": 24,
           "rule_reference_count": 141,
@@ -653,6 +673,20 @@
             "paragraph_atoms": 310,
             "unique_paragraph_keys": 310,
             "range_validation_failures": 0
+          },
+          "paragraph_semantic_classification": {
+            "state": "PASS_310_PARAGRAPHS_CLASSIFIED",
+            "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
+            "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
+            "paragraphs": 310,
+            "high_confidence": 64,
+            "mixed": 134,
+            "unclassified": 112,
+            "paragraphs_with_signals": 200,
+            "paragraphs_without_signals": 110,
+            "repeated_variant_paragraphs": 10,
+            "paragraph_hashes_reproduced_from_verified_pdf": 310,
+            "ast_readiness_pending": true
           }
         },
         "official_public_source": {
@@ -695,9 +729,29 @@
           "REPEATED_OCCURRENCE_PARAGRAPH_VARIANT": 10,
           "SINGLE_OCCURRENCE_PARAGRAPH": 300
         },
-        "paragraph_range_validation_failures": 0
+        "paragraph_range_validation_failures": 0,
+        "paragraph_semantic_report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json",
+        "paragraph_semantic_state": "PASS_310_PARAGRAPHS_CLASSIFIED",
+        "paragraph_semantic_role_counts": {
+          "CONDITION_OR_TRIGGER": 31,
+          "MIXED": 134,
+          "MODIFICATION_OR_REPLACEMENT": 1,
+          "OBLIGATION": 1,
+          "PERMISSION": 20,
+          "PROCEDURE_OR_SEQUENCE": 7,
+          "PROHIBITION": 4,
+          "UNCLASSIFIED": 112
+        },
+        "paragraph_semantic_confidence_counts": {
+          "HIGH": 64,
+          "MIXED": 134,
+          "NONE": 112
+        },
+        "paragraphs_with_signals": 200,
+        "paragraphs_without_signals": 110,
+        "paragraph_semantic_hashes_reproduced": 310
       },
-      "next_action": "Classify the 310 stable paragraph identities into conservative semantic roles before building any paragraph AST; keep prose external and repeated variants non-conflicting by default."
+      "next_action": "Audit AST readiness across all 310 classified paragraphs, define the safely parseable subset, and keep MIXED/UNCLASSIFIED paragraphs blocked from forced condition/effect parsing."
     },
     {
       "id": "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
@@ -1006,7 +1060,7 @@
   "conclusion": {
     "why_current_normalized_factions_is_zero": "The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
     "publicly_closable_now": [
-      "Core Rules paragraph semantic classification",
+      "Core Rules semantic AST readiness audit",
       "deeper public Faction Pack structured extraction inside proven public scope",
       "review of edition-11 residual provenance without automatic promotion",
       "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING"
@@ -1015,7 +1069,7 @@
       "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
       "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS"
     ],
-    "recommended_next_milestone": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
-    "expected_effect": "All 310 Core paragraph candidates now have stable parent rule/occurrence/page/range/hash identities with zero range failures. Next classify paragraph semantics conservatively before semantic AST construction; full faction/app equivalence and whole-faction normative coverage remain unchanged."
+    "recommended_next_milestone": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
+    "expected_effect": "All 310 Core paragraphs now have reproducible lexical/structural role evidence. Because only 64 are HIGH while 134 are MIXED and 112 UNCLASSIFIED, the next step is an AST-readiness audit that defines a safe parse subset rather than forcing condition/effect nodes; faction/app equivalence remains unchanged."
   }
 }
