@@ -583,10 +583,16 @@
       "physical_bodies": 1,
       "status": [
         "USER_CONFIRMED_PHYSICAL_MODEL",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "CROSS_DOMAIN_SHARED_WITH_CSM_ROLE",
+        "CSM_IDENTITY_MATCH_CONFIRMED"
       ],
-      "roles": [],
+      "roles": [
+        {
+          "role": "Heretic Astartes Daemon Prince with wings",
+          "availability": "SHARED_PHYSICAL_BODY",
+          "source_domain": "collection/chaos_space_marines"
+        }
+      ],
       "physical_identity_id": "daemon_prince_black_legion_winged_01",
       "physical_configuration": {
         "wings": true,
@@ -595,7 +601,8 @@
       },
       "notes": [
         "User confirmed ownership on 2026-09-30.",
-        "This is a distinct physical miniature not represented in the imported New Recruit exports."
+        "This is a distinct physical miniature not represented in the imported New Recruit exports.",
+        "User confirmed on 2026-09-30 that the winged Heretic Astartes Daemon Prince selected in the CSM collection roster is this same physical Black Legion-styled model."
       ],
       "provenance": {
         "evidence_type": "USER_CONFIRMATION",

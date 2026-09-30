@@ -24,3 +24,6 @@ The World Eaters Helbrute is directly identified as one of the user's two Dark V
 - the current melee arm still requires explicit re-confirmation and is not inferred.
 
 The second Dark Vengeance Helbrute is stored under the Chaos Space Marines collection and is painted as Alpha Legion with fist + melta-style starter loadout.
+
+
+The converted Dark Vengeance Helbrute melee arm has now been directly reconfirmed: it retains the **original Dark Vengeance fist**. Its ranged arm remains the user's plasma conversion replacing the original melta-type weapon.
