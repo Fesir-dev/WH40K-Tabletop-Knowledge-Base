@@ -151,3 +151,10 @@ Tzeentch body counts are recorded, but detailed build-state/magnetization reconc
 Raw New Recruit exports are not vendored because they contain extensive copyrighted rules text. The repository stores hashes, normalized physical facts and direct user corrections.
 
 Roster selections and historical points are configuration evidence only; they are not physical collection authority where direct user inspection or confirmation exists.
+
+
+## Cross-domain Black Legion Daemon Prince identity
+
+The winged Black Legion-styled Daemon Prince in this domain is the **same physical body** selected as the winged Heretic Astartes Daemon Prince in the Chaos Space Marines Wave 1 roster.
+
+The body remains canonically counted once in the physical collection. CSM use is a shared-role projection and does not add another model.
