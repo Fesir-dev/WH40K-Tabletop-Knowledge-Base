@@ -304,32 +304,28 @@
     {
       "pool_id": "chaos_spawn",
       "name": "Chaos Spawn",
-      "physical_bodies": 6,
+      "physical_bodies": 0,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "SHARED_PHYSICAL_POOL_REFERENCE",
+        "USER_CONFIRMED_GLOBAL_CHAOS_SPAWN_POOL_10",
+        "SOURCE_ROSTER_SELECTED_6_NOT_OWNERSHIP_AUTHORITY"
       ],
       "roles": [
         {
           "source_datasheet_name": "Chaos Spawn",
           "source_unit_instances": 3,
+          "source_declared_bodies": 6,
           "source_id": "NR_WE_KHORNE_2026_09_30",
-          "source_primary_categories": [
-            "Beast"
-          ]
+          "interpretation": "ROSTER_SELECTION_OVER_SHARED_POOL"
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
+        "The World Eaters source roster selected six Chaos Spawn, but the user confirmed a single shared physical pool of ten Spawn across Chaos collections.",
+        "No Spawn body is canonically owned by the World Eaters domain.",
+        "World Eaters may allocate bodies from the shared pool when building a roster."
       ],
-      "body_variants": [
-        {
-          "name": "Chaos Spawn",
-          "physical_bodies": 6,
-          "evidence": "SOURCE_MODEL_SELECTION"
-        }
-      ]
+      "shared_pool_id": "chaos_spawn_shared",
+      "canonical_inventory": "collection/chaos_shared/current.json"
     },
     {
       "pool_id": "helbrute",
@@ -372,7 +368,10 @@
     }
   ],
   "confirmed_totals": {
-    "source_declared_model_bodies": 54
+    "source_declared_model_bodies": 54,
+    "normalized_unique_world_eaters_bodies_excluding_shared_spawn": 48,
+    "shared_chaos_spawn_available": 10,
+    "source_selected_chaos_spawn": 6
   },
   "constraints": [],
   "open_questions": [
@@ -385,7 +384,8 @@
   "notes": [
     "This inventory records physical collection evidence only; roster points, legality and detachment choices in the source export are not collection authority.",
     "Raw New Recruit exports are not committed because they contain extensive copyrighted rules text; SHA-256 hashes and normalized physical facts are retained instead.",
-    "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED."
+    "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED.",
+    "Chaos Spawn ownership moved to the canonical cross-faction shared Chaos pool; the old six-body World Eaters roster selection is retained only as historical roster evidence."
   ],
   "provenance": {
     "source_files": [
@@ -424,6 +424,15 @@
       "resolved_at": "2026-09-30",
       "evidence": "USER_CONFIRMATION",
       "details": "The World Eaters Daemon Prince of Khorne is the wingless Khorne-styled miniature and is distinct from all other Daemon Prince miniatures."
+    }
+  ],
+  "shared_physical_pool_refs": [
+    {
+      "pool_id": "chaos_spawn_shared",
+      "canonical_inventory": "collection/chaos_shared/current.json",
+      "available_role": "Chaos Spawn",
+      "physical_bodies_available": 10,
+      "count_in_this_inventory": 0
     }
   ]
 }
