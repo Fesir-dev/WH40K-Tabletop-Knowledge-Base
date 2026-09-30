@@ -39,6 +39,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -55,6 +57,20 @@ jobs:
           name: normative-gap-audit-candidate-${{ github.run_id }}
           path: .cache/normative-gap-audit/current.json
           if-no-files-found: error
+
+      - name: Checkpoint canonical audit on source branch
+        if: github.actor != 'github-actions[bot]' && github.ref_name != 'main'
+        run: |
+          cp .cache/normative-gap-audit/current.json reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json
+          if [ -z "$(git status --porcelain -- reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json)" ]; then
+            echo "Normative gap audit already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/NORMATIVE_APP_EQUIVALENCE_GAP_AUDIT_CURRENT.json
+          git commit -m "Checkpoint generated normative gap audit"
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
 
       - name: Run audit contract tests
         run: python -m unittest tests.test_normative_equivalence_gap_audit -v
