@@ -512,7 +512,8 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["confidence_counts"],s["confidence_counts"])
         self.assertFalse(layer["semantic_review_pending"])
         self.assertTrue(layer["semantic_review_complete"])
-        self.assertTrue(layer["ast_readiness_pending"])
+        self.assertFalse(layer["ast_readiness_pending"])
+        self.assertTrue(layer["ast_readiness_complete"])
         self.assertFalse(layer["condition_effect_ast_complete"])
         self.assertEqual(self.current["next_milestone"],"CORE_RULE_DIRECT_MODAL_AST_PILOT_V1")
         core=self.current["source_currentness"]["core_rules_content"]
@@ -603,7 +604,8 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["axis_profile_ready"],156)
         self.assertEqual(layer["review_required"],154)
         self.assertFalse(layer["axis_profile_ready_is_ast_ready"])
-        self.assertTrue(layer["ast_readiness_pending"])
+        self.assertFalse(layer["ast_readiness_pending"])
+        self.assertTrue(layer["ast_readiness_complete"])
         self.assertFalse(layer["condition_effect_ast_complete"])
 
         self.assertEqual(self.current["next_milestone"],"CORE_RULE_DIRECT_MODAL_AST_PILOT_V1")
