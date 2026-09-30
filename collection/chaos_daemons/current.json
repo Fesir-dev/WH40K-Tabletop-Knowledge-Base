@@ -288,6 +288,7 @@
       "physical_bodies": 1,
       "status": [
         "SOURCE_EXPORT_DECLARED",
+        "USER_CONFIRMED_DISTINCT_PHYSICAL_MODEL",
         "BUILD_STATE_UNKNOWN",
         "MAGNETIZATION_UNKNOWN"
       ],
@@ -302,10 +303,18 @@
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied.",
-        "The source export marks this Daemon Prince as Khorne despite the file being named as a Tzeentch collection; alignment is preserved from the source, not inferred from the filename."
+        "Physical body is present in the source export.",
+        "User confirmed on 2026-09-30 that the physical miniature has wings and is styled for Tzeentch.",
+        "The New Recruit source selection carried a Khorne rules alignment; that source rules choice is retained separately and must not overwrite the physical theme."
       ],
-      "alignment": "Khorne"
+      "alignment": "Tzeentch",
+      "physical_identity_id": "daemon_prince_tzeentch_winged_01",
+      "physical_configuration": {
+        "wings": true,
+        "physical_theme": "Tzeentch",
+        "build_state": "UNKNOWN_NOT_STATED"
+      },
+      "source_rules_alignment": "Khorne"
     },
     {
       "pool_id": "exalted_flamer",
@@ -531,35 +540,98 @@
         "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
       ],
       "alignment": "Tzeentch"
+    },
+    {
+      "pool_id": "daemon_prince_black_legion_winged",
+      "name": "Daemon Prince with wings — Black Legion styled",
+      "physical_bodies": 1,
+      "status": [
+        "USER_CONFIRMED_PHYSICAL_MODEL",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [],
+      "physical_identity_id": "daemon_prince_black_legion_winged_01",
+      "physical_configuration": {
+        "wings": true,
+        "physical_theme": "Black Legion",
+        "build_state": "UNKNOWN_NOT_STATED"
+      },
+      "notes": [
+        "User confirmed ownership on 2026-09-30.",
+        "This is a distinct physical miniature not represented in the imported New Recruit exports."
+      ],
+      "provenance": {
+        "evidence_type": "USER_CONFIRMATION",
+        "confirmed_at": "2026-09-30"
+      }
+    },
+    {
+      "pool_id": "daemon_prince_nurgle_foot",
+      "name": "Daemon Prince — Nurgle styled, wingless",
+      "physical_bodies": 1,
+      "status": [
+        "USER_CONFIRMED_PHYSICAL_MODEL",
+        "BUILD_STATE_UNKNOWN",
+        "MAGNETIZATION_UNKNOWN"
+      ],
+      "roles": [],
+      "physical_identity_id": "daemon_prince_nurgle_foot_01",
+      "physical_configuration": {
+        "wings": false,
+        "physical_theme": "Nurgle",
+        "build_state": "UNKNOWN_NOT_STATED"
+      },
+      "notes": [
+        "User confirmed ownership on 2026-09-30.",
+        "This is a distinct wingless Nurgle-styled Daemon Prince miniature not represented in the imported New Recruit exports."
+      ],
+      "provenance": {
+        "evidence_type": "USER_CONFIRMATION",
+        "confirmed_at": "2026-09-30"
+      }
+    },
+    {
+      "pool_id": "daemon_prince_on_sprue",
+      "name": "Daemon Prince — unbuilt kit",
+      "physical_bodies": 1,
+      "status": [
+        "USER_CONFIRMED_PHYSICAL_MODEL",
+        "ON_SPRUE",
+        "CONFIGURATION_NOT_YET_DECLARED"
+      ],
+      "roles": [],
+      "physical_identity_id": "daemon_prince_unbuilt_01",
+      "physical_configuration": {
+        "wings": null,
+        "physical_theme": null,
+        "build_state": "ON_SPRUE"
+      },
+      "notes": [
+        "User confirmed ownership on 2026-09-30.",
+        "The kit is still on sprue; future wing/no-wing and visual allegiance are intentionally left unspecified."
+      ],
+      "provenance": {
+        "evidence_type": "USER_CONFIRMATION",
+        "confirmed_at": "2026-09-30"
+      }
     }
   ],
   "confirmed_totals": {
     "source_declared_model_bodies": 158,
     "khorne_aligned_source_bodies": 40,
     "tzeentch_aligned_source_bodies": 117,
-    "undivided_source_bodies": 1
+    "undivided_source_bodies": 1,
+    "user_confirmed_supplemental_model_bodies": 3,
+    "normalized_physical_bodies": 161,
+    "daemon_prince_models_in_this_inventory": 4,
+    "daemon_prince_models_across_world_eaters_and_daemons": 5
   },
-  "constraints": [
-    {
-      "id": "DAEMON_PRINCE_CROSS_FACTION_IDENTITY_UNRESOLVED",
-      "type": "possible_shared_physical_model",
-      "related_inventory": "world_eaters_personal",
-      "source_aliases": [
-        "Daemon Prince of Khorne",
-        "Daemon Prince of Chaos with wings (Khorne)"
-      ],
-      "effect": "Do not assume both entries are simultaneously available until physical identity is reconciled."
-    }
-  ],
+  "constraints": [],
   "open_questions": [
     {
       "id": "DAEMON_BUILD_STATE",
       "question": "Which daemon models are built, on sprue, magnetized, converted or proxyable?",
-      "state": "UNKNOWN"
-    },
-    {
-      "id": "DAEMON_PRINCE_IDENTITY",
-      "question": "Is the winged Khorne Daemon Prince the same physical miniature as the World Eaters Daemon Prince of Khorne?",
       "state": "UNKNOWN"
     },
     {
@@ -571,8 +643,9 @@
   "notes": [
     "This inventory records physical collection evidence only; roster points, legality and detachment choices in the source export are not collection authority.",
     "Raw New Recruit exports are not committed because they contain extensive copyrighted rules text; SHA-256 hashes and normalized physical facts are retained instead.",
-    "Re-audit actual build state, magnetization, shared bodies and loose components before promoting to CURRENT_VERIFIED.",
-    "The Tzeentch daemon export was classified by actual model/faction tags, not by its Titanicus Traitoris host catalogue."
+    "The Tzeentch daemon export was classified by actual model/faction tags, not by its Titanicus Traitoris host catalogue.",
+    "Daemon Prince identity overlap is resolved: five distinct physical Daemon Prince miniatures are confirmed across the World Eaters and Chaos Daemons collection domains.",
+    "Physical styling and current rules alignment are separate facts. In particular, the winged Tzeentch-styled model was selected as Khorne in the source roster export."
   ],
   "provenance": {
     "source_files": [
@@ -607,5 +680,14 @@
         "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
       }
     ]
-  }
+  },
+  "resolved_questions": [
+    {
+      "id": "DAEMON_PRINCE_IDENTITY",
+      "resolution": "FIVE_DISTINCT_PHYSICAL_MODELS_CONFIRMED_ACROSS_CHAOS_COLLECTIONS",
+      "resolved_at": "2026-09-30",
+      "evidence": "USER_CONFIRMATION",
+      "details": "Confirmed distinct models: wingless Khorne; winged Tzeentch; winged Black Legion; wingless Nurgle; one unbuilt Daemon Prince kit on sprue."
+    }
+  ]
 }

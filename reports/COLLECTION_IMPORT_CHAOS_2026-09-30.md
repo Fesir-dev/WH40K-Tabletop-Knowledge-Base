@@ -18,7 +18,7 @@ Three user-supplied New Recruit JSON exports were normalized into physical colle
   - Undivided: **1**.
 - Total source-entry bodies across the three normalized inventories: **321**.
 
-The repository does **not** claim 321 globally unique physical miniatures yet because the two Daemon Prince entries may describe one shared physical model.
+The original three exports contain **321** source-entry bodies. User confirmation on 2026-09-30 resolved the suspected Daemon Prince overlap and added **3** physical Daemon Prince models that were not present in those exports, yielding **324 confirmed distinct physical models across these three imported Chaos-side collection domains**.
 
 ## Provenance hashes
 
@@ -34,8 +34,20 @@ The repository does **not** claim 321 globally unique physical miniatures yet be
 - The Titanicus Traitoris host catalogue in the Tzeentch export was treated as a container only; model faction tags control physical classification.
 - Source-selected model variants are retained where they establish body counts, but build state and magnetization are not inferred.
 
-## Open gate
+## Daemon Prince reconciliation
 
-`DAEMON_PRINCE_CROSS_FACTION_IDENTITY_UNRESOLVED`: determine whether the World Eaters Daemon Prince of Khorne and the winged Khorne Daemon Prince in the daemon export are one shared miniature or two physical models.
+The previous `DAEMON_PRINCE_CROSS_FACTION_IDENTITY_UNRESOLVED` gate is **closed** by direct user confirmation.
 
-All three inventories remain `PROVISIONAL` until physical build state and shared-body questions are checked.
+Five distinct physical Daemon Prince miniatures are confirmed:
+
+1. wingless Khorne-styled Daemon Prince;
+2. winged Tzeentch-styled Daemon Prince;
+3. winged Black Legion-styled Daemon Prince;
+4. wingless Nurgle-styled Daemon Prince;
+5. one additional Daemon Prince kit still on sprue.
+
+The winged Tzeentch-styled model had been selected with a Khorne rules alignment in the New Recruit export. Physical styling and source roster rules alignment are now stored separately.
+
+The Black Legion, Nurgle and on-sprue Daemon Princes are direct user-confirmed additions and were not counted in the three source exports.
+
+All three inventories remain `PROVISIONAL` only for remaining build-state, magnetization, conversion and loose-component questions; Daemon Prince physical identity is no longer unresolved.
