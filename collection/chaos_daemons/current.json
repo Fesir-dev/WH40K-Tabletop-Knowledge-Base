@@ -908,6 +908,66 @@
         "User confirmed on 2026-09-30 that the source count is the complete physical count for this pool and all listed models are assembled."
       ],
       "build_state": "ASSEMBLED"
+    },
+    {
+      "pool_id": "poxbringer",
+      "name": "Poxbringer",
+      "physical_bodies": 1,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT",
+        "BUILD_STATE_NOT_STATED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Poxbringer",
+          "source_unit_instances": 1,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        }
+      ],
+      "alignment": "Nurgle",
+      "notes": [
+        "User confirmed ownership of exactly one Poxbringer on 2026-09-30."
+      ]
+    },
+    {
+      "pool_id": "beasts_of_nurgle",
+      "name": "Beasts of Nurgle",
+      "physical_bodies": 4,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT",
+        "BUILD_STATE_NOT_STATED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Beasts of Nurgle",
+          "source_unit_instances": 4,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        }
+      ],
+      "alignment": "Nurgle",
+      "notes": [
+        "User confirmed ownership of exactly four Beasts of Nurgle on 2026-09-30."
+      ]
+    },
+    {
+      "pool_id": "nurglings",
+      "name": "Nurglings",
+      "physical_bodies": 12,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT",
+        "BUILD_STATE_NOT_STATED"
+      ],
+      "roles": [
+        {
+          "source_datasheet_name": "Nurglings",
+          "source_unit_instances": 12,
+          "evidence": "DIRECT_USER_CONFIRMATION"
+        }
+      ],
+      "alignment": "Nurgle",
+      "notes": [
+        "User confirmed ownership of exactly twelve Nurgling bases/models on 2026-09-30."
+      ]
     }
   ],
   "confirmed_totals": {
@@ -916,17 +976,19 @@
     "tzeentch_aligned_source_bodies": 117,
     "undivided_source_bodies": 1,
     "user_confirmed_supplemental_model_bodies": 3,
-    "normalized_physical_bodies": 316,
+    "normalized_physical_bodies": 333,
     "daemon_prince_models_in_this_inventory": 4,
     "daemon_prince_models_across_world_eaters_and_daemons": 5,
     "source_declared_model_entries_across_exports": 249,
     "slaanesh_source_declared_model_entries": 91,
     "slaanesh_direct_total_owned_including_sprues_excluding_belakor_overlap": 155,
-    "actual_normalized_physical_bodies": 316,
+    "actual_normalized_physical_bodies": 333,
     "slaanesh_unique_physical_bodies": 155,
     "daemonette_owned_total": 110,
     "seeker_owned_total": 30,
-    "slaanesh_keeper_scale_bodies": 2
+    "slaanesh_keeper_scale_bodies": 2,
+    "nurgle_additional_bodies_2026_09_30": 17,
+    "nurgle_aligned_bodies_including_existing_daemon_prince": 18
   },
   "constraints": [],
   "open_questions": [
@@ -948,7 +1010,8 @@
     "Daemon Prince identity overlap is resolved: five distinct physical Daemon Prince miniatures are confirmed across the World Eaters and Chaos Daemons collection domains.",
     "Physical styling and current rules alignment are separate facts. In particular, the winged Tzeentch-styled model was selected as Khorne in the source roster export.",
     "Slaanesh collection import added on 2026-09-30. Source roster limits are not used to cap physical ownership; legacy and Age of Sigmar surplus remains part of the collection.",
-    "Slaanesh physical-count reconciliation is closed at 155 unique Slaanesh-aligned bodies beyond the shared Be'lakor, bringing the normalized Chaos Daemons inventory to 316 physical bodies/models."
+    "Slaanesh physical-count reconciliation is closed at 155 unique Slaanesh-aligned bodies beyond the shared Be'lakor, bringing the normalized Chaos Daemons inventory to 316 physical bodies/models.",
+    "Nurgle count layer added: 17 newly enumerated Nurgle models plus the already-recorded Nurgle-styled Daemon Prince, bringing the Chaos Daemons normalized physical total to 333."
   ],
   "provenance": {
     "source_files": [
@@ -1018,6 +1081,16 @@
           "Syll'esske 1, Masque 1, Contorted Epitome 1, Infernal Enrapturess 2, Tormentbringer 1, Tranceweaver 1 and Fiends 6 are exact physical counts, and all of those models are assembled.",
           "Daemonette ownership is fixed at exactly 110 total models/bodies.",
           "The previous statement of at least 90 assembled Daemonettes remains the strongest exact build-state evidence; no artificial 90/20 assembled/on-sprue split is inferred."
+        ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_NURGLE_COLLECTION_CLOSEOUT",
+        "facts": [
+          "Poxbringer: 1 physical model.",
+          "Beasts of Nurgle: 4 physical models.",
+          "Nurglings: 12 physical models/bases.",
+          "These are added alongside the already-recorded wingless Nurgle-styled Daemon Prince."
         ]
       }
     ]
