@@ -62,7 +62,7 @@ The repository commits signal IDs/counts and role labels, never the paragraph te
 ### Procedure/list signals
 
 - `ORDERED_STEP` — paragraph begins with a short numbered/lettered step marker.
-- `BULLET_LIKE` — extractor range contains repeated bullet-like line starts.
+- `BULLET_LIKE` — extractor range contains repeated bullet-like line starts. This is contextual list-shape evidence only and does **not** independently create a primary role.
 
 ## Primary roles
 
@@ -113,6 +113,8 @@ V1 confidence is structural, not semantic truth probability:
 - `HIGH` — one strong role family and no competing strong family;
 - `MIXED` — two or more role families;
 - `NONE` — no high-confidence role family.
+
+`REFERENCE_OR_CROSS_REFERENCE` and `BULLET_LIKE` are weak/contextual evidence families: they never override a strong role family and `BULLET_LIKE` alone leaves the paragraph `UNCLASSIFIED`.
 
 No medium-confidence guessing is used.
 
