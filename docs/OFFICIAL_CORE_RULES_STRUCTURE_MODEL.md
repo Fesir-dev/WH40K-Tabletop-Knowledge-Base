@@ -76,3 +76,28 @@ It does not mean:
 - faction normative completeness can increase.
 
 Whole-faction counters therefore remain unchanged.
+
+
+## Rule-reference family map
+
+The public Core Rules expose numbered rule references in families `01.xx` through `24.xx`.
+
+The v1 structured layer requires:
+
+- all 24 families to be detected;
+- canonical family order to be exactly `01` → `24`;
+- every family to retain observed heading pages and exact rule-reference IDs;
+- a canonical anchor page chosen by the page with the highest density of distinct references from that family;
+- a definition start page allowed to move up to four pages before the density anchor when nearby heading evidence exists.
+
+The last rule prevents distant cross-references from moving a section boundary backwards. For example, an early mention of a `24.xx` rule remains evidence of a cross-reference; it does not become the start of family 24 when the dense definition block occurs much later.
+
+## Completion levels
+
+The snapshot distinguishes three levels:
+
+1. **section-level family structure** — complete only when families `01`–`24` are present in canonical order;
+2. **flat heading map** — page-oriented navigation evidence, useful but not an authoritative hierarchy;
+3. **nested/paragraph AST** — explicitly incomplete in v1.
+
+Therefore `section_level_structure_complete_for_public_pdf=true` does not mean paragraph-level atomization is complete.
