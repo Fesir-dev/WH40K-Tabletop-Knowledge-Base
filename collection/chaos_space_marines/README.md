@@ -105,3 +105,74 @@ The next work should not restart the import. Continue from this checkpoint and p
 - character duplicates/variants;
 - shared-body modern-role mappings;
 - cross-domain Daemon Prince identity.
+
+
+## Wave 2 — starter provenance and legacy body reconciliation
+
+The collection history now explicitly records two major acquisition strata.
+
+### Dark Vengeance ×2
+
+User-confirmed ownership history:
+
+- 2 old Dark Vengeance Chaos Lords;
+- 2 complete old-sculpt Chosen groups;
+- 40 Cultists, all from these starters;
+- 2 Dark Vengeance Helbrutes.
+
+Public product references identify the Chaos half of one Dark Vengeance set as 1 Chaos Lord, 6 Chosen, 1 Helbrute and 20 Cultists. This makes the two Chosen groups **12 physical Chosen bodies**.
+
+Current Helbrute split:
+
+- CSM domain: 1 assembled/painted Alpha Legion Helbrute with fixed fist + melta-style starter loadout;
+- World Eaters domain: 1 converted Dark Vengeance Helbrute with plasma replacing the original melta-type ranged weapon.
+
+The two Dark Vengeance Chaos Lords establish a physical lower bound of 2 generic Lord bodies, but the exact identity of the one Chaos Lord selected in the Wave 1 roster still needs to be mapped.
+
+### Shadowspear ×2 plus additional acquisitions
+
+One Shadowspear Chaos half contained:
+
+- 1 Master of Possession;
+- 1 Venomcrawler;
+- 2 Obliterators;
+- 2 Greater Possessed;
+- 10 monopose Chaos Space Marines.
+
+Two copies therefore explain much of the current source snapshot.
+
+Direct physical reconciliation:
+
+- Obliterators — **4 total**: 3 assembled, 1 on sprue;
+- legacy Greater Possessed — **6 total**: four expected from the two boxes plus two additional acquired bodies;
+- Shadowspear CSM directly located — **17**:
+  - 10 on a complete sprue;
+  - 7 assembled but unpainted;
+- nominal Shadowspear acquisition count was 20 CSM, leaving 3 bodies to locate/reconcile;
+- a separate Word Bearers Legionaries Kill Team exists, but its exact body count is not yet recorded.
+
+### Possessed-role body universe
+
+Keep physical identity separate from modern datasheet role:
+
+- current-release Possessed — **5**, all on sprues;
+- legacy Greater Possessed — **6**;
+- Gal Vorbak — **10**;
+- Argel Tal — **1**.
+
+The current 11E CSM roster has Possessed but no separate Greater Possessed datasheet. The six Greater Possessed are therefore stored as legacy physical identities with a current-role candidate of Possessed.
+
+The user also intends the 10 Gal Vorbak and 1 Argel Tal to represent Possessed where appropriate. They remain distinct Horus Heresy models in physical inventory and are not renamed to Possessed.
+
+### Updated lower bound
+
+Wave 1 represented 117 physical bodies.
+
+After directly reconciling starter provenance and adding legacy/proxy body pools, the current CSM-domain physical lower bound is **149 bodies/models**.
+
+This still excludes:
+- the exact body count of the Word Bearers Legionaries Kill Team;
+- three Shadowspear CSM bodies not yet physically located/reconciled;
+- any later waves of models not yet enumerated.
+
+The collection is therefore still explicitly incomplete.

@@ -336,9 +336,11 @@
       "name": "Helbrute",
       "physical_bodies": 1,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "BUILD_STATE_UNKNOWN",
-        "MAGNETIZATION_UNKNOWN"
+        "USER_CONFIRMED_EXACT_COUNT_1",
+        "ASSEMBLED",
+        "DARK_VENGEANCE_PROVENANCE",
+        "CONVERTED_RANGED_ARM",
+        "MELEE_ARM_PENDING_RECHECK"
       ],
       "roles": [
         {
@@ -351,8 +353,21 @@
         }
       ],
       "notes": [
-        "Physical count is derived from model selections in the user-supplied collection export; built/on-sprue state was not supplied."
-      ]
+        "This World Eaters Helbrute is one of the two Dark Vengeance Helbrute bodies owned by the user.",
+        "It was moved into/converted for the World Eaters collection.",
+        "User confirmed plasma was fitted instead of the original melta-type ranged weapon.",
+        "The melee arm was not explicitly reconfirmed in this clarification and remains open rather than inferred."
+      ],
+      "physical_configuration": {
+        "provenance": "Dark Vengeance starter",
+        "build_state": "ASSEMBLED",
+        "conversion": {
+          "original_ranged_weapon": "melta/multi-melta starter weapon",
+          "current_ranged_weapon_raw": "plasma",
+          "change": "plasma fitted in place of the original melta-type ranged weapon"
+        },
+        "melee_arm": "UNKNOWN_NOT_RECONFIRMED"
+      }
     }
   ],
   "confirmed_totals": {
@@ -387,6 +402,17 @@
         "extracted_scope": "World Eaters faction-tagged physical selections only",
         "source_reported_points": 3725,
         "points_authority": "NON_AUTHORITATIVE_EXPORT_METADATA_ONLY"
+      }
+    ],
+    "user_clarifications": [
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_DARK_VENGEANCE_HELBRUTE_RECONCILIATION",
+        "facts": [
+          "The World Eaters Helbrute is a converted Dark Vengeance Helbrute.",
+          "Its original melta-type ranged weapon was replaced with plasma.",
+          "A second Dark Vengeance Helbrute remains in the CSM collection painted as Alpha Legion."
+        ]
       }
     ]
   },
