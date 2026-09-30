@@ -23,6 +23,14 @@ class ReleaseTransitionActivationWatchContracts(unittest.TestCase):
         readiness=build_report(manifests,watch or self.watch,date.fromisoformat(as_of))
         return build_watch(readiness)
 
+    def no_change_watch(self):
+        watch=copy.deepcopy(self.watch)
+        watch["status"]="NO_CHANGE"
+        watch["change_summary"]["github_sources_changed"]=[]
+        watch["change_summary"]["wahapedia_files_changed"]=0
+        watch["change_summary"]["wahapedia_last_update_changed"]=False
+        return watch
+
     def test_current_checkpoint_requires_no_action(self):
         r=self.make_watch([self.sm,self.cust],"2026-09-29")
         self.assertEqual(r["status"],"NO_ACTION_REQUIRED")
@@ -45,7 +53,7 @@ class ReleaseTransitionActivationWatchContracts(unittest.TestCase):
         sm=copy.deepcopy(self.sm)
         sm["activation_evidence"]["current_legal_confirmed"]=True
         sm["activation_evidence"]["confirmed_at"]="2026-10-03"
-        r=self.make_watch([sm],"2026-10-03")
+        r=self.make_watch([sm],"2026-10-03",self.no_change_watch())
         self.assertEqual(r["status"],"MONITORING_UPSTREAM_PROJECTION")
         row=r["transitions"][0]
         self.assertEqual(row["watch_state"],"MONITORING")
@@ -56,7 +64,7 @@ class ReleaseTransitionActivationWatchContracts(unittest.TestCase):
         sm=copy.deepcopy(self.sm)
         sm["activation_evidence"]["current_legal_confirmed"]=True
         sm["activation_evidence"]["confirmed_at"]="2026-10-03"
-        watch=copy.deepcopy(self.watch)
+        watch=self.no_change_watch()
         watch["status"]="CHANGE_DETECTED"
         watch["change_summary"]["wahapedia_files_changed"]=3
         r=self.make_watch([sm],"2026-10-03",watch)
