@@ -400,7 +400,7 @@ try:
 
     gaps = {x.get("id"): x for x in audit.get("gaps", [])}
     expected_states = {
-        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "SECTION_STRUCTURE_CLOSED_RULE_ATOMIZATION_PENDING",
+        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "RULE_REFERENCE_ATOMIZATION_CLOSED_PARAGRAPH_BOUNDARIES_PENDING",
         "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING",
         "FULL_FACTION_CODEX_APP_SEMANTICS": "BLOCKED_OR_CONDITIONAL_ON_AUTHORIZED_CODEX_APP_EVIDENCE",
         "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PUBLIC_EXACT_OVERLAP_SCOPED_RESIDUALS_CLASSIFIED_FULL_EQUIVALENCE_PENDING",
@@ -421,7 +421,7 @@ try:
     if public_rules.get("policy", {}).get("no_full_faction_equivalence_from_faction_packs_alone") is not True:
         errors.append("Public-rules discovery lost faction-pack scope boundary")
 
-    if audit.get("conclusion", {}).get("recommended_next_milestone") != "CORE_RULE_REFERENCE_ATOMIZATION_V1":
+    if audit.get("conclusion", {}).get("recommended_next_milestone") != "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1":
         errors.append("Normative gap audit recommended next milestone drifted")
     if audit.get("official_public_surface", {}).get("official_public_semantic_fingerprints") != "PASS":
         errors.append("Normative gap audit must record official public fingerprint evidence as PASS")
@@ -521,9 +521,9 @@ try:
         errors.append("Current rules Core Rules binary SHA pointer drifted")
 
     core_current = current_rules.get("source_currentness", {}).get("core_rules_content", {})
-    if core_current.get("state") != "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1":
+    if core_current.get("state") != "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1":
         errors.append("Core Rules currentness must record section structure v1 after preserving fingerprint evidence")
-    if core_current.get("normative_structured_normalization") != "SECTION_LEVEL_COMPLETE_PARAGRAPH_AST_PENDING":
+    if core_current.get("normative_structured_normalization") != "RULE_REFERENCE_IDENTITY_COMPLETE_PARAGRAPH_BOUNDARIES_PENDING":
         errors.append("Core Rules structured normalization boundary must remain section-level complete / paragraph AST pending")
 
     supplements = current_rules.get("source_currentness", {}).get("faction_rules_content", {}).get("official_public_supplements", {})
@@ -551,7 +551,7 @@ try:
     profiles = gate.get("scope_profiles", {})
     if profiles.get("official_public_semantic_fingerprints", {}).get("content_state") != "PASS":
         errors.append("Currentness gate official public fingerprint profile must PASS")
-    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1":
+    if profiles.get("core_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1":
         errors.append("Currentness gate Core Rules state drifted")
     if profiles.get("faction_rules", {}).get("content_state") != "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING":
         errors.append("Currentness gate faction-rules public supplement state drifted")
@@ -854,7 +854,7 @@ try:
             errors.append("Wave B conflict snapshot count differs from reconciliation report")
 
     global_cov = cov.get("global", {})
-    if cov.get("status") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_V1_COMPLETE":
+    if cov.get("status") != "CORE_RULE_REFERENCE_ATOMIZATION_V1_COMPLETE":
         errors.append("coverage/current.json must record structured normalization expansion v1 after overlap closure")
     if global_cov.get("wave_b_structural_roster_identities_complete") != counts.get("structural_complete"):
         errors.append("Coverage structural-complete count differs from current roster-view index")
@@ -1089,7 +1089,7 @@ try:
         errors.append("Current rules new runtime drift count differs from runtime report")
     if nr_auto.get("exact_sync_cadence") != "UNKNOWN_NOT_INFERRED":
         errors.append("Current rules invented a New Recruit synchronization cadence")
-    if current_rules.get("next_milestone") != "CORE_RULE_REFERENCE_ATOMIZATION_V1":
+    if current_rules.get("next_milestone") != "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1":
         errors.append("Current milestone must advance to CORE_RULE_REFERENCE_ATOMIZATION_V1")
     readiness_layer = current_rules.get("release_transition_readiness", {})
     if readiness_layer.get("state") != "OPERATIONAL_V1":
@@ -1281,7 +1281,7 @@ try:
         errors.append("Current rules official-public overlap promoted unit count drifted")
     if layer.get("current_normalized_factions_change") != 0:
         errors.append("Current rules overlap layer must not change full-faction coverage")
-    if overlap_current.get("next_milestone") != "CORE_RULE_REFERENCE_ATOMIZATION_V1":
+    if overlap_current.get("next_milestone") != "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1":
         errors.append("Current rules next milestone did not advance after structured normalization expansion")
 
     profile = overlap_gate.get("scope_profiles", {}).get("official_public_mirror_overlap", {})
@@ -1291,7 +1291,7 @@ try:
         errors.append("Currentness gate official-public overlap unit count drifted")
 
     gcov = overlap_cov.get("global", {})
-    if overlap_cov.get("status") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_V1_COMPLETE":
+    if overlap_cov.get("status") != "CORE_RULE_REFERENCE_ATOMIZATION_V1_COMPLETE":
         errors.append("Coverage status did not advance through structured normalization expansion v1")
     if gcov.get("official_public_overlap_promotable_scoped_units") != 4070:
         errors.append("Coverage official-public overlap promoted count drifted")
@@ -1330,6 +1330,160 @@ try:
             errors.append(f"Missing official-public overlap artifact: {path.relative_to(ROOT)}")
 except Exception as exc:
     errors.append(f"Official-public mirror overlap validation failure: {exc}")
+
+# 3j2. Core Rules numbered reference atomization contracts.
+try:
+    atom_report = json.loads(
+        (ROOT / "reports" / "CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json").read_text(encoding="utf-8")
+    )
+    atom_snapshot = json.loads(
+        (ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "core_rule_atoms" / "index.json").read_text(encoding="utf-8")
+    )
+    atom_current = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    atom_gate = json.loads((ROOT / "sources" / "currentness_gate.json").read_text(encoding="utf-8"))
+    atom_cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+
+    if atom_report.get("status") != "PASS" or atom_snapshot.get("status") != "PASS":
+        errors.append("Core rule-reference atomization evidence must PASS")
+    if atom_report.get("authority") != "GAMES_WORKSHOP_OFFICIAL":
+        errors.append("Core rule-reference atomization lost Games Workshop authority")
+    if atom_report.get("atomization_version") != "CORE_RULE_REFERENCE_ATOMIZATION_V1":
+        errors.append("Core rule-reference atomization version drifted")
+
+    atom_summary = atom_report.get("summary", {})
+    expected_atom_classes = {
+        "REPEATED_IN_FAMILY_HEADING": 5,
+        "UNIQUE_IN_FAMILY_HEADING": 136,
+    }
+    if atom_summary.get("atoms") != 141:
+        errors.append("Core rule-reference atom count must remain 141")
+    if atom_summary.get("unique_rule_refs") != 141 or atom_summary.get("unique_rule_keys") != 141:
+        errors.append("Core rule-reference stable identities must remain 141/141 unique")
+    if atom_summary.get("families") != 24:
+        errors.append("Core rule-reference atom family count drifted")
+    if atom_summary.get("family_ids") != [f"{i:02d}" for i in range(1,25)]:
+        errors.append("Core rule-reference atom families must remain canonical 01-24")
+    if atom_summary.get("classification_counts") != expected_atom_classes:
+        errors.append("Core rule-reference atom classification counts drifted")
+    if atom_summary.get("heading_recovery_gaps") != 0 or atom_summary.get("heading_recovery_gap_refs") != []:
+        errors.append("Core rule-reference atomization contains heading recovery gaps")
+    if atom_summary.get("atoms_with_cross_references") != 40:
+        errors.append("Core rule-reference cross-reference atom count drifted")
+    if atom_summary.get("all_atoms_have_in_family_heading") is not True:
+        errors.append("Every Core rule atom must have in-family heading evidence")
+
+    if atom_snapshot.get("summary") != atom_summary:
+        errors.append("Core rule atom report summary differs from full snapshot")
+    atoms = atom_snapshot.get("atoms", [])
+    if len(atoms) != 141:
+        errors.append("Core rule atom snapshot must contain exactly 141 atoms")
+    if len({x.get("rule_ref") for x in atoms}) != 141:
+        errors.append("Core rule atom rule_ref identities are not unique")
+    if len({x.get("rule_key") for x in atoms}) != 141:
+        errors.append("Core rule atom rule_key identities are not unique")
+    if any(len(x.get("heading_labels", [])) == 0 for x in atoms):
+        errors.append("Core rule atom missing heading labels")
+    if any(
+        len(label.get("label", "")) > 160
+        for atom in atoms
+        for label in atom.get("heading_labels", [])
+    ):
+        errors.append("Core rule atom heading label exceeded 160 characters")
+    repeated_refs = {
+        x.get("rule_ref")
+        for x in atoms
+        if x.get("classification") == "REPEATED_IN_FAMILY_HEADING"
+    }
+    if repeated_refs != {"15.07","15.08","15.09","15.10","15.11"}:
+        errors.append(f"Repeated Core rule-reference set drifted: {sorted(repeated_refs)}")
+
+    source_verification = atom_report.get("source_verification", {})
+    if source_verification.get("binary_sha256_match") is not True:
+        errors.append("Core rule atom source binary verification failed")
+    if source_verification.get("page_semantic_fingerprints_match") != 88:
+        errors.append("Core rule atom source page fingerprint count drifted")
+    if source_verification.get("document_semantic_sha256_match") is not True:
+        errors.append("Core rule atom source document semantic verification failed")
+
+    atom_boundary = atom_report.get("authority_boundary", {})
+    if atom_boundary.get("numbered_reference_identity_complete") is not True:
+        errors.append("Core rule numbered-reference identity must be complete")
+    if atom_boundary.get("definition_evidence_heading_only") is not True:
+        errors.append("Core rule definition evidence must remain heading-only at atomization v1")
+    if atom_boundary.get("paragraph_level_rules_ast_complete") is not False:
+        errors.append("Core rule atomization must not claim paragraph AST completeness")
+    if atom_boundary.get("rule_interaction_graph_complete") is not False:
+        errors.append("Core rule atomization must not claim interaction graph completeness")
+    if atom_boundary.get("full_faction_promotion") is not False:
+        errors.append("Core rule atomization must not promote full factions")
+    if atom_boundary.get("current_normalized_factions_change") != 0:
+        errors.append("Core rule atomization must not change normalized faction count")
+
+    current_layer = atom_current.get("core_rule_reference_atomization", {})
+    if current_layer.get("state") != "PASS_141_RULE_ATOMS":
+        errors.append("Current rules Core atomization state drifted")
+    if current_layer.get("atoms") != 141 or current_layer.get("heading_recovery_gaps") != 0:
+        errors.append("Current rules Core atomization counts drifted")
+    if atom_current.get("next_milestone") != "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1":
+        errors.append("Current rules did not advance to Core paragraph-boundary extraction")
+    current_core = atom_current.get("source_currentness", {}).get("core_rules_content", {})
+    if current_core.get("state") != "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1":
+        errors.append("Core Rules currentness did not advance to reference atomization v1")
+    if current_core.get("normative_structured_normalization") != "RULE_REFERENCE_IDENTITY_COMPLETE_PARAGRAPH_BOUNDARIES_PENDING":
+        errors.append("Core Rules structured normalization boundary did not advance after atomization")
+
+    atom_profile = atom_gate.get("scope_profiles", {}).get("core_rule_reference_atoms", {})
+    if atom_profile.get("content_state") != "PASS_141_RULE_ATOMS":
+        errors.append("Currentness gate Core atomization profile must PASS")
+    if atom_profile.get("atoms") != 141 or atom_profile.get("heading_recovery_gaps") != 0:
+        errors.append("Currentness gate Core atomization metrics drifted")
+
+    atom_global = atom_cov.get("global", {})
+    if atom_cov.get("status") != "CORE_RULE_REFERENCE_ATOMIZATION_V1_COMPLETE":
+        errors.append("Coverage status did not advance after Core rule atomization")
+    if atom_global.get("official_public_core_rule_atoms") != 141:
+        errors.append("Coverage Core rule atom count drifted")
+    if atom_global.get("official_public_core_rule_atoms_unique_heading") != 136:
+        errors.append("Coverage unique-heading Core atom count drifted")
+    if atom_global.get("official_public_core_rule_atoms_repeated_heading") != 5:
+        errors.append("Coverage repeated-heading Core atom count drifted")
+    if atom_global.get("official_public_core_rule_atom_heading_recovery_gaps") != 0:
+        errors.append("Coverage Core atom heading recovery gaps must remain zero")
+    if atom_global.get("official_public_core_rule_atoms_with_cross_references") != 40:
+        errors.append("Coverage Core atom cross-reference count drifted")
+    if atom_global.get("official_public_core_rule_paragraph_boundaries_complete") is not False:
+        errors.append("Coverage must preserve Core paragraph boundaries as pending")
+    if atom_global.get("official_public_core_rule_paragraph_ast_complete") is not False:
+        errors.append("Coverage must preserve Core paragraph AST as pending")
+    if atom_global.get("current_normalized_factions") != 0:
+        errors.append("Core rule atomization must preserve current_normalized_factions=0")
+    if atom_global.get("full_normative_semantic_factions") != 0:
+        errors.append("Core rule atomization must preserve full_normative_semantic_factions=0")
+
+    forbidden_atom_text_keys = {"text","description","rules_text","official_text","mirror_text","page_text","prose","paragraph"}
+    def _check_atom_no_long_text(value, path="root"):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                if key in forbidden_atom_text_keys:
+                    errors.append(f"Core rule atomization vendored forbidden long-text field: {path}.{key}")
+                    continue
+                _check_atom_no_long_text(child, f"{path}.{key}")
+        elif isinstance(value, list):
+            for idx, child in enumerate(value):
+                _check_atom_no_long_text(child, f"{path}[{idx}]")
+    _check_atom_no_long_text(atom_snapshot)
+
+    for required in [
+        ROOT / "docs" / "CORE_RULE_REFERENCE_ATOMIZATION_MODEL.md",
+        ROOT / "schemas" / "core_rule_reference_index.schema.json",
+        ROOT / "tools" / "build_core_rule_reference_atoms.py",
+        ROOT / "tests" / "test_core_rule_reference_atomization.py",
+        ROOT / ".github" / "workflows" / "core-rule-reference-atomization.yml",
+    ]:
+        if not required.exists():
+            errors.append(f"Missing Core rule atomization artifact: {required.relative_to(ROOT)}")
+except Exception as exc:
+    errors.append(f"Core rule-reference atomization validation failure: {exc}")
 
 # 3k. Official public structured normalization expansion contracts.
 try:
@@ -1422,9 +1576,9 @@ try:
     if current_layer.get("current_normalized_factions_change") != 0:
         errors.append("Structured normalization expansion must not change faction coverage")
     core_current = expansion_current.get("source_currentness", {}).get("core_rules_content", {})
-    if core_current.get("state") != "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1":
+    if core_current.get("state") != "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1":
         errors.append("Core Rules currentness state did not advance to section structure v1")
-    if core_current.get("normative_structured_normalization") != "SECTION_LEVEL_COMPLETE_PARAGRAPH_AST_PENDING":
+    if core_current.get("normative_structured_normalization") != "RULE_REFERENCE_IDENTITY_COMPLETE_PARAGRAPH_BOUNDARIES_PENDING":
         errors.append("Core Rules structured normalization boundary drifted")
 
     expansion_profile = expansion_gate.get("scope_profiles", {}).get("official_public_structured_normalization_expansion", {})
@@ -1436,7 +1590,7 @@ try:
         errors.append("Currentness gate residual classification must remain non-promoting/non-conflicting")
 
     expansion_global = expansion_cov.get("global", {})
-    if expansion_cov.get("status") != "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_V1_COMPLETE":
+    if expansion_cov.get("status") != "CORE_RULE_REFERENCE_ATOMIZATION_V1_COMPLETE":
         errors.append("Coverage status did not advance after structured normalization expansion")
     if expansion_global.get("official_public_core_rule_reference_families") != 24:
         errors.append("Coverage Core family count drifted")

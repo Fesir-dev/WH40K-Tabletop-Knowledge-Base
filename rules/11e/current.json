@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.6",
+  "schema_version": "3.7",
   "edition": "11e",
   "repository_checkpoint": "2026-09-30",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
@@ -14,14 +14,14 @@
       "verified_at": "2026-09-29"
     },
     "core_rules_content": {
-      "state": "OFFICIAL_PUBLIC_SECTION_STRUCTURE_V1",
+      "state": "OFFICIAL_PUBLIC_RULE_REFERENCE_ATOMIZATION_V1",
       "verified_at": "2026-09-30",
       "report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
       "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
       "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
       "page_count": 88,
-      "normative_structured_normalization": "SECTION_LEVEL_COMPLETE_PARAGRAPH_AST_PENDING",
+      "normative_structured_normalization": "RULE_REFERENCE_IDENTITY_COMPLETE_PARAGRAPH_BOUNDARIES_PENDING",
       "public_overlap": {
         "state": "PARTIAL_EXACT_PUBLIC_OVERLAP_EVIDENCE",
         "exact_core_mirror_units": 21,
@@ -38,7 +38,21 @@
         "rule_reference_count": 141,
         "section_level_structure_complete": true,
         "hierarchical_structure_complete": false,
-        "paragraph_level_rules_ast_complete": false
+        "paragraph_level_rules_ast_complete": false,
+        "rule_reference_atomization": {
+          "state": "PASS_141_RULE_ATOMS",
+          "report": "reports/CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json",
+          "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json",
+          "atoms": 141,
+          "unique_rule_refs": 141,
+          "families": 24,
+          "unique_heading_atoms": 136,
+          "repeated_heading_atoms": 5,
+          "heading_recovery_gaps": 0,
+          "atoms_with_cross_references": 40,
+          "paragraph_level_rules_ast_complete": false,
+          "rule_interaction_graph_complete": false
+        }
       }
     },
     "faction_rules_content": {
@@ -82,7 +96,7 @@
   "repository_coverage": "coverage/current.json",
   "release_state": "sources/release_state.json",
   "latest_migrated_historical_snapshot": "rules/11e/snapshots/2026-08-15/adeptus_custodes.json",
-  "next_milestone": "CORE_RULE_REFERENCE_ATOMIZATION_V1",
+  "next_milestone": "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1",
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
@@ -439,5 +453,34 @@
     "full_normative_semantic_factions_change": 0,
     "app_codex_inference": "PROHIBITED",
     "authority_rule": "Core public section structure and residual classifications improve scoped evidence only. Unscoped/no-exact residuals do not promote factions or establish conflicts without additional official evidence."
+  },
+  "core_rule_reference_atomization": {
+    "state": "PASS_141_RULE_ATOMS",
+    "as_of": "2026-09-30",
+    "report": "reports/CORE_RULE_REFERENCE_ATOMIZATION_CURRENT.json",
+    "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json",
+    "model": "docs/CORE_RULE_REFERENCE_ATOMIZATION_MODEL.md",
+    "schema": "schemas/core_rule_reference_index.schema.json",
+    "tool": "tools/build_core_rule_reference_atoms.py",
+    "workflow": ".github/workflows/core-rule-reference-atomization.yml",
+    "atoms": 141,
+    "families": 24,
+    "classification_counts": {
+      "UNIQUE_IN_FAMILY_HEADING": 136,
+      "REPEATED_IN_FAMILY_HEADING": 5
+    },
+    "heading_recovery_gaps": 0,
+    "atoms_with_cross_references": 40,
+    "source_binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "paragraph_level_rules_ast_complete": false,
+    "current_normalized_factions_change": 0,
+    "authority_rule": "Stable identities are official numbered Core Rules references with short in-family heading/page-hash evidence only. Atomization does not claim paragraph AST, rule interactions, Codex/app equivalence or faction normalization.",
+    "closure_report": "reports/CORE_RULE_REFERENCE_ATOMIZATION_CLOSURE_2026-09-30.md",
+    "pre_pr_validation": {
+      "atomization_workflow_run": 36694945932,
+      "normative_gap_audit_run": 36695667215,
+      "repository_ci_run": 36695740466,
+      "result": "SUCCESS"
+    }
   }
 }

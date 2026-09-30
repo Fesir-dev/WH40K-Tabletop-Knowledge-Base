@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.7",
+  "schema_version": "1.8",
   "as_of": "2026-09-30",
-  "status": "OFFICIAL_PUBLIC_STRUCTURED_NORMALIZATION_EXPANSION_V1_COMPLETE",
+  "status": "CORE_RULE_REFERENCE_ATOMIZATION_V1_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
   "global": {
     "catalogued_roster_universe": 37,
@@ -66,7 +66,16 @@
     "official_public_no_exact_too_short_for_safe_auto_match": 2313,
     "official_public_residual_promoted_units": 0,
     "official_public_residual_semantic_conflicts_created": 0,
-    "official_public_structured_expansion_current_normalized_factions_change": 0
+    "official_public_structured_expansion_current_normalized_factions_change": 0,
+    "official_public_core_rule_atomization_status": "PASS_141_RULE_ATOMS",
+    "official_public_core_rule_atoms": 141,
+    "official_public_core_rule_atoms_unique_heading": 136,
+    "official_public_core_rule_atoms_repeated_heading": 5,
+    "official_public_core_rule_atom_heading_recovery_gaps": 0,
+    "official_public_core_rule_atoms_with_cross_references": 40,
+    "official_public_core_rule_paragraph_boundaries_complete": false,
+    "official_public_core_rule_paragraph_ast_complete": false,
+    "official_public_core_rule_atomization_current_normalized_factions_change": 0
   },
   "dimensions": [
     "points",
