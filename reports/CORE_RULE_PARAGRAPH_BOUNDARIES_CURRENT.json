@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "snapshot_date": "2026-09-30",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "boundary_version": "CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1",
+  "source": {
+    "document_id": "GW_11E_CORE_RULES_PUBLIC",
+    "source_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+    "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+    "page_count": 88,
+    "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+  },
+  "source_verification": {
+    "binary_sha256_match": true,
+    "page_semantic_fingerprints_match": 88,
+    "document_semantic_sha256_match": true
+  },
+  "parent_atomization": {
+    "path": "rules/11e/snapshots/2026-09-30/core_rule_atoms/index.json",
+    "atomization_version": "CORE_RULE_REFERENCE_ATOMIZATION_V1",
+    "atoms": 141,
+    "families": 24,
+    "heading_recovery_gaps": 0
+  },
+  "summary": {
+    "rules": 141,
+    "occurrences": 146,
+    "families": 24,
+    "classification_counts": {
+      "REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH": 5,
+      "SINGLE_OCCURRENCE_BOUNDARY": 136
+    },
+    "heading_line_recovery_gaps": 0,
+    "heading_line_recovery_gap_refs": [],
+    "empty_body_boundaries": 0,
+    "empty_body_boundary_refs": [],
+    "paragraph_candidates": 310,
+    "rules_with_multiple_occurrences": 5,
+    "all_rules_have_nonempty_boundaries": true
+  },
+  "special_rules": [
+    {
+      "rule_ref": "15.07",
+      "family_id": "15",
+      "classification": "REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH",
+      "occurrence_count": 2,
+      "occurrence_hashes": [
+        "bce09954530140d2b4916c2a7ebcae7b1ac8673c9c89d26a4a0cae244c27dc74",
+        "c1c380daabb9c05583ab57823b2931a9a91b7020265d2c821b1340c36ad0c3be"
+      ]
+    },
+    {
+      "rule_ref": "15.08",
+      "family_id": "15",
+      "classification": "REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH",
+      "occurrence_count": 2,
+      "occurrence_hashes": [
+        "123f68cbc1ca70ae6179d10ba13bf0e717dfa24bb07dee77b12195d157af5885",
+        "76d69a043a6547a505e9389e51fca932c471a30880a6b86a58b4a1ff942f522c"
+      ]
+    },
+    {
+      "rule_ref": "15.09",
+      "family_id": "15",
+      "classification": "REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH",
+      "occurrence_count": 2,
+      "occurrence_hashes": [
+        "7e53fd4ab164add882c1eaf365f065cc196871ffdd06c72d6a6b3377c009cc77",
+        "1c6c09bfc5d230ded48d5b7e6e40b624d2c5e7c8fae7f031773a2c35d65ddbfa"
+      ]
+    },
+    {
+      "rule_ref": "15.10",
+      "family_id": "15",
+      "classification": "REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH",
+      "occurrence_count": 2,
+      "occurrence_hashes": [
+        "6b184102441767a60cb973ed7aa102a8a74c3a6ce3272b258c47e9c984e050e1",
+        "c1301d1e85e01e8a0845bc8ce4386723d57a9eb5706a1107cc6bb479a0d5e729"
+      ]
+    },
+    {
+      "rule_ref": "15.11",
+      "family_id": "15",
+      "classification": "REPEATED_OCCURRENCE_BOUNDARIES_VARIANT_HASH",
+      "occurrence_count": 2,
+      "occurrence_hashes": [
+        "0306c9279f37abdbf0262e5173ad825bc010de26e1343ee32cecdb1f351242b4",
+        "aa36031a5c90521d1e8c936443ae68af4f3fa1fb7c5163443a84d0666e5e2892"
+      ]
+    }
+  ],
+  "authority_boundary": {
+    "rule_body_boundary_complete": true,
+    "paragraph_boundaries_are_extraction_candidates": true,
+    "paragraph_level_rules_ast_complete": false,
+    "rule_interaction_graph_complete": false,
+    "repeated_occurrence_hash_equality_is_semantic_equivalence": false,
+    "app_codex_equivalence": "NOT_CLAIMED",
+    "full_faction_promotion": false,
+    "current_normalized_factions_change": 0,
+    "copyright_policy": "Offsets/ranges/counts/hashes only. No paragraph or rule-body prose committed."
+  }
+}
