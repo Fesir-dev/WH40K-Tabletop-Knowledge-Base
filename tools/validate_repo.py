@@ -400,7 +400,7 @@ try:
 
     gaps = {x.get("id"): x for x in audit.get("gaps", [])}
     expected_states = {
-        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION",
+        "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION": "AST_READINESS_EXPANSION_CLOSED_11_MODAL_SENTENCE_CANDIDATES_PENDING_SELECTION",
         "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION": "EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING",
         "FULL_FACTION_CODEX_APP_SEMANTICS": "BLOCKED_OR_CONDITIONAL_ON_AUTHORIZED_CODEX_APP_EVIDENCE",
         "MIRROR_TO_OFFICIAL_SEMANTIC_EQUIVALENCE": "PUBLIC_EXACT_OVERLAP_SCOPED_RESIDUALS_CLASSIFIED_FULL_EQUIVALENCE_PENDING",
@@ -2779,6 +2779,182 @@ try:
             errors.append(f"Missing direct-modal semantic-validation artifact: {required.relative_to(ROOT)}")
 except Exception as exc:
     errors.append(f"Core direct-modal AST semantic validation failure: {exc}")
+
+# 3j2. Core Rule AST readiness expansion v1 contracts.
+try:
+    ast_expansion_report = json.loads(
+        (ROOT / "reports" / "CORE_RULE_AST_READINESS_EXPANSION_CURRENT.json").read_text(encoding="utf-8")
+    )
+    ast_expansion_snapshot = json.loads(
+        (ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "core_rule_ast_readiness_expansion" / "index.json").read_text(encoding="utf-8")
+    )
+    ast_expansion_current = json.loads((ROOT / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    ast_expansion_gate = json.loads((ROOT / "sources" / "currentness_gate.json").read_text(encoding="utf-8"))
+    ast_expansion_cov = json.loads((ROOT / "coverage" / "current.json").read_text(encoding="utf-8"))
+
+    for label, data in [("report", ast_expansion_report), ("snapshot", ast_expansion_snapshot)]:
+        if data.get("status") != "PASS":
+            errors.append(f"AST readiness expansion {label} must PASS")
+        if data.get("authority") != "GAMES_WORKSHOP_OFFICIAL":
+            errors.append(f"AST readiness expansion {label} lost Games Workshop authority")
+        if data.get("expansion_version") != "CORE_RULE_AST_READINESS_EXPANSION_V1":
+            errors.append(f"AST readiness expansion {label} version drifted")
+
+    s = ast_expansion_snapshot.get("summary", {})
+    expected_parent = {
+        "BLOCKED_COMPLEX_DELIMITERS": 4,
+        "BLOCKED_PARENTHETICAL_SCOPE": 1,
+        "BLOCKED_SENTENCE_SHAPE": 28,
+    }
+    expected_states = {
+        "BLOCKED_CONDITION_OUTSIDE_MODAL_SENTENCE": 5,
+        "BLOCKED_DELIMITER_SCOPE": 4,
+        "BLOCKED_MODAL_SENTENCE_COMPLEX_DELIMITERS": 2,
+        "BLOCKED_MODAL_SENTENCE_NONTERMINAL": 2,
+        "BLOCKED_MODAL_SENTENCE_PARENTHETICAL_SCOPE": 7,
+        "BLOCKED_PARENTHETICAL_SCOPE": 1,
+        "BLOCKED_SENTENCE_SEGMENTATION": 1,
+        "CANDIDATE_SINGLE_MODAL_SENTENCE": 11,
+    }
+    if s.get("rows_audited") != 33 or s.get("unique_paragraph_keys") != 33:
+        errors.append("AST readiness expansion must audit exactly 33 unique parent rows")
+    if s.get("parent_state_counts") != expected_parent:
+        errors.append("AST readiness expansion parent-state baseline drifted")
+    if s.get("expansion_state_counts") != expected_states:
+        errors.append("AST readiness expansion result-state counts drifted")
+    if s.get("source_hashes_reproduced") != 33:
+        errors.append("AST readiness expansion must reproduce all 33 source hashes")
+    if s.get("sentence_candidates") != 11:
+        errors.append("AST readiness expansion candidate count drifted")
+    if s.get("candidate_modal_axis_counts") != {"PERMISSION": 9, "PROHIBITION": 2}:
+        errors.append("AST readiness expansion modal-axis candidate split drifted")
+    if s.get("candidate_condition_counts") != {"0": 11}:
+        errors.append("AST readiness expansion candidates must remain condition-free in v1")
+    for key in (
+        "new_ast_nodes_created",
+        "interaction_edges_created",
+        "existing_ast_nodes_mutated",
+        "additional_paragraphs_admitted",
+    ):
+        if s.get(key) != 0:
+            errors.append(f"AST readiness expansion must keep {key}=0")
+
+    rows = ast_expansion_snapshot.get("rows", [])
+    if len(rows) != 33 or len({x.get("paragraph_key") for x in rows}) != 33:
+        errors.append("AST readiness expansion row identity set drifted")
+    candidates = [x for x in rows if x.get("expansion_state") == "CANDIDATE_SINGLE_MODAL_SENTENCE"]
+    if len(candidates) != 11:
+        errors.append("AST readiness expansion snapshot must contain exactly 11 sentence candidates")
+    for row in candidates:
+        candidate = row.get("sentence_candidate") or {}
+        if candidate.get("modal_occurrences") != 1:
+            errors.append(f"Sentence candidate lost single-modal invariant: {row.get('paragraph_key')}")
+        if candidate.get("condition_cues") != 0:
+            errors.append(f"Sentence candidate gained condition cue: {row.get('paragraph_key')}")
+        if candidate.get("complex_delimiter_count") != 0 or candidate.get("parenthetical_delimiter_count") != 0:
+            errors.append(f"Sentence candidate gained forbidden delimiter scope: {row.get('paragraph_key')}")
+        if candidate.get("terminal_punctuation_at_end") is not True:
+            errors.append(f"Sentence candidate lost terminal punctuation: {row.get('paragraph_key')}")
+        if row.get("ast_node_created") is not False or row.get("interaction_edges_created") != 0:
+            errors.append(f"Sentence candidate was promoted into AST/edge state: {row.get('paragraph_key')}")
+
+    validated = ast_expansion_snapshot.get("validated_existing_ast", {})
+    if validated.get("node_key") != "core-ast-direct-modal--13-07--p50-o1":
+        errors.append("AST readiness expansion existing AST target drifted")
+    if validated.get("decision") != "OPAQUE_PRESERVED":
+        errors.append("AST readiness expansion must preserve existing AST as OPAQUE_PRESERVED")
+    if validated.get("ast_mutated") is not False or validated.get("interaction_edges_created") != 0:
+        errors.append("AST readiness expansion mutated the existing validated AST")
+
+    boundary = ast_expansion_snapshot.get("authority_boundary", {})
+    if boundary.get("readiness_expansion_complete") is not True:
+        errors.append("AST readiness expansion completeness boundary drifted")
+    if boundary.get("sentence_candidate_is_not_ast_node") is not True:
+        errors.append("Sentence candidate must remain distinct from AST node")
+    if boundary.get("sentence_candidate_is_not_parser_admission") is not True:
+        errors.append("Sentence candidate must not become parser admission automatically")
+    for key in ("ast_nodes_created", "interaction_edges_created", "existing_ast_mutated"):
+        if boundary.get(key) is not False:
+            errors.append(f"AST readiness expansion authority boundary {key} must remain false")
+    if boundary.get("current_normalized_factions_change") != 0:
+        errors.append("AST readiness expansion must not change faction normative coverage")
+
+    layer = ast_expansion_current.get("core_rule_ast_readiness_expansion", {})
+    if layer.get("state") != "PASS_11_MODAL_SENTENCE_CANDIDATES":
+        errors.append("Current rules AST readiness expansion state drifted")
+    if layer.get("rows_audited") != 33 or layer.get("sentence_candidates") != 11:
+        errors.append("Current rules AST readiness expansion counts drifted")
+    if layer.get("existing_ast_decision") != "OPAQUE_PRESERVED":
+        errors.append("Current rules lost opaque existing AST decision")
+    if layer.get("new_ast_nodes_created") != 0 or layer.get("interaction_edges_created") != 0 or layer.get("existing_ast_nodes_mutated") != 0:
+        errors.append("Current rules AST readiness expansion acquired forbidden mutations")
+    if ast_expansion_current.get("next_milestone") != "CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1":
+        errors.append("Current milestone must advance to modal-sentence candidate selection")
+
+    core_current = ast_expansion_current.get("source_currentness", {}).get("core_rules_content", {})
+    if core_current.get("state") != "OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1":
+        errors.append("Core currentness state did not advance to AST readiness expansion v1")
+    if core_current.get("normative_structured_normalization") != "AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION":
+        errors.append("Core normalization marker after AST readiness expansion drifted")
+
+    profile = ast_expansion_gate.get("scope_profiles", {}).get("core_rule_ast_readiness_expansion", {})
+    if profile.get("content_state") != "PASS_11_MODAL_SENTENCE_CANDIDATES":
+        errors.append("Currentness gate AST readiness expansion profile drifted")
+    if profile.get("rows_audited") != 33 or profile.get("sentence_candidates") != 11:
+        errors.append("Currentness gate AST readiness expansion counts drifted")
+
+    g = ast_expansion_cov.get("global", {})
+    if ast_expansion_cov.get("status") != "CORE_RULE_AST_READINESS_EXPANSION_V1_COMPLETE":
+        errors.append("Coverage status did not advance after AST readiness expansion")
+    expected_cov = {
+        "official_public_core_ast_readiness_expansion_status": "PASS_11_MODAL_SENTENCE_CANDIDATES",
+        "official_public_core_ast_readiness_expansion_rows_audited": 33,
+        "official_public_core_ast_readiness_expansion_source_hashes_reproduced": 33,
+        "official_public_core_ast_readiness_expansion_sentence_candidates": 11,
+        "official_public_core_ast_readiness_expansion_permission_candidates": 9,
+        "official_public_core_ast_readiness_expansion_prohibition_candidates": 2,
+        "official_public_core_ast_readiness_expansion_conditional_candidates": 0,
+        "official_public_core_ast_readiness_expansion_new_ast_nodes_created": 0,
+        "official_public_core_ast_readiness_expansion_interaction_edges_created": 0,
+        "official_public_core_ast_readiness_expansion_existing_ast_nodes_mutated": 0,
+        "official_public_core_ast_readiness_expansion_additional_paragraphs_admitted": 0,
+        "official_public_core_ast_readiness_expansion_current_normalized_factions_change": 0,
+    }
+    for key, value in expected_cov.items():
+        if g.get(key) != value:
+            errors.append(f"Coverage AST readiness expansion metric drifted: {key}")
+    if g.get("current_normalized_factions") != 0 or g.get("full_normative_semantic_factions") != 0:
+        errors.append("AST readiness expansion must preserve strict normative faction counters")
+
+    forbidden_expansion_text_keys = {
+        "text","description","rules_text","official_text","mirror_text","page_text","prose",
+        "paragraph_text","body_text","matched_phrase","sentence_text",
+    }
+    def _check_expansion_no_text(value, path="root"):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                if key in forbidden_expansion_text_keys:
+                    errors.append(f"AST readiness expansion vendored forbidden text field: {path}.{key}")
+                    continue
+                _check_expansion_no_text(child, f"{path}.{key}")
+        elif isinstance(value, list):
+            for idx, child in enumerate(value):
+                _check_expansion_no_text(child, f"{path}[{idx}]")
+    _check_expansion_no_text(ast_expansion_snapshot)
+
+    for required in [
+        ROOT / "reports" / "CORE_RULE_AST_READINESS_EXPANSION_CURRENT.json",
+        ROOT / "rules" / "11e" / "snapshots" / "2026-09-30" / "core_rule_ast_readiness_expansion" / "index.json",
+        ROOT / "docs" / "CORE_RULE_AST_READINESS_EXPANSION_MODEL.md",
+        ROOT / "schemas" / "core_rule_ast_readiness_expansion.schema.json",
+        ROOT / "tools" / "audit_core_rule_ast_readiness_expansion.py",
+        ROOT / "tests" / "test_core_rule_ast_readiness_expansion.py",
+        ROOT / ".github" / "workflows" / "core-rule-ast-readiness-expansion.yml",
+    ]:
+        if not required.exists():
+            errors.append(f"Missing AST readiness expansion artifact: {required.relative_to(ROOT)}")
+except Exception as exc:
+    errors.append(f"Core AST readiness expansion validation failure: {exc}")
 
 # 3k. Official public structured normalization expansion contracts.
 try:
