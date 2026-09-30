@@ -6,7 +6,21 @@ Updated: **2026-09-30**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest closed Core rule-reference atomization milestone:
+Latest Core paragraph-boundary candidate:
+
+- branch: `core-rule-paragraph-boundary-extraction-v1`;
+- boundary snapshot: `rules/11e/snapshots/2026-09-30/core_rule_boundaries/index.json`;
+- report: `reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json`;
+- rules / occurrences / paragraph candidates: **141 / 146 / 310**;
+- single / repeated-variant rules: **136 / 5**;
+- heading-line gaps / empty bodies: **0 / 0**;
+- boundary workflow: `36696663834` — **SUCCESS**;
+- gap reproducibility: `36696967737` — **SUCCESS**;
+- repository validation: `36697099240` — **SUCCESS**;
+- closure: `reports/CORE_RULE_PARAGRAPH_BOUNDARY_CLOSURE_2026-09-30.md`;
+- next milestone: `CORE_RULE_PARAGRAPH_ATOMIZATION_V1`.
+
+Previous closed Core rule-reference atomization milestone:
 
 - merged PR: **#13**;
 - merge commit: `ca30daaf0ced6b305e7e4d10b6b0716ab49cea92`;
@@ -305,27 +319,19 @@ Authority boundary remains:
 
 ## Current active milestone
 
-`CORE_RULE_PARAGRAPH_BOUNDARY_EXTRACTION_V1`
+`CORE_RULE_PARAGRAPH_ATOMIZATION_V1`
 
-Core rule-reference atomization is closed at the candidate layer:
+Boundary extraction candidate is complete:
 
-- stable Core rule identities: **141 / 141**;
-- heading recovery gaps: **0**;
-- repeated structural heading evidence: exactly **5** refs (`15.07–15.11`);
-- cross-reference-bearing atoms: **40**;
-- source binary/page/document fingerprints: verified;
-- paragraph prose: not vendored;
-- paragraph-level AST: still **PENDING**;
-- whole-faction normative counters: unchanged at **0**.
+- stable Core rules: **141**;
+- deterministic body occurrences: **146**;
+- page-local paragraph candidates: **310**;
+- recovery gaps / empty bodies: **0 / 0**;
+- repeated body variants: **5** refs (`15.07–15.11`);
+- paragraph prose and semantic AST remain external/pending;
+- whole-faction normative counters remain **0**.
 
-Next unresolved work:
-
-1. derive deterministic rule-body/paragraph boundaries for each stable Core atom;
-2. retain official page/offset/range hash provenance without committing long paragraph prose;
-3. fail closed on layout ambiguity and multi-page body uncertainty;
-4. keep paragraph AST and interaction-graph modeling as later layers;
-5. do not infer app/Codex-only semantics or alter faction normative coverage;
-6. release-transition activation watch continues independently.
+Next: assign stable identities to all 310 paragraph candidates with parent rule/occurrence/page/range/hash provenance, preserving repeated variants without semantic guessing.
 
 ## Execution reliability rule
 
@@ -336,6 +342,6 @@ Next unresolved work:
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, or Core rule-reference atomization v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, or Core paragraph-boundary extraction v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.
