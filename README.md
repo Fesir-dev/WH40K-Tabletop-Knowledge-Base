@@ -81,7 +81,8 @@ legacy/                  Metadata for superseded project baselines
 - [x] Extract copyright-safe rule-body boundaries for all 141 Core rule atoms: 146 occurrences / 310 page-local paragraph candidates / zero recovery gaps or empty bodies.
 - [x] Atomize all 310 Core paragraph candidates into stable paragraph identities with verified parent rule/occurrence/page/range/hash provenance and 310/310 source-range hash reproduction.
 - [x] Classify all 310 stable Core paragraph identities into conservative lexical/structural semantic roles with fail-closed MIXED/UNCLASSIFIED states and 310/310 verified source-range hashes.
-- [ ] Review the 134 MIXED and 112 UNCLASSIFIED Core paragraph classifications before any AST-readiness or condition/effect parsing gate.
+- [x] Review all 310 Core paragraph semantic classifications as orthogonal profiles: 156 AXIS_PROFILE_READY, 42 MULTI_MODAL review-required and 112 no-strong-signal review-required.
+- [ ] Audit AST readiness inside the 156 AXIS_PROFILE_READY profiles without assuming that all 156 are safely parseable.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary

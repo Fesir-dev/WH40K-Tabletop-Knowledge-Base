@@ -49,6 +49,7 @@ class RepositoryContracts(unittest.TestCase):
         cls.core_rule_boundaries = json.loads((ROOT/"reports/CORE_RULE_PARAGRAPH_BOUNDARIES_CURRENT.json").read_text(encoding="utf-8"))
         cls.core_rule_paragraph_atoms = json.loads((ROOT/"reports/CORE_RULE_PARAGRAPH_ATOMIZATION_CURRENT.json").read_text(encoding="utf-8"))
         cls.core_rule_paragraph_semantics = json.loads((ROOT/"reports/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_CURRENT.json").read_text(encoding="utf-8"))
+        cls.core_rule_paragraph_semantic_review = json.loads((ROOT/"reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -181,11 +182,11 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(mapping["NO_PUBLIC_FACTION_PACK_MAPPING"], 2)
 
         gaps={x["id"]:x for x in audit["gaps"]}
-        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSED_SEMANTIC_REVIEW_PENDING")
+        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "PARAGRAPH_SEMANTIC_REVIEW_CLOSED_AST_READINESS_PENDING")
         self.assertEqual(gaps["PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION"]["state"], "EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING")
         self.assertEqual(gaps["GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK"]["state"], "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE")
         self.assertEqual(gaps["NORMATIVE_COVERAGE_ACCOUNTING"]["state"], "INTENTIONAL_ZERO_NOT_MIRROR_DATA_LOSS")
-        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1")
+        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "CORE_RULE_SEMANTIC_AST_READINESS_V1")
 
         findings={x["id"]:x for x in self.public_rules_discovery["findings"]}
         self.assertEqual(findings["GW_11E_CORE_RULES_PUBLIC"]["state"], "PUBLIC_OFFICIAL_SOURCE_DISCOVERED_NOT_INGESTED")
@@ -234,7 +235,7 @@ class RepositoryContracts(unittest.TestCase):
 
         profiles=self.gate["scope_profiles"]
         self.assertEqual(profiles["official_public_semantic_fingerprints"]["content_state"], "PASS")
-        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1")
+        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1")
         self.assertEqual(profiles["faction_rules"]["content_state"], "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING")
         self.assertEqual(profiles["app_wording"]["content_state"], "PENDING")
 
@@ -276,11 +277,11 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["current_normalized_factions_change"], 0)
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["state"],
-            "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+            "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
         )
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
-            "PARAGRAPH_SEMANTIC_ROLES_CLASSIFIED_SEMANTIC_REVIEW_PENDING",
+            "PARAGRAPH_SEMANTIC_REVIEW_COMPLETE_AST_READINESS_PENDING",
         )
 
         profile=self.gate["scope_profiles"]["core_rule_reference_atoms"]
@@ -346,14 +347,14 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["paragraph_candidates"],310)
         self.assertEqual(layer["heading_line_recovery_gaps"],0)
         self.assertEqual(layer["empty_body_boundaries"],0)
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_SEMANTIC_AST_READINESS_V1")
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["state"],
-            "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+            "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
         )
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
-            "PARAGRAPH_SEMANTIC_ROLES_CLASSIFIED_SEMANTIC_REVIEW_PENDING",
+            "PARAGRAPH_SEMANTIC_REVIEW_COMPLETE_AST_READINESS_PENDING",
         )
 
         profile=self.gate["scope_profiles"]["core_rule_paragraph_boundaries"]
@@ -363,7 +364,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["heading_line_recovery_gaps"],0)
         self.assertEqual(profile["empty_body_boundaries"],0)
 
-        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1_COMPLETE")
         self.assertEqual(self.coverage["global"]["official_public_core_rule_boundary_rules"],141)
         self.assertEqual(self.coverage["global"]["official_public_core_rule_boundary_occurrences"],146)
         self.assertEqual(self.coverage["global"]["official_public_core_rule_paragraph_candidates"],310)
@@ -421,14 +422,14 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["paragraph_atoms"],310)
         self.assertEqual(layer["unique_paragraph_keys"],310)
         self.assertEqual(layer["range_validation_failures"],0)
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_SEMANTIC_AST_READINESS_V1")
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["state"],
-            "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+            "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
         )
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
-            "PARAGRAPH_SEMANTIC_ROLES_CLASSIFIED_SEMANTIC_REVIEW_PENDING",
+            "PARAGRAPH_SEMANTIC_REVIEW_COMPLETE_AST_READINESS_PENDING",
         )
 
         profile=self.gate["scope_profiles"]["core_rule_paragraph_atoms"]
@@ -439,7 +440,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["repeated_occurrence_paragraph_variants"],10)
         self.assertEqual(profile["range_validation_failures"],0)
 
-        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1_COMPLETE")
         g=self.coverage["global"]
         self.assertEqual(g["official_public_core_paragraph_atoms"],310)
         self.assertEqual(g["official_public_core_paragraph_unique_keys"],310)
@@ -508,13 +509,14 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["paragraphs"],310)
         self.assertEqual(layer["role_counts"],s["role_counts"])
         self.assertEqual(layer["confidence_counts"],s["confidence_counts"])
-        self.assertTrue(layer["semantic_review_pending"])
+        self.assertFalse(layer["semantic_review_pending"])
+        self.assertTrue(layer["semantic_review_complete"])
         self.assertTrue(layer["ast_readiness_pending"])
         self.assertFalse(layer["condition_effect_ast_complete"])
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_SEMANTIC_AST_READINESS_V1")
         core=self.current["source_currentness"]["core_rules_content"]
-        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1")
-        self.assertEqual(core["normative_structured_normalization"],"PARAGRAPH_SEMANTIC_ROLES_CLASSIFIED_SEMANTIC_REVIEW_PENDING")
+        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1")
+        self.assertEqual(core["normative_structured_normalization"],"PARAGRAPH_SEMANTIC_REVIEW_COMPLETE_AST_READINESS_PENDING")
 
         profile=self.gate["scope_profiles"]["core_rule_paragraph_semantics"]
         self.assertEqual(profile["content_state"],"PASS_310_PARAGRAPHS_CLASSIFIED")
@@ -522,7 +524,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["role_counts"],s["role_counts"])
         self.assertEqual(profile["confidence_counts"],s["confidence_counts"])
 
-        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1_COMPLETE")
         g=self.coverage["global"]
         self.assertTrue(g["official_public_core_paragraph_semantic_classification_complete"])
         self.assertFalse(g["official_public_core_paragraph_semantic_ast_complete"])
@@ -543,6 +545,96 @@ class RepositoryContracts(unittest.TestCase):
             "docs/CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_MODEL.md",
             ".github/workflows/core-rule-paragraph-semantic-classification.yml",
             "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
+        ]:
+            self.assertTrue((ROOT/required).exists(),required)
+
+    def test_core_rule_paragraph_semantic_review_layer(self):
+        r=self.core_rule_paragraph_semantic_review
+        self.assertEqual(r["status"],"PASS")
+        self.assertEqual(r["authority"],"GAMES_WORKSHOP_OFFICIAL")
+        self.assertEqual(r["review_version"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1")
+        s=r["summary"]
+        self.assertEqual(s["profiles"],310)
+        self.assertEqual(s["unique_paragraph_keys"],310)
+        self.assertEqual(s["review_state_counts"],{
+            "AXIS_PROFILE_READY":156,
+            "MULTI_MODAL_REVIEW_REQUIRED":42,
+            "NO_STRONG_SIGNAL_REVIEW_REQUIRED":112,
+        })
+        self.assertEqual(s["modal_axis_counts"],{
+            "MULTI_MODAL":42,
+            "NONE":173,
+            "OBLIGATION":17,
+            "PERMISSION":67,
+            "PROHIBITION":11,
+        })
+        self.assertEqual(s["axis_profile_ready"],156)
+        self.assertEqual(s["review_required"],154)
+        self.assertEqual(s["mixed_decomposition"],{
+            "axis_profile_ready":92,
+            "multi_modal_review_required":42,
+            "no_strong_signal_review_required":0,
+        })
+        self.assertEqual(s["unclassified_decomposition"],{
+            "signal_free":110,
+            "weak_only":2,
+            "review_required":112,
+        })
+        self.assertEqual(s["repeated_variant_review_state_counts"],{
+            "AXIS_PROFILE_READY":4,
+            "MULTI_MODAL_REVIEW_REQUIRED":6,
+        })
+        self.assertEqual(s["parent_hashes_verified"],310)
+
+        b=r["authority_boundary"]
+        self.assertTrue(b["semantic_review_complete"])
+        self.assertTrue(b["multi_axis_profile_is_not_condition_effect_ast"])
+        self.assertTrue(b["axis_profile_ready_is_not_ast_readiness_claim"])
+        self.assertTrue(b["multi_modal_rows_remain_unresolved"])
+        self.assertTrue(b["no_strong_signal_rows_remain_unresolved"])
+        self.assertFalse(b["condition_effect_ast_complete"])
+        self.assertFalse(b["rule_interaction_graph_complete"])
+        self.assertEqual(b["next_milestone"],"CORE_RULE_SEMANTIC_AST_READINESS_V1")
+
+        layer=self.current["core_rule_paragraph_semantic_review"]
+        self.assertEqual(layer["state"],"PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED")
+        self.assertEqual(layer["profiles"],310)
+        self.assertEqual(layer["axis_profile_ready"],156)
+        self.assertEqual(layer["review_required"],154)
+        self.assertFalse(layer["axis_profile_ready_is_ast_ready"])
+        self.assertTrue(layer["ast_readiness_pending"])
+        self.assertFalse(layer["condition_effect_ast_complete"])
+
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_SEMANTIC_AST_READINESS_V1")
+        core=self.current["source_currentness"]["core_rules_content"]
+        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1")
+        self.assertEqual(core["normative_structured_normalization"],"PARAGRAPH_SEMANTIC_REVIEW_COMPLETE_AST_READINESS_PENDING")
+
+        profile=self.gate["scope_profiles"]["core_rule_paragraph_semantic_review"]
+        self.assertEqual(profile["content_state"],"PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED")
+        self.assertEqual(profile["profiles"],310)
+        self.assertEqual(profile["axis_profile_ready"],156)
+        self.assertEqual(profile["review_required"],154)
+
+        self.assertEqual(self.coverage["status"],"CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1_COMPLETE")
+        g=self.coverage["global"]
+        self.assertEqual(g["official_public_core_paragraph_semantic_review_profiles"],310)
+        self.assertEqual(g["official_public_core_paragraph_axis_profile_ready"],156)
+        self.assertEqual(g["official_public_core_paragraph_semantic_review_required"],154)
+        self.assertEqual(g["official_public_core_paragraph_multi_modal_review_required"],42)
+        self.assertEqual(g["official_public_core_paragraph_no_strong_signal_review_required"],112)
+        self.assertFalse(g["official_public_core_semantic_ast_readiness_complete"])
+        self.assertFalse(g["official_public_core_condition_effect_ast_complete"])
+        self.assertEqual(g["current_normalized_factions"],0)
+        self.assertEqual(g["full_normative_semantic_factions"],0)
+
+        for required in [
+            "tools/review_core_rule_paragraph_semantics.py",
+            "tests/test_core_rule_paragraph_semantic_review.py",
+            "schemas/core_rule_paragraph_semantic_review.schema.json",
+            "docs/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_MODEL.md",
+            ".github/workflows/core-rule-paragraph-semantic-review.yml",
+            "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json",
         ]:
             self.assertTrue((ROOT/required).exists(),required)
 
@@ -593,7 +685,7 @@ class RepositoryContracts(unittest.TestCase):
     def test_wave_b_reconciliation_and_promotion(self):
         self.assertIn(self.wave_b_recon["status"], {"PASS","PASS_WITH_CONFLICTS"})
         self.assertEqual(self.wave_b_recon["conflict_count"], self.current["wave_b_structural"]["source_conflicts"])
-        self.assertEqual(self.coverage["status"], "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"], "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1_COMPLETE")
         complete=self.wave_b["counts"]["structural_complete"]
         self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_current")), complete)
         self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
@@ -700,7 +792,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["known_runtime_drifts"], points["known_drift_count"]+surfaces["known_drift_count"])
         self.assertEqual(nr["new_runtime_drifts"], 0)
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1")
+        self.assertEqual(self.current["next_milestone"], "CORE_RULE_SEMANTIC_AST_READINESS_V1")
         layer=self.current["release_transition_readiness"]
         self.assertEqual(layer["state"], "OPERATIONAL_V1")
         self.assertFalse(layer["policy"]["auto_promote"])

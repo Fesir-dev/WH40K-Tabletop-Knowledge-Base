@@ -1,5 +1,5 @@
 {
-  "schema_version": "4.0",
+  "schema_version": "4.1",
   "as_of": "2026-09-30",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
@@ -182,11 +182,11 @@
       "required_sources": [
         "GW_40K_DOWNLOADS"
       ],
-      "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+      "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
       "repository_dimension": null,
       "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
       "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-      "authority_boundary": "All 310 stable Core paragraph identities have deterministic lexical/structural role classifications. 134 MIXED and 112 UNCLASSIFIED remain explicit fail-closed states; AST-readiness review, condition/effect parsing and interactions remain pending.",
+      "authority_boundary": "All 310 stable Core paragraph identities have been reviewed as orthogonal semantic profiles. 156 are axis-profile-ready without modal conflict; 42 remain multi-modal and 112 lack strong semantic signals. AST readiness, condition/effect parsing and interactions remain pending.",
       "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
       "rule_reference_families": 24,
       "rule_reference_count": 141,
@@ -227,6 +227,20 @@
         "paragraphs_without_signals": 110,
         "repeated_variant_paragraphs": 10,
         "paragraph_hashes_reproduced_from_verified_pdf": 310,
+        "ast_readiness_pending": true
+      },
+      "paragraph_semantic_review": {
+        "state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
+        "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json",
+        "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json",
+        "profiles": 310,
+        "axis_profile_ready": 156,
+        "review_required": 154,
+        "multi_modal_review_required": 42,
+        "no_strong_signal_review_required": 112,
+        "mixed_axis_profile_ready": 92,
+        "unclassified_signal_free": 110,
+        "unclassified_weak_only": 2,
         "ast_readiness_pending": true
       }
     },
@@ -432,6 +446,28 @@
       "paragraph_hashes_reproduced_from_verified_pdf": 310,
       "authority_boundary": "Conservative lexical/structural role labels only. 64 HIGH, 134 MIXED and 112 UNCLASSIFIED; AST-readiness review must define any safely parseable subset before condition/effect nodes or interaction edges.",
       "ast_readiness_pending": true
+    },
+    "core_rule_paragraph_semantic_review": {
+      "required_sources": [
+        "GW_40K_DOWNLOADS"
+      ],
+      "content_state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
+      "repository_dimension": null,
+      "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json",
+      "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json",
+      "profiles": 310,
+      "review_state_counts": {
+        "AXIS_PROFILE_READY": 156,
+        "MULTI_MODAL_REVIEW_REQUIRED": 42,
+        "NO_STRONG_SIGNAL_REVIEW_REQUIRED": 112
+      },
+      "axis_profile_ready": 156,
+      "review_required": 154,
+      "repeated_variant_review_state_counts": {
+        "AXIS_PROFILE_READY": 4,
+        "MULTI_MODAL_REVIEW_REQUIRED": 6
+      },
+      "authority_boundary": "Multi-axis lexical/structural profile review only. AXIS_PROFILE_READY is not AST-ready; multi-modal and no-strong-signal rows remain unresolved; no condition/effect AST or interaction graph is claimed."
     }
   },
   "promotion_policy": "A scope may be source-current while repository coverage remains zero. CURRENT_VERIFIED normalized data requires both scope PASS and complete validated coverage for the claimed object set."

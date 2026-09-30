@@ -1,7 +1,7 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.2",
   "as_of": "2026-09-30",
-  "status": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1_COMPLETE",
+  "status": "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
   "global": {
     "catalogued_roster_universe": 37,
@@ -122,7 +122,20 @@
     "official_public_core_condition_effect_ast_complete": false,
     "official_public_core_rule_interaction_graph_complete": false,
     "official_public_core_paragraph_semantic_classification_current_normalized_factions_change": 0,
-    "official_public_core_paragraph_semantic_hashes_reproduced": 310
+    "official_public_core_paragraph_semantic_hashes_reproduced": 310,
+    "official_public_core_paragraph_semantic_review_status": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
+    "official_public_core_paragraph_semantic_review_profiles": 310,
+    "official_public_core_paragraph_axis_profile_ready": 156,
+    "official_public_core_paragraph_semantic_review_required": 154,
+    "official_public_core_paragraph_multi_modal_review_required": 42,
+    "official_public_core_paragraph_no_strong_signal_review_required": 112,
+    "official_public_core_paragraph_mixed_axis_profile_ready": 92,
+    "official_public_core_paragraph_unclassified_signal_free": 110,
+    "official_public_core_paragraph_unclassified_weak_only": 2,
+    "official_public_core_repeated_axis_profile_ready": 4,
+    "official_public_core_repeated_multi_modal_review_required": 6,
+    "official_public_core_semantic_ast_readiness_complete": false,
+    "official_public_core_paragraph_semantic_review_current_normalized_factions_change": 0
   },
   "dimensions": [
     "points",

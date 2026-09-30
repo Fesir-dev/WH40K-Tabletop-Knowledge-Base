@@ -111,6 +111,11 @@
     "core_rule_paragraph_semantic_high_confidence": 64,
     "core_rule_paragraph_semantic_mixed": 134,
     "core_rule_paragraph_semantic_unclassified": 112,
+    "core_rule_paragraph_semantic_review": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
+    "core_rule_paragraph_axis_profile_ready": 156,
+    "core_rule_paragraph_semantic_review_required": 154,
+    "core_rule_paragraph_multi_modal_review_required": 42,
+    "core_rule_paragraph_no_strong_signal_review_required": 112,
     "official_public_exact_overlap": "PASS_EXACT_PUBLIC_OVERLAP_V1",
     "official_public_residual_classification": "PASS_FAIL_CLOSED_CLASSIFICATION_V1"
   },
@@ -630,22 +635,22 @@
   "gaps": [
     {
       "id": "OFFICIAL_CORE_RULES_SEMANTIC_INGESTION",
-      "state": "PARAGRAPH_SEMANTIC_CLASSIFICATION_CLOSED_SEMANTIC_REVIEW_PENDING",
+      "state": "PARAGRAPH_SEMANTIC_REVIEW_CLOSED_AST_READINESS_PENDING",
       "blocking_scope": [
         "core_rules_content",
         "system_normative_semantics"
       ],
       "evidence": {
-        "repository_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+        "repository_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
         "currentness_profile": {
           "required_sources": [
             "GW_40K_DOWNLOADS"
           ],
-          "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+          "content_state": "OFFICIAL_PUBLIC_PARAGRAPH_SEMANTIC_REVIEW_V1",
           "repository_dimension": null,
           "report": "reports/CORE_RULES_STRUCTURE_CURRENT.json",
           "core_asset_snapshot": "sources/snapshots/gw_11e_core_rules_asset_2026-09-29.json",
-          "authority_boundary": "All 310 stable Core paragraph identities have deterministic lexical/structural role classifications. 134 MIXED and 112 UNCLASSIFIED remain explicit fail-closed states; AST-readiness review, condition/effect parsing and interactions remain pending.",
+          "authority_boundary": "All 310 stable Core paragraph identities have been reviewed as orthogonal semantic profiles. 156 are axis-profile-ready without modal conflict; 42 remain multi-modal and 112 lack strong semantic signals. AST readiness, condition/effect parsing and interactions remain pending.",
           "structure_snapshot": "rules/11e/snapshots/2026-09-30/core_rules_structure/index.json",
           "rule_reference_families": 24,
           "rule_reference_count": 141,
@@ -686,6 +691,20 @@
             "paragraphs_without_signals": 110,
             "repeated_variant_paragraphs": 10,
             "paragraph_hashes_reproduced_from_verified_pdf": 310,
+            "ast_readiness_pending": true
+          },
+          "paragraph_semantic_review": {
+            "state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
+            "report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json",
+            "snapshot": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantic_review/index.json",
+            "profiles": 310,
+            "axis_profile_ready": 156,
+            "review_required": 154,
+            "multi_modal_review_required": 42,
+            "no_strong_signal_review_required": 112,
+            "mixed_axis_profile_ready": 92,
+            "unclassified_signal_free": 110,
+            "unclassified_weak_only": 2,
             "ast_readiness_pending": true
           }
         },
@@ -749,9 +768,39 @@
         },
         "paragraphs_with_semantic_signals": 200,
         "paragraphs_without_semantic_signals": 110,
-        "paragraph_semantic_hashes_reproduced": 310
+        "paragraph_semantic_hashes_reproduced": 310,
+        "paragraph_semantic_review_report": "reports/CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_CURRENT.json",
+        "paragraph_semantic_review_state": "PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED",
+        "paragraph_semantic_review_state_counts": {
+          "AXIS_PROFILE_READY": 156,
+          "MULTI_MODAL_REVIEW_REQUIRED": 42,
+          "NO_STRONG_SIGNAL_REVIEW_REQUIRED": 112
+        },
+        "paragraph_semantic_modal_axis_counts": {
+          "MULTI_MODAL": 42,
+          "NONE": 173,
+          "OBLIGATION": 17,
+          "PERMISSION": 67,
+          "PROHIBITION": 11
+        },
+        "paragraph_semantic_axis_profile_ready": 156,
+        "paragraph_semantic_review_required": 154,
+        "paragraph_semantic_mixed_decomposition": {
+          "axis_profile_ready": 92,
+          "multi_modal_review_required": 42,
+          "no_strong_signal_review_required": 0
+        },
+        "paragraph_semantic_unclassified_decomposition": {
+          "signal_free": 110,
+          "weak_only": 2,
+          "review_required": 112
+        },
+        "paragraph_semantic_repeated_review_states": {
+          "AXIS_PROFILE_READY": 4,
+          "MULTI_MODAL_REVIEW_REQUIRED": 6
+        }
       },
-      "next_action": "Review the 134 MIXED and 112 UNCLASSIFIED paragraphs plus the 64 HIGH classifications against deterministic signal evidence, refining only demonstrably safe lexical rules before any AST-readiness gate."
+      "next_action": "Audit AST readiness only inside the 156 AXIS_PROFILE_READY paragraphs. Keep all 42 MULTI_MODAL and 112 NO_STRONG_SIGNAL rows blocked, and do not infer AST readiness merely from axis-profile readiness."
     },
     {
       "id": "PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION",
@@ -1060,7 +1109,7 @@
   "conclusion": {
     "why_current_normalized_factions_is_zero": "The repository has strong current MFM and secondary-mirror coverage, but it intentionally requires official normative semantic completeness. Public faction packs are supplemental to Codex content, mirror hashes prove mirror currentness only, and app/Codex-only wording is not ingested.",
     "publicly_closable_now": [
-      "Core Rules paragraph semantic review",
+      "Core Rules semantic AST readiness audit",
       "deeper public Faction Pack structured extraction inside proven public scope",
       "review of edition-11 residual provenance without automatic promotion",
       "OFFICIAL_SOURCE_TO_ROSTER_IDENTITY_MAPPING"
@@ -1069,7 +1118,7 @@
       "GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK",
       "Codex/app-only portion of FULL_FACTION_CODEX_APP_SEMANTICS"
     ],
-    "recommended_next_milestone": "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1",
-    "expected_effect": "All 310 Core paragraphs now have reproducible lexical/structural role evidence. Current baseline is 64 HIGH, 134 MIXED and 112 NONE/UNCLASSIFIED; next review ambiguous and signal-free cases before any AST-readiness gate, while faction/app equivalence remains unchanged."
+    "recommended_next_milestone": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
+    "expected_effect": "Semantic review decomposes the 310 paragraph classifications into orthogonal axes: 156 are AXIS_PROFILE_READY, while 42 MULTI_MODAL and 112 NO_STRONG_SIGNAL rows remain blocked. The next milestone audits AST readiness only within the 156-profile subset and must not assume they are all parseable; faction/app equivalence remains unchanged."
   }
 }
