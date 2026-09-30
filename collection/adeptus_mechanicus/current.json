@@ -5,7 +5,7 @@
   "checkpoint": "2026-09-30",
   "repository_registered_at": "2026-09-30",
   "status": "PROVISIONAL",
-  "revision_state": "SKITARII_PHYSICAL_RECONCILIATION_CLOSED",
+  "revision_state": "SICARIAN_PHYSICAL_RECONCILIATION_PASS1",
   "physical_pools": [
     {
       "pool_id": "belisarius_cawl",
@@ -412,10 +412,11 @@
       "name": "Sicarian Infiltrators",
       "physical_bodies": 20,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "USER_CONFIRMED_ADDITIONAL_PRINCEPS_BODIES_EXIST",
-        "EXTRA_BODY_COUNT_UNKNOWN",
-        "WARGEAR_RECHECK_REQUIRED"
+        "SOURCE_EXPORT_LOWER_BOUND",
+        "DIRECT_USER_PRINCEPS_COUNT_VERIFIED",
+        "DIRECT_USER_LOADOUT_VERIFIED",
+        "ORDINARY_BODY_COUNT_PENDING",
+        "FIXED_BUILDS_NON_MAGNETIZED"
       ],
       "roles": [
         {
@@ -424,31 +425,51 @@
           "source_id": "NR_ADMECH_2026_09_30"
         }
       ],
-      "body_variants": [
-        {
-          "name": "Sicarian Infiltrator Princeps (Power weapon & stub carbine)",
-          "physical_bodies": 3,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Sicarian Infiltrator (Power weapon & stubcarbine)",
-          "physical_bodies": 17,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        }
-      ],
       "notes": [
-        "In addition to the 20 source-export bodies, the user confirms at least one extra Infiltrator leader/Princeps body exists. Exact extra count and loadout are pending physical recheck."
-      ]
+        "User confirms 3 Infiltrator Princeps on bases plus 1 additional Princeps body without a base kept as a future spare.",
+        "All Infiltrator models are assembled with Taser goad & flechette blaster and cannot be reconfigured.",
+        "The exact number of ordinary Infiltrator bodies has not yet been directly recounted in this pass, so the source-export total of 20 is not promoted to an exact physical total."
+      ],
+      "source_configuration_snapshot": {
+        "source_id": "NR_ADMECH_2026_09_30",
+        "non_physical_inventory": true,
+        "selected_model_variants": [
+          {
+            "name": "Sicarian Infiltrator Princeps (Power weapon & stub carbine)",
+            "physical_bodies": 3,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Sicarian Infiltrator (Power weapon & stubcarbine)",
+            "physical_bodies": 17,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          }
+        ],
+        "note": "Preserved only as the New Recruit configuration snapshot; direct physical inspection supersedes this for physical loadouts."
+      },
+      "direct_physical_observation": {
+        "princeps_bodies_total": 4,
+        "princeps_based_table_ready": 3,
+        "princeps_unbased_spare": 1,
+        "ordinary_body_count": "PENDING_DIRECT_COUNT",
+        "fixed_loadout": {
+          "all_infiltrator_models": "Taser goad & flechette blaster",
+          "interchangeability": "NONE",
+          "evidence": "DIRECT_USER_VISUAL_CONFIRMATION_2026_09_30"
+        }
+      },
+      "current_known_physical_minimum": 21
     },
     {
       "pool_id": "sicarian_ruststalkers",
       "name": "Sicarian Ruststalkers",
       "physical_bodies": 30,
       "status": [
-        "SOURCE_EXPORT_DECLARED",
-        "USER_CONFIRMED_ADDITIONAL_PRINCEPS_BODIES_EXIST",
-        "EXTRA_BODY_COUNT_UNKNOWN",
-        "WARGEAR_RECHECK_REQUIRED"
+        "SOURCE_EXPORT_LOWER_BOUND",
+        "DIRECT_USER_PRINCEPS_COUNT_VERIFIED",
+        "DIRECT_USER_LOADOUT_VERIFIED",
+        "ORDINARY_BODY_COUNT_PENDING",
+        "FIXED_BUILDS_NON_MAGNETIZED"
       ],
       "roles": [
         {
@@ -457,21 +478,42 @@
           "source_id": "NR_ADMECH_2026_09_30"
         }
       ],
-      "body_variants": [
-        {
-          "name": "Sicarian Ruststalker Princeps (Transonic razor & chordclaw)",
-          "physical_bodies": 3,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        },
-        {
-          "name": "Sicarian Ruststalker (Transonic razor & chordclaw)",
-          "physical_bodies": 27,
-          "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
-        }
-      ],
       "notes": [
-        "In addition to the 30 source-export bodies, the user confirms at least one extra Ruststalker leader/Princeps body exists. Exact extra count and loadout are pending physical recheck."
-      ]
+        "User confirms 3 Ruststalker Princeps on bases plus 1 additional Princeps body without a base kept as a future spare.",
+        "All ordinary Ruststalkers are assembled with Transonic blades.",
+        "All Ruststalker Princeps are assembled with Transonic blades & chordclaw.",
+        "The exact number of ordinary Ruststalker bodies has not yet been directly recounted in this pass, so the source-export total of 30 is not promoted to an exact physical total."
+      ],
+      "source_configuration_snapshot": {
+        "source_id": "NR_ADMECH_2026_09_30",
+        "non_physical_inventory": true,
+        "selected_model_variants": [
+          {
+            "name": "Sicarian Ruststalker Princeps (Transonic razor & chordclaw)",
+            "physical_bodies": 3,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          },
+          {
+            "name": "Sicarian Ruststalker (Transonic razor & chordclaw)",
+            "physical_bodies": 27,
+            "evidence": "SOURCE_MODEL_SELECTION_CONFIGURATION_SNAPSHOT"
+          }
+        ],
+        "note": "Preserved only as the New Recruit configuration snapshot; direct physical inspection supersedes this for physical loadouts."
+      },
+      "direct_physical_observation": {
+        "princeps_bodies_total": 4,
+        "princeps_based_table_ready": 3,
+        "princeps_unbased_spare": 1,
+        "ordinary_body_count": "PENDING_DIRECT_COUNT",
+        "fixed_loadouts": {
+          "ordinary_ruststalkers": "Transonic blades",
+          "princeps": "Transonic blades & chordclaw",
+          "interchangeability": "NONE",
+          "evidence": "DIRECT_USER_VISUAL_CONFIRMATION_2026_09_30"
+        }
+      },
+      "current_known_physical_minimum": 31
     },
     {
       "pool_id": "ironstrider_ballistarii",
@@ -600,14 +642,14 @@
   ],
   "open_questions": [
     {
-      "id": "INFILTRATOR_EXTRA_PRINCEPS_COUNT",
-      "question": "How many additional Sicarian Infiltrator Princeps/leader bodies exist outside the 20 source-export bodies, and what are their physical loadouts?",
-      "state": "USER_CONFIRMED_PRESENT_COUNT_UNKNOWN"
+      "id": "INFILTRATOR_ORDINARY_BODY_COUNT",
+      "question": "How many ordinary based Sicarian Infiltrator bodies are physically present, excluding the 4 Princeps bodies (3 based + 1 unbased spare)?",
+      "state": "PENDING_DIRECT_COUNT"
     },
     {
-      "id": "RUSTSTALKER_EXTRA_PRINCEPS_COUNT",
-      "question": "How many additional Sicarian Ruststalker Princeps/leader bodies exist outside the 30 source-export bodies, and what are their physical loadouts?",
-      "state": "USER_CONFIRMED_PRESENT_COUNT_UNKNOWN"
+      "id": "RUSTSTALKER_ORDINARY_BODY_COUNT",
+      "question": "How many ordinary based Sicarian Ruststalker bodies are physically present, excluding the 4 Princeps bodies (3 based + 1 unbased spare)?",
+      "state": "PENDING_DIRECT_COUNT"
     },
     {
       "id": "ADMECH_WARGEAR_PHYSICAL_AUDIT",
@@ -695,6 +737,17 @@
           "The Vanguard model holding a radium carbine and wearing an Alpha-style helmet is currently used as an ordinary trooper.",
           "The ordinary Vanguard carbine-only count is therefore 7, including the Alpha-helmet ordinary trooper.",
           "Vanguard retain 3 plasma-caliver models."
+        ]
+      },
+      {
+        "checkpoint": "2026-09-30",
+        "evidence_type": "DIRECT_USER_VISUAL_RECONCILIATION",
+        "facts": [
+          "Sicarian Infiltrators: 3 Princeps on bases plus 1 additional Princeps body without a base kept for future use.",
+          "All Infiltrator models are fixed as Taser goad & flechette blaster with no weapon interchangeability.",
+          "Sicarian Ruststalkers: 3 Princeps on bases plus 1 additional Princeps body without a base kept for future use.",
+          "All ordinary Ruststalkers are fixed as Transonic blades.",
+          "All Ruststalker Princeps are fixed as Transonic blades & chordclaw."
         ]
       }
     ]
