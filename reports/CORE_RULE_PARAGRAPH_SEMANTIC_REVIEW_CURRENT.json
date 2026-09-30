@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "snapshot_date": "2026-09-30",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "review_version": "CORE_RULE_PARAGRAPH_SEMANTIC_REVIEW_V1",
+  "parent_classification": {
+    "path": "rules/11e/snapshots/2026-09-30/core_rule_paragraph_semantics/index.json",
+    "classifier_version": "CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1",
+    "source": {
+      "document_id": "GW_11E_CORE_RULES_PUBLIC",
+      "source_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+      "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+      "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+      "page_count": 88,
+      "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+    },
+    "source_verification": {
+      "binary_sha256_match": true,
+      "page_semantic_fingerprints_match": 88,
+      "document_semantic_sha256_match": true
+    },
+    "paragraphs": 310,
+    "unique_paragraph_keys": 310,
+    "confidence_counts": {
+      "HIGH": 64,
+      "MIXED": 134,
+      "NONE": 112
+    },
+    "role_counts": {
+      "CONDITION_OR_TRIGGER": 31,
+      "MIXED": 134,
+      "MODIFICATION_OR_REPLACEMENT": 1,
+      "OBLIGATION": 1,
+      "PERMISSION": 20,
+      "PROCEDURE_OR_SEQUENCE": 7,
+      "PROHIBITION": 4,
+      "UNCLASSIFIED": 112
+    },
+    "paragraph_hashes_reproduced_from_verified_pdf": 310
+  },
+  "review_contract": {
+    "semantic_axes": [
+      "modal_axis",
+      "condition_trigger_present",
+      "procedure_sequence_present",
+      "definition_present",
+      "modification_replacement_present",
+      "reference_present",
+      "structural_list_present"
+    ],
+    "modal_values": [
+      "NONE",
+      "PERMISSION",
+      "OBLIGATION",
+      "PROHIBITION",
+      "MULTI_MODAL"
+    ],
+    "review_states": [
+      "AXIS_PROFILE_READY",
+      "MULTI_MODAL_REVIEW_REQUIRED",
+      "NO_STRONG_SIGNAL_REVIEW_REQUIRED"
+    ],
+    "axis_profile_ready_is_ast_ready": false,
+    "multi_modal_precedence_inferred": false,
+    "unclassified_forced_resolution": false
+  },
+  "summary": {
+    "profiles": 310,
+    "unique_paragraph_keys": 310,
+    "review_state_counts": {
+      "AXIS_PROFILE_READY": 156,
+      "MULTI_MODAL_REVIEW_REQUIRED": 42,
+      "NO_STRONG_SIGNAL_REVIEW_REQUIRED": 112
+    },
+    "modal_axis_counts": {
+      "MULTI_MODAL": 42,
+      "NONE": 173,
+      "OBLIGATION": 17,
+      "PERMISSION": 67,
+      "PROHIBITION": 11
+    },
+    "parent_role_counts": {
+      "CONDITION_OR_TRIGGER": 31,
+      "MIXED": 134,
+      "MODIFICATION_OR_REPLACEMENT": 1,
+      "OBLIGATION": 1,
+      "PERMISSION": 20,
+      "PROCEDURE_OR_SEQUENCE": 7,
+      "PROHIBITION": 4,
+      "UNCLASSIFIED": 112
+    },
+    "axis_profile_ready": 156,
+    "review_required": 154,
+    "mixed_decomposition": {
+      "axis_profile_ready": 92,
+      "multi_modal_review_required": 42,
+      "no_strong_signal_review_required": 0
+    },
+    "unclassified_decomposition": {
+      "signal_free": 110,
+      "weak_only": 2,
+      "review_required": 112
+    },
+    "repeated_variant_review_state_counts": {
+      "AXIS_PROFILE_READY": 4,
+      "MULTI_MODAL_REVIEW_REQUIRED": 6
+    },
+    "parent_hashes_verified": 310
+  },
+  "authority_boundary": {
+    "semantic_review_complete": true,
+    "multi_axis_profile_is_not_condition_effect_ast": true,
+    "axis_profile_ready_is_not_ast_readiness_claim": true,
+    "multi_modal_rows_remain_unresolved": true,
+    "no_strong_signal_rows_remain_unresolved": true,
+    "paragraph_prose_committed": false,
+    "condition_effect_ast_complete": false,
+    "rule_interaction_graph_complete": false,
+    "repeated_variant_semantic_equivalence_claimed": false,
+    "app_codex_equivalence": "NOT_CLAIMED",
+    "full_faction_promotion": false,
+    "current_normalized_factions_change": 0,
+    "next_milestone": "CORE_RULE_SEMANTIC_AST_READINESS_V1"
+  }
+}
