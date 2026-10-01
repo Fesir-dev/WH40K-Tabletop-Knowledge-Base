@@ -200,7 +200,7 @@
       "source_id": "BSDATA_MFM_11E",
       "repository": "BSData/wh40k-11e-mfm",
       "pinned": "61a687e858c00a4ad205d564959c622a5605ef3d",
-      "live": "27c6ec57c17a71b2855f5f77e841b7e5eee1bfe8",
+      "live": "8e0e635674018969fdcfaa64e83d4153ebefad70",
       "changed": true,
       "files": [
         {
@@ -238,9 +238,9 @@
         {
           "filename": "DATA-CHANGELOG.md",
           "status": "modified",
-          "additions": 13,
+          "additions": 14,
           "deletions": 1670,
-          "changes": 1683,
+          "changes": 1684,
           "classification": "DOCUMENTATION"
         },
         {
@@ -298,6 +298,262 @@
           "deletions": 0,
           "changes": 275,
           "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "changelog/v1.5.md",
+          "status": "added",
+          "additions": 1634,
+          "deletions": 0,
+          "changes": 1634,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "data/adepta-sororitas.yaml",
+          "status": "modified",
+          "additions": 14,
+          "deletions": 13,
+          "changes": 27,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/adeptus-custodes.yaml",
+          "status": "modified",
+          "additions": 30,
+          "deletions": 28,
+          "changes": 58,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/adeptus-mechanicus.yaml",
+          "status": "modified",
+          "additions": 30,
+          "deletions": 29,
+          "changes": 59,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/aeldari.yaml",
+          "status": "modified",
+          "additions": 38,
+          "deletions": 32,
+          "changes": 70,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/astra-militarum.yaml",
+          "status": "modified",
+          "additions": 34,
+          "deletions": 46,
+          "changes": 80,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/black-templars.yaml",
+          "status": "modified",
+          "additions": 455,
+          "deletions": 346,
+          "changes": 801,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/blood-angels.yaml",
+          "status": "modified",
+          "additions": 442,
+          "deletions": 437,
+          "changes": 879,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/chaos-daemons.yaml",
+          "status": "modified",
+          "additions": 9,
+          "deletions": 8,
+          "changes": 17,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/chaos-knights.yaml",
+          "status": "modified",
+          "additions": 10,
+          "deletions": 9,
+          "changes": 19,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/chaos-space-marines.yaml",
+          "status": "modified",
+          "additions": 79,
+          "deletions": 70,
+          "changes": 149,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/chaos-titan-legions.yaml",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/dark-angels.yaml",
+          "status": "modified",
+          "additions": 466,
+          "deletions": 402,
+          "changes": 868,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/death-guard.yaml",
+          "status": "modified",
+          "additions": 32,
+          "deletions": 25,
+          "changes": 57,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/deathwatch.yaml",
+          "status": "modified",
+          "additions": 430,
+          "deletions": 312,
+          "changes": 742,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/drukhari.yaml",
+          "status": "modified",
+          "additions": 13,
+          "deletions": 12,
+          "changes": 25,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/emperors-children.yaml",
+          "status": "modified",
+          "additions": 23,
+          "deletions": 21,
+          "changes": 44,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/genestealer-cults.yaml",
+          "status": "modified",
+          "additions": 10,
+          "deletions": 9,
+          "changes": 19,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/grey-knights.yaml",
+          "status": "modified",
+          "additions": 44,
+          "deletions": 41,
+          "changes": 85,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/imperial-agents.yaml",
+          "status": "modified",
+          "additions": 16,
+          "deletions": 16,
+          "changes": 32,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/imperial-knights.yaml",
+          "status": "modified",
+          "additions": 12,
+          "deletions": 10,
+          "changes": 22,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/leagues-of-votann.yaml",
+          "status": "modified",
+          "additions": 15,
+          "deletions": 14,
+          "changes": 29,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/meta.yaml",
+          "status": "modified",
+          "additions": 71,
+          "deletions": 2,
+          "changes": 73,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/necrons.yaml",
+          "status": "modified",
+          "additions": 18,
+          "deletions": 16,
+          "changes": 34,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/orks.yaml",
+          "status": "modified",
+          "additions": 62,
+          "deletions": 65,
+          "changes": 127,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/space-marines.yaml",
+          "status": "modified",
+          "additions": 368,
+          "deletions": 920,
+          "changes": 1288,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/space-wolves.yaml",
+          "status": "modified",
+          "additions": 483,
+          "deletions": 417,
+          "changes": 900,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/tau-empire.yaml",
+          "status": "modified",
+          "additions": 9,
+          "deletions": 7,
+          "changes": 16,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/thousand-sons.yaml",
+          "status": "modified",
+          "additions": 23,
+          "deletions": 20,
+          "changes": 43,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/titan-legions.yaml",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/tyranids.yaml",
+          "status": "modified",
+          "additions": 18,
+          "deletions": 16,
+          "changes": 34,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/world-eaters.yaml",
+          "status": "modified",
+          "additions": 21,
+          "deletions": 21,
+          "changes": 42,
+          "classification": "MFM_DATA"
         },
         {
           "filename": "package.json",
@@ -382,81 +638,81 @@
         {
           "filename": "src/diff.ts",
           "status": "modified",
-          "additions": 349,
-          "deletions": 106,
-          "changes": 455,
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/discord.ts",
           "status": "modified",
-          "additions": 7,
-          "deletions": 6,
-          "changes": 13,
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/emit.ts",
           "status": "modified",
-          "additions": 3,
+          "additions": 0,
           "deletions": 0,
-          "changes": 3,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/fetch.ts",
           "status": "modified",
-          "additions": 1,
-          "deletions": 1,
-          "changes": 2,
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/parse.ts",
           "status": "modified",
-          "additions": 77,
-          "deletions": 80,
-          "changes": 157,
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "test/changelog.test.ts",
           "status": "added",
-          "additions": 64,
+          "additions": 0,
           "deletions": 0,
-          "changes": 64,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "test/emit-diff.test.ts",
           "status": "modified",
-          "additions": 403,
-          "deletions": 34,
-          "changes": 437,
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "test/fixtures/necrons-notes.html",
           "status": "removed",
           "additions": 0,
-          "deletions": 231,
-          "changes": 231,
+          "deletions": 0,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "test/fixtures/necrons-panels.html",
           "status": "added",
-          "additions": 295,
+          "additions": 0,
           "deletions": 0,
-          "changes": 295,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "test/parse.test.ts",
           "status": "modified",
-          "additions": 63,
-          "deletions": 6,
-          "changes": 69,
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "OTHER"
         }
       ]
