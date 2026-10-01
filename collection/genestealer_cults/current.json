@@ -178,64 +178,88 @@
     },
     {
       "pool_id": "acolyte_metamorph_shared_bodies",
-      "name": "Acolyte Hybrids / Hybrid Metamorphs shared magnetized body pool",
-      "physical_bodies": 15,
+      "name": "Acolyte Hybrids / Hybrid Metamorphs flexible physical body pool",
+      "physical_bodies": 45,
       "status": [
-        "USER_CONFIRMED_THREE_OFFICIAL_BOXES",
-        "PHYSICAL_BODY_COUNT_15_FROM_RECONCILED_SOURCE_AND_BOX_HISTORY",
-        "ALL_BODIES_MAGNETIZED",
-        "MULTI_ROLE_SHARED_BODY_POOL",
+        "USER_CONFIRMED_EXACT_COUNT_45",
+        "SOURCE_ROSTER_COUNT_39_PHYSICAL_BODIES",
+        "ADDITIONAL_6_BODIES_FOUND_AFTER_EXPORT",
+        "MULTI_ROLE_FLEXIBLE_POOL",
+        "MAGNETIZATION_EXTENSIVE",
         "COMPONENT_CAPACITY_REQUIRES_EXACT_BIT_AUDIT"
       ],
       "roles": [
         {
           "role": "Acolyte Hybrids with Autopistols",
-          "availability": "MAGNETIZED_CONFIGURATION"
+          "availability": "PHYSICAL_POOL_WITH_MAGNETIZED_LOADOUT_SUPPORT"
         },
         {
           "role": "Acolyte Hybrids with Hand Flamers",
-          "availability": "MAGNETIZED_CONFIGURATION"
+          "availability": "PHYSICAL_POOL_WITH_MAGNETIZED_LOADOUT_SUPPORT"
         },
         {
           "role": "Hybrid Metamorphs",
-          "availability": "MAGNETIZED_CONFIGURATION"
+          "availability": "PHYSICAL_POOL_WITH_MAGNETIZED_LOADOUT_SUPPORT"
         }
       ],
       "physical_configuration": {
-        "physical_bodies": 15,
-        "acquisition": "3 official Acolyte/Metamorph kits",
-        "body_magnetization": "ALL_15_BODIES",
-        "role_interchangeability": "The same bodies can be re-armed/reconfigured across Acolyte and Metamorph roles.",
-        "simultaneous_global_capacity": 15
+        "total_physical_bodies": 45,
+        "source_counted_bodies": 39,
+        "newly_found_bodies": 6,
+        "known_original_complete_kits": 3,
+        "original_complete_kit_body_contribution": 15,
+        "remaining_pre_export_body_acquisition_provenance": "UNKNOWN_NOT_RECONSTRUCTED",
+        "magnetization_note": "User previously stated the Acolyte body collection is extensively/all magnetized for arm swaps; exact scope across all 39 pre-export bodies versus the newly found 6 is not re-inferred here.",
+        "role_interchangeability": "Acolyte autopistol / hand-flamer / Metamorph roles are configuration roles over the physical body pool, limited by retained arm/weapon components."
       },
       "source_configuration_snapshots": [
         {
           "role": "Acolyte Hybrids with Autopistols",
-          "source_body_slots": 15,
+          "physical_bodies_in_source": 15,
           "source_units": [
             10,
             5
           ],
           "source_selected_heavy_mining_tools": 6,
-          "interpretation": "Configuration snapshot over the shared 15-body physical pool."
+          "interpretation": "These 15 roster slots represented 15 real physical bodies at the time of the user's count."
         },
         {
           "role": "Acolyte Hybrids with Hand Flamers",
-          "source_body_slots": 24,
+          "physical_bodies_in_source": 24,
           "source_units": [
             8,
             8,
             8
           ],
-          "interpretation": "Alternate configuration projection; does not represent 24 additional physical bodies."
+          "source_selected_hand_flamers": 24,
+          "interpretation": "These 24 roster slots represented 24 additional real physical bodies, not duplicate configurations of the 15 autopistol bodies."
         }
       ],
       "notes": [
-        "The source export contains 39 Acolyte-role body slots across autopistol and hand-flamer selections, but these are not 39 unique miniatures.",
-        "User confirms three official boxes and complete retention of their original bits; the body pool is treated as 15 physical bodies.",
-        "Every body is magnetized so arms/loadouts can be changed.",
-        "User states the pool can be configured for hand flamers, pistols/heavy mining equipment and Hybrid Metamorph builds.",
-        "Exact simultaneous maximums for every weapon configuration are deliberately not inferred until loose-bit counts are audited."
+        "The previous 15-body normalization was incorrect and is superseded.",
+        "The user explicitly clarified that the roster's Acolyte model counts were based on physically counted bodies.",
+        "The source therefore contains 39 unique Acolyte bodies: 15 allocated to autopistol units and 24 allocated to hand-flamer units.",
+        "Six additional Acolyte-compatible bodies were found after the export, bringing the exact physical pool to 45.",
+        "Three original official boxes explain at least 15 of the bodies and supply complete original bit sets; acquisition provenance for the other pre-export bodies is not yet reconstructed.",
+        "Current role assignment remains flexible because of magnetization and retained bits; body count and role capacity must not be conflated."
+      ],
+      "body_variants": [
+        {
+          "name": "Roster-counted Acolyte bodies",
+          "physical_bodies": 39,
+          "evidence": "DIRECT_USER_CONFIRMATION_THAT_ROSTER_COUNT_REPRESENTED_REAL_BODIES",
+          "historical_source_allocation": {
+            "autopistol_role_bodies": 15,
+            "hand_flamer_role_bodies": 24
+          }
+        },
+        {
+          "name": "Additional bodies found after roster export",
+          "physical_bodies": 6,
+          "evidence": "DIRECT_USER_CONFIRMATION_2026-10-01",
+          "likely_acquisition_context": "Spring bits/body order remembered by user",
+          "build_and_magnetization_state": "UNKNOWN_NOT_YET_RECONFIRMED"
+        }
       ]
     },
     {
@@ -289,21 +313,28 @@
       "source_kit_sets_retained": 3,
       "original_kit_bits_state": "USER_CONFIRMED_ALL_ORIGINAL_BITS_RETAINED",
       "extra_hand_flamers": {
-        "count": "UNKNOWN_GREATER_THAN_STOCK",
-        "status": "USER_CONFIRMED_ADDITIONAL_PURCHASES",
-        "note": "User bought substantially more hand-flamer bits; exact count not yet inventoried."
+        "count": 10,
+        "status": "USER_CONFIRMED_EXACT_ADDITIONAL_COUNT",
+        "note": "Ten additional hand-flamer components are in the same stored order/bag as the newly found bodies."
       },
       "cult_icons_or_banners": {
         "total_components": 7,
         "original_kit_components": 3,
+        "original_component_state": "MAGNETIZED_ON_EXISTING_BODY_POOL",
         "additional_components": 4,
-        "additional_component_state": "PAINTED_STORED_IN_BAG",
-        "note": "The four extra banners/icons were purchased in addition to the three original kit banners."
+        "additional_component_state": "PAINTED_STORED_WITH_SPRING_ORDER",
+        "intended_use": "User recalls the four additional banners may have been intended as fixed/static squad icon bodies, but this plan is not yet treated as confirmed."
       },
       "heavy_mining_and_metamorph_components": {
         "count": "UNKNOWN_EXACT",
         "status": "ORIGINAL_THREE_KIT_COMPONENT_SETS_RETAINED",
         "note": "The user states the retained bits support all intended Acolyte/Metamorph build families; exact simultaneous option capacity remains to be counted."
+      },
+      "original_kit_components_provenance": "Three complete official kits retained with original bits.",
+      "additional_bodies": {
+        "count": 6,
+        "status": "USER_CONFIRMED_EXACT",
+        "note": "Found after the roster export; likely part of the same spring order as the extra hand flamers and four painted banners."
       }
     },
     "neophyte_heavy_weapon_bits": {
@@ -318,17 +349,32 @@
   },
   "constraints": [
     {
-      "id": "GSC_ACOLYTE_METAMORPH_SHARED_15",
-      "type": "shared_physical_pool",
-      "effect": "All Acolyte/Metamorph configurations draw from the same 15 physical magnetized bodies. Roster role projections must never be summed as additional bodies."
-    },
-    {
       "id": "GSC_NEOPHYTE_HEAVY_WEAPON_SHARED_4",
       "type": "magnetized_component_allocation",
       "effect": "The four heavy-weapon Neophyte bodies remain four physical bodies regardless of how many retained mining-laser/seismic/heavy-gun components can be swapped onto them."
+    },
+    {
+      "id": "GSC_ACOLYTE_METAMORPH_SHARED_45",
+      "type": "flexible_physical_pool",
+      "effect": "The collection has 45 physical Acolyte-compatible bodies. Current Acolyte/Metamorph role assignments are configuration choices constrained by available arms, icons and heavy-mining/demolition components; never reduce the physical body count to a smaller configuration subset."
     }
   ],
   "open_questions": [
+    {
+      "id": "GSC_ACOLYTE_NEW_6_BUILD_STATE",
+      "question": "Are the six newly found bodies assembled, unassembled, based and/or magnetized, and were four intended to become fixed cult-icon bearers?",
+      "state": "USER_RECHECK_REQUIRED"
+    },
+    {
+      "id": "GSC_ACOLYTE_PREEXPORT_24_PROVENANCE",
+      "question": "If useful, reconstruct how the 24 Acolyte bodies beyond the three original 5-model kits were acquired. This is provenance only; the 39 pre-export body count is already accepted as physically counted.",
+      "state": "OPTIONAL_PROVENANCE_RECONSTRUCTION"
+    },
+    {
+      "id": "GSC_ACOLYTE_OPTION_CAPACITY",
+      "question": "Audit exact heavy-mining, demolition-charge and Metamorph arm counts only as needed to establish simultaneous configuration capacity across the 45-body pool.",
+      "state": "OPEN_COMPONENT_AUDIT"
+    },
     {
       "id": "GSC_NEOPHYTE_HEAVY_AUTOGUN_IDENTITY",
       "question": "Identify the exact canonical heavy weapon on the two user-described 'autogun' Neophyte heavy-weapon bodies.",
@@ -350,23 +396,20 @@
       "state": "OPEN_COMPONENT_AUDIT"
     },
     {
-      "id": "GSC_ACOLYTE_OPTION_CAPACITY",
-      "question": "Count heavy-mining and Metamorph arm sets only if needed to prove simultaneous legal/current loadout capacity; body count is already normalized at 15.",
-      "state": "OPEN_COMPONENT_AUDIT"
-    },
-    {
       "id": "GSC_REMAINING_COLLECTION_WAVES",
       "question": "Physically reconcile the remaining source-projected characters, Aberrants, Purestrain Genestealers, Ridgerunner and Goliath Trucks, plus any models not represented by the source export.",
       "state": "OPEN"
     }
   ],
   "confirmed_totals": {
-    "wave1_normalized_body_baseline": 77,
+    "wave1_normalized_body_baseline": 107,
     "source_naive_roster_body_slots": 100,
     "direct_confirmed_neophytes": 21,
-    "direct_reconciled_acolyte_metamorph_shared_bodies": 15,
     "source_projected_other_bodies_pending_recheck": 41,
-    "actual_total_owned": "UNKNOWN_PENDING_FULL_GSC_PHYSICAL_RECONCILIATION"
+    "actual_total_owned": "UNKNOWN_PENDING_FULL_GSC_PHYSICAL_RECONCILIATION",
+    "direct_confirmed_acolyte_compatible_bodies": 45,
+    "source_counted_acolyte_bodies": 39,
+    "additional_acolyte_bodies_found_post_export": 6
   },
   "provenance": {
     "source_artifact": {
@@ -400,12 +443,33 @@
           "Additional hand-flamer bits were purchased.",
           "Four additional painted banner/icon components are stored in a bag, on top of three original kit banner/icon components."
         ]
+      },
+      {
+        "checkpoint": "2026-10-01",
+        "evidence_type": "DIRECT_USER_ACOLYTE_BODY_COUNT_CORRECTION",
+        "facts": [
+          "The Acolyte counts entered in the uploaded roster were counts of real physical models, not alternate duplicate configurations.",
+          "The uploaded roster contains 39 physical Acolyte bodies: 15 in autopistol entries and 24 in hand-flamer entries.",
+          "Six additional Acolyte-compatible bodies were found after the roster export.",
+          "Current exact Acolyte-compatible physical body pool is 45.",
+          "Ten additional hand-flamer bits and four additional painted banner/icon bits are stored with the newly found bodies/order.",
+          "Three original banner/icon components on the older collection are magnetized."
+        ]
       }
     ]
   },
   "notes": [
     "Wave 1 intentionally treats the uploaded roster as a configuration/statistics source, not physical ownership authority.",
-    "The Acolyte/Metamorph pool is the critical de-duplication case: 39 source roster body slots normalize to 15 shared magnetized physical bodies.",
-    "Current meta/loadout optimization should be performed only after the physical body/component baseline is sufficiently reconciled."
+    "Current meta/loadout optimization should be performed only after the physical body/component baseline is sufficiently reconciled.",
+    "Acolyte count correction: the roster's 39 Acolyte slots were physically counted unique bodies. With six newly found bodies, the current exact Acolyte-compatible pool is 45."
+  ],
+  "resolved_questions": [
+    {
+      "id": "GSC_ACOLYTE_BODY_COUNT_CORRECTION",
+      "resolution": "SOURCE_ROSTER_39_REAL_BODIES_PLUS_6_NEWLY_FOUND_EQUALS_45",
+      "resolved_at": "2026-10-01",
+      "evidence": "DIRECT_USER_CLARIFICATION_PLUS_SOURCE_PARSE",
+      "details": "Source units were 10+5 autopistol bodies and 8+8+8 hand-flamer bodies. These were physically counted bodies, not duplicate configuration slots."
+    }
   ]
 }
