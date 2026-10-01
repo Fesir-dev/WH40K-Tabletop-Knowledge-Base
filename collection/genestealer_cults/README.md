@@ -209,3 +209,137 @@ Pending direct physical recheck:
 6. reconcile vehicles;
 7. identify any further models/boxes missing from the export;
 8. only then perform collection-aware current-meta optimization.
+
+
+## Goliath shared chassis
+
+The collection has **2 physical Goliath chassis**.
+
+Both are user-confirmed magnetized shared-role vehicles:
+
+- Goliath Truck
+- Goliath Rockgrinder
+
+Any simultaneous configuration totaling at most two chassis is physically possible in principle:
+
+- 2 Trucks
+- 1 Truck + 1 Rockgrinder
+- 2 Rockgrinders
+
+The two datasheet roles must never be counted as four vehicles.
+
+The exact retained Rockgrinder primary weapon modules still require audit:
+- heavy mining laser
+- clearance incinerator
+- heavy seismic cannon
+
+## Current competitive-fit checkpoint — 2026-10-01
+
+The current official MFM was updated on 2026-09-30. The September balance update did not materially rebuild the Genestealer Cults unit package; the late-September competitive list structure therefore remains a useful immediate reference, while post-update tournament data is not yet mature.
+
+### Strongest collection match
+
+Recent winning-list aggregation for the common Biosanctic Broodsurge + Xenocult Masses build shows a spine centred on:
+
+- Aberrants
+- Purestrain Genestealers
+- Patriarch
+- Abominant
+- Acolyte Hybrids with Hand Flamers
+- Neophyte Hybrids
+- Biophagus
+- Achilles Ridgerunners
+- Goliath Truck
+- Acolyte Hybrids with Autopistols
+
+The user's collection currently represents **all 10/10 of these spine datasheet roles**.
+
+The same merged build's flex layer is:
+- Hybrid Metamorphs
+- Benefictus
+- Acolyte Iconward
+
+The collection also represents **all 3/3 flex roles**.
+
+Missing tech roles from that merged build:
+- Atalan Jackals
+- Jackal Alphus
+
+### Copy-depth gaps versus the common build
+
+Role coverage is excellent, but repeated-copy depth is lower in several places:
+
+- Aberrants: owned/projected 10; common successful range 5–25, consensus-style builds often use 20
+- Purestrain Genestealers: 15; common successful range 15–20
+- Abominant: 1; recent builds often use 1–3
+- Biophagus: 1; recent builds often use 1–3
+- Benefictus: 1; some successful builds use 2
+- Achilles Ridgerunner: 1; successful lists commonly use 1–2
+- Neophytes: 21; successful infantry-heavy builds commonly use 30–50
+- Goliath chassis: 2 flexible bodies; enough for infantry-oriented Truck use, but not enough to reproduce vehicle-heavy lists using 3 Rockgrinders plus a Truck
+
+### Acolyte capacity
+
+Acolyte body count is not a limiting factor:
+
+- 45 physical Acolyte-compatible bodies
+- current successful lists commonly use small 5-model Acolyte units and optional 10-model groups
+- current common autopistol pattern: 5 bodies with 3 heavy mining tools plus a cult icon
+- hand-flamer units commonly appear as 5-model utility groups, with icons and/or demolition charges depending on list
+- Hybrid Metamorphs commonly appear as 10-model flex units with hand flamers and an icon
+
+Future Acolyte audit should therefore focus on component capacity, not body count:
+- heavy mining tools
+- demolition charges
+- Metamorph mutation arms
+- hand flamers
+- cult icons
+
+### Neophyte capacity
+
+The 21-body Neophyte pool is well aligned to one optimized 20-model unit or two 10-model units.
+
+A common current 10-model tournament configuration uses:
+- 1 leader
+- 1 cult icon
+- 1 grenade launcher
+- 1 webber
+- 1 mining laser
+- 1 seismic cannon
+- 5 hybrid-firearm bodies
+
+Two such units require:
+- 2 leaders
+- 2 icons
+- 2 grenade launchers
+- 2 webbers
+- 2 mining lasers
+- 2 seismic cannons
+- 10 generic firearm bodies
+
+The user already confirmed:
+- 2 leaders
+- 2 grenade launchers
+- 2 webbers
+- 2 mining lasers
+- seismic-cannon swap components are present
+
+Therefore the main remaining Neophyte feasibility gates are:
+- confirm at least two complete seismic-cannon swap sets
+- confirm at least two Neophyte cult-icon options
+- identify the two user-described heavy 'autogun' weapons (likely heavy-stubber family, but not promoted without visual confirmation)
+
+### Current collection diagnosis
+
+The collection is **infantry-rich and Acolyte-heavy**, with excellent role coverage for the leading infantry GSC archetypes.
+
+It is not yet a full copy-depth match for the most common tournament spine. The most important shortages are not Acolyte bodies, but:
+- additional Neophytes
+- a second Ridgerunner
+- additional Aberrants / Purestrains for maximum-copy builds
+- second copies of selected support characters
+- Atalan Jackals / Jackal Alphus for mounted/tech packages
+
+Vehicle-heavy Outlander-style builds are less well supported because only two shared Goliath chassis are owned.
+
+This is an analytics checkpoint, not a shopping plan. Physical reconciliation remains authoritative over meta preference.
