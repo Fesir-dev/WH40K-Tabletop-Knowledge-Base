@@ -34,6 +34,7 @@ Historical roster point values may be retained only as explicitly dated snapshot
 - `adeptus_mechanicus/` — reconciled 121-model physical collection, closed 2026-09-30 with magnetization/loadout constraints recorded.
 - `imperial_knights/` — 4-model direct-confirmation baseline: 2 fully magnetized Armiger chassis + 2 magnetized Questoris-scale chassis with shared component pools.
 - `chaos_space_marines/` — multi-wave CSM inventory: **155 confirmed unique bodies/models** after shared-body normalization; **165 probable** if the recalled separate 10-model Legionaries box is physically reconfirmed.
+- `genestealer_cults/` — **Wave 1 normalized baseline: 77 bodies/models**. Neophytes are directly reconciled at 21; the Acolyte/Metamorph pool is normalized to 15 shared magnetized bodies; 41 additional source-projected bodies remain pending physical recheck.
 
 All newly imported Chaos-side inventories are `PROVISIONAL` until remaining build state, magnetization and loose component pools are physically reconciled. The previously suspected Daemon Prince shared-body overlap was resolved by user confirmation on 2026-09-30: five distinct Daemon Prince physical models are confirmed across the World Eaters and Chaos Daemons domains.
 
