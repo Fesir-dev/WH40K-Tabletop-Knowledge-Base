@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "scheme_id": "GSC_INDUSTRIAL_NOCTURNE_V1",
+  "title": "Genestealer Cults — Industrial Nocturne",
+  "status": "USER_APPROVED",
+  "approved_at": "2026-10-01",
+  "scope": [
+    "Neophytes",
+    "Acolytes",
+    "Aberrants",
+    "Purestrain Genestealers",
+    "characters",
+    "shared army visual language"
+  ],
+  "design_goal": {
+    "table_readability": "High contrast and bright enough to read at gaming distance without losing a grimdark finish.",
+    "army_cohesion": "Cold dark armour versus warm dirty cloth, with pale magenta-violet biology and restrained industrial orange accents.",
+    "vehicle_inheritance": "Existing vehicles are dirty dark yellow with brown/rust streaking. Infantry repeats this warm industrial family in restrained orange/ochre/rust accents rather than copying the vehicle colour as a dominant mass."
+  },
+  "final_palette": {
+    "armour_and_protective_plates": {
+      "role": "primary cold mass",
+      "hue": "very dark navy / Dark Prussian Blue family",
+      "value": "darkest major army mass",
+      "finish": "matte to restrained satin",
+      "notes": "Human protective armour stays clearly colder and darker than cloth and flesh."
+    },
+    "cloth_and_robes": {
+      "role": "primary warm counter-mass",
+      "hue": "dirty red-orange / rust-red / brick / burnt orange",
+      "value": "one step lighter than navy armour",
+      "finish": "matte, worn, stained",
+      "notes": "No graphite-grey cloth as a major mass. Warm fabric is the main silhouette separator from navy armour."
+    },
+    "industrial_orange_accents": {
+      "role": "high-saturation accent and vehicle link",
+      "hue": "dirty ochre through burnt orange to selective bright orange",
+      "coverage": "restrained; roughly 5–10% on ordinary infantry",
+      "placement": [
+        "hazard stripes",
+        "numbers",
+        "small armour panels",
+        "knee or shoulder markings",
+        "cables",
+        "cult or industrial markings"
+      ],
+      "notes": "Bright orange remains an accent, not a second full-body mass."
+    },
+    "flesh": {
+      "role": "light biological focal mass",
+      "hue": "pale flesh / bone-beige with magenta-violet shadows and veins",
+      "value": "lightest major mass",
+      "mutation_gradient": {
+        "Neophyte": "mostly pale human-adjacent skin with restrained purple-magenta around eyes, joints and veins",
+        "Acolyte": "stronger magenta-violet shadows and more visible alien vascular colour",
+        "Aberrant": "large pale-bone musculature with strong purple-magenta recesses and mutations",
+        "Purestrain": "fully alien expression of the same bloodline: pale magenta-violet flesh plus dark navy xeno plates"
+      }
+    },
+    "xeno_plates_and_growths": {
+      "role": "genetic bridge to Purestrains",
+      "hue": "dark navy to blue-violet / purple",
+      "finish": "slightly more satin/organic than human armour",
+      "notes": "Should read as related to the army navy while remaining visibly organic."
+    },
+    "red": {
+      "role": "rare tertiary cult accent",
+      "coverage": "very low",
+      "notes": "Used only on small ritual/cult details so it does not compete with magenta flesh or rusty cloth."
+    },
+    "metals": {
+      "role": "industrial neutral",
+      "hue": "dark worn steel / iron",
+      "weathering": "brown rust, soot, grime, selective fresh metallic edges"
+    }
+  },
+  "colour_theory": {
+    "primary_contrast": "Cold navy versus warm rusty red-orange creates a strong complementary/near-complementary temperature contrast.",
+    "value_hierarchy": [
+      "navy armour = darkest",
+      "dirty red-orange cloth = middle value",
+      "pale flesh = lightest"
+    ],
+    "biological_bridge": "Magenta sits between red and violet and visually links warm rusty cloth to cold blue-violet xeno biology.",
+    "tabletop_rule": "Brightness comes from value and temperature separation, not from making every surface saturated."
+  },
+  "owned_paint_anchors": {
+    "navy": [
+      "AK Dark Prussian Blue",
+      "Citadel The Fang",
+      "Citadel Fenrisian Grey"
+    ],
+    "warm_cloth_and_orange": [
+      "AK Orange Brown",
+      "AK Dirty Yellow",
+      "AK Yellow",
+      "Citadel Fire Dragon Bright",
+      "AK Dark Rust",
+      "AK Light Rust",
+      "AK Burnt Umber"
+    ],
+    "flesh_and_mutation": [
+      "Vallejo Heavy Warmgrey",
+      "AK Sickly Pink",
+      "AK Brown Rose",
+      "Vallejo Pale Flesh",
+      "Citadel Pallid Wych Flesh",
+      "Citadel Rakarth Flesh",
+      "Citadel Screaming Skull",
+      "AK Purple",
+      "Citadel Genestealer Purple",
+      "Citadel Daemonette Hide",
+      "Citadel Warpfiend Grey",
+      "Citadel Slaanesh Grey",
+      "Citadel Doomfire Magenta"
+    ],
+    "xeno_and_shadows": [
+      "Citadel Leviathan Purple",
+      "Citadel Xereus Purple",
+      "Citadel Naggaroth Night",
+      "Vallejo Violet"
+    ],
+    "oils_current_snapshot": [
+      "Невская палитра — Серая Пейна",
+      "Невская палитра — Умбра жжёная",
+      "Невская палитра — Сажа газовая"
+    ],
+    "oil_magenta": {
+      "status": "USER_CONFIRMED_OWNED_PENDING_NORMALIZED_INVENTORY_UPDATE",
+      "role": "biological glazing, veins, mutation shadows"
+    }
+  },
+  "oil_role_map": {
+    "Серая Пейна": "cold armour/xeno recesses and cool structural shadows",
+    "Умбра жжёная": "rust, dirt, lower cloth, warm industrial grime",
+    "Сажа газовая": "deep weapon/mechanical recesses and soot",
+    "Масляная магента": "flesh, veins, mutation zones and organic transitions"
+  },
+  "horns": {
+    "recipe_family": "existing repository horn recipe logic",
+    "sequence": [
+      "Dryad Bark at the root",
+      "Gorthor Brown",
+      "Rakarth Flesh",
+      "Screaming Skull",
+      "AK Pale Sand",
+      "tiny White point at the tip"
+    ],
+    "oil": "Burnt Umber near the root after protective varnish",
+    "three_horns_note": "For a three-horn model, keep the same family but vary the amount of dark root/light tip slightly between horns so they do not look mechanically identical."
+  },
+  "production_direction": {
+    "preferred_method": "airbrush zenithal/grisaille + transparent colour mapping + selective opaque highlights + oils",
+    "reason": "Designed for army-scale production and to exploit the user's airbrush instead of brush-basecoating large navy areas repeatedly.",
+    "navy_candidate": "Leviadon Blue over a controlled light-value underpainting where practical; airbrush can be used as a transparent filter on models with large navy/xeno areas.",
+    "skin_candidate": "Airbrush pale sickly flesh modulation on Acolytes, Aberrants and Purestrains where flesh dominates.",
+    "finish": "final matte overall, selective satin/gloss returned to xeno plates, eyes, tongue and wet organic details"
+  },
+  "lore_positioning": {
+    "classification": "custom cult scheme",
+    "closest_official_inspiration": "Cult of the Rusted Claw",
+    "secondary_visual_inheritance": "classic Genestealer blue-violet / pale alien biology",
+    "interpretation": "An industrial/mining-world descendant cult: worn work gear, rusted machinery and hazard colours, with increasingly visible xeno genetics from Neophytes through Purestrains.",
+    "note": "This is not intended to reproduce an official cult paint scheme exactly."
+  },
+  "supersedes_in_this_chat": [
+    "graphite-grey cloth as a major colour mass",
+    "all-navy clothing",
+    "bright orange as a broad clothing colour"
+  ]
+}
