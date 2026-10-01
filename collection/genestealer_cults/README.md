@@ -343,3 +343,27 @@ It is not yet a full copy-depth match for the most common tournament spine. The 
 Vehicle-heavy Outlander-style builds are less well supported because only two shared Goliath chassis are owned.
 
 This is an analytics checkpoint, not a shopping plan. Physical reconciliation remains authoritative over meta preference.
+
+
+## Acolyte component-count authority rule
+
+Until the user completes a manual/reconstructed bit count, component capacity is fail-closed.
+
+Guaranteed component baseline:
+- contents of **3 complete official Acolyte/Metamorph kits**
+- plus **10 separately purchased Hand Flamers**
+
+Do **not** infer additional Heavy Mining Tools, Demolition Charges or Metamorph mutation arms from separately purchased bodies.
+
+Separately purchased bodies are body-only for accounting unless the user explicitly confirms associated bits.
+
+Future simultaneous-loadout calculations must therefore use:
+`3 complete kit contents + explicitly confirmed extra components`.
+
+The user will first attempt to reconstruct/count:
+- Heavy Mining Tools
+- Demolition Charges
+- Metamorph mutation arm sets
+- total Hand Flamers
+
+Only if that fails should a deeper forensic reconstruction be attempted.
