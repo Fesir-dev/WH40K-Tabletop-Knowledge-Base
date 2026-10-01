@@ -200,7 +200,7 @@
       "source_id": "BSDATA_MFM_11E",
       "repository": "BSData/wh40k-11e-mfm",
       "pinned": "61a687e858c00a4ad205d564959c622a5605ef3d",
-      "live": "04eb6d35643a9157def15fce8c3911b7f00b2e6d",
+      "live": "27c6ec57c17a71b2855f5f77e841b7e5eee1bfe8",
       "changed": true,
       "files": [
         {
@@ -222,17 +222,25 @@
         {
           "filename": ".github/workflows/scrape.yml",
           "status": "modified",
-          "additions": 1,
-          "deletions": 1,
-          "changes": 2,
+          "additions": 4,
+          "deletions": 2,
+          "changes": 6,
           "classification": "CI"
         },
         {
           "filename": "AGENTS.md",
           "status": "modified",
-          "additions": 4,
-          "deletions": 3,
-          "changes": 7,
+          "additions": 10,
+          "deletions": 4,
+          "changes": 14,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "DATA-CHANGELOG.md",
+          "status": "modified",
+          "additions": 13,
+          "deletions": 1670,
+          "changes": 1683,
           "classification": "DOCUMENTATION"
         },
         {
@@ -250,6 +258,46 @@
           "deletions": 1,
           "changes": 8,
           "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "changelog/v1.0.md",
+          "status": "added",
+          "additions": 91,
+          "deletions": 0,
+          "changes": 91,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "changelog/v1.1.md",
+          "status": "added",
+          "additions": 947,
+          "deletions": 0,
+          "changes": 947,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "changelog/v1.2.md",
+          "status": "added",
+          "additions": 57,
+          "deletions": 0,
+          "changes": 57,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "changelog/v1.3.md",
+          "status": "added",
+          "additions": 329,
+          "deletions": 0,
+          "changes": 329,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "changelog/v1.4.md",
+          "status": "added",
+          "additions": 275,
+          "deletions": 0,
+          "changes": 275,
+          "classification": "DOCUMENTATION"
         },
         {
           "filename": "package.json",
@@ -276,11 +324,19 @@
           "classification": "OTHER"
         },
         {
+          "filename": "scripts/update-data-changelog.ts",
+          "status": "modified",
+          "additions": 31,
+          "deletions": 21,
+          "changes": 52,
+          "classification": "OTHER"
+        },
+        {
           "filename": "specs/change-tracking.md",
           "status": "modified",
-          "additions": 44,
-          "deletions": 0,
-          "changes": 44,
+          "additions": 155,
+          "deletions": 30,
+          "changes": 185,
           "classification": "DOCUMENTATION"
         },
         {
@@ -308,6 +364,14 @@
           "classification": "OTHER"
         },
         {
+          "filename": "src/changelog.ts",
+          "status": "added",
+          "additions": 89,
+          "deletions": 0,
+          "changes": 89,
+          "classification": "OTHER"
+        },
+        {
           "filename": "src/cli.ts",
           "status": "modified",
           "additions": 19,
@@ -318,9 +382,17 @@
         {
           "filename": "src/diff.ts",
           "status": "modified",
-          "additions": 37,
-          "deletions": 9,
-          "changes": 46,
+          "additions": 349,
+          "deletions": 106,
+          "changes": 455,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/discord.ts",
+          "status": "modified",
+          "additions": 7,
+          "deletions": 6,
+          "changes": 13,
           "classification": "OTHER"
         },
         {
@@ -348,11 +420,19 @@
           "classification": "OTHER"
         },
         {
+          "filename": "test/changelog.test.ts",
+          "status": "added",
+          "additions": 64,
+          "deletions": 0,
+          "changes": 64,
+          "classification": "OTHER"
+        },
+        {
           "filename": "test/emit-diff.test.ts",
           "status": "modified",
-          "additions": 162,
-          "deletions": 8,
-          "changes": 170,
+          "additions": 403,
+          "deletions": 34,
+          "changes": 437,
           "classification": "OTHER"
         },
         {
