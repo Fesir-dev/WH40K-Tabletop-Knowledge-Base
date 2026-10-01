@@ -55,6 +55,29 @@ Current machine-readable and human-readable maps:
 
 They separate unique physical ownership from current 11E cross-faction use.
 
-Current normalized known Chaos-domain sum: **667 unique bodies/models** across CSM, Thousand Sons, World Eaters, Chaos Daemons and the shared Chaos pool. This is not a claim that all 662 have equal verification depth.
+Current normalized known Chaos-domain sum: **667 unique bodies/models** across CSM, Thousand Sons, World Eaters, Chaos Daemons and the shared Chaos pool. This is not a claim that all 667 have equal verification depth.
 
 Important current bridges include CSM Cult of the Dark Gods, Daemonic Pact, Chaos Daemons Shadow Legion, god-legion direct daemon datasheets and the all-CHAOS Chaos Knights ally rule.
+
+
+## Warhammer 40,000 master collection total — 2026-10-01
+
+Current normalized Warhammer 40,000 collection baseline:
+
+**974 unique physical models/bodies**
+
+Breakdown:
+- Chaos ecosystem — **667**
+- Adeptus Mechanicus — **121**
+- Adeptus Custodes + shared Imperial Agents — **75**
+- Imperial Knights — **4**
+- Genestealer Cults — **107**
+
+This total is normalized to avoid double-counting:
+- shared Chaos Spawn are counted once globally;
+- shared/magnetized alternate-role bodies such as Haarken/Jump Pack Lord, Black Legion Daemon Prince cross-role use, Rendmaster/Skull Cannon and Goliath Truck/Rockgrinder are counted by physical body/chassis;
+- magnetized weapon options and loose bits do not increase model count.
+
+The recalled separate 10-model CSM Legionaries box remains probable rather than confirmed. If physically reconfirmed, the master total would become **984**.
+
+Age of Sigmar is explicitly outside this repository/project total.
