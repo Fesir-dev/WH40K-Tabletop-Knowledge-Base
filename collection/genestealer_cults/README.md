@@ -367,3 +367,51 @@ The user will first attempt to reconstruct/count:
 - total Hand Flamers
 
 Only if that fails should a deeper forensic reconstruction be attempted.
+
+
+## Open-source reconstruction of the three complete Acolyte/Metamorph kits
+
+Public sprue-part catalogues and assembly instructions resolve the baseline component stock without a manual recount.
+
+### Per one complete 5-model kit
+
+- Hand Flamers — **5**
+- Heavy Mining Tools — **3 total**
+  - 1 Heavy Rock Cutter
+  - 1 Heavy Rock Drill
+  - 1 Heavy Rock Saw
+- Demolition Charge builds — **2**
+- Cult Icon — **1**
+- Hybrid Metamorph build capacity — **5 models**
+
+For Metamorphs, the sprue catalogue contains nine individually labelled Metamorph-specific weapon/arm components, but these are not nine complete interchangeable arm sets. The safe functional statement is that one complete box contains the parts required to build all five bodies as Hybrid Metamorphs.
+
+### Guaranteed stock from three complete kits
+
+- Hand Flamers — **15**
+- Heavy Mining Tools — **9**
+- Demolition Charge builds — **6**
+- Cult Icons — **3**
+- Metamorph build capacity — **15 models**
+
+### Confirmed separately purchased extras
+
+- Hand Flamers — **+10**
+- Cult Icons / banners — **+4**
+- additional bodies — **+6**
+
+No separate extra Heavy Mining Tools, Demolition Charges or Metamorph arm components are currently confirmed.
+
+### Current guaranteed component pool
+
+- Hand Flamers — **25**
+- Heavy Mining Tools — **9**
+- Demolition Charge builds — **6**
+- Cult Icons / banners — **7**
+- Metamorph build capacity — **15 models**
+
+This baseline already explains the historical collection snapshot unusually well:
+- the old roster used **24 Hand-Flamer Acolytes**, while the reconstructed guaranteed stock is 25 Hand Flamers;
+- the old roster used **6 Heavy Mining Tools**, while three complete kits provide 9.
+
+This numerical match strongly suggests the extra 10 Hand Flamers were purchased to support the old flamer-heavy roster, but purchase intent remains a reconstruction rather than a confirmed fact.
