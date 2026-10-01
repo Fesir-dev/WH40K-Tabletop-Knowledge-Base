@@ -300,11 +300,45 @@
       ]
     },
     {
-      "pool_id": "goliath_truck",
-      "name": "Goliath Truck",
+      "pool_id": "goliath_shared_chassis",
+      "name": "Goliath Truck / Goliath Rockgrinder shared magnetized chassis",
       "physical_bodies": 2,
       "status": [
-        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+        "USER_CONFIRMED_EXACT_COUNT_2",
+        "MAGNETIZED_SHARED_ROLE",
+        "TRUCK_OR_ROCKGRINDER",
+        "MUTUALLY_EXCLUSIVE_PER_CHASSIS",
+        "ROCKGRINDER_WEAPON_OPTIONS_NOT_YET_AUDITED"
+      ],
+      "roles": [
+        {
+          "role": "Goliath Truck",
+          "simultaneous_capacity": 2
+        },
+        {
+          "role": "Goliath Rockgrinder",
+          "simultaneous_capacity": 2
+        }
+      ],
+      "physical_configuration": {
+        "chassis_total": 2,
+        "magnetized": true,
+        "role_interchangeability": [
+          "Goliath Truck",
+          "Goliath Rockgrinder"
+        ],
+        "simultaneous_global_capacity": 2,
+        "allowed_examples": [
+          "2 Trucks + 0 Rockgrinders",
+          "1 Truck + 1 Rockgrinder",
+          "0 Trucks + 2 Rockgrinders"
+        ],
+        "rockgrinder_primary_weapon_options": "UNKNOWN_NOT_YET_PHYSICALLY_AUDITED"
+      },
+      "notes": [
+        "User confirmed both Goliath vehicles are magnetized and each can be configured as either a Goliath Truck or Goliath Rockgrinder.",
+        "The two datasheet roles share the same two physical chassis and must never be double-counted.",
+        "Exact retained Rockgrinder weapon options (heavy mining laser / clearance incinerator / heavy seismic cannon) have not yet been physically audited."
       ]
     }
   ],
@@ -357,9 +391,19 @@
       "id": "GSC_ACOLYTE_METAMORPH_SHARED_45",
       "type": "flexible_physical_pool",
       "effect": "The collection has 45 physical Acolyte-compatible bodies. Current Acolyte/Metamorph role assignments are configuration choices constrained by available arms, icons and heavy-mining/demolition components; never reduce the physical body count to a smaller configuration subset."
+    },
+    {
+      "id": "GSC_GOLIATH_SHARED_CHASSIS_2",
+      "type": "shared_physical_chassis",
+      "effect": "Two magnetized Goliath chassis can instantiate Truck and/or Rockgrinder roles in any combination totaling at most two simultaneous vehicles."
     }
   ],
   "open_questions": [
+    {
+      "id": "GSC_GOLIATH_ROCKGRINDER_WEAPON_OPTIONS",
+      "question": "Which Rockgrinder primary weapon modules are retained for the two magnetized Goliath chassis: heavy mining laser, clearance incinerator and/or heavy seismic cannon, and how many complete copies of each?",
+      "state": "OPEN_COMPONENT_AUDIT"
+    },
     {
       "id": "GSC_ACOLYTE_NEW_6_BUILD_STATE",
       "question": "Are the six newly found bodies assembled, unassembled, based and/or magnetized, and were four intended to become fixed cult-icon bearers?",
@@ -391,11 +435,6 @@
       "state": "OPEN"
     },
     {
-      "id": "GSC_ACOLYTE_HAND_FLAMER_COUNT",
-      "question": "Count the additional hand-flamer arm/weapon sets retained for the 15-body shared Acolyte/Metamorph pool.",
-      "state": "OPEN_COMPONENT_AUDIT"
-    },
-    {
       "id": "GSC_REMAINING_COLLECTION_WAVES",
       "question": "Physically reconcile the remaining source-projected characters, Aberrants, Purestrain Genestealers, Ridgerunner and Goliath Trucks, plus any models not represented by the source export.",
       "state": "OPEN"
@@ -409,7 +448,8 @@
     "actual_total_owned": "UNKNOWN_PENDING_FULL_GSC_PHYSICAL_RECONCILIATION",
     "direct_confirmed_acolyte_compatible_bodies": 45,
     "source_counted_acolyte_bodies": 39,
-    "additional_acolyte_bodies_found_post_export": 6
+    "additional_acolyte_bodies_found_post_export": 6,
+    "goliath_shared_chassis_exact": 2
   },
   "provenance": {
     "source_artifact": {
@@ -455,13 +495,24 @@
           "Ten additional hand-flamer bits and four additional painted banner/icon bits are stored with the newly found bodies/order.",
           "Three original banner/icon components on the older collection are magnetized."
         ]
+      },
+      {
+        "checkpoint": "2026-10-01",
+        "evidence_type": "DIRECT_USER_GOLIATH_SHARED_CHASSIS",
+        "facts": [
+          "Exactly two physical Goliath chassis are owned.",
+          "Both are magnetized.",
+          "Each chassis can be configured as either Goliath Truck or Goliath Rockgrinder.",
+          "The collection therefore has two total simultaneous Goliath vehicle bodies, not two Trucks plus two Rockgrinders."
+        ]
       }
     ]
   },
   "notes": [
     "Wave 1 intentionally treats the uploaded roster as a configuration/statistics source, not physical ownership authority.",
     "Current meta/loadout optimization should be performed only after the physical body/component baseline is sufficiently reconciled.",
-    "Acolyte count correction: the roster's 39 Acolyte slots were physically counted unique bodies. With six newly found bodies, the current exact Acolyte-compatible pool is 45."
+    "Acolyte count correction: the roster's 39 Acolyte slots were physically counted unique bodies. With six newly found bodies, the current exact Acolyte-compatible pool is 45.",
+    "Goliath vehicles normalized as two shared magnetized chassis able to instantiate Truck and/or Rockgrinder roles."
   ],
   "resolved_questions": [
     {
@@ -470,6 +521,12 @@
       "resolved_at": "2026-10-01",
       "evidence": "DIRECT_USER_CLARIFICATION_PLUS_SOURCE_PARSE",
       "details": "Source units were 10+5 autopistol bodies and 8+8+8 hand-flamer bodies. These were physically counted bodies, not duplicate configuration slots."
+    },
+    {
+      "id": "GSC_GOLIATH_TRUCK_ROCKGRINDER_IDENTITY",
+      "resolution": "TWO_MAGNETIZED_SHARED_CHASSIS_EACH_CAN_BE_TRUCK_OR_ROCKGRINDER",
+      "resolved_at": "2026-10-01",
+      "evidence": "DIRECT_USER_CONFIRMATION"
     }
   ]
 }
