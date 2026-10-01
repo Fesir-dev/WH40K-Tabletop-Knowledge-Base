@@ -1,0 +1,411 @@
+{
+  "schema_version": "1.1",
+  "inventory_id": "genestealer_cults_personal",
+  "faction": "Genestealer Cults",
+  "checkpoint": "2026-10-01",
+  "status": "PROVISIONAL",
+  "revision_state": "WAVE1_NEOPHYTE_ACOLYTE_RECONCILIATION",
+  "source_snapshot": {
+    "artifact_name": "Коллекция генокульта.json",
+    "sha256": "6c025ce2fa4b507397014666cd01ac1fd1830a6cea0366a21656da0421f57bb4",
+    "roster_name": "Коллекция генокульта",
+    "generator": "https://newrecruit.eu",
+    "game_system": "Warhammer 40,000 11th Edition",
+    "game_system_revision": 15,
+    "catalogue": "Xenos - Genestealer Cults",
+    "catalogue_revision": 4,
+    "source_reported_points": 2315,
+    "authority_note": "Points and roster configuration are provenance only; physical ownership is overridden by direct user inspection."
+  },
+  "physical_pools": [
+    {
+      "pool_id": "abominant",
+      "name": "Abominant",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "acolyte_iconward",
+      "name": "Acolyte Iconward",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "benefictus",
+      "name": "Benefictus",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "biophagus",
+      "name": "Biophagus",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "clamavus",
+      "name": "Clamavus",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "kelermorph",
+      "name": "Kelermorph",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "magus",
+      "name": "Magus",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "nexos",
+      "name": "Nexos",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "patriarch",
+      "name": "Patriarch",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "primus",
+      "name": "Primus",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "reductus_saboteur",
+      "name": "Reductus Saboteur",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "sanctus",
+      "name": "Sanctus",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "neophyte_hybrids",
+      "name": "Neophyte Hybrids",
+      "physical_bodies": 21,
+      "status": [
+        "USER_CONFIRMED_EXACT_COUNT_21",
+        "SOURCE_EXPORT_UNDERCOUNT_20",
+        "PARTIAL_PHYSICAL_LOADOUT_RECONCILIATION",
+        "HEAVY_WEAPON_BODIES_MAGNETIZED"
+      ],
+      "body_variants": [
+        {
+          "name": "Neophyte Leaders",
+          "physical_bodies": 2,
+          "evidence": "DIRECT_USER_INSPECTION"
+        },
+        {
+          "name": "Grenade-launcher Neophytes",
+          "physical_bodies": 2,
+          "evidence": "DIRECT_USER_INSPECTION"
+        },
+        {
+          "name": "Web-gun / webber Neophytes",
+          "physical_bodies": 2,
+          "evidence": "DIRECT_USER_INSPECTION"
+        },
+        {
+          "name": "Heavy-weapon Neophyte bodies on larger bases",
+          "physical_bodies": 4,
+          "evidence": "DIRECT_USER_INSPECTION",
+          "current_or_visible_configuration": {
+            "user_described_heavy_autogun_like_weapon": 2,
+            "mining_laser": 2
+          },
+          "alternate_magnetized_options": [
+            "seismic cannon"
+          ],
+          "note": "Exact canonical identity of the user-described 'autogun' heavy weapon and exact seismic-cannon component count remain unresolved."
+        },
+        {
+          "name": "Other Neophyte bodies",
+          "physical_bodies": 11,
+          "evidence": "DERIVED_REMAINDER_FROM_EXACT_TOTAL",
+          "loadout": "UNKNOWN_NOT_YET_PHYSICALLY_DESCRIBED"
+        }
+      ],
+      "source_projection": {
+        "physical_bodies": 20,
+        "units": [
+          10,
+          10
+        ],
+        "loadout_projection": "Both source units were entered as leader + generic hybrid-firearm bodies.",
+        "interpretation": "Superseded by direct physical count and partial loadout inspection."
+      },
+      "notes": [
+        "Direct inspection found 21 physical bodies, not the 20 represented in the source roster.",
+        "Two grenade-launcher bodies and two web-gun/webber bodies are fixed/visibly identifiable.",
+        "Four heavy-weapon bodies use larger bases and are magnetized; two currently/visibly carry the user-described autogun-like heavy weapon and two carry mining lasers, with seismic-cannon options retained for magnetic swapping.",
+        "The remaining eleven bodies are count-reconciled only; their exact fixed/swap loadouts are not yet inventoried."
+      ]
+    },
+    {
+      "pool_id": "acolyte_metamorph_shared_bodies",
+      "name": "Acolyte Hybrids / Hybrid Metamorphs shared magnetized body pool",
+      "physical_bodies": 15,
+      "status": [
+        "USER_CONFIRMED_THREE_OFFICIAL_BOXES",
+        "PHYSICAL_BODY_COUNT_15_FROM_RECONCILED_SOURCE_AND_BOX_HISTORY",
+        "ALL_BODIES_MAGNETIZED",
+        "MULTI_ROLE_SHARED_BODY_POOL",
+        "COMPONENT_CAPACITY_REQUIRES_EXACT_BIT_AUDIT"
+      ],
+      "roles": [
+        {
+          "role": "Acolyte Hybrids with Autopistols",
+          "availability": "MAGNETIZED_CONFIGURATION"
+        },
+        {
+          "role": "Acolyte Hybrids with Hand Flamers",
+          "availability": "MAGNETIZED_CONFIGURATION"
+        },
+        {
+          "role": "Hybrid Metamorphs",
+          "availability": "MAGNETIZED_CONFIGURATION"
+        }
+      ],
+      "physical_configuration": {
+        "physical_bodies": 15,
+        "acquisition": "3 official Acolyte/Metamorph kits",
+        "body_magnetization": "ALL_15_BODIES",
+        "role_interchangeability": "The same bodies can be re-armed/reconfigured across Acolyte and Metamorph roles.",
+        "simultaneous_global_capacity": 15
+      },
+      "source_configuration_snapshots": [
+        {
+          "role": "Acolyte Hybrids with Autopistols",
+          "source_body_slots": 15,
+          "source_units": [
+            10,
+            5
+          ],
+          "source_selected_heavy_mining_tools": 6,
+          "interpretation": "Configuration snapshot over the shared 15-body physical pool."
+        },
+        {
+          "role": "Acolyte Hybrids with Hand Flamers",
+          "source_body_slots": 24,
+          "source_units": [
+            8,
+            8,
+            8
+          ],
+          "interpretation": "Alternate configuration projection; does not represent 24 additional physical bodies."
+        }
+      ],
+      "notes": [
+        "The source export contains 39 Acolyte-role body slots across autopistol and hand-flamer selections, but these are not 39 unique miniatures.",
+        "User confirms three official boxes and complete retention of their original bits; the body pool is treated as 15 physical bodies.",
+        "Every body is magnetized so arms/loadouts can be changed.",
+        "User states the pool can be configured for hand flamers, pistols/heavy mining equipment and Hybrid Metamorph builds.",
+        "Exact simultaneous maximums for every weapon configuration are deliberately not inferred until loose-bit counts are audited."
+      ]
+    },
+    {
+      "pool_id": "aberrants",
+      "name": "Aberrants",
+      "physical_bodies": 10,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ],
+      "source_projection": {
+        "units": [
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "pool_id": "purestrain_genestealers",
+      "name": "Purestrain Genestealers",
+      "physical_bodies": 15,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ],
+      "source_projection": {
+        "units": [
+          5,
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "pool_id": "achilles_ridgerunner",
+      "name": "Achilles Ridgerunner",
+      "physical_bodies": 1,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    },
+    {
+      "pool_id": "goliath_truck",
+      "name": "Goliath Truck",
+      "physical_bodies": 2,
+      "status": [
+        "SOURCE_ROSTER_COUNT_PENDING_PHYSICAL_RECHECK"
+      ]
+    }
+  ],
+  "component_pools": {
+    "acolyte_metamorph_bits": {
+      "source_kit_sets_retained": 3,
+      "original_kit_bits_state": "USER_CONFIRMED_ALL_ORIGINAL_BITS_RETAINED",
+      "extra_hand_flamers": {
+        "count": "UNKNOWN_GREATER_THAN_STOCK",
+        "status": "USER_CONFIRMED_ADDITIONAL_PURCHASES",
+        "note": "User bought substantially more hand-flamer bits; exact count not yet inventoried."
+      },
+      "cult_icons_or_banners": {
+        "total_components": 7,
+        "original_kit_components": 3,
+        "additional_components": 4,
+        "additional_component_state": "PAINTED_STORED_IN_BAG",
+        "note": "The four extra banners/icons were purchased in addition to the three original kit banners."
+      },
+      "heavy_mining_and_metamorph_components": {
+        "count": "UNKNOWN_EXACT",
+        "status": "ORIGINAL_THREE_KIT_COMPONENT_SETS_RETAINED",
+        "note": "The user states the retained bits support all intended Acolyte/Metamorph build families; exact simultaneous option capacity remains to be counted."
+      }
+    },
+    "neophyte_heavy_weapon_bits": {
+      "heavy_weapon_bodies": 4,
+      "magnetized": true,
+      "visible_or_current_options": {
+        "user_described_autogun_like_heavy_weapon": 2,
+        "mining_laser": 2
+      },
+      "seismic_cannon_swap_components": "PRESENT_COUNT_NOT_YET_STATED"
+    }
+  },
+  "constraints": [
+    {
+      "id": "GSC_ACOLYTE_METAMORPH_SHARED_15",
+      "type": "shared_physical_pool",
+      "effect": "All Acolyte/Metamorph configurations draw from the same 15 physical magnetized bodies. Roster role projections must never be summed as additional bodies."
+    },
+    {
+      "id": "GSC_NEOPHYTE_HEAVY_WEAPON_SHARED_4",
+      "type": "magnetized_component_allocation",
+      "effect": "The four heavy-weapon Neophyte bodies remain four physical bodies regardless of how many retained mining-laser/seismic/heavy-gun components can be swapped onto them."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "GSC_NEOPHYTE_HEAVY_AUTOGUN_IDENTITY",
+      "question": "Identify the exact canonical heavy weapon on the two user-described 'autogun' Neophyte heavy-weapon bodies.",
+      "state": "USER_VISUAL_RECHECK_REQUIRED"
+    },
+    {
+      "id": "GSC_NEOPHYTE_SEISMIC_COMPONENT_COUNT",
+      "question": "How many complete seismic-cannon swap sets are retained for the four magnetized heavy-weapon Neophyte bodies?",
+      "state": "USER_RECHECK_REQUIRED"
+    },
+    {
+      "id": "GSC_NEOPHYTE_REMAINING_11_LOADOUTS",
+      "question": "Audit the exact physical loadouts/build state of the remaining eleven Neophyte bodies.",
+      "state": "OPEN"
+    },
+    {
+      "id": "GSC_ACOLYTE_HAND_FLAMER_COUNT",
+      "question": "Count the additional hand-flamer arm/weapon sets retained for the 15-body shared Acolyte/Metamorph pool.",
+      "state": "OPEN_COMPONENT_AUDIT"
+    },
+    {
+      "id": "GSC_ACOLYTE_OPTION_CAPACITY",
+      "question": "Count heavy-mining and Metamorph arm sets only if needed to prove simultaneous legal/current loadout capacity; body count is already normalized at 15.",
+      "state": "OPEN_COMPONENT_AUDIT"
+    },
+    {
+      "id": "GSC_REMAINING_COLLECTION_WAVES",
+      "question": "Physically reconcile the remaining source-projected characters, Aberrants, Purestrain Genestealers, Ridgerunner and Goliath Trucks, plus any models not represented by the source export.",
+      "state": "OPEN"
+    }
+  ],
+  "confirmed_totals": {
+    "wave1_normalized_body_baseline": 77,
+    "source_naive_roster_body_slots": 100,
+    "direct_confirmed_neophytes": 21,
+    "direct_reconciled_acolyte_metamorph_shared_bodies": 15,
+    "source_projected_other_bodies_pending_recheck": 41,
+    "actual_total_owned": "UNKNOWN_PENDING_FULL_GSC_PHYSICAL_RECONCILIATION"
+  },
+  "provenance": {
+    "source_artifact": {
+      "filename": "Коллекция генокульта.json",
+      "sha256": "6c025ce2fa4b507397014666cd01ac1fd1830a6cea0366a21656da0421f57bb4",
+      "raw_file_vendored": false,
+      "reason": "New Recruit export contains extensive copyrighted rules text; repository stores normalized facts and provenance only."
+    },
+    "user_clarifications": [
+      {
+        "checkpoint": "2026-10-01",
+        "evidence_type": "DIRECT_USER_NEOPHYTE_INSPECTION",
+        "facts": [
+          "21 physical Neophyte Hybrid models are present, not 20.",
+          "Two Neophytes have grenade launchers.",
+          "Two Neophytes have web-gun/webber weapons.",
+          "There are two Neophyte leaders.",
+          "Four Neophyte heavy-weapon bodies are on larger bases and magnetized.",
+          "Two heavy-weapon bodies currently/visibly carry a user-described autogun-like weapon and two carry mining lasers.",
+          "Seismic-cannon swap components are present for the magnetized heavy-weapon models."
+        ]
+      },
+      {
+        "checkpoint": "2026-10-01",
+        "evidence_type": "DIRECT_USER_ACOLYTE_METAMORPH_INSPECTION",
+        "facts": [
+          "The Acolyte/Metamorph collection originated from three official boxes.",
+          "All body arm interfaces are magnetized.",
+          "All original kit bits were retained.",
+          "The same physical bodies can be configured across pistol, hand-flamer, heavy-mining and Hybrid Metamorph build families.",
+          "Additional hand-flamer bits were purchased.",
+          "Four additional painted banner/icon components are stored in a bag, on top of three original kit banner/icon components."
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Wave 1 intentionally treats the uploaded roster as a configuration/statistics source, not physical ownership authority.",
+    "The Acolyte/Metamorph pool is the critical de-duplication case: 39 source roster body slots normalize to 15 shared magnetized physical bodies.",
+    "Current meta/loadout optimization should be performed only after the physical body/component baseline is sufficiently reconciled."
+  ]
+}
