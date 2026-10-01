@@ -349,7 +349,7 @@
       "extra_hand_flamers": {
         "count": 10,
         "status": "USER_CONFIRMED_EXACT_ADDITIONAL_COUNT",
-        "note": "Ten additional hand-flamer components are in the same stored order/bag as the newly found bodies."
+        "note": "These 10 are the only separately purchased Acolyte weapon components currently confirmed exact."
       },
       "cult_icons_or_banners": {
         "total_components": 7,
@@ -360,15 +360,32 @@
         "intended_use": "User recalls the four additional banners may have been intended as fixed/static squad icon bodies, but this plan is not yet treated as confirmed."
       },
       "heavy_mining_and_metamorph_components": {
-        "count": "UNKNOWN_EXACT",
-        "status": "ORIGINAL_THREE_KIT_COMPONENT_SETS_RETAINED",
-        "note": "The user states the retained bits support all intended Acolyte/Metamorph build families; exact simultaneous option capacity remains to be counted."
+        "count": "DERIVE_FROM_THREE_COMPLETE_KITS_ONLY_UNTIL_USER_COUNTS",
+        "status": "USER_DIRECTED_FAIL_CLOSED",
+        "note": "Heavy Mining Tools, Demolition Charges and Metamorph mutation arm sets must not be increased based on separately purchased bodies."
       },
       "original_kit_components_provenance": "Three complete official kits retained with original bits.",
       "additional_bodies": {
         "count": 6,
         "status": "USER_CONFIRMED_EXACT",
         "note": "Found after the roster export; likely part of the same spring order as the extra hand flamers and four painted banners."
+      },
+      "component_authority_policy": {
+        "checkpoint": "2026-10-01",
+        "state": "USER_DIRECTED_FAIL_CLOSED",
+        "rule": "For Heavy Mining Tools, Demolition Charges, Metamorph mutation arm sets and Hand Flamers, guaranteed stock derives only from the three complete official Acolyte/Metamorph kits, except where the user explicitly confirms separately purchased components.",
+        "implications": [
+          "Separately purchased Acolyte-compatible bodies do not imply any additional weapon/arm bits.",
+          "Do not infer extra Heavy Mining Tools, Demolition Charges or Metamorph mutation arms from extra bodies.",
+          "The only separately purchased component quantity currently confirmed exact is 10 additional Hand Flamers.",
+          "Future simultaneous-loadout capacity must be calculated from stock contents of 3 complete kits plus explicitly confirmed extra components."
+        ]
+      },
+      "guaranteed_component_sources": {
+        "complete_official_kits": 3,
+        "separately_purchased_bodies": "DO_NOT_TREAT_AS_COMPONENT_SOURCE",
+        "explicitly_confirmed_extra_hand_flamers": 10,
+        "other_extra_weapon_arm_components": "NONE_CONFIRMED"
       }
     },
     "neophyte_heavy_weapon_bits": {
@@ -399,6 +416,11 @@
     }
   ],
   "open_questions": [
+    {
+      "id": "GSC_ACOLYTE_COMPONENT_MANUAL_COUNT",
+      "question": "User will first attempt to reconstruct/count Heavy Mining Tools, Demolition Charges, Metamorph mutation arm sets and total Hand Flamers manually. Until then, use only three complete kit contents plus the 10 confirmed extra Hand Flamers.",
+      "state": "USER_SELF_AUDIT_PENDING"
+    },
     {
       "id": "GSC_GOLIATH_ROCKGRINDER_WEAPON_OPTIONS",
       "question": "Which Rockgrinder primary weapon modules are retained for the two magnetized Goliath chassis: heavy mining laser, clearance incinerator and/or heavy seismic cannon, and how many complete copies of each?",
@@ -505,6 +527,16 @@
           "Each chassis can be configured as either Goliath Truck or Goliath Rockgrinder.",
           "The collection therefore has two total simultaneous Goliath vehicle bodies, not two Trucks plus two Rockgrinders."
         ]
+      },
+      {
+        "checkpoint": "2026-10-01",
+        "evidence_type": "DIRECT_USER_COMPONENT_AUTHORITY_POLICY",
+        "facts": [
+          "Heavy Mining Tools, Demolition Charges, Metamorph mutation arm sets and baseline Hand Flamers must be derived strictly from three complete Acolyte/Metamorph boxes.",
+          "Additional bodies were purchased separately and must not be assumed to include weapon or arm bits.",
+          "Additional Hand Flamers were also purchased separately; 10 extra Hand Flamers are already confirmed.",
+          "User will attempt a manual/reconstructed component count before any deeper inference is made."
+        ]
       }
     ]
   },
@@ -512,7 +544,8 @@
     "Wave 1 intentionally treats the uploaded roster as a configuration/statistics source, not physical ownership authority.",
     "Current meta/loadout optimization should be performed only after the physical body/component baseline is sufficiently reconciled.",
     "Acolyte count correction: the roster's 39 Acolyte slots were physically counted unique bodies. With six newly found bodies, the current exact Acolyte-compatible pool is 45.",
-    "Goliath vehicles normalized as two shared magnetized chassis able to instantiate Truck and/or Rockgrinder roles."
+    "Goliath vehicles normalized as two shared magnetized chassis able to instantiate Truck and/or Rockgrinder roles.",
+    "Acolyte component accounting is now fail-closed: 3 complete kit contents form the guaranteed baseline, with only 10 separately purchased Hand Flamers added unless further extras are directly confirmed."
   ],
   "resolved_questions": [
     {
