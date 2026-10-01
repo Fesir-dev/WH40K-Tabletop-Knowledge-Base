@@ -1,3 +1,9 @@
+# SUPERSEDED COUNT MODEL
+
+This report's **15-body Acolyte normalization is incorrect** and was superseded on 2026-10-01 after direct user clarification that the roster's 39 Acolyte slots represented 39 real physical bodies. Six additional bodies were then found, making 45. See `reports/COLLECTION_GSC_ACOLYTE_COUNT_CORRECTION_2026-10-01.md` and the current `collection/genestealer_cults/current.json`.
+
+---
+
 # Genestealer Cults collection — Wave 1 Neophyte/Acolyte reconciliation — 2026-10-01
 
 ## Source
