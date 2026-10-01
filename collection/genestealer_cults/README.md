@@ -415,3 +415,95 @@ This baseline already explains the historical collection snapshot unusually well
 - the old roster used **6 Heavy Mining Tools**, while three complete kits provide 9.
 
 This numerical match strongly suggests the extra 10 Hand Flamers were purchased to support the old flamer-heavy roster, but purchase intent remains a reconstruction rather than a confirmed fact.
+
+
+## Derived Acolyte/Metamorph configuration capacity
+
+Using the open-source kit baseline plus current 11E datasheets and recent successful-list patterns, the 45-body Acolyte-compatible pool is no longer body-limited. The meaningful constraints are specialist components.
+
+Guaranteed resources:
+- physical bodies — **45**
+- Hand Flamers — **25**
+- Heavy Mining Tools — **9**
+- Demolition Charge builds — **6**
+- Cult Icons — **7**
+- Metamorph build capacity — **15 bodies**
+
+### Independent guaranteed ceilings
+
+**Mining Acolytes**
+- one current 5-model mining cell uses 3 Heavy Mining Tools
+- guaranteed stock supports **3 such cells simultaneously**
+- if each also takes an icon, that uses 3 of the 7 icons
+
+**Demolition/flamer Acolytes**
+- one maximally equipped 5-model demo cell can use 2 Demolition Charges
+- with an icon, the remaining two models retain Hand Flamers
+- guaranteed stock supports **3 maximum-demo five-model cells simultaneously**
+
+**Hybrid Metamorphs**
+- guaranteed Metamorph component capacity is **15 models**
+- practical splits: 10+5 or 5+5+5
+- a current 10-model Metamorph unit with an icon needs 9 Hand Flamers
+- a 5-model icon unit needs 4 Hand Flamers
+
+### Recommended modular current package
+
+A conservative package that directly mirrors the largest recent successful GSC build is:
+
+1. **5 Acolytes with Autopistols**
+   - 3 Heavy Mining Tools
+   - 1 Cult Icon
+2. **5 Acolytes with Hand Flamers**
+   - 5 Hand Flamers
+3. **10 Hybrid Metamorphs**
+   - 1 Cult Icon
+   - 9 Hand Flamers
+
+Resource use:
+- 20 bodies
+- 3/9 Heavy Mining Tools
+- 14/25 Hand Flamers
+- 2/7 Cult Icons
+- 10/15 Metamorph capacity
+- 0/6 Demolition Charge builds
+
+This leaves a very large reserve for detachment/list changes.
+
+### Five-unit broad toolkit
+
+A stronger all-purpose simultaneous configuration is:
+
+- 2x5 mining Acolytes, each with 3 Heavy Mining Tools + Cult Icon
+- 1x5 full Hand-Flamer Acolytes
+- 1x5 Hand-Flamer Acolytes with Cult Icon + 2 Demolition Charges + 2 Hand Flamers
+- 1x10 Hybrid Metamorphs with Cult Icon + 9 Hand Flamers
+
+This uses:
+- 30 bodies
+- 6 Heavy Mining Tools
+- 2 Demolition Charge builds
+- 16 Hand Flamers
+- 4 Cult Icons
+- 10 Metamorph-capable bodies
+
+Remaining guaranteed reserve:
+- 15 bodies
+- 3 Heavy Mining Tools
+- 4 Demolition Charge builds
+- 9 Hand Flamers
+- 3 Cult Icons
+- 5 Metamorph-capable bodies
+
+The historical roster itself proves at least **five simultaneous Acolyte unit leaders** were available. A future build using more than five separate Acolyte/Metamorph units should trigger a leader-option check before being treated as physically guaranteed.
+
+### Competitive meaning
+
+Recent winning-list aggregation most often uses:
+- 5-model mining Acolytes with 3 Heavy Mining Tools
+- 5-model Hand-Flamer utility units
+- 10-model Metamorph blocks with icon and broad flamer coverage
+
+The collection can reproduce these roles simultaneously with substantial spare component capacity.
+
+The six Demolition Charge builds are real useful tech capacity, but recent winning-list evidence does not make them mandatory in every list. They should remain modular rather than being treated as the default permanent configuration.
