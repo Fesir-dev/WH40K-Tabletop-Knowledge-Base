@@ -260,7 +260,141 @@
           "likely_acquisition_context": "Spring bits/body order remembered by user",
           "build_and_magnetization_state": "UNKNOWN_NOT_YET_RECONFIRMED"
         }
-      ]
+      ],
+      "derived_configuration_capacity": {
+        "checkpoint": "2026-10-01",
+        "rules_basis": "Current 11E Acolyte/Metamorph datasheets cross-checked 2026-10-01",
+        "competitive_basis": "Recent winning-list aggregation feed as of 2026-09-27; structural guidance only, not settled post-2026-09-30 meta",
+        "guaranteed_resources": {
+          "bodies": 45,
+          "hand_flamers": 25,
+          "heavy_mining_tools": 9,
+          "demolition_charge_builds": 6,
+          "cult_icons": 7,
+          "metamorph_model_capacity": 15
+        },
+        "independent_maxima": [
+          {
+            "configuration": "Acolyte Hybrids with Autopistols — 5-model mining cell",
+            "per_unit": {
+              "bodies": 5,
+              "heavy_mining_tools": 3,
+              "cult_icons": 1
+            },
+            "guaranteed_max_units": 3,
+            "note": "Uses all 9 guaranteed Heavy Mining Tools if three units are fielded."
+          },
+          {
+            "configuration": "Acolyte Hybrids with Hand Flamers — 5-model maximum-demo cell",
+            "per_unit": {
+              "bodies": 5,
+              "demolition_charge_builds": 2,
+              "cult_icons": 1,
+              "hand_flamers": 2
+            },
+            "guaranteed_max_units": 3,
+            "note": "Three such units consume all 6 guaranteed demolition-charge builds."
+          },
+          {
+            "configuration": "Hybrid Metamorphs",
+            "guaranteed_max_models": 15,
+            "preferred_split_examples": [
+              "10 + 5",
+              "5 + 5 + 5"
+            ],
+            "note": "Limited by guaranteed Metamorph-specific components from the three complete kits, not by the 45-body pool."
+          },
+          {
+            "configuration": "Hand-flamer-equipped Acolyte/Metamorph bodies",
+            "guaranteed_max_models_if_no_icons_or_demo_replacements": 25,
+            "note": "Cult icons and demolition charges replace hand flamers, so mixed units can support more total bodies than this raw full-flamer ceiling."
+          }
+        ],
+        "recent_tournament_loadout_patterns": [
+          {
+            "role": "Acolyte Hybrids with Autopistols",
+            "common_pattern": "5 models: leader + 3 Heavy Mining Tools + 1 Cult Icon",
+            "collection_fit": "EXACTLY_SUPPORTED_THREE_TIMES_BY_GUARANTEED_BITS"
+          },
+          {
+            "role": "Acolyte Hybrids with Hand Flamers",
+            "common_patterns": [
+              "5 models, all Hand Flamers",
+              "5 models with Cult Icon and remaining Hand Flamers",
+              "5 models with Cult Icon + 2 Demolition Charges + remaining Hand Flamers"
+            ],
+            "collection_fit": "STRONGLY_SUPPORTED"
+          },
+          {
+            "role": "Hybrid Metamorphs",
+            "common_patterns": [
+              "10 models with Cult Icon and broad Hand Flamer coverage",
+              "5 models with Cult Icon and broad Hand Flamer coverage"
+            ],
+            "collection_fit": "UP_TO_15_MODELS_GUARANTEED"
+          }
+        ],
+        "recommended_modular_presets": [
+          {
+            "id": "GSC_ACOLYTE_META_CORE_20",
+            "label": "Current meta-core package",
+            "units": [
+              "1x5 Acolytes with Autopistols: 3 Heavy Mining Tools + Cult Icon",
+              "1x5 Acolytes with Hand Flamers: 5 Hand Flamers",
+              "1x10 Hybrid Metamorphs: Cult Icon + 9 Hand Flamers"
+            ],
+            "resource_use": {
+              "bodies": 20,
+              "heavy_mining_tools": 3,
+              "demolition_charge_builds": 0,
+              "hand_flamers": 14,
+              "cult_icons": 2,
+              "metamorph_model_capacity": 10
+            },
+            "remaining_resources": {
+              "bodies": 25,
+              "heavy_mining_tools": 6,
+              "demolition_charge_builds": 6,
+              "hand_flamers": 11,
+              "cult_icons": 5,
+              "metamorph_model_capacity": 5
+            },
+            "rationale": "Directly mirrors the most recurrent Acolyte/Metamorph roles in the largest recent winning GSC build while preserving maximum reserve flexibility."
+          },
+          {
+            "id": "GSC_ACOLYTE_FIVE_UNIT_TOOLKIT_30",
+            "label": "Five-unit broad toolkit",
+            "units": [
+              "2x5 Acolytes with Autopistols: each 3 Heavy Mining Tools + Cult Icon",
+              "1x5 Acolytes with Hand Flamers: 5 Hand Flamers",
+              "1x5 Acolytes with Hand Flamers: Cult Icon + 2 Demolition Charges + 2 Hand Flamers",
+              "1x10 Hybrid Metamorphs: Cult Icon + 9 Hand Flamers"
+            ],
+            "resource_use": {
+              "bodies": 30,
+              "heavy_mining_tools": 6,
+              "demolition_charge_builds": 2,
+              "hand_flamers": 16,
+              "cult_icons": 4,
+              "metamorph_model_capacity": 10
+            },
+            "remaining_resources": {
+              "bodies": 15,
+              "heavy_mining_tools": 3,
+              "demolition_charge_builds": 4,
+              "hand_flamers": 9,
+              "cult_icons": 3,
+              "metamorph_model_capacity": 5
+            },
+            "rationale": "Keeps anti-vehicle mining, utility flamers, demolition tech and a full Metamorph block available simultaneously while using only five unit leaders."
+          }
+        ],
+        "leader_capacity_note": {
+          "historically_evidenced_simultaneous_units": 5,
+          "basis": "The uploaded physical roster contained five separate Acolyte units (2 autopistol + 3 hand-flamer), each requiring a leader.",
+          "caveat": "Splitting the 45-body pool into more than five simultaneous units may require checking how many leader bio-weapon configurations/leader bodies are available after later purchases."
+        }
+      }
     },
     {
       "pool_id": "aberrants",
@@ -543,6 +677,11 @@
   ],
   "open_questions": [
     {
+      "id": "GSC_ACOLYTE_LEADER_CAPACITY",
+      "question": "Only if a future roster needs more than five simultaneous Acolyte/Metamorph units, verify the number of leader-compatible builds/bio-weapon options. Five simultaneous unit leaders are already evidenced by the historical roster.",
+      "state": "CONDITIONAL_ONLY"
+    },
+    {
       "id": "GSC_ACOLYTE_EXTRA_COMPONENTS_BEYOND_KITS",
       "question": "Only if needed after roster optimization: verify whether any Heavy Mining Tools, Demolition Charges or Metamorph mutation components were separately purchased beyond the guaranteed three-kit stock. Baseline capacities are now known.",
       "state": "OPTIONAL_LATER_PHYSICAL_AUDIT"
@@ -686,7 +825,8 @@
     "Acolyte count correction: the roster's 39 Acolyte slots were physically counted unique bodies. With six newly found bodies, the current exact Acolyte-compatible pool is 45.",
     "Goliath vehicles normalized as two shared magnetized chassis able to instantiate Truck and/or Rockgrinder roles.",
     "Acolyte component accounting is now fail-closed: 3 complete kit contents form the guaranteed baseline, with only 10 separately purchased Hand Flamers added unless further extras are directly confirmed.",
-    "Public kit-part audit resolves the guaranteed Acolyte component baseline: 3 complete kits yield 9 Heavy Mining Tools, 6 Demolition Charge builds, 15 Hand Flamers, 3 Cult Icons and enough Metamorph-specific components to build 15 Metamorphs; confirmed extras raise Hand Flamers to 25 and icons to 7."
+    "Public kit-part audit resolves the guaranteed Acolyte component baseline: 3 complete kits yield 9 Heavy Mining Tools, 6 Demolition Charge builds, 15 Hand Flamers, 3 Cult Icons and enough Metamorph-specific components to build 15 Metamorphs; confirmed extras raise Hand Flamers to 25 and icons to 7.",
+    "Acolyte configuration capacity is now modelled from guaranteed bits and recent current-edition tournament patterns. Body count is abundant; Heavy Mining Tools, Metamorph components and specialist arms are the meaningful limits."
   ],
   "resolved_questions": [
     {
