@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "status": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
+  "status": "NEW_RUNTIME_PROJECTION_DRIFT",
   "system": {
     "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40,000-11th-edition",
     "http_status": 200,
@@ -387,129 +387,9 @@
   "representative_points": {
     "checks": 15,
     "matched": 10,
-    "known_drift_count": 5,
-    "new_drift_count": 0,
+    "known_drift_count": 2,
+    "new_drift_count": 3,
     "known_drifts": [
-      {
-        "slug": "orks",
-        "unit": "Ghazghkull Thraka",
-        "archetype": "named_character",
-        "gw_mfm_value": 300,
-        "expected_points": 300,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
-        "http_status": 200,
-        "new_recruit_runtime_value": 235,
-        "runtime_points": 235,
-        "status": "MISMATCH",
-        "classification": "RUNTIME_PROJECTION_DRIFT",
-        "wahapedia_value": 300,
-        "pinned_bsdata_value": 300,
-        "live_bsdata_value": 300,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Orks.json"
-          },
-          "live_bsdata": {
-            "revision": "374f50544f0274296ab53c2103766ae3945e8799",
-            "file": "Orks.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
-        "normative_kb_change_required": false,
-        "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29"
-      },
-      {
-        "slug": "orks",
-        "unit": "Boyz",
-        "archetype": "infantry_multi_size",
-        "gw_mfm_value": 90,
-        "expected_points": 90,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/187-93d6-1ac7-dbde/boyz",
-        "http_status": 200,
-        "new_recruit_runtime_value": 75,
-        "runtime_points": 75,
-        "status": "MISMATCH",
-        "classification": "RUNTIME_PROJECTION_DRIFT",
-        "wahapedia_value": 90,
-        "pinned_bsdata_value": 90,
-        "live_bsdata_value": 90,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Orks.json"
-          },
-          "live_bsdata": {
-            "revision": "374f50544f0274296ab53c2103766ae3945e8799",
-            "file": "Orks.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
-        "normative_kb_change_required": false,
-        "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_BOYZ_POINTS_2026_09_29"
-      },
-      {
-        "slug": "orks",
-        "unit": "Battlewagon",
-        "archetype": "vehicle",
-        "gw_mfm_value": 150,
-        "expected_points": 150,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9af5-6820-1ff2-6c01/battlewagon",
-        "http_status": 200,
-        "new_recruit_runtime_value": 145,
-        "runtime_points": 145,
-        "status": "MISMATCH",
-        "classification": "RUNTIME_PROJECTION_DRIFT",
-        "wahapedia_value": 150,
-        "pinned_bsdata_value": 150,
-        "live_bsdata_value": 150,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Orks.json"
-          },
-          "live_bsdata": {
-            "revision": "374f50544f0274296ab53c2103766ae3945e8799",
-            "file": "Orks.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
-        "normative_kb_change_required": false,
-        "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29"
-      },
       {
         "slug": "orks",
         "unit": "Warboss",
@@ -538,7 +418,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "374f50544f0274296ab53c2103766ae3945e8799",
+            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -578,7 +458,7 @@
             "file": "Necrons.json"
           },
           "live_bsdata": {
-            "revision": "374f50544f0274296ab53c2103766ae3945e8799",
+            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
             "file": "Necrons.json"
           },
           "new_recruit": {
@@ -591,7 +471,125 @@
         "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29"
       }
     ],
-    "new_drifts": [],
+    "new_drifts": [
+      {
+        "slug": "orks",
+        "unit": "Ghazghkull Thraka",
+        "archetype": "named_character",
+        "gw_mfm_value": 300,
+        "expected_points": 300,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
+        "http_status": 200,
+        "new_recruit_runtime_value": 235,
+        "runtime_points": 235,
+        "status": "MISMATCH",
+        "classification": "UNKNOWN_RUNTIME_DRIFT",
+        "wahapedia_value": 300,
+        "pinned_bsdata_value": 300,
+        "live_bsdata_value": 290,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "orks",
+        "unit": "Boyz",
+        "archetype": "infantry_multi_size",
+        "gw_mfm_value": 90,
+        "expected_points": 90,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/187-93d6-1ac7-dbde/boyz",
+        "http_status": 200,
+        "new_recruit_runtime_value": 75,
+        "runtime_points": 75,
+        "status": "MISMATCH",
+        "classification": "UNKNOWN_RUNTIME_DRIFT",
+        "wahapedia_value": 90,
+        "pinned_bsdata_value": 90,
+        "live_bsdata_value": 85,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "orks",
+        "unit": "Battlewagon",
+        "archetype": "vehicle",
+        "gw_mfm_value": 150,
+        "expected_points": 150,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9af5-6820-1ff2-6c01/battlewagon",
+        "http_status": 200,
+        "new_recruit_runtime_value": 145,
+        "runtime_points": 145,
+        "status": "MISMATCH",
+        "classification": "UNKNOWN_RUNTIME_DRIFT",
+        "wahapedia_value": 150,
+        "pinned_bsdata_value": 150,
+        "live_bsdata_value": 160,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      }
+    ],
     "archetypes": [
       "infantry_multi_size",
       "leader",
@@ -625,10 +623,10 @@
         "new_recruit_runtime_value": 235,
         "runtime_points": 235,
         "status": "MISMATCH",
-        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "classification": "UNKNOWN_RUNTIME_DRIFT",
         "wahapedia_value": 300,
         "pinned_bsdata_value": 300,
-        "live_bsdata_value": 300,
+        "live_bsdata_value": 290,
         "source_revisions": {
           "gw_mfm": {
             "version": "1.4",
@@ -642,17 +640,16 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "374f50544f0274296ab53c2103766ae3945e8799",
+            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
             "file": "Orks.json"
           },
           "new_recruit": {
             "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
           }
         },
-        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
         "normative_kb_change_required": false,
-        "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29"
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
       },
       {
         "slug": "necrons",
@@ -769,10 +766,10 @@
         "new_recruit_runtime_value": 75,
         "runtime_points": 75,
         "status": "MISMATCH",
-        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "classification": "UNKNOWN_RUNTIME_DRIFT",
         "wahapedia_value": 90,
         "pinned_bsdata_value": 90,
-        "live_bsdata_value": 90,
+        "live_bsdata_value": 85,
         "source_revisions": {
           "gw_mfm": {
             "version": "1.4",
@@ -786,17 +783,16 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "374f50544f0274296ab53c2103766ae3945e8799",
+            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
             "file": "Orks.json"
           },
           "new_recruit": {
             "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
           }
         },
-        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
         "normative_kb_change_required": false,
-        "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_BOYZ_POINTS_2026_09_29"
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
       },
       {
         "slug": "orks",
@@ -809,10 +805,10 @@
         "new_recruit_runtime_value": 145,
         "runtime_points": 145,
         "status": "MISMATCH",
-        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "classification": "UNKNOWN_RUNTIME_DRIFT",
         "wahapedia_value": 150,
         "pinned_bsdata_value": 150,
-        "live_bsdata_value": 150,
+        "live_bsdata_value": 160,
         "source_revisions": {
           "gw_mfm": {
             "version": "1.4",
@@ -826,17 +822,16 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "374f50544f0274296ab53c2103766ae3945e8799",
+            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
             "file": "Orks.json"
           },
           "new_recruit": {
             "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
           }
         },
-        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
         "normative_kb_change_required": false,
-        "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29"
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
       },
       {
         "slug": "orks",
@@ -866,7 +861,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "374f50544f0274296ab53c2103766ae3945e8799",
+            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -906,7 +901,7 @@
             "file": "Necrons.json"
           },
           "live_bsdata": {
-            "revision": "374f50544f0274296ab53c2103766ae3945e8799",
+            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
             "file": "Necrons.json"
           },
           "new_recruit": {
@@ -1050,14 +1045,27 @@
   "known_drift_registry": {
     "path": "sources/runtime_drift_registry.json",
     "active": 6,
-    "observed_active": 6,
-    "resolved_candidates": []
+    "observed_active": 3,
+    "resolved_candidates": [
+      {
+        "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
+        "classification": "RESOLVED_CANDIDATE"
+      },
+      {
+        "id": "NR_ORKS_BOYZ_POINTS_2026_09_29",
+        "classification": "RESOLVED_CANDIDATE"
+      },
+      {
+        "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
+        "classification": "RESOLVED_CANDIDATE"
+      }
+    ]
   },
   "lineage": {
     "runtime_source": "NEW_RECRUIT_WIKI",
     "expected_upstream": "BSDATA_WH40K_11E",
     "pinned_bsdata_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-    "live_bsdata_commit": "374f50544f0274296ab53c2103766ae3945e8799",
+    "live_bsdata_commit": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
     "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
   },
   "policy": {
