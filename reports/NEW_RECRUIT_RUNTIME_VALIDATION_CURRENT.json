@@ -418,7 +418,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "revision": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -458,7 +458,7 @@
             "file": "Necrons.json"
           },
           "live_bsdata": {
-            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "revision": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
             "file": "Necrons.json"
           },
           "new_recruit": {
@@ -500,7 +500,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "revision": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -539,7 +539,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "revision": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -578,7 +578,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "revision": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -640,7 +640,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "revision": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -783,7 +783,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "revision": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -822,7 +822,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "revision": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -861,7 +861,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "revision": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -901,7 +901,7 @@
             "file": "Necrons.json"
           },
           "live_bsdata": {
-            "revision": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+            "revision": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
             "file": "Necrons.json"
           },
           "new_recruit": {
@@ -1065,7 +1065,7 @@
     "runtime_source": "NEW_RECRUIT_WIKI",
     "expected_upstream": "BSDATA_WH40K_11E",
     "pinned_bsdata_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-    "live_bsdata_commit": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+    "live_bsdata_commit": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
     "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
   },
   "policy": {
