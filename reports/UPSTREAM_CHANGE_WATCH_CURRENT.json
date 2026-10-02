@@ -7,15 +7,15 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "8fb1191701cc596c817d5d1ea96f90009f37f11d",
+      "live": "cc1830fbfead059f8059ed6c7f8e73cd4c390908",
       "changed": true,
       "files": [
         {
           "filename": "Aeldari - Aeldari Library.json",
           "status": "modified",
-          "additions": 75,
-          "deletions": 31,
-          "changes": 106,
+          "additions": 77,
+          "deletions": 36,
+          "changes": 113,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -37,9 +37,9 @@
         {
           "filename": "Chaos - Chaos Space Marines.json",
           "status": "modified",
-          "additions": 554,
-          "deletions": 362,
-          "changes": 916,
+          "additions": 569,
+          "deletions": 376,
+          "changes": 945,
           "classification": "ASTARTES"
         },
         {
@@ -53,25 +53,25 @@
         {
           "filename": "Chaos - Emperor's Children.json",
           "status": "modified",
-          "additions": 82,
-          "deletions": 66,
-          "changes": 148,
+          "additions": 80,
+          "deletions": 64,
+          "changes": 144,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Chaos - Thousand Sons.json",
           "status": "modified",
-          "additions": 80,
-          "deletions": 125,
-          "changes": 205,
+          "additions": 81,
+          "deletions": 126,
+          "changes": 207,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Chaos - World Eaters.json",
           "status": "modified",
-          "additions": 1180,
+          "additions": 1181,
           "deletions": 69,
-          "changes": 1249,
+          "changes": 1250,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -157,9 +157,9 @@
         {
           "filename": "Necrons.json",
           "status": "modified",
-          "additions": 530,
-          "deletions": 24,
-          "changes": 554,
+          "additions": 531,
+          "deletions": 25,
+          "changes": 556,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -189,9 +189,9 @@
         {
           "filename": "Warhammer 40,000.json",
           "status": "modified",
-          "additions": 4,
-          "deletions": 4,
-          "changes": 8,
+          "additions": 44,
+          "deletions": 6,
+          "changes": 50,
           "classification": "FACTION_OR_LIBRARY_DATA"
         }
       ]
