@@ -82,7 +82,10 @@ legacy/                  Metadata for superseded project baselines
 - [x] Atomize all 310 Core paragraph candidates into stable paragraph identities with verified parent rule/occurrence/page/range/hash provenance and 310/310 source-range hash reproduction.
 - [x] Classify all 310 stable Core paragraph identities into conservative lexical/structural semantic roles with fail-closed MIXED/UNCLASSIFIED states and 310/310 verified source-range hashes.
 - [x] Review all 310 Core paragraph semantic classifications as orthogonal profiles: 156 AXIS_PROFILE_READY, 42 MULTI_MODAL review-required and 112 no-strong-signal review-required.
-- [ ] Audit AST readiness inside the 156 AXIS_PROFILE_READY profiles without assuming that all 156 are safely parseable.
+- [x] Audit AST readiness fail-closed: 34 verified source-shape candidates → 1 direct-modal pilot-ready paragraph + 33 shape-blocked; no AST created by readiness audit.
+- [x] Build and semantically validate the single direct-modal AST pilot for rule 13.07; keep subject/action opaque, zero interaction edges and zero additional paragraphs.
+- [x] Re-audit the 33 source-shape blockers at sentence level: 11 source-hash-verified single-modal sentence candidates, 22 remain blocked, zero AST/edge/mutation changes.
+- [ ] Select at most one of the 11 modal-sentence candidates for a separately reviewed parser pilot; candidate status must not become automatic AST admission.
 - [x] Import painting inventory, 540-recipe knowledge base, active painting project state and source artifact from workbook v25.
 
 ## Status vocabulary

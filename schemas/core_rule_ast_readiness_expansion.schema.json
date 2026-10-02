@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/core_rule_ast_readiness_expansion.schema.json",
+  "title": "Core Rule AST Readiness Expansion V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "snapshot_date",
+    "authority",
+    "expansion_version",
+    "parent_readiness",
+    "rows",
+    "summary",
+    "authority_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "SOURCE_DRIFT"
+      ]
+    },
+    "snapshot_date": {
+      "type": "string"
+    },
+    "authority": {
+      "const": "GAMES_WORKSHOP_OFFICIAL"
+    },
+    "expansion_version": {
+      "const": "CORE_RULE_AST_READINESS_EXPANSION_V1"
+    },
+    "parent_readiness": {
+      "type": "object"
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 33,
+      "maxItems": 33,
+      "items": {
+        "type": "object"
+      }
+    },
+    "summary": {
+      "type": "object"
+    },
+    "authority_boundary": {
+      "type": "object",
+      "required": [
+        "readiness_expansion_complete",
+        "ast_nodes_created",
+        "interaction_edges_created",
+        "existing_ast_mutated",
+        "current_normalized_factions_change"
+      ],
+      "properties": {
+        "readiness_expansion_complete": {
+          "type": "boolean"
+        },
+        "ast_nodes_created": {
+          "const": false
+        },
+        "interaction_edges_created": {
+          "const": false
+        },
+        "existing_ast_mutated": {
+          "const": false
+        },
+        "current_normalized_factions_change": {
+          "const": 0
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

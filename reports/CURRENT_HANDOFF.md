@@ -6,28 +6,37 @@ Updated: **2026-09-30**
 
 Canonical repository: `Fesir-dev/WH40K-Tabletop-Knowledge-Base@main`
 
-Latest closed Core direct-modal AST semantic-validation milestone:
+Latest closed Core AST readiness-expansion milestone:
+
+- source-shape parent population audited: **33 / 33**;
+- source hashes reproduced: **33 / 33**;
+- sentence candidates: **11**;
+- candidate modal axes: **9 PERMISSION + 2 PROHIBITION**;
+- candidate condition cues: **0 / 11**;
+- remaining blocked: **22**;
+- new AST nodes: **0**;
+- interaction edges: **0**;
+- existing AST mutations: **0**;
+- additional paragraphs admitted: **0**;
+- existing node `core-ast-direct-modal--13-07--p50-o1`: **OPAQUE_PRESERVED**;
+- source-backed expansion workflow: `36734460626` — **SUCCESS**;
+- implementation generic CI: `36734460041` — **SUCCESS**;
+- current normative/app gap projection: `36735485529` — **SUCCESS**;
+- closure: `reports/CORE_RULE_AST_READINESS_EXPANSION_CLOSURE_2026-09-30.md`;
+- whole-faction normative counters: unchanged at **0**;
+- next milestone: `CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1`.
+
+Previous closed Core direct-modal AST semantic-validation milestone:
 
 - merged PR: **#29**;
 - merge commit: `005e040f1d1393f9cfd369a9b300c03bb99364ba`;
 - validated PR head: `3c5a708abaa3e88b3f62005f5b7090b82378e8ed`;
 - target node: `core-ast-direct-modal--13-07--p50-o1`;
-- rule / paragraph: `13.07` / `core-rule-13-07--p50--l1--para-p50-o1`;
 - validation decision: **OPAQUE_PRESERVED**;
 - subject types resolved: **0**;
-- subject result: `LEXEME_NOT_IN_CLOSED_SUBJECT_LEXICON`;
 - predicate heads resolved: **0**;
-- predicate blockers: `COORDINATION_CUE` + `UNRECOGNIZED_ACTION_HEAD`;
-- AST mutated: **false**;
-- interaction edges created: **0**;
-- additional paragraphs admitted: **0**;
-- semantic-validation workflow: `36733351388` — **SUCCESS**;
-- normative/app gap audit: `36733351608` — **SUCCESS**;
-- generic repository validation: `36733351431` — **SUCCESS**;
-- overlap regression: `36733351472` — **SUCCESS**;
-- closure: `reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSURE_2026-09-30.md`;
-- whole-faction normative counters: unchanged at **0**;
-- next milestone: `CORE_RULE_AST_READINESS_EXPANSION_V1`.
+- AST mutated / interaction edges / additional paragraphs: **0 / 0 / 0**;
+- closure: `reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSURE_2026-09-30.md`.
 
 Previous closed Core direct-modal AST pilot milestone:
 
@@ -517,16 +526,16 @@ Validated pre-closure checkpoints:
 
 ## Current active milestone
 
-`CORE_RULE_AST_READINESS_EXPANSION_V1`
+`CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1`
 
 Next unresolved work:
 
-1. preserve the validated node `core-ast-direct-modal--13-07--p50-o1` unchanged and opaque;
-2. revisit only the **33** source-shape-blocked candidates from the closed readiness snapshot;
-3. determine which blockers are purely source-shape limitations and can be refined deterministically;
-4. do **not** admit new AST nodes during the readiness audit itself;
-5. keep parent-review, modal-multiplicity, repeated-variant and complex-semantic blockers fail-closed unless separately proven;
-6. retain source hashes/ranges and whole-faction normative counters unchanged.
+1. use only the **11** source-hash-verified `CANDIDATE_SINGLE_MODAL_SENTENCE` rows from the closed expansion snapshot;
+2. derive a deterministic structural-complexity ordering without using gameplay/semantic guesses;
+3. select **at most one** candidate for a separately reviewed parser pilot;
+4. create **0 AST nodes** during selection;
+5. preserve `core-ast-direct-modal--13-07--p50-o1` unchanged and `OPAQUE_PRESERVED`;
+6. keep whole-faction normative counters unchanged.
 
 ## Execution reliability rule
 
@@ -537,6 +546,6 @@ Next unresolved work:
 
 ## Resume rule
 
-Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, Core paragraph-boundary extraction v1, Core paragraph atomization v1, Core paragraph semantic classification v1, Core paragraph semantic review v1, or Core semantic AST readiness v1, or Core direct-modal AST pilot v1, or Core direct-modal AST semantic validation v1 after a chat/UI failure.
+Do not restart preservation, Wave A, Wave B, semantic/FAQ audits, upstream watcher, New Recruit runtime validation, the Custodes collection solver v1, guarded reingestion/promotion v1, release-transition readiness v1, activation-watch v1, the normative/app gap audit, official-public fingerprint pipeline, official↔mirror overlap C1–C4, structured-normalization expansion v1, Core rule-reference atomization v1, Core paragraph-boundary extraction v1, Core paragraph atomization v1, Core paragraph semantic classification v1, Core paragraph semantic review v1, or Core semantic AST readiness v1, or Core direct-modal AST pilot v1, or Core direct-modal AST semantic validation v1, or Core AST readiness expansion v1 after a chat/UI failure.
 
 Resume from the latest validated Git HEAD and this active milestone.
