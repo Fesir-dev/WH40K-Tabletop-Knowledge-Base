@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "8b91e6bc937434235c3cc76b79ac208c3157d67f",
+      "live": "da7248777da54218034f09b6271ad89ff6b68a77",
       "changed": true,
       "files": [
         {
@@ -61,9 +61,9 @@
         {
           "filename": "Chaos - Thousand Sons.json",
           "status": "modified",
-          "additions": 81,
-          "deletions": 129,
-          "changes": 210,
+          "additions": 82,
+          "deletions": 130,
+          "changes": 212,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -141,9 +141,9 @@
         {
           "filename": "Imperium - Grey Knights.json",
           "status": "modified",
-          "additions": 243,
+          "additions": 244,
           "deletions": 122,
-          "changes": 365,
+          "changes": 366,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
