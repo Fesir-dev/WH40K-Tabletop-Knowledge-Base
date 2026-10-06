@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "audited_at": "2026-10-05T14:33:34Z",
+  "audited_at": "2026-10-06T13:17:08Z",
   "snapshot_date": "2026-09-29",
   "status": "PASS",
   "live_source_csv": {
@@ -15,8 +15,8 @@
   "official_downloads_page": {
     "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
     "http_status": 200,
-    "bytes": 322644,
-    "sha256": "bc0bae6c47345064528eb693d0721bfce5f00063a1b0e4fa40c6fee6c206b38d",
+    "bytes": 321034,
+    "sha256": "92184843ce355251ac40b3220f0d5e2a68aa15fe4308957037178d6bcf3c4aeb",
     "statement_scope": "Official Downloads page is the normative update/FAQ entry point; exact faction asset identity is verified below."
   },
   "official_assets": {
