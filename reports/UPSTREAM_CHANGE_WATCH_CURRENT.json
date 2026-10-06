@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "da7248777da54218034f09b6271ad89ff6b68a77",
+      "live": "ed8c3b09bc5eae7c30eb659f739b09c0f36381b4",
       "changed": true,
       "files": [
         {
@@ -37,9 +37,9 @@
         {
           "filename": "Chaos - Chaos Space Marines.json",
           "status": "modified",
-          "additions": 607,
+          "additions": 637,
           "deletions": 427,
-          "changes": 1034,
+          "changes": 1064,
           "classification": "ASTARTES"
         },
         {
@@ -77,9 +77,9 @@
         {
           "filename": "Genestealer Cults.json",
           "status": "modified",
-          "additions": 31,
-          "deletions": 8,
-          "changes": 39,
+          "additions": 290,
+          "deletions": 42,
+          "changes": 332,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -117,9 +117,9 @@
         {
           "filename": "Imperium - Astra Militarum - Library.json",
           "status": "modified",
-          "additions": 62,
-          "deletions": 39,
-          "changes": 101,
+          "additions": 64,
+          "deletions": 40,
+          "changes": 104,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
