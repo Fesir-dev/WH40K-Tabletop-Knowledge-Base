@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "6166445ea55740a9b4d0d2aedc1234c727a6d513",
+      "live": "cc58ee3b2c23f90af9d00e7bf234cd703b762299",
       "changed": true,
       "files": [
         {
@@ -213,9 +213,9 @@
         {
           "filename": "Orks.json",
           "status": "modified",
-          "additions": 160,
-          "deletions": 235,
-          "changes": 395,
+          "additions": 161,
+          "deletions": 236,
+          "changes": 397,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
