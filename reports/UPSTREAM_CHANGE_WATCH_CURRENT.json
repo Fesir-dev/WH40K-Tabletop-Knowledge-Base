@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "cc58ee3b2c23f90af9d00e7bf234cd703b762299",
+      "live": "3988a8bdd210f9d31ea5b6782d0016688ccb6815",
       "changed": true,
       "files": [
         {
@@ -165,9 +165,9 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 5,
-          "deletions": 22,
-          "changes": 27,
+          "additions": 11,
+          "deletions": 23,
+          "changes": 34,
           "classification": "ASTARTES"
         },
         {
@@ -768,17 +768,151 @@
   ],
   "wahapedia": {
     "snapshot_last_update": "2026-09-28 02:38:04",
-    "live_last_update": "2026-09-28 02:38:04",
+    "live_last_update": "2026-10-10 18:29:19",
     "manifest_files_checked": 20,
-    "changed_files": []
+    "changed_files": [
+      {
+        "file": "Last_update.csv",
+        "snapshot_sha256": "4b3a7e63006be965073bdc34022bdd17f6f7b063602b46a4640a11ac641b20a9",
+        "live_sha256": "8d8e21dda6975da5ba0106f86a73151fc8f9046751c0846f465773825afc33ba",
+        "snapshot_bytes": 39,
+        "live_bytes": 39
+      },
+      {
+        "file": "Source.csv",
+        "snapshot_sha256": "e6f74afb7b43f6779ec9a03ad0699ff11dd27b9d2f08243d5c04dd07fd99f6e0",
+        "live_sha256": "9edef70bb50d0d4a2daaf368fe1b409b0a8f71bb04a24af630ab7eea1ff35c33",
+        "snapshot_bytes": 8432,
+        "live_bytes": 7588
+      },
+      {
+        "file": "Datasheets.csv",
+        "snapshot_sha256": "ba363e9a68e6d7ee19f93a32abc06ba3f6a5f1efd0da5aaab32701a130a15623",
+        "live_sha256": "b107a16c21e4ceeb3c73ba742d9d48944d762c29f8b1a7fa2dff21a1a2a91ef0",
+        "snapshot_bytes": 876603,
+        "live_bytes": 792442
+      },
+      {
+        "file": "Datasheets_models.csv",
+        "snapshot_sha256": "dddb131c2b81fa199832f5250f0469f7cef4ba4fef77b6e477380b592d61e6ff",
+        "live_sha256": "2dc135f06154d05358772a95c83ec50bd4d2f72d4be9e6d15f9005b4bac91c11",
+        "snapshot_bytes": 107314,
+        "live_bytes": 101108
+      },
+      {
+        "file": "Datasheets_models_cost.csv",
+        "snapshot_sha256": "2e2f9be00eae5924a62dd27c4322bdb6b663070fd80781a81ca1b5305ed24c47",
+        "live_sha256": "5e563fe074fdbcc4324cbcedf2ad31f8febec92de42ff6d35547a4f98453c1d3",
+        "snapshot_bytes": 189351,
+        "live_bytes": 162956
+      },
+      {
+        "file": "Datasheets_keywords.csv",
+        "snapshot_sha256": "10cb386fc3134257bdf3bad3bb1fd94615ea94a5fe3c94aad874da390b1ec1df",
+        "live_sha256": "3ce281c28a45bb588d606b6d4ed8849423c00fc9fdf7fe7d6fd7bcb8ebc4be7c",
+        "snapshot_bytes": 476771,
+        "live_bytes": 379908
+      },
+      {
+        "file": "Datasheets_wargear.csv",
+        "snapshot_sha256": "eeaa33777769367d836cab0562a82bb84bcb8fc1a8064539a58ead972d302241",
+        "live_sha256": "4710cc0d3ab56dba22bd6a782b9bd154d94179d033ebaf1374e12668e28a0dd6",
+        "snapshot_bytes": 632930,
+        "live_bytes": 548961
+      },
+      {
+        "file": "Datasheets_options.csv",
+        "snapshot_sha256": "4b729297fe68b3c7cfc2c99205610a1741f838e29ae7150501d84365882e8d13",
+        "live_sha256": "acd49655a7a079bb73a08924ab36e7d6211aeba211fa770c2b97099d13c8cbe2",
+        "snapshot_bytes": 371173,
+        "live_bytes": 309442
+      },
+      {
+        "file": "Datasheets_unit_composition.csv",
+        "snapshot_sha256": "fca0b694f146a13f56c828d78f2aaa0dbe79341273173c68f534b8985494b03f",
+        "live_sha256": "08739dbb5ba785abb26649e93b203872f3fe0e9d0d90fd88bc0894d2255e3245",
+        "snapshot_bytes": 85472,
+        "live_bytes": 77534
+      },
+      {
+        "file": "Abilities.csv",
+        "snapshot_sha256": "f3fc44a0fd91b7b45b38ae477632517e732bda64b4a0c548033a9f874664c7f3",
+        "live_sha256": "e4830eba3763f869ec828b652f7fcabea7b1cf7b575fd8c9b5b5e841504078e6",
+        "snapshot_bytes": 202161,
+        "live_bytes": 195481
+      },
+      {
+        "file": "Datasheets_abilities.csv",
+        "snapshot_sha256": "5aba5ff1d7a2353904fac32d2b2b234c03573bef418f1bf4afabca1001cc2109",
+        "live_sha256": "15fbc6f9c9d71ba9a05542279e0775d4a4673313acaf0706224f07357fbe9ffc",
+        "snapshot_bytes": 961930,
+        "live_bytes": 872474
+      },
+      {
+        "file": "Datasheets_leader.csv",
+        "snapshot_sha256": "c75b00eed968babbc89c6b7e077b40f7234c3040537816692ae0e609ebca174c",
+        "live_sha256": "7c0bcd3c369b9d2613ccac671798b0e95a09454ccb7cacd72654fd2ab1503830",
+        "snapshot_bytes": 35117,
+        "live_bytes": 28429
+      },
+      {
+        "file": "Detachments.csv",
+        "snapshot_sha256": "445af298071f5014f7f1e49e55669b4a6bbaf8e798d95717d9ea85fb94314e5e",
+        "live_sha256": "b66856c65240595978fd18a603649727a910045489d0e1f83f49ca6d3e520624",
+        "snapshot_bytes": 147249,
+        "live_bytes": 127591
+      },
+      {
+        "file": "Stratagems.csv",
+        "snapshot_sha256": "2ed24cacbe826c4eccea0920385669ac2fea5ebf3aca8822169d15d03f5814cb",
+        "live_sha256": "3ee6b09202194a57edf44838b5c976778be3c33781bc550c8ca98ec1083f7aa1",
+        "snapshot_bytes": 1148707,
+        "live_bytes": 1045219
+      },
+      {
+        "file": "Datasheets_stratagems.csv",
+        "snapshot_sha256": "7dacd927c0cf17b3516fdad5344e6d9f569bf172f3fbfe6a96e010bcfea5b67c",
+        "live_sha256": "797476d201d66a9d0ca2782264f8010fdfff67028627ad765ea1cdc66e119d95",
+        "snapshot_bytes": 2150631,
+        "live_bytes": 1376806
+      },
+      {
+        "file": "Enhancements.csv",
+        "snapshot_sha256": "7e7fa39c9e1f9d268bda75affa8cd647c72b5511726631a8ee4110c8e86bc212",
+        "live_sha256": "412195833e5b9409aaf9a7683e115068130905a00ff348297b37cdaa81d8fbae",
+        "snapshot_bytes": 477886,
+        "live_bytes": 427440
+      },
+      {
+        "file": "Datasheets_enhancements.csv",
+        "snapshot_sha256": "1d6576003a346565168369b75efc586d3c12a766d8514571ed81ff333d241376",
+        "live_sha256": "dd451dd48affb35aba2c17fafd71c70c23d04711a63ef32e46400067306102fe",
+        "snapshot_bytes": 285258,
+        "live_bytes": 186333
+      },
+      {
+        "file": "Detachment_abilities.csv",
+        "snapshot_sha256": "d7e4966e2b094d43feaa88a66e10608301ff817d92393b9c7f04ec2ac1ed6a44",
+        "live_sha256": "ceb366225c9bccaaa40e7c0ab2ea13c5e816a0eb283c3fb346c143ad1b167d9d",
+        "snapshot_bytes": 324910,
+        "live_bytes": 289414
+      },
+      {
+        "file": "Datasheets_detachment_abilities.csv",
+        "snapshot_sha256": "843395ebfa4f2dceab87b56792fff48d03d861cbfcb1eda6df3bbf2fe822ba38",
+        "live_sha256": "f0318f12183607bcd4145068eecb9f71a298ebfc7ebac080e306e5468658d239",
+        "snapshot_bytes": 354262,
+        "live_bytes": 190054
+      }
+    ]
   },
   "change_summary": {
     "github_sources_changed": [
       "BSDATA_WH40K_11E",
       "BSDATA_MFM_11E"
     ],
-    "wahapedia_files_changed": 0,
-    "wahapedia_last_update_changed": false
+    "wahapedia_files_changed": 19,
+    "wahapedia_last_update_changed": true
   },
   "policy": {
     "auto_promote": false,
