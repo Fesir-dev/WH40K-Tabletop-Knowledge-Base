@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "3988a8bdd210f9d31ea5b6782d0016688ccb6815",
+      "live": "b8d8961424b0b4509cbaae90ef2059116a2657e1",
       "changed": true,
       "files": [
         {
@@ -125,18 +125,34 @@
         {
           "filename": "Imperium - Black Templars.json",
           "status": "modified",
-          "additions": 1,
-          "deletions": 4,
-          "changes": 5,
+          "additions": 2523,
+          "deletions": 5771,
+          "changes": 8294,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Blood Angels.json",
           "status": "modified",
-          "additions": 1,
-          "deletions": 4,
-          "changes": 5,
+          "additions": 1426,
+          "deletions": 1069,
+          "changes": 2495,
           "classification": "ASTARTES"
+        },
+        {
+          "filename": "Imperium - Dark Angels.json",
+          "status": "modified",
+          "additions": 895,
+          "deletions": 1597,
+          "changes": 2492,
+          "classification": "ASTARTES"
+        },
+        {
+          "filename": "Imperium - Deathwatch.json",
+          "status": "modified",
+          "additions": 1816,
+          "deletions": 3308,
+          "changes": 5124,
+          "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Grey Knights.json",
@@ -144,6 +160,14 @@
           "additions": 244,
           "deletions": 122,
           "changes": 366,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Imperial Fists.json",
+          "status": "modified",
+          "additions": 66,
+          "deletions": 57,
+          "changes": 123,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -157,26 +181,58 @@
         {
           "filename": "Imperium - Iron Hands.json",
           "status": "modified",
-          "additions": 0,
-          "deletions": 1,
-          "changes": 1,
+          "additions": 52,
+          "deletions": 60,
+          "changes": 112,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Raven Guard.json",
+          "status": "modified",
+          "additions": 37,
+          "deletions": 115,
+          "changes": 152,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Salamanders.json",
+          "status": "modified",
+          "additions": 38,
+          "deletions": 103,
+          "changes": 141,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11,
-          "deletions": 23,
-          "changes": 34,
+          "additions": 10330,
+          "deletions": 16533,
+          "changes": 26863,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Space Wolves.json",
           "status": "modified",
-          "additions": 2,
-          "deletions": 11,
-          "changes": 13,
+          "additions": 1531,
+          "deletions": 1868,
+          "changes": 3399,
           "classification": "ASTARTES"
+        },
+        {
+          "filename": "Imperium - Ultramarines.json",
+          "status": "modified",
+          "additions": 945,
+          "deletions": 380,
+          "changes": 1325,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - White Scars.json",
+          "status": "modified",
+          "additions": 81,
+          "deletions": 56,
+          "changes": 137,
+          "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Leagues of Votann.json",
@@ -189,9 +245,9 @@
         {
           "filename": "Library - Astartes Heresy Legends.json",
           "status": "modified",
-          "additions": 12526,
-          "deletions": 23212,
-          "changes": 35738,
+          "additions": 10326,
+          "deletions": 21145,
+          "changes": 31471,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
