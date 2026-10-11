@@ -768,13 +768,13 @@
   ],
   "wahapedia": {
     "snapshot_last_update": "2026-09-28 02:38:04",
-    "live_last_update": "2026-10-10 18:29:19",
+    "live_last_update": "2026-10-11 04:01:18",
     "manifest_files_checked": 20,
     "changed_files": [
       {
         "file": "Last_update.csv",
         "snapshot_sha256": "4b3a7e63006be965073bdc34022bdd17f6f7b063602b46a4640a11ac641b20a9",
-        "live_sha256": "8d8e21dda6975da5ba0106f86a73151fc8f9046751c0846f465773825afc33ba",
+        "live_sha256": "05ea757a993417418e18617edaaf04ba996efeb7fc7dbad95c6fa2f2230fc4a2",
         "snapshot_bytes": 39,
         "live_bytes": 39
       },
@@ -837,9 +837,9 @@
       {
         "file": "Abilities.csv",
         "snapshot_sha256": "f3fc44a0fd91b7b45b38ae477632517e732bda64b4a0c548033a9f874664c7f3",
-        "live_sha256": "e4830eba3763f869ec828b652f7fcabea7b1cf7b575fd8c9b5b5e841504078e6",
+        "live_sha256": "423445d62af52561dabe0d569698badee1da4e6cee5b70c51e4a0357fa6169bd",
         "snapshot_bytes": 202161,
-        "live_bytes": 195481
+        "live_bytes": 195331
       },
       {
         "file": "Datasheets_abilities.csv",
@@ -872,7 +872,7 @@
       {
         "file": "Datasheets_stratagems.csv",
         "snapshot_sha256": "7dacd927c0cf17b3516fdad5344e6d9f569bf172f3fbfe6a96e010bcfea5b67c",
-        "live_sha256": "797476d201d66a9d0ca2782264f8010fdfff67028627ad765ea1cdc66e119d95",
+        "live_sha256": "e00f2b610963953b9df169737bc9e11832e2f3bd4d070624b17cc323f1a9d9c1",
         "snapshot_bytes": 2150631,
         "live_bytes": 1376806
       },
