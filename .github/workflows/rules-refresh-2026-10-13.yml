@@ -7,6 +7,7 @@ on:
     paths:
       - "tools/import_mfm_snapshot.py"
       - "tools/run_upstream_reingestion_candidate.py"
+      - "tools/audit_official_11e_assets.py"
       - ".github/workflows/rules-refresh-2026-10-13.yml"
   workflow_dispatch:
 
@@ -32,6 +33,17 @@ jobs:
 
       - name: Install refresh dependency
         run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
+
+      - name: Capture pre-refresh validator diagnostics
+        shell: bash
+        run: |
+          mkdir -p reports/diagnostics
+          set +e
+          python tools/validate_repo.py > reports/diagnostics/VALIDATE_PRE_REFRESH_CURRENT.txt 2>&1
+          code=$?
+          set -e
+          echo "validate_repo pre-refresh exit=$code"
+          cat reports/diagnostics/VALIDATE_PRE_REFRESH_CURRENT.txt
 
       - name: Import and promote official MFM v1.5 authority snapshot
         run: |
@@ -84,11 +96,19 @@ jobs:
           mkdir -p reports/diagnostics
           cp .cache/rules-refresh/artifact/candidate_report.json reports/diagnostics/RULES_REFRESH_CANDIDATE_FAILURE_CURRENT.json
           cp .cache/rules-refresh/artifact/reingestion_plan.json reports/diagnostics/RULES_REFRESH_REINGESTION_PLAN_CURRENT.json
+          evidence_dir="$(find .cache/rules-refresh/artifact/candidate/ingestion/candidates -mindepth 1 -maxdepth 1 -type d | head -n1)"
+          if [ -n "$evidence_dir" ]; then
+            for f in official_assets.json reconciliation.json semantic_fingerprint_audit.json view_diagnostics.json; do
+              if [ -f "$evidence_dir/$f" ]; then
+                cp "$evidence_dir/$f" "reports/diagnostics/RULES_REFRESH_${f%.json}_CURRENT.json"
+              fi
+            done
+          fi
           cat reports/diagnostics/RULES_REFRESH_CANDIDATE_FAILURE_CURRENT.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reports/diagnostics/RULES_REFRESH_CANDIDATE_FAILURE_CURRENT.json reports/diagnostics/RULES_REFRESH_REINGESTION_PLAN_CURRENT.json
-          git commit -m "Record rules refresh candidate failure diagnostics"
+          git add reports/diagnostics
+          git commit -m "Record detailed rules refresh failure diagnostics"
           git push origin HEAD:rules-refresh-2026-10-13
 
       - name: Verify candidate promotion gate
