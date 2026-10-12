@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.0",
-  "status": "NEW_RUNTIME_PROJECTION_DRIFT",
+  "schema_version": "2.1",
+  "status": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
   "system": {
     "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40,000-11th-edition",
     "http_status": 200,
@@ -387,91 +387,9 @@
   "representative_points": {
     "checks": 15,
     "matched": 7,
-    "known_drift_count": 2,
-    "new_drift_count": 6,
+    "known_drift_count": 8,
+    "new_drift_count": 0,
     "known_drifts": [
-      {
-        "slug": "orks",
-        "unit": "Warboss",
-        "archetype": "leader",
-        "gw_mfm_value": 100,
-        "expected_points": 100,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9189-6889-492c-a43e/warboss",
-        "http_status": 200,
-        "new_recruit_runtime_value": 85,
-        "runtime_points": 85,
-        "status": "MISMATCH",
-        "classification": "RUNTIME_PROJECTION_DRIFT",
-        "wahapedia_value": 100,
-        "pinned_bsdata_value": 100,
-        "live_bsdata_value": 100,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
-            "file": "Orks.json"
-          },
-          "live_bsdata": {
-            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
-            "file": "Orks.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
-        "normative_kb_change_required": false,
-        "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_WARBOSS_POINTS_2026_09_29"
-      },
-      {
-        "slug": "necrons",
-        "unit": "Necron Warriors",
-        "archetype": "infantry_multi_size",
-        "gw_mfm_value": 85,
-        "expected_points": 85,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons/5c25-2188-d5fe-ef0d/necron-warriors",
-        "http_status": 200,
-        "new_recruit_runtime_value": 80,
-        "runtime_points": 80,
-        "status": "MISMATCH",
-        "classification": "RUNTIME_PROJECTION_DRIFT",
-        "wahapedia_value": 85,
-        "pinned_bsdata_value": 85,
-        "live_bsdata_value": 85,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
-            "file": "Necrons.json"
-          },
-          "live_bsdata": {
-            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
-            "file": "Necrons.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
-        "normative_kb_change_required": false,
-        "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29"
-      }
-    ],
-    "new_drifts": [
       {
         "slug": "orks",
         "unit": "Ghazghkull Thraka",
@@ -489,11 +407,11 @@
         "live_bsdata_value": 290,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -509,7 +427,8 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_GHAZGHKULL_POINTS_2026_10_13"
       },
       {
         "slug": "astra_militarum",
@@ -522,33 +441,34 @@
         "new_recruit_runtime_value": 130,
         "runtime_points": 130,
         "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
         "wahapedia_value": 120,
-        "pinned_bsdata_value": null,
-        "live_bsdata_value": null,
+        "pinned_bsdata_value": 120,
+        "live_bsdata_value": 120,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
-            "file": "Imperium - Astra Militarum.json"
+            "file": "Imperium - Astra Militarum - Library.json"
           },
           "live_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
-            "file": "Imperium - Astra Militarum.json"
+            "file": "Imperium - Astra Militarum - Library.json"
           },
           "new_recruit": {
             "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
           }
         },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ASTRA_MILITARUM_LORD_SOLAR_POINTS_2026_10_13"
       },
       {
         "slug": "chaos_space_marines",
@@ -567,11 +487,11 @@
         "live_bsdata_value": 300,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -587,7 +507,8 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_CSM_ABADDON_POINTS_2026_10_13"
       },
       {
         "slug": "leagues_of_votann",
@@ -606,11 +527,11 @@
         "live_bsdata_value": 100,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -626,7 +547,8 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_VOTANN_UTHAR_POINTS_2026_10_13"
       },
       {
         "slug": "orks",
@@ -645,11 +567,11 @@
         "live_bsdata_value": 85,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -665,7 +587,8 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_BOYZ_POINTS_2026_10_13"
       },
       {
         "slug": "orks",
@@ -684,11 +607,11 @@
         "live_bsdata_value": 160,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -704,9 +627,91 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_BATTLEWAGON_POINTS_2026_10_13"
+      },
+      {
+        "slug": "orks",
+        "unit": "Warboss",
+        "archetype": "leader",
+        "gw_mfm_value": 100,
+        "expected_points": 100,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9189-6889-492c-a43e/warboss",
+        "http_status": 200,
+        "new_recruit_runtime_value": 85,
+        "runtime_points": 85,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 100,
+        "pinned_bsdata_value": 100,
+        "live_bsdata_value": 100,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
+          },
+          "wahapedia": {
+            "last_update": "2026-10-12 02:57:26"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_WARBOSS_POINTS_2026_10_13"
+      },
+      {
+        "slug": "necrons",
+        "unit": "Necron Warriors",
+        "archetype": "infantry_multi_size",
+        "gw_mfm_value": 85,
+        "expected_points": 85,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons/5c25-2188-d5fe-ef0d/necron-warriors",
+        "http_status": 200,
+        "new_recruit_runtime_value": 80,
+        "runtime_points": 80,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 85,
+        "pinned_bsdata_value": 85,
+        "live_bsdata_value": 85,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
+          },
+          "wahapedia": {
+            "last_update": "2026-10-12 02:57:26"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Necrons.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Necrons.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_10_13"
       }
     ],
+    "new_drifts": [],
     "archetypes": [
       "infantry_multi_size",
       "leader",
@@ -746,11 +751,11 @@
         "live_bsdata_value": 290,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -766,7 +771,8 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_GHAZGHKULL_POINTS_2026_10_13"
       },
       {
         "slug": "necrons",
@@ -805,33 +811,34 @@
         "new_recruit_runtime_value": 130,
         "runtime_points": 130,
         "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
         "wahapedia_value": 120,
-        "pinned_bsdata_value": null,
-        "live_bsdata_value": null,
+        "pinned_bsdata_value": 120,
+        "live_bsdata_value": 120,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
-            "file": "Imperium - Astra Militarum.json"
+            "file": "Imperium - Astra Militarum - Library.json"
           },
           "live_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
-            "file": "Imperium - Astra Militarum.json"
+            "file": "Imperium - Astra Militarum - Library.json"
           },
           "new_recruit": {
             "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
           }
         },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ASTRA_MILITARUM_LORD_SOLAR_POINTS_2026_10_13"
       },
       {
         "slug": "chaos_space_marines",
@@ -850,11 +857,11 @@
         "live_bsdata_value": 300,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -870,7 +877,8 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_CSM_ABADDON_POINTS_2026_10_13"
       },
       {
         "slug": "tyranids",
@@ -928,11 +936,11 @@
         "live_bsdata_value": 100,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -948,7 +956,8 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_VOTANN_UTHAR_POINTS_2026_10_13"
       },
       {
         "slug": "orks",
@@ -967,11 +976,11 @@
         "live_bsdata_value": 85,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -987,7 +996,8 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_BOYZ_POINTS_2026_10_13"
       },
       {
         "slug": "orks",
@@ -1006,11 +1016,11 @@
         "live_bsdata_value": 160,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -1026,7 +1036,8 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_BATTLEWAGON_POINTS_2026_10_13"
       },
       {
         "slug": "orks",
@@ -1045,11 +1056,11 @@
         "live_bsdata_value": 100,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -1066,7 +1077,7 @@
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_WARBOSS_POINTS_2026_09_29"
+        "known_drift_id": "NR_ORKS_WARBOSS_POINTS_2026_10_13"
       },
       {
         "slug": "necrons",
@@ -1085,11 +1096,11 @@
         "live_bsdata_value": 85,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.5",
+            "official_last_updated": "2026-09-30"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-12 02:57:26"
           },
           "pinned_bsdata": {
             "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
@@ -1106,7 +1117,7 @@
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29"
+        "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_10_13"
       },
       {
         "slug": "necrons",
@@ -1151,7 +1162,7 @@
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29"
+        "known_drift_id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_10_13"
       }
     ],
     "new_drifts": [],
@@ -1178,7 +1189,7 @@
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29"
+        "known_drift_id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_10_13"
       },
       {
         "check_id": "ORKS_WARBOSS_LEADER_BODYGUARDS",
@@ -1239,22 +1250,9 @@
   },
   "known_drift_registry": {
     "path": "sources/runtime_drift_registry.json",
-    "active": 6,
-    "observed_active": 3,
-    "resolved_candidates": [
-      {
-        "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
-        "classification": "RESOLVED_CANDIDATE"
-      },
-      {
-        "id": "NR_ORKS_BOYZ_POINTS_2026_09_29",
-        "classification": "RESOLVED_CANDIDATE"
-      },
-      {
-        "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
-        "classification": "RESOLVED_CANDIDATE"
-      }
-    ]
+    "active": 9,
+    "observed_active": 9,
+    "resolved_candidates": []
   },
   "lineage": {
     "runtime_source": "NEW_RECRUIT_WIKI",
@@ -1270,5 +1268,16 @@
     "new_drift_behavior": "New or changed point/surface drift fails the workflow and requires classification.",
     "normative_guard": "Runtime mismatch never automatically changes normative Games Workshop/MFM data.",
     "not_claimed": "Does not prove every builder constraint or the undocumented BSData-to-New-Recruit synchronization interval."
+  },
+  "provenance": {
+    "current_rules": {
+      "mfm_version": "1.5",
+      "mfm_last_updated": "2026-09-30",
+      "wahapedia_last_update": "2026-10-12 02:57:26",
+      "bsdata_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+      "validator": "tools/validate_new_recruit_runtime_current.py",
+      "legacy_validator": "tools/validate_new_recruit_runtime.py",
+      "library_resolution": "ENABLED_FOR_IMPORTED_BSDATA_LIBRARIES"
+    }
   }
 }
