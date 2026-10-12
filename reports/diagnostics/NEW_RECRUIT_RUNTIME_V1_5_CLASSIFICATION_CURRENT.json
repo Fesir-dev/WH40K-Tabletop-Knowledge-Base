@@ -1,0 +1,1274 @@
+{
+  "schema_version": "2.0",
+  "status": "NEW_RUNTIME_PROJECTION_DRIFT",
+  "system": {
+    "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40,000-11th-edition",
+    "http_status": 200,
+    "catalogues_reported": 36,
+    "libraries_reported": 11
+  },
+  "universe": {
+    "expected_roster_identities": 37,
+    "resolved_runtime_identities": 37,
+    "missing": [],
+    "page_checks": [
+      {
+        "slug": "adepta_sororitas",
+        "label": "Imperium - Adepta Sororitas",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adepta-sororitas",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "adeptus_custodes",
+        "label": "Imperium - Adeptus Custodes",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-custodes",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "adeptus_mechanicus",
+        "label": "Imperium - Adeptus Mechanicus",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-mechanicus",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "adeptus_titanicus",
+        "label": "Imperium - Adeptus Titanicus",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-titanicus",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "aeldari_craftworlds",
+        "label": "Xenos - Aeldari",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---aeldari",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "agents_of_the_imperium",
+        "label": "Imperium - Agents of the Imperium",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---agents-of-the-imperium",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "astra_militarum",
+        "label": "Imperium - Astra Militarum",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---astra-militarum",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "black_templars",
+        "label": "Imperium - Adeptus Astartes - Black Templars",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---black-templars",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "blood_angels",
+        "label": "Imperium - Adeptus Astartes - Blood Angels",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---blood-angels",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "chaos_daemons",
+        "label": "Chaos - Chaos Daemons",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-daemons",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "chaos_knights",
+        "label": "Chaos - Chaos Knights",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-knights",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "chaos_space_marines",
+        "label": "Chaos - Chaos Space Marines",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-space-marines",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "dark_angels",
+        "label": "Imperium - Adeptus Astartes - Dark Angels",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---dark-angels",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "death_guard",
+        "label": "Chaos - Death Guard",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---death-guard",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "deathwatch",
+        "label": "Imperium - Adeptus Astartes - Deathwatch",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---deathwatch",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "drukhari",
+        "label": "Xenos - Drukhari",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---drukhari",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "emperors_children",
+        "label": "Chaos - Emperor's Children",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---emperor's-children",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "genestealer_cults",
+        "label": "Xenos - Genestealer Cults",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---genestealer-cults",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "grey_knights",
+        "label": "Imperium - Grey Knights",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---grey-knights",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "imperial_fists",
+        "label": "Imperium - Adeptus Astartes - Imperial Fists",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---imperial-fists",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "imperial_knights",
+        "label": "Imperium - Imperial Knights",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---imperial-knights",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "iron_hands",
+        "label": "Imperium - Adeptus Astartes - Iron Hands",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---iron-hands",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "leagues_of_votann",
+        "label": "Xenos - Leagues of Votann",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---leagues-of-votann",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "necrons",
+        "label": "Xenos - Necrons",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "orks",
+        "label": "Xenos - Orks",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "raven_guard",
+        "label": "Imperium - Adeptus Astartes - Raven Guard",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---raven-guard",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "salamanders",
+        "label": "Imperium - Adeptus Astartes - Salamanders",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---salamanders",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "space_marines",
+        "label": "Imperium - Adeptus Astartes - Space Marines",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---space-marines",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "space_wolves",
+        "label": "Imperium - Adeptus Astartes - Space Wolves",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---space-wolves",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "tau_empire",
+        "label": "Xenos - T'au Empire",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---t'au-empire",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "thousand_sons",
+        "label": "Chaos - Thousand Sons",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---thousand-sons",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "titanicus_traitoris",
+        "label": "Chaos - Titanicus Traitoris",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---titanicus-traitoris",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "tyranids",
+        "label": "Xenos - Tyranids",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---tyranids",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "ultramarines",
+        "label": "Imperium - Adeptus Astartes - Ultramarines",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---ultramarines",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "unaligned_forces",
+        "label": "Unaligned Forces",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/unaligned-forces",
+        "http_status": 200,
+        "page_type_marker": "(Library)",
+        "marker_required": false,
+        "marker_present": false,
+        "status": "PASS"
+      },
+      {
+        "slug": "white_scars",
+        "label": "Imperium - Adeptus Astartes - White Scars",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-astartes---white-scars",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      },
+      {
+        "slug": "world_eaters",
+        "label": "Chaos - World Eaters",
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---world-eaters",
+        "http_status": 200,
+        "page_type_marker": "(Catalogue)",
+        "marker_required": true,
+        "marker_present": true,
+        "status": "PASS"
+      }
+    ]
+  },
+  "representative_points": {
+    "checks": 15,
+    "matched": 7,
+    "known_drift_count": 2,
+    "new_drift_count": 6,
+    "known_drifts": [
+      {
+        "slug": "orks",
+        "unit": "Warboss",
+        "archetype": "leader",
+        "gw_mfm_value": 100,
+        "expected_points": 100,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9189-6889-492c-a43e/warboss",
+        "http_status": 200,
+        "new_recruit_runtime_value": 85,
+        "runtime_points": 85,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 100,
+        "pinned_bsdata_value": 100,
+        "live_bsdata_value": 100,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_WARBOSS_POINTS_2026_09_29"
+      },
+      {
+        "slug": "necrons",
+        "unit": "Necron Warriors",
+        "archetype": "infantry_multi_size",
+        "gw_mfm_value": 85,
+        "expected_points": 85,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons/5c25-2188-d5fe-ef0d/necron-warriors",
+        "http_status": 200,
+        "new_recruit_runtime_value": 80,
+        "runtime_points": 80,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 85,
+        "pinned_bsdata_value": 85,
+        "live_bsdata_value": 85,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Necrons.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Necrons.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29"
+      }
+    ],
+    "new_drifts": [
+      {
+        "slug": "orks",
+        "unit": "Ghazghkull Thraka",
+        "archetype": "named_character",
+        "gw_mfm_value": 290,
+        "expected_points": 290,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
+        "http_status": 200,
+        "new_recruit_runtime_value": 235,
+        "runtime_points": 235,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 290,
+        "pinned_bsdata_value": 290,
+        "live_bsdata_value": 290,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "astra_militarum",
+        "unit": "Lord Solar Leontus",
+        "archetype": "named_character",
+        "gw_mfm_value": 120,
+        "expected_points": 120,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---astra-militarum/d2de-6903-46a-f02c/lord-solar-leontus",
+        "http_status": 200,
+        "new_recruit_runtime_value": 130,
+        "runtime_points": 130,
+        "status": "MISMATCH",
+        "classification": "UNKNOWN_RUNTIME_DRIFT",
+        "wahapedia_value": 120,
+        "pinned_bsdata_value": null,
+        "live_bsdata_value": null,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Imperium - Astra Militarum.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Imperium - Astra Militarum.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "chaos_space_marines",
+        "unit": "Abaddon The Despoiler",
+        "archetype": "named_character",
+        "gw_mfm_value": 300,
+        "expected_points": 300,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-space-marines/2e42-8d21-37fe-1de9/abaddon-the-despoiler",
+        "http_status": 200,
+        "new_recruit_runtime_value": 295,
+        "runtime_points": 295,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 300,
+        "pinned_bsdata_value": 300,
+        "live_bsdata_value": 300,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Chaos - Chaos Space Marines.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Chaos - Chaos Space Marines.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "leagues_of_votann",
+        "unit": "ûthar The Destined",
+        "archetype": "named_character",
+        "gw_mfm_value": 100,
+        "expected_points": 100,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---leagues-of-votann/95dc-990b-2a93-5e83/%C3%BBthar-the-destined",
+        "http_status": 200,
+        "new_recruit_runtime_value": 90,
+        "runtime_points": 90,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 100,
+        "pinned_bsdata_value": 100,
+        "live_bsdata_value": 100,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Leagues of Votann.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Leagues of Votann.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "orks",
+        "unit": "Boyz",
+        "archetype": "infantry_multi_size",
+        "gw_mfm_value": 85,
+        "expected_points": 85,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/187-93d6-1ac7-dbde/boyz",
+        "http_status": 200,
+        "new_recruit_runtime_value": 75,
+        "runtime_points": 75,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 85,
+        "pinned_bsdata_value": 85,
+        "live_bsdata_value": 85,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "orks",
+        "unit": "Battlewagon",
+        "archetype": "vehicle",
+        "gw_mfm_value": 160,
+        "expected_points": 160,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9af5-6820-1ff2-6c01/battlewagon",
+        "http_status": 200,
+        "new_recruit_runtime_value": 145,
+        "runtime_points": 145,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 160,
+        "pinned_bsdata_value": 160,
+        "live_bsdata_value": 160,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      }
+    ],
+    "archetypes": [
+      "infantry_multi_size",
+      "leader",
+      "named_character",
+      "named_character_monster",
+      "named_character_vehicle",
+      "vehicle"
+    ],
+    "rows": [
+      {
+        "slug": "adeptus_custodes",
+        "unit": "Trajann Valoris",
+        "archetype": "named_character",
+        "gw_mfm_value": 135,
+        "expected_points": 135,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-custodes/87ec-de53-6df9-9c22/trajann-valoris",
+        "http_status": 200,
+        "new_recruit_runtime_value": 135,
+        "runtime_points": 135,
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      },
+      {
+        "slug": "orks",
+        "unit": "Ghazghkull Thraka",
+        "archetype": "named_character",
+        "gw_mfm_value": 290,
+        "expected_points": 290,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
+        "http_status": 200,
+        "new_recruit_runtime_value": 235,
+        "runtime_points": 235,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 290,
+        "pinned_bsdata_value": 290,
+        "live_bsdata_value": 290,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "necrons",
+        "unit": "Imotekh The Stormlord",
+        "archetype": "named_character",
+        "gw_mfm_value": 100,
+        "expected_points": 100,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons/572d-e094-2f28-92df/imotekh-the-stormlord",
+        "http_status": 200,
+        "new_recruit_runtime_value": 100,
+        "runtime_points": 100,
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      },
+      {
+        "slug": "tau_empire",
+        "unit": "Commander Farsight",
+        "archetype": "named_character",
+        "gw_mfm_value": 70,
+        "expected_points": 70,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---t'au-empire/b3a8-4106-40fb-3b68/commander-farsight",
+        "http_status": 200,
+        "new_recruit_runtime_value": 70,
+        "runtime_points": 70,
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      },
+      {
+        "slug": "astra_militarum",
+        "unit": "Lord Solar Leontus",
+        "archetype": "named_character",
+        "gw_mfm_value": 120,
+        "expected_points": 120,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---astra-militarum/d2de-6903-46a-f02c/lord-solar-leontus",
+        "http_status": 200,
+        "new_recruit_runtime_value": 130,
+        "runtime_points": 130,
+        "status": "MISMATCH",
+        "classification": "UNKNOWN_RUNTIME_DRIFT",
+        "wahapedia_value": 120,
+        "pinned_bsdata_value": null,
+        "live_bsdata_value": null,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Imperium - Astra Militarum.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Imperium - Astra Militarum.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "chaos_space_marines",
+        "unit": "Abaddon The Despoiler",
+        "archetype": "named_character",
+        "gw_mfm_value": 300,
+        "expected_points": 300,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-space-marines/2e42-8d21-37fe-1de9/abaddon-the-despoiler",
+        "http_status": 200,
+        "new_recruit_runtime_value": 295,
+        "runtime_points": 295,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 300,
+        "pinned_bsdata_value": 300,
+        "live_bsdata_value": 300,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Chaos - Chaos Space Marines.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Chaos - Chaos Space Marines.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "tyranids",
+        "unit": "The Swarmlord",
+        "archetype": "named_character_monster",
+        "gw_mfm_value": 210,
+        "expected_points": 210,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---tyranids/fece-50fa-e019-b6c2/the-swarmlord",
+        "http_status": 200,
+        "new_recruit_runtime_value": 210,
+        "runtime_points": 210,
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      },
+      {
+        "slug": "aeldari_craftworlds",
+        "unit": "Avatar Of Khaine",
+        "archetype": "named_character_monster",
+        "gw_mfm_value": 250,
+        "expected_points": 250,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---aeldari/115d-8239-dc6c-9e5d/avatar-of-khaine",
+        "http_status": 200,
+        "new_recruit_runtime_value": 250,
+        "runtime_points": 250,
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      },
+      {
+        "slug": "imperial_knights",
+        "unit": "Canis Rex",
+        "archetype": "named_character_vehicle",
+        "gw_mfm_value": 415,
+        "expected_points": 415,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---imperial-knights---library/ef2c-2932-39f4-7228/canis-rex",
+        "http_status": 200,
+        "new_recruit_runtime_value": 415,
+        "runtime_points": 415,
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      },
+      {
+        "slug": "leagues_of_votann",
+        "unit": "ûthar The Destined",
+        "archetype": "named_character",
+        "gw_mfm_value": 100,
+        "expected_points": 100,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---leagues-of-votann/95dc-990b-2a93-5e83/%C3%BBthar-the-destined",
+        "http_status": 200,
+        "new_recruit_runtime_value": 90,
+        "runtime_points": 90,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 100,
+        "pinned_bsdata_value": 100,
+        "live_bsdata_value": 100,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Leagues of Votann.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Leagues of Votann.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "orks",
+        "unit": "Boyz",
+        "archetype": "infantry_multi_size",
+        "gw_mfm_value": 85,
+        "expected_points": 85,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/187-93d6-1ac7-dbde/boyz",
+        "http_status": 200,
+        "new_recruit_runtime_value": 75,
+        "runtime_points": 75,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 85,
+        "pinned_bsdata_value": 85,
+        "live_bsdata_value": 85,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "orks",
+        "unit": "Battlewagon",
+        "archetype": "vehicle",
+        "gw_mfm_value": 160,
+        "expected_points": 160,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9af5-6820-1ff2-6c01/battlewagon",
+        "http_status": 200,
+        "new_recruit_runtime_value": 145,
+        "runtime_points": 145,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 160,
+        "pinned_bsdata_value": 160,
+        "live_bsdata_value": 160,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "orks",
+        "unit": "Warboss",
+        "archetype": "leader",
+        "gw_mfm_value": 100,
+        "expected_points": 100,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9189-6889-492c-a43e/warboss",
+        "http_status": 200,
+        "new_recruit_runtime_value": 85,
+        "runtime_points": 85,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 100,
+        "pinned_bsdata_value": 100,
+        "live_bsdata_value": 100,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Orks.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_WARBOSS_POINTS_2026_09_29"
+      },
+      {
+        "slug": "necrons",
+        "unit": "Necron Warriors",
+        "archetype": "infantry_multi_size",
+        "gw_mfm_value": 85,
+        "expected_points": 85,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons/5c25-2188-d5fe-ef0d/necron-warriors",
+        "http_status": 200,
+        "new_recruit_runtime_value": 80,
+        "runtime_points": 80,
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 85,
+        "pinned_bsdata_value": 85,
+        "live_bsdata_value": 85,
+        "source_revisions": {
+          "gw_mfm": {
+            "version": "1.4",
+            "official_last_updated": "2026-09-02"
+          },
+          "wahapedia": {
+            "last_update": "2026-09-28 02:38:04"
+          },
+          "pinned_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Necrons.json"
+          },
+          "live_bsdata": {
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+            "file": "Necrons.json"
+          },
+          "new_recruit": {
+            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+          }
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29"
+      },
+      {
+        "slug": "necrons",
+        "unit": "Monolith",
+        "archetype": "vehicle",
+        "gw_mfm_value": 420,
+        "expected_points": 420,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons/1d2d-84be-9efc-b2f7/monolith",
+        "http_status": 200,
+        "new_recruit_runtime_value": 420,
+        "runtime_points": 420,
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      }
+    ]
+  },
+  "representative_surfaces": {
+    "checks": 5,
+    "matched": 4,
+    "known_drift_count": 1,
+    "new_drift_count": 0,
+    "known_drifts": [
+      {
+        "check_id": "ORKS_CURRENT_DETACHMENT_SHOOTA_BOYZ",
+        "kind": "detachment_exists",
+        "slug": "orks",
+        "unit": null,
+        "runtime_url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/dc5b-07db-415b-a1da/detachment",
+        "http_status": 200,
+        "expected": [
+          "Shoota Boyz"
+        ],
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "lineage": {
+          "gw_mfm_present": true,
+          "wahapedia_present": true,
+          "pinned_bsdata_present": true,
+          "live_bsdata_present": true,
+          "new_recruit_runtime_present": false
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29"
+      }
+    ],
+    "new_drifts": [],
+    "rows": [
+      {
+        "check_id": "ORKS_CURRENT_DETACHMENT_SHOOTA_BOYZ",
+        "kind": "detachment_exists",
+        "slug": "orks",
+        "unit": null,
+        "runtime_url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/dc5b-07db-415b-a1da/detachment",
+        "http_status": 200,
+        "expected": [
+          "Shoota Boyz"
+        ],
+        "status": "MISMATCH",
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "lineage": {
+          "gw_mfm_present": true,
+          "wahapedia_present": true,
+          "pinned_bsdata_present": true,
+          "live_bsdata_present": true,
+          "new_recruit_runtime_present": false
+        },
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
+        "normative_kb_change_required": false,
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29"
+      },
+      {
+        "check_id": "ORKS_WARBOSS_LEADER_BODYGUARDS",
+        "kind": "leader_bodyguard_relation",
+        "slug": "orks",
+        "unit": "Warboss",
+        "runtime_url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9189-6889-492c-a43e/warboss",
+        "http_status": 200,
+        "expected": [
+          "BOYZ",
+          "BREAKA BOYZ",
+          "NOBZ"
+        ],
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      },
+      {
+        "check_id": "ORKS_TARGETIN_GIZMOS_ENHANCEMENT",
+        "kind": "enhancement_exists",
+        "slug": "orks",
+        "unit": "Warboss",
+        "runtime_url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9189-6889-492c-a43e/warboss",
+        "http_status": 200,
+        "expected": [
+          "Targetin' Gizmos"
+        ],
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      },
+      {
+        "check_id": "ORKS_BATTLEWAGON_WARGEAR",
+        "kind": "wargear_exists",
+        "slug": "orks",
+        "unit": "Battlewagon",
+        "runtime_url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9af5-6820-1ff2-6c01/battlewagon",
+        "http_status": 200,
+        "expected": [
+          "Wreckin' ball",
+          "Grabbin' klaw"
+        ],
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      },
+      {
+        "check_id": "ORKS_BOYZ_CONSTRAINT",
+        "kind": "constraint_behavior",
+        "slug": "orks",
+        "unit": "Boyz",
+        "runtime_url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/187-93d6-1ac7-dbde/boyz",
+        "http_status": 200,
+        "expected": [
+          "max(force): 6"
+        ],
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
+      }
+    ]
+  },
+  "known_drift_registry": {
+    "path": "sources/runtime_drift_registry.json",
+    "active": 6,
+    "observed_active": 3,
+    "resolved_candidates": [
+      {
+        "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
+        "classification": "RESOLVED_CANDIDATE"
+      },
+      {
+        "id": "NR_ORKS_BOYZ_POINTS_2026_09_29",
+        "classification": "RESOLVED_CANDIDATE"
+      },
+      {
+        "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
+        "classification": "RESOLVED_CANDIDATE"
+      }
+    ]
+  },
+  "lineage": {
+    "runtime_source": "NEW_RECRUIT_WIKI",
+    "expected_upstream": "BSDATA_WH40K_11E",
+    "pinned_bsdata_commit": "043d05b5013babc96f22100c9e015ed052d3be32",
+    "live_bsdata_commit": "043d05b5013babc96f22100c9e015ed052d3be32",
+    "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+  },
+  "policy": {
+    "meaning": "Validates New Recruit public runtime/wiki projection against canonical MFM points, current Wahapedia mirror data, pinned/live BSData values for mismatches, and selected structural runtime surfaces.",
+    "classification_field": "classification uses NORMATIVE_MATCH, IMPLEMENTATION_DRIFT, RUNTIME_PROJECTION_DRIFT, UPSTREAM_REVISION_DRIFT, or UNKNOWN_RUNTIME_DRIFT. Registry state is separate.",
+    "known_drift_behavior": "Known exact drifts are reported but do not fail the scheduled workflow.",
+    "new_drift_behavior": "New or changed point/surface drift fails the workflow and requires classification.",
+    "normative_guard": "Runtime mismatch never automatically changes normative Games Workshop/MFM data.",
+    "not_claimed": "Does not prove every builder constraint or the undocumented BSData-to-New-Recruit synchronization interval."
+  }
+}
