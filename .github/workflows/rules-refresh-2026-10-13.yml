@@ -10,6 +10,8 @@ on:
       - "tools/audit_official_11e_assets.py"
       - "tools/build_wave_b_roster_views.py"
       - "tools/apply_reingestion_promotion.py"
+      - "tools/validate_new_recruit_runtime.py"
+      - "sources/runtime_drift_registry.json"
       - ".github/workflows/rules-refresh-2026-10-13.yml"
   workflow_dispatch:
 
@@ -136,9 +138,37 @@ jobs:
         run: python tools/watch_upstreams.py
 
       - name: Revalidate New Recruit runtime projection
+        id: runtime
+        continue-on-error: true
+        shell: bash
         run: |
+          set +e
           python tools/validate_new_recruit_runtime.py
-          python tools/sync_new_recruit_runtime_status.py
+          code=$?
+          set -e
+          if [ "$code" -eq 0 ]; then
+            python tools/sync_new_recruit_runtime_status.py
+          fi
+          exit "$code"
+
+      - name: Persist runtime drift diagnostics
+        if: steps.runtime.outcome == 'failure'
+        shell: bash
+        run: |
+          mkdir -p reports/diagnostics
+          cp reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json reports/diagnostics/NEW_RECRUIT_RUNTIME_V1_5_CLASSIFICATION_CURRENT.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/diagnostics/NEW_RECRUIT_RUNTIME_V1_5_CLASSIFICATION_CURRENT.json
+          git commit -m "Record MFM v1.5 runtime drift classification candidate"
+          git push origin HEAD:rules-refresh-2026-10-13
+
+      - name: Verify runtime projection gate
+        run: |
+          if [ "${{ steps.runtime.outcome }}" != "success" ]; then
+            echo "Runtime projection contains new or changed drift; classification required."
+            exit 1
+          fi
 
       - name: Verify promoted semantic resolver
         run: python tools/query_current_semantics.py --smoke-test
