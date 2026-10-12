@@ -53,6 +53,7 @@ class RepositoryContracts(unittest.TestCase):
         cls.core_rule_semantic_ast_readiness = json.loads((ROOT/"reports/CORE_RULE_SEMANTIC_AST_READINESS_CURRENT.json").read_text(encoding="utf-8"))
         cls.core_rule_direct_modal_ast_pilot = json.loads((ROOT/"reports/CORE_RULE_DIRECT_MODAL_AST_PILOT_CURRENT.json").read_text(encoding="utf-8"))
         cls.core_rule_direct_modal_ast_semantic_validation = json.loads((ROOT/"reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json").read_text(encoding="utf-8"))
+        cls.core_rule_ast_readiness_expansion = json.loads((ROOT/"reports/CORE_RULE_AST_READINESS_EXPANSION_CURRENT.json").read_text(encoding="utf-8"))
 
     def test_catalog_unique(self):
         slugs=[x["slug"] for x in self.catalog["factions"]]
@@ -185,11 +186,11 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(mapping["NO_PUBLIC_FACTION_PACK_MAPPING"], 2)
 
         gaps={x["id"]:x for x in audit["gaps"]}
-        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING")
+        self.assertEqual(gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]["state"], "AST_READINESS_EXPANSION_CLOSED_11_MODAL_SENTENCE_CANDIDATES_PENDING_SELECTION")
         self.assertEqual(gaps["PUBLIC_FACTION_SUPPLEMENT_SEMANTIC_INGESTION"]["state"], "EXACT_PUBLIC_OVERLAP_AND_RESIDUAL_CLASSIFICATION_CLOSED_DEEP_EXTRACTION_PENDING")
         self.assertEqual(gaps["GW_APP_WORDING_AND_LOCKED_DATASHEET_CROSSCHECK"]["state"], "BLOCKED_ON_AUTHORIZED_APP_EVIDENCE")
         self.assertEqual(gaps["NORMATIVE_COVERAGE_ACCOUNTING"]["state"], "INTENTIONAL_ZERO_NOT_MIRROR_DATA_LOSS")
-        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "CORE_RULE_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(audit["conclusion"]["recommended_next_milestone"], "CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
 
         findings={x["id"]:x for x in self.public_rules_discovery["findings"]}
         self.assertEqual(findings["GW_11E_CORE_RULES_PUBLIC"]["state"], "PUBLIC_OFFICIAL_SOURCE_DISCOVERED_NOT_INGESTED")
@@ -238,7 +239,7 @@ class RepositoryContracts(unittest.TestCase):
 
         profiles=self.gate["scope_profiles"]
         self.assertEqual(profiles["official_public_semantic_fingerprints"]["content_state"], "PASS")
-        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1")
+        self.assertEqual(profiles["core_rules"]["content_state"], "OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1")
         self.assertEqual(profiles["faction_rules"]["content_state"], "OFFICIAL_PUBLIC_SUPPLEMENTS_FINGERPRINTED_FULL_CODEX_PENDING")
         self.assertEqual(profiles["app_wording"]["content_state"], "PENDING")
 
@@ -280,11 +281,11 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["current_normalized_factions_change"], 0)
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["state"],
-            "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1",
+            "OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1",
         )
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
-            "DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING",
+            "AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION",
         )
 
         profile=self.gate["scope_profiles"]["core_rule_reference_atoms"]
@@ -350,14 +351,14 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["paragraph_candidates"],310)
         self.assertEqual(layer["heading_line_recovery_gaps"],0)
         self.assertEqual(layer["empty_body_boundaries"],0)
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["state"],
-            "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1",
+            "OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1",
         )
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
-            "DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING",
+            "AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION",
         )
 
         profile=self.gate["scope_profiles"]["core_rule_paragraph_boundaries"]
@@ -367,7 +368,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["heading_line_recovery_gaps"],0)
         self.assertEqual(profile["empty_body_boundaries"],0)
 
-        self.assertEqual(self.coverage["status"],"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_AST_READINESS_EXPANSION_V1_COMPLETE")
         self.assertEqual(self.coverage["global"]["official_public_core_rule_boundary_rules"],141)
         self.assertEqual(self.coverage["global"]["official_public_core_rule_boundary_occurrences"],146)
         self.assertEqual(self.coverage["global"]["official_public_core_rule_paragraph_candidates"],310)
@@ -425,14 +426,14 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["paragraph_atoms"],310)
         self.assertEqual(layer["unique_paragraph_keys"],310)
         self.assertEqual(layer["range_validation_failures"],0)
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["state"],
-            "OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1",
+            "OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1",
         )
         self.assertEqual(
             self.current["source_currentness"]["core_rules_content"]["normative_structured_normalization"],
-            "DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING",
+            "AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION",
         )
 
         profile=self.gate["scope_profiles"]["core_rule_paragraph_atoms"]
@@ -443,7 +444,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["repeated_occurrence_paragraph_variants"],10)
         self.assertEqual(profile["range_validation_failures"],0)
 
-        self.assertEqual(self.coverage["status"],"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_AST_READINESS_EXPANSION_V1_COMPLETE")
         g=self.coverage["global"]
         self.assertEqual(g["official_public_core_paragraph_atoms"],310)
         self.assertEqual(g["official_public_core_paragraph_unique_keys"],310)
@@ -517,10 +518,10 @@ class RepositoryContracts(unittest.TestCase):
         self.assertFalse(layer["ast_readiness_pending"])
         self.assertTrue(layer["ast_readiness_complete"])
         self.assertFalse(layer["condition_effect_ast_complete"])
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
         core=self.current["source_currentness"]["core_rules_content"]
-        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1")
-        self.assertEqual(core["normative_structured_normalization"],"DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING")
+        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(core["normative_structured_normalization"],"AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION")
 
         profile=self.gate["scope_profiles"]["core_rule_paragraph_semantics"]
         self.assertEqual(profile["content_state"],"PASS_310_PARAGRAPHS_CLASSIFIED")
@@ -528,7 +529,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["role_counts"],s["role_counts"])
         self.assertEqual(profile["confidence_counts"],s["confidence_counts"])
 
-        self.assertEqual(self.coverage["status"],"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_AST_READINESS_EXPANSION_V1_COMPLETE")
         g=self.coverage["global"]
         self.assertTrue(g["official_public_core_paragraph_semantic_classification_complete"])
         self.assertFalse(g["official_public_core_paragraph_semantic_ast_complete"])
@@ -610,10 +611,10 @@ class RepositoryContracts(unittest.TestCase):
         self.assertTrue(layer["ast_readiness_complete"])
         self.assertFalse(layer["condition_effect_ast_complete"])
 
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
         core=self.current["source_currentness"]["core_rules_content"]
-        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1")
-        self.assertEqual(core["normative_structured_normalization"],"DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING")
+        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(core["normative_structured_normalization"],"AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION")
 
         profile=self.gate["scope_profiles"]["core_rule_paragraph_semantic_review"]
         self.assertEqual(profile["content_state"],"PASS_310_PARAGRAPH_SEMANTIC_PROFILES_REVIEWED")
@@ -621,7 +622,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["axis_profile_ready"],156)
         self.assertEqual(profile["review_required"],154)
 
-        self.assertEqual(self.coverage["status"],"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_AST_READINESS_EXPANSION_V1_COMPLETE")
         g=self.coverage["global"]
         self.assertEqual(g["official_public_core_paragraph_semantic_review_profiles"],310)
         self.assertEqual(g["official_public_core_paragraph_axis_profile_ready"],156)
@@ -697,10 +698,10 @@ class RepositoryContracts(unittest.TestCase):
         self.assertFalse(layer["ast_nodes_created"])
         self.assertFalse(layer["condition_effect_ast_complete"])
 
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
         core=self.current["source_currentness"]["core_rules_content"]
-        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1")
-        self.assertEqual(core["normative_structured_normalization"],"DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING")
+        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(core["normative_structured_normalization"],"AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION")
 
         profile=self.gate["scope_profiles"]["core_rule_semantic_ast_readiness"]
         self.assertEqual(profile["content_state"],"PASS_1_DIRECT_MODAL_PILOT_READY")
@@ -712,7 +713,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["pilot_paragraph_key"],"core-rule-13-07--p50--l1--para-p50-o1")
         self.assertEqual(profile["ast_nodes_created"],0)
 
-        self.assertEqual(self.coverage["status"],"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_AST_READINESS_EXPANSION_V1_COMPLETE")
         g=self.coverage["global"]
         self.assertTrue(g["official_public_core_semantic_ast_readiness_complete"])
         self.assertEqual(g["official_public_core_semantic_ast_readiness_rows"],310)
@@ -794,10 +795,10 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["interaction_edges_created"],0)
         self.assertEqual(layer["additional_paragraphs_admitted"],0)
 
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
         core=self.current["source_currentness"]["core_rules_content"]
-        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1")
-        self.assertEqual(core["normative_structured_normalization"],"DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING")
+        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(core["normative_structured_normalization"],"AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION")
 
         profile=self.gate["scope_profiles"]["core_rule_direct_modal_ast_pilot"]
         self.assertEqual(profile["content_state"],"PASS_1_DIRECT_MODAL_AST_NODE")
@@ -807,7 +808,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["interaction_edges_created"],0)
         self.assertEqual(profile["additional_paragraphs_admitted"],0)
 
-        self.assertEqual(self.coverage["status"],"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_AST_READINESS_EXPANSION_V1_COMPLETE")
         g=self.coverage["global"]
         self.assertTrue(g["official_public_core_direct_modal_ast_pilot_complete"])
         self.assertEqual(g["official_public_core_semantic_ast_nodes_created"],1)
@@ -893,8 +894,8 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(layer["current_normalized_factions_change"],0)
 
         core=self.current["source_currentness"]["core_rules_content"]
-        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1")
-        self.assertEqual(core["normative_structured_normalization"],"DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING")
+        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(core["normative_structured_normalization"],"AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION")
         nested=core["structured_normalization"]["direct_modal_ast_semantic_validation"]
         self.assertEqual(nested["state"],"PASS_OPAQUE_PRESERVED")
         self.assertFalse(nested["ast_mutated"])
@@ -905,8 +906,8 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(profile["paragraphs_validated"],1)
         self.assertEqual(profile["decision"],"OPAQUE_PRESERVED")
 
-        self.assertEqual(self.current["next_milestone"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
-        self.assertEqual(self.coverage["status"],"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE")
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_AST_READINESS_EXPANSION_V1_COMPLETE")
         g=self.coverage["global"]
         self.assertEqual(g["official_public_core_direct_modal_ast_semantic_validation_status"],"PASS_OPAQUE_PRESERVED")
         self.assertEqual(g["official_public_core_direct_modal_ast_nodes_validated"],1)
@@ -927,6 +928,98 @@ class RepositoryContracts(unittest.TestCase):
             "docs/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_MODEL.md",
             ".github/workflows/core-rule-direct-modal-ast-semantic-validation.yml",
             "rules/11e/snapshots/2026-09-30/core_rule_direct_modal_ast_semantic_validation/index.json",
+        ]:
+            self.assertTrue((ROOT/required).exists(),required)
+
+    def test_core_rule_ast_readiness_expansion_layer(self):
+        r=self.core_rule_ast_readiness_expansion
+        self.assertEqual(r["status"],"PASS")
+        self.assertEqual(r["authority"],"GAMES_WORKSHOP_OFFICIAL")
+        self.assertEqual(r["expansion_version"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(r["validated_existing_ast"]["node_key"],"core-ast-direct-modal--13-07--p50-o1")
+        self.assertEqual(r["validated_existing_ast"]["decision"],"OPAQUE_PRESERVED")
+        self.assertFalse(r["validated_existing_ast"]["ast_mutated"])
+
+        s=r["summary"]
+        self.assertEqual(s["rows_audited"],33)
+        self.assertEqual(s["unique_paragraph_keys"],33)
+        self.assertEqual(s["parent_state_counts"],{
+            "BLOCKED_COMPLEX_DELIMITERS":4,
+            "BLOCKED_PARENTHETICAL_SCOPE":1,
+            "BLOCKED_SENTENCE_SHAPE":28,
+        })
+        self.assertEqual(s["expansion_state_counts"],{
+            "BLOCKED_CONDITION_OUTSIDE_MODAL_SENTENCE":5,
+            "BLOCKED_DELIMITER_SCOPE":4,
+            "BLOCKED_MODAL_SENTENCE_COMPLEX_DELIMITERS":2,
+            "BLOCKED_MODAL_SENTENCE_NONTERMINAL":2,
+            "BLOCKED_MODAL_SENTENCE_PARENTHETICAL_SCOPE":7,
+            "BLOCKED_PARENTHETICAL_SCOPE":1,
+            "BLOCKED_SENTENCE_SEGMENTATION":1,
+            "CANDIDATE_SINGLE_MODAL_SENTENCE":11,
+        })
+        self.assertEqual(s["source_hashes_reproduced"],33)
+        self.assertEqual(s["sentence_candidates"],11)
+        self.assertEqual(s["candidate_modal_axis_counts"],{"PERMISSION":9,"PROHIBITION":2})
+        self.assertEqual(s["candidate_condition_counts"],{"0":11})
+        self.assertEqual(s["new_ast_nodes_created"],0)
+        self.assertEqual(s["interaction_edges_created"],0)
+        self.assertEqual(s["existing_ast_nodes_mutated"],0)
+        self.assertEqual(s["additional_paragraphs_admitted"],0)
+
+        self.assertEqual(len(r["sentence_candidates"]),11)
+        self.assertTrue(all(x["sentence_candidate"]["modal_occurrences"]==1 for x in r["sentence_candidates"]))
+        self.assertTrue(all(x["sentence_candidate"]["condition_cues"]==0 for x in r["sentence_candidates"]))
+        self.assertTrue(all(x["sentence_candidate"]["complex_delimiter_count"]==0 for x in r["sentence_candidates"]))
+        self.assertTrue(all(x["sentence_candidate"]["parenthetical_delimiter_count"]==0 for x in r["sentence_candidates"]))
+
+        b=r["authority_boundary"]
+        self.assertTrue(b["readiness_expansion_complete"])
+        self.assertTrue(b["sentence_candidate_is_not_ast_node"])
+        self.assertTrue(b["sentence_candidate_is_not_parser_admission"])
+        self.assertFalse(b["ast_nodes_created"])
+        self.assertFalse(b["interaction_edges_created"])
+        self.assertFalse(b["existing_ast_mutated"])
+        self.assertEqual(b["current_normalized_factions_change"],0)
+
+        layer=self.current["core_rule_ast_readiness_expansion"]
+        self.assertEqual(layer["state"],"PASS_11_MODAL_SENTENCE_CANDIDATES")
+        self.assertEqual(layer["rows_audited"],33)
+        self.assertEqual(layer["sentence_candidates"],11)
+        self.assertEqual(layer["new_ast_nodes_created"],0)
+        self.assertEqual(layer["interaction_edges_created"],0)
+        self.assertEqual(layer["existing_ast_nodes_mutated"],0)
+        self.assertEqual(layer["existing_ast_decision"],"OPAQUE_PRESERVED")
+
+        core=self.current["source_currentness"]["core_rules_content"]
+        self.assertEqual(core["state"],"OFFICIAL_PUBLIC_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(core["normative_structured_normalization"],"AST_READINESS_EXPANSION_CLOSED_11_SENTENCE_CANDIDATES_PENDING_SELECTION")
+        nested=core["structured_normalization"]["ast_readiness_expansion"]
+        self.assertEqual(nested["state"],"PASS_11_MODAL_SENTENCE_CANDIDATES")
+        self.assertEqual(nested["sentence_candidates"],11)
+
+        profile=self.gate["scope_profiles"]["core_rule_ast_readiness_expansion"]
+        self.assertEqual(profile["content_state"],"PASS_11_MODAL_SENTENCE_CANDIDATES")
+        self.assertEqual(profile["rows_audited"],33)
+        self.assertEqual(profile["sentence_candidates"],11)
+
+        self.assertEqual(self.current["next_milestone"],"CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
+        self.assertEqual(self.coverage["status"],"CORE_RULE_AST_READINESS_EXPANSION_V1_COMPLETE")
+        g=self.coverage["global"]
+        self.assertEqual(g["official_public_core_ast_readiness_expansion_status"],"PASS_11_MODAL_SENTENCE_CANDIDATES")
+        self.assertEqual(g["official_public_core_ast_readiness_expansion_rows_audited"],33)
+        self.assertEqual(g["official_public_core_ast_readiness_expansion_sentence_candidates"],11)
+        self.assertEqual(g["official_public_core_ast_readiness_expansion_new_ast_nodes_created"],0)
+        self.assertEqual(g["current_normalized_factions"],0)
+        self.assertEqual(g["full_normative_semantic_factions"],0)
+
+        for required in [
+            "tools/audit_core_rule_ast_readiness_expansion.py",
+            "tests/test_core_rule_ast_readiness_expansion.py",
+            "schemas/core_rule_ast_readiness_expansion.schema.json",
+            "docs/CORE_RULE_AST_READINESS_EXPANSION_MODEL.md",
+            ".github/workflows/core-rule-ast-readiness-expansion.yml",
+            "rules/11e/snapshots/2026-09-30/core_rule_ast_readiness_expansion/index.json",
         ]:
             self.assertTrue((ROOT/required).exists(),required)
 
@@ -977,7 +1070,7 @@ class RepositoryContracts(unittest.TestCase):
     def test_wave_b_reconciliation_and_promotion(self):
         self.assertIn(self.wave_b_recon["status"], {"PASS","PASS_WITH_CONFLICTS"})
         self.assertEqual(self.wave_b_recon["conflict_count"], self.current["wave_b_structural"]["source_conflicts"])
-        self.assertEqual(self.coverage["status"], "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE")
+        self.assertEqual(self.coverage["status"], "CORE_RULE_AST_READINESS_EXPANSION_V1_COMPLETE")
         complete=self.wave_b["counts"]["structural_complete"]
         self.assertEqual(sum(1 for x in self.coverage["factions"] if x.get("structural_current")), complete)
         self.assertEqual(self.coverage["global"]["current_normalized_factions"], 0)
@@ -1095,7 +1188,7 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["known_runtime_drifts"], points["known_drift_count"]+surfaces["known_drift_count"])
         self.assertEqual(nr["new_runtime_drifts"], 0)
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
-        self.assertEqual(self.current["next_milestone"], "CORE_RULE_AST_READINESS_EXPANSION_V1")
+        self.assertEqual(self.current["next_milestone"], "CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
         layer=self.current["release_transition_readiness"]
         self.assertEqual(layer["state"], "OPERATIONAL_V1")
         self.assertFalse(layer["policy"]["auto_promote"])

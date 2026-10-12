@@ -44,7 +44,7 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
     def test_public_core_rules_fingerprint_and_section_structure_are_closed(self):
         gaps={x["id"]:x for x in self.generated["gaps"]}
         core=gaps["OFFICIAL_CORE_RULES_SEMANTIC_INGESTION"]
-        self.assertEqual(core["state"],"DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING")
+        self.assertEqual(core["state"],"AST_READINESS_EXPANSION_CLOSED_11_MODAL_SENTENCE_CANDIDATES_PENDING_SELECTION")
         self.assertEqual(core["evidence"]["official_fingerprint_state"],"PASS")
         self.assertEqual(core["evidence"]["section_structure_state"],"PASS_RULE_REFERENCE_FAMILIES_01_24")
         self.assertEqual(core["evidence"]["rule_reference_families"],24)
@@ -192,8 +192,8 @@ class NormativeEquivalenceGapAuditContracts(unittest.TestCase):
 
     def test_next_pipeline_does_not_promise_full_normalization(self):
         conclusion=self.generated["conclusion"]
-        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_AST_READINESS_EXPANSION_V1")
-        self.assertIn("semantically validated against verified source evidence",conclusion["expected_effect"])
+        self.assertEqual(conclusion["recommended_next_milestone"],"CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1")
+        self.assertIn("Eleven single-modal sentence candidates",conclusion["expected_effect"])
 
 
 if __name__=="__main__":

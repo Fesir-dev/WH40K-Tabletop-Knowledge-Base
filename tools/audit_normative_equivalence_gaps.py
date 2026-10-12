@@ -81,6 +81,8 @@ def build_audit(root:Path=ROOT)->dict:
     core_direct_modal_ast=load(core_direct_modal_ast_path) if core_direct_modal_ast_path.exists() else None
     core_direct_modal_semantic_validation_path=root/"reports"/"CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json"
     core_direct_modal_semantic_validation=load(core_direct_modal_semantic_validation_path) if core_direct_modal_semantic_validation_path.exists() else None
+    core_ast_readiness_expansion_path=root/"reports"/"CORE_RULE_AST_READINESS_EXPANSION_CURRENT.json"
+    core_ast_readiness_expansion=load(core_ast_readiness_expansion_path) if core_ast_readiness_expansion_path.exists() else None
     residual_path=root/"reports"/"OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json"
     residual=load(residual_path) if residual_path.exists() else None
     overlap_summary_path=root/"reports"/"OFFICIAL_PUBLIC_MIRROR_OVERLAP_SUMMARY_CURRENT.json"
@@ -336,6 +338,37 @@ def build_audit(root:Path=ROOT)->dict:
         and core_direct_modal_semantic_validation.get("authority_boundary",{}).get("interaction_edges_allowed") is False
         and core_direct_modal_semantic_validation.get("authority_boundary",{}).get("current_normalized_factions_change")==0
     )
+    core_ast_readiness_expansion_pass=bool(
+        core_ast_readiness_expansion
+        and core_ast_readiness_expansion.get("status")=="PASS"
+        and core_ast_readiness_expansion.get("expansion_version")=="CORE_RULE_AST_READINESS_EXPANSION_V1"
+        and core_ast_readiness_expansion.get("summary",{}).get("rows_audited")==33
+        and core_ast_readiness_expansion.get("summary",{}).get("unique_paragraph_keys")==33
+        and core_ast_readiness_expansion.get("summary",{}).get("parent_state_counts")=={
+            "BLOCKED_COMPLEX_DELIMITERS":4,
+            "BLOCKED_PARENTHETICAL_SCOPE":1,
+            "BLOCKED_SENTENCE_SHAPE":28,
+        }
+        and core_ast_readiness_expansion.get("summary",{}).get("source_hashes_reproduced")==33
+        and core_ast_readiness_expansion.get("summary",{}).get("sentence_candidates")==11
+        and core_ast_readiness_expansion.get("summary",{}).get("candidate_modal_axis_counts")=={
+            "PERMISSION":9,
+            "PROHIBITION":2,
+        }
+        and core_ast_readiness_expansion.get("summary",{}).get("candidate_condition_counts")=={"0":11}
+        and core_ast_readiness_expansion.get("summary",{}).get("new_ast_nodes_created")==0
+        and core_ast_readiness_expansion.get("summary",{}).get("interaction_edges_created")==0
+        and core_ast_readiness_expansion.get("summary",{}).get("existing_ast_nodes_mutated")==0
+        and core_ast_readiness_expansion.get("summary",{}).get("additional_paragraphs_admitted")==0
+        and core_ast_readiness_expansion.get("validated_existing_ast",{}).get("decision")=="OPAQUE_PRESERVED"
+        and core_ast_readiness_expansion.get("validated_existing_ast",{}).get("ast_mutated") is False
+        and core_ast_readiness_expansion.get("authority_boundary",{}).get("readiness_expansion_complete") is True
+        and core_ast_readiness_expansion.get("authority_boundary",{}).get("sentence_candidate_is_not_ast_node") is True
+        and core_ast_readiness_expansion.get("authority_boundary",{}).get("ast_nodes_created") is False
+        and core_ast_readiness_expansion.get("authority_boundary",{}).get("interaction_edges_created") is False
+        and core_ast_readiness_expansion.get("authority_boundary",{}).get("existing_ast_mutated") is False
+        and core_ast_readiness_expansion.get("authority_boundary",{}).get("current_normalized_factions_change")==0
+    )
     residual_pass=bool(
         residual
         and residual.get("status")=="PASS"
@@ -350,7 +383,11 @@ def build_audit(root:Path=ROOT)->dict:
         and overlap_summary.get("summary",{}).get("promotable_scoped_units")==4070
     )
 
-    if core_direct_modal_semantic_validation_pass:
+    if core_ast_readiness_expansion_pass:
+        core_gap_state="AST_READINESS_EXPANSION_CLOSED_11_MODAL_SENTENCE_CANDIDATES_PENDING_SELECTION"
+        core_next_action="Select at most one of the 11 source-hash-verified modal-sentence candidates for a separately reviewed parser pilot. Candidate status is not AST admission; preserve the existing 13.07 node unchanged and opaque."
+        core_publicly_closable="Core Rules modal-sentence candidate selection"
+    elif core_direct_modal_semantic_validation_pass:
         core_gap_state="DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CLOSED_OPAQUE_READINESS_EXPANSION_PENDING"
         core_next_action="Preserve the sole validated AST node unchanged and opaque. Expand readiness analysis only across the 33 source-shape-blocked candidates with stricter deterministic shape rules; do not admit new AST nodes in the audit itself."
         core_publicly_closable="Core Rules AST-readiness expansion over source-shape blockers"
@@ -395,7 +432,10 @@ def build_audit(root:Path=ROOT)->dict:
         core_next_action="Register the 2026-06-01 official 11E Core Rules asset and build copyright-safe official semantic fingerprints/structured extraction."
         core_publicly_closable="Core Rules official public ingestion"
 
-    if core_direct_modal_semantic_validation_pass and overlap_pass and residual_pass:
+    if core_ast_readiness_expansion_pass and overlap_pass and residual_pass:
+        recommended_next_milestone="CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1"
+        expected_effect="The 33 source-shape blockers were re-audited from verified official source ranges. Eleven single-modal sentence candidates were isolated with reproducible hashes (9 permission, 2 prohibition), while 22 remain blocked under more specific fail-closed states. No AST node, interaction edge or existing-node mutation was created. Next select at most one candidate for a separate parser pilot."
+    elif core_direct_modal_semantic_validation_pass and overlap_pass and residual_pass:
         recommended_next_milestone="CORE_RULE_AST_READINESS_EXPANSION_V1"
         expected_effect="The sole direct-modal AST node was semantically validated against verified source evidence and correctly remained opaque: subject type unresolved, predicate action head unresolved, coordination blocker retained, zero AST mutation, zero interaction edges and zero additional paragraphs. Next expand readiness analysis over the 33 shape-blocked candidates without changing this node or admitting new AST nodes during the audit."
     elif core_direct_modal_ast_pass and overlap_pass and residual_pass:
@@ -544,6 +584,16 @@ def build_audit(root:Path=ROOT)->dict:
                 "direct_modal_ast_predicate_heads_resolved":core_direct_modal_semantic_validation.get("summary",{}).get("predicate_heads_resolved") if core_direct_modal_semantic_validation_pass else 0,
                 "direct_modal_ast_predicate_blockers":core_direct_modal_semantic_validation.get("validation",{}).get("action_predicate",{}).get("blockers",[]) if core_direct_modal_semantic_validation_pass else [],
                 "direct_modal_ast_semantic_validation_ast_mutated":core_direct_modal_semantic_validation.get("validation",{}).get("ast_mutated") if core_direct_modal_semantic_validation_pass else False,
+                "ast_readiness_expansion_report":"reports/CORE_RULE_AST_READINESS_EXPANSION_CURRENT.json" if core_ast_readiness_expansion_pass else None,
+                "ast_readiness_expansion_state":"PASS_11_MODAL_SENTENCE_CANDIDATES" if core_ast_readiness_expansion_pass else "PENDING",
+                "ast_readiness_expansion_rows_audited":core_ast_readiness_expansion.get("summary",{}).get("rows_audited") if core_ast_readiness_expansion_pass else 0,
+                "ast_readiness_expansion_source_hashes_reproduced":core_ast_readiness_expansion.get("summary",{}).get("source_hashes_reproduced") if core_ast_readiness_expansion_pass else 0,
+                "ast_readiness_expansion_sentence_candidates":core_ast_readiness_expansion.get("summary",{}).get("sentence_candidates") if core_ast_readiness_expansion_pass else 0,
+                "ast_readiness_expansion_candidate_modal_axes":core_ast_readiness_expansion.get("summary",{}).get("candidate_modal_axis_counts",{}) if core_ast_readiness_expansion_pass else {},
+                "ast_readiness_expansion_state_counts":core_ast_readiness_expansion.get("summary",{}).get("expansion_state_counts",{}) if core_ast_readiness_expansion_pass else {},
+                "ast_readiness_expansion_new_ast_nodes":core_ast_readiness_expansion.get("summary",{}).get("new_ast_nodes_created") if core_ast_readiness_expansion_pass else 0,
+                "ast_readiness_expansion_interaction_edges":core_ast_readiness_expansion.get("summary",{}).get("interaction_edges_created") if core_ast_readiness_expansion_pass else 0,
+                "ast_readiness_expansion_existing_ast_mutations":core_ast_readiness_expansion.get("summary",{}).get("existing_ast_nodes_mutated") if core_ast_readiness_expansion_pass else 0,
             },
             "next_action":core_next_action,
         },
@@ -723,6 +773,10 @@ def build_audit(root:Path=ROOT)->dict:
             "core_rule_direct_modal_ast_semantic_validation_decision":core_direct_modal_semantic_validation.get("validation",{}).get("decision") if core_direct_modal_semantic_validation_pass else None,
             "core_rule_direct_modal_ast_subject_types_resolved":core_direct_modal_semantic_validation.get("summary",{}).get("subject_types_resolved") if core_direct_modal_semantic_validation_pass else 0,
             "core_rule_direct_modal_ast_predicate_heads_resolved":core_direct_modal_semantic_validation.get("summary",{}).get("predicate_heads_resolved") if core_direct_modal_semantic_validation_pass else 0,
+            "core_rule_ast_readiness_expansion":"PASS_11_MODAL_SENTENCE_CANDIDATES" if core_ast_readiness_expansion_pass else "PENDING",
+            "core_rule_ast_readiness_expansion_rows":core_ast_readiness_expansion.get("summary",{}).get("rows_audited") if core_ast_readiness_expansion_pass else 0,
+            "core_rule_ast_readiness_expansion_candidates":core_ast_readiness_expansion.get("summary",{}).get("sentence_candidates") if core_ast_readiness_expansion_pass else 0,
+            "core_rule_ast_readiness_expansion_new_ast_nodes":core_ast_readiness_expansion.get("summary",{}).get("new_ast_nodes_created") if core_ast_readiness_expansion_pass else 0,
             "official_public_exact_overlap":"PASS_EXACT_PUBLIC_OVERLAP_V1" if overlap_pass else "PENDING",
             "official_public_residual_classification":"PASS_FAIL_CLOSED_CLASSIFICATION_V1" if residual_pass else "PENDING",
         },

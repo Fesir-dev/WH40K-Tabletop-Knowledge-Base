@@ -303,3 +303,30 @@ Active milestone:
 `CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1`
 
 Next classify the **310** stable paragraph identities into conservative semantic roles, preserving ambiguous/mixed cases explicitly and keeping semantic AST construction as a later layer.
+
+## Core AST readiness expansion v1 — COMPLETE
+
+The **33** source-shape blockers from the closed AST-readiness baseline were re-audited from verified official Core Rules ranges.
+
+Result:
+
+- rows audited / source hashes reproduced: **33 / 33**;
+- `CANDIDATE_SINGLE_MODAL_SENTENCE`: **11**;
+- candidate axes: **9 permission + 2 prohibition**;
+- candidate condition cues: **0 across all 11**;
+- remaining blocked: **22** under more specific fail-closed states;
+- new AST nodes: **0**;
+- interaction edges: **0**;
+- existing AST mutations: **0**;
+- additional paragraphs admitted: **0**.
+
+The existing rule 13.07 direct-modal node remains `OPAQUE_PRESERVED`.
+
+The 11 sentence candidates are readiness evidence only. They are neither AST nodes nor automatic parser admissions.
+
+Active milestone:
+
+`CORE_RULE_MODAL_SENTENCE_CANDIDATE_SELECTION_V1`
+
+Next compare only those 11 candidates and choose **at most one** structurally simplest, source-hash-verified candidate for a separate parser pilot. Do not create a new AST node during candidate selection itself.
+

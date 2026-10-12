@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "snapshot_date": "2026-09-30",
+  "authority": "GAMES_WORKSHOP_OFFICIAL",
+  "expansion_version": "CORE_RULE_AST_READINESS_EXPANSION_V1",
+  "source": {
+    "document_id": "GW_11E_CORE_RULES_PUBLIC",
+    "source_url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+    "binary_sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+    "semantic_sha256": "c8b98076bb0577878fe20f33f743f429ef838cf1df9b3eda2f42e1bba6107fe7",
+    "page_count": 88,
+    "fingerprint_report": "reports/OFFICIAL_PUBLIC_RULES_SEMANTIC_FINGERPRINT_CURRENT.json"
+  },
+  "source_verification": {
+    "binary_sha256_match": true,
+    "page_semantic_fingerprints_match": 88,
+    "document_semantic_sha256_match": true
+  },
+  "parent_readiness": {
+    "path": "rules/11e/snapshots/2026-09-30/core_rule_semantic_ast_readiness/index.json",
+    "readiness_version": "CORE_RULE_SEMANTIC_AST_READINESS_V1",
+    "shape_blocked": 33,
+    "shape_state_counts": {
+      "BLOCKED_COMPLEX_DELIMITERS": 4,
+      "BLOCKED_PARENTHETICAL_SCOPE": 1,
+      "BLOCKED_SENTENCE_SHAPE": 28,
+      "PILOT_READY_DIRECT_MODAL": 1
+    }
+  },
+  "validated_existing_ast": {
+    "report": "reports/CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_CURRENT.json",
+    "node_key": "core-ast-direct-modal--13-07--p50-o1",
+    "decision": "OPAQUE_PRESERVED",
+    "ast_mutated": false,
+    "interaction_edges_created": 0,
+    "additional_paragraphs_admitted": 0
+  },
+  "summary": {
+    "rows_audited": 33,
+    "unique_paragraph_keys": 33,
+    "parent_state_counts": {
+      "BLOCKED_COMPLEX_DELIMITERS": 4,
+      "BLOCKED_PARENTHETICAL_SCOPE": 1,
+      "BLOCKED_SENTENCE_SHAPE": 28
+    },
+    "expansion_state_counts": {
+      "BLOCKED_CONDITION_OUTSIDE_MODAL_SENTENCE": 5,
+      "BLOCKED_DELIMITER_SCOPE": 4,
+      "BLOCKED_MODAL_SENTENCE_COMPLEX_DELIMITERS": 2,
+      "BLOCKED_MODAL_SENTENCE_NONTERMINAL": 2,
+      "BLOCKED_MODAL_SENTENCE_PARENTHETICAL_SCOPE": 7,
+      "BLOCKED_PARENTHETICAL_SCOPE": 1,
+      "BLOCKED_SENTENCE_SEGMENTATION": 1,
+      "CANDIDATE_SINGLE_MODAL_SENTENCE": 11
+    },
+    "source_hashes_reproduced": 33,
+    "sentence_candidates": 11,
+    "candidate_modal_axis_counts": {
+      "PERMISSION": 9,
+      "PROHIBITION": 2
+    },
+    "candidate_condition_counts": {
+      "0": 11
+    },
+    "new_ast_nodes_created": 0,
+    "interaction_edges_created": 0,
+    "existing_ast_nodes_mutated": 0,
+    "additional_paragraphs_admitted": 0
+  },
+  "sentence_candidates": [
+    {
+      "paragraph_key": "core-rule-01-07--p9--l34--para-p9-o2",
+      "rule_ref": "01.07",
+      "page": 9,
+      "modal_axis": "PERMISSION",
+      "condition_cues": 0,
+      "sentence_count": 5,
+      "sentence_candidate": {
+        "sentence_ordinal": 1,
+        "relative_char_start": 0,
+        "relative_char_end": 387,
+        "absolute_char_start": 1986,
+        "absolute_char_end": 2373,
+        "char_count": 387,
+        "token_count": 62,
+        "semantic_sha256": "9243a4098a92cf457bb409e8088d44433047acd7e47ec252c3be44f5f692ce3e",
+        "modal_axis": "PERMISSION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    },
+    {
+      "paragraph_key": "core-rule-02-03--p10--l43--para-p10-o1",
+      "rule_ref": "02.03",
+      "page": 10,
+      "modal_axis": "PERMISSION",
+      "condition_cues": 0,
+      "sentence_count": 2,
+      "sentence_candidate": {
+        "sentence_ordinal": 1,
+        "relative_char_start": 0,
+        "relative_char_end": 58,
+        "absolute_char_start": 1470,
+        "absolute_char_end": 1528,
+        "char_count": 58,
+        "token_count": 10,
+        "semantic_sha256": "990316995486660d3e905c4fa92e1d5bbbc05210b67f12502e97caf70768d6f9",
+        "modal_axis": "PERMISSION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    },
+    {
+      "paragraph_key": "core-rule-03-04--p14--l34--para-p15-o1",
+      "rule_ref": "03.04",
+      "page": 15,
+      "modal_axis": "PROHIBITION",
+      "condition_cues": 0,
+      "sentence_count": 4,
+      "sentence_candidate": {
+        "sentence_ordinal": 1,
+        "relative_char_start": 0,
+        "relative_char_end": 209,
+        "absolute_char_start": 0,
+        "absolute_char_end": 209,
+        "char_count": 209,
+        "token_count": 40,
+        "semantic_sha256": "884d4ebfe2a7c92ae06f4baf2907795aa2ca43157a87b44965d84ba5dc829952",
+        "modal_axis": "PROHIBITION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    },
+    {
+      "paragraph_key": "core-rule-04-01--p16--l40--para-p16-o3",
+      "rule_ref": "04.01",
+      "page": 16,
+      "modal_axis": "PROHIBITION",
+      "condition_cues": 0,
+      "sentence_count": 3,
+      "sentence_candidate": {
+        "sentence_ordinal": 1,
+        "relative_char_start": 0,
+        "relative_char_end": 186,
+        "absolute_char_start": 1709,
+        "absolute_char_end": 1895,
+        "char_count": 186,
+        "token_count": 33,
+        "semantic_sha256": "14e3d9aef3b3c3736ce350368cc23b8b8ab4e05bbf56886ae8ba658d3c70a62f",
+        "modal_axis": "PROHIBITION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    },
+    {
+      "paragraph_key": "core-rule-09-02--p32--l5--para-p32-o1",
+      "rule_ref": "09.02",
+      "page": 32,
+      "modal_axis": "PERMISSION",
+      "condition_cues": 0,
+      "sentence_count": 6,
+      "sentence_candidate": {
+        "sentence_ordinal": 4,
+        "relative_char_start": 251,
+        "relative_char_end": 349,
+        "absolute_char_start": 398,
+        "absolute_char_end": 496,
+        "char_count": 98,
+        "token_count": 16,
+        "semantic_sha256": "2fdb31f11ab73649b7a80cab00e2efee5b4245df0e07b67c2bdb35fe29dfedb3",
+        "modal_axis": "PERMISSION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    },
+    {
+      "paragraph_key": "core-rule-13-02--p46--l22--para-p46-o1",
+      "rule_ref": "13.02",
+      "page": 46,
+      "modal_axis": "PERMISSION",
+      "condition_cues": 0,
+      "sentence_count": 2,
+      "sentence_candidate": {
+        "sentence_ordinal": 1,
+        "relative_char_start": 0,
+        "relative_char_end": 108,
+        "absolute_char_start": 817,
+        "absolute_char_end": 925,
+        "char_count": 108,
+        "token_count": 17,
+        "semantic_sha256": "ac54b586dab87aa8e34db126d356e2212a456cd2aac1daf8e2c0e061789e68db",
+        "modal_axis": "PERMISSION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    },
+    {
+      "paragraph_key": "core-rule-13-03--p46--l27--para-p46-o1",
+      "rule_ref": "13.03",
+      "page": 46,
+      "modal_axis": "PERMISSION",
+      "condition_cues": 0,
+      "sentence_count": 2,
+      "sentence_candidate": {
+        "sentence_ordinal": 1,
+        "relative_char_start": 0,
+        "relative_char_end": 115,
+        "absolute_char_start": 1027,
+        "absolute_char_end": 1142,
+        "char_count": 115,
+        "token_count": 17,
+        "semantic_sha256": "5095584f146736de03382cf675a96a6759f289f20101feee28e0275ca25358b6",
+        "modal_axis": "PERMISSION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    },
+    {
+      "paragraph_key": "core-rule-13-04--p46--l31--para-p46-o1",
+      "rule_ref": "13.04",
+      "page": 46,
+      "modal_axis": "PERMISSION",
+      "condition_cues": 0,
+      "sentence_count": 2,
+      "sentence_candidate": {
+        "sentence_ordinal": 1,
+        "relative_char_start": 0,
+        "relative_char_end": 118,
+        "absolute_char_start": 1203,
+        "absolute_char_end": 1321,
+        "char_count": 118,
+        "token_count": 19,
+        "semantic_sha256": "2570afc1d3399cb0300277a194df075f5f23e487490b7de90d38cde7f45c6a83",
+        "modal_axis": "PERMISSION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    },
+    {
+      "paragraph_key": "core-rule-19-04--p67--l17--para-p67-o3",
+      "rule_ref": "19.04",
+      "page": 67,
+      "modal_axis": "PERMISSION",
+      "condition_cues": 0,
+      "sentence_count": 5,
+      "sentence_candidate": {
+        "sentence_ordinal": 2,
+        "relative_char_start": 108,
+        "relative_char_end": 206,
+        "absolute_char_start": 2136,
+        "absolute_char_end": 2234,
+        "char_count": 98,
+        "token_count": 16,
+        "semantic_sha256": "e45a387db86bf9d1e16e8f38305f0c991be9ad27083718afc640d1ffdd9eba81",
+        "modal_axis": "PERMISSION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    },
+    {
+      "paragraph_key": "core-rule-24-36--p85--l43--para-p85-o1",
+      "rule_ref": "24.36",
+      "page": 85,
+      "modal_axis": "PERMISSION",
+      "condition_cues": 0,
+      "sentence_count": 5,
+      "sentence_candidate": {
+        "sentence_ordinal": 1,
+        "relative_char_start": 0,
+        "relative_char_end": 140,
+        "absolute_char_start": 1310,
+        "absolute_char_end": 1450,
+        "char_count": 140,
+        "token_count": 22,
+        "semantic_sha256": "d2a12870ff0140730a974dc8f4436ebc1d44874d156af30dedb5b4860b49f7a6",
+        "modal_axis": "PERMISSION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    },
+    {
+      "paragraph_key": "core-rule-24-37--p85--l60--para-p85-o1",
+      "rule_ref": "24.37",
+      "page": 85,
+      "modal_axis": "PERMISSION",
+      "condition_cues": 0,
+      "sentence_count": 2,
+      "sentence_candidate": {
+        "sentence_ordinal": 1,
+        "relative_char_start": 0,
+        "relative_char_end": 105,
+        "absolute_char_start": 1916,
+        "absolute_char_end": 2021,
+        "char_count": 105,
+        "token_count": 18,
+        "semantic_sha256": "7bf2d5ae66c2cfd9d0d31f3007658fa1d8f1ad7df648d1546bb98a74d9ca870b",
+        "modal_axis": "PERMISSION",
+        "modal_occurrences": 1,
+        "condition_cues": 0,
+        "complex_delimiter_count": 0,
+        "parenthetical_delimiter_count": 0,
+        "terminal_punctuation_at_end": true
+      }
+    }
+  ],
+  "authority_boundary": {
+    "readiness_expansion_complete": true,
+    "sentence_candidate_is_not_ast_node": true,
+    "sentence_candidate_is_not_parser_admission": true,
+    "ast_nodes_created": false,
+    "interaction_edges_created": false,
+    "existing_ast_mutated": false,
+    "parent_review_blockers_relaxed": false,
+    "modal_multiplicity_blockers_relaxed": false,
+    "repeated_variant_blockers_relaxed": false,
+    "complex_semantic_blockers_relaxed": false,
+    "paragraph_prose_committed": false,
+    "condition_effect_ast_complete": false,
+    "rule_interaction_graph_complete": false,
+    "app_codex_equivalence": "NOT_CLAIMED",
+    "full_faction_promotion": false,
+    "current_normalized_factions_change": 0,
+    "copyright_policy": "Parent paragraph IDs/ranges/hashes plus candidate sentence ranges/counts/hashes only; no paragraph or sentence prose committed."
+  }
+}
