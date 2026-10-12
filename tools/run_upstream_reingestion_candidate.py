@@ -17,6 +17,7 @@ FORBIDDEN_MUTATIONS = {
     "reports/CURRENT_HANDOFF.md",
 }
 
+
 def run_cmd(workspace: Path, args: list[str]) -> dict:
     p = subprocess.run(args, cwd=workspace, text=True, capture_output=True)
     return {
@@ -27,6 +28,7 @@ def run_cmd(workspace: Path, args: list[str]) -> dict:
         "status": "PASS" if p.returncode == 0 else "FAIL",
     }
 
+
 def copy_repo(src: Path, dst: Path) -> None:
     if dst.exists():
         shutil.rmtree(dst)
@@ -36,6 +38,7 @@ def copy_repo(src: Path, dst: Path) -> None:
         ignore=shutil.ignore_patterns(".git", ".cache", "__pycache__", "*.pyc"),
     )
 
+
 def inventory_files(root: Path) -> dict[str, tuple[int, int]]:
     out = {}
     for p in root.rglob("*"):
@@ -44,6 +47,24 @@ def inventory_files(root: Path) -> dict[str, tuple[int, int]]:
             st = p.stat()
             out[rel] = (st.st_size, int(st.st_mtime_ns))
     return out
+
+
+def current_mfm_snapshot_date(workspace: Path) -> str:
+    current = json.loads((workspace / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    pointer = current.get("wave_a_mfm", {}).get("snapshot")
+    if not pointer:
+        raise RuntimeError("rules/11e/current.json has no wave_a_mfm.snapshot pointer")
+    parts = Path(pointer).parts
+    try:
+        idx = parts.index("snapshots")
+        snapshot_date = parts[idx + 1]
+    except (ValueError, IndexError) as exc:
+        raise RuntimeError(f"Cannot derive MFM snapshot date from pointer: {pointer}") from exc
+    expected = workspace / pointer
+    if not expected.exists():
+        raise RuntimeError(f"Current MFM snapshot pointer does not exist: {pointer}")
+    return snapshot_date
+
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -78,6 +99,7 @@ def main() -> int:
     bs_rev = revisions.get("bsdata_wh40k_11e", {}).get("candidate") or revisions.get("bsdata_wh40k_11e", {}).get("pinned")
     waha_changed = "WAHAPEDIA_11E" in plan.get("changed_sources", [])
     waha_snapshot = candidate_date if waha_changed else baseline
+    mfm_snapshot = current_mfm_snapshot_date(workspace)
 
     stage_results = []
     hard_fail = False
@@ -102,7 +124,7 @@ def main() -> int:
                 sys.executable, "tools/crosscheck_wave_b.py",
                 "--snapshot-date", candidate_date,
                 "--wahapedia-snapshot-date", waha_snapshot,
-                "--mfm-snapshot-date", baseline,
+                "--mfm-snapshot-date", mfm_snapshot,
                 "--fetch-bsdata",
                 "--bsdata-commit", bs_rev,
                 "--report-path", f"ingestion/candidates/{plan['plan_id']}/reconciliation.json",
@@ -112,7 +134,7 @@ def main() -> int:
                 [
                     sys.executable, "tools/build_wave_b_roster_views.py",
                     "--snapshot-date", candidate_date,
-                    "--mfm-snapshot-date", baseline,
+                    "--mfm-snapshot-date", mfm_snapshot,
                 ],
                 [
                     sys.executable, "tools/audit_wave_b_views.py",
@@ -130,7 +152,7 @@ def main() -> int:
             commands = [[
                 sys.executable, "tools/build_bsdata_fallback_views.py",
                 "--snapshot-date", candidate_date,
-                "--mfm-snapshot-date", baseline,
+                "--mfm-snapshot-date", mfm_snapshot,
                 "--bsdata-commit", bs_rev,
             ]]
         elif sid == "OFFICIAL_ASSET_AUDIT":
@@ -197,11 +219,12 @@ def main() -> int:
         status = "PASS"
 
     report = {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "plan_id": plan["plan_id"],
         "plan_fingerprint": plan["plan_fingerprint"],
         "status": status,
         "candidate_snapshot_date": candidate_date,
+        "mfm_snapshot_date": mfm_snapshot,
         "changed_sources": plan.get("changed_sources", []),
         "stages": stage_results,
         "changed_files_in_isolated_workspace": changed,
@@ -213,8 +236,17 @@ def main() -> int:
     }
     (artifact_dir / "candidate_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     shutil.copy2(args.plan, artifact_dir / "reingestion_plan.json")
-    print(json.dumps({"status": status, "promotion_gate": promotion_gate, "artifact_files": len(copied)}, ensure_ascii=False))
+    print(json.dumps(
+        {
+            "status": status,
+            "promotion_gate": promotion_gate,
+            "artifact_files": len(copied),
+            "mfm_snapshot_date": mfm_snapshot,
+        },
+        ensure_ascii=False,
+    ))
     return 2 if hard_fail else 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
