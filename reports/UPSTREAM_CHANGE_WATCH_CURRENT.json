@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "b8d8961424b0b4509cbaae90ef2059116a2657e1",
+      "live": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
       "changed": true,
       "files": [
         {
@@ -125,33 +125,33 @@
         {
           "filename": "Imperium - Black Templars.json",
           "status": "modified",
-          "additions": 2523,
-          "deletions": 5771,
-          "changes": 8294,
+          "additions": 2526,
+          "deletions": 5762,
+          "changes": 8288,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Blood Angels.json",
           "status": "modified",
-          "additions": 1426,
+          "additions": 1427,
           "deletions": 1069,
-          "changes": 2495,
+          "changes": 2496,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Dark Angels.json",
           "status": "modified",
-          "additions": 895,
-          "deletions": 1597,
-          "changes": 2492,
+          "additions": 891,
+          "deletions": 1584,
+          "changes": 2475,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Deathwatch.json",
           "status": "modified",
-          "additions": 1816,
-          "deletions": 3308,
-          "changes": 5124,
+          "additions": 1953,
+          "deletions": 3329,
+          "changes": 5282,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -197,33 +197,33 @@
         {
           "filename": "Imperium - Salamanders.json",
           "status": "modified",
-          "additions": 38,
+          "additions": 40,
           "deletions": 103,
-          "changes": 141,
+          "changes": 143,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 10330,
-          "deletions": 16533,
-          "changes": 26863,
+          "additions": 10680,
+          "deletions": 16898,
+          "changes": 27578,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Space Wolves.json",
           "status": "modified",
-          "additions": 1531,
-          "deletions": 1868,
-          "changes": 3399,
+          "additions": 1609,
+          "deletions": 1830,
+          "changes": 3439,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Ultramarines.json",
           "status": "modified",
-          "additions": 945,
-          "deletions": 380,
-          "changes": 1325,
+          "additions": 955,
+          "deletions": 379,
+          "changes": 1334,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -824,13 +824,13 @@
   ],
   "wahapedia": {
     "snapshot_last_update": "2026-09-28 02:38:04",
-    "live_last_update": "2026-10-11 04:01:18",
+    "live_last_update": "2026-10-12 02:57:26",
     "manifest_files_checked": 20,
     "changed_files": [
       {
         "file": "Last_update.csv",
         "snapshot_sha256": "4b3a7e63006be965073bdc34022bdd17f6f7b063602b46a4640a11ac641b20a9",
-        "live_sha256": "05ea757a993417418e18617edaaf04ba996efeb7fc7dbad95c6fa2f2230fc4a2",
+        "live_sha256": "10b36a73048c8942214ed6bf843076fa3436a497875b23666c45ea0cea276b93",
         "snapshot_bytes": 39,
         "live_bytes": 39
       },
@@ -907,9 +907,9 @@
       {
         "file": "Datasheets_leader.csv",
         "snapshot_sha256": "c75b00eed968babbc89c6b7e077b40f7234c3040537816692ae0e609ebca174c",
-        "live_sha256": "7c0bcd3c369b9d2613ccac671798b0e95a09454ccb7cacd72654fd2ab1503830",
+        "live_sha256": "03df5237cbc90423edb2214dda431a1deb1da177c9ea3014e53fc9d6a771b9e3",
         "snapshot_bytes": 35117,
-        "live_bytes": 28429
+        "live_bytes": 27879
       },
       {
         "file": "Detachments.csv",
@@ -935,30 +935,30 @@
       {
         "file": "Enhancements.csv",
         "snapshot_sha256": "7e7fa39c9e1f9d268bda75affa8cd647c72b5511726631a8ee4110c8e86bc212",
-        "live_sha256": "412195833e5b9409aaf9a7683e115068130905a00ff348297b37cdaa81d8fbae",
+        "live_sha256": "03f0caed1bf891e88259848fb96d246a9997fd169b03a465de930d15d7a8645b",
         "snapshot_bytes": 477886,
         "live_bytes": 427440
       },
       {
         "file": "Datasheets_enhancements.csv",
         "snapshot_sha256": "1d6576003a346565168369b75efc586d3c12a766d8514571ed81ff333d241376",
-        "live_sha256": "dd451dd48affb35aba2c17fafd71c70c23d04711a63ef32e46400067306102fe",
+        "live_sha256": "feb05c53eba238910abdd63833e0d15110c24068f5bd69a06bd59f21853a3889",
         "snapshot_bytes": 285258,
-        "live_bytes": 186333
+        "live_bytes": 184533
       },
       {
         "file": "Detachment_abilities.csv",
         "snapshot_sha256": "d7e4966e2b094d43feaa88a66e10608301ff817d92393b9c7f04ec2ac1ed6a44",
-        "live_sha256": "ceb366225c9bccaaa40e7c0ab2ea13c5e816a0eb283c3fb346c143ad1b167d9d",
+        "live_sha256": "c8ad9bf4e306c6a687459d7a76a26074f32983aee63ca73c2ea8a382e4ff52c1",
         "snapshot_bytes": 324910,
-        "live_bytes": 289414
+        "live_bytes": 289532
       },
       {
         "file": "Datasheets_detachment_abilities.csv",
         "snapshot_sha256": "843395ebfa4f2dceab87b56792fff48d03d861cbfcb1eda6df3bbf2fe822ba38",
-        "live_sha256": "f0318f12183607bcd4145068eecb9f71a298ebfc7ebac080e306e5468658d239",
+        "live_sha256": "2c743c66793a07be95ffcca98c20f9780561da1ab75a34c17abb538fedd8c932",
         "snapshot_bytes": 354262,
-        "live_bytes": 190054
+        "live_bytes": 190494
       }
     ]
   },
