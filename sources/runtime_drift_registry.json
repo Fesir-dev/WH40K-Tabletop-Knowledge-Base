@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.0",
-  "as_of": "2026-09-29",
+  "schema_version": "2.1",
+  "as_of": "2026-10-13",
   "policy": {
     "purpose": "Known runtime projection drifts are retained as evidence and monitored without making scheduled validation permanently red.",
     "classification_contract": "Base classification is independent of registry state: NORMATIVE_MATCH, IMPLEMENTATION_DRIFT, RUNTIME_PROJECTION_DRIFT, UPSTREAM_REVISION_DRIFT, or UNKNOWN_RUNTIME_DRIFT.",
@@ -8,9 +8,28 @@
     "resolve_rule": "If a known drift disappears, report it as RESOLVED_CANDIDATE and require registry review before deletion.",
     "authority": "Runtime drift never changes normative Games Workshop/MFM facts."
   },
+  "current_source_lineage": {
+    "gw_mfm": {
+      "version": "1.5",
+      "official_last_updated": "2026-09-30",
+      "repository_snapshot": "rules/11e/snapshots/2026-10-13/mfm/index.json"
+    },
+    "wahapedia": {
+      "last_update": "2026-10-12 02:57:26",
+      "repository_snapshot": "rules/11e/snapshots/2026-10-13/wahapedia/manifest.json"
+    },
+    "bsdata": {
+      "repository": "BSData/wh40k-11e",
+      "revision": "043d05b5013babc96f22100c9e015ed052d3be32"
+    },
+    "new_recruit": {
+      "observed_at": "2026-10-13",
+      "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+    }
+  },
   "active": [
     {
-      "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
+      "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_10_13",
       "surface": "points",
       "parent_state": "RUNTIME_PROJECTION_DRIFT",
       "classification": "RUNTIME_PROJECTION_DRIFT",
@@ -18,29 +37,29 @@
       "unit": "Ghazghkull Thraka",
       "normative": {
         "source_id": "GW_MFM",
-        "mfm_version": "1.4",
-        "official_last_updated": "2026-09-02",
-        "points": 300,
-        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json"
+        "mfm_version": "1.5",
+        "official_last_updated": "2026-09-30",
+        "points": 290,
+        "repository_snapshot": "rules/11e/snapshots/2026-10-13/mfm/factions/orks.json"
       },
       "current_mirror_crosscheck": {
         "source_id": "WAHAPEDIA_11E",
-        "last_update": "2026-09-28 02:38:04",
-        "points": 300,
+        "last_update": "2026-10-12 02:57:26",
+        "points": 290,
         "url": "https://wahapedia.ru/wh40k11ed/factions/orks/Ghazghkull-Thraka"
       },
       "structured_upstream": {
         "source_id": "BSDATA_WH40K_11E",
         "repository": "BSData/wh40k-11e",
-        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "pinned_points": 300,
-        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "live_points": 300,
+        "pinned_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "pinned_points": 290,
+        "live_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "live_points": 290,
         "file": "Orks.json"
       },
       "runtime": {
         "source_id": "NEW_RECRUIT_WIKI",
-        "observed_at": "2026-09-29",
+        "observed_at": "2026-10-13",
         "points": 235,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
         "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
@@ -50,7 +69,7 @@
       "state": "ACTIVE"
     },
     {
-      "id": "NR_ORKS_BOYZ_POINTS_2026_09_29",
+      "id": "NR_ORKS_BOYZ_POINTS_2026_10_13",
       "surface": "points",
       "parent_state": "RUNTIME_PROJECTION_DRIFT",
       "classification": "RUNTIME_PROJECTION_DRIFT",
@@ -58,29 +77,29 @@
       "unit": "Boyz",
       "normative": {
         "source_id": "GW_MFM",
-        "mfm_version": "1.4",
-        "official_last_updated": "2026-09-02",
-        "points": 90,
-        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json"
+        "mfm_version": "1.5",
+        "official_last_updated": "2026-09-30",
+        "points": 85,
+        "repository_snapshot": "rules/11e/snapshots/2026-10-13/mfm/factions/orks.json"
       },
       "current_mirror_crosscheck": {
         "source_id": "WAHAPEDIA_11E",
-        "last_update": "2026-09-28 02:38:04",
-        "points": 90,
+        "last_update": "2026-10-12 02:57:26",
+        "points": 85,
         "url": "https://wahapedia.ru/wh40k11ed/factions/orks/Boyz"
       },
       "structured_upstream": {
         "source_id": "BSDATA_WH40K_11E",
         "repository": "BSData/wh40k-11e",
-        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "pinned_points": 90,
-        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "live_points": 90,
+        "pinned_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "pinned_points": 85,
+        "live_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "live_points": 85,
         "file": "Orks.json"
       },
       "runtime": {
         "source_id": "NEW_RECRUIT_WIKI",
-        "observed_at": "2026-09-29",
+        "observed_at": "2026-10-13",
         "points": 75,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/187-93d6-1ac7-dbde/boyz",
         "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
@@ -90,7 +109,7 @@
       "state": "ACTIVE"
     },
     {
-      "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
+      "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_10_13",
       "surface": "points",
       "parent_state": "RUNTIME_PROJECTION_DRIFT",
       "classification": "RUNTIME_PROJECTION_DRIFT",
@@ -98,29 +117,29 @@
       "unit": "Battlewagon",
       "normative": {
         "source_id": "GW_MFM",
-        "mfm_version": "1.4",
-        "official_last_updated": "2026-09-02",
-        "points": 150,
-        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json"
+        "mfm_version": "1.5",
+        "official_last_updated": "2026-09-30",
+        "points": 160,
+        "repository_snapshot": "rules/11e/snapshots/2026-10-13/mfm/factions/orks.json"
       },
       "current_mirror_crosscheck": {
         "source_id": "WAHAPEDIA_11E",
-        "last_update": "2026-09-28 02:38:04",
-        "points": 150,
+        "last_update": "2026-10-12 02:57:26",
+        "points": 160,
         "url": "https://wahapedia.ru/wh40k11ed/factions/orks/Battlewagon"
       },
       "structured_upstream": {
         "source_id": "BSDATA_WH40K_11E",
         "repository": "BSData/wh40k-11e",
-        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "pinned_points": 150,
-        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "live_points": 150,
+        "pinned_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "pinned_points": 160,
+        "live_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "live_points": 160,
         "file": "Orks.json"
       },
       "runtime": {
         "source_id": "NEW_RECRUIT_WIKI",
-        "observed_at": "2026-09-29",
+        "observed_at": "2026-10-13",
         "points": 145,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9af5-6820-1ff2-6c01/battlewagon",
         "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
@@ -130,7 +149,7 @@
       "state": "ACTIVE"
     },
     {
-      "id": "NR_ORKS_WARBOSS_POINTS_2026_09_29",
+      "id": "NR_ORKS_WARBOSS_POINTS_2026_10_13",
       "surface": "points",
       "parent_state": "RUNTIME_PROJECTION_DRIFT",
       "classification": "RUNTIME_PROJECTION_DRIFT",
@@ -138,29 +157,29 @@
       "unit": "Warboss",
       "normative": {
         "source_id": "GW_MFM",
-        "mfm_version": "1.4",
-        "official_last_updated": "2026-09-02",
+        "mfm_version": "1.5",
+        "official_last_updated": "2026-09-30",
         "points": 100,
-        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json"
+        "repository_snapshot": "rules/11e/snapshots/2026-10-13/mfm/factions/orks.json"
       },
       "current_mirror_crosscheck": {
         "source_id": "WAHAPEDIA_11E",
-        "last_update": "2026-09-28 02:38:04",
+        "last_update": "2026-10-12 02:57:26",
         "points": 100,
         "url": "https://wahapedia.ru/wh40k11ed/factions/orks/Warboss"
       },
       "structured_upstream": {
         "source_id": "BSDATA_WH40K_11E",
         "repository": "BSData/wh40k-11e",
-        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "pinned_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
         "pinned_points": 100,
-        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "live_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
         "live_points": 100,
         "file": "Orks.json"
       },
       "runtime": {
         "source_id": "NEW_RECRUIT_WIKI",
-        "observed_at": "2026-09-29",
+        "observed_at": "2026-10-13",
         "points": 85,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9189-6889-492c-a43e/warboss",
         "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
@@ -170,7 +189,7 @@
       "state": "ACTIVE"
     },
     {
-      "id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29",
+      "id": "NR_NECRONS_WARRIORS_POINTS_2026_10_13",
       "surface": "points",
       "parent_state": "RUNTIME_PROJECTION_DRIFT",
       "classification": "RUNTIME_PROJECTION_DRIFT",
@@ -178,29 +197,29 @@
       "unit": "Necron Warriors",
       "normative": {
         "source_id": "GW_MFM",
-        "mfm_version": "1.4",
-        "official_last_updated": "2026-09-02",
+        "mfm_version": "1.5",
+        "official_last_updated": "2026-09-30",
         "points": 85,
-        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/necrons.json"
+        "repository_snapshot": "rules/11e/snapshots/2026-10-13/mfm/factions/necrons.json"
       },
       "current_mirror_crosscheck": {
         "source_id": "WAHAPEDIA_11E",
-        "last_update": "2026-09-28 02:38:04",
+        "last_update": "2026-10-12 02:57:26",
         "points": 85,
         "url": "https://wahapedia.ru/wh40k11ed/factions/necrons/Necron-Warriors"
       },
       "structured_upstream": {
         "source_id": "BSDATA_WH40K_11E",
         "repository": "BSData/wh40k-11e",
-        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "pinned_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
         "pinned_points": 85,
-        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "live_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
         "live_points": 85,
         "file": "Necrons.json"
       },
       "runtime": {
         "source_id": "NEW_RECRUIT_WIKI",
-        "observed_at": "2026-09-29",
+        "observed_at": "2026-10-13",
         "points": 80,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---necrons/5c25-2188-d5fe-ef0d/necron-warriors",
         "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
@@ -210,7 +229,126 @@
       "state": "ACTIVE"
     },
     {
-      "id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29",
+      "id": "NR_ASTRA_MILITARUM_LORD_SOLAR_POINTS_2026_10_13",
+      "surface": "points",
+      "parent_state": "RUNTIME_PROJECTION_DRIFT",
+      "classification": "RUNTIME_PROJECTION_DRIFT",
+      "roster_slug": "astra_militarum",
+      "unit": "Lord Solar Leontus",
+      "normative": {
+        "source_id": "GW_MFM",
+        "mfm_version": "1.5",
+        "official_last_updated": "2026-09-30",
+        "points": 120,
+        "repository_snapshot": "rules/11e/snapshots/2026-10-13/mfm/factions/astra-militarum.json"
+      },
+      "current_mirror_crosscheck": {
+        "source_id": "WAHAPEDIA_11E",
+        "last_update": "2026-10-12 02:57:26",
+        "points": 120,
+        "url": "https://wahapedia.ru/wh40k11ed/factions/astra-militarum/Lord-Solar-Leontus"
+      },
+      "structured_upstream": {
+        "source_id": "BSDATA_WH40K_11E",
+        "repository": "BSData/wh40k-11e",
+        "pinned_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "pinned_points": 120,
+        "live_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "live_points": 120,
+        "file": "Imperium - Astra Militarum - Library.json",
+        "library_target_id": "a9d-55c1-3d24-fa25"
+      },
+      "runtime": {
+        "source_id": "NEW_RECRUIT_WIKI",
+        "observed_at": "2026-10-13",
+        "points": 130,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---astra-militarum/d2de-6903-46a-f02c/lord-solar-leontus",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+      },
+      "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
+      "normative_kb_change_required": false,
+      "state": "ACTIVE"
+    },
+    {
+      "id": "NR_CSM_ABADDON_POINTS_2026_10_13",
+      "surface": "points",
+      "parent_state": "RUNTIME_PROJECTION_DRIFT",
+      "classification": "RUNTIME_PROJECTION_DRIFT",
+      "roster_slug": "chaos_space_marines",
+      "unit": "Abaddon The Despoiler",
+      "normative": {
+        "source_id": "GW_MFM",
+        "mfm_version": "1.5",
+        "official_last_updated": "2026-09-30",
+        "points": 300,
+        "repository_snapshot": "rules/11e/snapshots/2026-10-13/mfm/factions/chaos-space-marines.json"
+      },
+      "current_mirror_crosscheck": {
+        "source_id": "WAHAPEDIA_11E",
+        "last_update": "2026-10-12 02:57:26",
+        "points": 300
+      },
+      "structured_upstream": {
+        "source_id": "BSDATA_WH40K_11E",
+        "repository": "BSData/wh40k-11e",
+        "pinned_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "pinned_points": 300,
+        "live_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "live_points": 300,
+        "file": "Chaos - Chaos Space Marines.json"
+      },
+      "runtime": {
+        "source_id": "NEW_RECRUIT_WIKI",
+        "observed_at": "2026-10-13",
+        "points": 295,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-space-marines/2e42-8d21-37fe-1de9/abaddon-the-despoiler",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+      },
+      "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
+      "normative_kb_change_required": false,
+      "state": "ACTIVE"
+    },
+    {
+      "id": "NR_VOTANN_UTHAR_POINTS_2026_10_13",
+      "surface": "points",
+      "parent_state": "RUNTIME_PROJECTION_DRIFT",
+      "classification": "RUNTIME_PROJECTION_DRIFT",
+      "roster_slug": "leagues_of_votann",
+      "unit": "ûthar The Destined",
+      "normative": {
+        "source_id": "GW_MFM",
+        "mfm_version": "1.5",
+        "official_last_updated": "2026-09-30",
+        "points": 100,
+        "repository_snapshot": "rules/11e/snapshots/2026-10-13/mfm/factions/leagues-of-votann.json"
+      },
+      "current_mirror_crosscheck": {
+        "source_id": "WAHAPEDIA_11E",
+        "last_update": "2026-10-12 02:57:26",
+        "points": 100
+      },
+      "structured_upstream": {
+        "source_id": "BSDATA_WH40K_11E",
+        "repository": "BSData/wh40k-11e",
+        "pinned_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "pinned_points": 100,
+        "live_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
+        "live_points": 100,
+        "file": "Leagues of Votann.json"
+      },
+      "runtime": {
+        "source_id": "NEW_RECRUIT_WIKI",
+        "observed_at": "2026-10-13",
+        "points": 90,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---leagues-of-votann/95dc-990b-2a93-5e83/%C3%BBthar-the-destined",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+      },
+      "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
+      "normative_kb_change_required": false,
+      "state": "ACTIVE"
+    },
+    {
+      "id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_10_13",
       "surface": "runtime_surface",
       "check_id": "ORKS_CURRENT_DETACHMENT_SHOOTA_BOYZ",
       "parent_state": "RUNTIME_PROJECTION_DRIFT",
@@ -221,26 +359,26 @@
       "normative": {
         "source_id": "GW_MFM",
         "present": true,
-        "mfm_version": "1.4",
-        "repository_snapshot": "rules/11e/snapshots/2026-09-29/mfm/factions/orks.json"
+        "mfm_version": "1.5",
+        "repository_snapshot": "rules/11e/snapshots/2026-10-13/mfm/factions/orks.json"
       },
       "current_mirror_crosscheck": {
         "source_id": "WAHAPEDIA_11E",
-        "last_update": "2026-09-28 02:38:04",
+        "last_update": "2026-10-12 02:57:26",
         "present": true,
-        "repository_snapshot": "rules/11e/snapshots/2026-09-29/wahapedia/factions/orks.json"
+        "repository_snapshot": "rules/11e/snapshots/2026-10-13/wahapedia/factions/orks.json"
       },
       "structured_upstream": {
         "source_id": "BSDATA_WH40K_11E",
-        "pinned_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "pinned_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
         "pinned_present": true,
-        "live_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+        "live_revision": "043d05b5013babc96f22100c9e015ed052d3be32",
         "live_present": true,
         "file": "Orks.json"
       },
       "runtime": {
         "source_id": "NEW_RECRUIT_WIKI",
-        "observed_at": "2026-09-29",
+        "observed_at": "2026-10-13",
         "present": false,
         "selector_url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/dc5b-07db-415b-a1da/detachment",
         "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
@@ -250,10 +388,29 @@
       "state": "ACTIVE"
     }
   ],
+  "history": [
+    {
+      "checkpoint": "2026-09-29",
+      "source_registry_revision": "MFM_1.4_WAHAPEDIA_2026-09-28_BSDATA_951d590",
+      "superseded_active_ids": [
+        "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
+        "NR_ORKS_BOYZ_POINTS_2026_09_29",
+        "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
+        "NR_ORKS_WARBOSS_POINTS_2026_09_29",
+        "NR_NECRONS_WARRIORS_POINTS_2026_09_29",
+        "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29"
+      ],
+      "reason": "Superseded as current registry entries by the MFM v1.5 / Wahapedia 2026-10-12 / BSData 043d05b currentness refresh. Historical values remain available in Git history and prior runtime validation reports."
+    }
+  ],
   "corrections": [
     {
       "id": "REMOVE_MISATTRIBUTED_GHAZ_5CA1013",
-      "correction": "The prior closure record incorrectly attributed BSData commit 5ca1013537f539995acdac2caafb93c879163f00 (235→175 hunk) to Ghazghkull Thraka. Exact extraction at pinned/live 951d590... shows Ghazghkull = 300; the historical hunk is not used as Ghaz lineage evidence."
+      "correction": "The prior closure record incorrectly attributed BSData commit 5ca1013537f539995acdac2caafb93c879163f00 (235→175 hunk) to Ghazghkull Thraka. Exact extraction at the then-pinned/live revision showed Ghazghkull = 300; the historical hunk is not used as Ghaz lineage evidence."
+    },
+    {
+      "id": "LORD_SOLAR_LIBRARY_RESOLUTION_2026_10_13",
+      "correction": "Lord Solar Leontus is represented in the primary Astra Militarum catalogue by an entryLink to target a9d-55c1-3d24-fa25 in Imperium - Astra Militarum - Library.json. The linked BSData object carries 120 pts. Runtime validation must follow imported catalogue libraries before assigning UNKNOWN_RUNTIME_DRIFT."
     }
   ]
 }
