@@ -11,6 +11,7 @@ on:
       - "tools/build_wave_b_roster_views.py"
       - "tools/apply_reingestion_promotion.py"
       - "tools/validate_new_recruit_runtime.py"
+      - "tools/validate_new_recruit_runtime_current.py"
       - "sources/runtime_drift_registry.json"
       - ".github/workflows/rules-refresh-2026-10-13.yml"
   workflow_dispatch:
@@ -143,7 +144,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          python tools/validate_new_recruit_runtime.py
+          python tools/validate_new_recruit_runtime_current.py
           code=$?
           set -e
           if [ "$code" -eq 0 ]; then
