@@ -85,14 +85,19 @@ def main():
         for ds in w.get("datasheets",[]):
             wb[norm(ds.get("name"))].append(ds)
 
-        selected=[]; unresolved=[]
+        selected=[]
+        unresolved_current=[]
+        unresolved_legends=[]
         for u in m_units:
             key=norm(u.get("name"))
             candidates=wb.get(key,[])
             if not candidates and key in NAME_ALIASES:
                 candidates=wb.get(NAME_ALIASES[key],[])
             if not candidates:
-                unresolved.append(u.get("name"))
+                if u.get("legends") is True:
+                    unresolved_legends.append(u.get("name"))
+                else:
+                    unresolved_current.append(u.get("name"))
                 continue
             ds=choose_ds(candidates,u)
             selected.append({
@@ -119,7 +124,8 @@ def main():
         structural_counts={
             "datasheets":len(selected),
             "mfm_units":len(m_units),
-            "unresolved_mfm_units":len(unresolved),
+            "unresolved_mfm_units":len(unresolved_current),
+            "unresolved_legends_mfm_units":len(unresolved_legends),
             "current_edition_11_datasheets":sum(1 for x in selected if str(x.get("source_edition"))=="11"),
             "legends_datasheets":sum(1 for x in selected if x.get("legends")),
             "model_profiles":sum(len(ds_by_id.get(i,{}).get("models",[])) for i in selected_ids),
@@ -134,7 +140,7 @@ def main():
             "stratagems":len(strat),
         }
         payload={
-            "schema_version":"1.0",
+            "schema_version":"1.1",
             "snapshot_date":DATE,
             "roster_slug":slug,
             "wahapedia_source_slug":wslug,
@@ -143,17 +149,19 @@ def main():
             "mfm_version":m.get("mfm_version"),
             "mfm_view_mode":cat.get("mfm_view_mode"),
             "mfm_group_title":cat.get("mfm_group_title"),
-            "status":"STRUCTURAL_COMPLETE" if not unresolved else "STRUCTURAL_PARTIAL",
+            "status":"STRUCTURAL_COMPLETE" if not unresolved_current else "STRUCTURAL_PARTIAL",
             "authority":{
                 "points_and_costs":"GW_MFM",
                 "rules_structure":"WAHAPEDIA_11E_CSV_SECONDARY_MIRROR",
                 "bsdata":"DIAGNOSTIC_IMPLEMENTATION_ONLY",
+                "legends_gap_policy":"Missing Legends-only mirror datasheets do not downgrade current matched-play structural completeness; they remain explicit unresolved_legends_mfm_units.",
             },
             "datasheets":selected,
             "detachment_ids":[x.get("id") for x in w_det if x.get("id")],
             "enhancement_ids":[x.get("id") for x in enh if x.get("id")],
             "stratagem_ids":[x.get("id") for x in strat if x.get("id")],
-            "unresolved_mfm_units":unresolved,
+            "unresolved_mfm_units":unresolved_current,
+            "unresolved_legends_mfm_units":unresolved_legends,
             "counts":structural_counts,
             "semantic_policy":{
                 "full_rule_text_embedded":False,
@@ -171,13 +179,14 @@ def main():
             "wahapedia_source_slug":wslug,
             "mfm_source_slug":mslug,
             "counts":structural_counts,
-            "unresolved_mfm_units":unresolved,
+            "unresolved_mfm_units":unresolved_current,
+            "unresolved_legends_mfm_units":unresolved_legends,
         })
     complete=sum(1 for x in index if x.get("status")=="STRUCTURAL_COMPLETE")
     partial=sum(1 for x in index if x.get("status")=="STRUCTURAL_PARTIAL")
     unavailable=sum(1 for x in index if str(x.get("status","")).startswith("UNAVAILABLE"))
     out={
-        "schema_version":"1.0",
+        "schema_version":"1.1",
         "snapshot_date":DATE,
         "wahapedia_last_update":manifest["source"]["last_update"],
         "counts":{"roster_identities":len(index),"structural_complete":complete,"structural_partial":partial,"unavailable":unavailable},
