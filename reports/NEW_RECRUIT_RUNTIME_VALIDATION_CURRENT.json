@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "status": "NEW_RUNTIME_PROJECTION_DRIFT",
   "system": {
     "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40,000-11th-edition",
@@ -418,7 +418,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -428,7 +428,7 @@
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_WARBOSS_POINTS_2026_09_29"
+        "known_drift_id": "NR_ORKS_WARBOSS_POINTS_2026_10_13"
       },
       {
         "slug": "necrons",
@@ -458,7 +458,7 @@
             "file": "Necrons.json"
           },
           "live_bsdata": {
-            "revision": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
             "file": "Necrons.json"
           },
           "new_recruit": {
@@ -468,7 +468,7 @@
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29"
+        "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_10_13"
       }
     ],
     "new_drifts": [
@@ -500,7 +500,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -539,7 +539,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -578,7 +578,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -640,7 +640,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -783,7 +783,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -822,7 +822,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -861,7 +861,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -871,7 +871,7 @@
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_WARBOSS_POINTS_2026_09_29"
+        "known_drift_id": "NR_ORKS_WARBOSS_POINTS_2026_10_13"
       },
       {
         "slug": "necrons",
@@ -901,7 +901,7 @@
             "file": "Necrons.json"
           },
           "live_bsdata": {
-            "revision": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+            "revision": "043d05b5013babc96f22100c9e015ed052d3be32",
             "file": "Necrons.json"
           },
           "new_recruit": {
@@ -911,7 +911,7 @@
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29"
+        "known_drift_id": "NR_NECRONS_WARRIORS_POINTS_2026_10_13"
       },
       {
         "slug": "necrons",
@@ -956,7 +956,7 @@
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29"
+        "known_drift_id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_10_13"
       }
     ],
     "new_drifts": [],
@@ -983,7 +983,7 @@
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "KNOWN_ACTIVE",
-        "known_drift_id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29"
+        "known_drift_id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_10_13"
       },
       {
         "check_id": "ORKS_WARBOSS_LEADER_BODYGUARDS",
@@ -1044,19 +1044,31 @@
   },
   "known_drift_registry": {
     "path": "sources/runtime_drift_registry.json",
-    "active": 6,
+    "active": 9,
     "observed_active": 3,
     "resolved_candidates": [
       {
-        "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
+        "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_10_13",
         "classification": "RESOLVED_CANDIDATE"
       },
       {
-        "id": "NR_ORKS_BOYZ_POINTS_2026_09_29",
+        "id": "NR_ORKS_BOYZ_POINTS_2026_10_13",
         "classification": "RESOLVED_CANDIDATE"
       },
       {
-        "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
+        "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_10_13",
+        "classification": "RESOLVED_CANDIDATE"
+      },
+      {
+        "id": "NR_ASTRA_MILITARUM_LORD_SOLAR_POINTS_2026_10_13",
+        "classification": "RESOLVED_CANDIDATE"
+      },
+      {
+        "id": "NR_CSM_ABADDON_POINTS_2026_10_13",
+        "classification": "RESOLVED_CANDIDATE"
+      },
+      {
+        "id": "NR_VOTANN_UTHAR_POINTS_2026_10_13",
         "classification": "RESOLVED_CANDIDATE"
       }
     ]
@@ -1065,7 +1077,7 @@
     "runtime_source": "NEW_RECRUIT_WIKI",
     "expected_upstream": "BSDATA_WH40K_11E",
     "pinned_bsdata_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-    "live_bsdata_commit": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+    "live_bsdata_commit": "043d05b5013babc96f22100c9e015ed052d3be32",
     "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
   },
   "policy": {
@@ -1075,5 +1087,16 @@
     "new_drift_behavior": "New or changed point/surface drift fails the workflow and requires classification.",
     "normative_guard": "Runtime mismatch never automatically changes normative Games Workshop/MFM data.",
     "not_claimed": "Does not prove every builder constraint or the undocumented BSData-to-New-Recruit synchronization interval."
+  },
+  "provenance": {
+    "current_rules": {
+      "mfm_version": "1.4",
+      "mfm_last_updated": "2026-09-02",
+      "wahapedia_last_update": "2026-09-28 02:38:04",
+      "bsdata_revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+      "validator": "tools/validate_new_recruit_runtime_current.py",
+      "legacy_validator": "tools/validate_new_recruit_runtime.py",
+      "library_resolution": "ENABLED_FOR_IMPORTED_BSDATA_LIBRARIES"
+    }
   }
 }
