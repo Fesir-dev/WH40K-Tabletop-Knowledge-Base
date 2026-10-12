@@ -8,6 +8,8 @@ on:
       - "tools/import_mfm_snapshot.py"
       - "tools/run_upstream_reingestion_candidate.py"
       - "tools/audit_official_11e_assets.py"
+      - "tools/build_wave_b_roster_views.py"
+      - "tools/apply_reingestion_promotion.py"
       - ".github/workflows/rules-refresh-2026-10-13.yml"
   workflow_dispatch:
 
