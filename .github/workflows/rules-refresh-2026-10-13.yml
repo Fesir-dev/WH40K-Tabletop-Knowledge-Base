@@ -1,0 +1,140 @@
+name: Rules refresh 2026-10-13
+
+on:
+  push:
+    branches:
+      - rules-refresh-2026-10-13
+    paths:
+      - "tools/import_mfm_snapshot.py"
+      - "tools/run_upstream_reingestion_candidate.py"
+      - ".github/workflows/rules-refresh-2026-10-13.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rules-refresh-2026-10-13
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: rules-refresh-2026-10-13
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install refresh dependency
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
+
+      - name: Import and promote official MFM v1.5 authority snapshot
+        run: |
+          python tools/import_mfm_snapshot.py \
+            --snapshot-date 2026-10-13 \
+            --version 1.5 \
+            --official-last-updated 2026-09-30 \
+            --verified-at 2026-10-13 \
+            --extraction-commit 8e0e635674018969fdcfaa64e83d4153ebefad70
+
+      - name: Refresh upstream drift after MFM authority promotion
+        shell: bash
+        run: |
+          set +e
+          python tools/watch_upstreams.py
+          code=$?
+          set -e
+          if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then
+            exit "$code"
+          fi
+
+      - name: Build deterministic secondary reingestion plan
+        run: |
+          mkdir -p .cache/rules-refresh
+          python tools/plan_upstream_reingestion.py \
+            --watch-report reports/UPSTREAM_CHANGE_WATCH_CURRENT.json \
+            --candidate-snapshot-date 2026-10-13 \
+            --output .cache/rules-refresh/reingestion_plan.json
+          python - <<'PY'
+          import json
+          p=json.load(open('.cache/rules-refresh/reingestion_plan.json',encoding='utf-8'))
+          assert 'BSDATA_MFM_11E' not in p.get('changed_sources', []), p.get('changed_sources')
+          assert not p.get('blockers'), p.get('blockers')
+          print(p['plan_id'], p['state'], p['changed_sources'])
+          PY
+
+      - name: Run isolated Wahapedia and BSData candidate
+        run: |
+          python tools/run_upstream_reingestion_candidate.py \
+            --plan .cache/rules-refresh/reingestion_plan.json \
+            --workspace .cache/rules-refresh/workspace \
+            --artifact-dir .cache/rules-refresh/artifact
+          python - <<'PY'
+          import json
+          r=json.load(open('.cache/rules-refresh/artifact/candidate_report.json',encoding='utf-8'))
+          assert r['status']=='PASS', r
+          assert r['promotion_gate']=='ELIGIBLE_FOR_REVIEWED_PROMOTION', r
+          assert r['mfm_snapshot_date']=='2026-10-13', r
+          print('candidate:', r['status'], r['promotion_gate'], len(r['artifact_files']))
+          PY
+
+      - name: Apply reviewed secondary candidate on refresh branch
+        run: |
+          python tools/apply_reingestion_promotion.py \
+            --artifact-dir .cache/rules-refresh/artifact \
+            --repo-root . \
+            --promoted-at 2026-10-13 \
+            --apply
+
+      - name: Recheck all upstreams after promotion
+        run: python tools/watch_upstreams.py
+
+      - name: Revalidate New Recruit runtime projection
+        run: |
+          python tools/validate_new_recruit_runtime.py
+          python tools/sync_new_recruit_runtime_status.py
+
+      - name: Verify promoted semantic resolver
+        run: python tools/query_current_semantics.py --smoke-test
+
+      - name: Validate repository contracts and tests
+        run: |
+          python tools/validate_repo.py
+          python -m unittest discover -s tests -v
+
+      - name: Preserve candidate evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rules-refresh-2026-10-13-candidate
+          path: .cache/rules-refresh/artifact
+          if-no-files-found: error
+
+      - name: Commit validated refresh checkpoint
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            coverage/current.json \
+            rules/11e/current.json \
+            sources/registry.json \
+            sources/currentness_gate.json \
+            reports/CURRENT_HANDOFF.md \
+            reports/MFM_1_5_REFRESH_CURRENT.json \
+            reports/MFM_1_5_REFRESH_2026-10-13.md \
+            reports/UPSTREAM_CHANGE_WATCH_CURRENT.json \
+            reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json \
+            ingestion/runs/2026-10-13_mfm_v1_5_refresh.json \
+            ingestion/promotions \
+            rules/11e/snapshots/2026-10-13
+          if git diff --cached --quiet; then
+            echo "No refresh changes to commit"
+            exit 1
+          fi
+          git commit -m "Refresh current 11E rules and MFM v1.5"
+          git push origin HEAD:rules-refresh-2026-10-13
