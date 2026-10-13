@@ -7,295 +7,311 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+      "live": "907d5baa4c6262670f10133b4882f526e44f299b",
       "changed": true,
       "files": [
         {
           "filename": "Aeldari - Aeldari Library.json",
           "status": "modified",
-          "additions": 87,
-          "deletions": 78,
-          "changes": 165,
+          "additions": 653,
+          "deletions": 469,
+          "changes": 1122,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Chaos - Chaos Daemons Library.json",
           "status": "modified",
-          "additions": 60,
-          "deletions": 86,
-          "changes": 146,
+          "additions": 200,
+          "deletions": 164,
+          "changes": 364,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Chaos - Chaos Knights Library.json",
           "status": "modified",
-          "additions": 20,
-          "deletions": 17,
-          "changes": 37,
+          "additions": 60,
+          "deletions": 37,
+          "changes": 97,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Chaos - Chaos Space Marines.json",
           "status": "modified",
-          "additions": 652,
-          "deletions": 434,
-          "changes": 1086,
+          "additions": 875,
+          "deletions": 544,
+          "changes": 1419,
           "classification": "ASTARTES"
         },
         {
           "filename": "Chaos - Death Guard.json",
           "status": "modified",
-          "additions": 222,
-          "deletions": 68,
-          "changes": 290,
+          "additions": 324,
+          "deletions": 119,
+          "changes": 443,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Chaos - Emperor's Children.json",
           "status": "modified",
-          "additions": 81,
-          "deletions": 76,
-          "changes": 157,
+          "additions": 150,
+          "deletions": 106,
+          "changes": 256,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Chaos - Thousand Sons.json",
           "status": "modified",
-          "additions": 82,
-          "deletions": 130,
-          "changes": 212,
+          "additions": 172,
+          "deletions": 175,
+          "changes": 347,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Chaos - World Eaters.json",
           "status": "modified",
-          "additions": 1182,
-          "deletions": 77,
-          "changes": 1259,
+          "additions": 1295,
+          "deletions": 135,
+          "changes": 1430,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Genestealer Cults.json",
           "status": "modified",
-          "additions": 290,
-          "deletions": 42,
-          "changes": 332,
+          "additions": 364,
+          "deletions": 79,
+          "changes": 443,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Adepta Sororitas.json",
           "status": "modified",
-          "additions": 21,
-          "deletions": 13,
-          "changes": 34,
+          "additions": 121,
+          "deletions": 63,
+          "changes": 184,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Adeptus Custodes.json",
           "status": "modified",
-          "additions": 66,
-          "deletions": 53,
-          "changes": 119,
+          "additions": 148,
+          "deletions": 94,
+          "changes": 242,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Adeptus Mechanicus.json",
           "status": "modified",
-          "additions": 43,
-          "deletions": 39,
-          "changes": 82,
+          "additions": 166,
+          "deletions": 86,
+          "changes": 252,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Agents of the Imperium.json",
           "status": "modified",
-          "additions": 82,
-          "deletions": 31,
-          "changes": 113,
+          "additions": 283,
+          "deletions": 125,
+          "changes": 408,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Astra Militarum - Library.json",
           "status": "modified",
-          "additions": 64,
-          "deletions": 40,
-          "changes": 104,
+          "additions": 398,
+          "deletions": 187,
+          "changes": 585,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Black Templars.json",
           "status": "modified",
-          "additions": 2532,
-          "deletions": 5759,
-          "changes": 8291,
+          "additions": 2531,
+          "deletions": 5758,
+          "changes": 8289,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Blood Angels.json",
           "status": "modified",
-          "additions": 1429,
-          "deletions": 1070,
-          "changes": 2499,
+          "additions": 1485,
+          "deletions": 1089,
+          "changes": 2574,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Dark Angels.json",
           "status": "modified",
-          "additions": 891,
-          "deletions": 1589,
-          "changes": 2480,
+          "additions": 949,
+          "deletions": 1617,
+          "changes": 2566,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Deathwatch.json",
           "status": "modified",
-          "additions": 2046,
-          "deletions": 3288,
-          "changes": 5334,
+          "additions": 2105,
+          "deletions": 3320,
+          "changes": 5425,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Grey Knights.json",
           "status": "modified",
-          "additions": 244,
-          "deletions": 122,
-          "changes": 366,
+          "additions": 312,
+          "deletions": 156,
+          "changes": 468,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Imperial Fists.json",
           "status": "modified",
-          "additions": 66,
-          "deletions": 57,
-          "changes": 123,
+          "additions": 72,
+          "deletions": 60,
+          "changes": 132,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Imperial Knights - Library.json",
           "status": "modified",
-          "additions": 18,
-          "deletions": 10,
-          "changes": 28,
+          "additions": 64,
+          "deletions": 33,
+          "changes": 97,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Iron Hands.json",
           "status": "modified",
-          "additions": 52,
-          "deletions": 60,
-          "changes": 112,
+          "additions": 56,
+          "deletions": 62,
+          "changes": 118,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Raven Guard.json",
           "status": "modified",
-          "additions": 37,
-          "deletions": 115,
-          "changes": 152,
+          "additions": 41,
+          "deletions": 117,
+          "changes": 158,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Salamanders.json",
           "status": "modified",
-          "additions": 40,
-          "deletions": 103,
-          "changes": 143,
+          "additions": 44,
+          "deletions": 105,
+          "changes": 149,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11361,
-          "deletions": 16950,
-          "changes": 28311,
+          "additions": 11769,
+          "deletions": 17155,
+          "changes": 28924,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Space Wolves.json",
           "status": "modified",
-          "additions": 1610,
-          "deletions": 1838,
-          "changes": 3448,
+          "additions": 1763,
+          "deletions": 1914,
+          "changes": 3677,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Ultramarines.json",
           "status": "modified",
-          "additions": 999,
-          "deletions": 381,
-          "changes": 1380,
+          "additions": 1049,
+          "deletions": 403,
+          "changes": 1452,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - White Scars.json",
           "status": "modified",
-          "additions": 81,
-          "deletions": 56,
-          "changes": 137,
+          "additions": 85,
+          "deletions": 58,
+          "changes": 143,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Leagues of Votann.json",
           "status": "modified",
-          "additions": 37,
-          "deletions": 13,
-          "changes": 50,
+          "additions": 99,
+          "deletions": 44,
+          "changes": 143,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Library - Astartes Heresy Legends.json",
           "status": "modified",
-          "additions": 10326,
-          "deletions": 21145,
-          "changes": 31471,
+          "additions": 10225,
+          "deletions": 21010,
+          "changes": 31235,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Library - Titans.json",
+          "status": "modified",
+          "additions": 8,
+          "deletions": 4,
+          "changes": 12,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Library - Tyranids.json",
           "status": "modified",
-          "additions": 27,
-          "deletions": 30,
-          "changes": 57,
+          "additions": 68,
+          "deletions": 51,
+          "changes": 119,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Necrons.json",
           "status": "modified",
-          "additions": 532,
-          "deletions": 28,
-          "changes": 560,
+          "additions": 668,
+          "deletions": 96,
+          "changes": 764,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Orks.json",
           "status": "modified",
-          "additions": 161,
-          "deletions": 236,
-          "changes": 397,
+          "additions": 345,
+          "deletions": 321,
+          "changes": 666,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "T'au Empire.json",
           "status": "modified",
-          "additions": 25,
-          "deletions": 24,
-          "changes": 49,
+          "additions": 199,
+          "deletions": 106,
+          "changes": 305,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Tyranids.json",
           "status": "modified",
-          "additions": 30,
-          "deletions": 21,
-          "changes": 51,
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Unaligned Forces.json",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Warhammer 40,000.json",
           "status": "modified",
-          "additions": 44,
-          "deletions": 17,
-          "changes": 61,
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "FACTION_OR_LIBRARY_DATA"
         }
       ]
@@ -824,13 +840,13 @@
   ],
   "wahapedia": {
     "snapshot_last_update": "2026-09-28 02:38:04",
-    "live_last_update": "2026-10-13 04:08:03",
+    "live_last_update": "2026-10-13 19:05:11",
     "manifest_files_checked": 20,
     "changed_files": [
       {
         "file": "Last_update.csv",
         "snapshot_sha256": "4b3a7e63006be965073bdc34022bdd17f6f7b063602b46a4640a11ac641b20a9",
-        "live_sha256": "875cd5a19db7aa83adc0474735aa070539911b9d0f530d519108d41d277f7279",
+        "live_sha256": "ed314ed716ac9b84ddda478f186561eb88c01f6c232854b2d5b62735a32c188d",
         "snapshot_bytes": 39,
         "live_bytes": 39
       },
@@ -858,9 +874,9 @@
       {
         "file": "Datasheets_models_cost.csv",
         "snapshot_sha256": "2e2f9be00eae5924a62dd27c4322bdb6b663070fd80781a81ca1b5305ed24c47",
-        "live_sha256": "5e563fe074fdbcc4324cbcedf2ad31f8febec92de42ff6d35547a4f98453c1d3",
+        "live_sha256": "91f7f65407fae81a90c89dc9fee4e8e0a36745cef21a1a54883c8c66c3b03dd0",
         "snapshot_bytes": 189351,
-        "live_bytes": 162956
+        "live_bytes": 165182
       },
       {
         "file": "Datasheets_keywords.csv",
@@ -872,9 +888,9 @@
       {
         "file": "Datasheets_wargear.csv",
         "snapshot_sha256": "eeaa33777769367d836cab0562a82bb84bcb8fc1a8064539a58ead972d302241",
-        "live_sha256": "4710cc0d3ab56dba22bd6a782b9bd154d94179d033ebaf1374e12668e28a0dd6",
+        "live_sha256": "72d62d42f78876b73cda0a216ffb1b33d27d47f7580f36617b380b44f1cdae9e",
         "snapshot_bytes": 632930,
-        "live_bytes": 548961
+        "live_bytes": 548171
       },
       {
         "file": "Datasheets_options.csv",
@@ -893,7 +909,7 @@
       {
         "file": "Abilities.csv",
         "snapshot_sha256": "f3fc44a0fd91b7b45b38ae477632517e732bda64b4a0c548033a9f874664c7f3",
-        "live_sha256": "423445d62af52561dabe0d569698badee1da4e6cee5b70c51e4a0357fa6169bd",
+        "live_sha256": "35c52c5c54acb25626f38316c60dcfab02717f8ee16345fb96d0df9057e7d1aa",
         "snapshot_bytes": 202161,
         "live_bytes": 195331
       },
@@ -907,9 +923,9 @@
       {
         "file": "Datasheets_leader.csv",
         "snapshot_sha256": "c75b00eed968babbc89c6b7e077b40f7234c3040537816692ae0e609ebca174c",
-        "live_sha256": "36de4547beef08918b9b49dbda7cbb2ad1d942c61a3efe4a605fa411e4af40c7",
+        "live_sha256": "196b486d69010453a202fcdac6aaa0ddb0b5f46a1065ee9e7b38e14f78e04b2a",
         "snapshot_bytes": 35117,
-        "live_bytes": 27527
+        "live_bytes": 27483
       },
       {
         "file": "Detachments.csv",
@@ -935,7 +951,7 @@
       {
         "file": "Enhancements.csv",
         "snapshot_sha256": "7e7fa39c9e1f9d268bda75affa8cd647c72b5511726631a8ee4110c8e86bc212",
-        "live_sha256": "03f0caed1bf891e88259848fb96d246a9997fd169b03a465de930d15d7a8645b",
+        "live_sha256": "02b36b7121ed34f75b53f266488db139fae8c576baa770907ffbf401dc460a2f",
         "snapshot_bytes": 477886,
         "live_bytes": 427440
       },
@@ -949,7 +965,7 @@
       {
         "file": "Detachment_abilities.csv",
         "snapshot_sha256": "d7e4966e2b094d43feaa88a66e10608301ff817d92393b9c7f04ec2ac1ed6a44",
-        "live_sha256": "c8ad9bf4e306c6a687459d7a76a26074f32983aee63ca73c2ea8a382e4ff52c1",
+        "live_sha256": "8f0f86f795758162111260898800a7c4b0035caf1e877ec53d65dff4725f1ef1",
         "snapshot_bytes": 324910,
         "live_bytes": 289532
       },
