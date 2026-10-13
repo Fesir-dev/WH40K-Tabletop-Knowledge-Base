@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "1b1ddfd2d064a9b5e7dbed7a63a2a4dd3aedfa29",
+      "live": "2953f39a39bcb3bb8f8e56b460665fe5da659f63",
       "changed": true,
       "files": [
         {
@@ -125,33 +125,33 @@
         {
           "filename": "Imperium - Black Templars.json",
           "status": "modified",
-          "additions": 2526,
-          "deletions": 5762,
-          "changes": 8288,
+          "additions": 2532,
+          "deletions": 5759,
+          "changes": 8291,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Blood Angels.json",
           "status": "modified",
-          "additions": 1427,
+          "additions": 1428,
           "deletions": 1069,
-          "changes": 2496,
+          "changes": 2497,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Dark Angels.json",
           "status": "modified",
           "additions": 891,
-          "deletions": 1584,
-          "changes": 2475,
+          "deletions": 1589,
+          "changes": 2480,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Deathwatch.json",
           "status": "modified",
-          "additions": 1953,
-          "deletions": 3329,
-          "changes": 5282,
+          "additions": 2046,
+          "deletions": 3288,
+          "changes": 5334,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -205,25 +205,25 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 10680,
-          "deletions": 16898,
-          "changes": 27578,
+          "additions": 11344,
+          "deletions": 16934,
+          "changes": 28278,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Space Wolves.json",
           "status": "modified",
-          "additions": 1609,
-          "deletions": 1830,
-          "changes": 3439,
+          "additions": 1610,
+          "deletions": 1838,
+          "changes": 3448,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Ultramarines.json",
           "status": "modified",
-          "additions": 955,
-          "deletions": 379,
-          "changes": 1334,
+          "additions": 999,
+          "deletions": 381,
+          "changes": 1380,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
