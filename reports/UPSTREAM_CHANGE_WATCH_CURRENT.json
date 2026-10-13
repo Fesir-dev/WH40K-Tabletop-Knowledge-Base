@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "2953f39a39bcb3bb8f8e56b460665fe5da659f63",
+      "live": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
       "changed": true,
       "files": [
         {
@@ -133,9 +133,9 @@
         {
           "filename": "Imperium - Blood Angels.json",
           "status": "modified",
-          "additions": 1428,
-          "deletions": 1069,
-          "changes": 2497,
+          "additions": 1429,
+          "deletions": 1070,
+          "changes": 2499,
           "classification": "ASTARTES"
         },
         {
@@ -205,9 +205,9 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11344,
-          "deletions": 16934,
-          "changes": 28278,
+          "additions": 11361,
+          "deletions": 16950,
+          "changes": 28311,
           "classification": "ASTARTES"
         },
         {
@@ -824,13 +824,13 @@
   ],
   "wahapedia": {
     "snapshot_last_update": "2026-09-28 02:38:04",
-    "live_last_update": "2026-10-12 02:57:26",
+    "live_last_update": "2026-10-13 04:08:03",
     "manifest_files_checked": 20,
     "changed_files": [
       {
         "file": "Last_update.csv",
         "snapshot_sha256": "4b3a7e63006be965073bdc34022bdd17f6f7b063602b46a4640a11ac641b20a9",
-        "live_sha256": "10b36a73048c8942214ed6bf843076fa3436a497875b23666c45ea0cea276b93",
+        "live_sha256": "875cd5a19db7aa83adc0474735aa070539911b9d0f530d519108d41d277f7279",
         "snapshot_bytes": 39,
         "live_bytes": 39
       },
@@ -907,9 +907,9 @@
       {
         "file": "Datasheets_leader.csv",
         "snapshot_sha256": "c75b00eed968babbc89c6b7e077b40f7234c3040537816692ae0e609ebca174c",
-        "live_sha256": "03df5237cbc90423edb2214dda431a1deb1da177c9ea3014e53fc9d6a771b9e3",
+        "live_sha256": "36de4547beef08918b9b49dbda7cbb2ad1d942c61a3efe4a605fa411e4af40c7",
         "snapshot_bytes": 35117,
-        "live_bytes": 27879
+        "live_bytes": 27527
       },
       {
         "file": "Detachments.csv",
@@ -928,9 +928,9 @@
       {
         "file": "Datasheets_stratagems.csv",
         "snapshot_sha256": "7dacd927c0cf17b3516fdad5344e6d9f569bf172f3fbfe6a96e010bcfea5b67c",
-        "live_sha256": "e00f2b610963953b9df169737bc9e11832e2f3bd4d070624b17cc323f1a9d9c1",
+        "live_sha256": "e722f49ac53168d534213e3e12af198bdb62131dc0630e14f62e18c41f21a208",
         "snapshot_bytes": 2150631,
-        "live_bytes": 1376806
+        "live_bytes": 1376256
       },
       {
         "file": "Enhancements.csv",
@@ -956,9 +956,9 @@
       {
         "file": "Datasheets_detachment_abilities.csv",
         "snapshot_sha256": "843395ebfa4f2dceab87b56792fff48d03d861cbfcb1eda6df3bbf2fe822ba38",
-        "live_sha256": "2c743c66793a07be95ffcca98c20f9780561da1ab75a34c17abb538fedd8c932",
+        "live_sha256": "a0dcca8273059be3ae11c7c6b0e38600a7d11dd95e28328f92c0b53372dd30d0",
         "snapshot_bytes": 354262,
-        "live_bytes": 190494
+        "live_bytes": 190318
       }
     ]
   },
