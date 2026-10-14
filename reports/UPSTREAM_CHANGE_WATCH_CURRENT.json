@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
+      "live": "d506fcc0ee4b4babdda03e71dffd4e1e3cf5bcbf",
       "changed": true,
       "files": [
         {
@@ -21,9 +21,9 @@
         {
           "filename": "Chaos - Chaos Daemons Library.json",
           "status": "modified",
-          "additions": 224,
-          "deletions": 173,
-          "changes": 397,
+          "additions": 225,
+          "deletions": 174,
+          "changes": 399,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
