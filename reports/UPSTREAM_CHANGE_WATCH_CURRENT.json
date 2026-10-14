@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "907d5baa4c6262670f10133b4882f526e44f299b",
+      "live": "43519e4ad6b8a13821528460efffe0833b8cb5d0",
       "changed": true,
       "files": [
         {
@@ -141,9 +141,9 @@
         {
           "filename": "Imperium - Dark Angels.json",
           "status": "modified",
-          "additions": 949,
-          "deletions": 1617,
-          "changes": 2566,
+          "additions": 954,
+          "deletions": 1618,
+          "changes": 2572,
           "classification": "ASTARTES"
         },
         {
@@ -205,17 +205,17 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11769,
-          "deletions": 17155,
-          "changes": 28924,
+          "additions": 11810,
+          "deletions": 17151,
+          "changes": 28961,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Space Wolves.json",
           "status": "modified",
-          "additions": 1763,
-          "deletions": 1914,
-          "changes": 3677,
+          "additions": 1767,
+          "deletions": 1924,
+          "changes": 3691,
           "classification": "ASTARTES"
         },
         {
