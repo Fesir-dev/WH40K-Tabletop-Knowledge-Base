@@ -419,7 +419,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -458,7 +458,7 @@
             "file": "Imperium - Astra Militarum.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Imperium - Astra Militarum.json"
           },
           "new_recruit": {
@@ -497,7 +497,7 @@
             "file": "Chaos - Chaos Space Marines.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Chaos - Chaos Space Marines.json"
           },
           "new_recruit": {
@@ -536,7 +536,7 @@
             "file": "Leagues of Votann.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Leagues of Votann.json"
           },
           "new_recruit": {
@@ -575,7 +575,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -614,7 +614,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -676,7 +676,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -741,7 +741,7 @@
             "file": "Imperium - Astra Militarum.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Imperium - Astra Militarum.json"
           },
           "new_recruit": {
@@ -780,7 +780,7 @@
             "file": "Chaos - Chaos Space Marines.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Chaos - Chaos Space Marines.json"
           },
           "new_recruit": {
@@ -858,7 +858,7 @@
             "file": "Leagues of Votann.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Leagues of Votann.json"
           },
           "new_recruit": {
@@ -897,7 +897,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -936,7 +936,7 @@
             "file": "Orks.json"
           },
           "live_bsdata": {
-            "revision": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+            "revision": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
             "file": "Orks.json"
           },
           "new_recruit": {
@@ -1101,7 +1101,7 @@
     "runtime_source": "NEW_RECRUIT_WIKI",
     "expected_upstream": "BSDATA_WH40K_11E",
     "pinned_bsdata_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-    "live_bsdata_commit": "8b50fc3240e29c6ab0e254f75bcefa8cce8ce0ef",
+    "live_bsdata_commit": "fe72f4a6c0db3a2ea84006c1052fb0811a932c5b",
     "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
   },
   "policy": {
