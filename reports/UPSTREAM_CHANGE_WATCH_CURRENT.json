@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "423835dff52dad915ca521170cc025869d6139c8",
+      "live": "9b8207cee88888c25b8ec4fa4ec675b5177ebfd5",
       "changed": true,
       "files": [
         {
@@ -45,9 +45,9 @@
         {
           "filename": "Chaos - Death Guard.json",
           "status": "modified",
-          "additions": 324,
-          "deletions": 119,
-          "changes": 443,
+          "additions": 331,
+          "deletions": 120,
+          "changes": 451,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -133,25 +133,25 @@
         {
           "filename": "Imperium - Blood Angels.json",
           "status": "modified",
-          "additions": 1485,
-          "deletions": 1089,
-          "changes": 2574,
+          "additions": 1562,
+          "deletions": 1187,
+          "changes": 2749,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Dark Angels.json",
           "status": "modified",
-          "additions": 954,
-          "deletions": 1618,
-          "changes": 2572,
+          "additions": 979,
+          "deletions": 1616,
+          "changes": 2595,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Deathwatch.json",
           "status": "modified",
-          "additions": 2105,
-          "deletions": 3320,
-          "changes": 5425,
+          "additions": 2115,
+          "deletions": 3319,
+          "changes": 5434,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -205,17 +205,17 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11827,
-          "deletions": 17147,
-          "changes": 28974,
+          "additions": 11823,
+          "deletions": 17178,
+          "changes": 29001,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Space Wolves.json",
           "status": "modified",
-          "additions": 1767,
-          "deletions": 1924,
-          "changes": 3691,
+          "additions": 1803,
+          "deletions": 1987,
+          "changes": 3790,
           "classification": "ASTARTES"
         },
         {
