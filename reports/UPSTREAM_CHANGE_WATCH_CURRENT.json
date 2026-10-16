@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "d506fcc0ee4b4babdda03e71dffd4e1e3cf5bcbf",
+      "live": "423835dff52dad915ca521170cc025869d6139c8",
       "changed": true,
       "files": [
         {
@@ -165,9 +165,9 @@
         {
           "filename": "Imperium - Imperial Fists.json",
           "status": "modified",
-          "additions": 72,
-          "deletions": 60,
-          "changes": 132,
+          "additions": 73,
+          "deletions": 61,
+          "changes": 134,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -181,9 +181,9 @@
         {
           "filename": "Imperium - Iron Hands.json",
           "status": "modified",
-          "additions": 56,
-          "deletions": 62,
-          "changes": 118,
+          "additions": 59,
+          "deletions": 80,
+          "changes": 139,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -205,9 +205,9 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11810,
-          "deletions": 17151,
-          "changes": 28961,
+          "additions": 11827,
+          "deletions": 17147,
+          "changes": 28974,
           "classification": "ASTARTES"
         },
         {
