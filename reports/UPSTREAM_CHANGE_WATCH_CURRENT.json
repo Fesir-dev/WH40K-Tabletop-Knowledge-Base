@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "173d0ef81a8eb7e857c8a035ba8624739c28666f",
+      "live": "f9e693cb9115f68c8d5cced9e52e4707047905d3",
       "changed": true,
       "files": [
         {
@@ -125,9 +125,9 @@
         {
           "filename": "Imperium - Black Templars.json",
           "status": "modified",
-          "additions": 2531,
-          "deletions": 5758,
-          "changes": 8289,
+          "additions": 2533,
+          "deletions": 5760,
+          "changes": 8293,
           "classification": "ASTARTES"
         },
         {
@@ -205,17 +205,17 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11823,
-          "deletions": 17178,
-          "changes": 29001,
+          "additions": 12051,
+          "deletions": 17218,
+          "changes": 29269,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Space Wolves.json",
           "status": "modified",
-          "additions": 1803,
-          "deletions": 1987,
-          "changes": 3790,
+          "additions": 1788,
+          "deletions": 1972,
+          "changes": 3760,
           "classification": "ASTARTES"
         },
         {
@@ -229,9 +229,9 @@
         {
           "filename": "Imperium - White Scars.json",
           "status": "modified",
-          "additions": 85,
-          "deletions": 58,
-          "changes": 143,
+          "additions": 87,
+          "deletions": 60,
+          "changes": 147,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
