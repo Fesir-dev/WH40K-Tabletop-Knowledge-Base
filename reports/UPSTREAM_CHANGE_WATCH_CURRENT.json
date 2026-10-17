@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "9b8207cee88888c25b8ec4fa4ec675b5177ebfd5",
+      "live": "173d0ef81a8eb7e857c8a035ba8624739c28666f",
       "changed": true,
       "files": [
         {
@@ -93,9 +93,9 @@
         {
           "filename": "Imperium - Adeptus Custodes.json",
           "status": "modified",
-          "additions": 153,
-          "deletions": 94,
-          "changes": 247,
+          "additions": 9466,
+          "deletions": 9397,
+          "changes": 18863,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -285,9 +285,9 @@
         {
           "filename": "T'au Empire.json",
           "status": "modified",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
+          "additions": 190,
+          "deletions": 106,
+          "changes": 296,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
