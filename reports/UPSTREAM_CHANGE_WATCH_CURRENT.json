@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "b8667d44504e025827a584cfc6bf2f2eba3cb9f8",
+      "live": "bc1dcd94ec480bbd5e01292be6935dab4d364d3a",
       "changed": true,
       "files": [
         {
@@ -37,9 +37,9 @@
         {
           "filename": "Chaos - Chaos Space Marines.json",
           "status": "modified",
-          "additions": 875,
-          "deletions": 544,
-          "changes": 1419,
+          "additions": 877,
+          "deletions": 577,
+          "changes": 1454,
           "classification": "ASTARTES"
         },
         {
@@ -93,9 +93,9 @@
         {
           "filename": "Imperium - Adeptus Custodes.json",
           "status": "modified",
-          "additions": 9945,
-          "deletions": 9814,
-          "changes": 19759,
+          "additions": 11533,
+          "deletions": 11405,
+          "changes": 22938,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -109,9 +109,9 @@
         {
           "filename": "Imperium - Agents of the Imperium.json",
           "status": "modified",
-          "additions": 890,
-          "deletions": 893,
-          "changes": 1783,
+          "additions": 936,
+          "deletions": 958,
+          "changes": 1894,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -205,9 +205,9 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 12121,
+          "additions": 12118,
           "deletions": 17207,
-          "changes": 29328,
+          "changes": 29325,
           "classification": "ASTARTES"
         },
         {
@@ -269,9 +269,9 @@
         {
           "filename": "Necrons.json",
           "status": "modified",
-          "additions": 668,
-          "deletions": 96,
-          "changes": 764,
+          "additions": 670,
+          "deletions": 108,
+          "changes": 778,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
