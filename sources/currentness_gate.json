@@ -1,6 +1,6 @@
 {
   "schema_version": "4.4",
-  "as_of": "2026-09-30",
+  "as_of": "2026-10-20",
   "status": "CURRENT_SCOPED_OPERATIONAL",
   "semantics": {
     "source_state": "Whether the external source/revision was checked and is reachable/current within the stated scope.",
@@ -59,8 +59,8 @@
         "force_dispositions"
       ],
       "state": "PASS",
-      "checked_at": "2026-09-29",
-      "observed_updated_at": "2026-09-02"
+      "checked_at": "2026-10-20",
+      "observed_updated_at": "2026-10-14"
     },
     {
       "id": "GW_40K_APP",
@@ -145,8 +145,8 @@
         "legends_pricing"
       ],
       "state": "PASS",
-      "checked_at": "2026-09-29",
-      "observed_commit": "61a687e858c00a4ad205d564959c622a5605ef3d"
+      "checked_at": "2026-10-20",
+      "observed_commit": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31"
     }
   ],
   "scope_profiles": {

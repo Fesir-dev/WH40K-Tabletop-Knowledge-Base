@@ -1,13 +1,13 @@
 {
   "schema_version": "4.4",
   "edition": "11e",
-  "repository_checkpoint": "2026-09-30",
+  "repository_checkpoint": "2026-10-20",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
   "source_currentness": {
     "mfm": {
       "state": "PASS",
-      "updated_at": "2026-09-02",
-      "verified_at": "2026-09-29"
+      "updated_at": "2026-10-14",
+      "verified_at": "2026-10-20"
     },
     "downloads_endpoint": {
       "state": "PASS",
@@ -251,9 +251,9 @@
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
-    "snapshot": "rules/11e/snapshots/2026-09-29/mfm/index.json",
-    "version": "1.4",
-    "last_updated": "2026-09-02",
+    "snapshot": "rules/11e/snapshots/2026-10-20/mfm/index.json",
+    "version": "1.6",
+    "last_updated": "2026-10-14",
     "normalized_faction_pages": 30,
     "mapped_roster_identities": 36,
     "dimensions": [
@@ -391,7 +391,7 @@
       "candidate_execution": "ISOLATED_REVIEWABLE_ARTIFACT",
       "promotion_execution": "EXPLICIT_WORKFLOW_DISPATCH_TO_BRANCH_AND_PR",
       "auto_promote": false,
-      "mfm_authority_gate": "BLOCKING_OFFICIAL_REVALIDATION_REQUIRED",
+      "mfm_authority_gate": "SATISFIED_CURRENT_OFFICIAL_MFM_REVALIDATION",
       "source_catalog_asset_gate": true,
       "post_promotion_checks": [
         "upstream_recheck",

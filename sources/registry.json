@@ -1,6 +1,6 @@
 {
   "schema_version": "3.1",
-  "as_of": "2026-09-29",
+  "as_of": "2026-10-20",
   "status": "CURRENT_PENDING_RECHECK",
   "authority_policy": {
     "normative_rule": "Only applicable current official Games Workshop sources can promote a rules fact to CURRENT_VERIFIED.",
@@ -63,7 +63,7 @@
       "source_role": "normative",
       "status": "CURRENT_VERIFIED",
       "url": "https://mfm.warhammer-community.com/en/",
-      "checked_at": "2026-09-29",
+      "checked_at": "2026-10-20",
       "use_for": [
         "points",
         "unit_sizes",
@@ -79,8 +79,8 @@
       "source_health": "PASS",
       "repository_coverage_state": "PARTIAL",
       "observed_revision": {
-        "updated_at": "2026-09-02",
-        "verified_at": "2026-09-29",
+        "updated_at": "2026-10-14",
+        "verified_at": "2026-10-20",
         "evidence_url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/"
       }
     },
@@ -745,14 +745,14 @@
       "source_health": "PASS",
       "repository_coverage_state": "PARTIAL",
       "url": "https://github.com/BSData/wh40k-11e-mfm",
-      "checked_at": "2026-09-29",
+      "checked_at": "2026-10-20",
       "depends_on": [
         "GW_MFM"
       ],
       "observed_revision": {
-        "commit_sha": "61a687e858c00a4ad205d564959c622a5605ef3d",
-        "mfm_version": "1.4",
-        "official_last_updated": "2026-09-02"
+        "commit_sha": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
+        "mfm_version": "1.6",
+        "official_last_updated": "2026-10-14"
       },
       "use_for": [
         "points",

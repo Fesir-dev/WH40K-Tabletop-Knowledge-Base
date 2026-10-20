@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "run_id": "INGEST_2026-10-20_MFM_V1_6_REFRESH",
+  "status": "PASS",
+  "started_at": "2026-10-20",
+  "completed_at": "2026-10-20",
+  "source_ids": [
+    "GW_MFM",
+    "BSDATA_MFM_11E"
+  ],
+  "official_revision": {
+    "version": "1.6",
+    "updated_at": "2026-10-14"
+  },
+  "extraction_commit": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
+  "previous_snapshot": "rules/11e/snapshots/2026-09-29/mfm/index.json",
+  "output_snapshot": "rules/11e/snapshots/2026-10-20/mfm/index.json",
+  "promotion": "MFM_DIMENSIONS_CURRENT_VERIFIED",
+  "auto_promote": false
+}

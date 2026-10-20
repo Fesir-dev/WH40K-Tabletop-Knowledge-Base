@@ -1,6 +1,18 @@
 # CURRENT HANDOFF
 
-Updated: **2026-09-30**
+Updated: **2026-10-20**
+
+## Current rules refresh — MFM v1.6
+
+- official MFM: **v1.6**, updated **2026-10-14**, revalidated **2026-10-20**;
+- extraction pin: `BSData/wh40k-11e-mfm@2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31`;
+- immutable snapshot: `rules/11e/snapshots/2026-10-20/mfm/index.json`;
+- previous current snapshot preserved: `rules/11e/snapshots/2026-09-29/mfm/index.json`;
+- normalized faction pages: **30**;
+- units / pricing rows / detachments: **1797 / 3058 / 334**;
+- stable-key point changes vs previous current snapshot: **906** (▲695 / ▼211);
+- MFM authority gate: **SATISFIED**; secondary Wahapedia/BSData reconciliation must use this current MFM pointer;
+- no historical MFM snapshot was modified.
 
 ## Recovery authority
 

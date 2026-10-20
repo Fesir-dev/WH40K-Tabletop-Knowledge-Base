@@ -1,6 +1,6 @@
 {
   "schema_version": "2.5",
-  "as_of": "2026-09-30",
+  "as_of": "2026-10-20",
   "status": "CORE_RULE_DIRECT_MODAL_AST_SEMANTIC_VALIDATION_V1_COMPLETE",
   "rule": "A registered/healthy source does not imply repository coverage. CURRENT_VERIFIED faction data requires source currentness plus normalized coverage and validation.",
   "global": {
@@ -8,8 +8,8 @@
     "current_normalized_factions": 0,
     "historical_material_factions": 8,
     "tests_before_this_pass": 0,
-    "mfm_version": "1.4",
-    "mfm_last_updated": "2026-09-02",
+    "mfm_version": "1.6",
+    "mfm_last_updated": "2026-10-14",
     "mfm_faction_pages_normalized": 30,
     "mfm_roster_identities_complete": 36,
     "mfm_roster_identities_not_applicable": 1,
