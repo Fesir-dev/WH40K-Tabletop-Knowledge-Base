@@ -6,6 +6,9 @@ on:
       - ops/rules-refresh-2026-10-20
     paths:
       - ".github/workflows/rules-refresh-runtime-finalize-2026-10-20.yml"
+      - "tools/patch_rules_refresh_tests.py"
+      - "tools/patch_rules_refresh_validation_contracts.py"
+      - "tools/finalize_runtime_refresh.py"
   workflow_dispatch:
 
 permissions:
