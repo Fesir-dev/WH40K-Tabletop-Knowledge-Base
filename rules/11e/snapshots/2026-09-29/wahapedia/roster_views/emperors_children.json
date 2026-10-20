@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.0",
   "snapshot_date": "2026-09-29",
   "roster_slug": "emperors_children",
   "wahapedia_source_slug": "emperors_children",
@@ -12,8 +12,7 @@
   "authority": {
     "points_and_costs": "GW_MFM",
     "rules_structure": "WAHAPEDIA_11E_CSV_SECONDARY_MIRROR",
-    "bsdata": "DIAGNOSTIC_IMPLEMENTATION_ONLY",
-    "legends_gap_policy": "Missing Legends-only mirror datasheets do not downgrade current matched-play structural completeness; they remain explicit unresolved_legends_mfm_units."
+    "bsdata": "DIAGNOSTIC_IMPLEMENTATION_ONLY"
   },
   "datasheets": [
     {
@@ -349,12 +348,10 @@
     "000010961002"
   ],
   "unresolved_mfm_units": [],
-  "unresolved_legends_mfm_units": [],
   "counts": {
     "datasheets": 23,
     "mfm_units": 23,
     "unresolved_mfm_units": 0,
-    "unresolved_legends_mfm_units": 0,
     "current_edition_11_datasheets": 23,
     "legends_datasheets": 0,
     "model_profiles": 23,
