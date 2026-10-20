@@ -208,11 +208,11 @@
     },
     "faction_rules_content": {
       "state": "SECONDARY_MIRROR_SEMANTICS_FULL_HASH_MATCH",
-      "verified_at": "2026-09-29",
-      "secondary_mirror_last_update": "2026-09-28 02:38:04",
-      "fingerprint_audit": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
-      "expected_fingerprints": 16506,
-      "matched_fingerprints": 16506,
+      "verified_at": "2026-10-20",
+      "secondary_mirror_last_update": "2026-10-19 03:47:32",
+      "fingerprint_audit": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
+      "expected_fingerprints": 14863,
+      "matched_fingerprints": 14863,
       "problems": 0,
       "normative_equivalence": "NOT_CLAIMED",
       "official_public_supplements": {
@@ -236,10 +236,10 @@
     },
     "faq_errata_assets": {
       "state": "OFFICIAL_ASSETS_VERIFIED",
-      "verified_at": "2026-09-29",
-      "report": "sources/snapshots/gw_11e_official_assets_2026-09-29.json",
-      "edition_11_sources": 29,
-      "verified_pdf_assets": 28,
+      "verified_at": "2026-10-20",
+      "report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/official_assets.json",
+      "edition_11_sources": 52,
+      "verified_pdf_assets": 22,
       "failures": 0,
       "source_catalog_drift": 0
     }
@@ -270,25 +270,26 @@
   },
   "wave_b_structural": {
     "state": "CURRENT_SECONDARY_MIRROR_STRUCTURAL",
-    "snapshot": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/index.json",
-    "wahapedia_last_update": "2026-09-28 02:38:04",
+    "snapshot": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/index.json",
+    "wahapedia_last_update": "2026-10-19 03:47:32",
     "roster_identities_complete": 35,
     "roster_identities_unavailable": [
       "titanicus_traitoris",
       "unaligned_forces"
     ],
-    "reconciliation_report": "reports/WAVE_B_RECONCILIATION_2026-09-29.json",
-    "source_conflicts": 11,
+    "reconciliation_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/reconciliation.json",
+    "source_conflicts": 4,
     "authority_rule": "GW MFM remains normative for points, detachment points and enhancement costs when Wahapedia differs.",
     "semantic_rule_text": "CURRENT_SECONDARY_MIRROR_FULL_HASH_VERIFIED",
     "faq_errata": "SOURCE_CATALOG_CURRENT_OFFICIAL_ASSETS_VERIFIED",
     "current_mirror_roster_identities_complete": 35,
     "implementation_fallback_roster_identities_complete": 2,
     "total_structural_source_available": 37,
-    "implementation_fallback_snapshot": "rules/11e/snapshots/2026-09-29/bsdata_fallback/index.json",
+    "implementation_fallback_snapshot": "rules/11e/snapshots/2026-10-20/bsdata_fallback/index.json",
     "implementation_fallback_policy": "Fallback provides structured implementation evidence only; it does not promote BSData to normative or current-mirror authority.",
     "semantic_current_mirror_roster_identities": 35,
-    "normative_semantic_equivalence": "NOT_CLAIMED"
+    "normative_semantic_equivalence": "NOT_CLAIMED",
+    "conflict_snapshot": "ingestion/promotions/REINGEST_49496d868bd7/wave_b_conflicts.json"
   },
   "semantic_resolver": {
     "state": "LIVE_FULL_AUDIT_HASH_VERIFIED",
@@ -312,22 +313,22 @@
     "authority_policy": "Hash match verifies the secondary mirror projection only; it does not make Wahapedia normative over Games Workshop.",
     "full_audit": {
       "workflow": ".github/workflows/semantic-full-audit.yml",
-      "report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
-      "expected_fingerprints": 16506,
-      "matched_fingerprints": 16506,
+      "report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
+      "expected_fingerprints": 14863,
+      "matched_fingerprints": 14863,
       "problems": 0
     }
   },
   "automation": {
     "upstream_change_watch": {
-      "state": "ACTIVE_CHANGE_DETECTED",
+      "state": "ACTIVE_NO_CHANGE",
       "report": "reports/UPSTREAM_CHANGE_WATCH_CURRENT.json",
       "workflow": ".github/workflows/upstream-change-watch.yml",
       "cadence": "every 6 hours",
       "bsdata_wh40k_11e": {
-        "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "live": "374f50544f0274296ab53c2103766ae3945e8799",
-        "changed": true
+        "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
+        "live": "a56674583d9f656a191e4210268c276f133b47d1",
+        "changed": false
       },
       "bsdata_mfm_11e": {
         "pinned": "61a687e858c00a4ad205d564959c622a5605ef3d",
@@ -382,33 +383,12 @@
       "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
     },
     "upstream_reingestion": {
-      "state": "OPERATIONAL_GUARDED_V1",
-      "planner": "tools/plan_upstream_reingestion.py",
-      "candidate_runner": "tools/run_upstream_reingestion_candidate.py",
-      "candidate_workflow": ".github/workflows/upstream-reingestion-candidate.yml",
-      "promotion_tool": "tools/apply_reingestion_promotion.py",
-      "promotion_workflow": ".github/workflows/upstream-reingestion-promote.yml",
-      "candidate_execution": "ISOLATED_REVIEWABLE_ARTIFACT",
-      "promotion_execution": "EXPLICIT_WORKFLOW_DISPATCH_TO_BRANCH_AND_PR",
+      "state": "REVIEWED_PROMOTION_APPLIED_PENDING_POST_PROMOTION_WATCH",
+      "plan_id": "REINGEST_49496d868bd7",
+      "candidate_snapshot": "2026-10-20",
+      "promoted_at": "2026-10-20",
       "auto_promote": false,
-      "mfm_authority_gate": "SATISFIED_CURRENT_OFFICIAL_MFM_REVALIDATION",
-      "source_catalog_asset_gate": true,
-      "post_promotion_checks": [
-        "upstream_recheck",
-        "new_recruit_runtime_revalidation",
-        "semantic_smoke",
-        "repository_validation",
-        "unit_tests"
-      ],
-      "latest_validation": {
-        "head": "d00d9a66213a6d58698d2da3d9108d18e6b2a70a",
-        "repository_ci_run": 36604067969,
-        "candidate_workflow_run": 36604068116,
-        "result": "SUCCESS"
-      },
-      "real_change_promotion_exercised": false,
-      "closure_report": "reports/AUTOMATED_REINGESTION_PROMOTION_CLOSURE_2026-09-29.md",
-      "merged_commit": "f9d3a5c462e06bf809307a329c50b54de9e66561"
+      "authority_rule": "Promotion was explicitly dispatched from a PASS candidate; normative GW/MFM authority was not changed."
     }
   },
   "collection_aware_roster_solver": {

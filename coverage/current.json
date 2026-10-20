@@ -13,21 +13,21 @@
     "mfm_faction_pages_normalized": 30,
     "mfm_roster_identities_complete": 36,
     "mfm_roster_identities_not_applicable": 1,
-    "wave_b_wahapedia_last_update": "2026-09-28 02:38:04",
+    "wave_b_wahapedia_last_update": "2026-10-19 03:47:32",
     "wave_b_structural_roster_identities_complete": 35,
     "wave_b_structural_roster_identities_unavailable": 2,
-    "wave_b_reconciliation_conflicts": 11,
+    "wave_b_reconciliation_conflicts": 4,
     "full_semantic_current_factions": 0,
     "wave_b_current_mirror_structural_complete": 35,
     "wave_b_structured_implementation_fallback_complete": 2,
     "wave_b_total_structural_source_available": 37,
     "wave_b_semantic_fingerprint_audit_status": "PASS",
-    "wave_b_semantic_fingerprints_expected": 16506,
-    "wave_b_semantic_fingerprints_matched": 16506,
+    "wave_b_semantic_fingerprints_expected": 14863,
+    "wave_b_semantic_fingerprints_matched": 14863,
     "wave_b_semantic_fingerprint_problems": 0,
     "wave_b_current_mirror_semantic_roster_identities": 35,
-    "wave_b_official_edition11_sources": 29,
-    "wave_b_official_pdf_assets_verified": 28,
+    "wave_b_official_edition11_sources": 52,
+    "wave_b_official_pdf_assets_verified": 22,
     "wave_b_official_pdf_asset_failures": 0,
     "wave_b_source_catalog_drift": 0,
     "full_normative_semantic_factions": 0,
@@ -228,8 +228,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/aeldari_craftworlds.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/aeldari_craftworlds.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -251,8 +251,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -287,8 +287,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/drukhari.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/drukhari.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -310,8 +310,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -346,8 +346,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/chaos_daemons.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/chaos_daemons.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -369,8 +369,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -405,8 +405,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/chaos_knights.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/chaos_knights.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -428,8 +428,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -464,8 +464,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/chaos_space_marines.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/chaos_space_marines.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -487,8 +487,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -523,8 +523,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/death_guard.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/death_guard.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -546,8 +546,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -582,8 +582,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/emperors_children.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/emperors_children.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -605,8 +605,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -641,8 +641,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/thousand_sons.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/thousand_sons.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -664,8 +664,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -701,8 +701,8 @@
         "state": "IMPLEMENTATION_FALLBACK_COMPLETE",
         "source_id": "BSDATA_WH40K_11E",
         "source_role": "structured_implementation",
-        "pinned_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "view": "rules/11e/snapshots/2026-09-29/bsdata_fallback/titanicus_traitoris.json",
+        "pinned_commit": "a56674583d9f656a191e4210268c276f133b47d1",
+        "view": "rules/11e/snapshots/2026-10-20/bsdata_fallback/titanicus_traitoris.json",
         "current_mirror_verified": false,
         "normative_rules_verified": false,
         "semantic_rule_text_current_verified": false,
@@ -746,8 +746,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/world_eaters.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/world_eaters.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -769,8 +769,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -805,8 +805,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/genestealer_cults.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/genestealer_cults.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -828,8 +828,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -864,8 +864,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/adepta_sororitas.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/adepta_sororitas.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -887,8 +887,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -923,8 +923,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/adeptus_custodes.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/adeptus_custodes.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -946,8 +946,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -982,8 +982,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/adeptus_mechanicus.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/adeptus_mechanicus.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1005,8 +1005,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1041,8 +1041,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/adeptus_titanicus.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/adeptus_titanicus.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1064,8 +1064,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1100,8 +1100,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/agents_of_the_imperium.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/agents_of_the_imperium.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1123,8 +1123,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1159,8 +1159,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/astra_militarum.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/astra_militarum.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1182,8 +1182,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1218,8 +1218,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/black_templars.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/black_templars.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1241,8 +1241,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1277,8 +1277,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/blood_angels.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/blood_angels.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1300,8 +1300,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1336,8 +1336,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/dark_angels.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/dark_angels.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1359,8 +1359,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1395,8 +1395,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/deathwatch.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/deathwatch.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1418,8 +1418,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1454,8 +1454,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/grey_knights.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/grey_knights.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1477,8 +1477,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1513,8 +1513,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/imperial_fists.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/imperial_fists.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1536,8 +1536,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1572,8 +1572,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/imperial_knights.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/imperial_knights.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1595,8 +1595,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1631,8 +1631,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/iron_hands.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/iron_hands.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1654,8 +1654,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1690,8 +1690,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/raven_guard.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/raven_guard.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1713,8 +1713,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1749,8 +1749,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/salamanders.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/salamanders.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1772,8 +1772,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1808,8 +1808,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/space_marines.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/space_marines.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1831,8 +1831,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1867,8 +1867,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/space_wolves.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/space_wolves.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1890,8 +1890,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1926,8 +1926,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/ultramarines.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/ultramarines.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -1949,8 +1949,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -1985,8 +1985,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/white_scars.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/white_scars.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -2008,8 +2008,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -2044,8 +2044,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/leagues_of_votann.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/leagues_of_votann.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -2067,8 +2067,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -2103,8 +2103,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/necrons.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/necrons.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -2126,8 +2126,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -2162,8 +2162,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/orks.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/orks.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -2185,8 +2185,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -2221,8 +2221,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/tau_empire.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/tau_empire.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -2244,8 +2244,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -2280,8 +2280,8 @@
       "wave_b_structural": {
         "state": "COMPLETE",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "view": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/tyranids.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "view": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/tyranids.json",
         "dimensions": {
           "roster_view": 100,
           "datasheet_index": 100,
@@ -2303,8 +2303,8 @@
       "semantic_current_mirror": {
         "state": "FULL_FINGERPRINT_MATCH",
         "source_id": "WAHAPEDIA_11E",
-        "source_last_update": "2026-09-28 02:38:04",
-        "audit_report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+        "source_last_update": "2026-10-19 03:47:32",
+        "audit_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
         "full_rule_text_embedded": false,
         "on_demand_resolver": "tools/query_current_semantics.py",
         "normative_equivalence_verified": false
@@ -2340,8 +2340,8 @@
         "state": "IMPLEMENTATION_FALLBACK_COMPLETE",
         "source_id": "BSDATA_WH40K_11E",
         "source_role": "structured_implementation",
-        "pinned_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "view": "rules/11e/snapshots/2026-09-29/bsdata_fallback/unaligned_forces.json",
+        "pinned_commit": "a56674583d9f656a191e4210268c276f133b47d1",
+        "view": "rules/11e/snapshots/2026-10-20/bsdata_fallback/unaligned_forces.json",
         "current_mirror_verified": false,
         "normative_rules_verified": false,
         "semantic_rule_text_current_verified": false,

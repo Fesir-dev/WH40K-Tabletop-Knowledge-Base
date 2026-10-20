@@ -85,12 +85,13 @@
       "state": "PASS",
       "semantic_fingerprint_audit": {
         "state": "PASS",
-        "checked_at": "2026-09-29",
-        "report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
-        "expected": 16506,
-        "matched": 16506,
+        "checked_at": "2026-10-20",
+        "report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
+        "expected": 14863,
+        "matched": 14863,
         "problems": 0
-      }
+      },
+      "checked_at": "2026-10-20"
     },
     {
       "id": "BSDATA_WH40K_11E",
@@ -101,7 +102,9 @@
         "roster_constraints",
         "structured_drift_detection"
       ],
-      "state": "PASS"
+      "state": "PASS",
+      "checked_at": "2026-10-20",
+      "observed_commit": "a56674583d9f656a191e4210268c276f133b47d1"
     },
     {
       "id": "NEW_RECRUIT_RUNTIME",
@@ -351,7 +354,7 @@
       ],
       "content_state": "PASS",
       "repository_dimension": null,
-      "report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
+      "report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
       "authority_boundary": "Secondary mirror semantic currentness only; Games Workshop remains normative."
     },
     "faq_errata_assets": {
@@ -360,7 +363,7 @@
       ],
       "content_state": "PASS",
       "repository_dimension": null,
-      "report": "sources/snapshots/gw_11e_official_assets_2026-09-29.json",
+      "report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/official_assets.json",
       "authority_boundary": "Verifies live source catalog plus exact official GW asset availability/hashes; does not claim mirror prose equals official text."
     },
     "new_recruit_runtime_projection": {

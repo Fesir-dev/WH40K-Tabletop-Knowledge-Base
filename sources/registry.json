@@ -109,7 +109,7 @@
       "source_role": "current_mirror",
       "status": "CURRENT_VERIFIED",
       "url": "https://wahapedia.ru/wh40k11ed/",
-      "checked_at": "2026-09-29",
+      "checked_at": "2026-10-20",
       "use_for": [
         "crosscheck",
         "csv_structural_ingestion",
@@ -128,9 +128,9 @@
       "source_health": "PASS",
       "repository_coverage_state": "STRUCTURAL_INGESTED",
       "observed_revision": {
-        "last_update": "2026-09-28 02:38:04",
-        "snapshot_date": "2026-09-29",
-        "manifest": "rules/11e/snapshots/2026-09-29/wahapedia/manifest.json"
+        "last_update": "2026-10-19 03:47:32",
+        "snapshot_date": "2026-10-20",
+        "manifest": "rules/11e/snapshots/2026-10-20/wahapedia/manifest.json"
       }
     },
     {
@@ -141,11 +141,11 @@
       "source_role": "structured_implementation",
       "status": "CURRENT_VERIFIED",
       "url": "https://github.com/BSData/wh40k-11e",
-      "checked_at": "2026-09-29",
+      "checked_at": "2026-10-20",
       "observed_revision": {
-        "commit_sha": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "commit_date": "2026-09-27",
-        "message": "Fix weapon limits for Berzerkers"
+        "commit_sha": "a56674583d9f656a191e4210268c276f133b47d1",
+        "promoted_at": "2026-10-20",
+        "observed_via": "AUTOMATED_REINGESTION_REVIEWED_PROMOTION"
       },
       "use_for": [
         "machine_readable_catalogues",
