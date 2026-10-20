@@ -1,5 +1,4 @@
 name: Upstream reingestion candidate
-# Operational trigger: 2026-10-20 guarded rules refresh candidate.
 
 on:
   workflow_run:
@@ -51,7 +50,9 @@ jobs:
           PY
 
       - name: Execute candidate ingestion in isolated workspace
+        id: candidate
         if: steps.plan.outputs.state != 'NO_ACTION'
+        continue-on-error: true
         run: |
           python tools/run_upstream_reingestion_candidate.py \
             --plan .cache/reingestion-plan.json \
@@ -71,7 +72,7 @@ jobs:
           PY
 
       - name: Synthetic end-to-end candidate smoke
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && steps.candidate.outcome != 'failure'
         run: |
           smoke_key="candidate-smoke-${GITHUB_RUN_ID}"
           python tools/plan_upstream_reingestion.py \
@@ -91,7 +92,9 @@ jobs:
           assert all(x["status"]=="PASS" for x in r["stages"]), r
           print("synthetic candidate smoke: PASS")
           PY
+
       - name: Upload reviewable candidate evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: upstream-reingestion-${{ steps.plan.outputs.plan_id }}
@@ -99,6 +102,7 @@ jobs:
           retention-days: 30
 
       - name: Assert no automatic promotion
+        if: always()
         run: |
           python - <<'PY'
           import json
@@ -106,3 +110,9 @@ jobs:
           assert p["promotion"]["auto_promote"] is False
           print("auto-promote: DISABLED")
           PY
+
+      - name: Propagate candidate failure after evidence upload
+        if: always() && steps.candidate.outcome == 'failure'
+        run: |
+          echo "Candidate ingestion failed; review uploaded candidate evidence."
+          exit 2
