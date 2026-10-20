@@ -41,9 +41,17 @@ def verify_current_evidence():
     assert mfm["version"] == MFM_VERSION, mfm
     assert mfm["last_updated"] == MFM_UPDATED, mfm
     assert mfm["snapshot"] == "rules/11e/snapshots/2026-10-20/mfm/index.json", mfm
+
     wave_b = current["wave_b_structural"]
     assert wave_b["wahapedia_last_update"] == WAHA_LAST_UPDATE, wave_b
-    assert wave_b["bsdata_commit"] == BSDATA_SHA, wave_b
+
+    registry = load(ROOT / "sources" / "registry.json")
+    bsdata = next(x for x in registry["sources"] if x["id"] == "BSDATA_WH40K_11E")
+    assert bsdata["observed_revision"]["commit_sha"] == BSDATA_SHA, bsdata
+
+    fallback = load(ROOT / wave_b["implementation_fallback_snapshot"])
+    assert fallback["commit_sha"] == BSDATA_SHA, fallback
+
     assert PROMOTION_ROOT.exists(), PROMOTION_ROOT
     report = load(ROOT / "reports" / "UPSTREAM_CHANGE_WATCH_CURRENT.json")
     assert report["status"] == "NO_CHANGE", report["status"]
@@ -53,8 +61,8 @@ def verify_current_evidence():
 def patch_manifest(path: Path):
     data = load(path)
     activation = data.setdefault("activation_evidence", {})
-    # Deliberately keep the legacy full-current boolean false: public evidence here
-    # establishes current MFM/roster dimensions, not complete Codex/app wording.
+    # Scoped currentness is proven for MFM/roster dimensions only. Full Codex/app
+    # semantic equivalence remains explicitly pending authorized evidence.
     activation["current_legal_confirmed"] = False
     activation["scoped_current_legal_confirmed"] = True
     activation["confirmed_at"] = DATE
@@ -69,8 +77,14 @@ def patch_manifest(path: Path):
             "version": MFM_VERSION,
             "published_or_updated_at": MFM_UPDATED,
             "confirmed_at": DATE,
-            "scope": ["points", "unit_sizes", "detachment_catalog", "detachment_points", "force_dispositions"],
-            "note": "Official current MFM v1.6 establishes the scoped current-legal MFM dimensions for this transition. It does not establish complete Codex/app wording equivalence."
+            "scope": [
+                "points",
+                "unit_sizes",
+                "detachment_catalog",
+                "detachment_points",
+                "force_dispositions",
+            ],
+            "note": "Official current MFM v1.6 establishes the scoped current-legal MFM dimensions for this transition. It does not establish complete Codex/app wording equivalence.",
         }
     ]
     data["transition_state"] = "CURRENT_SCOPED_RECONCILED"
@@ -104,7 +118,6 @@ def patch_release_state(manifests):
     for row in state["transitions"]:
         if row["id"] not in by_id:
             continue
-        m = by_id[row["id"]]
         row["checked_at"] = DATE
         row["readiness_state"] = "CURRENT_SCOPED_RECONCILED"
         row["current_legal_confirmation"] = False
@@ -114,7 +127,10 @@ def patch_release_state(manifests):
         row["full_codex_app_semantics"] = "PENDING_AUTHORIZED_APP_EVIDENCE"
         row["upcoming_state"] = None
     state["transition_policy"]["state"] = "OPERATIONAL_READINESS_V1_SCOPED_RELEASES_RECONCILED"
-    state["transition_policy"]["current_scope_rule"] = "Scoped official MFM currentness plus completed reviewed upstream promotion may close a transition for declared MFM/roster dimensions without claiming full Codex/app semantic equivalence."
+    state["transition_policy"]["current_scope_rule"] = (
+        "Scoped official MFM currentness plus completed reviewed upstream promotion may close a transition "
+        "for declared MFM/roster dimensions without claiming full Codex/app semantic equivalence."
+    )
     state["activation_watch"]["current_status"] = "NO_ACTION_REQUIRED"
     state["activation_watch"]["latest_scoped_closure"] = DATE
     write(path, state)
@@ -125,8 +141,16 @@ def write_closure(manifests):
         "schema_version": "1.0",
         "status": "PASS_SCOPED_RELEASE_TRANSITIONS_RECONCILED",
         "as_of": DATE,
-        "mfm": {"version": MFM_VERSION, "official_last_updated": MFM_UPDATED, "source": MFM_URL},
-        "secondary_projection": {"wahapedia_last_update": WAHA_LAST_UPDATE, "bsdata_commit": BSDATA_SHA, "reviewed_promotion_id": PROMOTION_ID},
+        "mfm": {
+            "version": MFM_VERSION,
+            "official_last_updated": MFM_UPDATED,
+            "source": MFM_URL,
+        },
+        "secondary_projection": {
+            "wahapedia_last_update": WAHA_LAST_UPDATE,
+            "bsdata_commit": BSDATA_SHA,
+            "reviewed_promotion_id": PROMOTION_ID,
+        },
         "transitions": [
             {
                 "transition_id": m["transition_id"],
@@ -166,7 +190,16 @@ def main():
     manifests = [patch_manifest(p) for p in MANIFESTS]
     patch_release_state(manifests)
     write_closure(manifests)
-    print(json.dumps({"status":"PASS","transitions":[m["transition_id"] for m in manifests],"scope":SCOPED_DIMENSIONS}, ensure_ascii=False))
+    print(
+        json.dumps(
+            {
+                "status": "PASS",
+                "transitions": [m["transition_id"] for m in manifests],
+                "scope": SCOPED_DIMENSIONS,
+            },
+            ensure_ascii=False,
+        )
+    )
     return 0
 
 
