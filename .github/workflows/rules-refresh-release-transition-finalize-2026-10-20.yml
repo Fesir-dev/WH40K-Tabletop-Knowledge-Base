@@ -1,0 +1,84 @@
+name: Rules refresh release transition finalize 2026-10-20
+
+on:
+  push:
+    branches:
+      - ops/rules-refresh-2026-10-20
+    paths:
+      - ".github/workflows/rules-refresh-release-transition-finalize-2026-10-20.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rules-refresh-release-transition-finalize-2026-10-20
+  cancel-in-progress: false
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ops/rules-refresh-2026-10-20
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Finalize scoped release transitions
+        run: python tools/finalize_release_transition_refresh.py
+
+      - name: Generate readiness and activation checkpoints
+        run: |
+          python tools/evaluate_release_transitions.py \
+            --as-of 2026-10-20 \
+            --output reports/RELEASE_TRANSITION_READINESS_CURRENT.json
+          python tools/watch_release_transition_activation.py \
+            --as-of 2026-10-20 \
+            --output reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json
+          python - <<'PY'
+          import json
+          r=json.load(open('reports/RELEASE_TRANSITION_READINESS_CURRENT.json',encoding='utf-8'))
+          w=json.load(open('reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json',encoding='utf-8'))
+          assert r['summary']['scoped_current_reconciled']==2, r
+          assert all(x['state']=='CURRENT_SCOPED_RECONCILED' for x in r['transitions']), r
+          assert all(not x['full_codex_app_semantics_confirmed'] for x in r['transitions']), r
+          assert w['status']=='NO_ACTION_REQUIRED', w
+          assert w['summary']['scoped_current_reconciled']==2, w
+          assert all(x['next_action']=='ALREADY_CURRENT_SCOPED' for x in w['transitions']), w
+          print('release transition scoped closure: PASS')
+          PY
+
+      - name: Update repository regression contracts
+        run: python tools/patch_release_transition_repository_tests.py
+
+      - name: Validate release transition control plane
+        run: |
+          python -m compileall -q tools tests
+          python -m unittest tests.test_release_transition_readiness -v
+          python -m unittest tests.test_release_transition_activation_watch -v
+          python tools/validate_repo.py
+          python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Commit durable release-transition milestone
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            ingestion/release_transitions/space_marines_codex_2026.json \
+            ingestion/release_transitions/adeptus_custodes_codex_2026.json \
+            sources/release_state.json \
+            reports/RELEASE_TRANSITION_READINESS_CURRENT.json \
+            reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json \
+            reports/RELEASE_TRANSITION_SCOPED_CLOSURE_CURRENT.json \
+            reports/RELEASE_TRANSITION_SCOPED_CLOSURE_2026-10-20.md \
+            tests/test_repository_contracts.py
+          git diff --cached --check
+          git commit -m "Close Space Marines and Custodes scoped release transitions"
+          git fetch origin ops/rules-refresh-2026-10-20
+          git rebase origin/ops/rules-refresh-2026-10-20
+          git push origin HEAD:ops/rules-refresh-2026-10-20
