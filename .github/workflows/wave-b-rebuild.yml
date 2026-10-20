@@ -20,28 +20,53 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Build roster-specific structural views from committed snapshot
-        run: python tools/build_wave_b_roster_views.py
-      - name: Validate roster-view contract
+
+      - name: Resolve current Wave B and MFM snapshots
+        shell: bash
         run: |
-          python - <<'PY'
+          python - <<'PY' >> "$GITHUB_ENV"
           import json
           from pathlib import Path
-          p=Path("rules/11e/snapshots/2026-09-29/wahapedia/roster_views/index.json")
-          d=json.loads(p.read_text(encoding="utf-8"))
-          assert d["counts"]=={"roster_identities":37,"structural_complete":35,"structural_partial":0,"unavailable":2}, d["counts"]
-          unavailable={x["slug"] for x in d["views"] if x["status"].startswith("UNAVAILABLE")}
-          assert unavailable=={"titanicus_traitoris","unaligned_forces"}, unavailable
-          print("Wave B roster views: PASS", d["counts"])
+          current=json.load(open('rules/11e/current.json',encoding='utf-8'))
+          wave=Path(current['wave_b_structural']['snapshot'])
+          mfm=Path(current['wave_a_mfm']['snapshot'])
+          def snapshot_date(path):
+              parts=path.parts
+              return parts[parts.index('snapshots')+1]
+          print(f"WAVE_DATE={snapshot_date(wave)}")
+          print(f"MFM_DATE={snapshot_date(mfm)}")
+          print(f"ROSTER_ROOT={wave.parent.as_posix()}")
+          print(f"ROSTER_INDEX={wave.as_posix()}")
           PY
-      - name: Commit rebuilt roster views
+
+      - name: Build roster-specific structural views from current committed snapshot
+        run: |
+          python tools/build_wave_b_roster_views.py \
+            --snapshot-date "$WAVE_DATE" \
+            --mfm-snapshot-date "$MFM_DATE"
+
+      - name: Validate current roster-view contract
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p=Path(os.environ['ROSTER_INDEX'])
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['counts']=={'roster_identities':37,'structural_complete':35,'structural_partial':0,'unavailable':2}, d['counts']
+          unavailable={x['slug'] for x in d['views'] if x['status'].startswith('UNAVAILABLE')}
+          assert unavailable=={'titanicus_traitoris','unaligned_forces'}, unavailable
+          print('Wave B current roster views: PASS', d['snapshot_date'], d['counts'])
+          PY
+
+      - name: Commit rebuilt current roster views
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add rules/11e/snapshots/2026-09-29/wahapedia/roster_views
+          git add "$ROSTER_ROOT"
           if git diff --cached --quiet; then
-            echo "No roster-view changes"
+            echo "No current roster-view changes"
           else
-            git commit -m "Rebuild Wave B roster-specific views"
+            git commit -m "Rebuild current Wave B roster-specific views"
             git push
           fi
