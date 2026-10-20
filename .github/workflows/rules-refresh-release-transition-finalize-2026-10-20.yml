@@ -72,10 +72,12 @@ jobs:
             ingestion/release_transitions/space_marines_codex_2026.json \
             ingestion/release_transitions/adeptus_custodes_codex_2026.json \
             sources/release_state.json \
+            rules/11e/current.json \
             reports/RELEASE_TRANSITION_READINESS_CURRENT.json \
             reports/RELEASE_TRANSITION_ACTIVATION_WATCH_CURRENT.json \
             reports/RELEASE_TRANSITION_SCOPED_CLOSURE_CURRENT.json \
             reports/RELEASE_TRANSITION_SCOPED_CLOSURE_2026-10-20.md \
+            tools/validate_repo.py \
             tests/test_repository_contracts.py
           git diff --cached --check
           git commit -m "Close Space Marines and Custodes scoped release transitions"
