@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "status": "NEW_RUNTIME_PROJECTION_DRIFT",
   "system": {
     "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40,000-11th-edition",
@@ -386,242 +386,47 @@
   },
   "representative_points": {
     "checks": 15,
-    "matched": 9,
+    "matched": 14,
     "known_drift_count": 0,
-    "new_drift_count": 6,
+    "new_drift_count": 1,
     "known_drifts": [],
     "new_drifts": [
       {
-        "slug": "orks",
-        "unit": "Ghazghkull Thraka",
+        "slug": "adeptus_custodes",
+        "unit": "Trajann Valoris",
         "archetype": "named_character",
-        "gw_mfm_value": 300,
-        "expected_points": 300,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
+        "gw_mfm_value": 265,
+        "expected_points": 265,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-custodes/87ec-de53-6df9-9c22/trajann-valoris",
         "http_status": 200,
-        "new_recruit_runtime_value": 290,
-        "runtime_points": 290,
+        "new_recruit_runtime_value": 135,
+        "runtime_points": 135,
         "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 300,
-        "pinned_bsdata_value": 300,
-        "live_bsdata_value": 290,
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 265,
+        "pinned_bsdata_value": 265,
+        "live_bsdata_value": 265,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.6",
+            "official_last_updated": "2026-10-14"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-19 03:47:32"
           },
           "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Orks.json"
+            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
+            "file": "Imperium - Adeptus Custodes.json"
           },
           "live_bsdata": {
             "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Orks.json"
+            "file": "Imperium - Adeptus Custodes.json"
           },
           "new_recruit": {
             "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
           }
         },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
-        "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
-      },
-      {
-        "slug": "astra_militarum",
-        "unit": "Lord Solar Leontus",
-        "archetype": "named_character",
-        "gw_mfm_value": 130,
-        "expected_points": 130,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---astra-militarum/d2de-6903-46a-f02c/lord-solar-leontus",
-        "http_status": 200,
-        "new_recruit_runtime_value": 120,
-        "runtime_points": 120,
-        "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 130,
-        "pinned_bsdata_value": null,
-        "live_bsdata_value": null,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Imperium - Astra Militarum.json"
-          },
-          "live_bsdata": {
-            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Imperium - Astra Militarum.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
-        "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
-      },
-      {
-        "slug": "chaos_space_marines",
-        "unit": "Abaddon The Despoiler",
-        "archetype": "named_character",
-        "gw_mfm_value": 295,
-        "expected_points": 295,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-space-marines/2e42-8d21-37fe-1de9/abaddon-the-despoiler",
-        "http_status": 200,
-        "new_recruit_runtime_value": 300,
-        "runtime_points": 300,
-        "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 295,
-        "pinned_bsdata_value": 295,
-        "live_bsdata_value": 300,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Chaos - Chaos Space Marines.json"
-          },
-          "live_bsdata": {
-            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Chaos - Chaos Space Marines.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
-        "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
-      },
-      {
-        "slug": "leagues_of_votann",
-        "unit": "ûthar The Destined",
-        "archetype": "named_character",
-        "gw_mfm_value": 90,
-        "expected_points": 90,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---leagues-of-votann/95dc-990b-2a93-5e83/%C3%BBthar-the-destined",
-        "http_status": 200,
-        "new_recruit_runtime_value": 100,
-        "runtime_points": 100,
-        "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 90,
-        "pinned_bsdata_value": 90,
-        "live_bsdata_value": 100,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Leagues of Votann.json"
-          },
-          "live_bsdata": {
-            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Leagues of Votann.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
-        "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
-      },
-      {
-        "slug": "orks",
-        "unit": "Boyz",
-        "archetype": "infantry_multi_size",
-        "gw_mfm_value": 90,
-        "expected_points": 90,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/187-93d6-1ac7-dbde/boyz",
-        "http_status": 200,
-        "new_recruit_runtime_value": 85,
-        "runtime_points": 85,
-        "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 90,
-        "pinned_bsdata_value": 90,
-        "live_bsdata_value": 85,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Orks.json"
-          },
-          "live_bsdata": {
-            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Orks.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
-        "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
-      },
-      {
-        "slug": "orks",
-        "unit": "Battlewagon",
-        "archetype": "vehicle",
-        "gw_mfm_value": 150,
-        "expected_points": 150,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9af5-6820-1ff2-6c01/battlewagon",
-        "http_status": 200,
-        "new_recruit_runtime_value": 160,
-        "runtime_points": 160,
-        "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 150,
-        "pinned_bsdata_value": 150,
-        "live_bsdata_value": 160,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Orks.json"
-          },
-          "live_bsdata": {
-            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Orks.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "UNCLASSIFIED_OR_CHANGED"
       }
@@ -639,53 +444,53 @@
         "slug": "adeptus_custodes",
         "unit": "Trajann Valoris",
         "archetype": "named_character",
-        "gw_mfm_value": 135,
-        "expected_points": 135,
+        "gw_mfm_value": 265,
+        "expected_points": 265,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-custodes/87ec-de53-6df9-9c22/trajann-valoris",
         "http_status": 200,
         "new_recruit_runtime_value": 135,
         "runtime_points": 135,
-        "status": "MATCH",
-        "classification": "NORMATIVE_MATCH"
-      },
-      {
-        "slug": "orks",
-        "unit": "Ghazghkull Thraka",
-        "archetype": "named_character",
-        "gw_mfm_value": 300,
-        "expected_points": 300,
-        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
-        "http_status": 200,
-        "new_recruit_runtime_value": 290,
-        "runtime_points": 290,
         "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 300,
-        "pinned_bsdata_value": 300,
-        "live_bsdata_value": 290,
+        "classification": "RUNTIME_PROJECTION_DRIFT",
+        "wahapedia_value": 265,
+        "pinned_bsdata_value": 265,
+        "live_bsdata_value": 265,
         "source_revisions": {
           "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
+            "version": "1.6",
+            "official_last_updated": "2026-10-14"
           },
           "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
+            "last_update": "2026-10-19 03:47:32"
           },
           "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Orks.json"
+            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
+            "file": "Imperium - Adeptus Custodes.json"
           },
           "live_bsdata": {
             "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Orks.json"
+            "file": "Imperium - Adeptus Custodes.json"
           },
           "new_recruit": {
             "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
           }
         },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
+        "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
         "registry_state": "UNCLASSIFIED_OR_CHANGED"
+      },
+      {
+        "slug": "orks",
+        "unit": "Ghazghkull Thraka",
+        "archetype": "named_character",
+        "gw_mfm_value": 290,
+        "expected_points": 290,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/473e-73f9-493d-6a0a/ghazghkull-thraka",
+        "http_status": 200,
+        "new_recruit_runtime_value": 290,
+        "runtime_points": 290,
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
       },
       {
         "slug": "necrons",
@@ -717,79 +522,27 @@
         "slug": "astra_militarum",
         "unit": "Lord Solar Leontus",
         "archetype": "named_character",
-        "gw_mfm_value": 130,
-        "expected_points": 130,
+        "gw_mfm_value": 120,
+        "expected_points": 120,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---astra-militarum/d2de-6903-46a-f02c/lord-solar-leontus",
         "http_status": 200,
         "new_recruit_runtime_value": 120,
         "runtime_points": 120,
-        "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 130,
-        "pinned_bsdata_value": null,
-        "live_bsdata_value": null,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Imperium - Astra Militarum.json"
-          },
-          "live_bsdata": {
-            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Imperium - Astra Militarum.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
-        "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
       },
       {
         "slug": "chaos_space_marines",
         "unit": "Abaddon The Despoiler",
         "archetype": "named_character",
-        "gw_mfm_value": 295,
-        "expected_points": 295,
+        "gw_mfm_value": 300,
+        "expected_points": 300,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/chaos---chaos-space-marines/2e42-8d21-37fe-1de9/abaddon-the-despoiler",
         "http_status": 200,
         "new_recruit_runtime_value": 300,
         "runtime_points": 300,
-        "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 295,
-        "pinned_bsdata_value": 295,
-        "live_bsdata_value": 300,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Chaos - Chaos Space Marines.json"
-          },
-          "live_bsdata": {
-            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Chaos - Chaos Space Marines.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
-        "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
       },
       {
         "slug": "tyranids",
@@ -834,118 +587,40 @@
         "slug": "leagues_of_votann",
         "unit": "ûthar The Destined",
         "archetype": "named_character",
-        "gw_mfm_value": 90,
-        "expected_points": 90,
+        "gw_mfm_value": 100,
+        "expected_points": 100,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---leagues-of-votann/95dc-990b-2a93-5e83/%C3%BBthar-the-destined",
         "http_status": 200,
         "new_recruit_runtime_value": 100,
         "runtime_points": 100,
-        "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 90,
-        "pinned_bsdata_value": 90,
-        "live_bsdata_value": 100,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Leagues of Votann.json"
-          },
-          "live_bsdata": {
-            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Leagues of Votann.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
-        "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
       },
       {
         "slug": "orks",
         "unit": "Boyz",
         "archetype": "infantry_multi_size",
-        "gw_mfm_value": 90,
-        "expected_points": 90,
+        "gw_mfm_value": 85,
+        "expected_points": 85,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/187-93d6-1ac7-dbde/boyz",
         "http_status": 200,
         "new_recruit_runtime_value": 85,
         "runtime_points": 85,
-        "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 90,
-        "pinned_bsdata_value": 90,
-        "live_bsdata_value": 85,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Orks.json"
-          },
-          "live_bsdata": {
-            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Orks.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
-        "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
       },
       {
         "slug": "orks",
         "unit": "Battlewagon",
         "archetype": "vehicle",
-        "gw_mfm_value": 150,
-        "expected_points": 150,
+        "gw_mfm_value": 160,
+        "expected_points": 160,
         "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/xenos---orks/9af5-6820-1ff2-6c01/battlewagon",
         "http_status": 200,
         "new_recruit_runtime_value": 160,
         "runtime_points": 160,
-        "status": "MISMATCH",
-        "classification": "UNKNOWN_RUNTIME_DRIFT",
-        "wahapedia_value": 150,
-        "pinned_bsdata_value": 150,
-        "live_bsdata_value": 160,
-        "source_revisions": {
-          "gw_mfm": {
-            "version": "1.4",
-            "official_last_updated": "2026-09-02"
-          },
-          "wahapedia": {
-            "last_update": "2026-09-28 02:38:04"
-          },
-          "pinned_bsdata": {
-            "revision": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-            "file": "Orks.json"
-          },
-          "live_bsdata": {
-            "revision": "a56674583d9f656a191e4210268c276f133b47d1",
-            "file": "Orks.json"
-          },
-          "new_recruit": {
-            "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
-          }
-        },
-        "recommended_action": "Do not change normative KB data. Gather additional source-lineage evidence before assigning ownership.",
-        "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "status": "MATCH",
+        "classification": "NORMATIVE_MATCH"
       },
       {
         "slug": "orks",
@@ -1100,7 +775,7 @@
   "lineage": {
     "runtime_source": "NEW_RECRUIT_WIKI",
     "expected_upstream": "BSDATA_WH40K_11E",
-    "pinned_bsdata_commit": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+    "pinned_bsdata_commit": "a56674583d9f656a191e4210268c276f133b47d1",
     "live_bsdata_commit": "a56674583d9f656a191e4210268c276f133b47d1",
     "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
   },
@@ -1111,5 +786,16 @@
     "new_drift_behavior": "New or changed point/surface drift fails the workflow and requires classification.",
     "normative_guard": "Runtime mismatch never automatically changes normative Games Workshop/MFM data.",
     "not_claimed": "Does not prove every builder constraint or the undocumented BSData-to-New-Recruit synchronization interval."
+  },
+  "provenance": {
+    "current_rules": {
+      "mfm_version": "1.6",
+      "mfm_last_updated": "2026-10-14",
+      "wahapedia_last_update": "2026-10-19 03:47:32",
+      "bsdata_revision": "a56674583d9f656a191e4210268c276f133b47d1",
+      "validator": "tools/validate_new_recruit_runtime_current.py",
+      "legacy_validator": "tools/validate_new_recruit_runtime.py",
+      "library_resolution": "ENABLED_FOR_IMPORTED_BSDATA_LIBRARIES"
+    }
   }
 }
