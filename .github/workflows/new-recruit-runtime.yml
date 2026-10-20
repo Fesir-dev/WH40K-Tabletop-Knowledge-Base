@@ -4,10 +4,13 @@ on:
   push:
     paths:
       - "tools/validate_new_recruit_runtime.py"
+      - "tools/validate_new_recruit_runtime_current.py"
       - ".github/workflows/new-recruit-runtime.yml"
       - "factions/catalog.json"
-      - "rules/11e/snapshots/2026-09-29/mfm/**"
-      - "rules/11e/snapshots/2026-09-29/wahapedia/**"
+      - "rules/11e/current.json"
+      - "rules/11e/snapshots/**/mfm/**"
+      - "rules/11e/snapshots/**/wahapedia/**"
+      - "sources/registry.json"
       - "sources/runtime_drift_registry.json"
   workflow_dispatch:
   schedule:
@@ -31,7 +34,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          python tools/validate_new_recruit_runtime.py
+          python tools/validate_new_recruit_runtime_current.py
           code=$?
           echo "code=$code" >> "$GITHUB_OUTPUT"
           exit 0
@@ -44,6 +47,7 @@ jobs:
             echo "No runtime report changes"
           else
             git commit -m "Refresh New Recruit runtime validation"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
             git push
           fi
       - name: Fail on new or changed runtime drift
