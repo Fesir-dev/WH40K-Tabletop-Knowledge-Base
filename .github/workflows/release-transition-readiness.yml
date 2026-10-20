@@ -48,7 +48,7 @@ jobs:
         if: github.event_name == 'pull_request' || github.event_name == 'push'
         run: |
           python tools/evaluate_release_transitions.py \
-            --as-of 2026-09-29 \
+            --as-of 2026-10-20 \
             --output reports/RELEASE_TRANSITION_READINESS_CURRENT.json
           git diff --exit-code -- reports/RELEASE_TRANSITION_READINESS_CURRENT.json
 
