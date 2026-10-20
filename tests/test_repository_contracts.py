@@ -87,9 +87,9 @@ class RepositoryContracts(unittest.TestCase):
             self.assertTrue(set(tr["factions"]) <= slugs, tr["id"])
 
     def test_release_transition_readiness_control_plane(self):
-        self.assertEqual(self.release["schema_version"], "1.2")
+        self.assertEqual(self.release["schema_version"], "1.3")
         policy=self.release["transition_policy"]
-        self.assertEqual(policy["state"], "OPERATIONAL_READINESS_V1")
+        self.assertEqual(policy["state"], "OPERATIONAL_READINESS_V1_SCOPED_RELEASES_RECONCILED")
         self.assertFalse(policy["auto_promote"])
         self.assertEqual(policy["report"], "reports/RELEASE_TRANSITION_READINESS_CURRENT.json")
         self.assertTrue((ROOT/policy["evaluator"]).exists())
@@ -100,12 +100,14 @@ class RepositoryContracts(unittest.TestCase):
         report=self.release_readiness
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["milestone"], "RELEASE_TRANSITION_INGESTION_READINESS")
-        self.assertEqual(report["as_of"], "2026-09-29")
+        self.assertEqual(report["as_of"], "2026-10-20")
         self.assertFalse(report["global_policy"]["auto_promote"])
+        self.assertTrue(report["global_policy"]["scoped_currentness_does_not_claim_full_codex_app_equivalence"])
         rows={x["transition_id"]:x for x in report["transitions"]}
         self.assertEqual(set(rows), {"SPACE_MARINES_CODEX_2026","ADEPTUS_CUSTODES_CODEX_2026"})
-        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["state"], "PRE_RELEASE_HOLD")
-        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["state"], "UPCOMING_HOLD_NO_RELEASE_DATE")
+        self.assertTrue(all(x["state"] == "CURRENT_SCOPED_RECONCILED" for x in rows.values()))
+        self.assertTrue(all(x["scoped_current_legal_confirmed"] for x in rows.values()))
+        self.assertTrue(all(not x["full_codex_app_semantics_confirmed"] for x in rows.values()))
         self.assertTrue(all(x["promotion_eligible"] is False for x in rows.values()))
 
         manifests={
@@ -118,6 +120,11 @@ class RepositoryContracts(unittest.TestCase):
             self.assertTrue(set(manifest["factions"]) <= catalog_slugs)
             self.assertEqual(manifest["baseline_current_state"], "CURRENT_LEGAL")
             self.assertFalse(manifest["activation_evidence"]["current_legal_confirmed"])
+            self.assertTrue(manifest["activation_evidence"]["scoped_current_legal_confirmed"])
+            self.assertFalse(manifest["activation_evidence"]["full_codex_app_semantics_confirmed"])
+            self.assertEqual(manifest["transition_state"], "CURRENT_SCOPED_RECONCILED")
+            self.assertTrue(manifest["reviewed_promotion"]["applied"])
+            self.assertEqual(manifest["reviewed_promotion"]["promotion_id"], "REINGEST_49496d868bd7")
             self.assertTrue(manifest["policy"]["preview_never_promotes"])
             self.assertTrue(manifest["policy"]["date_alone_never_promotes"])
             self.assertTrue(manifest["policy"]["require_official_current_legal_evidence"])
@@ -145,9 +152,10 @@ class RepositoryContracts(unittest.TestCase):
 
         report=self.release_activation_watch
         self.assertEqual(report["status"], "NO_ACTION_REQUIRED")
-        self.assertEqual(report["as_of"], "2026-09-29")
+        self.assertEqual(report["as_of"], "2026-10-20")
         self.assertEqual(report["summary"]["transition_count"], 2)
         self.assertEqual(report["summary"]["no_action"], 2)
+        self.assertEqual(report["summary"]["scoped_current_reconciled"], 2)
         self.assertEqual(report["summary"]["action_required"], 0)
         self.assertEqual(report["summary"]["monitoring"], 0)
         self.assertEqual(report["summary"]["ready_for_candidate"], 0)
@@ -157,9 +165,11 @@ class RepositoryContracts(unittest.TestCase):
 
         rows={x["transition_id"]:x for x in report["transitions"]}
         self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["watch_state"], "NO_ACTION")
-        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["next_action"], "WAIT_PRE_RELEASE")
+        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["next_action"], "ALREADY_CURRENT_SCOPED")
         self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["watch_state"], "NO_ACTION")
-        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["next_action"], "WAIT_OFFICIAL_RELEASE_SIGNAL")
+        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["next_action"], "ALREADY_CURRENT_SCOPED")
+        self.assertTrue(all(x["scoped_current_legal_confirmed"] for x in rows.values()))
+        self.assertTrue(all(not x["full_codex_app_semantics_confirmed"] for x in rows.values()))
 
         workflow=(ROOT/".github/workflows/release-transition-activation-watch.yml").read_text(encoding="utf-8")
         self.assertIn("contents: read", workflow)
@@ -1103,14 +1113,17 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
         self.assertEqual(self.current["next_milestone"], "CORE_RULE_AST_READINESS_EXPANSION_V1")
         layer=self.current["release_transition_readiness"]
-        self.assertEqual(layer["state"], "OPERATIONAL_V1")
+        self.assertEqual(layer["state"], "OPERATIONAL_V1_SCOPED_RELEASES_RECONCILED")
         self.assertFalse(layer["policy"]["auto_promote"])
         tracked={x["id"]:x for x in layer["tracked_transitions"]}
-        self.assertEqual(tracked["SPACE_MARINES_CODEX_2026"]["state"], "PRE_RELEASE_HOLD")
-        self.assertEqual(tracked["ADEPTUS_CUSTODES_CODEX_2026"]["state"], "UPCOMING_HOLD_NO_RELEASE_DATE")
+        self.assertTrue(all(x["state"] == "CURRENT_SCOPED_RECONCILED" for x in tracked.values()))
+        self.assertTrue(all(x["scoped_current_legal_confirmed"] for x in tracked.values()))
+        self.assertTrue(all(not x["full_codex_app_semantics_confirmed"] for x in tracked.values()))
         activation=self.current["release_transition_activation_watch"]
         self.assertEqual(activation["state"], "OPERATIONAL_V1")
+        self.assertEqual(activation["checkpoint_as_of"], "2026-10-20")
         self.assertEqual(activation["checkpoint_status"], "NO_ACTION_REQUIRED")
+        self.assertEqual(activation["scoped_current_reconciled"], 2)
         self.assertFalse(activation["safety"]["auto_promote"])
         self.assertFalse(activation["safety"]["direct_current_rules_mutation"])
         gap_layer=self.current["normative_equivalence_gap_audit"]

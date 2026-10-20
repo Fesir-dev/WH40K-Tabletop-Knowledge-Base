@@ -213,11 +213,11 @@ try:
     catalog = json.loads((ROOT / "factions" / "catalog.json").read_text(encoding="utf-8"))
     catalog_slugs = {x.get("slug") for x in catalog.get("factions", [])}
 
-    if release.get("schema_version") != "1.2":
-        errors.append("release_state.json must be schema 1.2 with activation watch v1")
+    if release.get("schema_version") != "1.3":
+        errors.append("release_state.json must be schema 1.3 after scoped release reconciliation")
     transition_policy = release.get("transition_policy", {})
-    if transition_policy.get("state") != "OPERATIONAL_READINESS_V1":
-        errors.append("Release transition policy must be OPERATIONAL_READINESS_V1")
+    if transition_policy.get("state") != "OPERATIONAL_READINESS_V1_SCOPED_RELEASES_RECONCILED":
+        errors.append("Release transition policy must record scoped release reconciliation")
     if transition_policy.get("auto_promote") is not False:
         errors.append("Release transition policy must keep auto_promote=false")
     if transition_policy.get("report") != "reports/RELEASE_TRANSITION_READINESS_CURRENT.json":
@@ -227,8 +227,8 @@ try:
         errors.append("Release transition readiness report must PASS")
     if readiness.get("milestone") != "RELEASE_TRANSITION_INGESTION_READINESS":
         errors.append("Release transition readiness milestone id drifted")
-    if readiness.get("as_of") != "2026-09-29":
-        errors.append("Committed release transition readiness checkpoint must remain 2026-09-29")
+    if readiness.get("as_of") != "2026-10-20":
+        errors.append("Committed release transition readiness checkpoint must be 2026-10-20")
     if readiness.get("global_policy", {}).get("auto_promote") is not False:
         errors.append("Release transition readiness must never auto-promote")
     if readiness.get("global_policy", {}).get("calendar_date_is_not_currentness_evidence") is not True:
@@ -237,10 +237,12 @@ try:
     readiness_rows = {x.get("transition_id"): x for x in readiness.get("transitions", [])}
     if set(readiness_rows) != set(manifests):
         errors.append("Release transition readiness rows differ from tracked manifests")
-    if readiness_rows.get("SPACE_MARINES_CODEX_2026", {}).get("state") != "PRE_RELEASE_HOLD":
-        errors.append("Space Marines transition must remain PRE_RELEASE_HOLD at 2026-09-29 checkpoint")
-    if readiness_rows.get("ADEPTUS_CUSTODES_CODEX_2026", {}).get("state") != "UPCOMING_HOLD_NO_RELEASE_DATE":
-        errors.append("Custodes transition must remain UPCOMING_HOLD_NO_RELEASE_DATE at 2026-09-29 checkpoint")
+    if any(x.get("state") != "CURRENT_SCOPED_RECONCILED" for x in readiness_rows.values()):
+        errors.append("Tracked release transitions must be CURRENT_SCOPED_RECONCILED")
+    if any(x.get("scoped_current_legal_confirmed") is not True for x in readiness_rows.values()):
+        errors.append("Tracked release transitions must confirm scoped current legality")
+    if any(x.get("full_codex_app_semantics_confirmed") is not False for x in readiness_rows.values()):
+        errors.append("Scoped release reconciliation must not claim full Codex/app semantic equivalence")
     if any(x.get("promotion_eligible") is not False for x in readiness_rows.values()):
         errors.append("No release transition may be directly promotion-eligible")
 
@@ -254,7 +256,15 @@ try:
             errors.append(f"Release manifest baseline must remain CURRENT_LEGAL: {tid}")
         activation = manifest.get("activation_evidence", {})
         if activation.get("current_legal_confirmed") is not False:
-            errors.append(f"Pre-release manifest prematurely confirmed current legality: {tid}")
+            errors.append(f"Scoped release manifest must not claim full current legality: {tid}")
+        if activation.get("scoped_current_legal_confirmed") is not True:
+            errors.append(f"Scoped release manifest lacks current scoped confirmation: {tid}")
+        if activation.get("full_codex_app_semantics_confirmed") is not False:
+            errors.append(f"Scoped release manifest improperly claims full Codex/app semantics: {tid}")
+        if manifest.get("transition_state") != "CURRENT_SCOPED_RECONCILED":
+            errors.append(f"Release manifest scoped state drifted: {tid}")
+        if manifest.get("reviewed_promotion", {}).get("promotion_id") != "REINGEST_49496d868bd7":
+            errors.append(f"Release manifest reviewed promotion pointer drifted: {tid}")
         policy = manifest.get("policy", {})
         if policy.get("preview_never_promotes") is not True:
             errors.append(f"Release manifest lost preview fail-closed policy: {tid}")
@@ -277,7 +287,13 @@ try:
         if row.get("current_legal_state") != "CURRENT_LEGAL":
             errors.append(f"Preview/release-pending transition replaced current legal state: {tid}")
         if row.get("current_legal_confirmation") is not False:
-            errors.append(f"release_state prematurely confirmed future current legality: {tid}")
+            errors.append(f"release_state must not claim full current legality: {tid}")
+        if row.get("scoped_current_legal_confirmation") is not True:
+            errors.append(f"release_state lacks scoped current confirmation: {tid}")
+        if row.get("readiness_state") != "CURRENT_SCOPED_RECONCILED":
+            errors.append(f"release_state scoped reconciliation state drifted: {tid}")
+        if row.get("full_codex_app_semantics") != "PENDING_AUTHORIZED_APP_EVIDENCE":
+            errors.append(f"release_state full Codex/app boundary drifted: {tid}")
 
     if manifests["SPACE_MARINES_CODEX_2026"].get("scheduled_release_date") != "2026-10-03":
         errors.append("Space Marines release-readiness date drifted")
@@ -322,12 +338,16 @@ try:
 
     if activation_report.get("status") != "NO_ACTION_REQUIRED":
         errors.append("Committed activation watch checkpoint must be NO_ACTION_REQUIRED")
-    if activation_report.get("as_of") != "2026-09-29":
-        errors.append("Committed activation watch checkpoint must remain 2026-09-29")
+    if activation_report.get("as_of") != "2026-10-20":
+        errors.append("Committed activation watch checkpoint must be 2026-10-20")
     if activation_report.get("summary", {}).get("transition_count") != 2:
         errors.append("Activation watch must track exactly two pending transitions")
     if activation_report.get("summary", {}).get("no_action") != 2:
         errors.append("Activation watch checkpoint should have two NO_ACTION transitions")
+    if activation_report.get("summary", {}).get("scoped_current_reconciled") != 2:
+        errors.append("Activation watch must record two scoped-current reconciled transitions")
+    if any(x.get("next_action") != "ALREADY_CURRENT_SCOPED" for x in activation_report.get("transitions", [])):
+        errors.append("Activation watch scoped-current transition action drifted")
     if any(x.get("promotion_eligible") is not False for x in activation_report.get("transitions", [])):
         errors.append("Activation watch must never mark direct promotion eligibility")
     safety = activation_report.get("safety", {})
@@ -1126,20 +1146,26 @@ try:
     if current_rules.get("next_milestone") != "CORE_RULE_AST_READINESS_EXPANSION_V1":
         errors.append("Current milestone must advance to CORE_RULE_PARAGRAPH_SEMANTIC_CLASSIFICATION_V1")
     readiness_layer = current_rules.get("release_transition_readiness", {})
-    if readiness_layer.get("state") != "OPERATIONAL_V1":
-        errors.append("Current rules must record release transition readiness v1 as operational")
+    if readiness_layer.get("state") != "OPERATIONAL_V1_SCOPED_RELEASES_RECONCILED":
+        errors.append("Current rules must record scoped release transition reconciliation")
     if readiness_layer.get("policy", {}).get("auto_promote") is not False:
         errors.append("Current release transition layer must keep auto_promote=false")
     tracked = {x.get("id"): x for x in readiness_layer.get("tracked_transitions", [])}
-    if tracked.get("SPACE_MARINES_CODEX_2026", {}).get("state") != "PRE_RELEASE_HOLD":
-        errors.append("Current Space Marines transition state drifted")
-    if tracked.get("ADEPTUS_CUSTODES_CODEX_2026", {}).get("state") != "UPCOMING_HOLD_NO_RELEASE_DATE":
-        errors.append("Current Custodes transition state drifted")
+    if any(x.get("state") != "CURRENT_SCOPED_RECONCILED" for x in tracked.values()):
+        errors.append("Current tracked release transition state drifted")
+    if any(x.get("scoped_current_legal_confirmed") is not True for x in tracked.values()):
+        errors.append("Current tracked release transition lacks scoped current confirmation")
+    if any(x.get("full_codex_app_semantics_confirmed") is not False for x in tracked.values()):
+        errors.append("Current tracked release transition improperly claims full Codex/app semantics")
     activation_layer = current_rules.get("release_transition_activation_watch", {})
     if activation_layer.get("state") != "OPERATIONAL_V1":
         errors.append("Current rules must record release activation watch v1 as operational")
+    if activation_layer.get("checkpoint_as_of") != "2026-10-20":
+        errors.append("Current release activation checkpoint date drifted")
     if activation_layer.get("checkpoint_status") != "NO_ACTION_REQUIRED":
         errors.append("Current release activation checkpoint status drifted")
+    if activation_layer.get("scoped_current_reconciled") != 2:
+        errors.append("Current release activation scoped reconciliation count drifted")
     if activation_layer.get("safety", {}).get("auto_promote") is not False:
         errors.append("Current release activation watch must keep auto_promote=false")
     if activation_layer.get("safety", {}).get("direct_current_rules_mutation") is not False:

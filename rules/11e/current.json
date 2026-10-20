@@ -404,7 +404,7 @@
     "authority_rule": "Physical/runtime solver results never rewrite normative Games Workshop data."
   },
   "release_transition_readiness": {
-    "state": "OPERATIONAL_V1",
+    "state": "OPERATIONAL_V1_SCOPED_RELEASES_RECONCILED",
     "release_state": "sources/release_state.json",
     "report": "reports/RELEASE_TRANSITION_READINESS_CURRENT.json",
     "evaluator": "tools/evaluate_release_transitions.py",
@@ -413,17 +413,23 @@
     "tracked_transitions": [
       {
         "id": "SPACE_MARINES_CODEX_2026",
-        "state": "PRE_RELEASE_HOLD",
+        "state": "CURRENT_SCOPED_RECONCILED",
         "scheduled_release_date": "2026-10-03",
         "current_legal_confirmed": false,
-        "direct_promotion_eligible": false
+        "direct_promotion_eligible": false,
+        "scoped_current_legal_confirmed": true,
+        "full_codex_app_semantics_confirmed": false,
+        "reviewed_promotion_id": "REINGEST_49496d868bd7"
       },
       {
         "id": "ADEPTUS_CUSTODES_CODEX_2026",
-        "state": "UPCOMING_HOLD_NO_RELEASE_DATE",
+        "state": "CURRENT_SCOPED_RECONCILED",
         "scheduled_release_date": null,
         "current_legal_confirmed": false,
-        "direct_promotion_eligible": false
+        "direct_promotion_eligible": false,
+        "scoped_current_legal_confirmed": true,
+        "full_codex_app_semantics_confirmed": false,
+        "reviewed_promotion_id": "REINGEST_49496d868bd7"
       }
     ],
     "policy": {
@@ -442,7 +448,18 @@
       "repository_ci_run": 36609275318,
       "result": "SUCCESS"
     },
-    "merged_commit": "67e5493486de247be2646c555c9dbd16c90542dc"
+    "merged_commit": "67e5493486de247be2646c555c9dbd16c90542dc",
+    "checkpoint_as_of": "2026-10-20",
+    "scoped_current_legal_dimensions": [
+      "points",
+      "unit_sizes",
+      "detachment_catalog",
+      "detachment_points",
+      "force_dispositions",
+      "current_roster_structure"
+    ],
+    "full_codex_app_semantics": "PENDING_AUTHORIZED_APP_EVIDENCE",
+    "scoped_closure_report": "reports/RELEASE_TRANSITION_SCOPED_CLOSURE_CURRENT.json"
   },
   "release_transition_activation_watch": {
     "state": "OPERATIONAL_V1",
@@ -450,18 +467,22 @@
     "tool": "tools/watch_release_transition_activation.py",
     "workflow": ".github/workflows/release-transition-activation-watch.yml",
     "cadence": "every 6 hours",
-    "checkpoint_as_of": "2026-09-29",
+    "checkpoint_as_of": "2026-10-20",
     "checkpoint_status": "NO_ACTION_REQUIRED",
     "tracked_transitions": [
       {
         "id": "SPACE_MARINES_CODEX_2026",
         "watch_state": "NO_ACTION",
-        "next_action": "WAIT_PRE_RELEASE"
+        "next_action": "ALREADY_CURRENT_SCOPED",
+        "scoped_current_legal_confirmed": true,
+        "full_codex_app_semantics_confirmed": false
       },
       {
         "id": "ADEPTUS_CUSTODES_CODEX_2026",
         "watch_state": "NO_ACTION",
-        "next_action": "WAIT_OFFICIAL_RELEASE_SIGNAL"
+        "next_action": "ALREADY_CURRENT_SCOPED",
+        "scoped_current_legal_confirmed": true,
+        "full_codex_app_semantics_confirmed": false
       }
     ],
     "safety": {
@@ -478,7 +499,10 @@
       "repository_ci_run": 36610418377,
       "result": "SUCCESS"
     },
-    "merged_commit": "1b01255794c0f83af6e61690887f4a41b1b0952f"
+    "merged_commit": "1b01255794c0f83af6e61690887f4a41b1b0952f",
+    "scoped_current_reconciled": 2,
+    "full_codex_app_semantics": "PENDING_AUTHORIZED_APP_EVIDENCE",
+    "scoped_closure_report": "reports/RELEASE_TRANSITION_SCOPED_CLOSURE_CURRENT.json"
   },
   "normative_equivalence_gap_audit": {
     "state": "PASS_GAPS_CLASSIFIED",

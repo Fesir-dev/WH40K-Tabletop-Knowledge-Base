@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS_SCOPED_RELEASE_TRANSITIONS_RECONCILED",
+  "as_of": "2026-10-20",
+  "mfm": {
+    "version": "1.6",
+    "official_last_updated": "2026-10-14",
+    "source": "https://mfm.warhammer-community.com/en/"
+  },
+  "secondary_projection": {
+    "wahapedia_last_update": "2026-10-19 03:47:32",
+    "bsdata_commit": "a56674583d9f656a191e4210268c276f133b47d1",
+    "reviewed_promotion_id": "REINGEST_49496d868bd7"
+  },
+  "transitions": [
+    {
+      "transition_id": "SPACE_MARINES_CODEX_2026",
+      "state": "CURRENT_SCOPED_RECONCILED",
+      "scheduled_release_date": "2026-10-03",
+      "scoped_current_legal_confirmed": true,
+      "full_codex_app_semantics_confirmed": false
+    },
+    {
+      "transition_id": "ADEPTUS_CUSTODES_CODEX_2026",
+      "state": "CURRENT_SCOPED_RECONCILED",
+      "scheduled_release_date": null,
+      "scoped_current_legal_confirmed": true,
+      "full_codex_app_semantics_confirmed": false
+    }
+  ],
+  "scope": [
+    "points",
+    "unit_sizes",
+    "detachment_catalog",
+    "detachment_points",
+    "force_dispositions",
+    "current_roster_structure"
+  ],
+  "authority_boundary": {
+    "official_mfm_is_normative_within_scope": true,
+    "wahapedia_and_bsdata_are_projection_evidence_only": true,
+    "full_codex_app_equivalence_claimed": false,
+    "preview_or_preorder_promoted_directly": false,
+    "auto_promote": false
+  }
+}
