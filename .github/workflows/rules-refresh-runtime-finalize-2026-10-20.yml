@@ -29,7 +29,9 @@ jobs:
           python-version: "3.12"
 
       - name: Patch refresh-aware repository contracts
-        run: python tools/patch_rules_refresh_validation_contracts.py
+        run: |
+          python tools/patch_rules_refresh_validation_contracts.py
+          python tools/patch_rules_refresh_tests.py
 
       - name: Classify current runtime drift
         run: python tools/finalize_runtime_refresh.py prepare-registry
@@ -72,6 +74,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
             tools/validate_repo.py \
+            tests/test_repository_contracts.py \
             sources/runtime_drift_registry.json \
             sources/profiles/new_recruit_bsdata_11e.json \
             reports/NEW_RECRUIT_RUNTIME_VALIDATION_CURRENT.json \
