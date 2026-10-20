@@ -7,7 +7,7 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-      "live": "bc1dcd94ec480bbd5e01292be6935dab4d364d3a",
+      "live": "89b95f53f26e1cfea07294d9ebe51400970dc31a",
       "changed": true,
       "files": [
         {
@@ -125,9 +125,9 @@
         {
           "filename": "Imperium - Black Templars.json",
           "status": "modified",
-          "additions": 2541,
-          "deletions": 5751,
-          "changes": 8292,
+          "additions": 2512,
+          "deletions": 5749,
+          "changes": 8261,
           "classification": "ASTARTES"
         },
         {
