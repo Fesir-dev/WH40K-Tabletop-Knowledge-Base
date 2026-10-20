@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.0",
-  "as_of": "2026-09-29",
+  "schema_version": "2.1",
+  "as_of": "2026-10-20",
   "policy": {
     "purpose": "Known runtime projection drifts are retained as evidence and monitored without making scheduled validation permanently red.",
     "classification_contract": "Base classification is independent of registry state: NORMATIVE_MATCH, IMPLEMENTATION_DRIFT, RUNTIME_PROJECTION_DRIFT, UPSTREAM_REVISION_DRIFT, or UNKNOWN_RUNTIME_DRIFT.",
@@ -9,6 +9,54 @@
     "authority": "Runtime drift never changes normative Games Workshop/MFM facts."
   },
   "active": [
+    {
+      "id": "NR_ADEPTUS_CUSTODES_TRAJANN_POINTS_2026_10_20",
+      "surface": "points",
+      "parent_state": "RUNTIME_PROJECTION_DRIFT",
+      "classification": "RUNTIME_PROJECTION_DRIFT",
+      "roster_slug": "adeptus_custodes",
+      "unit": "Trajann Valoris",
+      "normative": {
+        "source_id": "GW_MFM",
+        "mfm_version": "1.6",
+        "official_last_updated": "2026-10-14",
+        "points": 265,
+        "repository_snapshot": "rules/11e/snapshots/2026-10-20/mfm/factions/adeptus-custodes.json"
+      },
+      "current_mirror_crosscheck": {
+        "source_id": "WAHAPEDIA_11E",
+        "last_update": "2026-10-19 03:47:32",
+        "points": 265,
+        "repository_snapshot": "rules/11e/snapshots/2026-10-20/wahapedia/factions/adeptus_custodes.json"
+      },
+      "structured_upstream": {
+        "source_id": "BSDATA_WH40K_11E",
+        "repository": "BSData/wh40k-11e",
+        "pinned_revision": "a56674583d9f656a191e4210268c276f133b47d1",
+        "pinned_points": 265,
+        "live_revision": "a56674583d9f656a191e4210268c276f133b47d1",
+        "live_points": 265,
+        "file": "Imperium - Adeptus Custodes.json"
+      },
+      "runtime": {
+        "source_id": "NEW_RECRUIT_WIKI",
+        "observed_at": "2026-10-20",
+        "points": 135,
+        "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40%2C000-11th-edition/imperium---adeptus-custodes/87ec-de53-6df9-9c22/trajann-valoris",
+        "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
+      },
+      "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
+      "normative_kb_change_required": false,
+      "state": "ACTIVE"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "REMOVE_MISATTRIBUTED_GHAZ_5CA1013",
+      "correction": "The prior closure record incorrectly attributed BSData commit 5ca1013537f539995acdac2caafb93c879163f00 (235→175 hunk) to Ghazghkull Thraka. Exact extraction at pinned/live 951d590... shows Ghazghkull = 300; the historical hunk is not used as Ghaz lineage evidence."
+    }
+  ],
+  "resolved": [
     {
       "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
       "surface": "points",
@@ -47,7 +95,9 @@
       },
       "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
       "normative_kb_change_required": false,
-      "state": "ACTIVE"
+      "state": "RESOLVED",
+      "resolved_at": "2026-10-20",
+      "resolution": "Runtime now matches the refreshed current MFM/Wahapedia/BSData projection; preserved as historical drift evidence."
     },
     {
       "id": "NR_ORKS_BOYZ_POINTS_2026_09_29",
@@ -87,7 +137,9 @@
       },
       "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
       "normative_kb_change_required": false,
-      "state": "ACTIVE"
+      "state": "RESOLVED",
+      "resolved_at": "2026-10-20",
+      "resolution": "Runtime now matches the refreshed current MFM/Wahapedia/BSData projection; preserved as historical drift evidence."
     },
     {
       "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
@@ -127,7 +179,9 @@
       },
       "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
       "normative_kb_change_required": false,
-      "state": "ACTIVE"
+      "state": "RESOLVED",
+      "resolved_at": "2026-10-20",
+      "resolution": "Runtime now matches the refreshed current MFM/Wahapedia/BSData projection; preserved as historical drift evidence."
     },
     {
       "id": "NR_ORKS_WARBOSS_POINTS_2026_09_29",
@@ -167,7 +221,9 @@
       },
       "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
       "normative_kb_change_required": false,
-      "state": "ACTIVE"
+      "state": "RESOLVED",
+      "resolved_at": "2026-10-20",
+      "resolution": "Runtime now matches the refreshed current MFM/Wahapedia/BSData projection; preserved as historical drift evidence."
     },
     {
       "id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29",
@@ -207,7 +263,9 @@
       },
       "recommended_action": "Investigate New Recruit runtime projection/cache synchronization. Do not modify normative MFM data.",
       "normative_kb_change_required": false,
-      "state": "ACTIVE"
+      "state": "RESOLVED",
+      "resolved_at": "2026-10-20",
+      "resolution": "Runtime now matches the refreshed current MFM/Wahapedia/BSData projection; preserved as historical drift evidence."
     },
     {
       "id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29",
@@ -247,13 +305,9 @@
       },
       "recommended_action": "Investigate New Recruit runtime projection/cache synchronization for current Orks detachment content. Do not modify normative MFM data.",
       "normative_kb_change_required": false,
-      "state": "ACTIVE"
-    }
-  ],
-  "corrections": [
-    {
-      "id": "REMOVE_MISATTRIBUTED_GHAZ_5CA1013",
-      "correction": "The prior closure record incorrectly attributed BSData commit 5ca1013537f539995acdac2caafb93c879163f00 (235→175 hunk) to Ghazghkull Thraka. Exact extraction at pinned/live 951d590... shows Ghazghkull = 300; the historical hunk is not used as Ghaz lineage evidence."
+      "state": "RESOLVED",
+      "resolved_at": "2026-10-20",
+      "resolution": "Runtime now matches the refreshed current MFM/Wahapedia/BSData projection; preserved as historical drift evidence."
     }
   ]
 }

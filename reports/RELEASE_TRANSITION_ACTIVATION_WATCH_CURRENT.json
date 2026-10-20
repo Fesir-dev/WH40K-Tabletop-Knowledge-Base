@@ -1,31 +1,53 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "status": "NO_ACTION_REQUIRED",
-  "as_of": "2026-09-29",
+  "as_of": "2026-10-20",
   "readiness_milestone": "RELEASE_TRANSITION_INGESTION_READINESS",
-  "watch_status": "CHANGE_DETECTED",
+  "watch_status": "NO_CHANGE",
   "transitions": [
     {
       "transition_id": "ADEPTUS_CUSTODES_CODEX_2026",
       "title": "Codex: Adeptus Custodes 2026 release transition",
-      "readiness_state": "UPCOMING_HOLD_NO_RELEASE_DATE",
+      "readiness_state": "CURRENT_SCOPED_RECONCILED",
       "watch_state": "NO_ACTION",
-      "next_action": "WAIT_OFFICIAL_RELEASE_SIGNAL",
+      "next_action": "ALREADY_CURRENT_SCOPED",
       "scheduled_release_date": null,
       "current_legal_confirmed": false,
-      "upstream_changed": true,
+      "scoped_current_legal_confirmed": true,
+      "scoped_current_legal_dimensions": [
+        "points",
+        "unit_sizes",
+        "detachment_catalog",
+        "detachment_points",
+        "force_dispositions",
+        "current_roster_structure"
+      ],
+      "full_codex_app_semantics_confirmed": false,
+      "reviewed_promotion_id": "REINGEST_49496d868bd7",
+      "upstream_changed": false,
       "candidate_eligible": false,
       "promotion_eligible": false
     },
     {
       "transition_id": "SPACE_MARINES_CODEX_2026",
       "title": "Codex: Space Marines 2026 release transition",
-      "readiness_state": "PRE_RELEASE_HOLD",
+      "readiness_state": "CURRENT_SCOPED_RECONCILED",
       "watch_state": "NO_ACTION",
-      "next_action": "WAIT_PRE_RELEASE",
+      "next_action": "ALREADY_CURRENT_SCOPED",
       "scheduled_release_date": "2026-10-03",
       "current_legal_confirmed": false,
-      "upstream_changed": true,
+      "scoped_current_legal_confirmed": true,
+      "scoped_current_legal_dimensions": [
+        "points",
+        "unit_sizes",
+        "detachment_catalog",
+        "detachment_points",
+        "force_dispositions",
+        "current_roster_structure"
+      ],
+      "full_codex_app_semantics_confirmed": false,
+      "reviewed_promotion_id": "REINGEST_49496d868bd7",
+      "upstream_changed": false,
       "candidate_eligible": false,
       "promotion_eligible": false
     }
@@ -35,12 +57,14 @@
     "no_action": 2,
     "action_required": 0,
     "monitoring": 0,
-    "ready_for_candidate": 0
+    "ready_for_candidate": 0,
+    "scoped_current_reconciled": 2
   },
   "safety": {
     "auto_promote": false,
     "direct_current_rules_mutation": false,
     "candidate_generation_only_when_ready": true,
-    "promotion_requires_existing_reviewed_promotion_flow": true
+    "promotion_requires_existing_reviewed_promotion_flow": true,
+    "scoped_currentness_is_not_full_codex_app_equivalence": true
   }
 }

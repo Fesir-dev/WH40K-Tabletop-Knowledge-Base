@@ -1,0 +1,863 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-10-20",
+  "wahapedia_last_update": "2026-10-19 03:47:32",
+  "mfm_version": "1.4",
+  "bsdata_commit": "a56674583d9f656a191e4210268c276f133b47d1",
+  "status": "PASS_WITH_CONFLICTS",
+  "totals": {
+    "points_compared": 1147,
+    "factions_compared": 24,
+    "unit_name_matches": 1183,
+    "mfm_unit_names": 1186,
+    "wahapedia_unit_names": 1506,
+    "point_mismatches": 3,
+    "detachment_matches": 242,
+    "dp_mismatches": 1,
+    "enhancement_matches": 664,
+    "enhancement_cost_mismatches": 0
+  },
+  "conflict_count": 4,
+  "conflicts": [
+    {
+      "type": "DETACHMENT_POINT_MISMATCH",
+      "faction": "chaos_daemons",
+      "detachment": "Daemonic Incursion",
+      "wahapedia": null,
+      "mfm": 3
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "genestealer_cults",
+      "unit": "Atalan Jackals",
+      "wahapedia": [
+        [
+          5,
+          85
+        ],
+        [
+          5,
+          95
+        ],
+        [
+          9,
+          150
+        ],
+        [
+          9,
+          160
+        ],
+        [
+          10,
+          150
+        ],
+        [
+          10,
+          160
+        ]
+      ],
+      "mfm": [
+        [
+          5,
+          85
+        ],
+        [
+          5,
+          95
+        ],
+        [
+          9,
+          160
+        ],
+        [
+          9,
+          170
+        ],
+        [
+          10,
+          150
+        ],
+        [
+          10,
+          160
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "tyranids",
+      "unit": "Neurogaunts",
+      "wahapedia": [
+        [
+          11,
+          45
+        ],
+        [
+          21,
+          90
+        ],
+        [
+          22,
+          90
+        ]
+      ],
+      "mfm": [
+        [
+          11,
+          45
+        ],
+        [
+          22,
+          90
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "tau_empire",
+      "unit": "Tidewall Shieldline",
+      "wahapedia": [
+        [
+          1,
+          85
+        ],
+        [
+          2,
+          105
+        ]
+      ],
+      "mfm": [
+        [
+          1,
+          20
+        ],
+        [
+          1,
+          85
+        ]
+      ]
+    }
+  ],
+  "factions": [
+    {
+      "slug": "adepta_sororitas",
+      "unit_names": {
+        "wahapedia": 38,
+        "mfm": 38,
+        "matched": 38,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 8,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 22,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 19,
+        "matched_wahapedia_names": 17,
+        "overlap_ratio": 0.8947
+      }
+    },
+    {
+      "slug": "adeptus_custodes",
+      "unit_names": {
+        "wahapedia": 36,
+        "mfm": 36,
+        "matched": 36,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 13,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 23,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 16,
+        "matched_wahapedia_names": 13,
+        "overlap_ratio": 0.8125
+      }
+    },
+    {
+      "slug": "adeptus_mechanicus",
+      "unit_names": {
+        "wahapedia": 38,
+        "mfm": 38,
+        "matched": 38,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 10,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 33,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 22,
+        "matched_wahapedia_names": 19,
+        "overlap_ratio": 0.8636
+      }
+    },
+    {
+      "slug": "adeptus_titanicus",
+      "unit_names": {
+        "wahapedia": 4,
+        "mfm": 4,
+        "matched": 4,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 0,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 0,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 0,
+        "matched_wahapedia_names": 0,
+        "overlap_ratio": null
+      }
+    },
+    {
+      "slug": "aeldari_craftworlds",
+      "unit_names": {
+        "wahapedia": 99,
+        "mfm": 99,
+        "matched": 98,
+        "mfm_overlap_ratio": 0.9899
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 15,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 48,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 0,
+        "matched_wahapedia_names": 0,
+        "overlap_ratio": null
+      }
+    },
+    {
+      "slug": "astra_militarum",
+      "unit_names": {
+        "wahapedia": 135,
+        "mfm": 134,
+        "matched": 134,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 11,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 33,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 0,
+        "matched_wahapedia_names": 0,
+        "overlap_ratio": null
+      }
+    },
+    {
+      "slug": "chaos_daemons",
+      "unit_names": {
+        "wahapedia": 101,
+        "mfm": 63,
+        "matched": 63,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 9,
+        "dp_mismatches": [
+          {
+            "detachment": "Daemonic Incursion",
+            "wahapedia": null,
+            "mfm": 3
+          }
+        ]
+      },
+      "enhancements": {
+        "matched": 17,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 0,
+        "matched_wahapedia_names": 0,
+        "overlap_ratio": null
+      }
+    },
+    {
+      "slug": "chaos_knights",
+      "unit_names": {
+        "wahapedia": 37,
+        "mfm": 20,
+        "matched": 20,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 8,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 24,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 0,
+        "matched_wahapedia_names": 0,
+        "overlap_ratio": null
+      }
+    },
+    {
+      "slug": "chaos_space_marines",
+      "unit_names": {
+        "wahapedia": 96,
+        "mfm": 85,
+        "matched": 85,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 17,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 62,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 34,
+        "matched_wahapedia_names": 26,
+        "overlap_ratio": 0.7647
+      }
+    },
+    {
+      "slug": "death_guard",
+      "unit_names": {
+        "wahapedia": 56,
+        "mfm": 41,
+        "matched": 40,
+        "mfm_overlap_ratio": 0.9756
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 9,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 26,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 15,
+        "matched_wahapedia_names": 10,
+        "overlap_ratio": 0.6667
+      }
+    },
+    {
+      "slug": "drukhari",
+      "unit_names": {
+        "wahapedia": 46,
+        "mfm": 30,
+        "matched": 30,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 9,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 28,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 0,
+        "matched_wahapedia_names": 0,
+        "overlap_ratio": null
+      }
+    },
+    {
+      "slug": "emperors_children",
+      "unit_names": {
+        "wahapedia": 23,
+        "mfm": 23,
+        "matched": 23,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 10,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 31,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 9,
+        "matched_wahapedia_names": 9,
+        "overlap_ratio": 1.0
+      }
+    },
+    {
+      "slug": "genestealer_cults",
+      "unit_names": {
+        "wahapedia": 146,
+        "mfm": 25,
+        "matched": 25,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": [
+          {
+            "unit": "Atalan Jackals",
+            "wahapedia": [
+              [
+                5,
+                85
+              ],
+              [
+                5,
+                95
+              ],
+              [
+                9,
+                150
+              ],
+              [
+                9,
+                160
+              ],
+              [
+                10,
+                150
+              ],
+              [
+                10,
+                160
+              ]
+            ],
+            "mfm": [
+              [
+                5,
+                85
+              ],
+              [
+                5,
+                95
+              ],
+              [
+                9,
+                160
+              ],
+              [
+                9,
+                170
+              ],
+              [
+                10,
+                150
+              ],
+              [
+                10,
+                160
+              ]
+            ]
+          }
+        ]
+      },
+      "detachments": {
+        "matched": 8,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 24,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 8,
+        "matched_wahapedia_names": 8,
+        "overlap_ratio": 1.0
+      }
+    },
+    {
+      "slug": "grey_knights",
+      "unit_names": {
+        "wahapedia": 31,
+        "mfm": 31,
+        "matched": 31,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 9,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 21,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 7,
+        "matched_wahapedia_names": 6,
+        "overlap_ratio": 0.8571
+      }
+    },
+    {
+      "slug": "agents_of_the_imperium",
+      "unit_names": {
+        "wahapedia": 46,
+        "mfm": 46,
+        "matched": 46,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 5,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 17,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 22,
+        "matched_wahapedia_names": 12,
+        "overlap_ratio": 0.5455
+      }
+    },
+    {
+      "slug": "imperial_knights",
+      "unit_names": {
+        "wahapedia": 28,
+        "mfm": 22,
+        "matched": 22,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 8,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 24,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 0,
+        "matched_wahapedia_names": 0,
+        "overlap_ratio": null
+      }
+    },
+    {
+      "slug": "leagues_of_votann",
+      "unit_names": {
+        "wahapedia": 22,
+        "mfm": 22,
+        "matched": 22,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 10,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 29,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 12,
+        "matched_wahapedia_names": 12,
+        "overlap_ratio": 1.0
+      }
+    },
+    {
+      "slug": "necrons",
+      "unit_names": {
+        "wahapedia": 64,
+        "mfm": 64,
+        "matched": 63,
+        "mfm_overlap_ratio": 0.9844
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 12,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 34,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 20,
+        "matched_wahapedia_names": 19,
+        "overlap_ratio": 0.95
+      }
+    },
+    {
+      "slug": "orks",
+      "unit_names": {
+        "wahapedia": 67,
+        "mfm": 67,
+        "matched": 67,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 15,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 25,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 21,
+        "matched_wahapedia_names": 18,
+        "overlap_ratio": 0.8571
+      }
+    },
+    {
+      "slug": "space_marines",
+      "unit_names": {
+        "wahapedia": 186,
+        "mfm": 115,
+        "matched": 115,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 22,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 47,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 42,
+        "matched_wahapedia_names": 25,
+        "overlap_ratio": 0.5952
+      }
+    },
+    {
+      "slug": "thousand_sons",
+      "unit_names": {
+        "wahapedia": 45,
+        "mfm": 34,
+        "matched": 34,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 9,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 26,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 12,
+        "matched_wahapedia_names": 11,
+        "overlap_ratio": 0.9167
+      }
+    },
+    {
+      "slug": "tyranids",
+      "unit_names": {
+        "wahapedia": 57,
+        "mfm": 57,
+        "matched": 57,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": [
+          {
+            "unit": "Neurogaunts",
+            "wahapedia": [
+              [
+                11,
+                45
+              ],
+              [
+                21,
+                90
+              ],
+              [
+                22,
+                90
+              ]
+            ],
+            "mfm": [
+              [
+                11,
+                45
+              ],
+              [
+                22,
+                90
+              ]
+            ]
+          }
+        ]
+      },
+      "detachments": {
+        "matched": 10,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 27,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 20,
+        "matched_wahapedia_names": 16,
+        "overlap_ratio": 0.8
+      }
+    },
+    {
+      "slug": "tau_empire",
+      "unit_names": {
+        "wahapedia": 62,
+        "mfm": 62,
+        "matched": 62,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": [
+          {
+            "unit": "Tidewall Shieldline",
+            "wahapedia": [
+              [
+                1,
+                85
+              ],
+              [
+                2,
+                105
+              ]
+            ],
+            "mfm": [
+              [
+                1,
+                20
+              ],
+              [
+                1,
+                85
+              ]
+            ]
+          }
+        ]
+      },
+      "detachments": {
+        "matched": 7,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 21,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 24,
+        "matched_wahapedia_names": 16,
+        "overlap_ratio": 0.6667
+      }
+    },
+    {
+      "slug": "world_eaters",
+      "unit_names": {
+        "wahapedia": 43,
+        "mfm": 30,
+        "matched": 30,
+        "mfm_overlap_ratio": 1.0
+      },
+      "points": {
+        "mismatches": []
+      },
+      "detachments": {
+        "matched": 8,
+        "dp_mismatches": []
+      },
+      "enhancements": {
+        "matched": 22,
+        "cost_mismatches": []
+      },
+      "bsdata": {
+        "unit_names": 10,
+        "matched_wahapedia_names": 10,
+        "overlap_ratio": 1.0
+      }
+    }
+  ],
+  "promotion_guidance": {
+    "structural_snapshot": "ELIGIBLE",
+    "mfm_overrides_cost_conflicts": true,
+    "full_rule_text_semantics": "NOT_PROMOTED",
+    "faq_errata": "NOT_PROMOTED"
+  }
+}

@@ -1,13 +1,13 @@
 {
   "schema_version": "4.4",
   "edition": "11e",
-  "repository_checkpoint": "2026-09-30",
+  "repository_checkpoint": "2026-10-20",
   "status": "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING",
   "source_currentness": {
     "mfm": {
       "state": "PASS",
-      "updated_at": "2026-09-02",
-      "verified_at": "2026-09-29"
+      "updated_at": "2026-10-14",
+      "verified_at": "2026-10-20"
     },
     "downloads_endpoint": {
       "state": "PASS",
@@ -208,11 +208,11 @@
     },
     "faction_rules_content": {
       "state": "SECONDARY_MIRROR_SEMANTICS_FULL_HASH_MATCH",
-      "verified_at": "2026-09-29",
-      "secondary_mirror_last_update": "2026-09-28 02:38:04",
-      "fingerprint_audit": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
-      "expected_fingerprints": 16506,
-      "matched_fingerprints": 16506,
+      "verified_at": "2026-10-20",
+      "secondary_mirror_last_update": "2026-10-19 03:47:32",
+      "fingerprint_audit": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
+      "expected_fingerprints": 14863,
+      "matched_fingerprints": 14863,
       "problems": 0,
       "normative_equivalence": "NOT_CLAIMED",
       "official_public_supplements": {
@@ -236,10 +236,10 @@
     },
     "faq_errata_assets": {
       "state": "OFFICIAL_ASSETS_VERIFIED",
-      "verified_at": "2026-09-29",
-      "report": "sources/snapshots/gw_11e_official_assets_2026-09-29.json",
-      "edition_11_sources": 29,
-      "verified_pdf_assets": 28,
+      "verified_at": "2026-10-20",
+      "report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/official_assets.json",
+      "edition_11_sources": 52,
+      "verified_pdf_assets": 22,
       "failures": 0,
       "source_catalog_drift": 0
     }
@@ -251,9 +251,9 @@
   "rule": "Source freshness and repository data coverage are separate. No object becomes current merely because its source endpoint is healthy.",
   "wave_a_mfm": {
     "state": "CURRENT_VERIFIED",
-    "snapshot": "rules/11e/snapshots/2026-09-29/mfm/index.json",
-    "version": "1.4",
-    "last_updated": "2026-09-02",
+    "snapshot": "rules/11e/snapshots/2026-10-20/mfm/index.json",
+    "version": "1.6",
+    "last_updated": "2026-10-14",
     "normalized_faction_pages": 30,
     "mapped_roster_identities": 36,
     "dimensions": [
@@ -270,25 +270,26 @@
   },
   "wave_b_structural": {
     "state": "CURRENT_SECONDARY_MIRROR_STRUCTURAL",
-    "snapshot": "rules/11e/snapshots/2026-09-29/wahapedia/roster_views/index.json",
-    "wahapedia_last_update": "2026-09-28 02:38:04",
+    "snapshot": "rules/11e/snapshots/2026-10-20/wahapedia/roster_views/index.json",
+    "wahapedia_last_update": "2026-10-19 03:47:32",
     "roster_identities_complete": 35,
     "roster_identities_unavailable": [
       "titanicus_traitoris",
       "unaligned_forces"
     ],
-    "reconciliation_report": "reports/WAVE_B_RECONCILIATION_2026-09-29.json",
-    "source_conflicts": 11,
+    "reconciliation_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/reconciliation.json",
+    "source_conflicts": 4,
     "authority_rule": "GW MFM remains normative for points, detachment points and enhancement costs when Wahapedia differs.",
     "semantic_rule_text": "CURRENT_SECONDARY_MIRROR_FULL_HASH_VERIFIED",
     "faq_errata": "SOURCE_CATALOG_CURRENT_OFFICIAL_ASSETS_VERIFIED",
     "current_mirror_roster_identities_complete": 35,
     "implementation_fallback_roster_identities_complete": 2,
     "total_structural_source_available": 37,
-    "implementation_fallback_snapshot": "rules/11e/snapshots/2026-09-29/bsdata_fallback/index.json",
+    "implementation_fallback_snapshot": "rules/11e/snapshots/2026-10-20/bsdata_fallback/index.json",
     "implementation_fallback_policy": "Fallback provides structured implementation evidence only; it does not promote BSData to normative or current-mirror authority.",
     "semantic_current_mirror_roster_identities": 35,
-    "normative_semantic_equivalence": "NOT_CLAIMED"
+    "normative_semantic_equivalence": "NOT_CLAIMED",
+    "conflict_snapshot": "ingestion/promotions/REINGEST_49496d868bd7/wave_b_conflicts.json"
   },
   "semantic_resolver": {
     "state": "LIVE_FULL_AUDIT_HASH_VERIFIED",
@@ -312,33 +313,29 @@
     "authority_policy": "Hash match verifies the secondary mirror projection only; it does not make Wahapedia normative over Games Workshop.",
     "full_audit": {
       "workflow": ".github/workflows/semantic-full-audit.yml",
-      "report": "reports/WAVE_B_SEMANTIC_FINGERPRINT_AUDIT_2026-09-29.json",
-      "expected_fingerprints": 16506,
-      "matched_fingerprints": 16506,
+      "report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/semantic_fingerprint_audit.json",
+      "expected_fingerprints": 14863,
+      "matched_fingerprints": 14863,
       "problems": 0
     }
   },
   "automation": {
     "upstream_change_watch": {
-      "state": "ACTIVE_CHANGE_DETECTED",
+      "state": "ACTIVE_NO_CHANGE",
       "report": "reports/UPSTREAM_CHANGE_WATCH_CURRENT.json",
       "workflow": ".github/workflows/upstream-change-watch.yml",
       "cadence": "every 6 hours",
       "bsdata_wh40k_11e": {
-        "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
-        "live": "374f50544f0274296ab53c2103766ae3945e8799",
-        "changed": true
+        "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
+        "live": "a56674583d9f656a191e4210268c276f133b47d1",
+        "changed": false,
+        "relation": "identical"
       },
       "bsdata_mfm_11e": {
-        "pinned": "61a687e858c00a4ad205d564959c622a5605ef3d",
-        "live": "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390",
-        "changed": true,
-        "changed_file_classes": [
-          "CI",
-          "DOCUMENTATION",
-          "OTHER"
-        ],
-        "normative_mfm_data_change_not_inferred": true
+        "pinned": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
+        "live": "8e0e635674018969fdcfaa64e83d4153ebefad70",
+        "changed": false,
+        "relation": "behind"
       },
       "wahapedia": {
         "manifest_files_checked": 20,
@@ -346,7 +343,17 @@
         "last_update_changed": false
       },
       "auto_promote": false,
-      "action": "REVIEW_GUARDED_REINGESTION_PLAN_WITHOUT_NORMATIVE_AUTO_PROMOTION"
+      "action": "REVIEW_GUARDED_REINGESTION_PLAN_WITHOUT_NORMATIVE_AUTO_PROMOTION",
+      "gw_mfm": {
+        "source_id": "GW_MFM",
+        "pinned_updated_at": "2026-10-14",
+        "live_updated_at": "2026-10-14",
+        "state": "PASS",
+        "changed": false,
+        "page_sha256": "63cce466f0c6e6d7925f1f50320c5f5f9e8147c2b8b6e569ae0fd6e1e8cabb91",
+        "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+        "reason": null
+      }
     },
     "new_recruit_runtime": {
       "state": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
@@ -355,23 +362,18 @@
       "cadence": "daily",
       "roster_identities_resolved": 37,
       "representative_point_checks": 15,
-      "representative_point_matches": 10,
-      "known_runtime_drifts": 6,
+      "representative_point_matches": 14,
+      "known_runtime_drifts": 1,
       "new_runtime_drifts": 0,
       "known_drift_registry": "sources/runtime_drift_registry.json",
       "active_known_drift_ids": [
-        "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
-        "NR_ORKS_BOYZ_POINTS_2026_09_29",
-        "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
-        "NR_ORKS_WARBOSS_POINTS_2026_09_29",
-        "NR_NECRONS_WARRIORS_POINTS_2026_09_29",
-        "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29"
+        "NR_ADEPTUS_CUSTODES_TRAJANN_POINTS_2026_10_20"
       ],
       "authority_rule": "Runtime mismatch never automatically changes normative Games Workshop/MFM data.",
-      "known_point_drifts": 5,
+      "known_point_drifts": 1,
       "representative_surface_checks": 5,
-      "representative_surface_matches": 4,
-      "known_surface_drifts": 1,
+      "representative_surface_matches": 5,
+      "known_surface_drifts": 0,
       "classification_contract": [
         "NORMATIVE_MATCH",
         "IMPLEMENTATION_DRIFT",
@@ -382,33 +384,12 @@
       "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
     },
     "upstream_reingestion": {
-      "state": "OPERATIONAL_GUARDED_V1",
-      "planner": "tools/plan_upstream_reingestion.py",
-      "candidate_runner": "tools/run_upstream_reingestion_candidate.py",
-      "candidate_workflow": ".github/workflows/upstream-reingestion-candidate.yml",
-      "promotion_tool": "tools/apply_reingestion_promotion.py",
-      "promotion_workflow": ".github/workflows/upstream-reingestion-promote.yml",
-      "candidate_execution": "ISOLATED_REVIEWABLE_ARTIFACT",
-      "promotion_execution": "EXPLICIT_WORKFLOW_DISPATCH_TO_BRANCH_AND_PR",
+      "state": "REVIEWED_PROMOTION_APPLIED_PENDING_POST_PROMOTION_WATCH",
+      "plan_id": "REINGEST_49496d868bd7",
+      "candidate_snapshot": "2026-10-20",
+      "promoted_at": "2026-10-20",
       "auto_promote": false,
-      "mfm_authority_gate": "BLOCKING_OFFICIAL_REVALIDATION_REQUIRED",
-      "source_catalog_asset_gate": true,
-      "post_promotion_checks": [
-        "upstream_recheck",
-        "new_recruit_runtime_revalidation",
-        "semantic_smoke",
-        "repository_validation",
-        "unit_tests"
-      ],
-      "latest_validation": {
-        "head": "d00d9a66213a6d58698d2da3d9108d18e6b2a70a",
-        "repository_ci_run": 36604067969,
-        "candidate_workflow_run": 36604068116,
-        "result": "SUCCESS"
-      },
-      "real_change_promotion_exercised": false,
-      "closure_report": "reports/AUTOMATED_REINGESTION_PROMOTION_CLOSURE_2026-09-29.md",
-      "merged_commit": "f9d3a5c462e06bf809307a329c50b54de9e66561"
+      "authority_rule": "Promotion was explicitly dispatched from a PASS candidate; normative GW/MFM authority was not changed."
     }
   },
   "collection_aware_roster_solver": {
@@ -423,7 +404,7 @@
     "authority_rule": "Physical/runtime solver results never rewrite normative Games Workshop data."
   },
   "release_transition_readiness": {
-    "state": "OPERATIONAL_V1",
+    "state": "OPERATIONAL_V1_SCOPED_RELEASES_RECONCILED",
     "release_state": "sources/release_state.json",
     "report": "reports/RELEASE_TRANSITION_READINESS_CURRENT.json",
     "evaluator": "tools/evaluate_release_transitions.py",
@@ -432,17 +413,23 @@
     "tracked_transitions": [
       {
         "id": "SPACE_MARINES_CODEX_2026",
-        "state": "PRE_RELEASE_HOLD",
+        "state": "CURRENT_SCOPED_RECONCILED",
         "scheduled_release_date": "2026-10-03",
         "current_legal_confirmed": false,
-        "direct_promotion_eligible": false
+        "direct_promotion_eligible": false,
+        "scoped_current_legal_confirmed": true,
+        "full_codex_app_semantics_confirmed": false,
+        "reviewed_promotion_id": "REINGEST_49496d868bd7"
       },
       {
         "id": "ADEPTUS_CUSTODES_CODEX_2026",
-        "state": "UPCOMING_HOLD_NO_RELEASE_DATE",
+        "state": "CURRENT_SCOPED_RECONCILED",
         "scheduled_release_date": null,
         "current_legal_confirmed": false,
-        "direct_promotion_eligible": false
+        "direct_promotion_eligible": false,
+        "scoped_current_legal_confirmed": true,
+        "full_codex_app_semantics_confirmed": false,
+        "reviewed_promotion_id": "REINGEST_49496d868bd7"
       }
     ],
     "policy": {
@@ -461,7 +448,18 @@
       "repository_ci_run": 36609275318,
       "result": "SUCCESS"
     },
-    "merged_commit": "67e5493486de247be2646c555c9dbd16c90542dc"
+    "merged_commit": "67e5493486de247be2646c555c9dbd16c90542dc",
+    "checkpoint_as_of": "2026-10-20",
+    "scoped_current_legal_dimensions": [
+      "points",
+      "unit_sizes",
+      "detachment_catalog",
+      "detachment_points",
+      "force_dispositions",
+      "current_roster_structure"
+    ],
+    "full_codex_app_semantics": "PENDING_AUTHORIZED_APP_EVIDENCE",
+    "scoped_closure_report": "reports/RELEASE_TRANSITION_SCOPED_CLOSURE_CURRENT.json"
   },
   "release_transition_activation_watch": {
     "state": "OPERATIONAL_V1",
@@ -469,18 +467,22 @@
     "tool": "tools/watch_release_transition_activation.py",
     "workflow": ".github/workflows/release-transition-activation-watch.yml",
     "cadence": "every 6 hours",
-    "checkpoint_as_of": "2026-09-29",
+    "checkpoint_as_of": "2026-10-20",
     "checkpoint_status": "NO_ACTION_REQUIRED",
     "tracked_transitions": [
       {
         "id": "SPACE_MARINES_CODEX_2026",
         "watch_state": "NO_ACTION",
-        "next_action": "WAIT_PRE_RELEASE"
+        "next_action": "ALREADY_CURRENT_SCOPED",
+        "scoped_current_legal_confirmed": true,
+        "full_codex_app_semantics_confirmed": false
       },
       {
         "id": "ADEPTUS_CUSTODES_CODEX_2026",
         "watch_state": "NO_ACTION",
-        "next_action": "WAIT_OFFICIAL_RELEASE_SIGNAL"
+        "next_action": "ALREADY_CURRENT_SCOPED",
+        "scoped_current_legal_confirmed": true,
+        "full_codex_app_semantics_confirmed": false
       }
     ],
     "safety": {
@@ -497,7 +499,10 @@
       "repository_ci_run": 36610418377,
       "result": "SUCCESS"
     },
-    "merged_commit": "1b01255794c0f83af6e61690887f4a41b1b0952f"
+    "merged_commit": "1b01255794c0f83af6e61690887f4a41b1b0952f",
+    "scoped_current_reconciled": 2,
+    "full_codex_app_semantics": "PENDING_AUTHORIZED_APP_EVIDENCE",
+    "scoped_closure_report": "reports/RELEASE_TRANSITION_SCOPED_CLOSURE_CURRENT.json"
   },
   "normative_equivalence_gap_audit": {
     "state": "PASS_GAPS_CLASSIFIED",

@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.1",
+  "state": "CANDIDATE_REQUIRED",
+  "baseline_snapshot": "2026-09-29",
+  "candidate_snapshot_date": "2026-10-20",
+  "changed_sources": [
+    "WAHAPEDIA_11E",
+    "BSDATA_WH40K_11E"
+  ],
+  "candidate_revisions": {
+    "wahapedia": {
+      "baseline_last_update": "2026-09-28 02:38:04",
+      "candidate_last_update": "2026-10-19 03:47:32",
+      "changed_files": 19,
+      "changed_files_detail": [
+        {
+          "file": "Last_update.csv",
+          "snapshot_sha256": "4b3a7e63006be965073bdc34022bdd17f6f7b063602b46a4640a11ac641b20a9",
+          "live_sha256": "f2be5332c4707688b6153b8504df5d7ad54c1a175d6abafdeece7827bc0c2930",
+          "snapshot_bytes": 39,
+          "live_bytes": 39
+        },
+        {
+          "file": "Source.csv",
+          "snapshot_sha256": "e6f74afb7b43f6779ec9a03ad0699ff11dd27b9d2f08243d5c04dd07fd99f6e0",
+          "live_sha256": "1b9d28d0d8c8c47746088e5f778afe1b4eb39a7e3ac35a7a8d4cce3a276ad9a9",
+          "snapshot_bytes": 8432,
+          "live_bytes": 7608
+        },
+        {
+          "file": "Datasheets.csv",
+          "snapshot_sha256": "ba363e9a68e6d7ee19f93a32abc06ba3f6a5f1efd0da5aaab32701a130a15623",
+          "live_sha256": "39ce33b9f3031ca127f6e94a5d1039bafa01c93f843008623b54731f397afb9c",
+          "snapshot_bytes": 876603,
+          "live_bytes": 799121
+        },
+        {
+          "file": "Datasheets_models.csv",
+          "snapshot_sha256": "dddb131c2b81fa199832f5250f0469f7cef4ba4fef77b6e477380b592d61e6ff",
+          "live_sha256": "12d7689fc6ab4cd418cab1aeb103c5c935da18fbf84e1d3d657dd3fbbab09537",
+          "snapshot_bytes": 107314,
+          "live_bytes": 101847
+        },
+        {
+          "file": "Datasheets_models_cost.csv",
+          "snapshot_sha256": "2e2f9be00eae5924a62dd27c4322bdb6b663070fd80781a81ca1b5305ed24c47",
+          "live_sha256": "2114a9c824060fa66abef42b66ad70e43b98afb38e2cef221a2fb550ca213b8e",
+          "snapshot_bytes": 189351,
+          "live_bytes": 166328
+        },
+        {
+          "file": "Datasheets_keywords.csv",
+          "snapshot_sha256": "10cb386fc3134257bdf3bad3bb1fd94615ea94a5fe3c94aad874da390b1ec1df",
+          "live_sha256": "bdb2431dd3a24d34ec91e1aa1e7ddae9da3565faa18a56abcd8ead5247b4e341",
+          "snapshot_bytes": 476771,
+          "live_bytes": 381825
+        },
+        {
+          "file": "Datasheets_wargear.csv",
+          "snapshot_sha256": "eeaa33777769367d836cab0562a82bb84bcb8fc1a8064539a58ead972d302241",
+          "live_sha256": "565b48410062728c942c709d0e61408660f18914b652fed6c77172d801f84d7d",
+          "snapshot_bytes": 632930,
+          "live_bytes": 551713
+        },
+        {
+          "file": "Datasheets_options.csv",
+          "snapshot_sha256": "4b729297fe68b3c7cfc2c99205610a1741f838e29ae7150501d84365882e8d13",
+          "live_sha256": "642b8b74e57ac45aa5a383f46afd1cbd0a7e873a19dbee5a624cfbf6043e3853",
+          "snapshot_bytes": 371173,
+          "live_bytes": 310151
+        },
+        {
+          "file": "Datasheets_unit_composition.csv",
+          "snapshot_sha256": "fca0b694f146a13f56c828d78f2aaa0dbe79341273173c68f534b8985494b03f",
+          "live_sha256": "f00a66fedc7b1df1a5a3907f763561db75789e3db82a0bd1f6a059fc2061e245",
+          "snapshot_bytes": 85472,
+          "live_bytes": 77941
+        },
+        {
+          "file": "Abilities.csv",
+          "snapshot_sha256": "f3fc44a0fd91b7b45b38ae477632517e732bda64b4a0c548033a9f874664c7f3",
+          "live_sha256": "df1a84b39f53ccf63e949f48709f9937600794bad665278eb92d3cc4b1e44a16",
+          "snapshot_bytes": 202161,
+          "live_bytes": 205188
+        },
+        {
+          "file": "Datasheets_abilities.csv",
+          "snapshot_sha256": "5aba5ff1d7a2353904fac32d2b2b234c03573bef418f1bf4afabca1001cc2109",
+          "live_sha256": "49b054afc2f9977b9c8168ee446b016bd097b047adbd7ec35d23df5f054d7fe6",
+          "snapshot_bytes": 961930,
+          "live_bytes": 875338
+        },
+        {
+          "file": "Datasheets_leader.csv",
+          "snapshot_sha256": "c75b00eed968babbc89c6b7e077b40f7234c3040537816692ae0e609ebca174c",
+          "live_sha256": "1cc7e67ccfd005085705c9565b477c9b5c894f6bd407d9f329b4799f45c68b87",
+          "snapshot_bytes": 35117,
+          "live_bytes": 27703
+        },
+        {
+          "file": "Detachments.csv",
+          "snapshot_sha256": "445af298071f5014f7f1e49e55669b4a6bbaf8e798d95717d9ea85fb94314e5e",
+          "live_sha256": "e8790f57ee8210513102bc736ddd72d24e4a70ddffba6f09d92244d68b12c585",
+          "snapshot_bytes": 147249,
+          "live_bytes": 127211
+        },
+        {
+          "file": "Stratagems.csv",
+          "snapshot_sha256": "2ed24cacbe826c4eccea0920385669ac2fea5ebf3aca8822169d15d03f5814cb",
+          "live_sha256": "9e01eb024e3fc851e4717f3a4f0c5f73f29c5bd87d08fd94e999f35f7e57b621",
+          "snapshot_bytes": 1148707,
+          "live_bytes": 1039230
+        },
+        {
+          "file": "Datasheets_stratagems.csv",
+          "snapshot_sha256": "7dacd927c0cf17b3516fdad5344e6d9f569bf172f3fbfe6a96e010bcfea5b67c",
+          "live_sha256": "cc9929a1a551dc1c608e84ea481285ece82296b9227815edb89404fcc2152cc7",
+          "snapshot_bytes": 2150631,
+          "live_bytes": 1383331
+        },
+        {
+          "file": "Enhancements.csv",
+          "snapshot_sha256": "7e7fa39c9e1f9d268bda75affa8cd647c72b5511726631a8ee4110c8e86bc212",
+          "live_sha256": "c39535264e62a8b3f8deb9f5bd0c09be9f7e76d4e0ab3a5347ec593f0623ea4c",
+          "snapshot_bytes": 477886,
+          "live_bytes": 425559
+        },
+        {
+          "file": "Datasheets_enhancements.csv",
+          "snapshot_sha256": "1d6576003a346565168369b75efc586d3c12a766d8514571ed81ff333d241376",
+          "live_sha256": "97cd4bf6aac2064a7555dd04a067095e106ff263d57bf13b9d8e79fbe903158f",
+          "snapshot_bytes": 285258,
+          "live_bytes": 182733
+        },
+        {
+          "file": "Detachment_abilities.csv",
+          "snapshot_sha256": "d7e4966e2b094d43feaa88a66e10608301ff817d92393b9c7f04ec2ac1ed6a44",
+          "live_sha256": "e95380c00e4d993935f4ef5dcd09c93f5d5548aa07d28151f68652c2b87b0e1c",
+          "snapshot_bytes": 324910,
+          "live_bytes": 289870
+        },
+        {
+          "file": "Datasheets_detachment_abilities.csv",
+          "snapshot_sha256": "843395ebfa4f2dceab87b56792fff48d03d861cbfcb1eda6df3bbf2fe822ba38",
+          "live_sha256": "c0011f8310f137969e0943059638587efb1b1821d78717340c831c05c80f87dc",
+          "snapshot_bytes": 354262,
+          "live_bytes": 192980
+        }
+      ]
+    },
+    "bsdata_wh40k_11e": {
+      "pinned": "951d5900d1b4a952a4ba560a30c43788e622ccfc",
+      "candidate": "a56674583d9f656a191e4210268c276f133b47d1",
+      "changed": true,
+      "relation": "ahead"
+    },
+    "gw_mfm": {
+      "pinned_updated_at": "2026-10-14",
+      "candidate_updated_at": "2026-10-14",
+      "changed": false,
+      "state": "PASS"
+    },
+    "bsdata_mfm_11e": {
+      "pinned": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
+      "candidate": "8e0e635674018969fdcfaa64e83d4153ebefad70",
+      "changed": false,
+      "relation": "behind"
+    }
+  },
+  "stages": [
+    {
+      "id": "WAHAPEDIA_INGEST",
+      "source": "WAHAPEDIA_11E",
+      "automation": "AUTOMATED_CANDIDATE",
+      "description": "Download current Wahapedia 11E CSV export into an isolated candidate snapshot."
+    },
+    {
+      "id": "WAVE_B_RECONCILE",
+      "source": "MULTI_SOURCE",
+      "automation": "AUTOMATED_CANDIDATE",
+      "description": "Reconcile candidate/current Wahapedia structure against current MFM and candidate/current BSData."
+    },
+    {
+      "id": "WAVE_B_ROSTER_VIEWS",
+      "source": "WAHAPEDIA_11E",
+      "automation": "AUTOMATED_CANDIDATE",
+      "description": "Build candidate roster-specific structural views."
+    },
+    {
+      "id": "WAHAPEDIA_SEMANTIC_AUDIT",
+      "source": "WAHAPEDIA_11E",
+      "automation": "AUTOMATED_CANDIDATE",
+      "description": "Verify candidate semantic fingerprints against the live Wahapedia export."
+    },
+    {
+      "id": "OFFICIAL_ASSET_AUDIT",
+      "source": "GW_40K_DOWNLOADS",
+      "automation": "AUTOMATED_CANDIDATE",
+      "description": "When the mirror source catalog changes, verify its referenced official Games Workshop PDF assets before promotion."
+    },
+    {
+      "id": "BSDATA_FALLBACK_REBUILD",
+      "source": "BSDATA_WH40K_11E",
+      "automation": "AUTOMATED_CANDIDATE",
+      "description": "Rebuild structured-implementation fallback views at the candidate BSData revision."
+    }
+  ],
+  "blockers": [],
+  "promotion": {
+    "auto_promote": false,
+    "state": "REVIEW_REQUIRED_AFTER_CANDIDATE_PASS",
+    "required_review": true,
+    "rule": "Candidate generation and reconciliation may be automatic; promotion to current/normative state is never automatic."
+  },
+  "plan_fingerprint": "49496d868bd741a4a01170745c11c434e8c008f35dceceb071ed3a41d7d55f3e",
+  "plan_id": "REINGEST_49496d868bd7"
+}

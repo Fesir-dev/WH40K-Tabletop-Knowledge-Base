@@ -87,9 +87,9 @@ class RepositoryContracts(unittest.TestCase):
             self.assertTrue(set(tr["factions"]) <= slugs, tr["id"])
 
     def test_release_transition_readiness_control_plane(self):
-        self.assertEqual(self.release["schema_version"], "1.2")
+        self.assertEqual(self.release["schema_version"], "1.3")
         policy=self.release["transition_policy"]
-        self.assertEqual(policy["state"], "OPERATIONAL_READINESS_V1")
+        self.assertEqual(policy["state"], "OPERATIONAL_READINESS_V1_SCOPED_RELEASES_RECONCILED")
         self.assertFalse(policy["auto_promote"])
         self.assertEqual(policy["report"], "reports/RELEASE_TRANSITION_READINESS_CURRENT.json")
         self.assertTrue((ROOT/policy["evaluator"]).exists())
@@ -100,12 +100,14 @@ class RepositoryContracts(unittest.TestCase):
         report=self.release_readiness
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["milestone"], "RELEASE_TRANSITION_INGESTION_READINESS")
-        self.assertEqual(report["as_of"], "2026-09-29")
+        self.assertEqual(report["as_of"], "2026-10-20")
         self.assertFalse(report["global_policy"]["auto_promote"])
+        self.assertTrue(report["global_policy"]["scoped_currentness_does_not_claim_full_codex_app_equivalence"])
         rows={x["transition_id"]:x for x in report["transitions"]}
         self.assertEqual(set(rows), {"SPACE_MARINES_CODEX_2026","ADEPTUS_CUSTODES_CODEX_2026"})
-        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["state"], "PRE_RELEASE_HOLD")
-        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["state"], "UPCOMING_HOLD_NO_RELEASE_DATE")
+        self.assertTrue(all(x["state"] == "CURRENT_SCOPED_RECONCILED" for x in rows.values()))
+        self.assertTrue(all(x["scoped_current_legal_confirmed"] for x in rows.values()))
+        self.assertTrue(all(not x["full_codex_app_semantics_confirmed"] for x in rows.values()))
         self.assertTrue(all(x["promotion_eligible"] is False for x in rows.values()))
 
         manifests={
@@ -118,6 +120,11 @@ class RepositoryContracts(unittest.TestCase):
             self.assertTrue(set(manifest["factions"]) <= catalog_slugs)
             self.assertEqual(manifest["baseline_current_state"], "CURRENT_LEGAL")
             self.assertFalse(manifest["activation_evidence"]["current_legal_confirmed"])
+            self.assertTrue(manifest["activation_evidence"]["scoped_current_legal_confirmed"])
+            self.assertFalse(manifest["activation_evidence"]["full_codex_app_semantics_confirmed"])
+            self.assertEqual(manifest["transition_state"], "CURRENT_SCOPED_RECONCILED")
+            self.assertTrue(manifest["reviewed_promotion"]["applied"])
+            self.assertEqual(manifest["reviewed_promotion"]["promotion_id"], "REINGEST_49496d868bd7")
             self.assertTrue(manifest["policy"]["preview_never_promotes"])
             self.assertTrue(manifest["policy"]["date_alone_never_promotes"])
             self.assertTrue(manifest["policy"]["require_official_current_legal_evidence"])
@@ -145,9 +152,10 @@ class RepositoryContracts(unittest.TestCase):
 
         report=self.release_activation_watch
         self.assertEqual(report["status"], "NO_ACTION_REQUIRED")
-        self.assertEqual(report["as_of"], "2026-09-29")
+        self.assertEqual(report["as_of"], "2026-10-20")
         self.assertEqual(report["summary"]["transition_count"], 2)
         self.assertEqual(report["summary"]["no_action"], 2)
+        self.assertEqual(report["summary"]["scoped_current_reconciled"], 2)
         self.assertEqual(report["summary"]["action_required"], 0)
         self.assertEqual(report["summary"]["monitoring"], 0)
         self.assertEqual(report["summary"]["ready_for_candidate"], 0)
@@ -157,9 +165,11 @@ class RepositoryContracts(unittest.TestCase):
 
         rows={x["transition_id"]:x for x in report["transitions"]}
         self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["watch_state"], "NO_ACTION")
-        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["next_action"], "WAIT_PRE_RELEASE")
+        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["next_action"], "ALREADY_CURRENT_SCOPED")
         self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["watch_state"], "NO_ACTION")
-        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["next_action"], "WAIT_OFFICIAL_RELEASE_SIGNAL")
+        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["next_action"], "ALREADY_CURRENT_SCOPED")
+        self.assertTrue(all(x["scoped_current_legal_confirmed"] for x in rows.values()))
+        self.assertTrue(all(not x["full_codex_app_semantics_confirmed"] for x in rows.values()))
 
         workflow=(ROOT/".github/workflows/release-transition-activation-watch.yml").read_text(encoding="utf-8")
         self.assertIn("contents: read", workflow)
@@ -931,13 +941,18 @@ class RepositoryContracts(unittest.TestCase):
             self.assertTrue((ROOT/required).exists(),required)
 
     def test_mfm_wave_a_snapshot(self):
-        self.assertEqual(self.mfm["official_source"]["version"], "1.4")
-        self.assertEqual(self.mfm["official_source"]["last_updated"], "2026-09-02")
+        self.assertEqual(self.mfm["official_source"]["version"], self.current["wave_a_mfm"]["version"])
+        self.assertEqual(self.mfm["official_source"]["last_updated"], self.current["wave_a_mfm"]["last_updated"])
+        self.assertEqual(self.mfm["official_source"]["version"], "1.6")
+        self.assertEqual(self.mfm["official_source"]["last_updated"], "2026-10-14")
         self.assertEqual(len(self.mfm["faction_files"]), 30)
-        self.assertEqual(self.mfm["totals"]["units"], 1789)
-        self.assertEqual(self.mfm["totals"]["pricing_rows"], 2980)
-        self.assertEqual(self.mfm["totals"]["leader_relations"], 1574)
-        self.assertEqual(self.mfm["totals"]["enhancement_cost_entries"], 1193)
+        self.assertEqual(self.mfm["totals"]["units"], 1797)
+        self.assertEqual(self.mfm["totals"]["pricing_rows"], 3058)
+        self.assertEqual(self.mfm["totals"]["leader_relations"], 1417)
+        self.assertEqual(self.mfm["totals"]["enhancement_cost_entries"], 977)
+        historical=json.loads((ROOT/"rules/11e/snapshots/2026-09-29/mfm/index.json").read_text(encoding="utf-8"))
+        self.assertEqual(historical["official_source"]["version"], "1.4")
+        self.assertEqual(historical["official_source"]["last_updated"], "2026-09-02")
 
     def test_mfm_roster_mapping_and_coverage(self):
         rows={x["slug"]:x for x in self.catalog["factions"]}
@@ -1034,8 +1049,10 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(self.official_assets["status"], "PASS")
         self.assertEqual(self.official_assets["live_source_csv"]["catalog_drift_count"], 0)
         off=self.official_assets["official_assets"]
-        self.assertEqual(off["verified_pdf_assets"], off["pdf_assets"])
+        self.assertEqual(off["verified_pdf_assets"], off["declared_public_pdf_assets"])
+        self.assertEqual(off["blocking_failures"], 0)
         self.assertEqual(off["failures"], 0)
+        self.assertGreaterEqual(off["no_public_asset_declared"], 0)
         complete=self.current["wave_b_structural"]["roster_identities_complete"]
         g=self.coverage["global"]
         self.assertEqual(g["wave_b_current_mirror_semantic_roster_identities"], complete)
@@ -1047,16 +1064,14 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(self.current["status"], "CURRENT_OPERATIONAL_RULES_LAYER_READY_NORMATIVE_APP_PENDING")
 
     def test_upstream_watch_and_new_recruit_runtime(self):
-        self.assertEqual(self.upstream_watch["status"], "CHANGE_DETECTED")
-        self.assertEqual(
-            self.upstream_watch["change_summary"]["github_sources_changed"],
-            ["BSDATA_WH40K_11E","BSDATA_MFM_11E"],
-        )
+        self.assertEqual(self.upstream_watch["status"], "NO_CHANGE")
+        self.assertEqual(self.upstream_watch["change_summary"].get("official_sources_changed", []), [])
+        self.assertEqual(self.upstream_watch["change_summary"]["github_sources_changed"], [])
         self.assertEqual(self.upstream_watch["change_summary"]["wahapedia_files_changed"], 0)
         self.assertFalse(self.upstream_watch["change_summary"]["wahapedia_last_update_changed"])
         self.assertFalse(self.upstream_watch["policy"]["auto_promote"])
 
-        self.assertEqual(self.nr_runtime["schema_version"], "2.0")
+        self.assertEqual(self.nr_runtime["schema_version"], "2.1")
         self.assertIn(self.nr_runtime["status"], {"PASS","PASS_WITH_KNOWN_RUNTIME_DRIFT"})
         self.assertEqual(self.nr_runtime["universe"]["resolved_runtime_identities"], 37)
         self.assertEqual(self.nr_runtime["universe"]["missing"], [])
@@ -1082,13 +1097,14 @@ class RepositoryContracts(unittest.TestCase):
         automation=self.current["automation"]
         nr=automation["new_recruit_runtime"]
         watch=automation["upstream_change_watch"]
-        self.assertEqual(watch["state"], "ACTIVE_CHANGE_DETECTED")
+        self.assertEqual(watch["state"], "ACTIVE_NO_CHANGE")
         self.assertFalse(watch["auto_promote"])
-        self.assertEqual(watch["bsdata_wh40k_11e"]["live"], "374f50544f0274296ab53c2103766ae3945e8799")
-        self.assertTrue(watch["bsdata_wh40k_11e"]["changed"])
-        self.assertEqual(watch["bsdata_mfm_11e"]["live"], "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390")
-        self.assertTrue(watch["bsdata_mfm_11e"]["changed"])
-        self.assertTrue(watch["bsdata_mfm_11e"]["normative_mfm_data_change_not_inferred"])
+        upstream_rows={x["source_id"]:x for x in self.upstream_watch["github_sources"]}
+        self.assertEqual(watch["bsdata_wh40k_11e"]["live"], upstream_rows["BSDATA_WH40K_11E"]["live"])
+        self.assertFalse(watch["bsdata_wh40k_11e"]["changed"])
+        self.assertEqual(watch["bsdata_mfm_11e"]["live"], upstream_rows["BSDATA_MFM_11E"]["live"])
+        self.assertFalse(watch["bsdata_mfm_11e"]["changed"])
+        self.assertIn(watch["bsdata_mfm_11e"]["relation"], {"behind","identical"})
         self.assertEqual(nr["state"], self.nr_runtime["status"])
         self.assertEqual(nr["representative_point_checks"], points["checks"])
         self.assertEqual(nr["representative_point_matches"], points["matched"])
@@ -1097,14 +1113,17 @@ class RepositoryContracts(unittest.TestCase):
         self.assertEqual(nr["exact_sync_cadence"], "UNKNOWN_NOT_INFERRED")
         self.assertEqual(self.current["next_milestone"], "CORE_RULE_AST_READINESS_EXPANSION_V1")
         layer=self.current["release_transition_readiness"]
-        self.assertEqual(layer["state"], "OPERATIONAL_V1")
+        self.assertEqual(layer["state"], "OPERATIONAL_V1_SCOPED_RELEASES_RECONCILED")
         self.assertFalse(layer["policy"]["auto_promote"])
         tracked={x["id"]:x for x in layer["tracked_transitions"]}
-        self.assertEqual(tracked["SPACE_MARINES_CODEX_2026"]["state"], "PRE_RELEASE_HOLD")
-        self.assertEqual(tracked["ADEPTUS_CUSTODES_CODEX_2026"]["state"], "UPCOMING_HOLD_NO_RELEASE_DATE")
+        self.assertTrue(all(x["state"] == "CURRENT_SCOPED_RECONCILED" for x in tracked.values()))
+        self.assertTrue(all(x["scoped_current_legal_confirmed"] for x in tracked.values()))
+        self.assertTrue(all(not x["full_codex_app_semantics_confirmed"] for x in tracked.values()))
         activation=self.current["release_transition_activation_watch"]
         self.assertEqual(activation["state"], "OPERATIONAL_V1")
+        self.assertEqual(activation["checkpoint_as_of"], "2026-10-20")
         self.assertEqual(activation["checkpoint_status"], "NO_ACTION_REQUIRED")
+        self.assertEqual(activation["scoped_current_reconciled"], 2)
         self.assertFalse(activation["safety"]["auto_promote"])
         self.assertFalse(activation["safety"]["direct_current_rules_mutation"])
         gap_layer=self.current["normative_equivalence_gap_audit"]

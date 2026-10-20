@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-10-20",
+  "source_id": "BSDATA_WH40K_11E",
+  "source_role": "structured_implementation",
+  "commit_sha": "a56674583d9f656a191e4210268c276f133b47d1",
+  "provenance": [
+    {
+      "role": "titanicus_catalogue",
+      "path": "Chaos - Titanicus Traitoris.json",
+      "github_blob_sha": null,
+      "sha256": "c01e5ee58248a9c057c6de196912f1d3e618aa322cbd21ee1679577d082bc602",
+      "bytes": 5772,
+      "url": "https://raw.githubusercontent.com/BSData/wh40k-11e/a56674583d9f656a191e4210268c276f133b47d1/Chaos%20-%20Titanicus%20Traitoris.json"
+    },
+    {
+      "role": "titans_library",
+      "path": "Library - Titans.json",
+      "github_blob_sha": null,
+      "sha256": "b234b25153ea560e38047f5708811296ce8420bbbe61c0e2365cd116d2fe2fb5",
+      "bytes": 141262,
+      "url": "https://raw.githubusercontent.com/BSData/wh40k-11e/a56674583d9f656a191e4210268c276f133b47d1/Library%20-%20Titans.json"
+    },
+    {
+      "role": "unaligned",
+      "path": "Unaligned Forces.json",
+      "github_blob_sha": null,
+      "sha256": "1f093a1c20a166ac2aa718ed643007e3b4458cc3eb5e739b1b889ddc510badd3",
+      "bytes": 237024,
+      "url": "https://raw.githubusercontent.com/BSData/wh40k-11e/a56674583d9f656a191e4210268c276f133b47d1/Unaligned%20Forces.json"
+    }
+  ],
+  "views": [
+    {
+      "slug": "titanicus_traitoris",
+      "file": "rules/11e/snapshots/2026-10-20/bsdata_fallback/titanicus_traitoris.json",
+      "state": "IMPLEMENTATION_FALLBACK_COMPLETE",
+      "counts": {
+        "units": 4,
+        "unit_profiles": 4,
+        "weapon_profiles": 36
+      }
+    },
+    {
+      "slug": "unaligned_forces",
+      "file": "rules/11e/snapshots/2026-10-20/bsdata_fallback/unaligned_forces.json",
+      "state": "IMPLEMENTATION_FALLBACK_COMPLETE",
+      "counts": {
+        "units": 22,
+        "legends_named_units": 19,
+        "unit_profiles": 21,
+        "weapon_profiles": 26
+      }
+    }
+  ],
+  "policy": "Fallback closes structural source availability only. It does not promote BSData to normative authority or CURRENT_VERIFIED rules truth."
+}

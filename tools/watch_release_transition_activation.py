@@ -24,6 +24,10 @@ ACTION_MAP = {
         "READY_FOR_CANDIDATE",
         "BUILD_GUARDED_REINGESTION_CANDIDATE",
     ),
+    "CURRENT_SCOPED_RECONCILED": (
+        "NO_ACTION",
+        "ALREADY_CURRENT_SCOPED",
+    ),
 }
 
 
@@ -42,6 +46,10 @@ def build_watch(readiness: dict) -> dict:
             "next_action": action,
             "scheduled_release_date": item.get("scheduled_release_date"),
             "current_legal_confirmed": item.get("current_legal_confirmed"),
+            "scoped_current_legal_confirmed": item.get("scoped_current_legal_confirmed"),
+            "scoped_current_legal_dimensions": item.get("scoped_current_legal_dimensions", []),
+            "full_codex_app_semantics_confirmed": item.get("full_codex_app_semantics_confirmed", False),
+            "reviewed_promotion_id": item.get("reviewed_promotion_id"),
             "upstream_changed": item.get("upstream_changed"),
             "candidate_eligible": item.get("candidate_eligible"),
             "promotion_eligible": False,
@@ -61,7 +69,7 @@ def build_watch(readiness: dict) -> dict:
         status = "NO_ACTION_REQUIRED"
 
     return {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "status": status,
         "as_of": readiness.get("as_of"),
         "readiness_milestone": readiness.get("milestone"),
@@ -73,12 +81,14 @@ def build_watch(readiness: dict) -> dict:
             "action_required": len(action_required),
             "monitoring": len(monitoring),
             "ready_for_candidate": len(ready),
+            "scoped_current_reconciled": sum(x["readiness_state"] == "CURRENT_SCOPED_RECONCILED" for x in rows),
         },
         "safety": {
             "auto_promote": False,
             "direct_current_rules_mutation": False,
             "candidate_generation_only_when_ready": True,
             "promotion_requires_existing_reviewed_promotion_flow": True,
+            "scoped_currentness_is_not_full_codex_app_equivalence": True,
         },
     }
 

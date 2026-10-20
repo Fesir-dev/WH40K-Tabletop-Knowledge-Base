@@ -16,17 +16,25 @@ def load(path: Path) -> dict:
 def evaluate_transition(manifest: dict, watch: dict, as_of: date) -> dict:
     activation = manifest.get("activation_evidence", {})
     confirmed = activation.get("current_legal_confirmed") is True
+    scoped_confirmed = activation.get("scoped_current_legal_confirmed") is True
+    scoped_dimensions = activation.get("scope", []) if scoped_confirmed else []
+    reviewed_promotion = manifest.get("reviewed_promotion", {})
+    reviewed_promotion_applied = reviewed_promotion.get("applied") is True
     release_raw = manifest.get("scheduled_release_date")
     release_date = date.fromisoformat(release_raw) if release_raw else None
 
     summary = watch.get("change_summary", {})
     upstream_changed = bool(
-        summary.get("github_sources_changed")
+        summary.get("official_sources_changed")
+        or summary.get("github_sources_changed")
         or summary.get("wahapedia_files_changed")
         or summary.get("wahapedia_last_update_changed")
     )
 
-    if confirmed:
+    if scoped_confirmed and reviewed_promotion_applied:
+        state = "CURRENT_SCOPED_RECONCILED"
+        action = "NO_ACTION_SCOPED_CURRENT"
+    elif confirmed:
         if upstream_changed:
             state = "READY_FOR_GUARDED_REINGESTION"
             action = "BUILD_ISOLATED_CANDIDATE"
@@ -50,10 +58,15 @@ def evaluate_transition(manifest: dict, watch: dict, as_of: date) -> dict:
         "factions": manifest["factions"],
         "as_of": as_of.isoformat(),
         "baseline_current_state": manifest["baseline_current_state"],
-        "upcoming_state": manifest["upcoming_state"],
+        "upcoming_state": manifest.get("upcoming_state"),
         "scheduled_release_date": release_raw,
         "date_confidence": manifest.get("date_confidence"),
         "current_legal_confirmed": confirmed,
+        "scoped_current_legal_confirmed": scoped_confirmed,
+        "scoped_current_legal_dimensions": scoped_dimensions,
+        "full_codex_app_semantics_confirmed": activation.get("full_codex_app_semantics_confirmed", False),
+        "reviewed_promotion_applied": reviewed_promotion_applied,
+        "reviewed_promotion_id": reviewed_promotion.get("promotion_id"),
         "upstream_changed": upstream_changed,
         "state": state,
         "next_action": action,
@@ -66,6 +79,7 @@ def evaluate_transition(manifest: dict, watch: dict, as_of: date) -> dict:
             "requires_upstream_change_before_candidate": True,
             "candidate_route": "GUARDED_REINGESTION_CANDIDATE_REVIEWED_PROMOTION",
             "direct_current_mutation": False,
+            "scoped_mfm_currentness_is_not_full_codex_app_equivalence": True,
         },
     }
 
@@ -73,7 +87,7 @@ def evaluate_transition(manifest: dict, watch: dict, as_of: date) -> dict:
 def build_report(manifests: list[dict], watch: dict, as_of: date) -> dict:
     rows = [evaluate_transition(m, watch, as_of) for m in manifests]
     return {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "status": "PASS",
         "as_of": as_of.isoformat(),
         "milestone": "RELEASE_TRANSITION_INGESTION_READINESS",
@@ -83,16 +97,16 @@ def build_report(manifests: list[dict], watch: dict, as_of: date) -> dict:
             "transition_count": len(rows),
             "pre_release_hold": sum(x["state"] == "PRE_RELEASE_HOLD" for x in rows),
             "no_release_date_hold": sum(x["state"] == "UPCOMING_HOLD_NO_RELEASE_DATE" for x in rows),
-            "awaiting_official_currentness": sum(
-                x["state"] == "RELEASE_DATE_REACHED_AWAITING_OFFICIAL_CURRENTNESS" for x in rows
-            ),
+            "awaiting_official_currentness": sum(x["state"] == "RELEASE_DATE_REACHED_AWAITING_OFFICIAL_CURRENTNESS" for x in rows),
             "candidate_ready": sum(x["state"] == "READY_FOR_GUARDED_REINGESTION" for x in rows),
+            "scoped_current_reconciled": sum(x["state"] == "CURRENT_SCOPED_RECONCILED" for x in rows),
         },
         "global_policy": {
             "calendar_date_is_not_currentness_evidence": True,
             "preview_or_preorder_is_not_currentness_evidence": True,
             "official_current_legal_confirmation_required": True,
             "upstream_projection_change_required_for_candidate": True,
+            "scoped_currentness_does_not_claim_full_codex_app_equivalence": True,
             "auto_promote": False,
         },
     }

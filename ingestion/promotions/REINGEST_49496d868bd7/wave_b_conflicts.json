@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "state": "SOURCE_CONFLICT",
+  "source_pair": [
+    "WAHAPEDIA_11E",
+    "GW_MFM"
+  ],
+  "candidate_snapshot": "2026-10-20",
+  "conflict_count": 4,
+  "conflicts": [
+    {
+      "type": "DETACHMENT_POINT_MISMATCH",
+      "faction": "chaos_daemons",
+      "detachment": "Daemonic Incursion",
+      "wahapedia": null,
+      "mfm": 3
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "genestealer_cults",
+      "unit": "Atalan Jackals",
+      "wahapedia": [
+        [
+          5,
+          85
+        ],
+        [
+          5,
+          95
+        ],
+        [
+          9,
+          150
+        ],
+        [
+          9,
+          160
+        ],
+        [
+          10,
+          150
+        ],
+        [
+          10,
+          160
+        ]
+      ],
+      "mfm": [
+        [
+          5,
+          85
+        ],
+        [
+          5,
+          95
+        ],
+        [
+          9,
+          160
+        ],
+        [
+          9,
+          170
+        ],
+        [
+          10,
+          150
+        ],
+        [
+          10,
+          160
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "tyranids",
+      "unit": "Neurogaunts",
+      "wahapedia": [
+        [
+          11,
+          45
+        ],
+        [
+          21,
+          90
+        ],
+        [
+          22,
+          90
+        ]
+      ],
+      "mfm": [
+        [
+          11,
+          45
+        ],
+        [
+          22,
+          90
+        ]
+      ]
+    },
+    {
+      "type": "POINT_MISMATCH",
+      "faction": "tau_empire",
+      "unit": "Tidewall Shieldline",
+      "wahapedia": [
+        [
+          1,
+          85
+        ],
+        [
+          2,
+          105
+        ]
+      ],
+      "mfm": [
+        [
+          1,
+          20
+        ],
+        [
+          1,
+          85
+        ]
+      ]
+    }
+  ],
+  "resolution_policy": {
+    "points": "GW_MFM",
+    "detachment_points": "GW_MFM",
+    "enhancement_costs": "GW_MFM",
+    "wahapedia_role": "secondary current mirror; conflicts retained as drift evidence"
+  },
+  "source_report": "ingestion/promotions/REINGEST_49496d868bd7/candidate_evidence/reconciliation.json"
+}

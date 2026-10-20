@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.1",
+  "snapshot_id": "MFM_1_6_2026-10-14",
+  "edition": "11e",
+  "status": "CURRENT_VERIFIED_MFM_DIMENSIONS",
+  "official_source": {
+    "source_id": "GW_MFM",
+    "version": "1.6",
+    "last_updated": "2026-10-14",
+    "verified_at": "2026-10-20",
+    "evidence_url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+    "evidence_page_sha256": "63cce466f0c6e6d7925f1f50320c5f5f9e8147c2b8b6e569ae0fd6e1e8cabb91"
+  },
+  "extraction_source": {
+    "source_id": "BSDATA_MFM_11E",
+    "repository": "BSData/wh40k-11e-mfm",
+    "commit_sha": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
+    "normalized_at": "2026-10-20",
+    "upstream_state": "PINNED_REVIEWED_EXTRACTION_COMMIT"
+  },
+  "coverage": {
+    "mfm_faction_pages": 30,
+    "mapped_roster_identities": 36,
+    "not_applicable_roster_identities": [
+      "unaligned_forces"
+    ],
+    "dimensions": [
+      "points",
+      "unit_sizes",
+      "leader_relations",
+      "detachment_catalog",
+      "detachment_points",
+      "force_dispositions",
+      "enhancement_costs",
+      "wargear_costs",
+      "legends_pricing"
+    ]
+  },
+  "totals": {
+    "units": 1797,
+    "detachments": 334,
+    "pricing_rows": 3058,
+    "leader_relations": 1417,
+    "support_relations": 581,
+    "wargear_cost_entries": 130,
+    "enhancement_cost_entries": 977,
+    "legends_units": 423
+  },
+  "faction_files": [
+    "rules/11e/snapshots/2026-10-20/mfm/factions/adepta-sororitas.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/adeptus-custodes.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/adeptus-mechanicus.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/aeldari.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/astra-militarum.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/black-templars.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/blood-angels.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/chaos-daemons.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/chaos-knights.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/chaos-space-marines.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/chaos-titan-legions.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/dark-angels.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/death-guard.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/deathwatch.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/drukhari.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/emperors-children.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/genestealer-cults.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/grey-knights.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/imperial-agents.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/imperial-knights.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/leagues-of-votann.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/necrons.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/orks.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/space-marines.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/space-wolves.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/tau-empire.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/thousand-sons.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/titan-legions.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/tyranids.json",
+    "rules/11e/snapshots/2026-10-20/mfm/factions/world-eaters.json"
+  ]
+}

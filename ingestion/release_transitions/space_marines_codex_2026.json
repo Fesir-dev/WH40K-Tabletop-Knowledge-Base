@@ -34,8 +34,36 @@
   ],
   "activation_evidence": {
     "current_legal_confirmed": false,
-    "confirmed_at": null,
-    "evidence": []
+    "confirmed_at": "2026-10-20",
+    "evidence": [
+      {
+        "authority": "GAMES_WORKSHOP_OFFICIAL",
+        "source_id": "GW_MFM",
+        "url": "https://mfm.warhammer-community.com/en/",
+        "version": "1.6",
+        "published_or_updated_at": "2026-10-14",
+        "confirmed_at": "2026-10-20",
+        "scope": [
+          "points",
+          "unit_sizes",
+          "detachment_catalog",
+          "detachment_points",
+          "force_dispositions"
+        ],
+        "note": "Official current MFM v1.6 establishes the scoped current-legal MFM dimensions for this transition. It does not establish complete Codex/app wording equivalence."
+      }
+    ],
+    "scoped_current_legal_confirmed": true,
+    "scope": [
+      "points",
+      "unit_sizes",
+      "detachment_catalog",
+      "detachment_points",
+      "force_dispositions",
+      "current_roster_structure"
+    ],
+    "full_codex_app_semantics_confirmed": false,
+    "full_codex_app_semantics_state": "PENDING_AUTHORIZED_APP_EVIDENCE"
   },
   "policy": {
     "preview_never_promotes": true,
@@ -67,5 +95,23 @@
       "BSDATA_MFM_11E",
       "NEW_RECRUIT_RUNTIME"
     ]
+  },
+  "transition_state": "CURRENT_SCOPED_RECONCILED",
+  "reviewed_promotion": {
+    "applied": true,
+    "promotion_id": "REINGEST_49496d868bd7",
+    "promoted_at": "2026-10-20",
+    "wahapedia_last_update": "2026-10-19 03:47:32",
+    "bsdata_commit": "a56674583d9f656a191e4210268c276f133b47d1",
+    "scope": "SECONDARY_MIRROR_AND_STRUCTURED_PROJECTION",
+    "normative_authority": false
+  },
+  "closure": {
+    "state": "CURRENT_SCOPED_RECONCILED",
+    "closed_at": "2026-10-20",
+    "points_and_roster_dimensions_current": true,
+    "full_codex_app_semantics_current_verified": false,
+    "remaining_gap": "AUTHORIZED_GW_APP_OR_CODEX_WORDING",
+    "auto_promote": false
   }
 }

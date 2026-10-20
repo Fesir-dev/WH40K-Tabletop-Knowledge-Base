@@ -593,8 +593,8 @@
       "state": "CLOSED_CURRENT_NORMATIVE",
       "authority": "GW_MFM",
       "evidence": {
-        "version": "1.4",
-        "last_updated": "2026-09-02",
+        "version": "1.6",
+        "last_updated": "2026-10-14",
         "dimensions": [
           "points",
           "unit_sizes",

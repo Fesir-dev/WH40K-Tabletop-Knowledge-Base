@@ -17,6 +17,7 @@ FORBIDDEN_MUTATIONS = {
     "reports/CURRENT_HANDOFF.md",
 }
 
+
 def run_cmd(workspace: Path, args: list[str]) -> dict:
     p = subprocess.run(args, cwd=workspace, text=True, capture_output=True)
     return {
@@ -27,14 +28,12 @@ def run_cmd(workspace: Path, args: list[str]) -> dict:
         "status": "PASS" if p.returncode == 0 else "FAIL",
     }
 
+
 def copy_repo(src: Path, dst: Path) -> None:
     if dst.exists():
         shutil.rmtree(dst)
-    shutil.copytree(
-        src,
-        dst,
-        ignore=shutil.ignore_patterns(".git", ".cache", "__pycache__", "*.pyc"),
-    )
+    shutil.copytree(src, dst, ignore=shutil.ignore_patterns(".git", ".cache", "__pycache__", "*.pyc"))
+
 
 def inventory_files(root: Path) -> dict[str, tuple[int, int]]:
     out = {}
@@ -44,6 +43,23 @@ def inventory_files(root: Path) -> dict[str, tuple[int, int]]:
             st = p.stat()
             out[rel] = (st.st_size, int(st.st_mtime_ns))
     return out
+
+
+def current_mfm_snapshot_date(workspace: Path) -> str:
+    current = json.loads((workspace / "rules" / "11e" / "current.json").read_text(encoding="utf-8"))
+    pointer = current.get("wave_a_mfm", {}).get("snapshot")
+    if not pointer:
+        raise RuntimeError("rules/11e/current.json has no wave_a_mfm.snapshot pointer")
+    parts = Path(pointer).parts
+    try:
+        idx = parts.index("snapshots")
+        snapshot_date = parts[idx + 1]
+    except (ValueError, IndexError) as exc:
+        raise RuntimeError(f"Cannot derive MFM snapshot date from pointer: {pointer}") from exc
+    if not (workspace / pointer).exists():
+        raise RuntimeError(f"Current MFM snapshot pointer does not exist: {pointer}")
+    return snapshot_date
+
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -57,14 +73,7 @@ def main() -> int:
     artifact_dir.mkdir(parents=True, exist_ok=True)
 
     if plan.get("state") == "NO_ACTION":
-        report = {
-            "schema_version": "1.0",
-            "plan_id": plan["plan_id"],
-            "status": "NO_ACTION",
-            "stages": [],
-            "promotion_gate": "NOT_APPLICABLE",
-            "auto_promote": False,
-        }
+        report = {"schema_version": "1.1", "plan_id": plan["plan_id"], "status": "NO_ACTION", "stages": [], "promotion_gate": "NOT_APPLICABLE", "auto_promote": False}
         (artifact_dir / "candidate_report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
         return 0
 
@@ -78,67 +87,32 @@ def main() -> int:
     bs_rev = revisions.get("bsdata_wh40k_11e", {}).get("candidate") or revisions.get("bsdata_wh40k_11e", {}).get("pinned")
     waha_changed = "WAHAPEDIA_11E" in plan.get("changed_sources", [])
     waha_snapshot = candidate_date if waha_changed else baseline
+    mfm_snapshot = current_mfm_snapshot_date(workspace)
 
     stage_results = []
     hard_fail = False
     for stage in plan.get("stages", []):
         sid = stage["id"]
         if sid == "MFM_NORMATIVE_REVALIDATION":
-            stage_results.append({
-                "id": sid,
-                "status": "BLOCKED_MANUAL_AUTHORITY_GATE",
-                "reason": "Derived MFM extraction changed; official GW MFM revalidation is required before normative ingestion.",
-            })
+            stage_results.append({"id": sid, "status": "BLOCKED_MANUAL_AUTHORITY_GATE", "reason": "Derived MFM extraction changed; official GW MFM revalidation is required before normative ingestion."})
             continue
 
         commands: list[list[str]] = []
         if sid == "WAHAPEDIA_INGEST":
-            commands = [[
-                sys.executable, "tools/import_wahapedia_wave_b.py",
-                "--download", "--snapshot-date", candidate_date,
-            ]]
+            commands = [[sys.executable, "tools/import_wahapedia_wave_b.py", "--download", "--snapshot-date", candidate_date]]
         elif sid == "WAVE_B_RECONCILE":
-            commands = [[
-                sys.executable, "tools/crosscheck_wave_b.py",
-                "--snapshot-date", candidate_date,
-                "--wahapedia-snapshot-date", waha_snapshot,
-                "--mfm-snapshot-date", baseline,
-                "--fetch-bsdata",
-                "--bsdata-commit", bs_rev,
-                "--report-path", f"ingestion/candidates/{plan['plan_id']}/reconciliation.json",
-            ]]
+            commands = [[sys.executable, "tools/crosscheck_wave_b.py", "--snapshot-date", candidate_date, "--wahapedia-snapshot-date", waha_snapshot, "--mfm-snapshot-date", mfm_snapshot, "--fetch-bsdata", "--bsdata-commit", bs_rev, "--report-path", f"ingestion/candidates/{plan['plan_id']}/reconciliation.json"]]
         elif sid == "WAVE_B_ROSTER_VIEWS":
             commands = [
-                [
-                    sys.executable, "tools/build_wave_b_roster_views.py",
-                    "--snapshot-date", candidate_date,
-                    "--mfm-snapshot-date", baseline,
-                ],
-                [
-                    sys.executable, "tools/audit_wave_b_views.py",
-                    "--snapshot-date", candidate_date,
-                    "--report-path", f"ingestion/candidates/{plan['plan_id']}/view_diagnostics.json",
-                ],
+                [sys.executable, "tools/build_wave_b_roster_views.py", "--snapshot-date", candidate_date, "--mfm-snapshot-date", mfm_snapshot],
+                [sys.executable, "tools/audit_wave_b_views.py", "--snapshot-date", candidate_date, "--report-path", f"ingestion/candidates/{plan['plan_id']}/view_diagnostics.json"],
             ]
         elif sid == "WAHAPEDIA_SEMANTIC_AUDIT":
-            commands = [[
-                sys.executable, "tools/audit_semantic_fingerprints.py",
-                "--snapshot-date", candidate_date,
-                "--report-path", f"ingestion/candidates/{plan['plan_id']}/semantic_fingerprint_audit.json",
-            ]]
+            commands = [[sys.executable, "tools/audit_semantic_fingerprints.py", "--snapshot-date", candidate_date, "--report-path", f"ingestion/candidates/{plan['plan_id']}/semantic_fingerprint_audit.json"]]
         elif sid == "BSDATA_FALLBACK_REBUILD":
-            commands = [[
-                sys.executable, "tools/build_bsdata_fallback_views.py",
-                "--snapshot-date", candidate_date,
-                "--mfm-snapshot-date", baseline,
-                "--bsdata-commit", bs_rev,
-            ]]
+            commands = [[sys.executable, "tools/build_bsdata_fallback_views.py", "--snapshot-date", candidate_date, "--mfm-snapshot-date", mfm_snapshot, "--bsdata-commit", bs_rev]]
         elif sid == "OFFICIAL_ASSET_AUDIT":
-            commands = [[
-                sys.executable, "tools/audit_official_11e_assets.py",
-                "--snapshot-date", candidate_date,
-                "--report-path", f"ingestion/candidates/{plan['plan_id']}/official_assets.json",
-            ]]
+            commands = [[sys.executable, "tools/audit_official_11e_assets.py", "--snapshot-date", candidate_date, "--report-path", f"ingestion/candidates/{plan['plan_id']}/official_assets.json"]]
         else:
             stage_results.append({"id": sid, "status": "FAIL", "reason": "Unsupported stage id"})
             hard_fail = True
@@ -151,31 +125,19 @@ def main() -> int:
             if result["returncode"] != 0:
                 hard_fail = True
                 break
-        stage_results.append({
-            "id": sid,
-            "status": "PASS" if command_results and all(x["returncode"] == 0 for x in command_results) else "FAIL",
-            "commands": command_results,
-        })
+        stage_results.append({"id": sid, "status": "PASS" if command_results and all(x["returncode"] == 0 for x in command_results) else "FAIL", "commands": command_results})
         if hard_fail:
             break
 
     after = inventory_files(workspace)
-    changed = sorted(
-        path for path, sig in after.items()
-        if path not in before or before[path] != sig
-    )
+    changed = sorted(path for path, sig in after.items() if path not in before or before[path] != sig)
     forbidden = sorted(set(changed) & FORBIDDEN_MUTATIONS)
     if forbidden:
         hard_fail = True
 
     candidate_root = artifact_dir / "candidate"
     candidate_root.mkdir(parents=True, exist_ok=True)
-    wanted_prefixes = [
-        f"rules/11e/snapshots/{candidate_date}/",
-        f"ingestion/candidates/{plan['plan_id']}/",
-        f"ingestion/runs/{candidate_date}_",
-        ".cache/wahapedia11e/",
-    ]
+    wanted_prefixes = [f"rules/11e/snapshots/{candidate_date}/", f"ingestion/candidates/{plan['plan_id']}/", f"ingestion/runs/{candidate_date}_", ".cache/wahapedia11e/"]
     copied = []
     for rel in changed:
         if any(rel.startswith(prefix) for prefix in wanted_prefixes):
@@ -187,21 +149,19 @@ def main() -> int:
 
     blocked = bool(plan.get("blockers")) or any(x.get("status") == "BLOCKED_MANUAL_AUTHORITY_GATE" for x in stage_results)
     if hard_fail:
-        promotion_gate = "CANDIDATE_FAILED"
-        status = "FAIL"
+        promotion_gate, status = "CANDIDATE_FAILED", "FAIL"
     elif blocked:
-        promotion_gate = "BLOCKED_AUTHORITY_REVALIDATION"
-        status = "PASS_WITH_BLOCKER"
+        promotion_gate, status = "BLOCKED_AUTHORITY_REVALIDATION", "PASS_WITH_BLOCKER"
     else:
-        promotion_gate = "ELIGIBLE_FOR_REVIEWED_PROMOTION"
-        status = "PASS"
+        promotion_gate, status = "ELIGIBLE_FOR_REVIEWED_PROMOTION", "PASS"
 
     report = {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "plan_id": plan["plan_id"],
         "plan_fingerprint": plan["plan_fingerprint"],
         "status": status,
         "candidate_snapshot_date": candidate_date,
+        "mfm_snapshot_date": mfm_snapshot,
         "changed_sources": plan.get("changed_sources", []),
         "stages": stage_results,
         "changed_files_in_isolated_workspace": changed,
@@ -213,8 +173,9 @@ def main() -> int:
     }
     (artifact_dir / "candidate_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     shutil.copy2(args.plan, artifact_dir / "reingestion_plan.json")
-    print(json.dumps({"status": status, "promotion_gate": promotion_gate, "artifact_files": len(copied)}, ensure_ascii=False))
+    print(json.dumps({"status": status, "promotion_gate": promotion_gate, "artifact_files": len(copied), "mfm_snapshot_date": mfm_snapshot}, ensure_ascii=False))
     return 2 if hard_fail else 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

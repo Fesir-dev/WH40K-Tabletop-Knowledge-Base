@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "status": "PASS",
-  "as_of": "2026-09-29",
+  "as_of": "2026-10-20",
   "milestone": "RELEASE_TRANSITION_INGESTION_READINESS",
-  "watch_status": "CHANGE_DETECTED",
+  "watch_status": "NO_CHANGE",
   "transitions": [
     {
       "transition_id": "ADEPTUS_CUSTODES_CODEX_2026",
@@ -11,15 +11,27 @@
       "factions": [
         "adeptus_custodes"
       ],
-      "as_of": "2026-09-29",
+      "as_of": "2026-10-20",
       "baseline_current_state": "CURRENT_LEGAL",
       "upcoming_state": "UPCOMING_PREVIEW_PARTIAL",
       "scheduled_release_date": null,
       "date_confidence": null,
       "current_legal_confirmed": false,
-      "upstream_changed": true,
-      "state": "UPCOMING_HOLD_NO_RELEASE_DATE",
-      "next_action": "WAIT_FOR_OFFICIAL_CURRENT_LEGAL_EVIDENCE",
+      "scoped_current_legal_confirmed": true,
+      "scoped_current_legal_dimensions": [
+        "points",
+        "unit_sizes",
+        "detachment_catalog",
+        "detachment_points",
+        "force_dispositions",
+        "current_roster_structure"
+      ],
+      "full_codex_app_semantics_confirmed": false,
+      "reviewed_promotion_applied": true,
+      "reviewed_promotion_id": "REINGEST_49496d868bd7",
+      "upstream_changed": false,
+      "state": "CURRENT_SCOPED_RECONCILED",
+      "next_action": "NO_ACTION_SCOPED_CURRENT",
       "candidate_eligible": false,
       "promotion_eligible": false,
       "authority_boundary": {
@@ -28,7 +40,8 @@
         "requires_official_current_legal_evidence": true,
         "requires_upstream_change_before_candidate": true,
         "candidate_route": "GUARDED_REINGESTION_CANDIDATE_REVIEWED_PROMOTION",
-        "direct_current_mutation": false
+        "direct_current_mutation": false,
+        "scoped_mfm_currentness_is_not_full_codex_app_equivalence": true
       }
     },
     {
@@ -48,15 +61,27 @@
         "ultramarines",
         "white_scars"
       ],
-      "as_of": "2026-09-29",
+      "as_of": "2026-10-20",
       "baseline_current_state": "CURRENT_LEGAL",
       "upcoming_state": "RELEASE_PENDING",
       "scheduled_release_date": "2026-10-03",
       "date_confidence": "INFERRED_FROM_OFFICIAL_RELATIVE_DATE",
       "current_legal_confirmed": false,
-      "upstream_changed": true,
-      "state": "PRE_RELEASE_HOLD",
-      "next_action": "WAIT_UNTIL_RELEASE_DATE_THEN_RECHECK_OFFICIAL_CURRENTNESS",
+      "scoped_current_legal_confirmed": true,
+      "scoped_current_legal_dimensions": [
+        "points",
+        "unit_sizes",
+        "detachment_catalog",
+        "detachment_points",
+        "force_dispositions",
+        "current_roster_structure"
+      ],
+      "full_codex_app_semantics_confirmed": false,
+      "reviewed_promotion_applied": true,
+      "reviewed_promotion_id": "REINGEST_49496d868bd7",
+      "upstream_changed": false,
+      "state": "CURRENT_SCOPED_RECONCILED",
+      "next_action": "NO_ACTION_SCOPED_CURRENT",
       "candidate_eligible": false,
       "promotion_eligible": false,
       "authority_boundary": {
@@ -65,22 +90,25 @@
         "requires_official_current_legal_evidence": true,
         "requires_upstream_change_before_candidate": true,
         "candidate_route": "GUARDED_REINGESTION_CANDIDATE_REVIEWED_PROMOTION",
-        "direct_current_mutation": false
+        "direct_current_mutation": false,
+        "scoped_mfm_currentness_is_not_full_codex_app_equivalence": true
       }
     }
   ],
   "summary": {
     "transition_count": 2,
-    "pre_release_hold": 1,
-    "no_release_date_hold": 1,
+    "pre_release_hold": 0,
+    "no_release_date_hold": 0,
     "awaiting_official_currentness": 0,
-    "candidate_ready": 0
+    "candidate_ready": 0,
+    "scoped_current_reconciled": 2
   },
   "global_policy": {
     "calendar_date_is_not_currentness_evidence": true,
     "preview_or_preorder_is_not_currentness_evidence": true,
     "official_current_legal_confirmation_required": true,
     "upstream_projection_change_required_for_candidate": true,
+    "scoped_currentness_does_not_claim_full_codex_app_equivalence": true,
     "auto_promote": false
   }
 }

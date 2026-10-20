@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "audited_at": "2026-10-20T20:07:00Z",
+  "snapshot_date": "2026-10-20",
+  "source_base": "https://wahapedia.ru/wh40k11ed/",
+  "snapshot_last_update": "2026-10-19 03:47:32",
+  "status": "PASS",
+  "expected_fingerprints": 14863,
+  "counts": {
+    "MATCH": 14863
+  },
+  "by_kind": {
+    "ability": {
+      "MATCH": 176
+    },
+    "datasheet": {
+      "MATCH": 1896
+    },
+    "datasheet-ability": {
+      "MATCH": 3119
+    },
+    "datasheet-option": {
+      "MATCH": 2359
+    },
+    "detachment-ability": {
+      "MATCH": 648
+    },
+    "enhancement": {
+      "MATCH": 1865
+    },
+    "stratagem": {
+      "MATCH": 2880
+    },
+    "unit-composition": {
+      "MATCH": 1920
+    }
+  },
+  "live_files": {
+    "Abilities.csv": {
+      "rows": 232
+    },
+    "Datasheets.csv": {
+      "rows": 1513
+    },
+    "Datasheets_abilities.csv": {
+      "rows": 6434
+    },
+    "Datasheets_options.csv": {
+      "rows": 2359
+    },
+    "Detachment_abilities.csv": {
+      "rows": 333
+    },
+    "Enhancements.csv": {
+      "rows": 935
+    },
+    "Stratagems.csv": {
+      "rows": 1520
+    },
+    "Datasheets_unit_composition.csv": {
+      "rows": 1924
+    }
+  },
+  "problems": [],
+  "promotion_guidance": {
+    "secondary_mirror_semantics": "CURRENT_HASH_VERIFIED",
+    "normative_authority": "UNCHANGED_GAMES_WORKSHOP",
+    "copyright_policy": "Long prose remains external; repository stores fingerprints and structured metadata only."
+  }
+}
