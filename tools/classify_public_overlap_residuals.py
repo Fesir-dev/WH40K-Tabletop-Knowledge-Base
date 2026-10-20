@@ -54,6 +54,12 @@ def classify_no_exact(unit: dict, source_by_id: dict[str, dict]) -> str:
 
 
 def build(as_of: str, root: Path = ROOT) -> dict:
+    """Build against the *current* verified mirror.
+
+    This is intentionally an explicit baseline-generation operation. Historical
+    residual artifacts must not be regenerated from a later live mirror; use
+    validate_committed() for those checkpoints.
+    """
     report = load(root / "reports" / "OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json")
     if report.get("status") != "PASS":
         raise RuntimeError("Official-public overlap report is not PASS")
@@ -174,21 +180,8 @@ def build(as_of: str, root: Path = ROOT) -> dict:
     }
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--as-of", default="2026-09-30")
-    ap.add_argument("--output", type=Path, default=Path("rules/11e/snapshots/2026-09-30/official_public_overlap/residual_classification.json"))
-    ap.add_argument("--summary-output", type=Path, default=Path("reports/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json"))
-    args = ap.parse_args()
-
-    payload = build(args.as_of)
-    out = args.output if args.output.is_absolute() else ROOT / args.output
-    summary_out = args.summary_output if args.summary_output.is_absolute() else ROOT / args.summary_output
-    out.parent.mkdir(parents=True, exist_ok=True)
-    summary_out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-    compact = {
+def compact_payload(payload: dict) -> dict:
+    return {
         "schema_version": payload["schema_version"],
         "status": payload["status"],
         "as_of": payload["as_of"],
@@ -207,6 +200,73 @@ def main() -> int:
         },
         "summary": payload["summary"],
     }
+
+
+def validate_committed(as_of: str, output: Path, summary_output: Path, root: Path = ROOT) -> dict:
+    """Validate a historical residual checkpoint without consulting live mirror data."""
+    report = load(root / "reports" / "OFFICIAL_PUBLIC_MIRROR_OVERLAP_CURRENT.json")
+    if report.get("status") != "PASS":
+        raise RuntimeError("Official-public overlap report is not PASS")
+
+    payload = load(output)
+    compact = load(summary_output)
+    if payload.get("status") != "PASS" or payload.get("as_of") != as_of:
+        raise RuntimeError("Committed residual checkpoint status/date drifted")
+    if payload.get("authority_boundary", {}).get("no_exact_is_conflict") is not False:
+        raise RuntimeError("Committed residual checkpoint changed no-exact authority semantics")
+    if payload.get("authority_boundary", {}).get("unscoped_exact_is_promotable") is not False:
+        raise RuntimeError("Committed residual checkpoint changed unscoped promotion semantics")
+    if payload.get("authority_boundary", {}).get("current_normalized_factions_change") != 0:
+        raise RuntimeError("Committed residual checkpoint changed full-faction normalization")
+
+    expected_unscoped = int(report["summary"]["unscoped_exact_units"])
+    expected_no_exact = int(report["summary"]["no_exact_overlap_units"])
+    unscoped = payload.get("unscoped_exact", {})
+    no_exact = payload.get("no_exact_public_overlap", {})
+    if int(unscoped.get("total", -1)) != expected_unscoped:
+        raise RuntimeError("Committed unscoped residual count differs from overlap audit")
+    if int(no_exact.get("total", -1)) != expected_no_exact:
+        raise RuntimeError("Committed no-exact residual count differs from overlap audit")
+    if len(unscoped.get("rows", [])) != expected_unscoped:
+        raise RuntimeError("Committed unscoped residual row count drifted")
+    if len(no_exact.get("rows", [])) != expected_no_exact:
+        raise RuntimeError("Committed no-exact residual row count drifted")
+    if payload.get("summary", {}).get("promoted_units") != 0:
+        raise RuntimeError("Historical residual checkpoint unexpectedly promotes units")
+    if payload.get("summary", {}).get("semantic_conflicts_created") != 0:
+        raise RuntimeError("Historical residual checkpoint unexpectedly creates semantic conflicts")
+
+    expected_compact = compact_payload(payload)
+    if compact != expected_compact:
+        raise RuntimeError("Compact residual summary differs from committed detailed checkpoint")
+    return compact
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--as-of", default="2026-09-30")
+    ap.add_argument("--output", type=Path, default=Path("rules/11e/snapshots/2026-09-30/official_public_overlap/residual_classification.json"))
+    ap.add_argument("--summary-output", type=Path, default=Path("reports/OFFICIAL_PUBLIC_OVERLAP_RESIDUAL_CLASSIFICATION_CURRENT.json"))
+    ap.add_argument(
+        "--validate-committed",
+        action="store_true",
+        help="Validate the historical checkpoint without rebuilding from the current live mirror.",
+    )
+    args = ap.parse_args()
+
+    out = args.output if args.output.is_absolute() else ROOT / args.output
+    summary_out = args.summary_output if args.summary_output.is_absolute() else ROOT / args.summary_output
+
+    if args.validate_committed:
+        compact = validate_committed(args.as_of, out, summary_out)
+        print(json.dumps(compact, ensure_ascii=False))
+        return 0
+
+    payload = build(args.as_of)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    summary_out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    compact = compact_payload(payload)
     summary_out.write_text(json.dumps(compact, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(compact, ensure_ascii=False))
     return 0
