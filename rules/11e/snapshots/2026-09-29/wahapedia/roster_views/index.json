@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "snapshot_date": "2026-09-29",
   "wahapedia_last_update": "2026-09-28 02:38:04",
   "counts": {
@@ -19,6 +19,7 @@
         "datasheets": 99,
         "mfm_units": 99,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 74,
         "legends_datasheets": 23,
         "model_profiles": 111,
@@ -32,7 +33,8 @@
         "enhancements": 52,
         "stratagems": 78
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "drukhari",
@@ -44,6 +46,7 @@
         "datasheets": 30,
         "mfm_units": 30,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 23,
         "legends_datasheets": 7,
         "model_profiles": 34,
@@ -57,7 +60,8 @@
         "enhancements": 30,
         "stratagems": 45
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "chaos_daemons",
@@ -69,6 +73,7 @@
         "datasheets": 63,
         "mfm_units": 63,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 53,
         "legends_datasheets": 10,
         "model_profiles": 64,
@@ -82,7 +87,8 @@
         "enhancements": 31,
         "stratagems": 50
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "chaos_knights",
@@ -94,6 +100,7 @@
         "datasheets": 20,
         "mfm_units": 20,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 11,
         "legends_datasheets": 0,
         "model_profiles": 20,
@@ -107,7 +114,8 @@
         "enhancements": 28,
         "stratagems": 39
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "chaos_space_marines",
@@ -119,6 +127,7 @@
         "datasheets": 85,
         "mfm_units": 85,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 54,
         "legends_datasheets": 31,
         "model_profiles": 93,
@@ -132,7 +141,8 @@
         "enhancements": 62,
         "stratagems": 93
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "death_guard",
@@ -144,6 +154,7 @@
         "datasheets": 41,
         "mfm_units": 41,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 36,
         "legends_datasheets": 5,
         "model_profiles": 41,
@@ -157,7 +168,8 @@
         "enhancements": 30,
         "stratagems": 45
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "emperors_children",
@@ -169,6 +181,7 @@
         "datasheets": 23,
         "mfm_units": 23,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 23,
         "legends_datasheets": 0,
         "model_profiles": 23,
@@ -182,7 +195,8 @@
         "enhancements": 34,
         "stratagems": 51
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "thousand_sons",
@@ -194,6 +208,7 @@
         "datasheets": 34,
         "mfm_units": 34,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 34,
         "legends_datasheets": 0,
         "model_profiles": 37,
@@ -207,7 +222,8 @@
         "enhancements": 30,
         "stratagems": 45
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "titanicus_traitoris",
@@ -224,6 +240,7 @@
         "datasheets": 30,
         "mfm_units": 30,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 30,
         "legends_datasheets": 0,
         "model_profiles": 30,
@@ -237,7 +254,8 @@
         "enhancements": 26,
         "stratagems": 39
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "genestealer_cults",
@@ -249,6 +267,7 @@
         "datasheets": 25,
         "mfm_units": 25,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 24,
         "legends_datasheets": 1,
         "model_profiles": 26,
@@ -262,7 +281,8 @@
         "enhancements": 26,
         "stratagems": 39
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "adepta_sororitas",
@@ -274,6 +294,7 @@
         "datasheets": 38,
         "mfm_units": 38,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 33,
         "legends_datasheets": 5,
         "model_profiles": 43,
@@ -287,7 +308,8 @@
         "enhancements": 25,
         "stratagems": 36
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "adeptus_custodes",
@@ -299,6 +321,7 @@
         "datasheets": 31,
         "mfm_units": 31,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 18,
         "legends_datasheets": 0,
         "model_profiles": 31,
@@ -312,7 +335,8 @@
         "enhancements": 30,
         "stratagems": 45
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "adeptus_mechanicus",
@@ -324,6 +348,7 @@
         "datasheets": 38,
         "mfm_units": 38,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 34,
         "legends_datasheets": 4,
         "model_profiles": 39,
@@ -337,7 +362,8 @@
         "enhancements": 34,
         "stratagems": 50
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "adeptus_titanicus",
@@ -349,6 +375,7 @@
         "datasheets": 4,
         "mfm_units": 4,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 4,
         "legends_datasheets": 0,
         "model_profiles": 4,
@@ -362,7 +389,8 @@
         "enhancements": 0,
         "stratagems": 0
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "agents_of_the_imperium",
@@ -374,6 +402,7 @@
         "datasheets": 75,
         "mfm_units": 75,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 58,
         "legends_datasheets": 17,
         "model_profiles": 55,
@@ -387,7 +416,8 @@
         "enhancements": 20,
         "stratagems": 30
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "astra_militarum",
@@ -399,6 +429,7 @@
         "datasheets": 135,
         "mfm_units": 135,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 69,
         "legends_datasheets": 63,
         "model_profiles": 144,
@@ -412,7 +443,8 @@
         "enhancements": 38,
         "stratagems": 57
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "black_templars",
@@ -424,6 +456,7 @@
         "datasheets": 90,
         "mfm_units": 90,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 88,
         "legends_datasheets": 0,
         "model_profiles": 93,
@@ -437,7 +470,8 @@
         "enhancements": 67,
         "stratagems": 98
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "blood_angels",
@@ -449,6 +483,7 @@
         "datasheets": 109,
         "mfm_units": 109,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 97,
         "legends_datasheets": 10,
         "model_profiles": 110,
@@ -462,7 +497,8 @@
         "enhancements": 85,
         "stratagems": 119
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "dark_angels",
@@ -474,6 +510,7 @@
         "datasheets": 103,
         "mfm_units": 103,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 98,
         "legends_datasheets": 3,
         "model_profiles": 104,
@@ -487,7 +524,8 @@
         "enhancements": 85,
         "stratagems": 119
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "deathwatch",
@@ -499,6 +537,7 @@
         "datasheets": 89,
         "mfm_units": 89,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 77,
         "legends_datasheets": 0,
         "model_profiles": 92,
@@ -512,7 +551,8 @@
         "enhancements": 63,
         "stratagems": 86
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "grey_knights",
@@ -524,6 +564,7 @@
         "datasheets": 31,
         "mfm_units": 31,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 25,
         "legends_datasheets": 5,
         "model_profiles": 31,
@@ -537,7 +578,8 @@
         "enhancements": 30,
         "stratagems": 45
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "imperial_fists",
@@ -549,6 +591,7 @@
         "datasheets": 163,
         "mfm_units": 163,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 85,
         "legends_datasheets": 76,
         "model_profiles": 165,
@@ -562,7 +605,8 @@
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "imperial_knights",
@@ -574,6 +618,7 @@
         "datasheets": 22,
         "mfm_units": 22,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 12,
         "legends_datasheets": 0,
         "model_profiles": 22,
@@ -587,7 +632,8 @@
         "enhancements": 26,
         "stratagems": 39
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "iron_hands",
@@ -599,6 +645,7 @@
         "datasheets": 162,
         "mfm_units": 162,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 84,
         "legends_datasheets": 76,
         "model_profiles": 164,
@@ -612,7 +659,8 @@
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "raven_guard",
@@ -624,6 +672,7 @@
         "datasheets": 162,
         "mfm_units": 162,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 84,
         "legends_datasheets": 76,
         "model_profiles": 164,
@@ -637,7 +686,8 @@
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "salamanders",
@@ -649,6 +699,7 @@
         "datasheets": 162,
         "mfm_units": 162,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 84,
         "legends_datasheets": 76,
         "model_profiles": 164,
@@ -662,7 +713,8 @@
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "space_marines",
@@ -674,6 +726,7 @@
         "datasheets": 179,
         "mfm_units": 179,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 101,
         "legends_datasheets": 76,
         "model_profiles": 182,
@@ -687,7 +740,8 @@
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "space_wolves",
@@ -699,6 +753,7 @@
         "datasheets": 119,
         "mfm_units": 119,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 99,
         "legends_datasheets": 18,
         "model_profiles": 122,
@@ -712,7 +767,8 @@
         "enhancements": 81,
         "stratagems": 113
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "ultramarines",
@@ -724,6 +780,7 @@
         "datasheets": 168,
         "mfm_units": 168,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 90,
         "legends_datasheets": 76,
         "model_profiles": 171,
@@ -737,7 +794,8 @@
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "white_scars",
@@ -749,6 +807,7 @@
         "datasheets": 162,
         "mfm_units": 162,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 84,
         "legends_datasheets": 76,
         "model_profiles": 164,
@@ -762,7 +821,8 @@
         "enhancements": 87,
         "stratagems": 122
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "leagues_of_votann",
@@ -774,6 +834,7 @@
         "datasheets": 22,
         "mfm_units": 22,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 22,
         "legends_datasheets": 0,
         "model_profiles": 25,
@@ -787,7 +848,8 @@
         "enhancements": 34,
         "stratagems": 51
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "necrons",
@@ -799,6 +861,7 @@
         "datasheets": 64,
         "mfm_units": 64,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 51,
         "legends_datasheets": 12,
         "model_profiles": 65,
@@ -812,7 +875,8 @@
         "enhancements": 42,
         "stratagems": 63
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "orks",
@@ -824,6 +888,7 @@
         "datasheets": 67,
         "mfm_units": 67,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 54,
         "legends_datasheets": 12,
         "model_profiles": 78,
@@ -837,7 +902,8 @@
         "enhancements": 38,
         "stratagems": 40
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "tau_empire",
@@ -849,6 +915,7 @@
         "datasheets": 62,
         "mfm_units": 62,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 39,
         "legends_datasheets": 19,
         "model_profiles": 64,
@@ -862,7 +929,8 @@
         "enhancements": 23,
         "stratagems": 28
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "tyranids",
@@ -874,6 +942,7 @@
         "datasheets": 57,
         "mfm_units": 57,
         "unresolved_mfm_units": 0,
+        "unresolved_legends_mfm_units": 0,
         "current_edition_11_datasheets": 50,
         "legends_datasheets": 5,
         "model_profiles": 58,
@@ -887,7 +956,8 @@
         "enhancements": 34,
         "stratagems": 51
       },
-      "unresolved_mfm_units": []
+      "unresolved_mfm_units": [],
+      "unresolved_legends_mfm_units": []
     },
     {
       "slug": "unaligned_forces",
