@@ -384,12 +384,15 @@
       "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
     },
     "upstream_reingestion": {
-      "state": "REVIEWED_PROMOTION_APPLIED_PENDING_POST_PROMOTION_WATCH",
+      "state": "REVIEWED_PROMOTION_COMPLETE_POST_PROMOTION_WATCH_PASS",
       "plan_id": "REINGEST_49496d868bd7",
       "candidate_snapshot": "2026-10-20",
       "promoted_at": "2026-10-20",
       "auto_promote": false,
-      "authority_rule": "Promotion was explicitly dispatched from a PASS candidate; normative GW/MFM authority was not changed."
+      "authority_rule": "Promotion was explicitly dispatched from a PASS candidate; normative GW/MFM authority was not changed.",
+      "post_promotion_watch": "PASS_NO_CHANGE",
+      "completed_at": "2026-10-20",
+      "watch_report": "reports/UPSTREAM_CHANGE_WATCH_CURRENT.json"
     }
   },
   "collection_aware_roster_solver": {
