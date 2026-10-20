@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "status": "NO_CHANGE",
+  "status": "CHANGE_DETECTED",
   "baseline_snapshot": "2026-10-20",
   "official_sources": [
     {
@@ -19,12 +19,21 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "a56674583d9f656a191e4210268c276f133b47d1",
-      "relation_from_pinned_to_live": "identical",
-      "ahead_by": null,
-      "behind_by": null,
-      "changed": false,
-      "files": [],
+      "live": "97262dc0052da6ff621fd7da2636e6b46a9669cf",
+      "relation_from_pinned_to_live": "ahead",
+      "ahead_by": 1,
+      "behind_by": 0,
+      "changed": true,
+      "files": [
+        {
+          "filename": "Imperium - Adeptus Custodes.json",
+          "status": "modified",
+          "additions": 59,
+          "deletions": 69,
+          "changes": 128,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        }
+      ],
       "note": null
     },
     {
@@ -48,7 +57,9 @@
   },
   "change_summary": {
     "official_sources_changed": [],
-    "github_sources_changed": [],
+    "github_sources_changed": [
+      "BSDATA_WH40K_11E"
+    ],
     "wahapedia_files_changed": 0,
     "wahapedia_last_update_changed": false
   },
