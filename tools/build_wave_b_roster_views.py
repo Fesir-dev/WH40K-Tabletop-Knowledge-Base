@@ -5,10 +5,10 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-DATE="2026-09-29"
-WROOT=ROOT/"rules"/"11e"/"snapshots"/DATE/"wahapedia"
-MROOT=ROOT/"rules"/"11e"/"snapshots"/DATE/"mfm"
-OUT=WROOT/"roster_views"
+DATE=None
+WROOT=None
+MROOT=None
+OUT=None
 
 SPACE_MARINE_CHILDREN={
     "black_templars","blood_angels","dark_angels","deathwatch",
@@ -45,16 +45,38 @@ def choose_ds(candidates, mfm_unit):
         return s
     return sorted(candidates,key=score,reverse=True)[0]
 
+def resolve_roots(snapshot_date=None,mfm_snapshot_date=None):
+    if snapshot_date:
+        wroot=ROOT/"rules"/"11e"/"snapshots"/snapshot_date/"wahapedia"
+        mdate=mfm_snapshot_date or snapshot_date
+        mroot=ROOT/"rules"/"11e"/"snapshots"/mdate/"mfm"
+        return snapshot_date,wroot,mroot,wroot/"roster_views"
+
+    current=json.loads((ROOT/"rules"/"11e"/"current.json").read_text(encoding="utf-8"))
+    wave_index=ROOT/current["wave_b_structural"]["snapshot"]
+    wroot=wave_index.parent.parent
+    parts=wroot.parts
+    try:
+        date=parts[parts.index("snapshots")+1]
+    except (ValueError,IndexError) as exc:
+        raise RuntimeError(f"Cannot resolve current Wave B snapshot date from {wave_index}") from exc
+
+    if mfm_snapshot_date:
+        mroot=ROOT/"rules"/"11e"/"snapshots"/mfm_snapshot_date/"mfm"
+    else:
+        mroot=(ROOT/current["wave_a_mfm"]["snapshot"]).parent
+    return date,wroot,mroot,wave_index.parent
+
 def main():
     global DATE, WROOT, MROOT, OUT
     ap=argparse.ArgumentParser()
-    ap.add_argument("--snapshot-date",default=DATE)
+    ap.add_argument(
+        "--snapshot-date",
+        help="Explicit Wahapedia snapshot date. Omit to rebuild the snapshot referenced by rules/11e/current.json.",
+    )
     ap.add_argument("--mfm-snapshot-date")
     a=ap.parse_args()
-    DATE=a.snapshot_date
-    WROOT=ROOT/"rules"/"11e"/"snapshots"/DATE/"wahapedia"
-    MROOT=ROOT/"rules"/"11e"/"snapshots"/(a.mfm_snapshot_date or DATE)/"mfm"
-    OUT=WROOT/"roster_views"
+    DATE,WROOT,MROOT,OUT=resolve_roots(a.snapshot_date,a.mfm_snapshot_date)
     catalog=json.loads((ROOT/"factions"/"catalog.json").read_text(encoding="utf-8"))
     manifest=json.loads((WROOT/"manifest.json").read_text(encoding="utf-8"))
     w_entries={x.get("repository_slug"):x for x in manifest["factions"] if x.get("repository_slug")}
