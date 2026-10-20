@@ -21,28 +21,39 @@ class ReleaseTransitionReadinessContracts(unittest.TestCase):
     def no_change_watch(self):
         watch=copy.deepcopy(self.watch)
         watch["status"]="NO_CHANGE"
+        watch["change_summary"]["official_sources_changed"]=[]
         watch["change_summary"]["github_sources_changed"]=[]
         watch["change_summary"]["wahapedia_files_changed"]=0
         watch["change_summary"]["wahapedia_last_update_changed"]=False
         return watch
 
-    def test_current_checkpoint_is_fail_closed(self):
-        r=build_report([self.sm,self.cust],self.watch,date(2026,9,29))
+    def preclosure(self, manifest):
+        row=copy.deepcopy(manifest)
+        row["activation_evidence"]["current_legal_confirmed"]=False
+        row["activation_evidence"]["scoped_current_legal_confirmed"]=False
+        row["reviewed_promotion"]={"applied":False}
+        return row
+
+    def test_current_checkpoint_is_scoped_reconciled(self):
+        r=build_report([self.sm,self.cust],self.watch,date(2026,10,20))
         rows={x["transition_id"]:x for x in r["transitions"]}
-        self.assertEqual(rows["SPACE_MARINES_CODEX_2026"]["state"],"PRE_RELEASE_HOLD")
-        self.assertEqual(rows["ADEPTUS_CUSTODES_CODEX_2026"]["state"],"UPCOMING_HOLD_NO_RELEASE_DATE")
+        self.assertTrue(all(x["state"]=="CURRENT_SCOPED_RECONCILED" for x in rows.values()))
+        self.assertTrue(all(x["scoped_current_legal_confirmed"] for x in rows.values()))
+        self.assertTrue(all(not x["full_codex_app_semantics_confirmed"] for x in rows.values()))
         self.assertTrue(all(x["promotion_eligible"] is False for x in rows.values()))
-        self.assertTrue(r["global_policy"]["calendar_date_is_not_currentness_evidence"])
+        self.assertEqual(r["summary"]["scoped_current_reconciled"],2)
+        self.assertTrue(r["global_policy"]["scoped_currentness_does_not_claim_full_codex_app_equivalence"])
         self.assertFalse(r["global_policy"]["auto_promote"])
 
     def test_release_date_alone_never_promotes(self):
-        row=evaluate_transition(self.sm,self.watch,date(2026,10,3))
+        sm=self.preclosure(self.sm)
+        row=evaluate_transition(sm,self.watch,date(2026,10,3))
         self.assertEqual(row["state"],"RELEASE_DATE_REACHED_AWAITING_OFFICIAL_CURRENTNESS")
         self.assertFalse(row["candidate_eligible"])
         self.assertFalse(row["promotion_eligible"])
 
     def test_official_currentness_without_projection_waits(self):
-        sm=copy.deepcopy(self.sm)
+        sm=self.preclosure(self.sm)
         sm["activation_evidence"]["current_legal_confirmed"]=True
         sm["activation_evidence"]["confirmed_at"]="2026-10-03"
         row=evaluate_transition(sm,self.no_change_watch(),date(2026,10,3))
@@ -50,7 +61,7 @@ class ReleaseTransitionReadinessContracts(unittest.TestCase):
         self.assertFalse(row["candidate_eligible"])
 
     def test_official_currentness_plus_upstream_change_allows_candidate_only(self):
-        sm=copy.deepcopy(self.sm)
+        sm=self.preclosure(self.sm)
         sm["activation_evidence"]["current_legal_confirmed"]=True
         sm["activation_evidence"]["confirmed_at"]="2026-10-03"
         watch=self.no_change_watch()
@@ -68,13 +79,12 @@ class ReleaseTransitionReadinessContracts(unittest.TestCase):
         self.assertFalse(is_official_https("http://www.warhammer-community.com/example"))
         self.assertFalse(is_official_https("https://example.com/warhammer-community.com"))
 
-    def test_custodes_can_activate_from_official_evidence_without_guessed_date(self):
-        cust=copy.deepcopy(self.cust)
-        cust["activation_evidence"]["current_legal_confirmed"]=True
-        cust["activation_evidence"]["confirmed_at"]="2026-10-10"
-        row=evaluate_transition(cust,self.no_change_watch(),date(2026,10,10))
-        self.assertEqual(row["state"],"CURRENT_LEGAL_CONFIRMED_WAITING_UPSTREAM_PROJECTION")
-        self.assertIsNone(row["scheduled_release_date"])
+    def test_custodes_can_activate_scoped_without_guessed_release_date(self):
+        self.assertIsNone(self.cust["scheduled_release_date"])
+        row=evaluate_transition(self.cust,self.no_change_watch(),date(2026,10,20))
+        self.assertEqual(row["state"],"CURRENT_SCOPED_RECONCILED")
+        self.assertTrue(row["scoped_current_legal_confirmed"])
+        self.assertFalse(row["full_codex_app_semantics_confirmed"])
 
 
 if __name__=="__main__":
