@@ -328,18 +328,14 @@
       "bsdata_wh40k_11e": {
         "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
         "live": "a56674583d9f656a191e4210268c276f133b47d1",
-        "changed": false
+        "changed": false,
+        "relation": "identical"
       },
       "bsdata_mfm_11e": {
-        "pinned": "61a687e858c00a4ad205d564959c622a5605ef3d",
-        "live": "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390",
-        "changed": true,
-        "changed_file_classes": [
-          "CI",
-          "DOCUMENTATION",
-          "OTHER"
-        ],
-        "normative_mfm_data_change_not_inferred": true
+        "pinned": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
+        "live": "8e0e635674018969fdcfaa64e83d4153ebefad70",
+        "changed": false,
+        "relation": "behind"
       },
       "wahapedia": {
         "manifest_files_checked": 20,
@@ -347,7 +343,17 @@
         "last_update_changed": false
       },
       "auto_promote": false,
-      "action": "REVIEW_GUARDED_REINGESTION_PLAN_WITHOUT_NORMATIVE_AUTO_PROMOTION"
+      "action": "REVIEW_GUARDED_REINGESTION_PLAN_WITHOUT_NORMATIVE_AUTO_PROMOTION",
+      "gw_mfm": {
+        "source_id": "GW_MFM",
+        "pinned_updated_at": "2026-10-14",
+        "live_updated_at": "2026-10-14",
+        "state": "PASS",
+        "changed": false,
+        "page_sha256": "63cce466f0c6e6d7925f1f50320c5f5f9e8147c2b8b6e569ae0fd6e1e8cabb91",
+        "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+        "reason": null
+      }
     },
     "new_recruit_runtime": {
       "state": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
@@ -356,23 +362,18 @@
       "cadence": "daily",
       "roster_identities_resolved": 37,
       "representative_point_checks": 15,
-      "representative_point_matches": 10,
-      "known_runtime_drifts": 6,
+      "representative_point_matches": 14,
+      "known_runtime_drifts": 1,
       "new_runtime_drifts": 0,
       "known_drift_registry": "sources/runtime_drift_registry.json",
       "active_known_drift_ids": [
-        "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
-        "NR_ORKS_BOYZ_POINTS_2026_09_29",
-        "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
-        "NR_ORKS_WARBOSS_POINTS_2026_09_29",
-        "NR_NECRONS_WARRIORS_POINTS_2026_09_29",
-        "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29"
+        "NR_ADEPTUS_CUSTODES_TRAJANN_POINTS_2026_10_20"
       ],
       "authority_rule": "Runtime mismatch never automatically changes normative Games Workshop/MFM data.",
-      "known_point_drifts": 5,
+      "known_point_drifts": 1,
       "representative_surface_checks": 5,
-      "representative_surface_matches": 4,
-      "known_surface_drifts": 1,
+      "representative_surface_matches": 5,
+      "known_surface_drifts": 0,
       "classification_contract": [
         "NORMATIVE_MATCH",
         "IMPLEMENTATION_DRIFT",

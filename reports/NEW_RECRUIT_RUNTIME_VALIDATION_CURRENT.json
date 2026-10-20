@@ -1,6 +1,6 @@
 {
   "schema_version": "2.1",
-  "status": "NEW_RUNTIME_PROJECTION_DRIFT",
+  "status": "PASS_WITH_KNOWN_RUNTIME_DRIFT",
   "system": {
     "url": "https://www.newrecruit.eu/wiki/wh40k-11e/warhammer-40,000-11th-edition",
     "http_status": 200,
@@ -387,10 +387,9 @@
   "representative_points": {
     "checks": 15,
     "matched": 14,
-    "known_drift_count": 0,
-    "new_drift_count": 1,
-    "known_drifts": [],
-    "new_drifts": [
+    "known_drift_count": 1,
+    "new_drift_count": 0,
+    "known_drifts": [
       {
         "slug": "adeptus_custodes",
         "unit": "Trajann Valoris",
@@ -428,9 +427,11 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ADEPTUS_CUSTODES_TRAJANN_POINTS_2026_10_20"
       }
     ],
+    "new_drifts": [],
     "archetypes": [
       "infantry_multi_size",
       "leader",
@@ -477,7 +478,8 @@
         },
         "recommended_action": "Do not change normative KB data. Investigate New Recruit projection/cache synchronization against current BSData.",
         "normative_kb_change_required": false,
-        "registry_state": "UNCLASSIFIED_OR_CHANGED"
+        "registry_state": "KNOWN_ACTIVE",
+        "known_drift_id": "NR_ADEPTUS_CUSTODES_TRAJANN_POINTS_2026_10_20"
       },
       {
         "slug": "orks",
@@ -743,34 +745,9 @@
   },
   "known_drift_registry": {
     "path": "sources/runtime_drift_registry.json",
-    "active": 6,
-    "observed_active": 0,
-    "resolved_candidates": [
-      {
-        "id": "NR_ORKS_GHAZGHKULL_POINTS_2026_09_29",
-        "classification": "RESOLVED_CANDIDATE"
-      },
-      {
-        "id": "NR_ORKS_BOYZ_POINTS_2026_09_29",
-        "classification": "RESOLVED_CANDIDATE"
-      },
-      {
-        "id": "NR_ORKS_BATTLEWAGON_POINTS_2026_09_29",
-        "classification": "RESOLVED_CANDIDATE"
-      },
-      {
-        "id": "NR_ORKS_WARBOSS_POINTS_2026_09_29",
-        "classification": "RESOLVED_CANDIDATE"
-      },
-      {
-        "id": "NR_NECRONS_WARRIORS_POINTS_2026_09_29",
-        "classification": "RESOLVED_CANDIDATE"
-      },
-      {
-        "id": "NR_ORKS_SHOOTA_BOYZ_DETACHMENT_2026_09_29",
-        "classification": "RESOLVED_CANDIDATE"
-      }
-    ]
+    "active": 1,
+    "observed_active": 1,
+    "resolved_candidates": []
   },
   "lineage": {
     "runtime_source": "NEW_RECRUIT_WIKI",

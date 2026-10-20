@@ -990,8 +990,15 @@ try:
     off = official_assets.get("official_assets", {})
     if off.get("failures") != 0:
         errors.append("Official faction-pack PDF asset verification contains failures")
-    if off.get("verified_pdf_assets") != off.get("pdf_assets"):
-        errors.append("Not all referenced official faction-pack PDFs are verified")
+    declared_public = off.get("declared_public_pdf_assets", off.get("pdf_assets"))
+    if off.get("verified_pdf_assets") != declared_public:
+        errors.append("Not all declared public official faction-pack PDFs are verified")
+    if int(off.get("blocking_failures", off.get("failures", 0))) != 0:
+        errors.append("Official public asset audit contains blocking failures")
+    # Codex/app-only sources may legitimately have no public PDF. Keep them as explicit
+    # authority gaps rather than treating an absent public asset as a broken PDF.
+    if int(off.get("no_public_asset_declared", 0)) < 0:
+        errors.append("Official public-asset gap count is invalid")
 
     gcov = cov.get("global", {})
     complete = int(current_rules.get("wave_b_structural", {}).get("roster_identities_complete", 0))
@@ -1026,15 +1033,16 @@ try:
         errors.append(f"Unexpected upstream watch status: {watch_status}")
     summary = upstream_watch.get("change_summary", {})
     changed_sources = summary.get("github_sources_changed", [])
-    if watch_status == "NO_CHANGE" and changed_sources:
-        errors.append("Upstream watcher says NO_CHANGE but GitHub source changes are listed")
-    if watch_status == "CHANGE_DETECTED" and not changed_sources and not summary.get("wahapedia_files_changed") and not summary.get("wahapedia_last_update_changed"):
+    official_changed = summary.get("official_sources_changed", [])
+    if watch_status == "NO_CHANGE" and (changed_sources or official_changed):
+        errors.append("Upstream watcher says NO_CHANGE but source changes are listed")
+    if watch_status == "CHANGE_DETECTED" and not changed_sources and not official_changed and not summary.get("wahapedia_files_changed") and not summary.get("wahapedia_last_update_changed"):
         errors.append("Upstream watcher says CHANGE_DETECTED without any classified source change")
     if upstream_watch.get("policy", {}).get("auto_promote") is not False:
         errors.append("Upstream watcher must never auto-promote detected source changes")
 
-    if nr_runtime.get("schema_version") != "2.0":
-        errors.append("New Recruit runtime report schema must be 2.0")
+    if nr_runtime.get("schema_version") != "2.1":
+        errors.append("New Recruit runtime report schema must be 2.1")
     if nr_runtime.get("status") not in {"PASS", "PASS_WITH_KNOWN_RUNTIME_DRIFT"}:
         errors.append(f"New Recruit runtime has unresolved drift: {nr_runtime.get('status')}")
     universe = nr_runtime.get("universe", {})
@@ -1086,11 +1094,21 @@ try:
         )
     if current_watch.get("auto_promote") is not False:
         errors.append("Current rules upstream watcher must keep auto_promote=false")
-    if watch_status == "CHANGE_DETECTED":
-        if current_watch.get("bsdata_wh40k_11e", {}).get("live") != "374f50544f0274296ab53c2103766ae3945e8799":
-            errors.append("Current rules live BSData revision differs from detected upstream head")
-        if current_watch.get("bsdata_mfm_11e", {}).get("live") != "c3ddc8ce1884877c9ad8f08224667d1cdb5bd390":
-            errors.append("Current rules live MFM extractor revision differs from detected upstream head")
+    watch_rows = {x.get("source_id"): x for x in upstream_watch.get("github_sources", [])}
+    for source_id, key in (("BSDATA_WH40K_11E", "bsdata_wh40k_11e"), ("BSDATA_MFM_11E", "bsdata_mfm_11e")):
+        row = watch_rows.get(source_id, {})
+        current_row = current_watch.get(key, {})
+        for field in ("pinned", "live", "changed"):
+            if current_row.get(field) != row.get(field):
+                errors.append(f"Current rules {key}.{field} differs from upstream watch report")
+        if current_row.get("relation") != row.get("relation_from_pinned_to_live"):
+            errors.append(f"Current rules {key}.relation differs from upstream watch report")
+    waha_watch = upstream_watch.get("wahapedia", {})
+    current_waha = current_watch.get("wahapedia", {})
+    if current_waha.get("manifest_files_checked") != waha_watch.get("manifest_files_checked"):
+        errors.append("Current rules Wahapedia watch manifest count differs from report")
+    if current_waha.get("changed_files") != len(waha_watch.get("changed_files", [])):
+        errors.append("Current rules Wahapedia changed-file count differs from report")
     if nr_auto.get("state") != nr_runtime.get("status"):
         errors.append("Current rules New Recruit runtime state differs from runtime report")
     if nr_auto.get("representative_point_checks") != points.get("checks"):
