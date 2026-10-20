@@ -103,4 +103,6 @@ jobs:
             ingestion/runs/2026-10-20_mfm_v1_6_refresh.json
           git diff --cached --check
           git commit -m "Refresh normative MFM to v1.6"
+          git fetch origin ops/rules-refresh-2026-10-20
+          git rebase origin/ops/rules-refresh-2026-10-20
           git push origin HEAD:ops/rules-refresh-2026-10-20
