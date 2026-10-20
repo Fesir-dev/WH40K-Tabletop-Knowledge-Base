@@ -9,82 +9,60 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 STAGE_DEFS = {
-    "WAHAPEDIA_INGEST": {
-        "source": "WAHAPEDIA_11E",
-        "automation": "AUTOMATED_CANDIDATE",
-        "description": "Download current Wahapedia 11E CSV export into an isolated candidate snapshot.",
-    },
-    "WAVE_B_RECONCILE": {
-        "source": "MULTI_SOURCE",
-        "automation": "AUTOMATED_CANDIDATE",
-        "description": "Reconcile candidate/current Wahapedia structure against current MFM and candidate/current BSData.",
-    },
-    "WAVE_B_ROSTER_VIEWS": {
-        "source": "WAHAPEDIA_11E",
-        "automation": "AUTOMATED_CANDIDATE",
-        "description": "Build candidate roster-specific structural views.",
-    },
-    "WAHAPEDIA_SEMANTIC_AUDIT": {
-        "source": "WAHAPEDIA_11E",
-        "automation": "AUTOMATED_CANDIDATE",
-        "description": "Verify candidate semantic fingerprints against the live Wahapedia export.",
-    },
-    "OFFICIAL_ASSET_AUDIT": {
-        "source": "GW_40K_DOWNLOADS",
-        "automation": "AUTOMATED_CANDIDATE",
-        "description": "When the mirror source catalog changes, verify its referenced official Games Workshop PDF assets before promotion.",
-    },
-    "BSDATA_FALLBACK_REBUILD": {
-        "source": "BSDATA_WH40K_11E",
-        "automation": "AUTOMATED_CANDIDATE",
-        "description": "Rebuild structured-implementation fallback views at the candidate BSData revision.",
-    },
-    "MFM_NORMATIVE_REVALIDATION": {
-        "source": "GW_MFM",
-        "automation": "MANUAL_AUTHORITY_GATE",
-        "description": "Revalidate the official MFM revision before any normative promotion from a changed derived extraction.",
-    },
+    "WAHAPEDIA_INGEST": {"source": "WAHAPEDIA_11E", "automation": "AUTOMATED_CANDIDATE", "description": "Download current Wahapedia 11E CSV export into an isolated candidate snapshot."},
+    "WAVE_B_RECONCILE": {"source": "MULTI_SOURCE", "automation": "AUTOMATED_CANDIDATE", "description": "Reconcile candidate/current Wahapedia structure against current MFM and candidate/current BSData."},
+    "WAVE_B_ROSTER_VIEWS": {"source": "WAHAPEDIA_11E", "automation": "AUTOMATED_CANDIDATE", "description": "Build candidate roster-specific structural views."},
+    "WAHAPEDIA_SEMANTIC_AUDIT": {"source": "WAHAPEDIA_11E", "automation": "AUTOMATED_CANDIDATE", "description": "Verify candidate semantic fingerprints against the live Wahapedia export."},
+    "OFFICIAL_ASSET_AUDIT": {"source": "GW_40K_DOWNLOADS", "automation": "AUTOMATED_CANDIDATE", "description": "When the mirror source catalog changes, verify its referenced official Games Workshop PDF assets before promotion."},
+    "BSDATA_FALLBACK_REBUILD": {"source": "BSDATA_WH40K_11E", "automation": "AUTOMATED_CANDIDATE", "description": "Rebuild structured-implementation fallback views at the candidate BSData revision."},
+    "MFM_NORMATIVE_REVALIDATION": {"source": "GW_MFM", "automation": "MANUAL_AUTHORITY_GATE", "description": "Revalidate the official MFM revision before any normative promotion from official or derived MFM drift."},
 }
+
 
 def stable_fingerprint(payload: dict) -> str:
     body = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(body).hexdigest()
 
+
 def build_plan(watch: dict, candidate_snapshot_date: str) -> dict:
     if watch.get("status") == "NO_CHANGE":
         base = {
-            "schema_version": "1.0",
+            "schema_version": "1.1",
             "state": "NO_ACTION",
             "baseline_snapshot": watch.get("baseline_snapshot"),
             "candidate_snapshot_date": candidate_snapshot_date,
             "changed_sources": [],
             "stages": [],
             "blockers": [],
-            "promotion": {
-                "auto_promote": False,
-                "state": "NOT_APPLICABLE",
-            },
+            "promotion": {"auto_promote": False, "state": "NOT_APPLICABLE"},
         }
         base["plan_fingerprint"] = stable_fingerprint(base)
         base["plan_id"] = "REINGEST_" + base["plan_fingerprint"][:12]
         return base
 
     github = {x.get("source_id"): x for x in watch.get("github_sources", [])}
+    official = {x.get("source_id"): x for x in watch.get("official_sources", [])}
     bs = github.get("BSDATA_WH40K_11E", {})
-    mfm = github.get("BSDATA_MFM_11E", {})
+    mfm_extraction = github.get("BSDATA_MFM_11E", {})
+    mfm_official = official.get("GW_MFM", {})
     waha = watch.get("wahapedia", {})
+
     waha_changed_files = {x.get("file") for x in waha.get("changed_files", []) if x.get("file")}
     waha_changed = bool(waha_changed_files or watch.get("change_summary", {}).get("wahapedia_last_update_changed"))
     source_catalog_changed = "Source.csv" in waha_changed_files
     bs_changed = bool(bs.get("changed"))
-    mfm_changed = bool(mfm.get("changed"))
+    mfm_extraction_changed = bool(mfm_extraction.get("changed"))
+    mfm_official_changed = bool(mfm_official.get("changed"))
+    mfm_changed = mfm_extraction_changed or mfm_official_changed
 
     changed_sources = []
     if waha_changed:
         changed_sources.append("WAHAPEDIA_11E")
     if bs_changed:
         changed_sources.append("BSDATA_WH40K_11E")
-    if mfm_changed:
+    if mfm_official_changed:
+        changed_sources.append("GW_MFM")
+    if mfm_extraction_changed:
         changed_sources.append("BSDATA_MFM_11E")
 
     stage_ids = []
@@ -98,8 +76,6 @@ def build_plan(watch: dict, candidate_snapshot_date: str) -> dict:
         stage_ids.append("BSDATA_FALLBACK_REBUILD")
     if mfm_changed:
         stage_ids.append("MFM_NORMATIVE_REVALIDATION")
-
-    # Stable de-dup preserving order.
     stage_ids = list(dict.fromkeys(stage_ids))
     stages = [{"id": sid, **STAGE_DEFS[sid]} for sid in stage_ids]
 
@@ -107,17 +83,14 @@ def build_plan(watch: dict, candidate_snapshot_date: str) -> dict:
     if mfm_changed:
         blockers.append({
             "id": "MFM_OFFICIAL_REVALIDATION_REQUIRED",
-            "source": "BSDATA_MFM_11E",
+            "source": "GW_MFM",
             "severity": "BLOCKING",
-            "reason": "A changed derived MFM extraction cannot update normative MFM facts until the official GW MFM revision is revalidated.",
+            "reason": "Official or derived MFM drift requires explicit current Games Workshop revision verification before normative MFM promotion.",
+            "official_changed": mfm_official_changed,
+            "extraction_changed": mfm_extraction_changed,
         })
-
     if not changed_sources:
-        blockers.append({
-            "id": "UNCLASSIFIED_WATCH_CHANGE",
-            "severity": "BLOCKING",
-            "reason": "Watcher reported change but no supported source class was resolved.",
-        })
+        blockers.append({"id": "UNCLASSIFIED_WATCH_CHANGE", "severity": "BLOCKING", "reason": "Watcher reported change but no supported source class was resolved."})
 
     candidate_revisions = {
         "wahapedia": {
@@ -126,21 +99,14 @@ def build_plan(watch: dict, candidate_snapshot_date: str) -> dict:
             "changed_files": len(waha.get("changed_files", [])),
             "changed_files_detail": waha.get("changed_files", []),
         },
-        "bsdata_wh40k_11e": {
-            "pinned": bs.get("pinned"),
-            "candidate": bs.get("live"),
-            "changed": bs_changed,
-        },
-        "bsdata_mfm_11e": {
-            "pinned": mfm.get("pinned"),
-            "candidate": mfm.get("live"),
-            "changed": mfm_changed,
-        },
+        "bsdata_wh40k_11e": {"pinned": bs.get("pinned"), "candidate": bs.get("live"), "changed": bs_changed, "relation": bs.get("relation_from_pinned_to_live")},
+        "gw_mfm": {"pinned_updated_at": mfm_official.get("pinned_updated_at"), "candidate_updated_at": mfm_official.get("live_updated_at"), "changed": mfm_official_changed, "state": mfm_official.get("state")},
+        "bsdata_mfm_11e": {"pinned": mfm_extraction.get("pinned"), "candidate": mfm_extraction.get("live"), "changed": mfm_extraction_changed, "relation": mfm_extraction.get("relation_from_pinned_to_live")},
     }
 
     promotion_state = "BLOCKED_AUTHORITY_REVALIDATION" if blockers else "REVIEW_REQUIRED_AFTER_CANDIDATE_PASS"
     base = {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "state": "CANDIDATE_REQUIRED",
         "baseline_snapshot": watch.get("baseline_snapshot"),
         "candidate_snapshot_date": candidate_snapshot_date,
@@ -159,6 +125,7 @@ def build_plan(watch: dict, candidate_snapshot_date: str) -> dict:
     base["plan_id"] = "REINGEST_" + base["plan_fingerprint"][:12]
     return base
 
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--watch-report", type=Path, default=ROOT / "reports" / "UPSTREAM_CHANGE_WATCH_CURRENT.json")
@@ -171,6 +138,7 @@ def main() -> int:
     args.output.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"plan_id": plan["plan_id"], "state": plan["state"], "promotion": plan["promotion"]["state"]}, ensure_ascii=False))
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
