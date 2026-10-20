@@ -61,8 +61,6 @@ def verify_current_evidence():
 def patch_manifest(path: Path):
     data = load(path)
     activation = data.setdefault("activation_evidence", {})
-    # Scoped currentness is proven for MFM/roster dimensions only. Full Codex/app
-    # semantic equivalence remains explicitly pending authorized evidence.
     activation["current_legal_confirmed"] = False
     activation["scoped_current_legal_confirmed"] = True
     activation["confirmed_at"] = DATE
@@ -136,6 +134,42 @@ def patch_release_state(manifests):
     write(path, state)
 
 
+def patch_current_rules(manifests):
+    path = ROOT / "rules" / "11e" / "current.json"
+    current = load(path)
+    by_id = {m["transition_id"]: m for m in manifests}
+
+    readiness = current["release_transition_readiness"]
+    readiness["state"] = "OPERATIONAL_V1_SCOPED_RELEASES_RECONCILED"
+    readiness["checkpoint_as_of"] = DATE
+    readiness["scoped_current_legal_dimensions"] = SCOPED_DIMENSIONS
+    readiness["full_codex_app_semantics"] = "PENDING_AUTHORIZED_APP_EVIDENCE"
+    readiness["scoped_closure_report"] = "reports/RELEASE_TRANSITION_SCOPED_CLOSURE_CURRENT.json"
+    for row in readiness["tracked_transitions"]:
+        manifest = by_id[row["id"]]
+        row["state"] = "CURRENT_SCOPED_RECONCILED"
+        row["current_legal_confirmed"] = False
+        row["scoped_current_legal_confirmed"] = True
+        row["full_codex_app_semantics_confirmed"] = False
+        row["reviewed_promotion_id"] = PROMOTION_ID
+        row["scheduled_release_date"] = manifest.get("scheduled_release_date")
+        row["direct_promotion_eligible"] = False
+
+    activation = current["release_transition_activation_watch"]
+    activation["checkpoint_as_of"] = DATE
+    activation["checkpoint_status"] = "NO_ACTION_REQUIRED"
+    activation["scoped_current_reconciled"] = 2
+    activation["full_codex_app_semantics"] = "PENDING_AUTHORIZED_APP_EVIDENCE"
+    activation["scoped_closure_report"] = "reports/RELEASE_TRANSITION_SCOPED_CLOSURE_CURRENT.json"
+    for row in activation["tracked_transitions"]:
+        row["watch_state"] = "NO_ACTION"
+        row["next_action"] = "ALREADY_CURRENT_SCOPED"
+        row["scoped_current_legal_confirmed"] = True
+        row["full_codex_app_semantics_confirmed"] = False
+
+    write(path, current)
+
+
 def write_closure(manifests):
     payload = {
         "schema_version": "1.0",
@@ -189,6 +223,7 @@ def main():
     verify_current_evidence()
     manifests = [patch_manifest(p) for p in MANIFESTS]
     patch_release_state(manifests)
+    patch_current_rules(manifests)
     write_closure(manifests)
     print(
         json.dumps(
