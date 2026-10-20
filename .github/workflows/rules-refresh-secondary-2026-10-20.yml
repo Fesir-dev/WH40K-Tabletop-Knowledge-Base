@@ -1,0 +1,145 @@
+name: Rules refresh secondary reconciliation 2026-10-20
+
+on:
+  push:
+    branches:
+      - ops/rules-refresh-2026-10-20
+    paths:
+      - "reports/MFM_1_6_REFRESH_CURRENT.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rules-refresh-secondary-2026-10-20
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ops/rules-refresh-2026-10-20
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh source drift report
+        shell: bash
+        run: |
+          set +e
+          python tools/watch_upstreams.py
+          code=$?
+          set -e
+          if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then exit "$code"; fi
+
+      - name: Build secondary reingestion plan
+        run: |
+          mkdir -p .cache/rules-refresh-secondary
+          python tools/plan_upstream_reingestion.py \
+            --watch-report reports/UPSTREAM_CHANGE_WATCH_CURRENT.json \
+            --candidate-snapshot-date 2026-10-20 \
+            --output .cache/rules-refresh-secondary/plan.json
+          python - <<'PY'
+          import json
+          p=json.load(open('.cache/rules-refresh-secondary/plan.json',encoding='utf-8'))
+          assert p['state']=='CANDIDATE_REQUIRED', p
+          assert not p.get('blockers'), p.get('blockers')
+          assert 'GW_MFM' not in p.get('changed_sources', []), p.get('changed_sources')
+          assert 'BSDATA_MFM_11E' not in p.get('changed_sources', []), p.get('changed_sources')
+          assert 'WAHAPEDIA_11E' in p.get('changed_sources', []), p.get('changed_sources')
+          print(p['plan_id'], p['changed_sources'])
+          PY
+
+      - name: Run isolated secondary candidate
+        id: candidate
+        continue-on-error: true
+        run: |
+          python tools/run_upstream_reingestion_candidate.py \
+            --plan .cache/rules-refresh-secondary/plan.json \
+            --workspace .cache/rules-refresh-secondary/workspace \
+            --artifact-dir .cache/rules-refresh-secondary/artifact
+
+      - name: Upload candidate evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rules-refresh-secondary-${{ github.run_id }}
+          path: .cache/rules-refresh-secondary/artifact
+          retention-days: 30
+
+      - name: Persist failed candidate diagnostics
+        if: steps.candidate.outcome == 'failure'
+        shell: bash
+        run: |
+          mkdir -p reports/diagnostics
+          cp .cache/rules-refresh-secondary/artifact/candidate_report.json reports/diagnostics/RULES_REFRESH_SECONDARY_FAILURE_CURRENT.json
+          cp .cache/rules-refresh-secondary/artifact/reingestion_plan.json reports/diagnostics/RULES_REFRESH_SECONDARY_PLAN_CURRENT.json
+          evidence_dir="$(find .cache/rules-refresh-secondary/artifact/candidate/ingestion/candidates -mindepth 1 -maxdepth 1 -type d | head -n1)"
+          if [ -n "$evidence_dir" ]; then
+            for f in official_assets.json reconciliation.json semantic_fingerprint_audit.json view_diagnostics.json; do
+              if [ -f "$evidence_dir/$f" ]; then cp "$evidence_dir/$f" "reports/diagnostics/RULES_REFRESH_SECONDARY_${f%.json}_CURRENT.json"; fi
+            done
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/diagnostics
+          git diff --cached --check
+          git commit -m "Record secondary rules refresh diagnostics"
+          git push origin HEAD:ops/rules-refresh-2026-10-20
+
+      - name: Require promotable candidate
+        if: steps.candidate.outcome != 'failure'
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('.cache/rules-refresh-secondary/artifact/candidate_report.json',encoding='utf-8'))
+          assert r['status']=='PASS', r
+          assert r['promotion_gate']=='ELIGIBLE_FOR_REVIEWED_PROMOTION', r
+          assert r['mfm_snapshot_date']=='2026-10-20', r
+          assert not r['forbidden_current_authority_mutations'], r
+          print('candidate promotion gate: PASS')
+          PY
+
+      - name: Apply reviewed candidate on refresh branch
+        if: steps.candidate.outcome != 'failure'
+        run: |
+          python tools/apply_reingestion_promotion.py \
+            --artifact-dir .cache/rules-refresh-secondary/artifact \
+            --repo-root . \
+            --promoted-at 2026-10-20 \
+            --apply
+
+      - name: Recheck upstreams after secondary promotion
+        if: steps.candidate.outcome != 'failure'
+        run: python tools/watch_upstreams.py
+
+      - name: Semantic resolver smoke
+        if: steps.candidate.outcome != 'failure'
+        run: python tools/query_current_semantics.py --smoke-test
+
+      - name: Commit durable secondary milestone
+        if: steps.candidate.outcome != 'failure'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            rules/11e/snapshots/2026-10-20 \
+            ingestion/promotions \
+            rules/11e/current.json \
+            coverage/current.json \
+            sources/registry.json \
+            sources/currentness_gate.json \
+            reports/UPSTREAM_CHANGE_WATCH_CURRENT.json
+          git diff --cached --check
+          git commit -m "Promote 2026-10-20 secondary rules snapshot"
+          git push origin HEAD:ops/rules-refresh-2026-10-20
+
+      - name: Propagate candidate failure
+        if: steps.candidate.outcome == 'failure'
+        run: exit 2
