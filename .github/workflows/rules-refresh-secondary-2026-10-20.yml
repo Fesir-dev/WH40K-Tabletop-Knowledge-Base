@@ -6,6 +6,7 @@ on:
       - ops/rules-refresh-2026-10-20
     paths:
       - "reports/MFM_1_6_REFRESH_CURRENT.json"
+      - ".github/workflows/rules-refresh-secondary-2026-10-20.yml"
   workflow_dispatch:
 
 permissions:
@@ -90,6 +91,8 @@ jobs:
           git add reports/diagnostics
           git diff --cached --check
           git commit -m "Record secondary rules refresh diagnostics"
+          git fetch origin ops/rules-refresh-2026-10-20
+          git rebase origin/ops/rules-refresh-2026-10-20
           git push origin HEAD:ops/rules-refresh-2026-10-20
 
       - name: Require promotable candidate
@@ -138,6 +141,8 @@ jobs:
             reports/UPSTREAM_CHANGE_WATCH_CURRENT.json
           git diff --cached --check
           git commit -m "Promote 2026-10-20 secondary rules snapshot"
+          git fetch origin ops/rules-refresh-2026-10-20
+          git rebase origin/ops/rules-refresh-2026-10-20
           git push origin HEAD:ops/rules-refresh-2026-10-20
 
       - name: Propagate candidate failure
