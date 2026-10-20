@@ -26,22 +26,34 @@ class ReleaseTransitionActivationWatchContracts(unittest.TestCase):
     def no_change_watch(self):
         watch=copy.deepcopy(self.watch)
         watch["status"]="NO_CHANGE"
+        watch["change_summary"]["official_sources_changed"]=[]
         watch["change_summary"]["github_sources_changed"]=[]
         watch["change_summary"]["wahapedia_files_changed"]=0
         watch["change_summary"]["wahapedia_last_update_changed"]=False
         return watch
 
+    def preclosure(self, manifest):
+        row=copy.deepcopy(manifest)
+        row["activation_evidence"]["current_legal_confirmed"]=False
+        row["activation_evidence"]["scoped_current_legal_confirmed"]=False
+        row["reviewed_promotion"]={"applied":False}
+        return row
+
     def test_current_checkpoint_requires_no_action(self):
-        r=self.make_watch([self.sm,self.cust],"2026-09-29")
+        r=self.make_watch([self.sm,self.cust],"2026-10-20")
         self.assertEqual(r["status"],"NO_ACTION_REQUIRED")
         self.assertEqual(r["summary"]["no_action"],2)
+        self.assertEqual(r["summary"]["scoped_current_reconciled"],2)
         self.assertEqual(r["summary"]["action_required"],0)
         self.assertEqual(r["summary"]["ready_for_candidate"],0)
         self.assertFalse(r["safety"]["auto_promote"])
+        self.assertTrue(r["safety"]["scoped_currentness_is_not_full_codex_app_equivalence"])
         self.assertTrue(all(x["promotion_eligible"] is False for x in r["transitions"]))
+        self.assertTrue(all(x["next_action"]=="ALREADY_CURRENT_SCOPED" for x in r["transitions"]))
 
     def test_space_marines_release_date_requires_currentness_check(self):
-        r=self.make_watch([self.sm],"2026-10-03")
+        sm=self.preclosure(self.sm)
+        r=self.make_watch([sm],"2026-10-03")
         self.assertEqual(r["status"],"ACTION_REQUIRED")
         row=r["transitions"][0]
         self.assertEqual(row["watch_state"],"ACTION_REQUIRED")
@@ -50,7 +62,7 @@ class ReleaseTransitionActivationWatchContracts(unittest.TestCase):
         self.assertFalse(row["promotion_eligible"])
 
     def test_confirmed_currentness_without_projection_is_monitoring(self):
-        sm=copy.deepcopy(self.sm)
+        sm=self.preclosure(self.sm)
         sm["activation_evidence"]["current_legal_confirmed"]=True
         sm["activation_evidence"]["confirmed_at"]="2026-10-03"
         r=self.make_watch([sm],"2026-10-03",self.no_change_watch())
@@ -61,7 +73,7 @@ class ReleaseTransitionActivationWatchContracts(unittest.TestCase):
         self.assertFalse(row["promotion_eligible"])
 
     def test_confirmed_currentness_plus_projection_is_candidate_ready_only(self):
-        sm=copy.deepcopy(self.sm)
+        sm=self.preclosure(self.sm)
         sm["activation_evidence"]["current_legal_confirmed"]=True
         sm["activation_evidence"]["confirmed_at"]="2026-10-03"
         watch=self.no_change_watch()
@@ -77,7 +89,7 @@ class ReleaseTransitionActivationWatchContracts(unittest.TestCase):
 
     def test_unknown_state_fails_to_action_required(self):
         readiness={
-            "as_of":"2026-09-29",
+            "as_of":"2026-10-20",
             "milestone":"RELEASE_TRANSITION_INGESTION_READINESS",
             "watch_status":"NO_CHANGE",
             "transitions":[{
@@ -86,6 +98,7 @@ class ReleaseTransitionActivationWatchContracts(unittest.TestCase):
                 "state":"UNEXPECTED_STATE",
                 "scheduled_release_date":None,
                 "current_legal_confirmed":False,
+                "scoped_current_legal_confirmed":False,
                 "upstream_changed":False,
                 "candidate_eligible":False,
             }]
