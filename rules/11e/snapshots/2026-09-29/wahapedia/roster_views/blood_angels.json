@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "snapshot_date": "2026-09-29",
   "roster_slug": "blood_angels",
   "wahapedia_source_slug": "space_marines",
@@ -12,7 +12,8 @@
   "authority": {
     "points_and_costs": "GW_MFM",
     "rules_structure": "WAHAPEDIA_11E_CSV_SECONDARY_MIRROR",
-    "bsdata": "DIAGNOSTIC_IMPLEMENTATION_ONLY"
+    "bsdata": "DIAGNOSTIC_IMPLEMENTATION_ONLY",
+    "legends_gap_policy": "Missing Legends-only mirror datasheets do not downgrade current matched-play structural completeness; they remain explicit unresolved_legends_mfm_units."
   },
   "datasheets": [
     {
@@ -1341,10 +1342,12 @@
     "000011088003"
   ],
   "unresolved_mfm_units": [],
+  "unresolved_legends_mfm_units": [],
   "counts": {
     "datasheets": 109,
     "mfm_units": 109,
     "unresolved_mfm_units": 0,
+    "unresolved_legends_mfm_units": 0,
     "current_edition_11_datasheets": 97,
     "legends_datasheets": 10,
     "model_profiles": 110,
