@@ -1,0 +1,106 @@
+name: Rules refresh MFM v1.6
+
+on:
+  push:
+    branches:
+      - ops/rules-refresh-2026-10-20
+    paths:
+      - ".github/workflows/rules-refresh-mfm-v1-6.yml"
+      - "tools/refresh_mfm_current.py"
+      - "tools/import_mfm_snapshot.py"
+      - "tools/watch_upstreams.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rules-refresh-mfm-v1-6
+  cancel-in-progress: false
+
+jobs:
+  refresh-mfm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ops/rules-refresh-2026-10-20
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install MFM parser dependency
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
+
+      - name: Import official MFM v1.6 snapshot
+        run: |
+          test ! -e rules/11e/snapshots/2026-10-20/mfm
+          python tools/refresh_mfm_current.py \
+            --snapshot-date 2026-10-20 \
+            --version 1.6 \
+            --official-last-updated 2026-10-14 \
+            --verified-at 2026-10-20 \
+            --extraction-commit 2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31
+
+      - name: Validate MFM authority snapshot
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('.')
+          idx=json.load(open(root/'rules/11e/snapshots/2026-10-20/mfm/index.json',encoding='utf-8'))
+          assert idx['official_source']['version']=='1.6', idx['official_source']
+          assert idx['official_source']['last_updated']=='2026-10-14', idx['official_source']
+          assert idx['extraction_source']['commit_sha']=='2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31'
+          assert len(idx['faction_files'])==30
+          for rel in idx['faction_files']:
+              row=json.load(open(root/rel,encoding='utf-8'))
+              assert row['mfm_version']=='1.6', (rel,row.get('mfm_version'))
+              assert row['official_last_updated']=='2026-10-14', rel
+          current=json.load(open(root/'rules/11e/current.json',encoding='utf-8'))
+          assert current['wave_a_mfm']['version']=='1.6'
+          assert current['wave_a_mfm']['snapshot']=='rules/11e/snapshots/2026-10-20/mfm/index.json'
+          print('MFM v1.6 authority snapshot: PASS')
+          PY
+          test -z "$(git diff --name-only -- rules/11e/snapshots/2026-09-29/mfm)"
+
+      - name: Re-run currentness watch against promoted MFM pin
+        shell: bash
+        run: |
+          set +e
+          python tools/watch_upstreams.py
+          code=$?
+          set -e
+          if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then exit "$code"; fi
+          python - <<'PY'
+          import json
+          r=json.load(open('reports/UPSTREAM_CHANGE_WATCH_CURRENT.json',encoding='utf-8'))
+          off={x['source_id']:x for x in r.get('official_sources',[])}
+          git={x['source_id']:x for x in r.get('github_sources',[])}
+          assert off['GW_MFM']['changed'] is False, off['GW_MFM']
+          assert off['GW_MFM']['live_updated_at']=='2026-10-14', off['GW_MFM']
+          assert git['BSDATA_MFM_11E']['changed'] is False, git['BSDATA_MFM_11E']
+          assert git['BSDATA_MFM_11E']['relation_from_pinned_to_live'] in {'behind','identical'}, git['BSDATA_MFM_11E']
+          print('MFM post-refresh watcher gate: PASS')
+          PY
+
+      - name: Commit durable MFM milestone
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            rules/11e/snapshots/2026-10-20/mfm \
+            rules/11e/current.json \
+            coverage/current.json \
+            sources/registry.json \
+            sources/currentness_gate.json \
+            reports/MFM_1_6_REFRESH_CURRENT.json \
+            reports/MFM_1_6_REFRESH_2026-10-20.md \
+            reports/CURRENT_HANDOFF.md \
+            reports/UPSTREAM_CHANGE_WATCH_CURRENT.json \
+            ingestion/runs/2026-10-20_mfm_v1_6_refresh.json
+          git diff --cached --check
+          git commit -m "Refresh normative MFM to v1.6"
+          git push origin HEAD:ops/rules-refresh-2026-10-20
