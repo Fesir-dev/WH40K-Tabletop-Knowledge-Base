@@ -1,0 +1,63 @@
+name: Rules refresh closeout 2026-10-20
+
+on:
+  push:
+    branches:
+      - ops/close-rules-refresh-2026-10-20
+    paths:
+      - ".github/workflows/rules-refresh-closeout-2026-10-20.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  closeout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ops/close-rules-refresh-2026-10-20
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Close post-promotion state
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('rules/11e/current.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          watch=d['automation']['upstream_change_watch']
+          assert watch['state']=='ACTIVE_NO_CHANGE', watch
+          assert watch['gw_mfm']['state']=='PASS' and watch['gw_mfm']['changed'] is False, watch['gw_mfm']
+          reing=d['automation']['upstream_reingestion']
+          assert reing['plan_id']=='REINGEST_49496d868bd7', reing
+          reing['state']='REVIEWED_PROMOTION_COMPLETE_POST_PROMOTION_WATCH_PASS'
+          reing['post_promotion_watch']='PASS_NO_CHANGE'
+          reing['completed_at']='2026-10-20'
+          reing['watch_report']='reports/UPSTREAM_CHANGE_WATCH_CURRENT.json'
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+
+      - name: Validate closed repository state
+        run: |
+          python -m compileall -q tools legacy tests
+          python tools/validate_repo.py
+          python -m unittest discover -s tests -p 'test_*.py'
+          git diff --check
+
+      - name: Commit durable closeout
+        shell: bash
+        run: |
+          git rm .github/workflows/rules-refresh-closeout-2026-10-20.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          git commit -m "Close 2026-10-20 rules refresh state"
+          git fetch origin ops/close-rules-refresh-2026-10-20
+          git rebase origin/ops/close-rules-refresh-2026-10-20
+          git push origin HEAD:ops/close-rules-refresh-2026-10-20
