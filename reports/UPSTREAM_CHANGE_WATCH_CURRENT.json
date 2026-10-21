@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "63cce466f0c6e6d7925f1f50320c5f5f9e8147c2b8b6e569ae0fd6e1e8cabb91",
+      "page_sha256": "ae1eccc610c073128c1382b5592f9a961c416c58122ccc3730842e1013c5bd8a",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,18 +19,18 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "4f294bdae97f40a2eb4cf9c555ac4e848ff7dd31",
+      "live": "38cac56096fa93c7f6443671e5bc6f48e54494ec",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 2,
+      "ahead_by": 3,
       "behind_by": 0,
       "changed": true,
       "files": [
         {
           "filename": "Aeldari - Aeldari Library.json",
           "status": "modified",
-          "additions": 2,
-          "deletions": 2,
-          "changes": 4,
+          "additions": 4,
+          "deletions": 4,
+          "changes": 8,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -75,17 +75,60 @@
   ],
   "wahapedia": {
     "snapshot_last_update": "2026-10-19 03:47:32",
-    "live_last_update": "2026-10-19 03:47:32",
+    "live_last_update": "2026-10-21 16:06:23",
     "manifest_files_checked": 20,
-    "changed_files": []
+    "changed_files": [
+      {
+        "file": "Last_update.csv",
+        "snapshot_sha256": "f2be5332c4707688b6153b8504df5d7ad54c1a175d6abafdeece7827bc0c2930",
+        "live_sha256": "e39235a323535cd23fbcbc3813bf939df34511b9a10203ca93377700e2ec7485",
+        "snapshot_bytes": 39,
+        "live_bytes": 39
+      },
+      {
+        "file": "Datasheets_models.csv",
+        "snapshot_sha256": "12d7689fc6ab4cd418cab1aeb103c5c935da18fbf84e1d3d657dd3fbbab09537",
+        "live_sha256": "9cb303097f003f2eaa3bfc7cba8d3d7579b0364a35a139bafa5c0705bbd68d03",
+        "snapshot_bytes": 101847,
+        "live_bytes": 101847
+      },
+      {
+        "file": "Abilities.csv",
+        "snapshot_sha256": "df1a84b39f53ccf63e949f48709f9937600794bad665278eb92d3cc4b1e44a16",
+        "live_sha256": "4922f4c86c5b3ad31d5651feb4b395255a14912ec361e2296f80364a9a731410",
+        "snapshot_bytes": 205188,
+        "live_bytes": 205188
+      },
+      {
+        "file": "Datasheets_leader.csv",
+        "snapshot_sha256": "1cc7e67ccfd005085705c9565b477c9b5c894f6bd407d9f329b4799f45c68b87",
+        "live_sha256": "af1d26d1d6188bb845777ad57aeb2a3c75e851c9a521b7c754b4607fa10abac4",
+        "snapshot_bytes": 27703,
+        "live_bytes": 27703
+      },
+      {
+        "file": "Enhancements.csv",
+        "snapshot_sha256": "c39535264e62a8b3f8deb9f5bd0c09be9f7e76d4e0ab3a5347ec593f0623ea4c",
+        "live_sha256": "7df67f570117355fcf1e4f649b33806b7669456ab2fe839741db0ffc7889026f",
+        "snapshot_bytes": 425559,
+        "live_bytes": 425559
+      },
+      {
+        "file": "Detachment_abilities.csv",
+        "snapshot_sha256": "e95380c00e4d993935f4ef5dcd09c93f5d5548aa07d28151f68652c2b87b0e1c",
+        "live_sha256": "92121fb215c41e5ff2c7c33a38c7ca0835f91887fb41670dc6a17694d1c3d7fe",
+        "snapshot_bytes": 289870,
+        "live_bytes": 289870
+      }
+    ]
   },
   "change_summary": {
     "official_sources_changed": [],
     "github_sources_changed": [
       "BSDATA_WH40K_11E"
     ],
-    "wahapedia_files_changed": 0,
-    "wahapedia_last_update_changed": false
+    "wahapedia_files_changed": 6,
+    "wahapedia_last_update_changed": true
   },
   "policy": {
     "auto_promote": false,
