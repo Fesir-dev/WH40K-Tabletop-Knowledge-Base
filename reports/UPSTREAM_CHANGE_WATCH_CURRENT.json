@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "ae1eccc610c073128c1382b5592f9a961c416c58122ccc3730842e1013c5bd8a",
+      "page_sha256": "48a6839a6c2ed29cd30a77259319718874cdbf4a8558af7eb828301decc5e597",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "38cac56096fa93c7f6443671e5bc6f48e54494ec",
+      "live": "cdc26670a0206d659c73cbcd57365cddc7e0e6aa",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 3,
+      "ahead_by": 5,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -36,9 +36,9 @@
         {
           "filename": "Imperium - Adeptus Custodes.json",
           "status": "modified",
-          "additions": 60,
-          "deletions": 70,
-          "changes": 130,
+          "additions": 68,
+          "deletions": 75,
+          "changes": 143,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -50,11 +50,35 @@
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
+          "filename": "Imperium - Deathwatch.json",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 9816,
+          "changes": 9817,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
           "filename": "Imperium - Grey Knights.json",
           "status": "modified",
           "additions": 2,
           "deletions": 2,
           "changes": 4,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Space Marines.json",
+          "status": "modified",
+          "additions": 10793,
+          "deletions": 542,
+          "changes": 11335,
+          "classification": "ASTARTES"
+        },
+        {
+          "filename": "Warhammer 40,000.json",
+          "status": "modified",
+          "additions": 53,
+          "deletions": 4,
+          "changes": 57,
           "classification": "FACTION_OR_LIBRARY_DATA"
         }
       ],
