@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "a8e1cf9d90e1b5ee36af9095cf737e49c575650a412e8d708464699a95921107",
+      "page_sha256": "bd64283e77bb40229be48c52dec254ef1b92872d4529bb0f522436b2f957e324",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "7232fde6cb9ec51e82080e00a4c712ec8434765a",
+      "live": "0615fedc4d24b6366daa1d24b379bcc404d9ab7c",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 6,
+      "ahead_by": 9,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -31,6 +31,22 @@
           "additions": 4,
           "deletions": 4,
           "changes": 8,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Chaos - Chaos Daemons Library.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Adepta Sororitas.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -48,6 +64,22 @@
           "deletions": 15,
           "changes": 20,
           "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Agents of the Imperium.json",
+          "status": "modified",
+          "additions": 51,
+          "deletions": 75,
+          "changes": 126,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Dark Angels.json",
+          "status": "modified",
+          "additions": 12,
+          "deletions": 14,
+          "changes": 26,
+          "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Deathwatch.json",
@@ -68,10 +100,26 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 10793,
-          "deletions": 542,
-          "changes": 11335,
+          "additions": 10837,
+          "deletions": 584,
+          "changes": 11421,
           "classification": "ASTARTES"
+        },
+        {
+          "filename": "Imperium - Space Wolves.json",
+          "status": "modified",
+          "additions": 5,
+          "deletions": 5,
+          "changes": 10,
+          "classification": "ASTARTES"
+        },
+        {
+          "filename": "Imperium - Ultramarines.json",
+          "status": "modified",
+          "additions": 5,
+          "deletions": 5,
+          "changes": 10,
+          "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Library - Tyranids.json",
@@ -84,9 +132,9 @@
         {
           "filename": "Warhammer 40,000.json",
           "status": "modified",
-          "additions": 53,
-          "deletions": 4,
-          "changes": 57,
+          "additions": 65,
+          "deletions": 8,
+          "changes": 73,
           "classification": "FACTION_OR_LIBRARY_DATA"
         }
       ],
@@ -96,9 +144,9 @@
       "source_id": "BSDATA_MFM_11E",
       "repository": "BSData/wh40k-11e-mfm",
       "pinned": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
-      "live": "26a8c2b22c24a369b6d33a83748aeac725c72121",
+      "live": "8e46a40c3ee75bf55ef77d32878813948d11c977",
       "relation_from_pinned_to_live": "diverged",
-      "ahead_by": 17,
+      "ahead_by": 21,
       "behind_by": 1,
       "changed": true,
       "files": [
@@ -137,17 +185,17 @@
         {
           "filename": ".agents/skills/change-data-model/SKILL.md",
           "status": "added",
-          "additions": 90,
+          "additions": 101,
           "deletions": 0,
-          "changes": 90,
+          "changes": 101,
           "classification": "DOCUMENTATION"
         },
         {
           "filename": ".agents/skills/diagnose-parse/SKILL.md",
           "status": "added",
-          "additions": 121,
+          "additions": 147,
           "deletions": 0,
-          "changes": 121,
+          "changes": 147,
           "classification": "DOCUMENTATION"
         },
         {
@@ -160,10 +208,10 @@
         },
         {
           "filename": ".agents/tasks.md",
-          "status": "modified",
-          "additions": 11,
-          "deletions": 20,
-          "changes": 31,
+          "status": "removed",
+          "additions": 0,
+          "deletions": 22,
+          "changes": 22,
           "classification": "DOCUMENTATION"
         },
         {
@@ -239,6 +287,22 @@
           "classification": "CI"
         },
         {
+          "filename": ".github/drift-fix/package-lock.json",
+          "status": "added",
+          "additions": 152,
+          "deletions": 0,
+          "changes": 152,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": ".github/drift-fix/package.json",
+          "status": "added",
+          "additions": 8,
+          "deletions": 0,
+          "changes": 8,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
           "filename": ".github/pull_request_template.md",
           "status": "added",
           "additions": 16,
@@ -249,17 +313,17 @@
         {
           "filename": ".github/workflows/ci.yml",
           "status": "modified",
-          "additions": 83,
-          "deletions": 6,
-          "changes": 89,
+          "additions": 85,
+          "deletions": 7,
+          "changes": 92,
           "classification": "CI"
         },
         {
           "filename": ".github/workflows/copilot-setup-steps.yml",
           "status": "added",
-          "additions": 33,
+          "additions": 34,
           "deletions": 0,
-          "changes": 33,
+          "changes": 34,
           "classification": "CI"
         },
         {
@@ -271,19 +335,35 @@
           "classification": "CI"
         },
         {
+          "filename": ".github/workflows/drift-fix.yml",
+          "status": "added",
+          "additions": 370,
+          "deletions": 0,
+          "changes": 370,
+          "classification": "CI"
+        },
+        {
+          "filename": ".github/workflows/release.yml",
+          "status": "added",
+          "additions": 273,
+          "deletions": 0,
+          "changes": 273,
+          "classification": "CI"
+        },
+        {
           "filename": ".github/workflows/scrape.yml",
           "status": "modified",
-          "additions": 404,
-          "deletions": 111,
-          "changes": 515,
+          "additions": 428,
+          "deletions": 112,
+          "changes": 540,
           "classification": "CI"
         },
         {
           "filename": ".github/workflows/smoke.yml",
           "status": "added",
-          "additions": 80,
+          "additions": 81,
           "deletions": 0,
-          "changes": 80,
+          "changes": 81,
           "classification": "CI"
         },
         {
@@ -297,9 +377,9 @@
         {
           "filename": "AGENTS.md",
           "status": "modified",
-          "additions": 94,
-          "deletions": 22,
-          "changes": 116,
+          "additions": 63,
+          "deletions": 54,
+          "changes": 117,
           "classification": "DOCUMENTATION"
         },
         {
@@ -313,9 +393,9 @@
         {
           "filename": "CONTRIBUTING.md",
           "status": "added",
-          "additions": 136,
+          "additions": 140,
           "deletions": 0,
-          "changes": 136,
+          "changes": 140,
           "classification": "DOCUMENTATION"
         },
         {
@@ -329,17 +409,17 @@
         {
           "filename": "README.md",
           "status": "modified",
-          "additions": 97,
+          "additions": 137,
           "deletions": 19,
-          "changes": 116,
+          "changes": 156,
           "classification": "DOCUMENTATION"
         },
         {
           "filename": "biome.json",
           "status": "modified",
-          "additions": 1,
-          "deletions": 1,
-          "changes": 2,
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -353,9 +433,9 @@
         {
           "filename": "changelog/v1.6.md",
           "status": "added",
-          "additions": 345,
+          "additions": 364,
           "deletions": 0,
-          "changes": 345,
+          "changes": 364,
           "classification": "DOCUMENTATION"
         },
         {
@@ -529,9 +609,9 @@
         {
           "filename": "data/meta.yaml",
           "status": "modified",
-          "additions": 2,
+          "additions": 3,
           "deletions": 2,
-          "changes": 4,
+          "changes": 5,
           "classification": "MFM_DATA"
         },
         {
@@ -548,6 +628,14 @@
           "additions": 11,
           "deletions": 11,
           "changes": 22,
+          "classification": "MFM_DATA"
+        },
+        {
+          "filename": "data/points.csv",
+          "status": "added",
+          "additions": 3059,
+          "deletions": 0,
+          "changes": 3059,
           "classification": "MFM_DATA"
         },
         {
@@ -823,28 +911,100 @@
           "classification": "DOCUMENTATION"
         },
         {
+          "filename": "docs/decisions/0028-a-schema-version-and-releases-for-consumers.md",
+          "status": "added",
+          "additions": 136,
+          "deletions": 0,
+          "changes": 136,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "docs/decisions/0029-a-failed-scrape-drafts-its-fix.md",
+          "status": "added",
+          "additions": 125,
+          "deletions": 0,
+          "changes": 125,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "docs/decisions/0030-one-short-instruction-file.md",
+          "status": "added",
+          "additions": 63,
+          "deletions": 0,
+          "changes": 63,
+          "classification": "DOCUMENTATION"
+        },
+        {
           "filename": "docs/decisions/README.md",
           "status": "added",
-          "additions": 45,
+          "additions": 48,
           "deletions": 0,
-          "changes": 45,
+          "changes": 48,
           "classification": "DOCUMENTATION"
         },
         {
           "filename": "package.json",
           "status": "modified",
-          "additions": 12,
+          "additions": 14,
           "deletions": 9,
-          "changes": 21,
+          "changes": 23,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "pnpm-lock.yaml",
           "status": "modified",
-          "additions": 200,
+          "additions": 242,
           "deletions": 200,
-          "changes": 400,
+          "changes": 442,
           "classification": "OTHER"
+        },
+        {
+          "filename": "release/history.json",
+          "status": "added",
+          "additions": 115,
+          "deletions": 0,
+          "changes": 115,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "release/notes/v1.0-2026-06-22.md",
+          "status": "added",
+          "additions": 81,
+          "deletions": 0,
+          "changes": 81,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "release/unreleased.json",
+          "status": "added",
+          "additions": 1,
+          "deletions": 0,
+          "changes": 1,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "schema/all.schema.json",
+          "status": "added",
+          "additions": 283,
+          "deletions": 0,
+          "changes": 283,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "schema/faction.schema.json",
+          "status": "added",
+          "additions": 226,
+          "deletions": 0,
+          "changes": 226,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "schema/meta.schema.json",
+          "status": "added",
+          "additions": 43,
+          "deletions": 0,
+          "changes": 43,
+          "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "scripts/refresh-fixtures.ts",
@@ -873,17 +1033,17 @@
         {
           "filename": "specs/change-tracking.md",
           "status": "modified",
-          "additions": 361,
+          "additions": 502,
           "deletions": 219,
-          "changes": 580,
+          "changes": 721,
           "classification": "DOCUMENTATION"
         },
         {
           "filename": "specs/data-model.md",
           "status": "modified",
-          "additions": 84,
+          "additions": 346,
           "deletions": 24,
-          "changes": 108,
+          "changes": 370,
           "classification": "DOCUMENTATION"
         },
         {
@@ -913,9 +1073,9 @@
         {
           "filename": "src/bin/commands.ts",
           "status": "added",
-          "additions": 75,
+          "additions": 87,
           "deletions": 0,
-          "changes": 75,
+          "changes": 87,
           "classification": "OTHER"
         },
         {
@@ -953,9 +1113,9 @@
         {
           "filename": "src/bin/commands/check-data.ts",
           "status": "added",
-          "additions": 36,
+          "additions": 41,
           "deletions": 0,
-          "changes": 36,
+          "changes": 41,
           "classification": "OTHER"
         },
         {
@@ -964,6 +1124,14 @@
           "additions": 29,
           "deletions": 0,
           "changes": 29,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/bin/commands/drift-fix-gate.ts",
+          "status": "added",
+          "additions": 51,
+          "deletions": 0,
+          "changes": 51,
           "classification": "OTHER"
         },
         {
@@ -985,9 +1153,17 @@
         {
           "filename": "src/bin/commands/refresh-fixtures.ts",
           "status": "added",
-          "additions": 21,
+          "additions": 52,
           "deletions": 0,
-          "changes": 21,
+          "changes": 52,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/bin/commands/release.ts",
+          "status": "added",
+          "additions": 252,
+          "deletions": 0,
+          "changes": 252,
           "classification": "OTHER"
         },
         {
@@ -1015,11 +1191,19 @@
           "classification": "OTHER"
         },
         {
+          "filename": "src/bin/commands/schema.ts",
+          "status": "added",
+          "additions": 31,
+          "deletions": 0,
+          "changes": 31,
+          "classification": "OTHER"
+        },
+        {
           "filename": "src/bin/commands/scrape.ts",
           "status": "added",
-          "additions": 59,
+          "additions": 60,
           "deletions": 0,
-          "changes": 59,
+          "changes": 60,
           "classification": "OTHER"
         },
         {
@@ -1049,9 +1233,9 @@
         {
           "filename": "src/check-data.ts",
           "status": "added",
-          "additions": 134,
+          "additions": 185,
           "deletions": 0,
-          "changes": 134,
+          "changes": 185,
           "classification": "OTHER"
         },
         {
@@ -1071,11 +1255,19 @@
           "classification": "OTHER"
         },
         {
+          "filename": "src/csv.ts",
+          "status": "added",
+          "additions": 62,
+          "deletions": 0,
+          "changes": 62,
+          "classification": "OTHER"
+        },
+        {
           "filename": "src/diff.ts",
           "status": "modified",
-          "additions": 43,
-          "deletions": 996,
-          "changes": 1039,
+          "additions": 45,
+          "deletions": 997,
+          "changes": 1042,
           "classification": "OTHER"
         },
         {
@@ -1097,149 +1289,13 @@
         {
           "filename": "src/diff/failures.ts",
           "status": "added",
-          "additions": 11,
-          "deletions": 0,
-          "changes": 11,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/diff/load.ts",
-          "status": "added",
-          "additions": 37,
-          "deletions": 0,
-          "changes": 37,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/diff/markdown.ts",
-          "status": "added",
-          "additions": 222,
-          "deletions": 0,
-          "changes": 222,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/diff/naming.ts",
-          "status": "added",
-          "additions": 80,
-          "deletions": 0,
-          "changes": 80,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/diff/rules.ts",
-          "status": "added",
-          "additions": 88,
-          "deletions": 0,
-          "changes": 88,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/diff/sections.ts",
-          "status": "added",
-          "additions": 229,
-          "deletions": 0,
-          "changes": 229,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/diff/tally.ts",
-          "status": "added",
-          "additions": 103,
-          "deletions": 0,
-          "changes": 103,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/diff/units.ts",
-          "status": "added",
-          "additions": 163,
-          "deletions": 0,
-          "changes": 163,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/discord.ts",
-          "status": "modified",
-          "additions": 51,
-          "deletions": 69,
-          "changes": 120,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/emit.ts",
-          "status": "modified",
-          "additions": 43,
-          "deletions": 11,
-          "changes": 54,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/fetch.ts",
-          "status": "modified",
-          "additions": 17,
-          "deletions": 10,
-          "changes": 27,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/fixtures.ts",
-          "status": "added",
-          "additions": 102,
-          "deletions": 0,
-          "changes": 102,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/model.ts",
-          "status": "modified",
-          "additions": 15,
-          "deletions": 0,
-          "changes": 15,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/moved.ts",
-          "status": "added",
-          "additions": 16,
-          "deletions": 0,
-          "changes": 16,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/ops/announce.ts",
-          "status": "added",
-          "additions": 80,
-          "deletions": 0,
-          "changes": 80,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/ops/failure-issue.ts",
-          "status": "added",
-          "additions": 74,
-          "deletions": 0,
-          "changes": 74,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/ops/git-env.ts",
-          "status": "added",
           "additions": 32,
           "deletions": 0,
           "changes": 32,
           "classification": "OTHER"
         },
         {
-          "filename": "src/ops/github.ts",
-          "status": "added",
-          "additions": 125,
-          "deletions": 0,
-          "changes": 125,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/ops/labels.ts",
+          "filename": "src/diff/load.ts",
           "status": "added",
           "additions": 42,
           "deletions": 0,
@@ -1247,75 +1303,259 @@
           "classification": "OTHER"
         },
         {
+          "filename": "src/diff/markdown.ts",
+          "status": "added",
+          "additions": 224,
+          "deletions": 0,
+          "changes": 224,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/diff/naming.ts",
+          "status": "added",
+          "additions": 81,
+          "deletions": 0,
+          "changes": 81,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/diff/rules.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/diff/sections.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/diff/tally.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/diff/units.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/discord.ts",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/emit.ts",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/fetch.ts",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/fixtures.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/history.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/model.ts",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/moved.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/ops/agent-patch.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/ops/announce.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/ops/cache-sweep.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/ops/drift-fix.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/ops/failure-issue.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/ops/git-env.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/ops/git.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/ops/github.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/ops/labels.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
           "filename": "src/ops/open-prs.ts",
           "status": "added",
-          "additions": 119,
+          "additions": 0,
           "deletions": 0,
-          "changes": 119,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/ops/outputs.ts",
           "status": "added",
-          "additions": 25,
+          "additions": 0,
           "deletions": 0,
-          "changes": 25,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/ops/release.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/parse.ts",
           "status": "modified",
-          "additions": 30,
-          "deletions": 643,
-          "changes": 673,
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/parse/cards.ts",
           "status": "added",
-          "additions": 205,
+          "additions": 0,
           "deletions": 0,
-          "changes": 205,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/parse/coverage.ts",
           "status": "added",
-          "additions": 92,
+          "additions": 0,
           "deletions": 0,
-          "changes": 92,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/parse/faction.ts",
           "status": "added",
-          "additions": 178,
+          "additions": 0,
           "deletions": 0,
-          "changes": 178,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/parse/names.ts",
           "status": "added",
-          "additions": 92,
+          "additions": 0,
           "deletions": 0,
-          "changes": 92,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/parse/page.ts",
           "status": "added",
-          "additions": 116,
+          "additions": 0,
           "deletions": 0,
-          "changes": 116,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/parse/panels.ts",
           "status": "added",
-          "additions": 117,
+          "additions": 0,
           "deletions": 0,
-          "changes": 117,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
@@ -1336,6 +1576,22 @@
         },
         {
           "filename": "src/parse/values.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/release.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "src/schema.ts",
           "status": "added",
           "additions": 0,
           "deletions": 0,
@@ -1367,6 +1623,14 @@
           "classification": "OTHER"
         },
         {
+          "filename": "test/agent-patch.test.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
           "filename": "test/agents.test.ts",
           "status": "added",
           "additions": 0,
@@ -1391,6 +1655,14 @@
           "classification": "OTHER"
         },
         {
+          "filename": "test/cache-sweep.test.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
           "filename": "test/check-data.test.ts",
           "status": "added",
           "additions": 0,
@@ -1407,8 +1679,24 @@
           "classification": "OTHER"
         },
         {
+          "filename": "test/csv.test.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
           "filename": "test/discord.test.ts",
           "status": "modified",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/drift-fix.test.ts",
+          "status": "added",
           "additions": 0,
           "deletions": 0,
           "changes": 0,
@@ -1463,7 +1751,263 @@
           "classification": "OTHER"
         },
         {
+          "filename": "test/frozen-repo.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
           "filename": "test/golden.test.ts",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/adepta-sororitas.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/adeptus-custodes.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/adeptus-mechanicus.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/aeldari.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/astra-militarum.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/black-templars.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/blood-angels.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/chaos-daemons.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/chaos-knights.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/chaos-space-marines.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/chaos-titan-legions.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/dark-angels.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/death-guard.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/deathwatch.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/drukhari.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/emperors-children.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/genestealer-cults.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/grey-knights.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/imperial-agents.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/imperial-knights.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/leagues-of-votann.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/meta.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/necrons.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/orks.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/space-marines.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/space-wolves.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/tau-empire.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/thousand-sons.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/titan-legions.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/tyranids.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.3-schema1/world-eaters.yaml",
           "status": "added",
           "additions": 0,
           "deletions": 0,
@@ -2000,502 +2544,6 @@
         },
         {
           "filename": "test/golden/data-v1.5-pr53/astra-militarum.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/black-templars.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/blood-angels.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/chaos-daemons.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/chaos-knights.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/chaos-space-marines.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/chaos-titan-legions.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/dark-angels.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/death-guard.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/deathwatch.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/drukhari.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/emperors-children.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/genestealer-cults.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/grey-knights.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/imperial-agents.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/imperial-knights.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/leagues-of-votann.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/meta.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/necrons.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/orks.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/space-marines.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/space-wolves.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/tau-empire.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/thousand-sons.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/titan-legions.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/tyranids.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5-pr53/world-eaters.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/adepta-sororitas.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/adeptus-custodes.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/adeptus-mechanicus.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/aeldari.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/astra-militarum.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/black-templars.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/blood-angels.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/chaos-daemons.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/chaos-knights.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/chaos-space-marines.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/chaos-titan-legions.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/dark-angels.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/death-guard.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/deathwatch.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/drukhari.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/emperors-children.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/genestealer-cults.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/grey-knights.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/imperial-agents.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/imperial-knights.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/leagues-of-votann.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/meta.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/necrons.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/orks.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/space-marines.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/space-wolves.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/tau-empire.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/thousand-sons.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/titan-legions.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/tyranids.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.5/world-eaters.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.6-pr78/adepta-sororitas.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.6-pr78/adeptus-custodes.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.6-pr78/adeptus-mechanicus.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.6-pr78/aeldari.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.6-pr78/astra-militarum.yaml",
           "status": "added",
           "additions": 0,
           "deletions": 0,
