@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "bd64283e77bb40229be48c52dec254ef1b92872d4529bb0f522436b2f957e324",
+      "page_sha256": "82cb1a753dd4a69a7ff195045d52fc56d086b363bc7aacb8027537ba8a29fcb3",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "0615fedc4d24b6366daa1d24b379bcc404d9ab7c",
+      "live": "0f1e1320c236dda21584d9c87a0315da37bc6510",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 9,
+      "ahead_by": 11,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -42,6 +42,14 @@
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
+          "filename": "Chaos - Chaos Space Marines.json",
+          "status": "modified",
+          "additions": 14,
+          "deletions": 3,
+          "changes": 17,
+          "classification": "ASTARTES"
+        },
+        {
           "filename": "Imperium - Adepta Sororitas.json",
           "status": "modified",
           "additions": 2,
@@ -52,9 +60,9 @@
         {
           "filename": "Imperium - Adeptus Custodes.json",
           "status": "modified",
-          "additions": 68,
+          "additions": 69,
           "deletions": 75,
-          "changes": 143,
+          "changes": 144,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -144,9 +152,9 @@
       "source_id": "BSDATA_MFM_11E",
       "repository": "BSData/wh40k-11e-mfm",
       "pinned": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
-      "live": "8e46a40c3ee75bf55ef77d32878813948d11c977",
+      "live": "953cb5e801db95051612cb35bea72adac81a3e16",
       "relation_from_pinned_to_live": "diverged",
-      "ahead_by": 21,
+      "ahead_by": 25,
       "behind_by": 1,
       "changed": true,
       "files": [
@@ -287,22 +295,6 @@
           "classification": "CI"
         },
         {
-          "filename": ".github/drift-fix/package-lock.json",
-          "status": "added",
-          "additions": 152,
-          "deletions": 0,
-          "changes": 152,
-          "classification": "FACTION_OR_LIBRARY_DATA"
-        },
-        {
-          "filename": ".github/drift-fix/package.json",
-          "status": "added",
-          "additions": 8,
-          "deletions": 0,
-          "changes": 8,
-          "classification": "FACTION_OR_LIBRARY_DATA"
-        },
-        {
           "filename": ".github/pull_request_template.md",
           "status": "added",
           "additions": 16,
@@ -337,9 +329,9 @@
         {
           "filename": ".github/workflows/drift-fix.yml",
           "status": "added",
-          "additions": 370,
+          "additions": 348,
           "deletions": 0,
-          "changes": 370,
+          "changes": 348,
           "classification": "CI"
         },
         {
@@ -921,9 +913,9 @@
         {
           "filename": "docs/decisions/0029-a-failed-scrape-drafts-its-fix.md",
           "status": "added",
-          "additions": 125,
+          "additions": 126,
           "deletions": 0,
-          "changes": 125,
+          "changes": 126,
           "classification": "DOCUMENTATION"
         },
         {
@@ -935,27 +927,43 @@
           "classification": "DOCUMENTATION"
         },
         {
+          "filename": "docs/decisions/0031-the-drift-fixer-fails-loud-with-fewer-layers.md",
+          "status": "added",
+          "additions": 54,
+          "deletions": 0,
+          "changes": 54,
+          "classification": "DOCUMENTATION"
+        },
+        {
+          "filename": "docs/decisions/0032-one-claude-code-pin.md",
+          "status": "added",
+          "additions": 66,
+          "deletions": 0,
+          "changes": 66,
+          "classification": "DOCUMENTATION"
+        },
+        {
           "filename": "docs/decisions/README.md",
           "status": "added",
-          "additions": 48,
+          "additions": 50,
           "deletions": 0,
-          "changes": 48,
+          "changes": 50,
           "classification": "DOCUMENTATION"
         },
         {
           "filename": "package.json",
           "status": "modified",
-          "additions": 14,
-          "deletions": 9,
-          "changes": 23,
+          "additions": 15,
+          "deletions": 10,
+          "changes": 25,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "pnpm-lock.yaml",
           "status": "modified",
-          "additions": 242,
-          "deletions": 200,
-          "changes": 442,
+          "additions": 314,
+          "deletions": 348,
+          "changes": 662,
           "classification": "OTHER"
         },
         {
@@ -1033,9 +1041,9 @@
         {
           "filename": "specs/change-tracking.md",
           "status": "modified",
-          "additions": 502,
+          "additions": 506,
           "deletions": 219,
-          "changes": 721,
+          "changes": 725,
           "classification": "DOCUMENTATION"
         },
         {
@@ -1305,17 +1313,17 @@
         {
           "filename": "src/diff/markdown.ts",
           "status": "added",
-          "additions": 224,
+          "additions": 0,
           "deletions": 0,
-          "changes": 224,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
           "filename": "src/diff/naming.ts",
           "status": "added",
-          "additions": 81,
+          "additions": 0,
           "deletions": 0,
-          "changes": 81,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
@@ -1416,14 +1424,6 @@
         },
         {
           "filename": "src/ops/announce.ts",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "src/ops/cache-sweep.ts",
           "status": "added",
           "additions": 0,
           "deletions": 0,
@@ -1655,14 +1655,6 @@
           "classification": "OTHER"
         },
         {
-          "filename": "test/cache-sweep.test.ts",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
           "filename": "test/check-data.test.ts",
           "status": "added",
           "additions": 0,
@@ -1689,6 +1681,14 @@
         {
           "filename": "test/discord.test.ts",
           "status": "modified",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/drift-fix-workflow.test.ts",
+          "status": "added",
           "additions": 0,
           "deletions": 0,
           "changes": 0,
@@ -2544,6 +2544,14 @@
         },
         {
           "filename": "test/golden/data-v1.5-pr53/astra-militarum.yaml",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/golden/data-v1.5-pr53/black-templars.yaml",
           "status": "added",
           "additions": 0,
           "deletions": 0,
