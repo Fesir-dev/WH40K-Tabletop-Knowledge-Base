@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "fd7dfae95a7ad3b8bf0dee8b5f6deaf423952fc8",
+      "live": "138dee555a18d308ad84ec6b11d2d6fcd1b4e69a",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 12,
+      "ahead_by": 13,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -82,6 +82,22 @@
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
+          "filename": "Imperium - Black Templars.json",
+          "status": "modified",
+          "additions": 0,
+          "deletions": 1,
+          "changes": 1,
+          "classification": "ASTARTES"
+        },
+        {
+          "filename": "Imperium - Blood Angels.json",
+          "status": "modified",
+          "additions": 6,
+          "deletions": 3,
+          "changes": 9,
+          "classification": "ASTARTES"
+        },
+        {
           "filename": "Imperium - Dark Angels.json",
           "status": "modified",
           "additions": 12,
@@ -106,11 +122,19 @@
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
+          "filename": "Imperium - Iron Hands.json",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 10837,
-          "deletions": 584,
-          "changes": 11421,
+          "additions": 11071,
+          "deletions": 803,
+          "changes": 11874,
           "classification": "ASTARTES"
         },
         {
@@ -124,9 +148,17 @@
         {
           "filename": "Imperium - Ultramarines.json",
           "status": "modified",
-          "additions": 5,
-          "deletions": 5,
-          "changes": 10,
+          "additions": 7,
+          "deletions": 7,
+          "changes": 14,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Library - Astartes Heresy Legends.json",
+          "status": "modified",
+          "additions": 69,
+          "deletions": 41,
+          "changes": 110,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
