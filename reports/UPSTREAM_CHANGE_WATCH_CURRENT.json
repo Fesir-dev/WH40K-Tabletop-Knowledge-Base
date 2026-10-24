@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "138dee555a18d308ad84ec6b11d2d6fcd1b4e69a",
+      "live": "e7ec23948a3fc406ea20eac13f70b8cbedea174d",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 13,
+      "ahead_by": 17,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -68,9 +68,9 @@
         {
           "filename": "Imperium - Adeptus Mechanicus.json",
           "status": "modified",
-          "additions": 5,
-          "deletions": 15,
-          "changes": 20,
+          "additions": 19,
+          "deletions": 29,
+          "changes": 48,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -164,6 +164,22 @@
         {
           "filename": "Library - Tyranids.json",
           "status": "modified",
+          "additions": 113,
+          "deletions": 1,
+          "changes": 114,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Orks.json",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "changes": 2,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Tyranids.json",
+          "status": "modified",
           "additions": 1,
           "deletions": 1,
           "changes": 2,
@@ -172,9 +188,9 @@
         {
           "filename": "Warhammer 40,000.json",
           "status": "modified",
-          "additions": 65,
-          "deletions": 8,
-          "changes": 73,
+          "additions": 70,
+          "deletions": 10,
+          "changes": 80,
           "classification": "FACTION_OR_LIBRARY_DATA"
         }
       ],
