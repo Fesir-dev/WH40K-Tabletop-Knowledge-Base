@@ -418,7 +418,7 @@
             "file": "Imperium - Adeptus Custodes.json"
           },
           "live_bsdata": {
-            "revision": "0615fedc4d24b6366daa1d24b379bcc404d9ab7c",
+            "revision": "138dee555a18d308ad84ec6b11d2d6fcd1b4e69a",
             "file": "Imperium - Adeptus Custodes.json"
           },
           "new_recruit": {
@@ -469,7 +469,7 @@
             "file": "Imperium - Adeptus Custodes.json"
           },
           "live_bsdata": {
-            "revision": "0615fedc4d24b6366daa1d24b379bcc404d9ab7c",
+            "revision": "138dee555a18d308ad84ec6b11d2d6fcd1b4e69a",
             "file": "Imperium - Adeptus Custodes.json"
           },
           "new_recruit": {
@@ -753,7 +753,7 @@
     "runtime_source": "NEW_RECRUIT_WIKI",
     "expected_upstream": "BSDATA_WH40K_11E",
     "pinned_bsdata_commit": "a56674583d9f656a191e4210268c276f133b47d1",
-    "live_bsdata_commit": "0615fedc4d24b6366daa1d24b379bcc404d9ab7c",
+    "live_bsdata_commit": "138dee555a18d308ad84ec6b11d2d6fcd1b4e69a",
     "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
   },
   "policy": {
