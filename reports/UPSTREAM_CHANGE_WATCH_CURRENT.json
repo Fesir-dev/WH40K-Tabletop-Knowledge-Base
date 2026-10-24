@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "90e1b7c32b9795271ab7567c50215345e99f099c5ccf88e10c42f44dac28de45",
+      "page_sha256": "93ffd356816191895dc3017810c8e0b7aca5e48561fdba09da9b2fb78822cd99",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "e7ec23948a3fc406ea20eac13f70b8cbedea174d",
+      "live": "b4dc3f40ca39ae551e480228186e769344a36194",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 17,
+      "ahead_by": 20,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -132,9 +132,9 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11071,
+          "additions": 11072,
           "deletions": 803,
-          "changes": 11874,
+          "changes": 11875,
           "classification": "ASTARTES"
         },
         {
@@ -172,9 +172,9 @@
         {
           "filename": "Orks.json",
           "status": "modified",
-          "additions": 1,
-          "deletions": 1,
-          "changes": 2,
+          "additions": 3,
+          "deletions": 9,
+          "changes": 12,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
