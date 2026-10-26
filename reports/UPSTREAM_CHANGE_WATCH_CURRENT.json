@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "0f7a1c79f52f829aa79e79ae575ca58e161976384af38771341e5003a0749c28",
+      "page_sha256": "eb973eb22dc1706f7ccb0f3f9cd79b6636af8af62ac8f1d0fdf7f0b1a85a98b0",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "b4dc3f40ca39ae551e480228186e769344a36194",
+      "live": "f81d9f2272cd6fb683bed4022ee3433b6ca3b7fe",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 20,
+      "ahead_by": 23,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -48,6 +48,14 @@
           "deletions": 3,
           "changes": 17,
           "classification": "ASTARTES"
+        },
+        {
+          "filename": "Chaos - Death Guard.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Adepta Sororitas.json",
@@ -132,9 +140,9 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11072,
-          "deletions": 803,
-          "changes": 11875,
+          "additions": 11258,
+          "deletions": 782,
+          "changes": 12040,
           "classification": "ASTARTES"
         },
         {
