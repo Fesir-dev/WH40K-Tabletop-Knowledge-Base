@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "eb973eb22dc1706f7ccb0f3f9cd79b6636af8af62ac8f1d0fdf7f0b1a85a98b0",
+      "page_sha256": "a8d44447ad2f8d6267d4f95b81fac5b143dbf452ed334b4261b23e90d7af55bd",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "f81d9f2272cd6fb683bed4022ee3433b6ca3b7fe",
+      "live": "15a8c76f4288d4fd3505a4c807d437de76870faa",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 23,
+      "ahead_by": 25,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -68,9 +68,9 @@
         {
           "filename": "Imperium - Adeptus Custodes.json",
           "status": "modified",
-          "additions": 70,
-          "deletions": 76,
-          "changes": 146,
+          "additions": 71,
+          "deletions": 77,
+          "changes": 148,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -92,25 +92,25 @@
         {
           "filename": "Imperium - Black Templars.json",
           "status": "modified",
-          "additions": 0,
-          "deletions": 1,
-          "changes": 1,
+          "additions": 1,
+          "deletions": 2,
+          "changes": 3,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Blood Angels.json",
           "status": "modified",
-          "additions": 6,
-          "deletions": 3,
-          "changes": 9,
+          "additions": 56,
+          "deletions": 50,
+          "changes": 106,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Dark Angels.json",
           "status": "modified",
-          "additions": 12,
-          "deletions": 14,
-          "changes": 26,
+          "additions": 13,
+          "deletions": 15,
+          "changes": 28,
           "classification": "ASTARTES"
         },
         {
@@ -140,9 +140,9 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11258,
-          "deletions": 782,
-          "changes": 12040,
+          "additions": 11206,
+          "deletions": 783,
+          "changes": 11989,
           "classification": "ASTARTES"
         },
         {
@@ -164,9 +164,9 @@
         {
           "filename": "Library - Astartes Heresy Legends.json",
           "status": "modified",
-          "additions": 69,
-          "deletions": 41,
-          "changes": 110,
+          "additions": 70,
+          "deletions": 42,
+          "changes": 112,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
