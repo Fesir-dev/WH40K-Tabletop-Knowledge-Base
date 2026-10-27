@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "15a8c76f4288d4fd3505a4c807d437de76870faa",
+      "live": "c07b267d3a031651c39a0f46d163f01c34dc8422",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 25,
+      "ahead_by": 26,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -55,6 +55,14 @@
           "additions": 2,
           "deletions": 2,
           "changes": 4,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Chaos - Emperor's Children.json",
+          "status": "modified",
+          "additions": 56,
+          "deletions": 6,
+          "changes": 62,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -208,9 +216,9 @@
       "source_id": "BSDATA_MFM_11E",
       "repository": "BSData/wh40k-11e-mfm",
       "pinned": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
-      "live": "e8db7df9e7a4d33d3c5f2efd95e21bf2c59c2f87",
+      "live": "19745c93baa2021b7eef601786f5cf22b0f29e7a",
       "relation_from_pinned_to_live": "diverged",
-      "ahead_by": 28,
+      "ahead_by": 29,
       "behind_by": 1,
       "changed": true,
       "files": [
@@ -1047,11 +1055,19 @@
           "classification": "DOCUMENTATION"
         },
         {
+          "filename": "docs/decisions/0039-a-tier-is-read-only-from-a-tier-label.md",
+          "status": "added",
+          "additions": 52,
+          "deletions": 0,
+          "changes": 52,
+          "classification": "DOCUMENTATION"
+        },
+        {
           "filename": "docs/decisions/README.md",
           "status": "added",
-          "additions": 56,
+          "additions": 57,
           "deletions": 0,
-          "changes": 56,
+          "changes": 57,
           "classification": "DOCUMENTATION"
         },
         {
@@ -1145,9 +1161,9 @@
         {
           "filename": "specs/change-tracking.md",
           "status": "modified",
-          "additions": 621,
-          "deletions": 217,
-          "changes": 838,
+          "additions": 630,
+          "deletions": 219,
+          "changes": 849,
           "classification": "DOCUMENTATION"
         },
         {
@@ -1161,9 +1177,9 @@
         {
           "filename": "specs/scraping.md",
           "status": "modified",
-          "additions": 215,
-          "deletions": 83,
-          "changes": 298,
+          "additions": 216,
+          "deletions": 84,
+          "changes": 300,
           "classification": "DOCUMENTATION"
         },
         {
@@ -2600,14 +2616,6 @@
         },
         {
           "filename": "test/golden/data-v1.4/thousand-sons.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.4/titan-legions.yaml",
           "status": "added",
           "additions": 0,
           "deletions": 0,
