@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "a8d44447ad2f8d6267d4f95b81fac5b143dbf452ed334b4261b23e90d7af55bd",
+      "page_sha256": "3e08373fb3f395ad43993a12993a8fa01ecddf9aa54d1c291f85f9a595d25e25",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -216,9 +216,9 @@
       "source_id": "BSDATA_MFM_11E",
       "repository": "BSData/wh40k-11e-mfm",
       "pinned": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
-      "live": "19745c93baa2021b7eef601786f5cf22b0f29e7a",
+      "live": "ed2979847669f04adecc91aa71597a1b2c388b5a",
       "relation_from_pinned_to_live": "diverged",
-      "ahead_by": 29,
+      "ahead_by": 32,
       "behind_by": 1,
       "changed": true,
       "files": [
@@ -265,9 +265,9 @@
         {
           "filename": ".agents/skills/diagnose-parse/SKILL.md",
           "status": "added",
-          "additions": 154,
+          "additions": 164,
           "deletions": 0,
-          "changes": 154,
+          "changes": 164,
           "classification": "DOCUMENTATION"
         },
         {
@@ -393,9 +393,9 @@
         {
           "filename": ".github/workflows/drift-fix.yml",
           "status": "added",
-          "additions": 348,
+          "additions": 520,
           "deletions": 0,
-          "changes": 348,
+          "changes": 520,
           "classification": "CI"
         },
         {
@@ -1063,11 +1063,19 @@
           "classification": "DOCUMENTATION"
         },
         {
+          "filename": "docs/decisions/0040-a-drift-fix-merges-itself.md",
+          "status": "added",
+          "additions": 251,
+          "deletions": 0,
+          "changes": 251,
+          "classification": "DOCUMENTATION"
+        },
+        {
           "filename": "docs/decisions/README.md",
           "status": "added",
-          "additions": 57,
+          "additions": 58,
           "deletions": 0,
-          "changes": 57,
+          "changes": 58,
           "classification": "DOCUMENTATION"
         },
         {
@@ -1161,9 +1169,9 @@
         {
           "filename": "specs/change-tracking.md",
           "status": "modified",
-          "additions": 630,
+          "additions": 690,
           "deletions": 219,
-          "changes": 849,
+          "changes": 909,
           "classification": "DOCUMENTATION"
         },
         {
@@ -1177,9 +1185,9 @@
         {
           "filename": "specs/scraping.md",
           "status": "modified",
-          "additions": 216,
-          "deletions": 84,
-          "changes": 300,
+          "additions": 218,
+          "deletions": 86,
+          "changes": 304,
           "classification": "DOCUMENTATION"
         },
         {
@@ -1393,9 +1401,9 @@
         {
           "filename": "src/diff.ts",
           "status": "modified",
-          "additions": 46,
-          "deletions": 998,
-          "changes": 1044,
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
           "classification": "OTHER"
         },
         {
@@ -1873,6 +1881,14 @@
         {
           "filename": "test/fixtures/necrons-panels.html",
           "status": "modified",
+          "additions": 0,
+          "deletions": 0,
+          "changes": 0,
+          "classification": "OTHER"
+        },
+        {
+          "filename": "test/fixtures/orks-legends-cookie.html",
+          "status": "added",
           "additions": 0,
           "deletions": 0,
           "changes": 0,
@@ -2605,22 +2621,6 @@
           "deletions": 0,
           "changes": 0,
           "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.4/tau-empire.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
-        },
-        {
-          "filename": "test/golden/data-v1.4/thousand-sons.yaml",
-          "status": "added",
-          "additions": 0,
-          "deletions": 0,
-          "changes": 0,
-          "classification": "OTHER"
         }
       ],
       "note": null
@@ -2628,13 +2628,13 @@
   ],
   "wahapedia": {
     "snapshot_last_update": "2026-10-19 03:47:32",
-    "live_last_update": "2026-10-21 16:06:23",
+    "live_last_update": "2026-10-27 23:59:50",
     "manifest_files_checked": 20,
     "changed_files": [
       {
         "file": "Last_update.csv",
         "snapshot_sha256": "f2be5332c4707688b6153b8504df5d7ad54c1a175d6abafdeece7827bc0c2930",
-        "live_sha256": "e39235a323535cd23fbcbc3813bf939df34511b9a10203ca93377700e2ec7485",
+        "live_sha256": "39990a93b0bbca6cdd9897b82834f2d3ca1b489ca7cba0a1d62e6f447ef92079",
         "snapshot_bytes": 39,
         "live_bytes": 39
       },
@@ -2646,32 +2646,11 @@
         "live_bytes": 101847
       },
       {
-        "file": "Abilities.csv",
-        "snapshot_sha256": "df1a84b39f53ccf63e949f48709f9937600794bad665278eb92d3cc4b1e44a16",
-        "live_sha256": "4922f4c86c5b3ad31d5651feb4b395255a14912ec361e2296f80364a9a731410",
-        "snapshot_bytes": 205188,
-        "live_bytes": 205188
-      },
-      {
         "file": "Datasheets_leader.csv",
         "snapshot_sha256": "1cc7e67ccfd005085705c9565b477c9b5c894f6bd407d9f329b4799f45c68b87",
         "live_sha256": "af1d26d1d6188bb845777ad57aeb2a3c75e851c9a521b7c754b4607fa10abac4",
         "snapshot_bytes": 27703,
         "live_bytes": 27703
-      },
-      {
-        "file": "Enhancements.csv",
-        "snapshot_sha256": "c39535264e62a8b3f8deb9f5bd0c09be9f7e76d4e0ab3a5347ec593f0623ea4c",
-        "live_sha256": "7df67f570117355fcf1e4f649b33806b7669456ab2fe839741db0ffc7889026f",
-        "snapshot_bytes": 425559,
-        "live_bytes": 425559
-      },
-      {
-        "file": "Detachment_abilities.csv",
-        "snapshot_sha256": "e95380c00e4d993935f4ef5dcd09c93f5d5548aa07d28151f68652c2b87b0e1c",
-        "live_sha256": "92121fb215c41e5ff2c7c33a38c7ca0835f91887fb41670dc6a17694d1c3d7fe",
-        "snapshot_bytes": 289870,
-        "live_bytes": 289870
       }
     ]
   },
@@ -2681,7 +2660,7 @@
       "BSDATA_WH40K_11E",
       "BSDATA_MFM_11E"
     ],
-    "wahapedia_files_changed": 6,
+    "wahapedia_files_changed": 3,
     "wahapedia_last_update_changed": true
   },
   "policy": {
