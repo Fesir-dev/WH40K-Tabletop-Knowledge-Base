@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "3e08373fb3f395ad43993a12993a8fa01ecddf9aa54d1c291f85f9a595d25e25",
+      "page_sha256": "63519e50ef2e9e3137b3063c2752749395c2747bb797bf5f52119ba5305ddcb4",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "c07b267d3a031651c39a0f46d163f01c34dc8422",
+      "live": "4806f7b0caae868de6e41097b0e2e155aacfe35e",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 26,
+      "ahead_by": 27,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -156,9 +156,9 @@
         {
           "filename": "Imperium - Space Wolves.json",
           "status": "modified",
-          "additions": 5,
-          "deletions": 5,
-          "changes": 10,
+          "additions": 15,
+          "deletions": 8,
+          "changes": 23,
           "classification": "ASTARTES"
         },
         {
