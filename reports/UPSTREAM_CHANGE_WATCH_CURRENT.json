@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "63519e50ef2e9e3137b3063c2752749395c2747bb797bf5f52119ba5305ddcb4",
+      "page_sha256": "a7736ee57d585efbf664f210a81d85942eed0c325992504be68918800899a166",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "4806f7b0caae868de6e41097b0e2e155aacfe35e",
+      "live": "95a3ef032c0178001976e2e54d410456ba4ae482",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 27,
+      "ahead_by": 28,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -44,9 +44,9 @@
         {
           "filename": "Chaos - Chaos Space Marines.json",
           "status": "modified",
-          "additions": 14,
-          "deletions": 3,
-          "changes": 17,
+          "additions": 497,
+          "deletions": 628,
+          "changes": 1125,
           "classification": "ASTARTES"
         },
         {
@@ -216,9 +216,9 @@
       "source_id": "BSDATA_MFM_11E",
       "repository": "BSData/wh40k-11e-mfm",
       "pinned": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
-      "live": "ed2979847669f04adecc91aa71597a1b2c388b5a",
+      "live": "6464ff9c8d0bb008b396373ae8e5daa7b7cb862d",
       "relation_from_pinned_to_live": "diverged",
-      "ahead_by": 32,
+      "ahead_by": 33,
       "behind_by": 1,
       "changed": true,
       "files": [
@@ -2628,13 +2628,13 @@
   ],
   "wahapedia": {
     "snapshot_last_update": "2026-10-19 03:47:32",
-    "live_last_update": "2026-10-27 23:59:50",
+    "live_last_update": "2026-10-28 23:48:19",
     "manifest_files_checked": 20,
     "changed_files": [
       {
         "file": "Last_update.csv",
         "snapshot_sha256": "f2be5332c4707688b6153b8504df5d7ad54c1a175d6abafdeece7827bc0c2930",
-        "live_sha256": "39990a93b0bbca6cdd9897b82834f2d3ca1b489ca7cba0a1d62e6f447ef92079",
+        "live_sha256": "2963d9bff16dec10ccbd0fb71c63bbf6d7dc2286b13fb9a8c98cb2548c55e5a2",
         "snapshot_bytes": 39,
         "live_bytes": 39
       },
@@ -2648,9 +2648,16 @@
       {
         "file": "Datasheets_leader.csv",
         "snapshot_sha256": "1cc7e67ccfd005085705c9565b477c9b5c894f6bd407d9f329b4799f45c68b87",
-        "live_sha256": "af1d26d1d6188bb845777ad57aeb2a3c75e851c9a521b7c754b4607fa10abac4",
+        "live_sha256": "5189a116bc8e500352de8a361167b5a952e71d90ce603dc51eec956bec1b0180",
         "snapshot_bytes": 27703,
-        "live_bytes": 27703
+        "live_bytes": 27505
+      },
+      {
+        "file": "Detachments.csv",
+        "snapshot_sha256": "e8790f57ee8210513102bc736ddd72d24e4a70ddffba6f09d92244d68b12c585",
+        "live_sha256": "d323c5cc7e025ba8c3c004805fedf1adfbf0126305a770e448287d6280b4c536",
+        "snapshot_bytes": 127211,
+        "live_bytes": 127731
       }
     ]
   },
@@ -2660,7 +2667,7 @@
       "BSDATA_WH40K_11E",
       "BSDATA_MFM_11E"
     ],
-    "wahapedia_files_changed": 3,
+    "wahapedia_files_changed": 4,
     "wahapedia_last_update_changed": true
   },
   "policy": {
