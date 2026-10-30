@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "2d82adf937bdec7c5b2c7c22f918efb46307bfa83b708df107beb8ef29e282f0",
+      "page_sha256": "2e88ee158b443864af71a1d4a80ce60a1cc722b0ea5dfc80d8450b6035ac6726",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,18 +19,18 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "1f71b4b5122a6f9824539dc48fe775e3113fbc50",
+      "live": "c729d4694288e934dfb9fcec143c9d4027f812b5",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 31,
+      "ahead_by": 38,
       "behind_by": 0,
       "changed": true,
       "files": [
         {
           "filename": "Aeldari - Aeldari Library.json",
           "status": "modified",
-          "additions": 4,
-          "deletions": 4,
-          "changes": 8,
+          "additions": 212,
+          "deletions": 153,
+          "changes": 365,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -66,6 +66,14 @@
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
+          "filename": "Genestealer Cults.json",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 7,
+          "changes": 8,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
           "filename": "Imperium - Adepta Sororitas.json",
           "status": "modified",
           "additions": 2,
@@ -95,6 +103,14 @@
           "additions": 51,
           "deletions": 75,
           "changes": 126,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Imperium - Astra Militarum - Library.json",
+          "status": "modified",
+          "additions": 8,
+          "deletions": 2,
+          "changes": 10,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -148,9 +164,9 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11206,
-          "deletions": 783,
-          "changes": 11989,
+          "additions": 11248,
+          "deletions": 792,
+          "changes": 12040,
           "classification": "ASTARTES"
         },
         {
@@ -188,9 +204,9 @@
         {
           "filename": "Orks.json",
           "status": "modified",
-          "additions": 3,
-          "deletions": 9,
-          "changes": 12,
+          "additions": 23,
+          "deletions": 26,
+          "changes": 49,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -2628,22 +2644,15 @@
   ],
   "wahapedia": {
     "snapshot_last_update": "2026-10-19 03:47:32",
-    "live_last_update": "2026-10-28 23:48:19",
+    "live_last_update": "2026-10-30 22:19:16",
     "manifest_files_checked": 20,
     "changed_files": [
       {
         "file": "Last_update.csv",
         "snapshot_sha256": "f2be5332c4707688b6153b8504df5d7ad54c1a175d6abafdeece7827bc0c2930",
-        "live_sha256": "2963d9bff16dec10ccbd0fb71c63bbf6d7dc2286b13fb9a8c98cb2548c55e5a2",
+        "live_sha256": "a5aade6952965f3d43829353ed61936fd159dfb4058b329b171e439d081c33b0",
         "snapshot_bytes": 39,
         "live_bytes": 39
-      },
-      {
-        "file": "Datasheets.csv",
-        "snapshot_sha256": "39ce33b9f3031ca127f6e94a5d1039bafa01c93f843008623b54731f397afb9c",
-        "live_sha256": "1def11e8f4ce2beec1f99b1db3744541542bd7752d86ca21ed7822fd2cc23fff",
-        "snapshot_bytes": 799121,
-        "live_bytes": 48910
       },
       {
         "file": "Datasheets_models.csv",
@@ -2653,102 +2662,53 @@
         "live_bytes": 101847
       },
       {
-        "file": "Datasheets_models_cost.csv",
-        "snapshot_sha256": "2114a9c824060fa66abef42b66ad70e43b98afb38e2cef221a2fb550ca213b8e",
-        "live_sha256": "8d78d80d2543ba92647e16eb2da9cadca228057fb561dcc95e64dbb91fb856e8",
-        "snapshot_bytes": 166328,
-        "live_bytes": 48910
-      },
-      {
-        "file": "Datasheets_keywords.csv",
-        "snapshot_sha256": "bdb2431dd3a24d34ec91e1aa1e7ddae9da3565faa18a56abcd8ead5247b4e341",
-        "live_sha256": "9c6d1057bf79fca3e93c983b2fffb34aa0ac6e202c9a32161759ab5dab075bde",
-        "snapshot_bytes": 381825,
-        "live_bytes": 48910
-      },
-      {
-        "file": "Datasheets_wargear.csv",
-        "snapshot_sha256": "565b48410062728c942c709d0e61408660f18914b652fed6c77172d801f84d7d",
-        "live_sha256": "e0133993c4f4c0b7037fa82e264b6d7961e7d27b207a8481f05e0c970557ac02",
-        "snapshot_bytes": 551713,
-        "live_bytes": 32526
-      },
-      {
-        "file": "Datasheets_options.csv",
-        "snapshot_sha256": "642b8b74e57ac45aa5a383f46afd1cbd0a7e873a19dbee5a624cfbf6043e3853",
-        "live_sha256": "419452fe6fd3d4bdde1728330acff6ddbd3219d05e193b019040e08c6bb804f6",
-        "snapshot_bytes": 310151,
-        "live_bytes": 48910
+        "file": "Datasheets_unit_composition.csv",
+        "snapshot_sha256": "f00a66fedc7b1df1a5a3907f763561db75789e3db82a0bd1f6a059fc2061e245",
+        "live_sha256": "c17b923ce78ac0f2a78d04efc06ad89c3394d854de9c4d00173e91fcef8d8e8f",
+        "snapshot_bytes": 77941,
+        "live_bytes": 77942
       },
       {
         "file": "Abilities.csv",
         "snapshot_sha256": "df1a84b39f53ccf63e949f48709f9937600794bad665278eb92d3cc4b1e44a16",
-        "live_sha256": "aa437c56801d626dbe06792705689a142fd809971fbb8bb5834d617545b9f69e",
+        "live_sha256": "5123ddbfd4b8168b7483dfa3585c5e7342a8088f76d95dcf9b04510185e7305c",
         "snapshot_bytes": 205188,
-        "live_bytes": 48910
-      },
-      {
-        "file": "Datasheets_abilities.csv",
-        "snapshot_sha256": "49b054afc2f9977b9c8168ee446b016bd097b047adbd7ec35d23df5f054d7fe6",
-        "live_sha256": "954323dac0380140a7ce538507cdd95000efc7bc956c183b4b271e98419b6329",
-        "snapshot_bytes": 875338,
-        "live_bytes": 48910
+        "live_bytes": 205188
       },
       {
         "file": "Datasheets_leader.csv",
         "snapshot_sha256": "1cc7e67ccfd005085705c9565b477c9b5c894f6bd407d9f329b4799f45c68b87",
-        "live_sha256": "5189a116bc8e500352de8a361167b5a952e71d90ce603dc51eec956bec1b0180",
+        "live_sha256": "ba3d15232183fa402d4fbd6feadd491f245236abccee52dbcaca9e216c04a9b6",
         "snapshot_bytes": 27703,
         "live_bytes": 27505
       },
       {
         "file": "Detachments.csv",
         "snapshot_sha256": "e8790f57ee8210513102bc736ddd72d24e4a70ddffba6f09d92244d68b12c585",
-        "live_sha256": "4fb3939c419b6faf542344412a6a4a9e047fdf377fc36924567651c0a9e47191",
+        "live_sha256": "d323c5cc7e025ba8c3c004805fedf1adfbf0126305a770e448287d6280b4c536",
         "snapshot_bytes": 127211,
-        "live_bytes": 32526
+        "live_bytes": 127731
       },
       {
         "file": "Stratagems.csv",
         "snapshot_sha256": "9e01eb024e3fc851e4717f3a4f0c5f73f29c5bd87d08fd94e999f35f7e57b621",
-        "live_sha256": "de26d3925c39d66981a7a37d9bf8f9842fa3a1e47426fd1bbc6472beee31d1c2",
+        "live_sha256": "cddf1b3f92edebbdfc6417eee33afe39e473a077f1e9f3e17f61bae73b2d20bd",
         "snapshot_bytes": 1039230,
-        "live_bytes": 48909
-      },
-      {
-        "file": "Datasheets_stratagems.csv",
-        "snapshot_sha256": "cc9929a1a551dc1c608e84ea481285ece82296b9227815edb89404fcc2152cc7",
-        "live_sha256": "fe984328b32b07a0d5631e12493aea503ee1a7225d724914203d7d860d23a09f",
-        "snapshot_bytes": 1383331,
-        "live_bytes": 48908
+        "live_bytes": 1039231
       },
       {
         "file": "Enhancements.csv",
         "snapshot_sha256": "c39535264e62a8b3f8deb9f5bd0c09be9f7e76d4e0ab3a5347ec593f0623ea4c",
-        "live_sha256": "67bd574b2c2e93a18b485b54dc03d40b3cc82343aab2dcdccf50ff5b5f32683b",
+        "live_sha256": "47e813b889675f8249e1d207a3d7c0725e7605a0aa882d6574f340e7e28612f2",
         "snapshot_bytes": 425559,
-        "live_bytes": 32526
-      },
-      {
-        "file": "Datasheets_enhancements.csv",
-        "snapshot_sha256": "97cd4bf6aac2064a7555dd04a067095e106ff263d57bf13b9d8e79fbe903158f",
-        "live_sha256": "133b7cacf0bc3ab27b2db7603d077fc198d78e518f7b44a5fe96046187e0b438",
-        "snapshot_bytes": 182733,
-        "live_bytes": 32526
+        "live_bytes": 425559
       },
       {
         "file": "Detachment_abilities.csv",
         "snapshot_sha256": "e95380c00e4d993935f4ef5dcd09c93f5d5548aa07d28151f68652c2b87b0e1c",
-        "live_sha256": "f5e2f5c37ec10a8a5e80b7c423ad0c2d2bc17f55f2e92e942c5b2bf648876224",
+        "live_sha256": "84c9527e362b6b40b10f9f7f9ecf013c9f2656d9b5658cb556233a1dd8b15ca8",
         "snapshot_bytes": 289870,
-        "live_bytes": 48910
-      },
-      {
-        "file": "Datasheets_detachment_abilities.csv",
-        "snapshot_sha256": "c0011f8310f137969e0943059638587efb1b1821d78717340c831c05c80f87dc",
-        "live_sha256": "ad247e30a482ccab8cba7ef95f139b84cf13924d88a9656dbd7de81d4d999ede",
-        "snapshot_bytes": 192980,
-        "live_bytes": 48910
+        "live_bytes": 289870
       }
     ]
   },
@@ -2758,7 +2718,7 @@
       "BSDATA_WH40K_11E",
       "BSDATA_MFM_11E"
     ],
-    "wahapedia_files_changed": 17,
+    "wahapedia_files_changed": 9,
     "wahapedia_last_update_changed": true
   },
   "policy": {
