@@ -2639,11 +2639,60 @@
         "live_bytes": 39
       },
       {
+        "file": "Datasheets.csv",
+        "snapshot_sha256": "39ce33b9f3031ca127f6e94a5d1039bafa01c93f843008623b54731f397afb9c",
+        "live_sha256": "1def11e8f4ce2beec1f99b1db3744541542bd7752d86ca21ed7822fd2cc23fff",
+        "snapshot_bytes": 799121,
+        "live_bytes": 48910
+      },
+      {
         "file": "Datasheets_models.csv",
         "snapshot_sha256": "12d7689fc6ab4cd418cab1aeb103c5c935da18fbf84e1d3d657dd3fbbab09537",
         "live_sha256": "9cb303097f003f2eaa3bfc7cba8d3d7579b0364a35a139bafa5c0705bbd68d03",
         "snapshot_bytes": 101847,
         "live_bytes": 101847
+      },
+      {
+        "file": "Datasheets_models_cost.csv",
+        "snapshot_sha256": "2114a9c824060fa66abef42b66ad70e43b98afb38e2cef221a2fb550ca213b8e",
+        "live_sha256": "8d78d80d2543ba92647e16eb2da9cadca228057fb561dcc95e64dbb91fb856e8",
+        "snapshot_bytes": 166328,
+        "live_bytes": 48910
+      },
+      {
+        "file": "Datasheets_keywords.csv",
+        "snapshot_sha256": "bdb2431dd3a24d34ec91e1aa1e7ddae9da3565faa18a56abcd8ead5247b4e341",
+        "live_sha256": "9c6d1057bf79fca3e93c983b2fffb34aa0ac6e202c9a32161759ab5dab075bde",
+        "snapshot_bytes": 381825,
+        "live_bytes": 48910
+      },
+      {
+        "file": "Datasheets_wargear.csv",
+        "snapshot_sha256": "565b48410062728c942c709d0e61408660f18914b652fed6c77172d801f84d7d",
+        "live_sha256": "e0133993c4f4c0b7037fa82e264b6d7961e7d27b207a8481f05e0c970557ac02",
+        "snapshot_bytes": 551713,
+        "live_bytes": 32526
+      },
+      {
+        "file": "Datasheets_options.csv",
+        "snapshot_sha256": "642b8b74e57ac45aa5a383f46afd1cbd0a7e873a19dbee5a624cfbf6043e3853",
+        "live_sha256": "419452fe6fd3d4bdde1728330acff6ddbd3219d05e193b019040e08c6bb804f6",
+        "snapshot_bytes": 310151,
+        "live_bytes": 48910
+      },
+      {
+        "file": "Abilities.csv",
+        "snapshot_sha256": "df1a84b39f53ccf63e949f48709f9937600794bad665278eb92d3cc4b1e44a16",
+        "live_sha256": "aa437c56801d626dbe06792705689a142fd809971fbb8bb5834d617545b9f69e",
+        "snapshot_bytes": 205188,
+        "live_bytes": 48910
+      },
+      {
+        "file": "Datasheets_abilities.csv",
+        "snapshot_sha256": "49b054afc2f9977b9c8168ee446b016bd097b047adbd7ec35d23df5f054d7fe6",
+        "live_sha256": "954323dac0380140a7ce538507cdd95000efc7bc956c183b4b271e98419b6329",
+        "snapshot_bytes": 875338,
+        "live_bytes": 48910
       },
       {
         "file": "Datasheets_leader.csv",
@@ -2655,9 +2704,51 @@
       {
         "file": "Detachments.csv",
         "snapshot_sha256": "e8790f57ee8210513102bc736ddd72d24e4a70ddffba6f09d92244d68b12c585",
-        "live_sha256": "d323c5cc7e025ba8c3c004805fedf1adfbf0126305a770e448287d6280b4c536",
+        "live_sha256": "4fb3939c419b6faf542344412a6a4a9e047fdf377fc36924567651c0a9e47191",
         "snapshot_bytes": 127211,
-        "live_bytes": 127731
+        "live_bytes": 32526
+      },
+      {
+        "file": "Stratagems.csv",
+        "snapshot_sha256": "9e01eb024e3fc851e4717f3a4f0c5f73f29c5bd87d08fd94e999f35f7e57b621",
+        "live_sha256": "de26d3925c39d66981a7a37d9bf8f9842fa3a1e47426fd1bbc6472beee31d1c2",
+        "snapshot_bytes": 1039230,
+        "live_bytes": 48909
+      },
+      {
+        "file": "Datasheets_stratagems.csv",
+        "snapshot_sha256": "cc9929a1a551dc1c608e84ea481285ece82296b9227815edb89404fcc2152cc7",
+        "live_sha256": "fe984328b32b07a0d5631e12493aea503ee1a7225d724914203d7d860d23a09f",
+        "snapshot_bytes": 1383331,
+        "live_bytes": 48908
+      },
+      {
+        "file": "Enhancements.csv",
+        "snapshot_sha256": "c39535264e62a8b3f8deb9f5bd0c09be9f7e76d4e0ab3a5347ec593f0623ea4c",
+        "live_sha256": "67bd574b2c2e93a18b485b54dc03d40b3cc82343aab2dcdccf50ff5b5f32683b",
+        "snapshot_bytes": 425559,
+        "live_bytes": 32526
+      },
+      {
+        "file": "Datasheets_enhancements.csv",
+        "snapshot_sha256": "97cd4bf6aac2064a7555dd04a067095e106ff263d57bf13b9d8e79fbe903158f",
+        "live_sha256": "133b7cacf0bc3ab27b2db7603d077fc198d78e518f7b44a5fe96046187e0b438",
+        "snapshot_bytes": 182733,
+        "live_bytes": 32526
+      },
+      {
+        "file": "Detachment_abilities.csv",
+        "snapshot_sha256": "e95380c00e4d993935f4ef5dcd09c93f5d5548aa07d28151f68652c2b87b0e1c",
+        "live_sha256": "f5e2f5c37ec10a8a5e80b7c423ad0c2d2bc17f55f2e92e942c5b2bf648876224",
+        "snapshot_bytes": 289870,
+        "live_bytes": 48910
+      },
+      {
+        "file": "Datasheets_detachment_abilities.csv",
+        "snapshot_sha256": "c0011f8310f137969e0943059638587efb1b1821d78717340c831c05c80f87dc",
+        "live_sha256": "ad247e30a482ccab8cba7ef95f139b84cf13924d88a9656dbd7de81d4d999ede",
+        "snapshot_bytes": 192980,
+        "live_bytes": 48910
       }
     ]
   },
@@ -2667,7 +2758,7 @@
       "BSDATA_WH40K_11E",
       "BSDATA_MFM_11E"
     ],
-    "wahapedia_files_changed": 4,
+    "wahapedia_files_changed": 17,
     "wahapedia_last_update_changed": true
   },
   "policy": {
