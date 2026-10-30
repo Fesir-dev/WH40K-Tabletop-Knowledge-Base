@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "4d2f57e38dc048b29ad3c0b3189254dc56f7c1c1",
+      "live": "1f71b4b5122a6f9824539dc48fe775e3113fbc50",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 30,
+      "ahead_by": 31,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -44,9 +44,9 @@
         {
           "filename": "Chaos - Chaos Space Marines.json",
           "status": "modified",
-          "additions": 494,
+          "additions": 508,
           "deletions": 629,
-          "changes": 1123,
+          "changes": 1137,
           "classification": "ASTARTES"
         },
         {
