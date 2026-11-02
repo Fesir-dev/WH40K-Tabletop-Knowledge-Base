@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "b9f441dcc3609720f342abc079d70606efd6ff761424b276da5d6bab7112233c",
+      "page_sha256": "21b751a15b5ba7c47023c9df3b428108df373a2a22e8d062199a497e2d80e560",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "0f9035541630ae6d83869bab34b63d909767d081",
+      "live": "031374e61a0654f6a164c90761b3d9c7e228dde4",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 39,
+      "ahead_by": 42,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -36,9 +36,9 @@
         {
           "filename": "Chaos - Chaos Daemons Library.json",
           "status": "modified",
-          "additions": 2,
-          "deletions": 2,
-          "changes": 4,
+          "additions": 28,
+          "deletions": 3,
+          "changes": 31,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -84,9 +84,9 @@
         {
           "filename": "Imperium - Adeptus Custodes.json",
           "status": "modified",
-          "additions": 72,
-          "deletions": 78,
-          "changes": 150,
+          "additions": 75,
+          "deletions": 81,
+          "changes": 156,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
