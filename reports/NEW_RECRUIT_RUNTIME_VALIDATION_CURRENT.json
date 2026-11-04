@@ -690,7 +690,7 @@
     "runtime_source": "NEW_RECRUIT_WIKI",
     "expected_upstream": "BSDATA_WH40K_11E",
     "pinned_bsdata_commit": "a56674583d9f656a191e4210268c276f133b47d1",
-    "live_bsdata_commit": "031374e61a0654f6a164c90761b3d9c7e228dde4",
+    "live_bsdata_commit": "6530077baf71155644fad99e932974436bc559ee",
     "exact_sync_cadence": "UNKNOWN_NOT_INFERRED"
   },
   "policy": {
