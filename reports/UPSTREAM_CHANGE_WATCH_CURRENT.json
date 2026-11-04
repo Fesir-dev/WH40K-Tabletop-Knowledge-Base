@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "031374e61a0654f6a164c90761b3d9c7e228dde4",
+      "live": "6530077baf71155644fad99e932974436bc559ee",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 42,
+      "ahead_by": 46,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -84,9 +84,9 @@
         {
           "filename": "Imperium - Adeptus Custodes.json",
           "status": "modified",
-          "additions": 75,
-          "deletions": 81,
-          "changes": 156,
+          "additions": 128,
+          "deletions": 103,
+          "changes": 231,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -100,9 +100,9 @@
         {
           "filename": "Imperium - Agents of the Imperium.json",
           "status": "modified",
-          "additions": 51,
-          "deletions": 75,
-          "changes": 126,
+          "additions": 59,
+          "deletions": 99,
+          "changes": 158,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -132,9 +132,9 @@
         {
           "filename": "Imperium - Dark Angels.json",
           "status": "modified",
-          "additions": 21,
-          "deletions": 15,
-          "changes": 36,
+          "additions": 69,
+          "deletions": 126,
+          "changes": 195,
           "classification": "ASTARTES"
         },
         {
@@ -164,17 +164,17 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 11259,
-          "deletions": 787,
-          "changes": 12046,
+          "additions": 46930,
+          "deletions": 39864,
+          "changes": 86794,
           "classification": "ASTARTES"
         },
         {
           "filename": "Imperium - Space Wolves.json",
           "status": "modified",
-          "additions": 15,
-          "deletions": 8,
-          "changes": 23,
+          "additions": 53,
+          "deletions": 26,
+          "changes": 79,
           "classification": "ASTARTES"
         },
         {
@@ -186,11 +186,19 @@
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
+          "filename": "Imperium - White Scars.json",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 14,
+          "changes": 16,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
           "filename": "Library - Astartes Heresy Legends.json",
           "status": "modified",
-          "additions": 74,
-          "deletions": 44,
-          "changes": 118,
+          "additions": 428,
+          "deletions": 207,
+          "changes": 635,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -232,9 +240,9 @@
       "source_id": "BSDATA_MFM_11E",
       "repository": "BSData/wh40k-11e-mfm",
       "pinned": "2b2aa1fa7b4d6a65f36b26905713b9b2eae22a31",
-      "live": "6464ff9c8d0bb008b396373ae8e5daa7b7cb862d",
+      "live": "da2bfdea016b9d6f7b48011550067c005284d678",
       "relation_from_pinned_to_live": "diverged",
-      "ahead_by": 33,
+      "ahead_by": 34,
       "behind_by": 1,
       "changed": true,
       "files": [
