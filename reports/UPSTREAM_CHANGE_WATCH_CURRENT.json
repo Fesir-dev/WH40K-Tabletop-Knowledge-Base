@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "403cd5d04acf6c44877a2f5008333ab0ea143fc161ef8c112e56beb3a3a8c5c3",
+      "page_sha256": "2c4d2d31dba3286374d84a8b3ded9e909acadba8c5627e9a0c4528a92ff040d9",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "6530077baf71155644fad99e932974436bc559ee",
+      "live": "bf57faff9ae8ff87efe71038170bb33641cc8ae4",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 46,
+      "ahead_by": 49,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -132,9 +132,9 @@
         {
           "filename": "Imperium - Dark Angels.json",
           "status": "modified",
-          "additions": 69,
-          "deletions": 126,
-          "changes": 195,
+          "additions": 93,
+          "deletions": 222,
+          "changes": 315,
           "classification": "ASTARTES"
         },
         {
@@ -194,6 +194,14 @@
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
+          "filename": "Leagues of Votann.json",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 3,
+          "changes": 6,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
           "filename": "Library - Astartes Heresy Legends.json",
           "status": "modified",
           "additions": 428,
@@ -207,6 +215,14 @@
           "additions": 113,
           "deletions": 1,
           "changes": 114,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Necrons.json",
+          "status": "modified",
+          "additions": 4,
+          "deletions": 4,
+          "changes": 8,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
