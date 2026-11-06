@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "bf57faff9ae8ff87efe71038170bb33641cc8ae4",
+      "live": "afd795c795582aa3596d9934fa74a64d8c3f3b18",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 49,
+      "ahead_by": 50,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -164,9 +164,9 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 46930,
-          "deletions": 39864,
-          "changes": 86794,
+          "additions": 47343,
+          "deletions": 40181,
+          "changes": 87524,
           "classification": "ASTARTES"
         },
         {
