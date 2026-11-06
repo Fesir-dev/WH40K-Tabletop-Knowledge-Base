@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "afd795c795582aa3596d9934fa74a64d8c3f3b18",
+      "live": "11ad64c81c058e5deeccd1cb23e64a972029c7b0",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 50,
+      "ahead_by": 52,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -164,9 +164,9 @@
         {
           "filename": "Imperium - Space Marines.json",
           "status": "modified",
-          "additions": 47343,
-          "deletions": 40181,
-          "changes": 87524,
+          "additions": 47342,
+          "deletions": 40180,
+          "changes": 87522,
           "classification": "ASTARTES"
         },
         {
@@ -220,9 +220,9 @@
         {
           "filename": "Necrons.json",
           "status": "modified",
-          "additions": 4,
-          "deletions": 4,
-          "changes": 8,
+          "additions": 7,
+          "deletions": 7,
+          "changes": 14,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
