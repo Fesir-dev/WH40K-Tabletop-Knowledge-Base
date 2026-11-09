@@ -9,7 +9,7 @@
       "live_updated_at": "2026-10-14",
       "state": "PASS",
       "changed": false,
-      "page_sha256": "2c4d2d31dba3286374d84a8b3ded9e909acadba8c5627e9a0c4528a92ff040d9",
+      "page_sha256": "5bee4269570aca2d3e560848229281079dec76f4698fc031b12f2cd9429e0245",
       "url": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
       "reason": null
     }
@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "11ad64c81c058e5deeccd1cb23e64a972029c7b0",
+      "live": "4b696cdfdaf8b8638327a0d65b4f8414d922306c",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 52,
+      "ahead_by": 60,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -60,9 +60,9 @@
         {
           "filename": "Chaos - Emperor's Children.json",
           "status": "modified",
-          "additions": 56,
-          "deletions": 6,
-          "changes": 62,
+          "additions": 60,
+          "deletions": 8,
+          "changes": 68,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -84,9 +84,9 @@
         {
           "filename": "Imperium - Adeptus Custodes.json",
           "status": "modified",
-          "additions": 128,
-          "deletions": 103,
-          "changes": 231,
+          "additions": 262,
+          "deletions": 131,
+          "changes": 393,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -100,9 +100,9 @@
         {
           "filename": "Imperium - Agents of the Imperium.json",
           "status": "modified",
-          "additions": 59,
-          "deletions": 99,
-          "changes": 158,
+          "additions": 221,
+          "deletions": 136,
+          "changes": 357,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -196,25 +196,25 @@
         {
           "filename": "Leagues of Votann.json",
           "status": "modified",
-          "additions": 3,
-          "deletions": 3,
-          "changes": 6,
+          "additions": 4,
+          "deletions": 4,
+          "changes": 8,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Library - Astartes Heresy Legends.json",
           "status": "modified",
-          "additions": 428,
+          "additions": 470,
           "deletions": 207,
-          "changes": 635,
+          "changes": 677,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Library - Tyranids.json",
           "status": "modified",
-          "additions": 113,
-          "deletions": 1,
-          "changes": 114,
+          "additions": 123,
+          "deletions": 3,
+          "changes": 126,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -228,9 +228,9 @@
         {
           "filename": "Orks.json",
           "status": "modified",
-          "additions": 23,
-          "deletions": 26,
-          "changes": 49,
+          "additions": 213,
+          "deletions": 1257,
+          "changes": 1470,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
