@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "4b696cdfdaf8b8638327a0d65b4f8414d922306c",
+      "live": "7eb33b245c76384188490998e68487adcf81aca1",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 60,
+      "ahead_by": 62,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -63,6 +63,14 @@
           "additions": 60,
           "deletions": 8,
           "changes": 68,
+          "classification": "FACTION_OR_LIBRARY_DATA"
+        },
+        {
+          "filename": "Chaos - Thousand Sons.json",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 3,
+          "changes": 6,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
@@ -124,9 +132,9 @@
         {
           "filename": "Imperium - Blood Angels.json",
           "status": "modified",
-          "additions": 56,
-          "deletions": 50,
-          "changes": 106,
+          "additions": 84,
+          "deletions": 44,
+          "changes": 128,
           "classification": "ASTARTES"
         },
         {
