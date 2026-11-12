@@ -19,9 +19,9 @@
       "source_id": "BSDATA_WH40K_11E",
       "repository": "BSData/wh40k-11e",
       "pinned": "a56674583d9f656a191e4210268c276f133b47d1",
-      "live": "7eb33b245c76384188490998e68487adcf81aca1",
+      "live": "f015101d4c495173283e1b97e9d59f2befb877ad",
       "relation_from_pinned_to_live": "ahead",
-      "ahead_by": 62,
+      "ahead_by": 64,
       "behind_by": 0,
       "changed": true,
       "files": [
@@ -100,17 +100,17 @@
         {
           "filename": "Imperium - Adeptus Mechanicus.json",
           "status": "modified",
-          "additions": 19,
-          "deletions": 29,
-          "changes": 48,
+          "additions": 61,
+          "deletions": 37,
+          "changes": 98,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
           "filename": "Imperium - Agents of the Imperium.json",
           "status": "modified",
-          "additions": 221,
-          "deletions": 136,
-          "changes": 357,
+          "additions": 222,
+          "deletions": 137,
+          "changes": 359,
           "classification": "FACTION_OR_LIBRARY_DATA"
         },
         {
